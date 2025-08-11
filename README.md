@@ -26,24 +26,20 @@ SPDX-FileCopyrightText: 2025 sleepyyapril <flyingkarii@gmail.com>
 SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
 -->
 
-# The Den
+# Novellus
 
-<p align="center"><img src="https://raw.githubusercontent.com/TheDenSS14/TheDen/master/Resources/Textures/Logo/logo.png" width="800" /></p>
+(insert pic here)
 
 ---
 
 <!-- Put Description Text Here -->
 
 ## Links
-[Discord](https://denstation.net/discord) | [Wiki](https://wiki.denstation.net) | [Steam](https://store.steampowered.com/app/1255460/Space_Station_14/) | [Standalone](https://spacestationmultiverse.com/downloads/)
+[Discord](https://discord.gg/jsN2xTVhyW) | [Steam](https://store.steampowered.com/app/1255460/Space_Station_14/) | [Standalone](https://spacestationmultiverse.com/downloads/)
 
 ## Contributing
 
 We are happy to accept contributions from anybody, come join our Discord if you want to help.
-We've got a list of issues [here](https://github.com/TheDenSS14/TheDen/issues) and a list in our discord! Don't be afraid to ask for help either!
-
-We are currently accepting translations of the game on our main repository.
-If you would like to translate the game into another language check the #contributor-general channel in our Discord.
 
 ## Building
 
