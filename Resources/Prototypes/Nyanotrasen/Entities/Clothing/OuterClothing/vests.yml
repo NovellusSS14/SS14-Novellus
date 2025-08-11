@@ -1,0 +1,15 @@
+# SPDX-FileCopyrightText: 2023 Colin-Tel <113523727+Colin-Tel@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: MIT
+
+- type: entity
+  parent: ClothingOuterBase
+  id: ClothingOuterVestValet
+  name: valet vest
+  description: A goofy red vest almost certainly designed with the sole purpose of being demeaning.
+  components:
+  - type: Sprite
+    sprite: Nyanotrasen/Clothing/OuterClothing/Vests/valet.rsi
+  - type: Clothing
+    sprite: Nyanotrasen/Clothing/OuterClothing/Vests/valet.rsi

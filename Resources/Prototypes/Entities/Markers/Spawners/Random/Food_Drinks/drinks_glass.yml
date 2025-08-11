@@ -1,0 +1,151 @@
+# SPDX-FileCopyrightText: 2022 ChilbroBaggins
+# SPDX-FileCopyrightText: 2022 Jeff
+# SPDX-FileCopyrightText: 2022 Pieter-Jan Briers
+# SPDX-FileCopyrightText: 2023 Dawid Bla
+# SPDX-FileCopyrightText: 2023 Velcroboy
+# SPDX-FileCopyrightText: 2023 Veritius
+# SPDX-FileCopyrightText: 2023 lapatison
+# SPDX-FileCopyrightText: 2024 DEATHB4DEFEAT
+# SPDX-FileCopyrightText: 2024 Firewatch
+# SPDX-FileCopyrightText: 2024 SleepyScarecrow
+# SPDX-FileCopyrightText: 2024 Ubaser
+# SPDX-FileCopyrightText: 2025 Blitz
+# SPDX-FileCopyrightText: 2025 Rosycup
+# SPDX-FileCopyrightText: 2025 sleepyyapril
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: entity
+  id: RandomDrinkGlass
+  name: random drink spawner
+  suffix: Glass
+  parent: MarkerBase
+  placement:
+    mode: AlignTileAny
+  components:
+  - type: Sprite
+    layers:
+      - state: red
+      - sprite: Objects/Consumable/Drinks/beerglass.rsi
+        state: icon
+  - type: RandomSpawner
+  #small item
+    prototypes:
+      - DrinkAbsintheGlass
+      - DrinkAleGlass
+      - DrinkAloe
+      - DrinkAndalusia
+      - DrinkAntifreeze
+      - DrinkArnoldPalmer
+      - DrinkB52Glass
+      - DrinkBahamaMama
+      - DrinkBananaHonkGlass
+      - DrinkBarefootGlass
+      - DrinkBeerglass
+      - DrinkBerryJuice
+      - DrinkBlackRussianGlass
+#      - DrinkBlueBallerGlass  # Floofstaion
+      - DrinkBlueCuracaoGlass
+      - DrinkBlueHawaiianGlass
+      - DrinkBloodyMaryGlass
+      - DrinkBooger
+      - DrinkBraveBullGlass
+      - BudgetInsulsDrinkGlass
+      - DrinkCarrotJuice
+      - DrinkCoconutRum
+      - DrinkChocolateGlass
+      - DrinkCognacGlass
+      - DrinkCosmopolitan
+      - DrinkCubaLibreGlass
+      - DrinkDeadRumGlass
+      - DrinkDevilsKiss
+      - DrinkDriestMartiniGlass
+      - DrinkDrGibbGlass
+      - DrinkErikaSurprise
+      - DrinkFourteenLokoGlass
+      - DrinkGargleBlasterGlass
+      - DrinkGinFizzGlass
+      - DrinkGinGlass
+      - DrinkGinTonicglass
+      - DrinkGildlagerGlass
+      - DrinkGrapeJuice
+      - DrinkGreenTeaGlass
+      - DrinkGrogGlass
+      - DrinkHippiesDelightGlass
+      - DrinkIcedCoffeeGlass
+      - DrinkIcedGreenTeaGlass
+      - DrinkIcedBeerGlass
+      - DrinkIceCreamGlass
+      - IrishBoolGlass
+      - DrinkIrishCarBomb
+      - DrinkIrishCoffeeGlass
+      - DrinkLemonadeGlass
+      - DrinkKiraSpecial
+      - DrinkLongIslandIcedTeaGlass
+      - DrinkManhattanGlass
+      - DrinkManlyDorfGlass
+      - DrinkMargaritaGlass
+      - DrinkMartiniGlass
+      - DrinkMeadGlass
+      - DrinkMilkshake
+      - DrinkMojito
+      - DrinkNTCahors
+#      - DrinkOrgasmOnTheBeachGlass # Floofstation
+#      - DrinkPomPassionGlass # Floofstation
+      - DrinkPainkillerGlass
+      - DrinkPatronGlass
+      - DrinkPinaColadaGlass
+      - DrinkPoscaGlass
+      - DrinkRedMeadGlass
+#      - DrinkRedRocketGlass # Floofstation
+      - DrinkRewriter
+      - DrinkRoyRogersGlass
+      - DrinkRootBeerFloatGlass
+      - RubberneckGlass
+      - DrinkRumGlass
+      - DrinkSakeGlass
+      - DrinkSbitenGlass
+      - DrinkScrewdriverCocktailGlass
+      - DrinkShirleyTempleGlass
+      - DrinkSuiDreamGlass
+      - DrinkSingulo
+      - DrinkSoyLatte
+      - DrinkSyndicatebomb
+      - DrinkTequilaSunriseGlass
+      - DrinkThreeMileIslandGlass
+      - DrinkToxinsSpecialGlass
+      - DrinkVodkaMartiniGlass
+      - DrinkVodkaRedBool
+      - DrinkVodkaTonicGlass
+      - DrinkWatermelonJuice
+#      - DrinkWatermelonGinJizzGlass  # Floofstaion
+      - DrinkWatermelonWakeup
+      - DrinkWhiskeyColaGlass
+      - DrinkWhiskeySodaGlass
+      - DrinkWhiteRussianGlass
+      - DrinkWineGlass
+#      - DrinkYeOlHandyGlass # Floofstation
+      - XenoBasherGlass
+      - DrinkShakeBlue
+      - DrinkShakeWhite
+      - DrinkTheMartinez
+      - DrinkMoonshineGlass
+      - LemonLimeBittersGlass # DeltaV
+    chance: 0.8
+    offset: 0.0
+    #rare
+    rarePrototypes:
+      - DrinkAcidSpitGlass
+      - DrinkAlliesCocktail
+      - DrinkAmasecGlass
+      - DrinkAtomicBombGlass
+      - DrinkDemonsBlood
+      - DrinkDoctorsDelightGlass
+      - DrinkNeurotoxinGlass
+      - DrinkNuclearColaGlass
+      - DrinkSilencerGlass
+      - DrinkShakeMeat
+      - DrinkShakeRobo
+      - DrinkHoochGlass
+      - DrinkBeepskySmashGlass
+    rareChance: 0.05

@@ -1,0 +1,30 @@
+# SPDX-FileCopyrightText: 2024 VMSolidus <evilexecutive@gmail.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+# Cameras
+- type: deviceFrequency
+  id: SurveillanceCameraBrotherhoodWashington
+  name: device-frequency-prototype-name-surveillance-camera
+  frequency: 4100
+
+- type: deviceFrequency
+  id: SurveillanceCameraBrotherhoodMidwest
+  name: device-frequency-prototype-name-surveillance-camera
+  frequency: 4200
+
+- type: deviceFrequency
+  id: SurveillanceCameraNCR
+  name: device-frequency-prototype-name-surveillance-camera
+  frequency: 4300
+
+- type: deviceFrequency
+  id: SurveillanceCameraTown
+  name: device-frequency-prototype-name-surveillance-camera
+  frequency: 4400
+
+- type: deviceFrequency
+  id: SurveillanceCameraVault
+  name: device-frequency-prototype-name-surveillance-camera
+  frequency: 4500

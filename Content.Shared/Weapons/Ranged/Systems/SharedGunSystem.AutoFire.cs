@@ -1,0 +1,16 @@
+// SPDX-FileCopyrightText: 2024 Ed <96445749+theshued@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+//
+// SPDX-License-Identifier: MIT
+
+using Content.Shared.Weapons.Ranged.Components;
+
+namespace Content.Shared.Weapons.Ranged.Systems;
+
+public partial class SharedGunSystem
+{
+    public void SetEnabled(EntityUid uid, AutoShootGunComponent component, bool status)
+    {
+        component.Enabled = status;
+    }
+}

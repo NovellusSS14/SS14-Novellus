@@ -1,0 +1,32 @@
+# SPDX-FileCopyrightText: 2025 Blitz <73762869+BlitzTheSquishy@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 Cami <147159915+Camdot@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 Eris <eris@erisws.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <flyingkarii@gmail.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: entity
+  parent: BaseGameRule
+  id: Changeling
+  categories: [ HideSpawnMenu ] # TheDen - Removes from spawn menu
+  components:
+  - type: ChangelingRule
+  - type: GameRule
+    minPlayers: 150
+  - type: AntagObjectives
+    objectives:
+    - ChangelingStealDNAObjective
+    - EscapeIdentityObjective
+    - ChangelingSurviveObjective
+  - type: AntagSelection
+    selectionTime: PostPlayerSpawn
+    agentName: changeling-roundend-name
+    definitions:
+    - prefRoles: [ Changeling ]
+      min: 0
+      max: 0
+      playerRatio: 12
+      lateJoinAdditional: true
+      mindRoles:
+      - MindRoleChangeling

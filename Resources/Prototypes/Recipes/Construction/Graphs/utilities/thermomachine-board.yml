@@ -1,0 +1,68 @@
+# SPDX-FileCopyrightText: 2022 mirrorcult <lunarautomaton6@gmail.com>
+# SPDX-FileCopyrightText: 2024 Nemanja <98561806+EmoGarbage404@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: MIT
+
+- type: constructionGraph
+  id: ThermomachineBoard
+  start: freezer
+  graph:
+  - node: freezer
+    entity: ThermomachineFreezerMachineCircuitBoard
+    edges:
+    - to: heater
+      steps:
+      - tool: Screwing
+        doAfter: 2
+  - node: heater
+    entity: ThermomachineHeaterMachineCircuitBoard
+    edges:
+    - to: freezer
+      steps:
+      - tool: Screwing
+        doAfter: 2
+  - node: hellfirefreezer
+    entity: HellfireFreezerMachineCircuitBoard
+    edges:
+    - to: hellfireheater
+      steps:
+      - tool: Screwing
+        doAfter: 2
+  - node: hellfireheater
+    entity: HellfireHeaterMachineCircuitBoard
+    edges:
+    - to: hellfirefreezer
+      steps:
+      - tool: Screwing
+        doAfter: 2
+
+  # Assmos changes below
+  - node: upgradedfreezer
+    entity: ThermomachineUpgradedFreezerMachineCircuitBoard
+    edges:
+    - to: upgradedheater
+      steps:
+      - tool: Screwing
+        doAfter: 2
+  - node: upgradedheater
+    entity: ThermomachineUpgradedHeaterMachineCircuitBoard
+    edges:
+    - to: upgradedfreezer
+      steps:
+      - tool: Screwing
+        doAfter: 2
+  - node: advancedfreezer
+    entity: ThermomachineAdvancedFreezerMachineCircuitBoard
+    edges:
+    - to: advancedheater
+      steps:
+      - tool: Screwing
+        doAfter: 2
+  - node: advancedheater
+    entity: ThermomachineAdvancedHeaterMachineCircuitBoard
+    edges:
+    - to: advancedfreezer
+      steps:
+      - tool: Screwing
+        doAfter: 2

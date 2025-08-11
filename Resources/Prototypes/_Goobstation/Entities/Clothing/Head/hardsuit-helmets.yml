@@ -1,0 +1,98 @@
+# SPDX-FileCopyrightText: 2025 Blitz <73762869+BlitzTheSquishy@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 BloodfiendishOperator <141253729+Diggy0@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 Eagle-0 <114363363+Eagle-0@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 SixplyDev <einlichen@gmail.com>
+# SPDX-FileCopyrightText: 2025 VMSolidus <evilexecutive@gmail.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: entity
+  parent: ClothingHeadHardsuitWithLightBase
+  id: ClothingHeadHelmetHardsuitBlueshield
+  name: blueshield's hardsuit helmet
+  description: Blueshield hardsuit with a top of the line gunlink. Belongs to the Blueshield.
+  categories: [ HideSpawnMenu ] # TheDen - Removes from spawn menu
+  components:
+  - type: BreathMask
+  - type: Sprite
+    sprite: _Goobstation/Clothing/Head/Hardsuits/blueshield.rsi
+  - type: Clothing
+    sprite: _Goobstation/Clothing/Head/Hardsuits/blueshield.rsi
+  - type: PointLight
+    color: "#57b9ff"
+  - type: PressureProtection
+    highPressureMultiplier: 0.45
+    lowPressureMultiplier: 1000
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.9
+        Slash: 0.9
+        Piercing: 0.9
+        Heat: 0.9
+        Cold: 0.9
+        Radiation: 0.95
+        Caustic: 0.95
+  - type: FlashImmunity
+  - type: FlashSoundSuppression
+
+# cybersun stealth
+
+- type: entity
+  parent: ClothingHeadHardsuitWithLightBase
+  id: ClothingHeadHelmetHardsuitCybersunStealth
+  suffix: stealth
+  name: cybersun stealth hardsuit helmet
+  description: A helmet with plating for stealth operations.
+  categories: [ HideSpawnMenu ] # TheDen - Removes from spawn menu
+  components:
+  - type: Sprite
+    sprite: _Goobstation/Clothing/Head/Hardsuits/cybersunstealth.rsi
+  - type: Clothing
+    sprite: _Goobstation/Clothing/Head/Hardsuits/cybersunstealth.rsi
+  - type: PointLight
+    color: green
+  - type: PressureProtection
+    highPressureMultiplier: 0.08
+    lowPressureMultiplier: 1000
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.95
+        Slash: 0.95
+        Piercing: 0.95
+        Heat: 0.95
+  - type: ClothingGrantComponent
+    component:
+    - type: Stealth
+  - type: FlashImmunity
+  - type: FlashSoundSuppression
+
+
+# cybersun dreadnought suit.
+
+- type: entity
+  parent: ClothingHeadHardsuitWithLightBase
+  id: ClothingHeadHelmetHardsuitDreadnought
+  name: CSA-105UA "Xíngtiān" tacsuit
+  description: A helmet for the Xíngtiān tacsuit.
+  categories: [ HideSpawnMenu ] # TheDen - Removes from spawn menu
+  components:
+  - type: Sprite
+    sprite: _Goobstation/Clothing/Head/Hardsuits/dreadnought.rsi
+  - type: Clothing
+    sprite: _Goobstation/Clothing/Head/Hardsuits/dreadnought.rsi
+  - type: PointLight
+    color: red
+  - type: PressureProtection
+    highPressureMultiplier: 0.08
+    lowPressureMultiplier: 1000
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.89
+        Slash: 0.89
+        Piercing: 0.89
+        Heat: 0.89
+  - type: FlashImmunity

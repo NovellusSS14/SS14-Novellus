@@ -1,0 +1,18 @@
+# SPDX-FileCopyrightText: 2024 gluesniffler <159397573+gluesniffler@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 gluesniffler <linebarrelerenthusiast@gmail.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+# This file is moreso for any base parts from Shitmed that dont fall under any particular umbrella.
+- type: humanoidBaseSprite
+  id: MobPizzaLArm
+  baseSprite:
+    sprite: _Shitmed/Mobs/Species/Misc/Pizza/parts.rsi
+    state: "l_arm"
+
+- type: humanoidBaseSprite
+  id: MobPizzaRArm
+  baseSprite:
+    sprite: _Shitmed/Mobs/Species/Misc/Pizza/parts.rsi
+    state: "r_arm"

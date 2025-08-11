@@ -1,0 +1,81 @@
+# SPDX-FileCopyrightText: 2025 BloodfiendishOperator <141253729+Diggy0@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 Rosycup <178287475+Rosycup@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 VMSolidus <evilexecutive@gmail.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: marking
+  id: UnderwearDefault
+  bodyPart: Underwear
+  markingCategory: Underwear
+  invertSpeciesRestriction: True
+  speciesRestriction: [Arachne, Plasmamen]
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: Mobs/Customization/underwear.rsi
+    state: boxers
+
+- type: marking
+  id: UnderwearBriefs
+  bodyPart: Underwear
+  markingCategory: Underwear
+  invertSpeciesRestriction: True
+  speciesRestriction: [Arachne, Plasmamen]
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: Mobs/Customization/underwear.rsi
+    state: briefs
+
+- type: marking
+  id: UnderwearLowriders
+  bodyPart: Underwear
+  markingCategory: Underwear
+  invertSpeciesRestriction: True
+  speciesRestriction: [Arachne, Plasmamen]
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: Mobs/Customization/underwear.rsi
+    state: lowriders
+
+- type: marking
+  id: UnderwearSatin
+  bodyPart: Underwear
+  markingCategory: Underwear
+  invertSpeciesRestriction: True
+  speciesRestriction: [Arachne, Plasmamen]
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: Mobs/Customization/underwear.rsi
+    state: satin
+
+- type: marking
+  id: UnderwearTanga
+  bodyPart: Underwear
+  markingCategory: Underwear
+  invertSpeciesRestriction: True
+  speciesRestriction: [Arachne, Plasmamen]
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: Mobs/Customization/underwear.rsi
+    state: tanga

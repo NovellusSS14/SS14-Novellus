@@ -1,0 +1,19 @@
+# SPDX-FileCopyrightText: 2025 Savante-Sam <sakhalinsam@gmail.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: entity
+  id: CigPackJoint
+  parent: CigPackBase
+  name: Stinky Steve's packet
+  description: A commercialized alternative to homebrewed herbalism for recreational use. This one comes with pre-rolled joints.
+  components:
+  - type: Sprite
+    sprite: _DEN/Objects/Consumable/Smokables/Cigarettes/Packs/stinkyjoints.rsi
+  - type: Item
+    sprite: _DEN/Objects/Consumable/Smokables/Cigarettes/Packs/stinkyjoints.rsi
+  - type: StorageFill
+    contents:
+    - id: Joint
+      amount: 10

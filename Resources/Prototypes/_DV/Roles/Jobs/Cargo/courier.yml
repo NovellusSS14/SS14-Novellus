@@ -1,0 +1,31 @@
+# SPDX-FileCopyrightText: 2023 Colin-Tel <113523727+Colin-Tel@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2023 Fluffiest Floofers <thebluewulf@gmail.com>
+# SPDX-FileCopyrightText: 2025 Rosycup <178287475+Rosycup@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 Skubman <ba.fallaria@gmail.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: startingGear
+  id: CourierGear
+  subGear:
+  - CourierPlasmamanGear
+  equipment:
+    head: ClothingHeadCourier
+    jumpsuit: ClothingUniformCourier
+    back: ClothingBackpackFilled
+    shoes: ClothingShoesColorBlack
+    id: MailCarrierPDA
+    ears: ClothingHeadsetCargo
+    belt: CourierBag
+  innerClothingSkirt: ClothingUniformSkirtCourier
+  satchel: ClothingBackpackSatchelFilled
+  duffelbag: ClothingBackpackDuffelFilled
+
+- type: startingGear
+  id: CourierPlasmamanGear
+  parent: BasePlasmamanGear
+  equipment:
+    jumpsuit: ClothingUniformEnvirosuitCourier
+    head: ClothingHeadEnvirohelmCourier
+    gloves: ClothingHandsGlovesEnviroglovesCargo

@@ -1,0 +1,41 @@
+# SPDX-FileCopyrightText: 2024 Piras314 <p1r4s@proton.me>
+# SPDX-FileCopyrightText: 2025 Rouge2t7 <81053047+Sarahon@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: entity
+  parent: BaseSuicideAction
+  id: ActionActivateBluespaceLifeline
+  name: Activate Bluespace Lifeline
+  description: Activates your bluespace lifeline implant, teleporting you far-far away from this station. You won't be able to come back.
+  components:
+  - type: InstantAction
+    checkCanInteract: false
+    checkConsciousness: false
+    itemIconStyle: BigAction
+    priority: -20
+    icon:
+      sprite: /Prototypes/_Goobstation/Textures/Effects/bluespace_lifeline.rsi
+      state: bluespace_lifeline
+    event: !type:ActivateImplantEvent
+
+- type: entity
+  id: ActionHorn
+  name: Honk!
+  description: Beep the horn at whoever you will run over.
+  components:
+  - type: InstantAction
+    useDelay: 1
+    icon: { sprite: Objects/Fun/bikehorn.rsi, state: icon }
+    event: !type:HornActionEvent
+
+- type: entity
+  id: ActionSiren
+  name: Siren
+  description: Alert your victim to your presence.
+  components:
+  - type: InstantAction
+    useDelay: 1
+    icon: { sprite: Objects/Fun/bikehorn.rsi, state: icon }
+    event: !type:SirenActionEvent

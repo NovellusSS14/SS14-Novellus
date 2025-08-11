@@ -1,0 +1,225 @@
+# SPDX-FileCopyrightText: 2021 Galactic Chimp <GalacticChimpanzee@gmail.com>
+# SPDX-FileCopyrightText: 2021 Pieter-Jan Briers <pieterjan.briers+git@gmail.com>
+# SPDX-FileCopyrightText: 2021 ShadowCommander <10494922+ShadowCommander@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2021 Swept <sweptwastaken@protonmail.com>
+# SPDX-FileCopyrightText: 2021 Vera Aguilera Puerto <6766154+Zumorica@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2021 Ygg01 <y.laughing.man.y@gmail.com>
+# SPDX-FileCopyrightText: 2022 Flipp Syder <76629141+vulppine@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2022 Fooberticus Bazly <34943053+fooberticus@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2022 Jessica M <jessica@jessicamaybe.com>
+# SPDX-FileCopyrightText: 2022 Kara <lunarautomaton6@gmail.com>
+# SPDX-FileCopyrightText: 2022 T-Stalker <43253663+DogZeroX@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2022 fooberticus <fooberticus@protonmail.com>
+# SPDX-FileCopyrightText: 2023 Arimah Greene <30327355+arimah@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2023 Leon Friedrich <60421075+ElectroJr@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2023 Nemanja <98561806+EmoGarbage404@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2023 Visne <39844191+Visne@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2023 deltanedas <39013340+deltanedas@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2023 deltanedas <@deltanedas:kde.org>
+# SPDX-FileCopyrightText: 2023 lzk <124214523+lzk228@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 Debug <49997488+DebugOk@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 Ed <96445749+TheShuEd@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 degradka <69397649+degradka@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 Blitz <73762869+BlitzTheSquishy@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+# Base
+
+# uses "icon" and "icon-open" states for the main item.
+# trash prototypes use "trash" state
+- type: entity
+  abstract: true
+  parent: [FoodBase, FoodOpenableBase]
+  id: FoodTinBase
+  name: tin
+  description: A tin of something, sealed tight.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 20
+        reagents:
+        - ReagentId: Nutriment
+          Quantity: 15
+  - type: Openable
+    openableByHand: false
+    sound:
+      path: /Audio/Items/can_open3.ogg
+  - type: Destructible
+    thresholds:
+    # if tinned food is nuked just delete it, no sound
+    - trigger:
+        !type:DamageTrigger
+        damage: 50
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+    - trigger:
+        !type:DamageTrigger
+        damage: 6
+      behaviors:
+      - !type:OpenBehavior
+  - type: Item
+    sprite: Objects/Consumable/Food/snacks.rsi
+    heldPrefix: packet
+    size: Tiny
+  - type: DamageOnLand
+    damage:
+      types:
+        Blunt: 3
+  - type: DamageOtherOnHit
+    damage:
+      types:
+        Blunt: 3
+  - type: Damageable
+    damageContainer: Inorganic
+  - type: StaticPrice
+    price: 50
+
+- type: entity
+  abstract: true
+  parent: BaseItem
+  id: FoodTinBaseTrash
+  name: empty tin
+  description: An empty tin. Could get a bit of metal from this.
+  components:
+  - type: Sprite
+    state: trash
+  - type: Item
+    sprite: Objects/Consumable/Food/snacks.rsi
+    heldPrefix: packet
+    size: Tiny
+  - type: PhysicalComposition
+    materialComposition:
+      Steel: 100
+  - type: Tag
+    tags:
+    - Trash
+
+# Tins
+
+# Need something that you can open these tins with. I suggest a prying or cutting tool.
+
+- type: entity
+  parent: FoodTinBase
+  id: FoodTinPeaches
+  name: tinned peaches
+  description: Just a nice can of ripe peaches swimming in their own juices.
+  components:
+  - type: Sprite
+    sprite: Objects/Consumable/Food/Tins/peaches.rsi
+  - type: FlavorProfile
+    flavors:
+    - sweet
+    - funny
+  - type: Food
+    trash: 
+    - FoodTinPeachesTrash
+  - type: Tag
+    tags:
+    - Fruit
+
+- type: entity
+  parent: FoodTinBaseTrash
+  id: FoodTinPeachesTrash
+  name: tinned peaches
+  suffix: Trash # TheDen
+  components:
+  - type: Sprite
+    sprite: Objects/Consumable/Food/Tins/peaches.rsi
+
+# slightly run down texture and different name
+- type: entity
+  parent: FoodTinPeaches
+  id: FoodTinPeachesMaint
+  name: maintenance peaches
+  components:
+  - type: Sprite
+    sprite: Objects/Consumable/Food/Tins/maint_peaches.rsi
+  - type: Food
+    trash: 
+    - FoodTinPeachesMaintTrash
+
+# only exists for backwards compatibility with a few maps, nothing else uses it
+- type: entity
+  parent: FoodTinPeachesMaint
+  id: FoodTinPeachesMaintOpen
+  suffix: Open
+  components:
+  - type: Sprite
+    layers:
+    - state: icon-open
+      map: ["icon"]
+  - type: Openable
+    opened: true
+
+- type: entity
+  parent: FoodTinBaseTrash
+  id: FoodTinPeachesMaintTrash
+  name: maintenance peaches
+  suffix: Trash # TheDen
+  components:
+  - type: Sprite
+    sprite: Objects/Consumable/Food/Tins/maint_peaches.rsi
+
+- type: entity
+  parent: FoodTinBase
+  id: FoodTinBeans
+  name: tin of beans
+  description: Musical fruit in a slightly less musical container.
+  components:
+  - type: Sprite
+    sprite: Objects/Consumable/Food/Tins/beans.rsi
+  - type: FlavorProfile
+    flavors:
+    - savory
+    - salty
+    - cheap
+  - type: Food
+    trash: 
+    - FoodTinBeansTrash
+
+- type: entity
+  parent: FoodTinBaseTrash
+  id: FoodTinBeansTrash
+  name: tin of beans
+  suffix: Trash # TheDen
+  components:
+  - type: Sprite
+    sprite: Objects/Consumable/Food/Tins/beans.rsi
+
+# MRE can
+
+- type: entity
+  parent: FoodTinBase
+  id: FoodTinMRE
+  name: tinned meat
+  description: A standard issue tin of meat with a convenient pull tab.
+  components:
+  - type: Sprite
+    sprite: Objects/Consumable/Food/Tins/meat.rsi
+  # the convenient pull tab
+  - type: Openable
+    openableByHand: true
+  - type: FlavorProfile
+    flavors:
+    - meaty
+    - salty
+    - cheap
+  - type: Food
+    trash: 
+    - FoodTinMRETrash
+  - type: Tag
+    tags:
+    - Meat
+
+- type: entity
+  parent: FoodTinBaseTrash
+  id: FoodTinMRETrash
+  name: tinned meat
+  suffix: Trash # TheDen
+  components:
+  - type: Sprite
+    sprite: Objects/Consumable/Food/Tins/meat.rsi

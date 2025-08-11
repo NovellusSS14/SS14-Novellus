@@ -1,0 +1,126 @@
+# SPDX-FileCopyrightText: 2023 Colin-Tel
+# SPDX-FileCopyrightText: 2023 Fluffiest Floofers
+# SPDX-FileCopyrightText: 2023 Tad "Taddy" Johnson
+# SPDX-FileCopyrightText: 2024 Debug
+# SPDX-FileCopyrightText: 2024 Rane
+# SPDX-FileCopyrightText: 2025 Jakumba
+# SPDX-FileCopyrightText: 2025 Rosycup
+# SPDX-FileCopyrightText: 2025 Skubman
+# SPDX-FileCopyrightText: 2025 sleepyyapril
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: entity
+  parent: ClothingBeltStorageBase
+  id: ClothingBeltMantis
+  name: mantis' belt
+  description: Perfect for storing all of your equipment.
+  components:
+  - type: Sprite
+    sprite: Nyanotrasen/Clothing/Belt/mantis_belt.rsi
+  - type: Clothing
+    sprite: Nyanotrasen/Clothing/Belt/mantis_belt.rsi
+  - type: Storage
+    whitelist:
+      tags:
+        - Document
+        - Flashlight
+        - ForensicBeltEquip
+        - HandLabeler
+        - Sidearm
+        - Folder
+      components:
+        - AnomalyScanner
+        - NodeScanner
+        - Flash
+
+- type: entity
+  parent: ClothingBeltBase
+  id: ClothingBeltMartialBlack
+  name: black belt
+  description: This is the most martial of all the belts.
+  components:
+  - type: MeleeWeapon
+    attackRate: 1.25
+    range: 1.65
+    damage:
+      types:
+        Blunt: 1
+        Slash: 1
+  - type: Item
+    size: Small
+  - type: Sprite
+    sprite: Nyanotrasen/Clothing/Belt/Martial/black.rsi
+  - type: Clothing
+    sprite: Nyanotrasen/Clothing/Belt/Martial/black.rsi
+
+- type: entity
+  parent: ClothingBeltStorageBase
+  id: ClothingBeltKatanaSheath
+  name: katana sheaths
+  description: An ornate belt designed to hold a pair of samurai's blades, or daisho.
+  components:
+  - type: Sprite
+    sprite: Nyanotrasen/Clothing/Belt/katanasheath.rsi
+    state: sheath
+  - type: Clothing
+    sprite: Nyanotrasen/Clothing/Belt/katanasheath.rsi
+  - type: Storage
+    grid:
+      - 0,0,3,1
+    whitelist:
+      tags:
+        - Katana
+  - type: ItemMapper
+    mapLayers:
+      sheath-sabre:
+        whitelist:
+          tags:
+          - Katana
+  - type: Appearance
+  - type: Tag
+    tags:
+      - BeltSlotNotBelt
+
+- type: entity
+  parent: ClothingBeltStorageBase
+  id: ClothingBeltMilitaryWebbingCMO
+  name: chief medical officer's chest rig
+  description: A medical chest rig with deep pockets, for use by paramedics and health professionals.
+  components:
+  - type: Sprite
+    sprite: Nyanotrasen/Clothing/Belt/cmowebbing.rsi
+  - type: Clothing
+    sprite: Nyanotrasen/Clothing/Belt/cmowebbing.rsi
+  - type: Item
+    size: Large
+  - type: Storage
+    maxItemSize: Normal
+    grid:
+      - 0,0,6,2
+  - type: Tag
+    tags:
+      - BeltSlotNotBelt
+  - type: ItemSlots
+    slots:
+      medkit:
+        name: clothing-belt-medkit
+        whitelist:
+          tags:
+          - Medkit
+          - Portafib
+          - Rollerbed
+        insertOnInteract: true
+  - type: ItemMapper # DeltaV - add stowed medkit sprite
+    mapLayers:
+      medkit:
+        whitelist:
+          tags:
+          - Medkit
+    sprite: _DV/Clothing/Belt/belt_overlay.rsi
+  - type: ContainerContainer
+    containers:
+      storagebase: !type:Container
+        ents: []
+      medkit: !type:ContainerSlot {}
+  - type: Appearance # DeltaV

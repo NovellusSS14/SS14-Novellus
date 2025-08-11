@@ -1,0 +1,42 @@
+# SPDX-FileCopyrightText: 2025 John Willis <143434770+CerberusWolfie@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+# Command
+
+- type: entity
+  id: SpawnPointBlueshieldOfficer
+  parent: SpawnPointJobBase
+  name: blueshieldofficer
+  components:
+  - type: SpawnPoint
+    job_id: BlueshieldOfficer
+  - type: Sprite
+    layers:
+      - state: green
+      - state: ertleader
+
+- type: entity
+  id: SpawnPointNanotrasenRepresentative
+  parent: SpawnPointJobBase
+  name: nanotrasenrepresentative
+  components:
+  - type: SpawnPoint
+    job_id: NanotrasenRepresentative
+  - type: Sprite
+    layers:
+      - state: green
+      - state: centcom
+
+- type: entity
+  id: SpawnPointMagistrate
+  parent: SpawnPointJobBase
+  name: magistrate
+  components:
+  - type: SpawnPoint
+    job_id: Magistrate
+  - type: Sprite
+    layers:
+      - state: green
+      - state: centcom

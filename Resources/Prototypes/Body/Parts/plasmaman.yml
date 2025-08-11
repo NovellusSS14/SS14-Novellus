@@ -1,0 +1,149 @@
+# SPDX-FileCopyrightText: 2025 Blitz <73762869+BlitzTheSquishy@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 Skubman <ba.fallaria@gmail.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+# TODO: Add descriptions (many)
+# TODO BODY: Part damage
+- type: entity
+  id: PartPlasmaman
+  parent: [BaseItem, BasePart]
+  name: plasmaman body part
+  abstract: true
+  components:
+  - type: Sprite
+    sprite: Mobs/Species/Plasmaman/parts.rsi
+  - type: Butcherable
+    butcheringType: Knife
+    butcherDelay: 4.0
+    spawned:
+    - id: SheetPlasma1
+      amount: 1
+  - type: IgniteFromGasPart
+    gas: Oxygen
+
+- type: entity
+  id: TorsoPlasmaman
+  name: plasmaman torso
+  parent: [PartPlasmaman, BaseTorso]
+  categories: [ HideSpawnMenu ] # TheDen - Removes from spawn menu
+  components:
+  - type: Sprite
+    state: torso_m
+  - type: Butcherable
+    butcherDelay: 6.0
+    spawned:
+    - id: SheetPlasma1
+      amount: 3
+  - type: IgniteFromGasPart
+    fireStacks: 0.06
+
+- type: entity
+  id: HeadPlasmaman
+  name: plasmaman head
+  parent: [PartPlasmaman, BaseHead]
+  categories: [ HideSpawnMenu ] # TheDen - Removes from spawn menu
+  components:
+  - type: Sprite
+    state: head_m
+  - type: Butcherable
+    butcherDelay: 5.0
+  - type: IgniteFromGasPart
+    fireStacks: 0.02
+
+- type: entity
+  id: LeftArmPlasmaman
+  name: left plasmaman arm
+  parent: [PartPlasmaman, BaseLeftArm]
+  categories: [ HideSpawnMenu ] # TheDen - Removes from spawn menu
+  components:
+  - type: Sprite
+    state: l_arm
+  - type: IgniteFromGasPart
+    fireStacks: 0.02
+
+- type: entity
+  id: RightArmPlasmaman
+  name: right plasmaman arm
+  parent: [PartPlasmaman, BaseRightArm]
+  categories: [ HideSpawnMenu ] # TheDen - Removes from spawn menu
+  components:
+  - type: Sprite
+    state: r_arm
+  - type: IgniteFromGasPart
+    fireStacks: 0.02
+
+- type: entity
+  id: LeftHandPlasmaman
+  name: left plasmaman hand
+  parent: [PartPlasmaman, BaseLeftHand]
+  categories: [ HideSpawnMenu ] # TheDen - Removes from spawn menu
+  components:
+  - type: Sprite
+    state: l_hand
+  - type: Butcherable
+    butcherDelay: 3.0
+  - type: IgniteFromGasPart
+    fireStacks: 0.01
+
+- type: entity
+  id: RightHandPlasmaman
+  name: right plasmaman hand
+  parent: [PartPlasmaman, BaseRightHand]
+  categories: [ HideSpawnMenu ] # TheDen - Removes from spawn menu
+  components:
+  - type: Sprite
+    state: r_hand
+  - type: Butcherable
+    butcherDelay: 3.0
+  - type: IgniteFromGasPart
+    fireStacks: 0.01
+
+- type: entity
+  id: LeftLegPlasmaman
+  name: left plasmaman leg
+  parent: [PartPlasmaman, BaseLeftLeg]
+  categories: [ HideSpawnMenu ] # TheDen - Removes from spawn menu
+  components:
+  - type: Sprite
+    state: l_leg
+  - type: IgniteFromGasPart
+    fireStacks: 0.02
+
+- type: entity
+  id: RightLegPlasmaman
+  name: right plasmaman leg
+  parent: [PartPlasmaman, BaseRightLeg]
+  categories: [ HideSpawnMenu ] # TheDen - Removes from spawn menu
+  components:
+  - type: Sprite
+    state: r_leg
+  - type: IgniteFromGasPart
+    fireStacks: 0.02
+
+- type: entity
+  id: LeftFootPlasmaman
+  name: left plasmaman foot
+  parent: [PartPlasmaman, BaseLeftFoot]
+  categories: [ HideSpawnMenu ] # TheDen - Removes from spawn menu
+  components:
+  - type: Sprite
+    state: l_foot
+  - type: Butcherable
+    butcherDelay: 3.0
+  - type: IgniteFromGasPart
+    fireStacks: 0.01
+
+- type: entity
+  id: RightFootPlasmaman
+  name: right plasmaman foot
+  parent: [PartPlasmaman, BaseRightFoot]
+  categories: [ HideSpawnMenu ] # TheDen - Removes from spawn menu
+  components:
+  - type: Sprite
+    state: r_foot
+  - type: Butcherable
+    butcherDelay: 3.0
+  - type: IgniteFromGasPart
+    fireStacks: 0.01

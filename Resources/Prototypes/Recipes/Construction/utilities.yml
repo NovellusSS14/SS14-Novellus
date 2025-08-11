@@ -1,0 +1,483 @@
+# SPDX-FileCopyrightText: 2020 AJCM-git
+# SPDX-FileCopyrightText: 2020 Hugo Laloge
+# SPDX-FileCopyrightText: 2020 Pieter-Jan Briers
+# SPDX-FileCopyrightText: 2020 Víctor Aguilera Puerto
+# SPDX-FileCopyrightText: 2020 py01
+# SPDX-FileCopyrightText: 2021 Swept
+# SPDX-FileCopyrightText: 2022 Flipp Syder
+# SPDX-FileCopyrightText: 2022 Jack Fox
+# SPDX-FileCopyrightText: 2022 Julian Giebel
+# SPDX-FileCopyrightText: 2022 Martin Petkovski
+# SPDX-FileCopyrightText: 2022 Morb
+# SPDX-FileCopyrightText: 2022 Peptide90
+# SPDX-FileCopyrightText: 2022 eoineoineoin
+# SPDX-FileCopyrightText: 2022 vulppine
+# SPDX-FileCopyrightText: 2023 08A
+# SPDX-FileCopyrightText: 2023 20kdc
+# SPDX-FileCopyrightText: 2023 ChilbroBaggins
+# SPDX-FileCopyrightText: 2023 Jeff
+# SPDX-FileCopyrightText: 2023 Kevin Zheng
+# SPDX-FileCopyrightText: 2023 Skarletto
+# SPDX-FileCopyrightText: 2023 Slava0135
+# SPDX-FileCopyrightText: 2023 Tom Leys
+# SPDX-FileCopyrightText: 2023 avery
+# SPDX-FileCopyrightText: 2023 brainfood1183
+# SPDX-FileCopyrightText: 2023 deltanedas
+# SPDX-FileCopyrightText: 2023 metalgearsloth
+# SPDX-FileCopyrightText: 2024 Ilya246
+# SPDX-FileCopyrightText: 2024 Nemanja
+# SPDX-FileCopyrightText: 2024 VMSolidus
+# SPDX-FileCopyrightText: 2024 chromiumboy
+# SPDX-FileCopyrightText: 2025 Carlen White
+# SPDX-FileCopyrightText: 2025 Comet.Void
+# SPDX-FileCopyrightText: 2025 Falcon
+# SPDX-FileCopyrightText: 2025 Sir Warock
+# SPDX-FileCopyrightText: 2025 Solaris
+# SPDX-FileCopyrightText: 2025 Vice Emargo
+# SPDX-FileCopyrightText: 2025 justdie12
+# SPDX-FileCopyrightText: 2025 sleepyyapril
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+# SURVEILLANCE
+- type: construction
+  name: camera
+  id: camera
+  graph: SurveillanceCamera
+  startNode: start
+  targetNode: camera
+  category: construction-category-utilities
+  description: "Surveillance camera. It's watching. Soon."
+  icon:
+    sprite: Structures/Wallmounts/camera.rsi
+    state: camera
+  objectType: Structure
+  placementMode: SnapgridCenter
+
+- type: construction
+  name: telescreen
+  id: WallmountTelescreen
+  graph: WallmountTelescreen
+  startNode: start
+  targetNode: Telescreen
+  category: construction-category-utilities
+  description: "A surveillance camera monitor for the wall."
+  icon:
+    sprite: Structures/Machines/computers.rsi
+    state: telescreen_frame
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: true
+
+- type: construction
+  name: station map
+  id: StationMap
+  graph: StationMap
+  startNode: start
+  targetNode: station_map
+  category: construction-category-structures
+  description: A station map.
+  icon:
+    sprite: Structures/Machines/station_map.rsi
+    state: station_map0
+  placementMode: SnapgridCenter
+  objectType: Structure
+  canRotate: true
+  canBuildInImpassable: true
+  conditions:
+  - !type:WallmountCondition {}
+
+# POWER
+- type: construction
+  name: APC
+  id: APC
+  graph: APC
+  startNode: start
+  targetNode: apc
+  category: construction-category-utilities
+  description: "Area Power Controller (APC). Controls power. In an area."
+  icon:
+    sprite: Structures/Power/apc.rsi
+    state: base
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: true
+
+- type: construction
+  name: solar assembly
+  id: SolarPanel
+  graph: SolarPanel
+  startNode: start
+  targetNode: solarpanel
+  category: construction-category-utilities
+  description: "Can be turned into a solar panel or solar tracker."
+  icon:
+    sprite: Structures/Power/Generation/solar_panel.rsi
+    state: solar_assembly
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+    - !type:TileNotBlocked
+      failIfSpace: false
+
+- type: construction
+  name: cable terminal
+  id: CableTerminal
+  graph: CableTerminal
+  startNode: start
+  targetNode: cable_terminal
+  category: construction-category-utilities
+  description: "Input of devices such as the SMES. The red cables needs to face the device."
+  icon:
+    sprite: Structures/Power/cable_terminal.rsi
+    state: term
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+
+- type: construction
+  name: wallmount substation
+  id: WallmountSubstation
+  graph: WallmountSubstation
+  startNode: start
+  targetNode: substation
+  category: construction-category-utilities
+  description: "A wallmount substation for compact spaces. Make sure to place cable underneath before building the wall."
+  icon:
+    sprite: Structures/Power/substation.rsi
+    state: substation_wall
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: true
+
+- type: construction
+  name: wallmount generator
+  id: WallmountGenerator
+  graph: WallmountGenerator
+  startNode: start
+  targetNode: generator
+  category: construction-category-utilities
+  description: "A wallmount generator for compact spaces. Make sure to place cable underneath before building the wall."
+  icon:
+    sprite: Structures/Power/Generation/wallmount_generator.rsi
+    state: panel
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: true
+
+- type: construction
+  name: wallmount APU
+  id: WallmountGeneratorAPU
+  graph: WallmountGenerator
+  startNode: start
+  targetNode: APU
+  category: construction-category-utilities
+  description: "A wallmount APU for compact shuttles. Make sure to place cable underneath before building the wall."
+  icon:
+    sprite: Structures/Power/Generation/wallmount_generator.rsi
+    state: panel
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: true
+
+# DISPOSALS
+- type: construction
+  name: disposal unit
+  description: A pneumatic waste disposal unit.
+  id: DisposalUnit
+  graph: DisposalMachine
+  startNode: start
+  targetNode: disposal_unit
+  category: construction-category-utilities
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  icon:
+    sprite: Structures/Piping/disposal.rsi
+    state: "disposal"
+
+- type: construction
+  name: mailing unit
+  description: A pneumatic mail delivery unit.
+  id: MailingUnit
+  graph: DisposalMachine
+  startNode: start
+  targetNode: mailing_unit
+  category: construction-category-utilities
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  icon:
+    sprite: Structures/Piping/disposal.rsi
+    state: "mailing"
+
+- type: construction
+  name: disposal pipe
+  id: DisposalPipe
+  description: A huge pipe segment used for constructing disposal systems.
+  graph: DisposalPipe
+  startNode: start
+  targetNode: pipe
+  category: construction-category-utilities
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  icon:
+    sprite: Structures/Piping/disposal.rsi
+    state: conpipe-s
+
+- type: construction
+  name: disposal tagger
+  description: A pipe that tags entities for routing.
+  id: DisposalTagger
+  graph: DisposalPipe
+  startNode: start
+  targetNode: tagger
+  category: construction-category-utilities
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  icon:
+    sprite: Structures/Piping/disposal.rsi
+    state: conpipe-tagger
+
+- type: construction
+  name: disposal trunk
+  description: A pipe trunk used as an entry point for disposal systems.
+  id: DisposalTrunk
+  graph: DisposalPipe
+  startNode: start
+  targetNode: trunk
+  category: construction-category-utilities
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  icon:
+    sprite: Structures/Piping/disposal.rsi
+    state: conpipe-t
+
+- type: construction
+  name: disposal router
+  description: A three-way router. Entities with matching tags get routed to the side.
+  id: DisposalRouter
+  graph: DisposalPipe
+  startNode: start
+  targetNode: router
+  category: construction-category-utilities
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  icon:
+    sprite: Structures/Piping/disposal.rsi
+    state: conpipe-j1s
+  mirror: DisposalRouterFlipped
+
+- type: construction
+  hide: true
+  name: disposal router
+  description: A three-way router. Entities with matching tags get routed to the side.
+  id: DisposalRouterFlipped
+  graph: DisposalPipe
+  startNode: start
+  targetNode: routerflipped
+  category: construction-category-utilities
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  icon:
+    sprite: Structures/Piping/disposal.rsi
+    state: conpipe-j2s
+  mirror: DisposalRouter
+
+- type: construction
+  name: disposal signal router
+  description: A signal-controlled three-way router.
+  id: DisposalSignalRouter
+  graph: DisposalPipe
+  startNode: start
+  targetNode: signal_router
+  category: construction-category-utilities
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  icon:
+    sprite: Structures/Piping/disposal.rsi
+    state: signal-router-free
+  mirror: DisposalSignalRouterFlipped
+
+- type: construction
+  hide: true
+  name: disposal signal router
+  description: A signal-controlled three-way router.
+  id: DisposalSignalRouterFlipped
+  graph: DisposalPipe
+  startNode: start
+  targetNode: signal_router_flipped
+  category: construction-category-utilities
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  icon:
+    sprite: Structures/Piping/disposal.rsi
+    state: signal-router-flipped-free
+  mirror: DisposalSignalRouter
+
+- type: construction
+  name: disposal junction
+  description: A three-way junction. The arrow indicates where items exit.
+  id: DisposalJunction
+  graph: DisposalPipe
+  startNode: start
+  targetNode: junction
+  category: construction-category-utilities
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  icon:
+    sprite: Structures/Piping/disposal.rsi
+    state: conpipe-j1
+  mirror: DisposalJunctionFlipped
+
+- type: construction
+  hide: true
+  name: disposal junction
+  description: A three-way junction. The arrow indicates where items exit.
+  id: DisposalJunctionFlipped
+  graph: DisposalPipe
+  startNode: start
+  targetNode: junctionflipped
+  category: construction-category-utilities
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  icon:
+    sprite: Structures/Piping/disposal.rsi
+    state: conpipe-j2
+  mirror: DisposalJunction
+
+- type: construction
+  name: disposal Y junction
+  description: A three-way junction with another exit point.
+  id: DisposalYJunction
+  graph: DisposalPipe
+  startNode: start
+  targetNode: yJunction
+  category: construction-category-utilities
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  icon:
+    sprite: Structures/Piping/disposal.rsi
+    state: conpipe-y
+
+- type: construction
+  name: disposal bend
+  description: A tube bent at a 90 degree angle.
+  id: DisposalBend
+  graph: DisposalPipe
+  startNode: start
+  targetNode: bend
+  category: construction-category-utilities
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  icon:
+    sprite: Structures/Piping/disposal.rsi
+    state: conpipe-c
+
+# INTERCOM
+- type: construction
+  name: intercom
+  id: IntercomAssembly
+  graph: Intercom
+  startNode: start
+  targetNode: intercom
+  category: construction-category-structures
+  description: An intercom. For when the station just needs to know something.
+  icon:
+    sprite: Structures/Wallmounts/intercom.rsi
+    state: base
+  placementMode: SnapgridCenter
+  objectType: Structure
+  canRotate: true
+  canBuildInImpassable: true
+  conditions:
+  - !type:WallmountCondition {}
+
+# TIMERS
+- type: construction
+  name: signal timer
+  id: SignalTimer
+  graph: Timer
+  startNode: start
+  targetNode: signal
+  category: construction-category-utilities
+  description: "A wallmounted timer for sending timed signals to things."
+  icon:
+    sprite: Structures/Wallmounts/switch.rsi
+    state: on
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: true
+  conditions:
+  - !type:WallmountCondition
+
+- type: construction
+  name: screen timer
+  id: ScreenTimer
+  graph: Timer
+  startNode: start
+  targetNode: screen
+  category: construction-category-utilities
+  description: "A wallmounted timer for sending timed signals to things. This one has a screen for displaying text."
+  icon:
+    sprite: Structures/Wallmounts/signalscreen.rsi
+    state: signalscreen
+  objectType: Structure
+  canRotate: false
+  placementMode: SnapgridCenter
+  canBuildInImpassable: true
+  conditions:
+  - !type:WallmountCondition
+
+- type: construction
+  name: brig timer
+  id: BrigTimer
+  graph: Timer
+  startNode: start
+  targetNode: brig
+  category: construction-category-utilities
+  description: "A wallmounted timer for sending timed signals to things. This one has a screen for displaying text and requires security access to use."
+  icon:
+    sprite: Structures/Wallmounts/signalscreen.rsi
+    state: signalscreen
+  objectType: Structure
+  canRotate: false
+  placementMode: SnapgridCenter
+  canBuildInImpassable: true
+  conditions:
+  - !type:WallmountCondition
+
+# DEFENSES
+- type: construction
+  name: sentry turret control panel
+  id: WeaponEnergyTurretControlPanel
+  graph: WeaponEnergyTurretControlPanel
+  startNode: start
+  targetNode: finish
+  category: construction-category-utilities
+  description: "A wall-mounted interface for remotely configuring the operational parameters of linked sentry turrets."
+  icon:
+    sprite: Structures/Wallmounts/turret_controls.rsi
+    state: base
+  objectType: Structure
+  canRotate: true
+  placementMode: SnapgridCenter
+  canBuildInImpassable: true
+  conditions:
+  - !type:WallmountCondition
+
+# BOTANY
+- type: construction
+  name: makeshift hydroponics tray
+  id: makeshiftHydroTray
+  graph: MakeshiftHydroTrayGraph
+  startNode: start
+  targetNode: makeshiftHydroTray
+  category: construction-category-utilities
+  description: A cheap hydroponics tray without any fancy technology. Keep a close eye on the spaceweeds, as these trays don't have warning lights!
+  icon:
+    sprite: Structures/Hydroponics/containers.rsi
+    state: hydrotray2
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: false
+  canBuildInImpassable: false

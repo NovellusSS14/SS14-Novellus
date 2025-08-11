@@ -1,0 +1,80 @@
+# SPDX-FileCopyrightText: 2024 VMSolidus <evilexecutive@gmail.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+# Senior Physician
+#- type: characterItemGroup
+#  id: LoadoutSeniorPhysicianBackpacks
+#  maxItems: 1
+#  items:
+#
+- type: characterItemGroup
+  id: LoadoutSeniorPhysicianBelt
+  maxItems: 1
+  items:
+    - type: loadout
+      id: LoadoutSeniorPhysicianBeltMedical
+    - type: loadout
+      id: LoadoutSeniorPhysicianBeltMedicalAdvancedFilled
+
+#- type: characterItemGroup
+#  id: LoadoutSeniorPhysicianEars
+#  maxItems: 1
+#  items:
+#
+#- type: characterItemGroup
+#  id: LoadoutSeniorPhysicianEquipment
+#  maxItems: 1
+#  items:
+#
+#- type: characterItemGroup
+#  id: LoadoutSeniorPhysicianEyes
+#  maxItems: 1
+#  items:
+#
+#- type: characterItemGroup
+#  id: LoadoutSeniorPhysicianGloves
+#  maxItems: 1
+#  items:
+#
+- type: characterItemGroup
+  id: LoadoutSeniorPhysicianHead
+  maxItems: 1
+  items:
+    - type: loadout
+      id: LoadoutMedicalHeadBeretSeniorPhysician
+
+#- type: characterItemGroup
+#  id: LoadoutSeniorPhysicianId
+#  maxItems: 1
+#  items:
+#
+#- type: characterItemGroup
+#  id: LoadoutSeniorPhysicianNeck
+#  maxItems: 1
+#  items:
+#
+#- type: characterItemGroup
+#  id: LoadoutSeniorPhysicianMask
+#  maxItems: 1
+#  items:
+#
+#- type: characterItemGroup
+#  id: LoadoutSeniorPhysicianOuter
+#  maxItems: 1
+#  items:
+#
+#- type: characterItemGroup
+#  id: LoadoutSeniorPhysicianShoes
+#  maxItems: 1
+#  items:
+#
+- type: characterItemGroup
+  id: LoadoutSeniorPhysicianUniforms
+  maxItems: 1
+  items:
+    - type: loadout
+      id: LoadoutMedicalUniformJumpskirtSenior
+    - type: loadout
+      id: LoadoutMedicalUniformJumpsuitSenior

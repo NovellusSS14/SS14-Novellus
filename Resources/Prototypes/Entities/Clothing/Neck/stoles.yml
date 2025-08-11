@@ -1,0 +1,16 @@
+# SPDX-FileCopyrightText: 2023 Ubaser <134914314+UbaserB@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 GNUtopia <93669372+GNUtopia@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: entity
+  parent: ClothingNeckScarfBase
+  id: ClothingNeckStoleChaplain
+  name: chaplain stole
+  description: An elegantly designed stole, with a vibrant gold plus on either end.
+  components:
+  - type: Sprite
+    sprite: Clothing/Neck/Stoles/chaplain.rsi
+  - type: Clothing
+    sprite: Clothing/Neck/Stoles/chaplain.rsi

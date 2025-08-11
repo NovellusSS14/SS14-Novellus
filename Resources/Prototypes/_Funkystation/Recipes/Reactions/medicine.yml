@@ -1,0 +1,102 @@
+# SPDX-FileCopyrightText: 2025 Eris
+# SPDX-FileCopyrightText: 2025 sleepyyapril
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+# burn
+- type: reaction
+  id: Oxandrolone
+  reactants:
+    Phenol:
+      amount: 1
+    Carbon:
+      amount: 2
+    Dermaline:
+      amount: 1
+  products:
+    Oxandrolone: 4
+
+# poison
+- type: reaction
+  id: PenteticAcid
+  reactants:
+    Dylovene:
+      amount: 1
+    Silicon:
+      amount: 1
+    Oil:
+      amount: 1
+    Plasma:
+      amount: 1
+    Ethanol:
+      amount: 1
+  products:
+    PenteticAcid: 5
+
+# brute
+- type: reaction
+  id: SalicylicAcid
+  reactants:
+    Phenol:
+      amount: 1
+    Sodium:
+      amount: 1
+    Carbon:
+      amount: 1
+    Oxygen:
+      amount: 1
+    SulfuricAcid:
+      amount: 1
+  products:
+    SalicylicAcid: 5
+
+# airloss
+- type: reaction
+  id: Granibitulari
+  reactants:
+    TableSalt:
+      amount: 1
+    Carbon:
+      amount: 1
+    Potassium:
+      amount: 1
+  products:
+    Granibitulari: 3
+
+- type: reaction
+  id: Salbutamol
+  reactants:
+    Dexalin:
+      amount: 1
+    Inaprovaline:
+      amount: 1
+    Phenol:
+      amount: 1
+    Lithium:
+      amount: 1
+  products:
+    Salbutamol: 4
+
+- type: reaction
+  id: Convermol
+  reactants:
+    Dexalin:
+      amount: 1
+    Aluminium:
+      amount: 1
+    Fluorine:
+      amount: 1
+  products:
+    Convermol: 3
+
+- type: reaction
+  id: Deunomia
+  reactants:
+    Amatoxin:
+      amount: 1
+    HeartbreakerToxin:
+      amount: 1
+    FerrochromicAcid:
+      amount: 1
+  products:
+    Deunomia: 3

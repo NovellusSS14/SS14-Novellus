@@ -1,0 +1,14 @@
+# SPDX-FileCopyrightText: 2024 DEATHB4DEFEAT <77995199+DEATHB4DEFEAT@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- files: [ "ahelp_error" ]
+  license: "CC-BY-NC-SA-3.0"
+  copyright: "CM-SS13"
+  source: "https://github.com/cmss13-devs/cmss13/commit/497204fb1660977fb6bf1fe8de153c65c8299d7d"
+
+- files: [ "ahelp_receive", "ahelp_send" ]
+  license: "CC-BY-NC-SA-3.0"
+  copyright: "CM-SS13"
+  source: "https://github.com/cmss13-devs/cmss13/commit/21e6447cc08aea502f671c819fdbcecbb85e6028"

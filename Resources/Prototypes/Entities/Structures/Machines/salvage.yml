@@ -1,0 +1,88 @@
+# SPDX-FileCopyrightText: 2021 Paul Ritter
+# SPDX-FileCopyrightText: 2021 wrexbe
+# SPDX-FileCopyrightText: 2022 20kdc
+# SPDX-FileCopyrightText: 2022 Errant
+# SPDX-FileCopyrightText: 2022 Justin Trotter
+# SPDX-FileCopyrightText: 2022 Kevin Zheng
+# SPDX-FileCopyrightText: 2022 Leon Friedrich
+# SPDX-FileCopyrightText: 2022 Moony
+# SPDX-FileCopyrightText: 2022 Peptide90
+# SPDX-FileCopyrightText: 2023 Nemanja
+# SPDX-FileCopyrightText: 2023 Velcroboy
+# SPDX-FileCopyrightText: 2023 Vordenburg
+# SPDX-FileCopyrightText: 2023 deltanedas
+# SPDX-FileCopyrightText: 2023 deltanedas <@deltanedas:kde.org>
+# SPDX-FileCopyrightText: 2023 lzk
+# SPDX-FileCopyrightText: 2024 DEATHB4DEFEAT
+# SPDX-FileCopyrightText: 2024 Tayrtahn
+# SPDX-FileCopyrightText: 2024 metalgearsloth
+# SPDX-FileCopyrightText: 2025 BlitzTheSquishy
+# SPDX-FileCopyrightText: 2025 sleepyyapril
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: entity
+  parent: [ BaseMachinePowered, ConstructibleMachine ]
+  id: SalvageMagnet
+  name: salvage magnet
+  description: Pulls in salvage.
+  components:
+  - type: Sprite
+    sprite: Structures/Machines/salvage.rsi
+    layers:
+    - state: salvage-magnet
+    - state: salvage-magnet-ready
+      visible: false
+      map: [ "ready" ]
+    - state: salvage-magnet-ready-blinking
+      visible: false
+      map: [ "readyBlinking" ]
+    - state: salvage-magnet-unready
+      visible: false
+      map: [ "unready" ]
+    - state: salvage-magnet-unready-blinking
+      visible: false
+      map: [ "unreadyBlinking" ]
+    - state: salvage-magnet-o4
+      map: ["chargeState"]
+      shader: unshaded
+  - type: ActivatableUI
+    key: enum.SalvageMagnetUiKey.Key
+  - type: ActivatableUIRequiresPower
+  - type: UserInterface
+    interfaces:
+      enum.SalvageMagnetUiKey.Key:
+        type: SalvageMagnetBoundUserInterface
+  - type: Transform
+    noRot: false
+  - type: Appearance
+  - type: Rotatable
+  - type: IntrinsicRadioReceiver
+  - type: ActiveRadio
+    channels:
+    - Supply
+  - type: SalvageMagnet
+  - type: ApcPowerReceiver
+    powerLoad: 2500 # TODO change this to a HV power draw that really hits the grid hard WHEN active
+  - type: Machine
+    board: SalvageMagnetMachineCircuitboard
+  - type: SalvageLastStation
+
+# For Knightship
+- type: entity
+  parent: SalvageMagnet
+  id: SalvageLocator
+  name: salvage locator
+  description: Locates salvage.
+  components:
+  - type: SalvageMagnet
+  - type: ApcPowerReceiver
+    powerLoad: 1000
+
+- type: weightedRandomEntity
+  id: RandomAsteroidPool
+  weights:
+    AsteroidSalvageSmall: 0 #Delta V: remove chance for small chunks
+    AsteroidSalvageMedium: 7
+    AsteroidSalvageLarge: 5
+    AsteroidSalvageHuge: 3

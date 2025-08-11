@@ -1,0 +1,115 @@
+# SPDX-FileCopyrightText: 2023 Colin-Tel <113523727+Colin-Tel@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2023 Debug <49997488+DebugOk@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 DEATHB4DEFEAT <77995199+DEATHB4DEFEAT@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 FoxxoTrystan <trystan.garnierhein@gmail.com>
+# SPDX-FileCopyrightText: 2024 Mnemotechnican <69920617+Mnemotechnician@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 Rane <60792108+Elijahrane@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 ShatteredSwords <135023515+ShatteredSwords@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 Raikyr0 <Kurohana@hotmail.com.au>
+# SPDX-FileCopyrightText: 2025 Rosycup <178287475+Rosycup@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 VMSolidus <evilexecutive@gmail.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: entity
+  parent: BaseStructure
+  id: Oracle
+  name: Oracle
+  description: She asks for items in exchange for knowledge. No one knows how she works.
+  components:
+  - type: Sprite
+    noRot: true
+    drawdepth: Mobs
+    offset: "0.0,0.5"
+    sprite: _DV/Structures/Decoration/statues.rsi
+    layers:
+      - state: oracle-0
+      - map: ["enum.SolutionContainerLayers.Fill"]
+        state: oracle-0
+  - type: Speech
+    speechSounds: Tenor
+  - type: Actions
+  - type: Psionic
+    removable: false
+    roller: false
+    assayFeedback:
+      - oracle-feedback
+    psychognomicDescriptors:
+      - p-descriptor-old
+      - p-descriptor-demiurgic
+      - p-descriptor-mysterious
+      - p-descriptor-emanative
+  - type: InnatePsionicPowers
+    powersToAdd:
+      - XenoglossyPower
+      - TelepathyPower
+      - NoosphericZapPower
+  - type: SolutionContainerManager
+    solutions:
+      fountain:
+        maxVol: 200
+  - type: Drink
+    solution: fountain
+  - type: DrawableSolution
+    solution: fountain
+  - type: DrainableSolution
+    solution: fountain
+  - type: ExaminableSolution
+    solution: fountain
+  - type: Appearance
+  - type: SolutionContainerVisuals
+    maxFillLevels: 10
+    fillBaseName: oracle-
+  - type: Grammar
+    attributes:
+      gender: female
+      proper: true
+  - type: Prayable
+  - type: SpriteFade
+  - type: Tag
+    tags: []
+  - type: Oracle
+    demandTypes: OracleDemandTypes
+    rewardReagents: OracleRewardReagents
+    rewardEntities:
+    - OracleRewardDisks
+    - OracleRewardCrystals
+  - type: LanguageSpeaker
+    currentLanguage: TauCetiBasic
+  - type: LanguageKnowledge
+    speaks:
+    - TauCetiBasic
+    understands:
+    - TauCetiBasic
+  - type: GuideHelp
+    guides: [ Psionics ]
+
+
+- type: weightedRandomEntity
+  id: OracleRewardDisks
+  weights:
+    ResearchDisk10000: 20
+    ResearchDisk20000: 10
+    ResearchDisk50000: 1
+
+- type: weightedRandomEntity
+  id: OracleRewardCrystals
+  weights:
+    MaterialBluespace1: 3
+    MaterialBluespace3: 10
+    MaterialBluespace5: 2
+
+- type: weightedRandom
+  id: OracleRewardReagents
+  weights:
+    LotophagoiOil: 7
+    Ichor: 2
+    Wine: 1.2
+    Blood: 0.8
+
+- type: weightedRandom
+  id: OracleDemandTypes
+  weights:
+    tech: 3
+    plant: 1 # Plants are very annoying to procure most of the time

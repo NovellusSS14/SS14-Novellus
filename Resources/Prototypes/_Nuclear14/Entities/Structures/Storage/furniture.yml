@@ -1,0 +1,39 @@
+# SPDX-FileCopyrightText: 2024 VMSolidus <evilexecutive@gmail.com>
+# SPDX-FileCopyrightText: 2025 Blitz <73762869+BlitzTheSquishy@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+# Safes
+- type: entity
+  parent: N14ClosetBaseW
+  id: N14ClosetSafe
+  name: safe
+  description: Might be filled with valuables.
+  suffix: N14 # TheDen
+  components:
+  - type: Sprite
+    sprite: _Nuclear14/Structures/Storage/Furniture/safe.rsi
+
+- type: entity
+  parent: [ N14ClosetSafe ]
+  id: N14LootClosetSafe
+  suffix: Loot, Random Military
+
+- type: entity
+  parent: [ N14ClosetSafe ]
+  id: N14LootClosetSafeCurrency
+  suffix: Loot, Currency one stack random
+
+- type: entity
+  parent: [ N14ClosetSafe ]
+  id: N14LootClosetSafePrewar
+  suffix: Loot, safe pre-war
+
+- type: entity
+  parent: N14ClosetSafe
+  id: N14ClosetSafeSpinner
+  suffix: N14, Spinner # TheDen
+  components:
+  - type: Sprite
+    sprite: _Nuclear14/Structures/Storage/Furniture/safespinner.rsi

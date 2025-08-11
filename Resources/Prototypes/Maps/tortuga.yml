@@ -1,0 +1,99 @@
+# SPDX-FileCopyrightText: 2023 Bakke <luringens@protonmail.com>
+# SPDX-FileCopyrightText: 2023 Carolyn3114 <136143032+Carolyn3114@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2023 Colin-Tel <113523727+Colin-Tel@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2023 Fluffiest Floofers <thebluewulf@gmail.com>
+# SPDX-FileCopyrightText: 2024 FoxxoTrystan <trystan.garnierhein@gmail.com>
+# SPDX-FileCopyrightText: 2024 SimpleStation14 <130339894+SimpleStation14@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 Velcroboy <107660393+IamVelcroboy@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 John Willis <143434770+CerberusWolfie@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 Rosycup <178287475+Rosycup@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 VMSolidus <evilexecutive@gmail.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <flyingkarii@gmail.com>
+# SPDX-FileCopyrightText: 2025 therealDLondon <162949166+therealDLondon@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: gameMap
+  id: Tortuga
+  mapName: 'Tortuga'
+  mapPath: /Maps/TheDen/tortuga.yml
+  minPlayers: 20
+  stations:
+    Tortuga:
+      stationProto: StandardNanotrasenStation
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: '{0} Tortuga Station {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: 'DV'
+        - type: StationEmergencyShuttle
+          emergencyShuttlePath: /Maps/Shuttles/_DV/NTES_Seal.yml
+        - type: StationJobs
+          overflowJobs:
+            - Passenger
+            # - Anomaly # Floofstation
+          availableJobs:
+          #civilian
+            Passenger: [ -1, -1 ]
+
+            Librarian: [ 1, 1 ]
+          #command
+            Captain: [ 1, 1 ]
+            BlueshieldOfficer: [ 1, 1 ]
+            NanotrasenRepresentative: [ 1, 1 ]
+            Magistrate: [ 1, 1 ]
+            AdministrativeAssistant: [ 1, 1 ]
+          #engineering
+            AtmosphericTechnician: [ 2, 3 ]
+            ChiefEngineer: [ 1, 1 ]
+            StationEngineer: [ 6, 8 ]
+            TechnicalAssistant: [ 3, 5 ]
+            SeniorEngineer: [ 1, 2 ]
+          #medical
+            Chemist: [ 2, 2 ]
+            ChiefMedicalOfficer: [ 1, 1 ]
+            MedicalDoctor: [ 7, 9 ]
+            MedicalIntern: [ 2, 4 ]
+            Paramedic: [ 1, 2 ]
+            Psychologist: [ 1, 1 ]
+            SeniorPhysician: [ 1, 2 ]
+          #security
+            Brigmedic: [ 1, 1 ]
+            Detective: [ 1, 1 ]
+            HeadOfSecurity: [ 1, 1 ]
+            Prisoner: [ 2, 3 ]
+            PrisonGuard: [ 1, 1 ]
+            SecurityOfficer: [ 4, 7 ]
+            SecurityCadet: [ 2, 4 ]
+            Warden: [ 1, 1 ]
+            SeniorOfficer: [ 1, 2 ]
+          #service
+            Bartender: [ 2, 2 ]
+            Botanist: [ 2, 3 ]
+            Boxer: [ 2, 2 ]
+            Chef: [ 3, 4 ]
+            Clown: [ 1, 2 ]
+            HeadOfPersonnel: [ 1, 1 ]
+            Janitor: [ 2, 3 ]
+            Lawyer: [ 2, 2 ]
+            Mime: [ 1, 2 ]
+            Musician: [ 2, 3 ]
+            Reporter: [ 2, 2 ]
+            ServiceWorker: [ 3, 6 ]
+          #science
+            ResearchDirector: [ 1, 1 ]
+            Scientist: [ 5, 6 ]
+            ForensicMantis: [ 1, 1 ]
+            ResearchAssistant: [ 2, 4 ]
+            Chaplain: [ 1, 1 ]
+            Borg: [ 2, 3 ]
+            SeniorResearcher: [ 1, 2 ]
+          #supply
+            Quartermaster: [ 1, 1 ]
+            CargoTechnician: [ 2, 4 ]
+            SalvageSpecialist: [ 3, 4 ]
+            MailCarrier: [ 2, 2 ]
+          # Silicon
+            StationAi: [ 1, 1 ]

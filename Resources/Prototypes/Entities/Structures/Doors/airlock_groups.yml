@@ -1,0 +1,94 @@
+# SPDX-FileCopyrightText: 2022 13spacemen <46101244+13spacemen@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2022 Joosep Jääger <joosep.jaager@gmail.com>
+# SPDX-FileCopyrightText: 2023 daerSeebaer <61566539+daerSeebaer@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 Debug <49997488+DebugOk@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 Unkn0wn_Gh0st <shadowstalkermll@gmail.com>
+# SPDX-FileCopyrightText: 2024 VMSolidus <evilexecutive@gmail.com>
+# SPDX-FileCopyrightText: 2024 deltanedas <39013340+deltanedas@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 Paulo Artur Pinheiro Viana Villaça <112904295+AlgumCorrupto@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 Rosycup <178287475+Rosycup@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 Skubman <ba.fallaria@gmail.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: AirlockGroup
+  id: Standard
+  iconPriority: 100
+  stylePaths:
+    atmospherics: Structures/Doors/Airlocks/Standard/atmospherics.rsi
+    basic:       Structures/Doors/Airlocks/Standard/basic.rsi
+    cargo:       Structures/Doors/Airlocks/Standard/cargo.rsi
+    command:     Structures/Doors/Airlocks/Standard/command.rsi
+    engineering: Structures/Doors/Airlocks/Standard/engineering.rsi
+    freezer:     Structures/Doors/Airlocks/Standard/freezer.rsi
+    maintenance: Structures/Doors/Airlocks/Standard/maint.rsi
+    medical:     Structures/Doors/Airlocks/Standard/medical.rsi
+    science:     Structures/Doors/Airlocks/Standard/science.rsi
+    security:    Structures/Doors/Airlocks/Standard/security.rsi
+    virology:    Structures/Doors/Airlocks/Standard/virology.rsi
+    justice:     _DV/Structures/Doors/Airlocks/Standard/justice.rsi # Delta V - Add Justice Dept
+    roboticist:  _DV/Structures/Doors/Airlocks/Standard/roboticist.rsi # Added Roboticist Role
+
+- type: AirlockGroup
+  id: Glass
+  iconPriority: 90
+  stylePaths:
+    atmospherics: Structures/Doors/Airlocks/Glass/atmospherics.rsi
+    basic:       Structures/Doors/Airlocks/Glass/basic.rsi
+    command:     Structures/Doors/Airlocks/Glass/command.rsi
+    science:     Structures/Doors/Airlocks/Glass/science.rsi
+    cargo:       Structures/Doors/Airlocks/Glass/cargo.rsi
+    engineering: Structures/Doors/Airlocks/Glass/engineering.rsi
+    maintenance: Structures/Doors/Airlocks/Glass/maint.rsi
+    medical:     Structures/Doors/Airlocks/Glass/medical.rsi
+    security:    Structures/Doors/Airlocks/Glass/security.rsi
+    virology:    Structures/Doors/Airlocks/Glass/virology.rsi
+    justice:     _DV/Structures/Doors/Airlocks/Glass/justice.rsi # Delta V - Add Justice Dept
+    roboticist:  _DV/Structures/Doors/Airlocks/Glass/roboticist.rsi #Added Roboticist Role
+
+- type: AirlockGroup
+  id: Windoor
+  iconPriority: 80
+  stylePaths:
+    basic:       Structures/Doors/Airlocks/Glass/glass.rsi
+
+- type: AirlockGroup
+  id: External
+  iconPriority: 70
+  stylePaths:
+    external:    Structures/Doors/Airlocks/Standard/external.rsi
+
+- type: AirlockGroup
+  id: ExternalGlass
+  iconPriority: 60
+  stylePaths:
+    external:    Structures/Doors/Airlocks/Glass/external.rsi
+
+- type: AirlockGroup
+  id: Shuttle
+  iconPriority: 50
+  stylePaths:
+    shuttle:     Structures/Doors/Airlocks/Standard/shuttle.rsi
+
+- type: AirlockGroup
+  id: ShuttleGlass
+  iconPriority: 40
+  stylePaths:
+    shuttle:     Structures/Doors/Airlocks/Glass/shuttle.rsi
+
+# fun
+- type: airlockDepartments
+  id: Departments
+  departments:
+    atmospherics: Engineering
+    basic: Civilian
+    cargo: Logistics
+    command: Command
+    engineering: Engineering
+    freezer: Civilian
+    maintenance: Civilian
+    medical: Medical
+    science: Epistemics
+    security: Security
+    virology: Medical

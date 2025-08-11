@@ -1,0 +1,39 @@
+# SPDX-FileCopyrightText: 2025 Timfa
+# SPDX-FileCopyrightText: 2025 sleepyyapril
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: entity
+  id: BookPress
+  parent: [BaseLatheLube, BaseMaterialSiloUtilizer]
+  name: book press
+  description: It produces tomes of knowledge in return for a humble offer of paper and cardboard.
+  components:
+  - type: Sprite
+    sprite: Structures/Machines/bookpress.rsi
+    snapCardinals: true
+    layers:
+    - state: icon
+      map: ["enum.LatheVisualLayers.IsRunning"]
+    - state: unlit
+      shader: unshaded
+      map: ["enum.PowerDeviceVisualLayers.Powered"]
+    - state: inserting
+      map: ["enum.MaterialStorageVisualLayers.Inserting"]
+    - state: panel
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+  - type: Machine
+    board: BookPressMachineCircuitboard
+  - type: MaterialStorage
+    whitelist:
+      tags:
+      - MaterialPaper
+      - MaterialCardboard
+  - type: Lathe
+    idleState: icon
+    runningState: building
+    staticPacks:
+    - BookpressStaticAwfulDen
+#  - type: EmagLatheRecipes
+#    emagStaticRecipes:
+#    - SuperIllegalDangerousBook

@@ -1,0 +1,251 @@
+# SPDX-FileCopyrightText: 2022 EmoGarbage404
+# SPDX-FileCopyrightText: 2022 Paul Ritter
+# SPDX-FileCopyrightText: 2022 Vera Aguilera Puerto
+# SPDX-FileCopyrightText: 2022 moonheart08
+# SPDX-FileCopyrightText: 2023 Ilya246
+# SPDX-FileCopyrightText: 2023 Moony
+# SPDX-FileCopyrightText: 2023 Nemanja
+# SPDX-FileCopyrightText: 2023 Skye
+# SPDX-FileCopyrightText: 2023 coolmankid12345
+# SPDX-FileCopyrightText: 2023 metalgearsloth
+# SPDX-FileCopyrightText: 2024 Debug
+# SPDX-FileCopyrightText: 2024 Kara
+# SPDX-FileCopyrightText: 2024 Kevin Zheng
+# SPDX-FileCopyrightText: 2024 Mnemotechnican
+# SPDX-FileCopyrightText: 2024 Pancake
+# SPDX-FileCopyrightText: 2024 ShatteredSwords
+# SPDX-FileCopyrightText: 2024 VMSolidus
+# SPDX-FileCopyrightText: 2024 deltanedas
+# SPDX-FileCopyrightText: 2024 shamp
+# SPDX-FileCopyrightText: 2025 EctoplasmIsGood
+# SPDX-FileCopyrightText: 2025 Eris
+# SPDX-FileCopyrightText: 2025 sleepyyapril
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: gamePreset
+  id: Survival
+  alias:
+    - survival
+  name: survival-title
+  showInVote: true # secret # DeltaV - Me when the survival. Used for periapsis.
+  highDanger: true
+  description: survival-description
+  rules:
+    - RampingStationEventScheduler
+    - BasicRoundstartVariation
+    - SubGamemodesRule
+    - LavalandStormScheduler # Lavaland Change
+
+- type: gamePreset
+  id: SurvivalHellshift
+  alias:
+    - hellshift
+  showInVote: false
+  name: hellshift-title
+  description: hellshift-description
+  rules:
+    - HellshiftStationEventScheduler
+    - BasicRoundstartVariation
+    - SubGamemodesRule
+    - LavalandStormScheduler # Lavaland Change
+
+- type: gamePreset
+  id: SurvivalIrregular
+  alias: [irregular]
+  showInVote: false
+  name: irregular-title
+  description: irregular-description
+  rules:
+    - IrregularStationEventScheduler
+    - BasicRoundstartVariation
+    - SubGamemodesRule
+    - LavalandStormScheduler # Lavaland Change
+
+- type: gamePreset
+  id: SurvivalIrregularExtended
+  alias: [irregular-extended]
+  showInVote: true
+  name: irregular-extended-title
+  description: irregular-extended-description
+  rules:
+    - IrregularExtendedStationEventScheduler
+    - BasicRoundstartVariation
+    - SubGamemodesRule
+    - LavalandStormScheduler # Lavaland Change
+
+- type: gamePreset
+  id: AllAtOnce
+  name: all-at-once-title
+  description: all-at-once-description
+  showInVote: false
+  rules:
+    - Nukeops
+    - Traitor
+    - Zombie
+    - RampingStationEventScheduler
+    - LavalandStormScheduler # Lavaland Change
+
+- type: gamePreset
+  id: Extended
+  alias:
+  - extended
+  - shittersafari
+  name: extended-title
+  showInVote: true #2boring2vote # DeltaV - I'd like to disagree, used for periapsis.
+  description: extended-description
+  rules:
+  - BasicStationEventScheduler
+  - BasicRoundstartVariation
+  - SubGamemodesRule
+  - LavalandStormScheduler # Lavaland Change
+
+- type: gamePreset
+  id: Greenshift
+  alias:
+  - greenshift
+  - shittersafarideluxeedition
+  name: greenshift-title
+  showInVote: true
+  description: greenshift-description
+  rules:
+  - LavalandStormScheduler # Lavaland Change
+
+- type: gamePreset
+  id: Secret
+  alias:
+    - secret
+    - sekrit
+  name: secret-title
+  showInVote: true
+  highDanger: true
+  description: secret-description
+  rules:
+    - Secret
+    - LavalandStormScheduler # Lavaland Change
+
+- type: gamePreset
+  id: SecretExtended #For Admin Use: Runs Extended but shows "Secret" in lobby.
+  alias:
+    - secretextended
+  name: secret-title
+  showInVote: false #Admin Use
+  description: secret-description
+  rules:
+    - BasicStationEventScheduler
+    - SubGamemodesRule
+    - LavalandStormScheduler # Lavaland Change
+
+- type: gamePreset
+  id: SecretGreenshift #For Admin Use: Runs Greenshift but shows "Secret" in lobby.
+  alias:
+  - secretgreenshift
+  name: secret-title
+  showInVote: false #Admin Use
+  description: secret-description
+  rules:
+  - LavalandStormScheduler # Lavaland Change
+
+- type: gamePreset
+  id: Sandbox
+  alias:
+    - sandbox
+  name: sandbox-title
+  description: sandbox-description
+  showInVote: false # Not suitable for use without admin intervention, since entity spamming can quickly crash a server
+  maxPlayers: 5
+  rules:
+    - Sandbox
+    - LavalandStormScheduler # Lavaland Change
+
+- type: gamePreset
+  id: Traitor
+  alias:
+    - traitor
+  name: traitor-title
+  description: traitor-description
+  showInVote: true
+  highDanger: true
+  rules:
+    - Traitor
+    - SubGamemodesRule
+    - BasicStationEventScheduler
+    - BasicRoundstartVariation
+    - LavalandStormScheduler # Lavaland Change
+
+- type: gamePreset
+  id: Deathmatch
+  alias:
+    - deathmatch
+    - dm
+  name: death-match-title
+  description: death-match-description
+  #maxPlayers: 15
+  showInVote: false # DeltaV - No.
+  supportedMaps: DeathMatchMapPool
+  rules:
+    - DeathMatch31
+
+- type: gamePreset
+  id: Nukeops
+  alias:
+    - nukeops
+  name: nukeops-title
+  description: nukeops-description
+  showInVote: false
+  rules:
+    - Nukeops
+    - SubGamemodesRule
+    - BasicStationEventScheduler
+    - BasicRoundstartVariation
+    - LavalandStormScheduler # Lavaland Change
+
+- type: gamePreset
+  id: Revolutionary
+  alias:
+    - rev
+    - revs
+    - revolutionaries
+  name: rev-title
+  description: rev-description
+  showInVote: false
+  rules:
+    - Revolutionary
+    - SubGamemodesRule
+    - BasicStationEventScheduler
+    - BasicRoundstartVariation
+    - LavalandStormScheduler # Lavaland Change
+
+- type: gamePreset
+  id: Zombie
+  alias:
+  - zombie
+  - zombies
+  - Zombies
+  - zz14
+  - zomber
+  name: zombie-title
+  description: zombie-description
+  showInVote: false
+  rules:
+  - Zombie
+  - BasicStationEventScheduler
+  - BasicRoundstartVariation
+  - LavalandStormScheduler # Lavaland Change
+
+- type: gamePreset
+  id: Changeling
+  alias:
+  - Changeling
+  - Changelings
+  - Ling
+  - Lings
+  name: changeling-gamemode-title
+  description: changeling-gamemode-description
+  showInVote: false
+  rules:
+  - Changeling
+  - SubGamemodesRule
+  - BasicStationEventScheduler
+  - BasicRoundstartVariation
+  - LavalandStormScheduler # Lavaland Change

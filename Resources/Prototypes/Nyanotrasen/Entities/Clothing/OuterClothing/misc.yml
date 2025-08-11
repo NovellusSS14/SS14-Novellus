@@ -1,0 +1,92 @@
+# SPDX-FileCopyrightText: 2023 Colin-Tel
+# SPDX-FileCopyrightText: 2023 Fluffiest Floofers
+# SPDX-FileCopyrightText: 2025 Blitz
+# SPDX-FileCopyrightText: 2025 Sir Warock
+# SPDX-FileCopyrightText: 2025 sleepyyapril
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: entity
+  parent: ClothingOuterStorageBase
+  id: ClothingOuterCoatLettermanBlue
+  name: blue letterman jacket
+  description: It's a blue highschool jacket with a big '14' stitched onto the back.
+  suffix: Nyano # TheDen
+  components:
+  - type: Sprite
+    sprite: Nyanotrasen/Clothing/Misc/letterman_jacket_blue.rsi
+  - type: Clothing
+    sprite: Nyanotrasen/Clothing/Misc/letterman_jacket_blue.rsi
+  - type: TemperatureProtection
+    heatingCoefficient: 0.8
+    coolingCoefficient: 0.3
+
+- type: entity
+  parent: ClothingOuterStorageBase
+  id: ClothingOuterCoatLettermanRed
+  name: red letterman jacket
+  description: It's a red highschool jacket with a big '14' stitched onto the back.
+  suffix: Nyano # TheDen
+  components:
+  - type: Sprite
+    sprite: Nyanotrasen/Clothing/Misc/letterman_jacket_red.rsi
+  - type: Clothing
+    sprite: Nyanotrasen/Clothing/Misc/letterman_jacket_red.rsi
+  - type: TemperatureProtection
+    heatingCoefficient: 0.8
+    coolingCoefficient: 0.3
+## mnk
+
+- type: entity
+  parent: ClothingOuterStorageBase
+  id: ClothingOuterCoatMNKWhiteHoodie
+  name: MNK white hoodie
+  description: A classic MNK produced white hoodie.
+  components:
+  - type: Sprite
+    sprite: Nyanotrasen/Clothing/Misc/hoodie_white.rsi
+  - type: Clothing
+    sprite: Nyanotrasen/Clothing/Misc/hoodie_white.rsi
+  - type: TemperatureProtection
+    heatingCoefficient: 1.1
+    coolingCoefficient: 0.1
+
+- type: entity
+  parent: ClothingOuterStorageBase
+  id: ClothingOuterCoatMNKBlackTopCoat
+  name: MNK black top coat
+  description: A sturdy MNK black top coat.
+  components:
+  - type: Sprite
+    sprite: Nyanotrasen/Clothing/Misc/black_top_coat.rsi
+  - type: Clothing
+    sprite: Nyanotrasen/Clothing/Misc/black_top_coat.rsi
+  - type: TemperatureProtection
+    heatingCoefficient: 0.8
+    coolingCoefficient: 0.3
+
+- type: entity
+  parent: ClothingOuterStorageBase
+  id: ClothingOuterCoatMNKBlackJacket
+  name: MNK black jacket
+  description: A light MNK black jacket.
+  components:
+  - type: Sprite
+    sprite: Nyanotrasen/Clothing/Misc/black_jacket.rsi
+  - type: Clothing
+    sprite: Nyanotrasen/Clothing/Misc/black_jacket.rsi
+  - type: TemperatureProtection
+    heatingCoefficient: 0.8
+    coolingCoefficient: 0.3
+
+- type: entity
+  parent: ClothingOuterBase
+  id: ClothingOuterWizardFake
+  name: wizard robes
+  suffix: fake
+  description: A set of blue robes.
+  components:
+  - type: Sprite
+    sprite: Clothing/OuterClothing/Misc/wizard.rsi
+  - type: Clothing
+    sprite: Clothing/OuterClothing/Misc/wizard.rsi

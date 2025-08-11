@@ -1,0 +1,52 @@
+# SPDX-FileCopyrightText: 2021 AJCM-git <60196617+AJCM-git@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2022 EmoGarbage404 <98561806+EmoGarbage404@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2022 Nemanja <98561806+EmoGarbage404@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2022 Pieter-Jan Briers <pieterjan.briers+git@gmail.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: MIT
+
+- type: entity
+  id: RandomInstruments
+  name: random instruments spawner
+  parent: MarkerBase
+  components:
+  - type: Sprite
+    layers:
+      - state: red
+      - sprite: Objects/Fun/Instruments/h_synthesizer.rsi
+        state: icon
+  - type: RandomSpawner
+    prototypes:
+      - AcousticGuitarInstrument
+      - ViolinInstrument
+      - TrumpetInstrument
+      - ElectricGuitarInstrument
+      - AccordionInstrument
+      - HarmonicaInstrument
+      - TromboneInstrument
+      - FrenchHornInstrument
+      - EuphoniumInstrument
+      - SaxophoneInstrument
+      - BanjoInstrument
+      - GlockenspielInstrument
+      - XylophoneInstrument
+      - BikeHornInstrument
+      - RecorderInstrument
+      - FluteInstrument
+      - ClarinetInstrument
+      - CelloInstrument
+      - KalimbaInstrument
+      - MicrophoneInstrument
+      - BassGuitarInstrument
+      - OcarinaInstrument
+      - PanFluteInstrument
+    chance: 0.95
+    rarePrototypes:
+      - SynthesizerInstrument
+      - GunpetInstrument
+      - BagpipeInstrument
+      - RockGuitarInstrument
+      - MusicBoxInstrument
+      - ViolaInstrument
+    rareChance: 0.05

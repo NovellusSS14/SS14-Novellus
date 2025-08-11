@@ -1,0 +1,173 @@
+# SPDX-FileCopyrightText: 2023 Debug
+# SPDX-FileCopyrightText: 2024 Mnemotechnican
+# SPDX-FileCopyrightText: 2024 VMSolidus
+# SPDX-FileCopyrightText: 2025 Rosycup
+# SPDX-FileCopyrightText: 2025 portfiend
+# SPDX-FileCopyrightText: 2025 sleepyyapril
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+# TODO: These should probably be EntityTables, or some other data structure that isn't a string list
+
+- type: entity
+  id: ButlertronRecipesBase
+  abstract: true
+  components:
+  - type: Roboisseur
+    tier2Protos:
+      - FoodBurgerEmpowered
+      - FoodSoupClown
+      - FoodSoupChiliClown
+      - FoodBurgerSuper
+      - FoodNoodlesCopy
+      - FoodPizzaCorncob
+      - FoodPizzaDonkpocket
+      - FoodSoupMonkey
+      - FoodMothSeedSoup
+      - FoodTartGrape
+      - FoodMealCubancarp
+      - FoodMealSashimi
+      - FoodBurgerCarp
+      - FoodMealSoftTaco
+      - FoodMothMacBalls
+      - FoodSoupNettle
+      - FoodBurgerDuck
+      - FoodBurgerBaseball
+    tier3Protos:
+      - FoodBurgerGhost
+      - FoodSaladWatermelonFruitBowl
+      - FoodBakedCannabisBrownieBatch
+      - FoodPizzaDank
+      - FoodBurgerBear
+      - FoodBurgerMime
+      - FoodCakeSuppermatter
+      - FoodSoupChiliCold
+      - FoodSoupBisque
+      - FoodCakeSlime
+      - FoodBurgerCrazy
+    robossuierRewards:
+      - DrinkIceCreamGlass
+      - FoodFrozenPopsicleOrange
+      - FoodFrozenPopsicleBerry
+      - FoodFrozenPopsicleJumbo
+      - FoodFrozenSnowconeBerry
+      - FoodFrozenSnowconeFruit
+      - FoodFrozenSnowconeClown
+      - FoodFrozenSnowconeMime
+      - FoodFrozenSnowconeRainbow
+      - FoodFrozenCornuto
+      - FoodFrozenSundae
+      - FoodFrozenFreezy
+      - FoodFrozenSandwichStrawberry
+      - FoodFrozenSandwich
+    blacklistedProtos:
+      - FoodBurgerSpell
+      - FoodBreadBanana
+      - FoodMothSqueakingFry
+      - FoodMothFleetSalad
+      - FoodBreadMeatSpider
+      - FoodBurgerHuman
+      - FoodNoodlesBoiled
+      - FoodMothOatStew
+      - FoodKebabSkewer
+      - FoodSoupTomato
+      - FoodDonkpocketBerryWarm
+      - FoodBreadButteredToast
+      - FoodMothCottonSoup
+      - LeavesTobaccoDried
+      - FoodSoupEyeball
+      - FoodMothKachumbariSalad
+      - FoodBurgerCorgi
+      - FoodBreadPlain
+      - FoodBreadBun
+      - FoodBurgerCat
+      - FoodSoupTomatoBlood
+      - FoodMothSaladBase
+      - FoodPieXeno
+      - FoodPiePumpkin
+      - FoodPiePumpkinSlice
+      - FoodDonkpocketTeriyakiWarm
+      - FoodMothBakedCheese
+      - FoodMothPizzaCotton
+      - AloeCream
+      - FoodSnackPopcorn
+      - FoodBurgerSoy
+      - FoodMothToastedSeeds
+      - FoodMothCornmealPorridge
+      - FoodMothBakedCorn
+      - FoodRiceBoiled
+      - FoodMothEyeballSoup
+      - FoodBreadCreamcheese
+      - FoodSoupOnion
+      - FoodBurgerAppendix
+      - FoodBurgerRat
+      - RegenerativeMesh
+      - FoodCheeseCurds
+      - FoodDonkpocketHonkWarm
+      - FoodOatmeal
+      - FoodBreadJellySlice
+      - FoodMothCottonSalad
+      - FoodDonkpocketSpicyWarm
+      - FoodCannabisButter
+      - FoodNoodles
+      - FoodBreadMeat
+      - LeavesCannabisDried
+      - FoodBurgerCheese
+      - FoodDonkpocketDankWarm
+      - FoodSpaceshroomCooked
+      - FoodMealFries
+      - MedicatedSuture
+      - FoodDonkpocketWarm
+      - FoodCakePlain
+      - DisgustingSweptSoup
+      - FoodBurgerPlain
+      - FoodBreadGarlicSlice
+      - FoodSoupMushroom
+      - FoodSoupWingFangChu
+      - FoodBreadMeatXeno
+      - FoodCakeBrain
+      - FoodBurgerBrain
+      - FoodSaladCaesar
+
+- type: entity
+  parent: [BaseStructure, ButlertronRecipesBase]
+  id: Roboisseur
+  name: Mr. Butlertron
+  description: It asks for food to deliver to exotic customers across the cosmos. Powered by the latest technology in bluespace food delivery.
+  components:
+  - type: Anchorable
+  - type: Pullable
+  - type: Sprite
+    noRot: true
+    drawdepth: Mobs
+    sprite: _DV/Structures/Machines/roboisseur.rsi
+    layers:
+    - state: roboisseur-1
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 1000
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+  - type: Roboisseur
+  - type: Speech
+    speechSounds: Pai
+  - type: Appearance
+  - type: Grammar
+    attributes:
+      gender: male
+      proper: true
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.15,-0.15,0.15,0.15"
+        density: 60
+        mask:
+        - MachineMask
+        layer:
+        - MidImpassable
+        - LowImpassable

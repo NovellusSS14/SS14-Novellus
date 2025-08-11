@@ -1,0 +1,20 @@
+# SPDX-FileCopyrightText: 2023 brainfood1183 <113240905+brainfood1183@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 Tayrtahn <tayrtahn@gmail.com>
+# SPDX-FileCopyrightText: 2024 Ubaser <134914314+UbaserB@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: messagePack
+  id: HappyHonkAds
+  messages:
+  - advertisement-happyhonk-1
+  - advertisement-happyhonk-2
+  - advertisement-happyhonk-3
+  - advertisement-happyhonk-4
+  - advertisement-happyhonk-5
+  - advertisement-happyhonk-6
+  - advertisement-happyhonk-7
+  - advertisement-happyhonk-8
+  - advertisement-happyhonk-9
+  - advertisement-happyhonk-10

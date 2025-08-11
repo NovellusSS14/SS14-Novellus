@@ -1,0 +1,21 @@
+# SPDX-FileCopyrightText: 2023 Fluffiest Floofers <thebluewulf@gmail.com>
+# SPDX-FileCopyrightText: 2024 Debug <49997488+DebugOk@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 Rosycup <178287475+Rosycup@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: entity
+  parent: BaseItem
+  id: SpaceCashLuckyBill
+  name: logistics officer's lucky bill
+  description: The first bill ever earned by the Logistics Officer from trading. A small chip is embedded in it.
+  components:
+    - type: Sprite
+      sprite: _DV/Objects/Misc/first_bill.rsi
+      state: icon
+    - type: Tag
+      tags:
+        - HighRiskItem
+    - type: StealTarget
+      stealGroup: SpaceCashLuckyBill

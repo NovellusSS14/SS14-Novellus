@@ -1,0 +1,17 @@
+# SPDX-FileCopyrightText: 2025 MajorMoth <61519600+MajorMoth@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: construction
+  name: emergency comfort deployment unit
+  id: EmergencyComfortDeploymentUnitConstruction
+  graph: Pillows
+  startNode: start
+  targetNode: EmergencyComfortDeploymentUnitWrapped
+  category: construction-category-misc
+  description: Deploy in any comfort requiring location for maximum softness.
+  icon:
+    sprite: /Textures/_DEN/Structures/Furniture/pillows.rsi
+    state: EmergencyComfortDeploymentUnitWrapped
+  objectType: Item

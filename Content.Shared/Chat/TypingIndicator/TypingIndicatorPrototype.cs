@@ -1,0 +1,46 @@
+// SPDX-FileCopyrightText: 2022 Alex Evgrashin
+// SPDX-FileCopyrightText: 2023 DrSmugleaf
+// SPDX-FileCopyrightText: 2023 Nemanja
+// SPDX-FileCopyrightText: 2023 Visne
+// SPDX-FileCopyrightText: 2023 Ygg01
+// SPDX-FileCopyrightText: 2023 metalgearsloth
+// SPDX-FileCopyrightText: 2025 88tv
+// SPDX-FileCopyrightText: 2025 Tay
+// SPDX-FileCopyrightText: 2025 lzk
+// SPDX-FileCopyrightText: 2025 pa.pecherskij
+// SPDX-FileCopyrightText: 2025 sleepyyapril
+// SPDX-FileCopyrightText: 2025 taydeo
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+using System.Numerics;
+using Robust.Shared.Prototypes;
+using Robust.Shared.Utility;
+
+namespace Content.Shared.Chat.TypingIndicator;
+
+/// <summary>
+///     Prototype to store chat typing indicator visuals.
+/// </summary>
+[Prototype("typingIndicator")]
+public sealed partial class TypingIndicatorPrototype : IPrototype
+{
+    [IdDataField]
+    public string ID { get; private set; } = default!;
+
+    [DataField("spritePath")]
+    public ResPath SpritePath = new("/Textures/Effects/speech.rsi");
+
+    [DataField("typingState", required: true)]
+    public string TypingState = default!;
+
+    [DataField("idleState", required: true)]
+    public string IdleState = default!;
+
+    [DataField("offset")]
+    public Vector2 Offset = new(0, 0);
+
+    [DataField("shader")]
+    public string Shader = "shaded";
+
+}

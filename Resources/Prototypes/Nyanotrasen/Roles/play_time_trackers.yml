@@ -1,0 +1,23 @@
+# SPDX-FileCopyrightText: 2023 Debug <sidneymaatman@gmail.com>
+# SPDX-FileCopyrightText: 2023 Fluffiest Floofers <thebluewulf@gmail.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: MIT
+
+- type: playTimeTracker
+  id: JobMailCarrier
+
+- type: playTimeTracker
+  id: JobPrisoner
+
+- type: playTimeTracker
+  id: JobGladiator
+
+- type: playTimeTracker
+  id: JobMartialArtist
+
+- type: playTimeTracker
+  id: JobPrisonGuard
+
+- type: playTimeTracker
+  id: JobForensicMantis

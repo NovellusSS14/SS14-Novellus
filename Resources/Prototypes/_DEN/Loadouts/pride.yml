@@ -1,0 +1,484 @@
+# SPDX-FileCopyrightText: 2025 Blitz
+# SPDX-FileCopyrightText: 2025 KekaniCreates
+# SPDX-FileCopyrightText: 2025 portfiend
+# SPDX-FileCopyrightText: 2025 sleepyyapril
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+# Pins
+- type: loadout
+  id: LoadoutNeckLGBTPin
+  category: Neck
+  cost: 1
+  exclusive: true
+  items:
+  - ClothingNeckLGBTPin
+  requirements:
+  - !type:CharacterItemGroupRequirement
+    group: LoadoutNeck
+
+- type: loadout
+  id: LoadoutNeckAromanticPin
+  category: Neck
+  cost: 1
+  exclusive: true
+  items:
+  - ClothingNeckAromanticPin
+  requirements:
+  - !type:CharacterItemGroupRequirement
+    group: LoadoutNeck
+
+- type: loadout
+  id: LoadoutNeckAsexualPin
+  category: Neck
+  cost: 1
+  exclusive: true
+  items:
+  - ClothingNeckAsexualPin
+  requirements:
+  - !type:CharacterItemGroupRequirement
+    group: LoadoutNeck
+
+- type: loadout
+  id: LoadoutNeckBisexualPin
+  category: Neck
+  cost: 1
+  exclusive: true
+  items:
+  - ClothingNeckBisexualPin
+  requirements:
+  - !type:CharacterItemGroupRequirement
+    group: LoadoutNeck
+
+- type: loadout
+  id: LoadoutNeckGayPin
+  category: Neck
+  cost: 1
+  exclusive: true
+  items:
+  - ClothingNeckGayPin
+  requirements:
+  - !type:CharacterItemGroupRequirement
+    group: LoadoutNeck
+
+- type: loadout
+  id: LoadoutNeckIntersexPin
+  category: Neck
+  cost: 1
+  exclusive: true
+  items:
+  - ClothingNeckIntersexPin
+  requirements:
+  - !type:CharacterItemGroupRequirement
+    group: LoadoutNeck
+
+- type: loadout
+  id: LoadoutNeckLesbianPin
+  category: Neck
+  cost: 1
+  exclusive: true
+  items:
+  - ClothingNeckLesbianPin
+  requirements:
+  - !type:CharacterItemGroupRequirement
+    group: LoadoutNeck
+
+- type: loadout
+  id: LoadoutNeckNonBinaryPin
+  category: Neck
+  cost: 1
+  exclusive: true
+  items:
+  - ClothingNeckNonBinaryPin
+  requirements:
+  - !type:CharacterItemGroupRequirement
+    group: LoadoutNeck
+
+- type: loadout
+  id: LoadoutNeckPansexualPin
+  category: Neck
+  cost: 1
+  exclusive: true
+  items:
+  - ClothingNeckPansexualPin
+  requirements:
+  - !type:CharacterItemGroupRequirement
+    group: LoadoutNeck
+
+- type: loadout
+  id: LoadoutNeckTransPin
+  category: Neck
+  cost: 1
+  exclusive: true
+  items:
+  - ClothingNeckTransPin
+  requirements:
+  - !type:CharacterItemGroupRequirement
+    group: LoadoutNeck
+
+- type: loadout
+  id: LoadoutNeckOmnisexualPin
+  category: Neck
+  cost: 1
+  exclusive: true
+  items:
+  - ClothingNeckOmnisexualPin
+  requirements:
+  - !type:CharacterItemGroupRequirement
+    group: LoadoutNeck
+
+- type: loadout
+  id: LoadoutNeckGenderfluidPin
+  category: Neck
+  cost: 1
+  exclusive: true
+  items:
+  - ClothingNeckGenderfluidPin
+  requirements:
+  - !type:CharacterItemGroupRequirement
+    group: LoadoutNeck
+
+- type: loadout
+  id: LoadoutNeckGenderqueerPin
+  category: Neck
+  cost: 1
+  exclusive: true
+  items:
+  - ClothingNeckGenderqueerPin
+  requirements:
+  - !type:CharacterItemGroupRequirement
+    group: LoadoutNeck
+
+- type: loadout
+  id: LoadoutNeckAroacePin
+  category: Neck
+  cost: 1
+  exclusive: true
+  items:
+  - ClothingNeckAroacePin
+  requirements:
+  - !type:CharacterItemGroupRequirement
+    group: LoadoutNeck
+
+- type: loadout
+  id: LoadoutNeckPluralPin
+  category: Neck
+  cost: 1
+  exclusive: true
+  items:
+  - ClothingNeckPluralPin
+  requirements:
+  - !type:CharacterItemGroupRequirement
+    group: LoadoutNeck
+
+- type: loadout
+  id: LoadoutNeckAllyPin
+  category: Neck
+  cost: 1
+  exclusive: true
+  items:
+  - ClothingNeckAllyPin
+  requirements:
+  - !type:CharacterItemGroupRequirement
+    group: LoadoutNeck
+
+# Cloaks
+- type: loadout
+  id: LoadoutNeckCloakProgressPride
+  category: Neck
+  cost: 1
+  exclusive: true
+  items:
+  - ClothingNeckCloakProgressPride
+  requirements:
+  - !type:CharacterItemGroupRequirement
+    group: LoadoutNeck
+
+- type: loadout
+  id: LoadoutNeckCloakTrans
+  category: Neck
+  cost: 1
+  exclusive: true
+  items:
+  - ClothingNeckCloakTrans
+  requirements:
+  - !type:CharacterItemGroupRequirement
+    group: LoadoutNeck
+
+- type: loadout
+  id: LoadoutNeckCloakAro
+  category: Neck
+  cost: 1
+  exclusive: true
+  items:
+  - ClothingNeckCloakAro
+  requirements:
+  - !type:CharacterItemGroupRequirement
+    group: LoadoutNeck
+
+- type: loadout
+  id: LoadoutNeckCloakAce
+  category: Neck
+  cost: 1
+  exclusive: true
+  items:
+  - ClothingNeckCloakAce
+  requirements:
+  - !type:CharacterItemGroupRequirement
+    group: LoadoutNeck
+
+- type: loadout
+  id: LoadoutNeckCloakBi
+  category: Neck
+  cost: 1
+  exclusive: true
+  items:
+  - ClothingNeckCloakBi
+  requirements:
+  - !type:CharacterItemGroupRequirement
+    group: LoadoutNeck
+
+- type: loadout
+  id: LoadoutNeckCloakIntersex
+  category: Neck
+  cost: 1
+  exclusive: true
+  items:
+  - ClothingNeckCloakIntersex
+  requirements:
+  - !type:CharacterItemGroupRequirement
+    group: LoadoutNeck
+
+- type: loadout
+  id: LoadoutNeckCloakEnby
+  category: Neck
+  cost: 1
+  exclusive: true
+  items:
+  - ClothingNeckCloakEnby
+  requirements:
+  - !type:CharacterItemGroupRequirement
+    group: LoadoutNeck
+
+- type: loadout
+  id: LoadoutNeckCloakPan
+  category: Neck
+  cost: 1
+  exclusive: true
+  items:
+  - ClothingNeckCloakPan
+  requirements:
+  - !type:CharacterItemGroupRequirement
+    group: LoadoutNeck
+
+- type: loadout
+  id: LoadoutNeckCloakGay
+  category: Neck
+  cost: 1
+  exclusive: true
+  items:
+  - ClothingNeckCloakGay
+  requirements:
+  - !type:CharacterItemGroupRequirement
+    group: LoadoutNeck
+
+- type: loadout
+  id: LoadoutNeckCloakLesbian
+  category: Neck
+  cost: 1
+  exclusive: true
+  items:
+  - ClothingNeckCloakLesbian
+  requirements:
+  - !type:CharacterItemGroupRequirement
+    group: LoadoutNeck
+
+- type: loadout
+  id: LoadoutNeckCloakBear
+  category: Neck
+  cost: 1
+  exclusive: true
+  items:
+  - ClothingNeckCloakBear
+  requirements:
+  - !type:CharacterItemGroupRequirement
+    group: LoadoutNeck
+
+- type: loadout
+  id: LoadoutNeckCloakAroace
+  category: Neck
+  cost: 1
+  exclusive: true
+  items:
+  - ClothingNeckCloakAroace
+  requirements:
+  - !type:CharacterItemGroupRequirement
+    group: LoadoutNeck
+
+# Scarves
+
+- type: loadout
+  id: LoadoutNeckScarfStripedAce
+  category: Neck
+  cost: 1
+  exclusive: true
+  items:
+  - ClothingNeckScarfStripedAce
+  requirements:
+  - !type:CharacterItemGroupRequirement
+    group: LoadoutNeck
+
+- type: loadout
+  id: LoadoutNeckScarfStripedAro
+  category: Neck
+  cost: 1
+  exclusive: true
+  items:
+  - ClothingNeckScarfStripedAro
+  requirements:
+  - !type:CharacterItemGroupRequirement
+    group: LoadoutNeck
+
+- type: loadout
+  id: LoadoutNeckScarfStripedBiSexual
+  category: Neck
+  cost: 1
+  exclusive: true
+  items:
+  - ClothingNeckScarfStripedBiSexual
+  requirements:
+  - !type:CharacterItemGroupRequirement
+    group: LoadoutNeck
+
+- type: loadout
+  id: LoadoutNeckScarfStripedGay
+  category: Neck
+  cost: 1
+  exclusive: true
+  items:
+  - ClothingNeckScarfStripedGay
+  requirements:
+  - !type:CharacterItemGroupRequirement
+    group: LoadoutNeck
+
+- type: loadout
+  id: LoadoutNeckScarfStripedInter
+  category: Neck
+  cost: 1
+  exclusive: true
+  items:
+  - ClothingNeckScarfStripedInter
+  requirements:
+  - !type:CharacterItemGroupRequirement
+    group: LoadoutNeck
+
+- type: loadout
+  id: LoadoutNeckScarfStripedLesbian
+  category: Neck
+  cost: 1
+  exclusive: true
+  items:
+  - ClothingNeckScarfStripedLesbian
+  requirements:
+  - !type:CharacterItemGroupRequirement
+    group: LoadoutNeck
+
+- type: loadout
+  id: LoadoutNeckScarfStripedPan
+  category: Neck
+  cost: 1
+  exclusive: true
+  items:
+  - ClothingNeckScarfStripedPan
+  requirements:
+  - !type:CharacterItemGroupRequirement
+    group: LoadoutNeck
+
+- type: loadout
+  id: LoadoutNeckScarfStripedNonBinary
+  category: Neck
+  cost: 1
+  exclusive: true
+  items:
+  - ClothingNeckScarfStripedNonBinary
+  requirements:
+  - !type:CharacterItemGroupRequirement
+    group: LoadoutNeck
+
+- type: loadout
+  id: LoadoutNeckScarfStripedRainbow
+  category: Neck
+  cost: 1
+  exclusive: true
+  items:
+  - ClothingNeckScarfStripedRainbow
+  requirements:
+  - !type:CharacterItemGroupRequirement
+    group: LoadoutNeck
+
+- type: loadout
+  id: LoadoutNeckScarfStripedTrans
+  category: Neck
+  cost: 1
+  exclusive: true
+  items:
+  - ClothingNeckScarfStripedTrans
+  requirements:
+  - !type:CharacterItemGroupRequirement
+    group: LoadoutNeck
+
+- type: loadout
+  id: LoadoutNeckScarfStripedLesbianLong
+  category: Neck
+  cost: 1
+  exclusive: true
+  items:
+  - ClothingNeckScarfStripedLesbianLong
+  requirements:
+  - !type:CharacterItemGroupRequirement
+    group: LoadoutNeck
+
+- type: loadout
+  id: LoadoutNeckScarfStripedAroace
+  category: Neck
+  cost: 1
+  exclusive: true
+  items:
+  - ClothingNeckScarfStripedAroace
+  requirements:
+  - !type:CharacterItemGroupRequirement
+    group: LoadoutNeck
+
+# Misc
+- type: loadout
+  id: LoadoutHeadHatXmasCrown
+  category: Head
+  cost: 1
+  exclusive: true
+  items:
+  - ClothingHeadHatXmasCrown
+  requirements:
+  - !type:CharacterItemGroupRequirement
+    group: LoadoutHead
+
+- type: loadout
+  id: LoadoutBedsheetRainbow
+  category: Neck
+  cost: 1
+  exclusive: true
+  items:
+  - BedsheetRainbow
+  requirements:
+  - !type:CharacterItemGroupRequirement
+    group: LoadoutNeck
+
+- type: loadout
+  id: LoadoutUniformColorRainbow
+  category: Uniform
+  cost: 1
+  exclusive: true
+  items:
+  - ClothingUniformColorRainbow
+  requirements:
+  - !type:CharacterItemGroupRequirement
+    group: LoadoutUniformsCivilian

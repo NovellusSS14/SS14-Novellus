@@ -1,0 +1,27 @@
+# SPDX-FileCopyrightText: 2024 John Space <bigdumb421@gmail.com>
+# SPDX-FileCopyrightText: 2024 gluesniffler <159397573+gluesniffler@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 VMSolidus <evilexecutive@gmail.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: entity
+  id: WeaponMechChainSword
+  parent: [ BaseMechWeaponMelee, CombatMechEquipment  ]
+  name: exosuit chainsword
+  suffix: Mech Weapon, Melee, Combat
+  description: Equipment for combat exosuits. This is the mechanical chainsword that'll pierce the heavens!
+  components:
+  - type: Sprite
+    state: mecha_chainsword
+  - type: MeleeWeapon
+    autoAttack: true
+    angle: 0
+    wideAnimationRotation: -90
+    soundHit:
+      path: "/Audio/Weapons/chainsaw.ogg"
+    attackRate: 0.3
+    damage:
+      types:
+        Structural: 35
+        Piercing: 15

@@ -1,0 +1,44 @@
+<!--
+SPDX-FileCopyrightText: 2024 DEATHB4DEFEAT <77995199+DEATHB4DEFEAT@users.noreply.github.com>
+SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+
+SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+-->
+
+<Control xmlns="https://spacestation14.io">
+    <BoxContainer Name="MainContainer"
+                  Orientation="Horizontal"
+                  SetWidth="160">
+        <PanelContainer Name="ColorPanel"
+                        VerticalExpand="True"
+                        SetWidth="7"
+                        Margin="0 1 0 0" />
+        <Button Name="MainButton"
+                HorizontalExpand="True"
+                VerticalExpand="True"
+                StyleClasses="ButtonSquare"
+                Margin="-1 0 0 0">
+            <BoxContainer Orientation="Horizontal" HorizontalExpand="True">
+                <BoxContainer Orientation="Vertical"
+                              VerticalExpand="True"
+                              HorizontalExpand="True"
+                              Margin="-5 0 0 0">
+                    <Label Name="ReagentNameLabel"
+                           StyleClasses="LabelSubText" />
+                    <Label Name="FillLabel"
+                           StyleClasses="LabelSubText"
+                           Margin="0 -5 0 0" />
+                </BoxContainer>
+            </BoxContainer>
+        </Button>
+        <Button Name="EjectButton"
+                StyleClasses="OpenLeft"
+                VerticalExpand="True"
+                SetWidth="20">
+            <Label Name="EjectButtonIcon"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Center"
+                   Margin="-7 -4 0 0" />
+        </Button>
+    </BoxContainer>
+</Control>

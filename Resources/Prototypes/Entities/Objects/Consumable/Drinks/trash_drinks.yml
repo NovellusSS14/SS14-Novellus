@@ -1,0 +1,420 @@
+# SPDX-FileCopyrightText: 2020 AJCM-git <60196617+AJCM-git@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2020 ComicIronic <comicironic@gmail.com>
+# SPDX-FileCopyrightText: 2020 DrSmugleaf <DrSmugleaf@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2020 FL-OZ <58238103+FL-OZ@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2020 FL-OZ <anotherscuffed@gmail.com>
+# SPDX-FileCopyrightText: 2020 Hugo Laloge <hugo.laloge@gmail.com>
+# SPDX-FileCopyrightText: 2020 Injazz <injazza@gmail.com>
+# SPDX-FileCopyrightText: 2020 Paul Ritter <ritter.paul1@googlemail.com>
+# SPDX-FileCopyrightText: 2020 Víctor Aguilera Puerto <6766154+Zumorica@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2020 lajolico <55922029+lajolico@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2020 nuke <47336974+nuke-makes-games@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2021 AndresE55 <80334192+Leander-0@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2021 Pieter-Jan Briers <pieterjan.briers+git@gmail.com>
+# SPDX-FileCopyrightText: 2021 Vera Aguilera Puerto <6766154+Zumorica@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2021 Ygg01 <y.laughing.man.y@gmail.com>
+# SPDX-FileCopyrightText: 2021 py01 <60152240+collinlunn@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2022 Leon Friedrich <60421075+ElectroJr@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2022 Mervill <mervills.email@gmail.com>
+# SPDX-FileCopyrightText: 2022 Peptide90 <78795277+Peptide90@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2022 Rane <60792108+Elijahrane@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2022 Veritius <veritiusgaming@gmail.com>
+# SPDX-FileCopyrightText: 2022 metalgearsloth <31366439+metalgearsloth@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2022 metalgearsloth <metalgearsloth@gmail.com>
+# SPDX-FileCopyrightText: 2022 mirrorcult <lunarautomaton6@gmail.com>
+# SPDX-FileCopyrightText: 2023 0x6273 <0x40@keemail.me>
+# SPDX-FileCopyrightText: 2023 Chief-Engineer <119664036+Chief-Engineer@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2023 Kara <lunarautomaton6@gmail.com>
+# SPDX-FileCopyrightText: 2023 Nemanja <98561806+EmoGarbage404@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2023 deltanedas <39013340+deltanedas@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2023 faint <46868845+ficcialfaint@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 DEATHB4DEFEAT <77995199+DEATHB4DEFEAT@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 SimpleStation14 <130339894+SimpleStation14@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 VMSolidus <evilexecutive@gmail.com>
+# SPDX-FileCopyrightText: 2024 Velcroboy <107660393+IamVelcroboy@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 Velcroboy <velcroboy333@hotmail.com>
+# SPDX-FileCopyrightText: 2024 degradka <69397649+degradka@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+# These can still be used as containers
+- type: entity
+  name: base empty bottle
+  id: DrinkBottleBaseEmpty
+  parent: BaseItem
+  abstract: true
+  description: An empty bottle.
+  suffix: Empty
+  components:
+  - type: Sprite
+    state: icon
+  - type: Item
+    size: Normal
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 100
+  - type: SolutionTransfer
+    canChangeTransferAmount: true
+    maxTransferAmount: 5
+  - type: Drink
+  - type: MeleeWeapon
+    soundNoDamage:
+      path: "/Audio/Effects/Fluids/splat.ogg"
+    damage:
+      types:
+        Blunt: 0
+  - type: MixableSolution
+    solution: drink
+  - type: Spillable
+    solution: drink
+  - type: FitsInDispenser
+    solution: drink
+  - type: DrawableSolution
+    solution: drink
+  - type: RefillableSolution
+    solution: drink
+  - type: DrainableSolution
+    solution: drink
+  - type: UserInterface
+    interfaces:
+      enum.TransferAmountUiKey.Key:
+        type: TransferAmountBoundUserInterface
+  - type: DamageOnLand
+    damage:
+      types:
+        Blunt: 5
+  - type: DamageOtherOnHit
+    damage:
+      types:
+        Blunt: 4
+  - type: Damageable
+    damageContainer: Inorganic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 5
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: GlassBreak
+      - !type:SpillBehavior { }
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          BrokenBottle:
+            min: 1
+            max: 1
+        transferForensics: true
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+  - type: Tag
+    tags:
+    - Trash
+  - type: PhysicalComposition
+    materialComposition:
+      Glass: 100
+  - type: SpaceGarbage
+
+- type: entity
+  name: base empty bottle
+  id: DrinkBottleBaseSmallEmpty
+  parent: DrinkBottleBaseEmpty
+  abstract: true
+  components:
+  - type: Item
+    size: Small
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 50
+
+- type: entity
+  name: base empty carton
+  id: DrinkCartonBaseEmpty
+  parent: BaseItem
+  abstract: true
+  description: An empty carton.
+  suffix: Empty
+  components:
+  - type: Sprite
+    state: icon
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 50
+  - type: MixableSolution
+    solution: drink
+  - type: SolutionTransfer
+    canChangeTransferAmount: true
+    maxTransferAmount: 5
+  - type: Drink
+  - type: Spillable
+    solution: drink
+  - type: FitsInDispenser
+    solution: drink
+  - type: DrawableSolution
+    solution: drink
+  - type: RefillableSolution
+    solution: drink
+  - type: DrainableSolution
+    solution: drink
+  - type: UserInterface
+    interfaces:
+      enum.TransferAmountUiKey.Key:
+        type: TransferAmountBoundUserInterface
+  - type: Damageable
+    damageContainer: Inorganic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 20
+      behaviors:
+      - !type:SpillBehavior { }
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+  - type: Tag
+    tags:
+    - Trash
+  - type: PhysicalComposition
+    materialComposition:
+      Cardboard: 20
+  - type: SpaceGarbage
+  - type: EmitSoundOnPickup
+    sound: /Audio/SimpleStation14/Items/Handling/drinkglass_pickup.ogg
+  - type: EmitSoundOnDrop
+    sound: /Audio/SimpleStation14/Items/Handling/drinkglass_drop.ogg
+  - type: EmitSoundOnLand
+    sound: /Audio/SimpleStation14/Items/Handling/drinkglass_drop.ogg
+
+- type: entity
+  name: base empty bottle
+  id: DrinkCartonBaseLargeEmpty
+  parent: DrinkCartonBaseEmpty
+  abstract: true
+  components:
+  - type: Item
+    size: Normal
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 100
+
+# Containers
+- type: entity
+  name: Jailbreaker Verte bottle
+  parent: DrinkBottleBaseEmpty
+  id: DrinkBottleAbsinthe
+  components:
+  - type: Sprite
+    sprite: Objects/Consumable/TrashDrinks/absinthebottle_empty.rsi
+
+
+- type: entity
+  name: alcohol bottle
+  parent: DrinkBottleBaseEmpty
+  id: DrinkBottleAlcoClear
+  components:
+  - type: Sprite
+    sprite: Objects/Consumable/TrashDrinks/alco-clear.rsi
+
+
+- type: entity
+  name: ale bottle
+  parent: DrinkBottleBaseSmallEmpty
+  id: DrinkBottleAle
+  components:
+  - type: Sprite
+    sprite: Objects/Consumable/TrashDrinks/alebottle_empty.rsi
+
+
+- type: entity
+  name: beer bottle
+  parent: DrinkBottleBaseSmallEmpty
+  id: DrinkBottleBeer
+  components:
+  - type: Sprite
+    sprite: Objects/Consumable/TrashDrinks/beer_empty.rsi
+
+
+- type: entity
+  name: cognac bottle
+  parent: DrinkBottleBaseEmpty
+  id: DrinkBottleCognac
+  components:
+  - type: Sprite
+    sprite: Objects/Consumable/TrashDrinks/cognacbottle_empty.rsi
+
+
+- type: entity
+  name: Griffeater gin bottle
+  parent: DrinkBottleBaseEmpty
+  id: DrinkBottleGin
+  components:
+  - type: Sprite
+    sprite: Objects/Consumable/TrashDrinks/ginbottle_empty.rsi
+
+
+- type: entity
+  name: gildlager bottle
+  parent: DrinkBottleBaseEmpty
+  id: DrinkBottleGildlager
+  components:
+  - type: Sprite
+    sprite: Objects/Consumable/TrashDrinks/gildlagerbottle_empty.rsi
+
+
+- type: entity
+  name: coffee liqueur bottle
+  parent: DrinkBottleBaseEmpty
+  id: DrinkBottleCoffeeLiqueur
+  components:
+  - type: Sprite
+    sprite: Objects/Consumable/TrashDrinks/coffeeliqueurbottle_empty.rsi
+
+
+- type: entity
+  name: nt cahors bottle
+  parent: DrinkBottleBaseEmpty
+  id: DrinkBottleNTCahors
+  components:
+  - type: Sprite
+    sprite: Objects/Consumable/TrashDrinks/ntcahors_empty.rsi
+
+
+- type: entity
+  name: patron bottle
+  parent: DrinkBottleBaseEmpty
+  id: DrinkBottlePatron
+  components:
+  - type: Sprite
+    sprite: Objects/Consumable/TrashDrinks/patronbottle_empty.rsi
+
+
+- type: entity
+  name: poison wine bottle
+  parent: DrinkBottleBaseEmpty
+  id: DrinkBottlePoisonWine
+  components:
+  - type: Sprite
+    sprite: Objects/Consumable/TrashDrinks/pwinebottle_empty.rsi
+
+
+- type: entity
+  name: rum bottle
+  parent: DrinkBottleBaseEmpty
+  id: DrinkBottleRum
+  components:
+  - type: Sprite
+    sprite: Objects/Consumable/TrashDrinks/rumbottle_empty.rsi
+
+
+- type: entity
+  name: tequila bottle
+  parent: DrinkBottleBaseEmpty
+  id: DrinkBottleTequila
+  components:
+  - type: Sprite
+    sprite: Objects/Consumable/TrashDrinks/tequillabottle_empty.rsi
+
+
+- type: entity
+  name: vermouth bottle
+  parent: DrinkBottleBaseEmpty
+  id: DrinkBottleVermouth
+  components:
+  - type: Sprite
+    sprite: Objects/Consumable/TrashDrinks/vermouthbottle_empty.rsi
+
+
+- type: entity
+  name: vodka bottle
+  parent: DrinkBottleBaseEmpty
+  id: DrinkBottleVodka
+  components:
+  - type: Sprite
+    sprite: Objects/Consumable/TrashDrinks/vodkabottle_empty.rsi
+
+
+- type: entity
+  name: whiskey bottle
+  parent: DrinkBottleBaseEmpty
+  id: DrinkBottleWhiskey
+  components:
+  - type: Sprite
+    sprite: Objects/Consumable/TrashDrinks/whiskeybottle_empty.rsi
+
+
+- type: entity
+  name: wine bottle
+  parent: DrinkBottleBaseEmpty
+  id: DrinkBottleWine
+  components:
+  - type: Sprite
+    sprite: Objects/Consumable/TrashDrinks/winebottle_empty.rsi
+
+- type: entity
+  name: lime juice carton
+  parent: DrinkCartonBaseEmpty
+  id: DrinkCartonLime
+  components:
+  - type: Sprite
+    sprite: Objects/Consumable/Drinks/limejuice.rsi
+
+
+- type: entity
+  name: orange juice carton
+  parent: DrinkCartonBaseEmpty
+  id: DrinkCartonOrange
+  components:
+  - type: Sprite
+    sprite: Objects/Consumable/Drinks/orangejuice.rsi
+
+
+- type: entity
+  name: tomato juice carton
+  parent: DrinkCartonBaseEmpty
+  id: DrinkCartonTomato
+  components:
+  - type: Sprite
+    sprite: Objects/Consumable/Drinks/tomatojuice.rsi
+
+
+- type: entity
+  name: milk cream carton
+  parent: DrinkCartonBaseEmpty
+  id: DrinkCartonCream
+  components:
+  - type: Sprite
+    sprite: Objects/Consumable/Drinks/cream.rsi
+
+
+- type: entity
+  name: milk carton
+  parent: DrinkCartonBaseLargeEmpty
+  id: DrinkCartonMilk
+  components:
+  - type: Sprite
+    sprite: Objects/Consumable/Drinks/milk.rsi
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 100
+
+- type: entity
+  name: soy milk carton
+  parent: DrinkCartonBaseLargeEmpty
+  id: DrinkCartonSoyMilk
+  components:
+  - type: Sprite
+    sprite: Objects/Consumable/Drinks/soymilk.rsi
+
+- type: entity
+  name: oat milk carton
+  parent: DrinkCartonBaseLargeEmpty
+  id: DrinkCartonOatMilk
+  components:
+  - type: Sprite
+    sprite: Objects/Consumable/Drinks/oatmilk.rsi

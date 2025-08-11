@@ -1,0 +1,58 @@
+# SPDX-FileCopyrightText: 2023 Debug <49997488+DebugOk@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2023 Ed <96445749+theshued@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2023 deltanedas <@deltanedas:kde.org>
+# SPDX-FileCopyrightText: 2024 DEATHB4DEFEAT <77995199+DEATHB4DEFEAT@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 Errant <35878406+Errant-4@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 deltanedas <39013340+deltanedas@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 sleepyyapril <flyingkarii@gmail.com>
+# SPDX-FileCopyrightText: 2025 Rosycup <178287475+Rosycup@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 Skubman <ba.fallaria@gmail.com>
+# SPDX-FileCopyrightText: 2025 VMSolidus <evilexecutive@gmail.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: entity
+  categories: [ HideSpawnMenu ]
+  parent: BaseGameRule
+  id: Thief
+  components:
+  - type: ThiefRule
+  - type: AntagObjectives
+    objectives:
+    - EscapeThiefShuttleObjective
+  # - type: AntagRandomObjectives
+  #   sets:
+  #   - groups: ThiefBigObjectiveGroups
+  #     prob: 0.7
+  #     maxPicks: 1
+  #   - groups: ThiefObjectiveGroups
+  #     maxPicks: 10
+  #   maxDifficulty: 2.5
+  - type: AntagSelection
+    agentName: thief-round-end-agent-name
+    definitions:
+    - prefRoles: [ Thief ]
+      max: 3
+      playerRatio: 15
+      lateJoinAdditional: true
+      allowNonHumans: true
+      multiAntagSetting: All
+      startingGear: ThiefGear
+      # components:
+      # - type: Pacified
+      mindRoles:
+      - MindRoleThief
+      briefing:
+        sound: "/Audio/Misc/thief_greeting.ogg"
+
+#- type: entity
+#  categories: [ HideSpawnMenu ]
+#  parent: BaseGameRule
+#  id: Exterminator
+#  components:
+#  - type: GenericAntagRule
+#    agentName: terminator-round-end-agent-name
+#    objectives:
+#    - TerminateObjective
+#    - ShutDownObjective

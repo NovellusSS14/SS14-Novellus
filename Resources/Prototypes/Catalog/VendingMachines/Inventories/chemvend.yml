@@ -1,0 +1,71 @@
+# SPDX-FileCopyrightText: 2023 IProduceWidgets
+# SPDX-FileCopyrightText: 2023 Sailor
+# SPDX-FileCopyrightText: 2023 deltanedas
+# SPDX-FileCopyrightText: 2023 freeman2651
+# SPDX-FileCopyrightText: 2023 rosieposie
+# SPDX-FileCopyrightText: 2024 Debug
+# SPDX-FileCopyrightText: 2024 wafehling
+# SPDX-FileCopyrightText: 2025 BlitzTheSquishy
+# SPDX-FileCopyrightText: 2025 sleepyyapril
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: vendingMachineInventory
+  id: ChemVendInventory
+  startingInventory:
+    Jug: 8
+    JugAluminium: 2
+    JugCarbon: 4
+    JugChlorine: 1
+    JugCopper: 2
+    JugEthanol: 2
+    JugFluorine: 1
+    JugHydrogen: 3
+    JugIodine: 1
+    JugIron: 2
+    JugLithium: 2
+    JugMercury: 1
+    JugNitrogen: 3
+    JugOxygen: 3
+    JugPhosphorus: 1
+    JugPotassium: 2
+    JugRadium: 1
+    JugSilicon: 2
+    JugSodium: 2
+    JugSugar: 3
+    JugSulfur: 1
+    JugWeldingFuel: 1
+  emaggedInventory:
+    ToxinChemistryBottle: 1
+
+- type: vendingMachineInventory
+  id: ChemVendInventorySyndicate
+  startingInventory:
+    Jug: 8
+    JugAluminium: 2
+    JugCarbon: 4
+    JugChlorine: 1
+    JugCopper: 2
+    JugEthanol: 2
+    JugFluorine: 1
+    JugHydrogen: 3
+    JugIodine: 1
+    JugIron: 2
+    JugLithium: 2
+    JugMercury: 1
+    JugNitrogen: 3
+    JugOxygen: 3
+    JugPhosphorus: 1
+    JugPotassium: 2
+    JugRadium: 1
+    JugSilicon: 2
+    JugSodium: 2
+    JugSugar: 3
+    JugSulfur: 1
+    JugWeldingFuel: 1
+  emaggedInventory:
+    PaxChemistryBottle: 3
+    MuteToxinChemistryBottle: 3
+    LeadChemistryBottle: 2
+    ToxinChemistryBottle: 1
+

@@ -1,0 +1,91 @@
+# SPDX-FileCopyrightText: 2024 VMSolidus
+# SPDX-FileCopyrightText: 2025 Blitz
+# SPDX-FileCopyrightText: 2025 BlitzTheSquishy
+# SPDX-FileCopyrightText: 2025 Rosycup
+# SPDX-FileCopyrightText: 2025 sleepyyapril
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: loadout
+  id: LoadoutCargoOuterCoatCargoBomber
+  category: JobsLogisticsAUncategorized # TheDen
+  cost: 1
+  exclusive: true
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutLogisticsOuter
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - Logistics
+  items:
+    - ClothingOuterCoatCargoBomber
+
+- type: loadout
+  id: LoadoutCargoTechnicianUniformSuitLight
+  category: JobsLogisticsCargoTechnician
+  cost: 0
+  exclusive: true
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutCargoTechnicianUniforms
+    - !type:CharacterJobRequirement
+      jobs:
+        - CargoTechnician
+  items:
+    - ClothingUniformJumpsuitCargoLight
+
+- type: loadout
+  id: LoadoutCargoTechnicianUniformSuitDark
+  category: JobsLogisticsCargoTechnician
+  cost: 0
+  exclusive: true
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutCargoTechnicianUniforms
+    - !type:CharacterJobRequirement
+      jobs:
+        - CargoTechnician
+  items:
+    - ClothingUniformJumpsuitCargoDark
+
+- type: loadout
+  id: LoadoutCargoTechnicianUniformSkirtLight
+  category: JobsLogisticsCargoTechnician
+  cost: 0
+  exclusive: true
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutCargoTechnicianUniforms
+    - !type:CharacterJobRequirement
+      jobs:
+        - CargoTechnician
+  items:
+    - ClothingUniformJumpskirtCargoLight
+
+- type: loadout
+  id: LoadoutCargoTechnicianUniformSkirtDark
+  category: JobsLogisticsCargoTechnician
+  cost: 0
+  exclusive: true
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutCargoTechnicianUniforms
+    - !type:CharacterJobRequirement
+      jobs:
+        - CargoTechnician
+  items:
+    - ClothingUniformJumpskirtCargoDark
+
+- type: loadout
+  id: LoadoutCargoTechnicianBootsSteel
+  category: JobsLogisticsAUncategorized
+  cost: 0
+  exclusive: true
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutLogisticsShoes
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - Logistics
+  items:
+    - ClothingShoesBootsSteel

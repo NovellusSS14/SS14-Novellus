@@ -1,0 +1,28 @@
+# SPDX-FileCopyrightText: 2024 RichardRahl123 <130261520+RichardRahl123@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 KyuPolaris <tabi@kyuudev.me>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: reaction
+  id: Coffee
+  minTemp: 353 # ~80 deg C
+  requiredMixerCategories:
+  - Stir
+  reactants:
+    Water:
+      amount: 3
+    CoffeeGrounds:
+      amount: 1
+  products:
+    Coffee: 4
+
+- type: reaction
+  id: HoneyIcedTea
+  reactants:
+    Honey:
+      amount: 1
+    IcedTea:
+      amount: 1
+  products:
+    HoneyIcedTea: 2

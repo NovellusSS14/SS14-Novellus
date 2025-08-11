@@ -1,0 +1,15 @@
+# SPDX-FileCopyrightText: 2023 Nemanja <98561806+EmoGarbage404@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: MIT
+
+- type: soundCollection
+  id: ArtifactActivation
+  files:
+    - /Audio/Items/Artifact/artifact1.ogg
+    - /Audio/Items/Artifact/artifact2.ogg
+    - /Audio/Items/Artifact/artifact3.ogg
+    - /Audio/Items/Artifact/artifact4.ogg
+    - /Audio/Items/Artifact/artifact5.ogg
+    - /Audio/Items/Artifact/artifact6.ogg
+    - /Audio/Items/Artifact/artifact7.ogg

@@ -1,0 +1,76 @@
+# SPDX-FileCopyrightText: 2023 Colin-Tel <113523727+Colin-Tel@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 Remuchi <72476615+Remuchi@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 SimpleStation14 <130339894+SimpleStation14@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: reagent
+  id: AtomicPunch
+  name: reagent-name-atomicpunch
+  parent: BaseDrink
+  desc: reagent-desc-atomicpunch
+  physicalDesc: reagent-physical-desc-volatile
+  flavor: atomicpunch
+  color: "#d04949"
+  metamorphicSprite:
+    sprite: Nyanotrasen/Objects/Consumable/Drinks/atomicpunch.rsi
+    state: icon_empty
+  metamorphicMaxFillLevels: 4
+  metamorphicFillBaseName: fill-
+  metamorphicChangeColor: false
+  metabolisms:
+    Drink:
+      effects:
+      - !type:SatiateThirst
+        factor: 3
+      - !type:AdjustReagent
+        reagent: Radium
+        amount: 0.01
+
+- type: reagent
+  id: PinkDrink
+  name: reagent-name-pinkdrink
+  parent: BaseDrink
+  desc: reagent-desc-pinkdrink
+  physicalDesc: reagent-physical-desc-glowing
+  flavor: pinkdrink
+  color: "#d04949"
+  metamorphicSprite:
+    sprite: Nyanotrasen/Objects/Consumable/Drinks/pinkdrink.rsi
+    state: icon_empty
+  metamorphicMaxFillLevels: 4
+  metamorphicFillBaseName: fill-
+  metamorphicChangeColor: false
+
+  metabolisms:
+    Drink:
+      effects:
+      - !type:SatiateThirst
+        factor: 3
+
+- type: reagent
+  id: BubbleTea
+  name: reagent-name-bubbletea
+  parent: BaseDrink
+  desc: reagent-desc-bubbletea
+  physicalDesc: reagent-physical-desc-bubbly
+  flavor: bubbletea
+  color: "#d2b18c"
+  metamorphicSprite:
+    sprite: Nyanotrasen/Objects/Consumable/Drinks/bubbletea.rsi
+    state: icon_empty
+  metamorphicMaxFillLevels: 5
+  metamorphicFillBaseName: fill-
+  metamorphicChangeColor: false
+  metabolisms:
+    Drink:
+      effects:
+      - !type:SatiateThirst
+        factor: 3
+      - !type:AdjustReagent
+        reagent: Sugar
+        amount: 0.2
+      - !type:AdjustReagent
+        reagent: Nutriment
+        amount: 0.1

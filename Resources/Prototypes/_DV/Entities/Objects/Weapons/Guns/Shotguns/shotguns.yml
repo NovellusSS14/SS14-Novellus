@@ -1,0 +1,54 @@
+# SPDX-FileCopyrightText: 2023 Colin-Tel <113523727+Colin-Tel@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 Debug <49997488+DebugOk@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 Ps3Moira <113228053+ps3moira@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 Blitz <73762869+BlitzTheSquishy@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 Rosycup <178287475+Rosycup@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: entity
+  name: adjutant
+  parent: BaseWeaponShotgun
+  id: WeaponShotgunAdjutant
+  description: Sold as a "riot" shotgun, this shotgun has a special gas-operated mechanism that makes it highly effective for CQC and suppressive fire.
+  components:
+  - type: Sprite
+    sprite: _DV/Objects/Weapons/Guns/Shotguns/Adjutant.rsi
+  - type: Clothing
+    sprite: _DV/Objects/Weapons/Guns/Shotguns/Adjutant.rsi
+  - type: Item
+    size: Large
+  - type: Gun
+    fireRate: 1.5
+    selectedMode: SemiAuto
+    availableModes:
+    - SemiAuto
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/shotgun.ogg
+    soundEmpty:
+      path: /Audio/Weapons/Guns/Empty/empty.ogg
+  - type: BallisticAmmoProvider
+#    autoCycle: true
+    whitelist:
+      tags:
+      - ShellShotgun
+    capacity: 6
+    proto: ShellShotgun
+    soundInsert:
+      path: /Audio/Weapons/Guns/MagIn/shotgun_insert.ogg
+
+- type: entity
+  name: Kammerer
+  parent: BaseWeaponShotgun
+  id: WeaponShotgunKammererNonLethal #Legacy name
+  description: When an old Remington design meets modern materials, this is the result. A favourite weapon of militia forces throughout many worlds. Uses 12 gauge shells.
+  suffix: Beanbag
+  components:
+  - type: Sprite
+    sprite: _DV/Objects/Weapons/Guns/Shotguns/pump.rsi # Delta-V
+  - type: Clothing
+    sprite: _DV/Objects/Weapons/Guns/Shotguns/pump.rsi # Delta-V
+  - type: BallisticAmmoProvider
+    capacity: 4
+    proto: ShellShotgunBeanbag

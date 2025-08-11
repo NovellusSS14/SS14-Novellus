@@ -1,0 +1,50 @@
+# SPDX-FileCopyrightText: 2024 Fansana <116083121+Fansana@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 Fansana <fansana95@googlemail.com>
+# SPDX-FileCopyrightText: 2024 Mnemotechnican <69920617+Mnemotechnician@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 Skubman <ba.fallaria@gmail.com>
+# SPDX-FileCopyrightText: 2025 Timfa <timfalken@hotmail.com>
+# SPDX-FileCopyrightText: 2025 VMSolidus <evilexecutive@gmail.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <flyingkarii@gmail.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: job
+  id: Roboticist
+  name: job-name-roboticist
+  description: job-description-roboticist
+  playTimeTracker: JobRoboticist
+  requirements:
+  - !type:CharacterDepartmentTimeRequirement
+    department: Epistemics
+    min: 14400 # 4 hours - same as scientist
+  startingGear: RoboticistGear
+  icon: "JobIconRoboticist"
+  supervisors: job-supervisors-rd
+  access:
+  - Research
+  - Maintenance
+
+- type: startingGear
+  id: RoboticistGear
+  subGear:
+  - RoboticistPlasmamanGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitRoboticist
+    back: ClothingBackpackRoboticsFilled
+    shoes: ClothingShoesColorBlack
+    outerClothing: ClothingOuterCoatRobo
+    id: RoboticsPDA
+    ears: ClothingHeadsetRobotics
+    pocket1: BookPsionicsGuidebook
+  innerClothingSkirt: ClothingUniformJumpskirtRoboticist
+  satchel: ClothingBackpackSatchelRoboticsFilled
+  duffelbag: ClothingBackpackDuffelRoboticsFilled
+
+- type: startingGear
+  id: RoboticistPlasmamanGear
+  parent: BasePlasmamanGear
+  equipment:
+    jumpsuit: ClothingUniformEnvirosuitRoboticist
+    head: ClothingHeadEnvirohelmRoboticist
+    gloves: ClothingHandsGlovesEnviroglovesRoboticist

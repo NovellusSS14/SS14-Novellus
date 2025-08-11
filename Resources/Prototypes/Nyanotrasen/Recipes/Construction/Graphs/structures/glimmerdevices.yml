@@ -1,0 +1,50 @@
+# SPDX-FileCopyrightText: 2023 Colin-Tel <113523727+Colin-Tel@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 Fluffiest Floofers <thebluewulf@gmail.com>
+# SPDX-FileCopyrightText: 2024 VMSolidus <evilexecutive@gmail.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: constructionGraph
+  id: GlimmerDevices
+  start: start
+  graph:
+    - node: start
+      edges:
+        - to: frame
+          completed:
+            - !type:SetAnchor
+              value: false
+          steps:
+            - material: Plasteel
+              amount: 5
+            - material: Cable
+              amount: 5
+              doAfter: 8
+    - node: frame
+      entity: GlimmerDeviceFrame
+      edges:
+        - to: glimmerProber
+          conditions:
+            - !type:EntityAnchored {}
+          steps:
+            - material: Bluespace
+              amount: 5
+              doAfter: 10
+            - tool: Welding
+              doAfter: 5
+        - to: glimmerDrain
+          conditions:
+            - !type:EntityAnchored {}
+          steps:
+            - material: Normality
+              amount: 5
+              doAfter: 10
+            - tool: Welding
+              doAfter: 5
+
+    - node: glimmerProber
+      entity: GlimmerProber
+
+    - node: glimmerDrain
+      entity: GlimmerDrain

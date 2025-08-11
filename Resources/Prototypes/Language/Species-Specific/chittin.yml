@@ -1,0 +1,20 @@
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+# Spoken by Chitinids.
+- type: language
+  id: Chittin
+  isVisibleLanguage: true
+  speech:
+    color: "#7d7d7d"
+    fontId: Only_You
+  obfuscation:
+    !type:SyllableObfuscation
+    minSyllables: 1 # Replacements are really short
+    maxSyllables: 2
+    replacement:
+    - click
+    - clack
+    - buzz
+    - bizz

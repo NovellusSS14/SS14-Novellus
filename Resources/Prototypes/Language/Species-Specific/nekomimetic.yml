@@ -1,0 +1,62 @@
+# SPDX-FileCopyrightText: 2024 VMSolidus <evilexecutive@gmail.com>
+# SPDX-FileCopyrightText: 2025 portfiend <109661617+portfiend@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <flyingkarii@gmail.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+# TODO: Replace this with a much better language.
+- type: language
+  id: Nekomimetic
+  isVisibleLanguage: true
+  speech:
+    color: "#df57aaee"
+    fontId: Biscuitos
+  obfuscation:
+    !type:SyllableObfuscation
+    minSyllables: 1
+    maxSyllables: 1
+    replacement:
+    - meow
+    - meeow
+    - mraw
+    - mraow
+    - miaw
+    - miaow
+    - nya
+    - nyan
+    - nyaa
+    - nyao
+    - myao
+    - mieaow
+    - mrrow
+    - mrow
+    - meaw
+    - miao
+    - mew
+    - mrrp
+    - mrr
+    - mya
+    - purr
+    - prr
+    - prrr
+    - rrr
+    - wa
+    - awa
+    - awawa
+    - wawa
+    - waw
+    - waa
+    - owo
+    - uwu
+    - oowoo
+    - raow
+    - reow
+    - wao
+    - weow
+    - wya
+    - krr
+    - eke
+    - ekeke
+    - ekekeke
+    - chrr

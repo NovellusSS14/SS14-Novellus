@@ -1,0 +1,54 @@
+# SPDX-FileCopyrightText: 2023 c4llv07e <38111072+c4llv07e@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 DEATHB4DEFEAT <77995199+DEATHB4DEFEAT@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 Magnus Larsen <i.am.larsenml@gmail.com>
+# SPDX-FileCopyrightText: 2024 degradka <69397649+degradka@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 deltanedas <39013340+deltanedas@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 MajorMoth <61519600+MajorMoth@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: entity
+  parent: BaseItem
+  id: SprayPainter
+  name: spray painter
+  description: A spray painter for painting airlocks and pipes.
+  components:
+  - type: Sprite
+    sprite: Objects/Tools/spray_painter.rsi
+    state: spray_painter
+  - type: Item
+    sprite: Objects/Tools/spray_painter.rsi
+  - type: ActivatableUI
+    key: enum.SprayPainterUiKey.Key
+  - type: UserInterface
+    interfaces:
+      enum.SprayPainterUiKey.Key:
+        type: SprayPainterBoundUserInterface
+  - type: SprayPainter
+    colorPalette:
+      red: '#FF1212FF'
+      yellow: '#B3A234FF'
+      brown: '#947507FF'
+      green: '#3AB334FF'
+      cyan: '#03FCD3FF'
+      blue: '#0335FCFF'
+      white: '#FFFFFFFF'
+      black: '#333333FF'
+      # standard atmos pipes
+      waste: '#990000'
+      distro: '#0055cc'
+      air: '#03fcd3'
+      mix: '#947507'
+      # gases
+      oxygen: '#2887E8'
+      nitrogen: '#DA1010'
+      co2: '#4e4e4e'
+      plasma: '#f700ff'
+      tritium: '#13FF4B'
+      h2o: '#bffffd'
+      ammonia: '#56941E'
+      n2o: '#e82872'
+      frezon: '#3a758c' 
+  - type: StaticPrice
+    price: 40

@@ -1,0 +1,31 @@
+# SPDX-FileCopyrightText: 2023 Adrian16199 <144424013+Adrian16199@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2023 Fluffiest Floofers <thebluewulf@gmail.com>
+# SPDX-FileCopyrightText: 2023 Nemanja <98561806+EmoGarbage404@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2023 Vordenburg <114301317+Vordenburg@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 FoxxoTrystan <45297731+FoxxoTrystan@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 FoxxoTrystan <trystan.garnierhein@gmail.com>
+# SPDX-FileCopyrightText: 2024 Memeji <greyalphawolf7@gmail.com>
+# SPDX-FileCopyrightText: 2025 Blitz <73762869+BlitzTheSquishy@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 Rosycup <178287475+Rosycup@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 SX-7 <92227810+SX-7@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+#default species weights used for randomly selected species
+- type: weightedRandomSpecies
+  id: SpeciesWeights
+  weights:
+    Human: 5
+    Reptilian: 4
+    SlimePerson: 3
+    Oni: 3 #Nyanotrasen Oni, see Prototypes/Nyanotrasen/Entities/Mobs/Species/Oni.yml
+    Felinid: 4 # Nyanotrasen - Felinid, see Prototypes/Nyanotrasen/Entities/Mobs/Species/felinid.yml
+    Vulpkanin: 4 # DeltaV - Vulpkanin, see Prototypes/_DV/Entities/Mobs/Species/vulpkanin.yml
+    Rodentia: 3 # DeltaV - Rodentia, see Prototypes/_DV/Entities/Mobs/Species/rodentia.yml
+    Feroxi: 3 # DeltaV - Feroxi, see Prototypes/_DV/Entities/Mobs/Species/feroxi.yml
+    Diona: 2
+    Shadowkin: 0
+    Tajaran: 3 # Einstein Engines - Tajaran, see Prototypes/_EE/Entities/Mobs/Species/tajaran.yml
+    Chitinid: 3 # DeltaV - Chitinid, see Prototypes/_DV/Entities/Mobs/Species/chitinid.yml
+    Canid: 4 # TheDen - Canid, see Prototypes/_DEN/Entities/Mobs/Species/canid.yml

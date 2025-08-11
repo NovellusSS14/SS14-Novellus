@@ -1,0 +1,37 @@
+# SPDX-FileCopyrightText: 2023 Adrian16199 <144424013+Adrian16199@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 Adrian16199 <144424013+adrian16199@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: MIT
+
+- type: constructionGraph
+  id: StrawHat
+  start: start
+  graph:
+    - node: start
+      edges:
+        - to: strawhat
+          steps:
+            - tag: Wheat
+              name: Wheat Bushel
+              icon:
+                sprite: Objects/Specific/Hydroponics/wheat.rsi
+                state: produce
+            - tag: Wheat
+              name: Wheat Bushel
+              icon:
+                sprite: Objects/Specific/Hydroponics/wheat.rsi
+                state: produce
+            - tag: Wheat
+              name: Wheat Bushel
+              icon:
+                sprite: Objects/Specific/Hydroponics/wheat.rsi
+                state: produce
+            - tag: Wheat
+              name: Wheat Bushel
+              icon:
+                sprite: Objects/Specific/Hydroponics/wheat.rsi
+                state: produce
+              doAfter: 10
+    - node: strawhat
+      entity: ClothingHeadHatStrawHat

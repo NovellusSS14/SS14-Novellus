@@ -1,0 +1,323 @@
+# SPDX-FileCopyrightText: 2024 Unkn0wn_Gh0st
+# SPDX-FileCopyrightText: 2024 VMSolidus
+# SPDX-FileCopyrightText: 2025 Adrian16199
+# SPDX-FileCopyrightText: 2025 Alice
+# SPDX-FileCopyrightText: 2025 Blitz
+# SPDX-FileCopyrightText: 2025 BlitzTheSquishy
+# SPDX-FileCopyrightText: 2025 EctoplasmIsGood
+# SPDX-FileCopyrightText: 2025 MajorMoth
+# SPDX-FileCopyrightText: 2025 Tanix
+# SPDX-FileCopyrightText: 2025 sleepyyapril
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+# Corpsman
+# Backpacks
+- type: loadout
+  id: LoadoutCorpsmanBackpackBackpack
+  category: JobsSecurityCorpsman
+  cost: 0
+  exclusive: true
+  items:
+    - ClothingBackpackBrigmedic
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutCorpsmanBackpacks
+    - !type:CharacterJobRequirement
+      jobs:
+        - Brigmedic
+
+- type: loadout
+  id: LoadoutCorpsmanBackpackSatchel
+  category: JobsSecurityCorpsman
+  cost: 0
+  exclusive: true
+  items:
+    - ClothingBackpackSatchelBrigmedic
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutCorpsmanBackpacks
+    - !type:CharacterJobRequirement
+      jobs:
+        - Brigmedic
+
+- type: loadout
+  id: LoadoutCorpsmanBackpackDuffel
+  category: JobsSecurityCorpsman
+  cost: 0
+  exclusive: true
+  items:
+    - ClothingBackpackDuffelBrigmedic
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutCorpsmanBackpacks
+    - !type:CharacterJobRequirement
+      jobs:
+        - Brigmedic
+
+# Belt
+- type: loadout
+  id: LoadoutClothingBeltCorpsmanWebbing
+  category: JobsSecurityCorpsman
+  cost: 0
+  exclusive: true
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutCorpsmanBelt
+    - !type:CharacterJobRequirement
+      jobs:
+        - Brigmedic
+  items:
+    - ClothingBeltCorpsmanWebbingFilled
+
+# Ears
+
+# Equipment
+- type: loadout
+  id: LoadoutCrewMonitor
+  category: JobsSecurityCorpsman
+  cost: 6
+  requirements:
+    - !type:CharacterJobRequirement
+      jobs:
+        - Brigmedic
+  items:
+    - HandheldCrewMonitor
+
+# Eyes
+- type: loadout
+  id: LoadoutClothingEyesGlassesCorpsman
+  category: JobsSecurityCorpsman
+  cost: 2
+  exclusive: true
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutCorpsmanEyes
+    - !type:CharacterJobRequirement
+      jobs:
+        - Brigmedic
+  items:
+    - ClothingEyesGlassesCorpsman
+
+- type: loadout
+  id: LoadoutClothingEyesCorpsmanHudMedSec
+  category: JobsSecurityCorpsman
+  cost: 1
+  exclusive: true
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutCorpsmanEyes
+    - !type:CharacterJobRequirement
+      jobs:
+        - Brigmedic
+  items:
+    - ClothingEyesHudMedSec
+
+- type: loadout
+  id: LoadoutClothingEyesCorpsmanHudMed
+  category: JobsSecurityCorpsman
+  cost: 0
+  exclusive: true
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutCorpsmanEyes
+    - !type:CharacterJobRequirement
+      jobs:
+        - Brigmedic
+  items:
+    - ClothingEyesHudMedical
+
+- type: loadout
+  id: LoadoutMedicalEyesCorpsmanEyepatchHudMedical
+  category: JobsMedicalAUncategorized
+  cost: 0
+  exclusive: true
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutCorpsmanEyes
+    - !type:CharacterJobRequirement
+      jobs:
+        - Brigmedic
+  items:
+    - ClothingEyesEyepatchHudMedical
+
+- type: loadout
+  id: LoadoutClothingEyesCorpsmanHudMedPrescription
+  category: JobsSecurityCorpsman
+  cost: 0
+  exclusive: true
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutCorpsmanEyes
+    - !type:CharacterJobRequirement
+      jobs:
+        - Brigmedic
+    - !type:CharacterTraitRequirement
+      traits:
+        - Nearsighted
+  items:
+    - ClothingEyesPrescriptionMedHud
+
+# Gloves
+- type: loadout
+  id: LoadoutClothingHandsGlovesNitrile
+  category: JobsSecurityCorpsman
+  cost: 0
+  exclusive: true
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutCorpsmanGloves
+    - !type:CharacterJobRequirement
+      jobs:
+        - Brigmedic
+  items:
+    - ClothingHandsGlovesNitrile
+
+- type: loadout
+  id: LoadoutClothingHandsGlovesLatex
+  category: JobsSecurityCorpsman
+  cost: 0
+  exclusive: true
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutCorpsmanGloves
+    - !type:CharacterJobRequirement
+      jobs:
+        - Brigmedic
+  items:
+    - ClothingHandsGlovesLatex
+
+- type: loadout
+  id: LoadoutClothingHandsGlovesChemist
+  category: JobsSecurityCorpsman
+  cost: 0
+  exclusive: true
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutCorpsmanGloves
+    - !type:CharacterJobRequirement
+      jobs:
+        - Brigmedic
+  items:
+    - ClothingHandsGlovesChemist
+
+# Head
+- type: loadout
+  id: LoadoutClothingHeadHatBeretBrigmedic
+  category: JobsSecurityCorpsman
+  cost: 0
+  exclusive: true
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutCorpsmanHead
+    - !type:CharacterJobRequirement
+      jobs:
+        - Brigmedic
+  items:
+    - ClothingHeadHatBeretBrigmedic
+
+- type: loadout
+  id: LoadoutClothingHeadHatBeretCorpsman
+  category: JobsSecurityCorpsman
+  cost: 0
+  exclusive: true
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutCorpsmanHead
+    - !type:CharacterJobRequirement
+      jobs:
+        - Brigmedic
+  items:
+    - ClothingHeadHatBeretCorpsman
+
+# Id
+
+# Neck
+- type: loadout
+  id: LoadoutBedsheetBrigmedic
+  category: JobsSecurityCorpsman
+  cost: 0
+  exclusive: true
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutCorpsmanNeck
+    - !type:CharacterJobRequirement
+      jobs:
+        - Brigmedic
+  items:
+    - BedsheetBrigmedic
+
+- type: loadout
+  id: LoadoutClothingNeckStethoscope
+  category: JobsSecurityCorpsman
+  cost: 0
+  exclusive: true
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutCorpsmanNeck
+    - !type:CharacterJobRequirement
+      jobs:
+        - Brigmedic
+  items:
+    - ClothingNeckStethoscope
+
+# Mask
+- type: loadout
+  id: LoadoutClothingMaskSterileCorpsman
+  category: JobsSecurityCorpsman
+  cost: 0
+  exclusive: true
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutCorpsmanMask
+    - !type:CharacterJobRequirement
+      jobs:
+        - Brigmedic
+  items:
+    - ClothingMaskSterile
+
+- type: loadout
+  id: LoadoutClothingMaskBreathMedical
+  category: JobsSecurityCorpsman
+  cost: 0
+  exclusive: true
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutCorpsmanMask
+    - !type:CharacterJobRequirement
+      jobs:
+        - Brigmedic
+  items:
+    - ClothingMaskBreathMedical
+
+# Outer
+- type: loadout
+  id: LoadoutClothingOuterLongCoatCorpsman
+  category: JobsSecurityCorpsman
+  cost: 0
+  exclusive: true
+  requirements:
+  - !type:CharacterItemGroupRequirement
+    group: LoadoutCorpsmanOuter
+  - !type:CharacterJobRequirement
+    jobs:
+      - Brigmedic
+  items:
+  - ClothingLongcoatBrigmedic
+
+# Shoes
+
+# Uniforms
+- type: loadout
+  id: LoadoutUniformJumpsuitCorpsmanSummer
+  category: JobsSecurityCorpsman
+  cost: 0
+  exclusive: true
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutCorpsmanUniforms
+    - !type:CharacterJobRequirement
+      jobs:
+        - Brigmedic
+  items:
+    - ClothingUniformJumpsuitCorpsmanSummer

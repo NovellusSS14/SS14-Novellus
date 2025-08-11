@@ -1,0 +1,101 @@
+# SPDX-FileCopyrightText: 2023 Adrian16199
+# SPDX-FileCopyrightText: 2023 Debug
+# SPDX-FileCopyrightText: 2023 Kara
+# SPDX-FileCopyrightText: 2023 LankLTE
+# SPDX-FileCopyrightText: 2023 MilenVolf
+# SPDX-FileCopyrightText: 2023 Nairod
+# SPDX-FileCopyrightText: 2023 Tad "Taddy" Johnson
+# SPDX-FileCopyrightText: 2024 Angelo Fallaria
+# SPDX-FileCopyrightText: 2024 Fluffiest Floofers
+# SPDX-FileCopyrightText: 2024 FoxxoTrystan
+# SPDX-FileCopyrightText: 2024 Memeji
+# SPDX-FileCopyrightText: 2024 Memeji Dankiri
+# SPDX-FileCopyrightText: 2024 Mnemotechnican
+# SPDX-FileCopyrightText: 2024 VMSolidus
+# SPDX-FileCopyrightText: 2024 fox
+# SPDX-FileCopyrightText: 2025 Blitz
+# SPDX-FileCopyrightText: 2025 KekaniCreates
+# SPDX-FileCopyrightText: 2025 Mae
+# SPDX-FileCopyrightText: 2025 Rosycup
+# SPDX-FileCopyrightText: 2025 portfiend
+# SPDX-FileCopyrightText: 2025 sleepyyapril
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: entity
+  parent: BaseMobSpeciesOrganic
+  id: BaseMobFeroxi
+  name: Urist McFin
+  save: false
+  abstract: true
+  components:
+  - type: HumanoidAppearance
+    species: Feroxi
+  - type: Hunger
+  - type: Carriable
+  - type: Inventory
+    speciesId: feroxi
+  - type: Thirst
+    decayRateMultiplier: 2.0
+  - type: Icon
+    sprite: _DV/Mobs/Species/Feroxi/parts.rsi
+    state: full
+  - type: Body
+    prototype: Feroxi
+  - type: Speech
+    speechSounds: Tenor
+    speechVerb: Feroxi
+    allowedEmotes: [ "Gnash" ]
+  - type: Vocal
+    sounds:
+      Male: MaleFeroxi
+      Female: FemaleFeroxi
+      Unsexed: MaleFeroxi
+  - type: CreamPied
+    layer:
+      sprite: _DV/Effects/creampie.rsi
+      state: creampie_feroxi
+  - type: MeleeWeapon
+    hidden: true
+    soundHit:
+      path: /Audio/Effects/bite.ogg
+    angle: 30
+    animation: WeaponArcBite
+    damage:
+      types:
+        Piercing: 7 # oooh scary extra damage~
+  - type: Perishable
+  - type: Damageable
+    damageModifierSet: Feroxi
+  - type: TypingIndicator
+    proto: feroxi
+  - type: FeroxiDehydrate
+    hydratedMetabolizer: Feroxi
+    dehydratedMetabolizer: FeroxiDehydrated
+    dehydrationThreshold: 150
+  - type: LanguageKnowledge
+    speaks:
+    - TauCetiBasic
+    - Nehina
+    understands:
+    - TauCetiBasic
+    - Nehina
+  - type: Tag
+    tags:
+    - CanPilot
+    - FootstepSound
+    - DoorBumpOpener
+    - FeroxiEmotes
+
+- type: entity
+  parent: MobHumanDummy
+  id: MobFeroxiDummy
+  name: Feroxi Dummy
+  save: false
+  categories: [ HideSpawnMenu ]
+  description: A dummy feroxi meant to be used in character setup.
+  components:
+  - type: HumanoidAppearance
+    species: Feroxi
+  - type: Inventory
+    speciesId: feroxi

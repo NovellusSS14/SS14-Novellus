@@ -1,0 +1,42 @@
+# SPDX-FileCopyrightText: 2023 Fluffiest Floofers <thebluewulf@gmail.com>
+# SPDX-FileCopyrightText: 2024 SimpleStation14 <130339894+SimpleStation14@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 sleepyyapril <flyingkarii@gmail.com>
+# SPDX-FileCopyrightText: 2025 Rosycup <178287475+Rosycup@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconGladiator
+  icon:
+    sprite: /Textures/_DV/Interface/Misc/job_icons.rsi
+    state: nyanoGladiator
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconPrisonGuard
+  icon:
+    sprite: /Textures/_DV/Interface/Misc/job_icons.rsi
+    state: nyanoPrisonGuard
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconMailCarrier
+  icon:
+    sprite: /Textures/_DV/Interface/Misc/job_icons.rsi
+    state: nyanoMailCarrier
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconMartialArtist
+  icon:
+    sprite: /Textures/_DV/Interface/Misc/job_icons.rsi
+    state: nyanoMartialArtist
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconForensicMantis
+  icon:
+    sprite: /Textures/_DV/Interface/Misc/job_icons.rsi
+    state: nyanoMantis

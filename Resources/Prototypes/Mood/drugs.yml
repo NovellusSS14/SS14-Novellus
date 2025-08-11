@@ -1,0 +1,60 @@
+# SPDX-FileCopyrightText: 2024 DEATHB4DEFEAT <77995199+DEATHB4DEFEAT@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 VMSolidus <evilexecutive@gmail.com>
+# SPDX-FileCopyrightText: 2025 Rosycup <178287475+Rosycup@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+# Drugs should be paired up in Trios of "Bonus, Penalty, Category"
+
+# Lotophagoi Oil
+- type: moodEffect
+  id: LotoTranscendence
+  moodChange: 30
+  timeout: 1020 #17 minutes
+  moodletOnEnd: LotoEnthrallment
+  category: "LotophagoiAddiction"
+
+- type: moodEffect
+  id: LotoEnthrallment
+  moodChange: -30
+  timeout: 600 #10 minutes
+  category: "LotophagoiAddiction"
+
+# Nicotine
+- type: moodEffect
+  id: NicotineBenefit
+  moodChange: 5
+  timeout: 1020 #17 minutes
+  moodletOnEnd: NicotineWithdrawal
+  category: "NicotineAddiction"
+
+- type: moodEffect
+  id: NicotineWithdrawal
+  moodChange: -7
+  timeout: 1020 #17 minutes
+  moodletOnEnd: NicotineWithdrawal2
+  category: "NicotineAddiction"
+
+- type: moodEffect
+  id: NicotineWithdrawal2
+  moodChange: -5
+  timeout: 1020 #17 minutes
+  moodletOnEnd: NicotineWithdrawal3
+  category: "NicotineAddiction"
+
+- type: moodEffect
+  id: NicotineWithdrawal3
+  moodChange: -3 #No timeout
+  category: "NicotineAddiction"
+
+# Non-Addictive Drugs
+- type: moodEffect
+  id: EthanolBenefit
+  moodChange: 7
+  timeout: 300 #5 minutes
+
+- type: moodEffect
+  id: SpaceDrugsBenefit
+  moodChange: 7
+  timeout: 300 #5 minutes

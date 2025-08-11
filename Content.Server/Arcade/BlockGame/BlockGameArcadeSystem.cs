@@ -1,0 +1,132 @@
+// SPDX-FileCopyrightText: 2023 Debug <49997488+DebugOk@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2023 Leon Friedrich <60421075+ElectroJr@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2023 TemporalOroboros <TemporalOroboros@gmail.com>
+// SPDX-FileCopyrightText: 2024 DEATHB4DEFEAT <77995199+DEATHB4DEFEAT@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 Ed <96445749+TheShuEd@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 Fansana <116083121+Fansana@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 Fansana <fansana95@googlemail.com>
+// SPDX-FileCopyrightText: 2024 Pieter-Jan Briers <pieterjan.briers+git@gmail.com>
+// SPDX-FileCopyrightText: 2024 Tayrtahn <tayrtahn@gmail.com>
+// SPDX-FileCopyrightText: 2024 metalgearsloth <31366439+metalgearsloth@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 sleepyyapril <***>
+// SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+using Content.Server.Power.Components;
+using Content.Shared.UserInterface;
+using Content.Server.Advertise;
+using Content.Server.Advertise.Components;
+using Content.Shared.Arcade;
+using Content.Shared.Power;
+using Robust.Server.GameObjects;
+using Robust.Shared.Player;
+
+namespace Content.Server.Arcade.BlockGame;
+
+public sealed class BlockGameArcadeSystem : EntitySystem
+{
+    [Dependency] private readonly UserInterfaceSystem _uiSystem = default!;
+    [Dependency] private readonly SpeakOnUIClosedSystem _speakOnUIClosed = default!;
+
+    public override void Initialize()
+    {
+        base.Initialize();
+
+        SubscribeLocalEvent<BlockGameArcadeComponent, ComponentInit>(OnComponentInit);
+        SubscribeLocalEvent<BlockGameArcadeComponent, AfterActivatableUIOpenEvent>(OnAfterUIOpen);
+        SubscribeLocalEvent<BlockGameArcadeComponent, PowerChangedEvent>(OnBlockPowerChanged);
+
+        Subs.BuiEvents<BlockGameArcadeComponent>(BlockGameUiKey.Key, subs =>
+        {
+            subs.Event<BoundUIClosedEvent>(OnAfterUiClose);
+            subs.Event<BlockGameMessages.BlockGamePlayerActionMessage>(OnPlayerAction);
+        });
+    }
+
+    public override void Update(float frameTime)
+    {
+        var query = EntityManager.EntityQueryEnumerator<BlockGameArcadeComponent>();
+        while (query.MoveNext(out var _, out var blockGame))
+        {
+            blockGame.Game?.GameTick(frameTime);
+        }
+    }
+
+    private void UpdatePlayerStatus(EntityUid uid, EntityUid actor, BlockGameArcadeComponent? blockGame = null)
+    {
+        if (!Resolve(uid, ref blockGame))
+            return;
+
+        _uiSystem.ServerSendUiMessage(uid, BlockGameUiKey.Key, new BlockGameMessages.BlockGameUserStatusMessage(blockGame.Player == actor), actor);
+    }
+
+    private void OnComponentInit(EntityUid uid, BlockGameArcadeComponent component, ComponentInit args)
+    {
+        component.Game = new(uid);
+    }
+
+    private void OnAfterUIOpen(EntityUid uid, BlockGameArcadeComponent component, AfterActivatableUIOpenEvent args)
+    {
+        if (component.Player == null)
+            component.Player = args.Actor;
+        else
+            component.Spectators.Add(args.Actor);
+
+        UpdatePlayerStatus(uid, args.Actor, component);
+        component.Game?.UpdateNewPlayerUI(args.Actor);
+    }
+
+    private void OnAfterUiClose(EntityUid uid, BlockGameArcadeComponent component, BoundUIClosedEvent args)
+    {
+        if (component.Player != args.Actor)
+        {
+            component.Spectators.Remove(args.Actor);
+            UpdatePlayerStatus(uid, args.Actor, blockGame: component);
+            return;
+        }
+
+        var temp = component.Player;
+        if (component.Spectators.Count > 0)
+        {
+            component.Player = component.Spectators[0];
+            component.Spectators.Remove(component.Player.Value);
+            UpdatePlayerStatus(uid, component.Player.Value, blockGame: component);
+        }
+
+        UpdatePlayerStatus(uid, temp.Value, blockGame: component);
+    }
+
+    private void OnBlockPowerChanged(EntityUid uid, BlockGameArcadeComponent component, ref PowerChangedEvent args)
+    {
+        if (args.Powered)
+            return;
+
+        _uiSystem.CloseUi(uid, BlockGameUiKey.Key);
+        component.Player = null;
+        component.Spectators.Clear();
+    }
+
+    private void OnPlayerAction(EntityUid uid, BlockGameArcadeComponent component, BlockGameMessages.BlockGamePlayerActionMessage msg)
+    {
+        if (component.Game == null)
+            return;
+        if (!BlockGameUiKey.Key.Equals(msg.UiKey))
+            return;
+        if (msg.Actor != component.Player)
+            return;
+
+        if (msg.PlayerAction == BlockGamePlayerAction.NewGame)
+        {
+            if (component.Game.Started == true)
+                component.Game = new(uid);
+            component.Game.StartGame();
+            return;
+        }
+
+        if (TryComp<SpeakOnUIClosedComponent>(uid, out var speakComponent))
+            _speakOnUIClosed.TrySetFlag((uid, speakComponent));
+
+        component.Game.ProcessInput(msg.PlayerAction);
+    }
+}

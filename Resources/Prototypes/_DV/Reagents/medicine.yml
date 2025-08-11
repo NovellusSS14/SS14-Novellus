@@ -1,0 +1,127 @@
+# SPDX-FileCopyrightText: 2025 Cody Veal <cveal05@gmail.com>
+# SPDX-FileCopyrightText: 2025 M3739 <47579354+M3739@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 Rosycup <178287475+Rosycup@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 Tabitha <64847293+KyuPolaris@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+
+- type: reagent
+  id: Hemoxadone
+  name: reagent-name-hemoxadone
+  group: Medicine
+  desc: reagent-desc-hemoxadone
+  physicalDesc: reagent-physical-desc-metallic
+  flavor: medicine
+  color: "#ee0044"
+  worksOnTheDead: true
+  metabolisms:
+    Poison:
+      effects:
+      - !type:HealthChange
+        conditions:
+        - !type:OrganType
+          type: Arachnid
+          shouldHave: true
+        damage:
+          types:
+            Poison: 2
+    Medicine:
+      effects:
+      - !type:HealthChange
+        conditions:
+        - !type:Temperature
+          max: 213.0
+        - !type:OrganType
+          type: Arachnid
+          shouldHave: false
+        damage:
+          types:
+            Bloodloss: -6
+      - !type:ModifyBloodLevel
+        conditions:
+        - !type:Temperature
+          max: 213.0
+        - !type:OrganType
+          type: Arachnid
+          shouldHave: false
+        amount: 6
+
+- type: reagent
+  id: Cyanoxadone
+  name: reagent-name-cyanoxadone
+  group: Medicine
+  desc: reagent-desc-cyanoxadone
+  physicalDesc: reagent-physical-desc-metallic
+  flavor: medicine
+  color: "#00eeff"
+  worksOnTheDead: true
+  metabolisms:
+    Poison:
+      effects:
+      - !type:HealthChange
+        conditions:
+        - !type:OrganType
+          type: Arachnid
+          shouldHave: false
+        damage:
+          types:
+            Poison: 2
+    Medicine:
+      effects:
+      - !type:HealthChange
+        conditions:
+        - !type:Temperature
+          max: 213.0
+        - !type:OrganType
+          type: Arachnid
+          shouldHave: true
+        damage:
+          types:
+            Bloodloss: -6
+      - !type:ModifyBloodLevel
+        conditions:
+        - !type:Temperature
+          max: 213.0
+        - !type:OrganType
+          type: Arachnid
+          shouldHave: true
+        amount: 6
+
+
+- type: reagent
+  id: Umbroxol
+  name: reagent-name-umbroxol
+  group: Medicine
+  desc: reagent-desc-umbroxol
+  physicalDesc: reagent-physical-desc-dark
+  flavor: medicine
+  color: "#211f3d"
+  metabolisms:
+    Medicine:
+      effects:
+      - !type:HealthChange
+        damage:
+          types:
+            Holy: -2
+      - !type:HealthChange
+        damage:
+          types:
+            Cold: 2
+
+- type: reagent
+  id: UnholyWater # going to be renamed later alongside holy water
+  name: reagent-name-unholy-water
+  group: Toxins
+  desc: reagent-name-unholy-water
+  physicalDesc: reagent-physical-desc-menacing
+  flavor: spicy
+  color: "#1614143d"
+  metabolisms:
+    Medicine:
+      effects:
+      - !type:HealthChange
+        damage:
+          types:
+            Cold: 1 # plan to change this when holy counterpart damage exists

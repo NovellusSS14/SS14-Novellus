@@ -1,0 +1,20 @@
+# SPDX-FileCopyrightText: 2022 ChilbroBaggins <107660393+ChilbroBaggins@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2022 Jeff <velcroboy333@hotmail.com>
+# SPDX-FileCopyrightText: 2024 Tayrtahn <tayrtahn@gmail.com>
+# SPDX-FileCopyrightText: 2024 Ubaser <134914314+UbaserB@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: messagePack
+  id: ChefvendAds
+  messages:
+    - advertisement-chefvend-1
+    - advertisement-chefvend-2
+    - advertisement-chefvend-3
+    - advertisement-chefvend-4
+    - advertisement-chefvend-5
+    - advertisement-chefvend-6
+    - advertisement-chefvend-7
+    - advertisement-chefvend-8
+    - advertisement-chefvend-9

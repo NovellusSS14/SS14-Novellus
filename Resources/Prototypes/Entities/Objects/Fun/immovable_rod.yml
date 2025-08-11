@@ -1,0 +1,109 @@
+# SPDX-FileCopyrightText: 2022 Andreas Kämper <andreas.kaemper@5minds.de>
+# SPDX-FileCopyrightText: 2022 Kara <lunarautomaton6@gmail.com>
+# SPDX-FileCopyrightText: 2023 Slava0135 <40753025+Slava0135@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2023 metalgearsloth <31366439+metalgearsloth@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 DEATHB4DEFEAT <77995199+DEATHB4DEFEAT@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 VMSolidus <evilexecutive@gmail.com>
+# SPDX-FileCopyrightText: 2024 keronshb <54602815+keronshb@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: entity
+  id: ImmovableRod
+  name: immovable rod
+  description: You can sense that it's hungry. That's usually a bad sign.
+  components:
+  - type: Clickable
+  - type: InteractionOutline
+  - type: MovementIgnoreGravity
+  - type: Sprite
+    sprite: Objects/Fun/immovable_rod.rsi
+    state: icon
+    noRot: false
+  - type: ImmovableRod
+  - type: Physics
+    bodyType: Dynamic
+    linearDamping: 0
+  - type: PointLight
+    radius: 3
+    color: red
+    energy: 2.0
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.5
+        density: 1
+        hard: false
+        layer:
+        - Impassable
+        - Opaque
+  - type: WarpPoint
+    follow: true
+    location: immovable rod
+
+- type: entity
+  id: ImmovableRodDespawn
+  suffix: Despawn
+  parent: ImmovableRod
+  components:
+  - type: TimedDespawn
+    lifetime: 30.0
+
+- type: entity
+  id: ImmovableRodSlow
+  parent: ImmovableRodDespawn
+  suffix: Slow
+  components:
+  - type: ImmovableRod
+    minSpeed: 1
+    maxSpeed: 5
+
+- type: entity
+  parent: ImmovableRodDespawn
+  id: ImmovableRodKeepTiles
+  suffix: Keep Tiles
+  components:
+  - type: ImmovableRod
+    destroyTiles: false
+    hitSoundProbability: 1.0
+
+# For Wizard Polymorph
+- type: entity
+  parent: ImmovableRod
+  id: ImmovableRodWizard
+  suffix: Wizard
+  components:
+  - type: ImmovableRod
+    minSpeed: 35
+    destroyTiles: false
+    randomizeVelocity: false
+    shouldGib: false
+    damage:
+      types:
+        Blunt: 200
+  - type: MovementIgnoreGravity
+    gravityState: true
+  - type: InputMover
+  - type: MovementSpeedModifier
+    weightlessAcceleration: 5
+    weightlessModifier: 2
+    weightlessFriction: 0
+    friction: 0
+    frictionNoInput: 0
+  - type: CanMoveInAir
+  - type: MovementAlwaysTouching
+  - type: NoSlip
+
+- type: entity
+  parent: ImmovableRodKeepTiles
+  id: ImmovableRodKeepTilesStill
+  suffix: Keep Tiles, Still
+  components:
+  - type: ImmovableRod
+    randomizeVelocity: false
+    damage:
+      types:
+        Blunt: 120

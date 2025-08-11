@@ -1,0 +1,65 @@
+# SPDX-FileCopyrightText: 2023 Fluffiest Floofers <thebluewulf@gmail.com>
+# SPDX-FileCopyrightText: 2024 Debug <49997488+DebugOk@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 Skubman <ba.fallaria@gmail.com>
+# SPDX-FileCopyrightText: 2024 dge21 <129136517+dge21@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: entity
+  parent: BaseHandheldInstrument
+  id: Rickenbacker4003Instrument
+  name: Rickenbacker
+  description: Just a regular bass guitar.
+  components:
+  - type: Instrument
+    program: 33
+  - type: SwappableInstrument
+    instrumentList:
+      "Fingered": {33: 0}
+      "Pick": {34: 0}
+      "Slap": {36: 0}
+      "Slap (XTra Funky)": {37: 0}
+  - type: Sprite
+    sprite: Nyanotrasen/Objects/Fun/Instruments/rickenbacker.rsi
+    state: icon
+  - type: Item
+    size: Normal
+    sprite: Nyanotrasen/Objects/Fun/Instruments/rickenbacker.rsi
+  # - type: MeleeStaminaCost
+  #   swing: 10
+  #   wieldCoefficient: 0.40
+  - type: Tag
+    tags:
+    - StringInstrument
+  - type: MeleeWeapon
+    soundHit:
+      path: /Audio/Nyanotrasen/Weapons/electricguitarhit.ogg
+    damage:
+      types:
+        Blunt: 7
+    bluntStaminaDamageFactor: 1.50 #13.5 stamina damage
+
+- type: entity
+  parent: Rickenbacker4003Instrument
+  id: Rickenbacker4001Instrument
+  name: Rickenbacker
+  suffix: Antag
+  description: It's the climax!
+  components:
+  - type: MeleeWeapon
+    soundHit:
+      path: /Audio/Nyanotrasen/Weapons/electricguitarhit.ogg
+    bluntStaminaDamageFactor: 4.5
+    attackRate: .8
+    range: 1.85
+    damage:
+      types:
+        Blunt: 7
+  - type: DamageOtherOnHit
+  - type: Wieldable
+  - type: IncreaseDamageOnWield
+    damage:
+      types:
+        Blunt: 7
+        Shock: 2

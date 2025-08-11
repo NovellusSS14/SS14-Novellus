@@ -1,0 +1,55 @@
+# SPDX-FileCopyrightText: 2024 FluffMe <1780586+FluffMe@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <flyingkarii@gmail.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+# Red phone, but CentComm intercom
+# Note: the ID is hijacked from Resources/Prototypes/Entities/Objects/Fun/Instruments/instruments_misc.yml
+# New upstream ID: PhoneInstrumentUpstream
+# Child entites also have PhoneInstrumentUpstream parent: PhoneInstrumentSyndicate, BananaPhoneInstrument
+- type: entity
+  id: PhoneInstrument
+  parent: BaseItem
+  name: red phone
+  suffix: harmony intercom
+  description: Should anything ever go wrong...
+  components:
+    - type: Sprite
+      sprite: Objects/Fun/Instruments/otherinstruments.rsi
+      state: red_phone
+    - type: EmitSoundOnLand
+      sound:
+        path: /Audio/Items/ring.ogg
+    - type: Prayable
+      sentMessage: prayer-popup-notify-centcom-sent
+      notificationPrefix: prayer-chat-notify-centcom
+      verb: prayer-verbs-call
+      verbImage: null
+    - type: Speech
+      speechVerb: Robotic
+    - type: EncryptionKeyHolder
+      keySlots: 1
+    - type: ContainerFill
+      containers:
+        key_slots:
+          - EncryptionKeyCentCom
+    - type: ContainerContainer
+      containers:
+        key_slots: !type:Container
+    - type: TelecomExempt
+    - type: RadioMicrophone
+      unobstructedRequired: true
+      listenRange: 2
+      toggleOnInteract: false
+    - type: RadioSpeaker
+      toggleOnInteract: false
+    - type: Intercom
+      requiresPower: false
+    - type: ActivatableUI
+      key: enum.IntercomUiKey.Key
+      singleUser: true
+    - type: UserInterface
+      interfaces:
+        enum.IntercomUiKey.Key:
+          type: IntercomBoundUserInterface

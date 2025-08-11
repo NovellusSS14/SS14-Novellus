@@ -1,0 +1,31 @@
+<!--
+SPDX-FileCopyrightText: 2024 DEATHB4DEFEAT <77995199+DEATHB4DEFEAT@users.noreply.github.com>
+SPDX-FileCopyrightText: 2024 VMSolidus <evilexecutive@gmail.com>
+SPDX-FileCopyrightText: 2025 portfiend <109661617+portfiend@users.noreply.github.com>
+SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+
+SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+-->
+
+<Document>
+  # Unathi
+
+  <Box>
+    <GuideEntityEmbed Entity="MobReptilian" Caption=""/>
+  </Box>
+
+  Unathi are a race of tall humanoid-like reptiles.
+
+  They natively know the Draconic language.
+
+  - [color=#1e90ff]Reptilian Diet[/color]: Unathi can ONLY eat fruits and meat, but can eat raw meat and drink blood without any ill effects.
+
+  - [color=#1e90ff]High Temperature Tolerance[/color]: Unathi prefer a somewhat higher temperature range than humans.
+
+  - [color=#1e90ff]Grasping Tail[/color]: Unathi can drag objects with their tail, keeping both their hands free.
+
+  - [color=#1e90ff]Claws[/color]: Unath unarmed claw attacks deal Slash damage instead of Blunt.
+
+  - [color=#ffa500]Cold Intolerance[/color]: Unathi take [color=#ffa500]30% more Cold damage.[/color]
+
+</Document>

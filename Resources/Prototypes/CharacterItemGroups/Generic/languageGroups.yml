@@ -1,0 +1,107 @@
+# SPDX-FileCopyrightText: 2024 KyuPolaris <tabi@kyuudev.me>
+# SPDX-FileCopyrightText: 2024 VMSolidus <evilexecutive@gmail.com>
+# SPDX-FileCopyrightText: 2025 Blitz <73762869+BlitzTheSquishy@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 SX-7 <92227810+SX-7@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 Skubman <ba.fallaria@gmail.com>
+# SPDX-FileCopyrightText: 2025 Tabitha <64847293+KyuPolaris@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 Timfa <timfalken@hotmail.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: characterItemGroup
+  id: TraitsLanguagesBasic
+  maxItems: 2
+  items:
+    - type: trait
+      id: SignLanguage
+    - type: trait
+      id: SolCommon
+    - type: trait
+      id: NovuNederic
+    - type: trait
+      id: Tradeband
+    - type: trait
+      id: Freespeak
+    - type: trait
+      id: Elyran
+
+- type: characterItemGroup
+  id: TraitsLanguagesRacial
+  items:
+    - type: trait
+      id: ValyrianStandard
+    - type: trait
+      id: Nekomimetic
+    - type: trait
+      id: Canilunzt
+    - type: trait
+      id: Bubblish
+    - type: trait
+      id: Rootspeak
+    - type: trait
+      id: Moffic
+    - type: trait
+      id: Draconic
+    - type: trait
+      id: RobotTalk
+    - type: trait
+      id: Arachnic
+    - type: trait
+      id: Marish
+    - type: trait
+      id: Rodentian
+    - type: trait
+      id: Azaziba
+    - type: trait
+      id: SiikMaas
+    - type: trait
+      id: Nehina
+    - type: trait
+      id: Kagebun
+
+- type: characterItemGroup
+  id: TraitsAccents
+  maxItems: 2 # Den - Was 1
+  items:
+    - type: trait
+      id: FrontalLisp
+    - type: trait
+      id: Stutter
+    - type: trait
+      id: PirateAccent
+    - type: trait
+      id: Accentless
+    - type: trait
+      id: Southern
+    - type: trait
+      id: ScottishAccent
+    - type: trait
+      id: FrenchAccent
+    - type: trait
+      id: SpanishAccent
+    - type: trait
+      id: IrishAccent
+    - type: trait
+      id: RussianAccent
+    - type: trait
+      id: MobsterAccent
+    - type: trait
+      id: SkeletonAccent
+    - type: trait
+      id: SharpInflection
+    - type: trait
+      id: Monotonous
+
+- type: characterItemGroup
+  id: TraitsLanguagesTajaran
+  maxItems: 1
+  items:
+    - type: trait
+      id: NalRasan
+    - type: trait
+      id: SiikTajr
+    - type: trait
+      id: YaSsa
+    - type: trait
+      id: Delvahii

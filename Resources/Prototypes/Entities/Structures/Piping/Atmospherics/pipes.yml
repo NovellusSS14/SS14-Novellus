@@ -1,0 +1,430 @@
+# SPDX-FileCopyrightText: 2020 Paul Ritter <ritter.paul1@googlemail.com>
+# SPDX-FileCopyrightText: 2020 Víctor Aguilera Puerto <6766154+Zumorica@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2021 20kdc <asdd2808@gmail.com>
+# SPDX-FileCopyrightText: 2021 Acruid <shatter66@gmail.com>
+# SPDX-FileCopyrightText: 2021 DrSmugleaf <DrSmugleaf@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2021 Flipp Syder <76629141+vulppine@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2021 Swept <sweptwastaken@protonmail.com>
+# SPDX-FileCopyrightText: 2021 Vera Aguilera Puerto <6766154+Zumorica@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2021 Vera Aguilera Puerto <gradientvera@outlook.com>
+# SPDX-FileCopyrightText: 2021 collinlunn <60152240+collinlunn@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2021 metalgearsloth <comedian_vs_clown@hotmail.com>
+# SPDX-FileCopyrightText: 2021 mirrorcult <lunarautomaton6@gmail.com>
+# SPDX-FileCopyrightText: 2021 moonheart08 <moonheart08@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2021 py01 <60152240+collinlunn@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2021 py01 <pyronetics01@gmail.com>
+# SPDX-FileCopyrightText: 2022 Jack Fox <35575261+DubiousDoggo@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2022 Jacob Tong <10494922+ShadowCommander@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2022 Moony <moonheart08@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2022 TekuNut <13456422+TekuNut@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2022 Visne <39844191+Visne@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2022 theashtronaut <112137107+theashtronaut@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2023 AJCM-git <60196617+AJCM-git@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2023 Ilya246 <57039557+Ilya246@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2023 Kevin Zheng <kevinz5000@gmail.com>
+# SPDX-FileCopyrightText: 2023 Leon Friedrich <60421075+ElectroJr@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2023 Nairod <110078045+Nairodian@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2023 lzk <124214523+lzk228@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 DEATHB4DEFEAT <77995199+DEATHB4DEFEAT@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 Debug <49997488+DebugOk@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 Kara <lunarautomaton6@gmail.com>
+# SPDX-FileCopyrightText: 2024 chromiumboy <50505512+chromiumboy@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 Falcon <falcon@zigtag.dev>
+# SPDX-FileCopyrightText: 2025 Solaris <60526456+SolarisBirb@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 metalgearsloth <31366439+metalgearsloth@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <flyingkarii@gmail.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: entity
+  abstract: true
+  parent: BaseItem
+  id: GasPipeSansLayers
+  name: gas pipe
+  description: Holds gas.
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: Visibility
+    layer: 1
+  - type: Item
+    size: Normal
+  - type: Transform
+    anchored: true
+  - type: Damageable
+    damageContainer: Inorganic
+    damageModifierSet: Metallic
+  - type: SubFloorHide
+  - type: CollideOnAnchor
+  - type: Anchorable
+  - type: Rotatable
+  - type: RCDDeconstructable
+    cost: 1
+    delay: 2
+    fx: EffectRCDDeconstruct2
+    rpd: true
+  - type: Destructible
+    thresholds:
+    - trigger: # for nukes
+        !type:DamageTrigger
+        damage: 200
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+    - trigger: # regular damage trigger (replace with broken pipe)
+        !type:DamageTrigger
+        damage: 100
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
+          params:
+            volume: -8
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          GasPipeBroken:
+            min: 1
+            max: 1
+        offset: 0
+      - !type:DoActsBehavior
+        acts: ["Breakage"]
+  - type: Sprite
+    sprite: Structures/Piping/Atmospherics/pipe.rsi
+    drawdepth: ThinPipe
+    visible: false
+  - type: Appearance
+  - type: PipeAppearance
+  - type: PipeColorVisuals
+  - type: NodeContainer
+  # - type: PipeRestrictOverlap - Allow pipe stacking
+  - type: AtmosUnsafeUnanchor
+  - type: AtmosPipeColor
+  - type: AtmosMonitoringConsoleDevice
+  - type: Tag
+    tags:
+    - Pipe
+  - type: Physics
+    canCollide: false
+    bodyType: static
+  - type: StaticPrice
+    price: 11
+
+# Goobstation - Allow device-on-pipe stacking
+
+- type: entity
+  abstract: true
+  parent: GasPipeBase
+  id: GasPipeNoOverlap
+  components:
+  - type: PipeRestrictOverlap
+
+- type: entity
+  abstract: true
+  parent: GasPipeSansLayers
+  id: GasPipeBase
+  components:
+  - type: AtmosPipeLayers
+    spriteLayersRsiPaths:
+      enum.PipeVisualLayers.Pipe:
+        Primary: Structures/Piping/Atmospherics/pipe.rsi
+        Secondary: Structures/Piping/Atmospherics/pipe_alt1.rsi
+        Tertiary: Structures/Piping/Atmospherics/pipe_alt2.rsi
+
+#Note: The PipeDirection of the PipeNode should be the south-facing version, because the entity starts at an angle of 0 (south)
+
+- type: entity
+  parent: GasPipeNoOverlap
+  id: GasPipeHalf
+  suffix: Half
+  placement:
+    mode: AlignAtmosPipeLayers
+  components:
+  - type: NodeContainer
+    nodes:
+      pipe:
+        !type:PipeNode
+        nodeGroupID: Pipe
+        pipeDirection: South
+  - type: Sprite
+    layers:
+    - state: pipeHalf
+      map: [ "enum.PipeVisualLayers.Pipe" ]
+  - type: AtmosPipeLayers
+    alternativePrototypes:
+      Primary: GasPipeHalf
+      Secondary: GasPipeHalfAlt1
+      Tertiary: GasPipeHalfAlt2
+  - type: Construction
+    graph: GasPipe
+    node: half
+  - type: Item
+    size: Small
+    storedSprite:
+      sprite: Structures/Piping/Atmospherics/pipe.rsi
+      state: storageHalf
+
+- type: entity
+  parent: GasPipeBase
+  id: GasPipeStraight
+  suffix: Straight
+  placement:
+    mode: AlignAtmosPipeLayers
+  components:
+  - type: NodeContainer
+    nodes:
+      pipe:
+        !type:PipeNode
+        nodeGroupID: Pipe
+        pipeDirection: Longitudinal
+  - type: Sprite
+    layers:
+    - state: pipeStraight
+      map: [ "enum.PipeVisualLayers.Pipe" ]
+  - type: AtmosPipeLayers
+    alternativePrototypes:
+      Primary: GasPipeStraight
+      Secondary: GasPipeStraightAlt1
+      Tertiary: GasPipeStraightAlt2
+  - type: Construction
+    graph: GasPipe
+    node: straight
+  - type: Item
+    storedSprite:
+      sprite: Structures/Piping/Atmospherics/pipe.rsi
+      state: storageStraight
+    shape:
+    - 0,0,0,2
+  - type: MeleeWeapon
+    attackRate: 1
+    damage:
+      types:
+        Blunt: 8
+    soundHit:
+      collection: MetalThud # this NEEDS to changed to the metal pipe falling sound effect on april first every year
+
+- type: entity
+  parent: GasPipeNoOverlap
+  id: GasPipeBend
+  suffix: Bend
+  placement:
+    mode: AlignAtmosPipeLayers
+  components:
+  - type: NodeContainer
+    nodes:
+      pipe:
+        !type:PipeNode
+        nodeGroupID: Pipe
+        pipeDirection: SWBend
+  - type: Sprite
+    layers:
+      - state: pipeBend
+        map: [ "enum.PipeVisualLayers.Pipe" ]
+  - type: AtmosPipeLayers
+    alternativePrototypes:
+      Primary: GasPipeBend
+      Secondary: GasPipeBendAlt1
+      Tertiary: GasPipeBendAlt2
+  - type: Construction
+    graph: GasPipe
+    node: bend
+  - type: Item
+    shape:
+    - 0,0,1,0
+    - 1,1,1,1
+    heldPrefix: Bend
+    storedSprite:
+      sprite: Structures/Piping/Atmospherics/pipe.rsi
+      state: storageBend
+  - type: MeleeWeapon
+    wideAnimationRotation: 180
+    attackRate: 1
+    damage:
+      types:
+        Blunt: 6
+    soundHit:
+      collection: MetalThud
+  - type: DamageOtherOnHit
+    damage:
+      types:
+        Blunt: 3 #This should be 6 but throwing damage is doubled at the moment for some reason so for now it's 3
+
+- type: entity
+  parent: GasPipeNoOverlap
+  id: GasPipeTJunction
+  placement:
+    mode: AlignAtmosPipeLayers
+  suffix: TJunction
+  components:
+  - type: NodeContainer
+    nodes:
+      pipe:
+        !type:PipeNode
+        nodeGroupID: Pipe
+        pipeDirection: TSouth
+  - type: Sprite
+    layers:
+      - state: pipeTJunction
+        map: [ "enum.PipeVisualLayers.Pipe" ]
+  - type: AtmosPipeLayers
+    alternativePrototypes:
+      Primary: GasPipeTJunction
+      Secondary: GasPipeTJunctionAlt1
+      Tertiary: GasPipeTJunctionAlt2
+  - type: Construction
+    graph: GasPipe
+    node: tjunction
+  - type: Item
+    heldPrefix: TJunction
+    storedSprite:
+      sprite: Structures/Piping/Atmospherics/pipe.rsi
+      state: storageTJunction
+  - type: MeleeWeapon
+    wideAnimationRotation: 90
+    attackRate: 0.75
+    damage:
+      types:
+        Blunt: 10
+    soundHit:
+      collection: MetalThud
+
+- type: entity
+  parent: GasPipeNoOverlap
+  id: GasPipeFourway
+  suffix: Fourway
+  placement:
+    mode: AlignAtmosPipeLayers
+  components:
+  - type: Transform
+    noRot: true
+  - type: NodeContainer
+    nodes:
+      pipe:
+        !type:PipeNode
+        nodeGroupID: Pipe
+        pipeDirection: Fourway
+  - type: Sprite
+    layers:
+      - state: pipeFourway
+        map: [ "enum.PipeVisualLayers.Pipe" ]
+  - type: AtmosPipeLayers
+    alternativePrototypes:
+      Primary: GasPipeFourway
+      Secondary: GasPipeFourwayAlt1
+      Tertiary: GasPipeFourwayAlt2
+  - type: Construction
+    graph: GasPipe
+    node: fourway
+  - type: Item
+    heldPrefix: Fourway
+    storedSprite:
+      sprite: Structures/Piping/Atmospherics/pipe.rsi
+      state: storageFourway
+  - type: MeleeWeapon
+    wideAnimationRotation: 90
+    attackRate: 0.75
+    damage:
+      types:
+        Blunt: 10
+    soundHit:
+      collection: MetalThud
+
+- type: entity
+  id: GasPipeBroken
+  parent: GasPipeNoOverlap
+  name: broken pipe
+  description: It used to hold gas.
+  components:
+  - type: Sprite
+    sprite: Structures/Piping/Atmospherics/pipe.rsi
+    drawdepth: ThinPipe
+    state: pipeBroken
+    layers:
+      - state: pipeBroken
+        map: [ "enum.PipeVisualLayers.Pipe" ]
+  - type: AtmosPipeLayers
+    numberOfPipeLayers: 1
+  - type: Construction
+    graph: GasPipe
+    node: broken
+  - type: Item
+    size: Small
+  - type: Destructible
+    thresholds: # override parent to avoid recursive destruction
+    - trigger:
+        !type:DamageTrigger
+        damage: 100
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+
+- type: entity
+  parent: GasPipeSansLayers
+  id: GasPipeManifold
+  name: gas pipe manifold
+  description: Allows gas pipes of different configurations to be connected together.
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: Sprite
+    sprite: Structures/Piping/Atmospherics/manifold.rsi
+    layers:
+    - state: pipeManifold
+      map: [ "enum.PipeVisualLayers.Pipe" ]
+  - type: AtmosPipeLayers
+    pipeLayersLocked: true
+  - type: PipeAppearance
+    sprite:
+    - { sprite: Structures/Piping/Atmospherics/manifold.rsi, state: pipeConnector }
+    - { sprite: Structures/Piping/Atmospherics/manifold.rsi, state: pipeConnector_alt1 }
+    - { sprite: Structures/Piping/Atmospherics/manifold.rsi, state: pipeConnector_alt2 }
+  - type: Construction
+    graph: GasPipe
+    node: manifold
+  - type: Item
+    size: Small
+    shape:
+    - 0,0,1,0
+    storedSprite:
+      sprite: Structures/Piping/Atmospherics/manifold.rsi
+      state: storageManifold
+  - type: NodeContainer
+    nodes:
+      south0:
+        !type:PipeNode
+        nodeGroupID: Pipe
+        pipeDirection: South
+        pipeLayer: 0
+      south1:
+        !type:PipeNode
+        nodeGroupID: Pipe
+        pipeDirection: South
+        pipeLayer: 1
+      south2:
+        !type:PipeNode
+        nodeGroupID: Pipe
+        pipeDirection: South
+        pipeLayer: 2
+      north0:
+        !type:PipeNode
+        nodeGroupID: Pipe
+        pipeDirection: North
+        pipeLayer: 0
+      north1:
+        !type:PipeNode
+        nodeGroupID: Pipe
+        pipeDirection: North
+        pipeLayer: 1
+      north2:
+        !type:PipeNode
+        nodeGroupID: Pipe
+        pipeDirection: North
+        pipeLayer: 2
+  - type: GasPipeManifold
+  - type: AtmosMonitoringConsoleDevice
+    navMapBlip: GasPipeManifold
+    showAbsentConnections: false
+  - type: AtmosDevice
+  - type: Tag
+    tags:
+    - Unstackable

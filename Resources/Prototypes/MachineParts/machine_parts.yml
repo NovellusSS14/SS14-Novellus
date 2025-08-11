@@ -1,0 +1,26 @@
+# SPDX-FileCopyrightText: 2023 Nemanja <98561806+EmoGarbage404@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2023 chromiumboy <50505512+chromiumboy@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: MIT
+
+- type: machinePart
+  id: Capacitor
+  name: machine-part-name-capacitor
+  stockPartPrototype: CapacitorStockPart
+
+- type: machinePart
+  id: Manipulator
+  name: machine-part-name-manipulator
+  stockPartPrototype: MicroManipulatorStockPart
+
+- type: machinePart
+  id: MatterBin
+  name: machine-part-name-matter-bin
+  stockPartPrototype: MatterBinStockPart
+  
+- type: machinePart
+  id: PowerCell
+  name: machine-part-name-power-cell
+  stockPartPrototype: PowerCellSmall
+

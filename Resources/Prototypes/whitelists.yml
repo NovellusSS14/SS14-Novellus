@@ -1,0 +1,12 @@
+# SPDX-FileCopyrightText: 2024 Simon <63975668+Simyon264@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: playerConnectionWhitelist
+  id: basicWhitelist # Basic whitelist using only the ManualWhitelist condition
+  conditions:
+    - !type:ConditionManualWhitelistMembership
+      action: Allow # Allow connection if matched
+    - !type:ConditionAlwaysMatch # Condition that always matches
+      action: Deny # Deny connection if matched

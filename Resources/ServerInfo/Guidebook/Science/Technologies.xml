@@ -1,0 +1,30 @@
+<!--
+SPDX-FileCopyrightText: 2023 Nemanja <98561806+EmoGarbage404@users.noreply.github.com>
+SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+
+SPDX-License-Identifier: MIT
+-->
+
+<Document>
+# Technologies
+
+All technologies have a cost and a tier requirement in order to be researched. Unlocking them adds a variety of recipes that can be printed at various lathes.
+
+The different technologies and their respective discipline are listed below.
+
+## Industrial
+<GuideTechDisciplineEmbed Discipline="Industrial"/>
+
+## Biochemical
+<GuideTechDisciplineEmbed Discipline="Biochemical"/>
+
+## Arsenal
+<GuideTechDisciplineEmbed Discipline="Arsenal"/>
+
+## Experimental
+<GuideTechDisciplineEmbed Discipline="Experimental"/>
+
+## Civilian Services
+<GuideTechDisciplineEmbed Discipline="CivilianServices"/>
+
+</Document>

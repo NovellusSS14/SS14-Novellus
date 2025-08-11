@@ -1,0 +1,29 @@
+# SPDX-FileCopyrightText: 2021 Alex Evgrashin <aevgrashin@yandex.ru>
+# SPDX-FileCopyrightText: 2023 Nemanja <98561806+EmoGarbage404@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 Aiden <aiden@djkraz.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: stack
+  id: Telecrystal
+  name: telecrystal
+  icon: Objects/Specific/Syndicate/telecrystal.rsi
+  spawn: Telecrystal1
+  itemSize: 1
+
+- type: stack
+  id: Bluespace
+  name: bluespace
+  icon: { sprite: Objects/Materials/materials.rsi, state: bluespace }
+  spawn: MaterialBluespace1
+  maxCount: 5
+  itemSize: 1
+
+- type: stack
+  id: Normality
+  name: normality
+  icon: { sprite: Objects/Materials/materials.rsi, state: normality }
+  spawn: MaterialNormality1
+  maxCount: 5
+  itemSize: 1

@@ -1,0 +1,71 @@
+# SPDX-FileCopyrightText: 2023 Fluffiest Floofers <thebluewulf@gmail.com>
+# SPDX-FileCopyrightText: 2023 JJ <47927305+PHCodes@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2023 PHCodes <47927305+PHCodes@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 SimpleStation14 <130339894+SimpleStation14@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 Squishy77 <165165480+Squishy77@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 VMSolidus <evilexecutive@gmail.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: entity
+  id: ReverseEngineeringMachineCircuitboard
+  parent: BaseMachineCircuitboard
+  name: reverse engineering machine machine board
+  description: A machine printed circuit board for a reverse engineering machine
+  components:
+    - type: Sprite
+      state: engineering
+    - type: MachineBoard
+      prototype: ReverseEngineeringMachine
+      requirements:
+        MatterBin: 1
+        Manipulator: 1
+      materialRequirements:
+        Cable: 1
+        PlasmaGlass: 5
+      tagRequirements:
+        BorgArm:
+          Amount: 3
+          DefaultPrototype: LeftArmBorg
+          ExamineName: borg arm
+    - type: ReverseEngineering
+      difficulty: 3
+      recipes:
+        - ReverseEngineeringMachineCircuitboard
+
+- type: entity
+  id: DeepFryerMachineCircuitboard
+  parent: BaseMachineCircuitboard
+  name: deep fryer machine board
+  components:
+    - type: Sprite
+      state: service
+    - type: MachineBoard
+      prototype: KitchenDeepFryer
+      requirements:
+        Capacitor: 1
+        MatterBin: 1
+      materialRequirements:
+        Steel: 4
+        Glass: 2
+        Cable: 4
+    - type: ReverseEngineering
+      recipes:
+        - DeepFryerMachineCircuitboard
+
+- type: entity
+  id: MailTeleporterMachineCircuitboard
+  parent: BaseMachineCircuitboard
+  name: mail teleporter machine board
+  components:
+    - type: Sprite
+      state: supply
+    - type: MachineBoard
+      prototype: MailTeleporter
+      requirements:
+        Capacitor: 1
+        MatterBin: 1
+      materialRequirements:
+        Steel: 4
+        Cable: 4

@@ -1,0 +1,21 @@
+# SPDX-FileCopyrightText: 2023 pofitlo <107665898+pofitlo@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 SimpleStation14 <130339894+SimpleStation14@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 router <messagebus@vk.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- files: ["running_out.ogg"]
+  license: "CC-BY-3.0"
+  copyright: "Created by Bolgarich"
+  source: "https://www.youtube.com/watch?v=SzEp2nv6oZ4"
+
+- files: ["clearly_nuclear.ogg"]
+  license: "CC-BY-3.0"
+  copyright: "Created by mryikes"
+  source: "https://www.youtube.com/watch?v=chix8uz-oUQ"
+
+- files: ["chip_nightmare.ogg"]
+  license: "CC-BY-SA-4.0"
+  copyright: "Created by BasedUser on top of chip-meltdown.mod by Reanimator (Thom)."
+  source: "http://ygg.baseduser.eu.org/chip-nightmare_ss14.ogg"

@@ -1,0 +1,89 @@
+// SPDX-FileCopyrightText: 2024 VMSolidus <evilexecutive@gmail.com>
+// SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+using Content.Shared.CCVar;
+using Content.Shared.GameTicking;
+using Content.Shared.Mood;
+using Content.Shared.Overlays;
+using Robust.Client.Graphics;
+using Robust.Shared.Configuration;
+using Robust.Shared.Player;
+
+namespace Content.Client.Overlays;
+
+public sealed class SaturationScaleSystem : EntitySystem
+{
+    [Dependency] private readonly IOverlayManager _overlayMan = default!;
+    [Dependency] private readonly ISharedPlayerManager _playerMan = default!;
+    [Dependency] private readonly IConfigurationManager _cfgMan = default!;
+
+    private SaturationScaleOverlay _overlay = default!;
+    private bool _moodEffectsEnabled;
+
+    public override void Initialize()
+    {
+        base.Initialize();
+
+        _overlay = new();
+        _moodEffectsEnabled = _cfgMan.GetCVar(CCVars.MoodVisualEffects);
+        _cfgMan.OnValueChanged(CCVars.MoodVisualEffects, HandleMoodEffectsUpdated);
+
+        SubscribeLocalEvent<SaturationScaleOverlayComponent, ComponentInit>(OnInit);
+        SubscribeLocalEvent<SaturationScaleOverlayComponent, ComponentShutdown>(OnShutdown);
+
+        SubscribeLocalEvent<SaturationScaleOverlayComponent, PlayerAttachedEvent>(OnPlayerAttached);
+        SubscribeLocalEvent<SaturationScaleOverlayComponent, PlayerDetachedEvent>(OnPlayerDetached);
+
+        SubscribeNetworkEvent<RoundRestartCleanupEvent>(RoundRestartCleanup);
+    }
+
+    private void HandleMoodEffectsUpdated(bool moodEffectsEnabled)
+    {
+        if (_overlayMan.HasOverlay<SaturationScaleOverlay>() && !moodEffectsEnabled)
+            _overlayMan.RemoveOverlay(_overlay);
+
+        _moodEffectsEnabled = moodEffectsEnabled;
+    }
+
+    private void RoundRestartCleanup(RoundRestartCleanupEvent ev)
+    {
+        if (!_moodEffectsEnabled)
+            return;
+
+        _overlayMan.RemoveOverlay(_overlay);
+    }
+
+    private void OnPlayerDetached(EntityUid uid, SaturationScaleOverlayComponent component, PlayerDetachedEvent args)
+    {
+        if (!_moodEffectsEnabled)
+            return;
+
+        _overlayMan.RemoveOverlay(_overlay);
+    }
+
+    private void OnPlayerAttached(EntityUid uid, SaturationScaleOverlayComponent component, PlayerAttachedEvent args)
+    {
+        if (!_moodEffectsEnabled)
+            return;
+
+        _overlayMan.AddOverlay(_overlay);
+    }
+
+    private void OnShutdown(EntityUid uid, SaturationScaleOverlayComponent component, ComponentShutdown args)
+    {
+        if (uid != _playerMan.LocalEntity || !_moodEffectsEnabled)
+            return;
+
+        _overlayMan.RemoveOverlay(_overlay);
+    }
+
+    private void OnInit(EntityUid uid, SaturationScaleOverlayComponent component, ComponentInit args)
+    {
+        if (uid != _playerMan.LocalEntity || !_moodEffectsEnabled)
+            return;
+
+        _overlayMan.AddOverlay(_overlay);
+    }
+}

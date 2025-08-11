@@ -1,0 +1,55 @@
+# SPDX-FileCopyrightText: 2024 Ko4ergaPunk <62609550+Ko4ergaPunk@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 poemota <142114334+poeMota@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: decal
+  id: Markup
+  parent: Overlays
+  abstract: true
+
+- type: decal
+  id: MarkupSquare
+  parent: Markup
+  tags: ["overlay"]
+  defaultCustomColor: true
+  sprite:
+    sprite: Decals/Overlays/markups.rsi
+    state: square
+
+- type: decal
+  id: MarkupRectangle1x2
+  parent: Markup
+  tags: ["overlay"]
+  defaultCustomColor: true
+  sprite:
+    sprite: Decals/Overlays/markups.rsi
+    state: rectangle1x2
+
+- type: decal
+  id: MarkupRectangle1x2Center
+  parent: Markup
+  tags: ["overlay"]
+  defaultCustomColor: true
+  sprite:
+    sprite: Decals/Overlays/markups.rsi
+    state: rectangle1x2center
+
+- type: decal
+  id: MarkupSquareQuater
+  parent: Markup
+  tags: ["overlay"]
+  defaultCustomColor: true
+  sprite:
+    sprite: Decals/Overlays/markups.rsi
+    state: squareQuater
+
+- type: decal
+  id: MarkupSquareQuaterCenter
+  parent: Markup
+  tags: ["overlay"]
+  defaultCustomColor: true
+  sprite:
+    sprite: Decals/Overlays/markups.rsi
+    state: squareQuaterCenter

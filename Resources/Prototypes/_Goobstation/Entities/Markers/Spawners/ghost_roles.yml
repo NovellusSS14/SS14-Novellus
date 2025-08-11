@@ -1,0 +1,18 @@
+# SPDX-FileCopyrightText: 2025 Skubman <ba.fallaria@gmail.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: entity
+  id: GhostBarSpawner
+  parent: MarkerBase
+  name: ghost bar spawn point
+  components:
+  - type: Sprite
+    sprite: Markers/jobs.rsi
+    layers:
+      - state: green
+      - sprite: Mobs/Ghosts/ghost_human.rsi
+        state: icon
+    state: observer
+  - type: GhostBarSpawn

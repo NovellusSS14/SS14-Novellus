@@ -1,0 +1,294 @@
+# SPDX-FileCopyrightText: 2021 Swept <sweptwastaken@protonmail.com>
+# SPDX-FileCopyrightText: 2021 Vera Aguilera Puerto <6766154+Zumorica@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2022 Chris V <HoofedEar@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2022 Kara <lunarautomaton6@gmail.com>
+# SPDX-FileCopyrightText: 2022 Leon Friedrich <60421075+ElectroJr@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2022 Moony <moonheart08@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2022 router <messagebus@vk.com>
+# SPDX-FileCopyrightText: 2023 Flareguy <78941145+Flareguy@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2023 Nemanja <98561806+EmoGarbage404@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2023 TemporalOroboros <TemporalOroboros@gmail.com>
+# SPDX-FileCopyrightText: 2023 lzk <124214523+lzk228@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2023 metalgearsloth <31366439+metalgearsloth@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 Debug <49997488+DebugOk@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 Jeff <velcroboy333@hotmail.com>
+# SPDX-FileCopyrightText: 2024 Velcroboy <107660393+IamVelcroboy@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 VMSolidus <evilexecutive@gmail.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: entity
+  abstract: true
+  parent: BaseItem
+  id: IngotBase
+  description: A heavy metal ingot stamped with the Nanotrasen logo.
+  components:
+  - type: Sprite
+    sprite: Objects/Materials/ingots.rsi
+  - type: Item
+    sprite: Objects/Materials/ingots.rsi
+    size: Normal
+  - type: StaticPrice
+    price: 0
+  - type: Tag
+    tags:
+    - Ingot
+  - type: Damageable
+    damageContainer: Inorganic
+    damageModifierSet: Metallic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 500
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+
+- type: entity
+  parent: IngotBase
+  id: IngotGold
+  name: gold bar
+  suffix: Full
+  components:
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      Gold: 100
+  - type: Stack
+    stackType: Gold
+    baseLayer: base
+    layerStates:
+    - gold
+    - gold_2
+    - gold_3
+  - type: Sprite
+    state: gold_3
+    layers:
+    - state: gold_3
+      map: ["base"]
+  - type: Item
+    heldPrefix: gold
+  - type: Appearance
+  - type: Extractable
+    grindableSolutionName: gold
+  - type: SolutionContainerManager
+    solutions:
+      gold:
+        reagents:
+        - ReagentId: Gold
+          Quantity: 10
+
+- type: entity
+  parent: IngotGold
+  id: IngotGold1
+  name: gold bar
+  suffix: Single
+  components:
+  - type: Sprite
+    state: gold
+  - type: Stack
+    count: 1
+
+- type: entity
+  parent: IngotBase
+  id: IngotSilver
+  name: silver bar
+  suffix: Full
+  components:
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      Silver: 100
+  - type: Stack
+    stackType: Silver
+    baseLayer: base
+    layerStates:
+    - silver
+    - silver_2
+    - silver_3
+  - type: Sprite
+    state: silver_3
+    layers:
+    - state: silver_3
+      map: ["base"]
+  - type: Item
+    heldPrefix: silver
+  - type: Appearance
+  - type: Extractable
+    grindableSolutionName: gold
+  - type: SolutionContainerManager
+    solutions:
+      gold:
+        reagents:
+        - ReagentId: Silver
+          Quantity: 10
+
+- type: entity
+  parent: IngotSilver
+  id: IngotSilver1
+  name: silver bar
+  suffix: Single
+  components:
+  - type: Sprite
+    state: silver
+  - type: Stack
+    count: 1
+
+- type: entity
+  parent: IngotBase
+  id: IngotTungsten
+  name: tungsten-carbide bar
+  suffix: Full
+  components:
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      Tungsten: 100
+  - type: Stack
+    stackType: Tungsten
+    baseLayer: base
+    layerStates:
+    - tungsten_1
+    - tungsten_2
+    - tungsten_3
+  - type: Sprite
+    state: tungsten_3
+    layers:
+    - state: tungsten_3
+      map: ["base"]
+  - type: Item
+    heldPrefix: tungsten
+  - type: Appearance
+
+- type: entity
+  parent: IngotTungsten
+  id: IngotTungsten1
+  name: tungsten-carbide bar
+  suffix: Single
+  components:
+  - type: Sprite
+    state: tungsten_1
+  - type: Stack
+    count: 1
+
+## Assmos - /tg/ gases
+- type: entity
+  parent: IngotBase
+  id: MetalHydrogen
+  name: metal hydrogen
+  suffix: Full
+  components:
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      MetalHydrogen: 100
+  - type: Stack
+    stackType: MetalHydrogen
+    baseLayer: base
+    layerStates:
+    - hydrogen
+    - hydrogen_2
+    - hydrogen_3
+  - type: Sprite
+    state: hydrogen_3
+    layers:
+    - state: hydrogen_3
+      map: ["base"]
+  - type: Item
+    heldPrefix: metalhydrogen
+  - type: Appearance
+  - type: Extractable
+    grindableSolutionName: hydrogen
+  - type: SolutionContainerManager
+    solutions:
+      hydrogen:
+        reagents:
+        - ReagentId: Hydrogen
+          Quantity: 20
+        canReact: false
+
+- type: entity
+  parent: MetalHydrogen
+  id: MetalHydrogen10
+  name: metal hydrogen
+  suffix: 10
+  components:
+  - type: Sprite
+    state: hydrogen
+  - type: Stack
+    stackType: MetalHydrogen
+    count: 10
+
+- type: entity
+  parent: MetalHydrogen
+  id: MetalHydrogen1
+  name: metal hydrogen
+  suffix: Single
+  components:
+  - type: Sprite
+    state: hydrogen
+  - type: Stack
+    stackType: MetalHydrogen
+    count: 1
+
+## Assmos - Crystallizer
+- type: entity
+  parent: IngotBase
+  id: Zaukerite
+  name: zaukerite
+  suffix: Full
+  components:
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      Zaukerite: 100
+  - type: Stack
+    stackType: Zaukerite
+    baseLayer: base
+    layerStates:
+    - zaukerite
+    - zaukerite_2
+    - zaukerite_3
+  - type: Sprite
+    state: zaukerite_3
+    layers:
+    - state: zaukerite_3
+      map: ["base"]
+  - type: Item
+    heldPrefix: metalhydrogen
+  - type: Appearance
+  - type: Extractable
+    grindableSolutionName: zaukerite
+  - type: SolutionContainerManager
+    solutions:
+      zaukerite:
+        reagents:
+        - ReagentId: Zauker
+          Quantity: 20
+        canReact: false
+
+- type: entity
+  parent: Zaukerite
+  id: Zaukerite10
+  name: zaukerite
+  suffix: 10
+  components:
+  - type: Sprite
+    state: zaukerite
+  - type: Stack
+    stackType: Zaukerite
+    count: 10
+
+- type: entity
+  parent: Zaukerite
+  id: Zaukerite1
+  name: zaukerite
+  suffix: Single
+  components:
+  - type: Sprite
+    state: zaukerite
+  - type: Stack
+    stackType: Zaukerite
+    count: 1

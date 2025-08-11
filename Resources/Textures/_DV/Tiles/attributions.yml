@@ -1,0 +1,13 @@
+# SPDX-FileCopyrightText: 2023 Fluffiest Floofers <thebluewulf@gmail.com>
+# SPDX-FileCopyrightText: 2025 Rosycup <178287475+Rosycup@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+# Attempted to keep the files in alphabetical order so its easier to audit.
+# Finding individual authors is an unfeasible task. If you can reference the author please do so.
+
+- files: ["glass.png"]
+  license: "CC0-1.0"
+  copyright: "Created by github user @leonardo-dabepis. Modified from rglass sprite created by user @notquitehadouken."
+  source: "https://github.com/DeltaV-Station/Delta-v/pull/103"

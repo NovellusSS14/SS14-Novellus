@@ -1,0 +1,20 @@
+# SPDX-FileCopyrightText: 2025 BloodfiendishOperator <141253729+Diggy0@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: marking
+  id: ADTAllhonor
+  bodyPart: Hair
+  markingCategory: Hair
+  sprites:
+    - sprite: _ADT/Mobs/Customization/Hair/hair.rsi
+      state: honor
+
+- type: marking
+  id: ADTAllShavedFemale
+  bodyPart: Hair
+  markingCategory: Hair
+  sprites:
+    - sprite: _ADT/Mobs/Customization/Hair/hair.rsi
+      state: shaved_female

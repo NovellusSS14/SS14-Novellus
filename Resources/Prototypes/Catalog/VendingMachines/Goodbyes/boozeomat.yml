@@ -1,0 +1,12 @@
+# SPDX-FileCopyrightText: 2024 Tayrtahn <tayrtahn@gmail.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: messagePack
+  id: BoozeOMatGoodbyes
+  messages:
+  - vending-machine-thanks
+  - thankyou-boozeomat-1
+  - thankyou-boozeomat-2
+  - thankyou-boozeomat-3

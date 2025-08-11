@@ -1,0 +1,15 @@
+# SPDX-FileCopyrightText: 2025 Blitz <73762869+BlitzTheSquishy@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 juniwoofs <180479595+juniwoofs@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: guideEntry
+  id: Canid
+  name: species-name-canid
+  text: "/ServerInfo/Guidebook/Mobs/_DEN/Canid.xml"
+
+- type: guideEntry
+  id: Ovinia
+  name: species-name-ovinia
+  text: "/ServerInfo/Guidebook/Mobs/_DEN/Ovinia.xml"

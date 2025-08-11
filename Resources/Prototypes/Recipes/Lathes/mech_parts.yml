@@ -1,0 +1,197 @@
+# SPDX-FileCopyrightText: 2022 Nemanja <98561806+EmoGarbage404@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2023 Flareguy <78941145+Flareguy@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2023 brainfood1183 <113240905+brainfood1183@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2023 crazybrain23 <44417085+crazybrain23@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2023 deltanedas <39013340+deltanedas@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2023 deltanedas <@deltanedas:kde.org>
+# SPDX-FileCopyrightText: 2023 metalgearsloth <31366439+metalgearsloth@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 John Space <bigdumb421@gmail.com>
+# SPDX-FileCopyrightText: 2024 Nemanja <98561806+emogarbage404@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 gluesniffler <159397573+gluesniffler@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 sleepyyapril <***>
+# SPDX-FileCopyrightText: 2025 VMSolidus <evilexecutive@gmail.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <flyingkarii@gmail.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+# Ripley
+- type: latheRecipe
+  id: RipleyHarness
+  result: RipleyHarness
+  category: Ripley # Goobstation
+  completetime: 10
+  materials:
+    Steel: 1500
+    Glass: 1200
+
+- type: latheRecipe
+  id: RipleyLArm
+  result: RipleyLArm
+  category: Ripley # Goobstation
+  completetime: 10
+  materials:
+    Steel: 1000
+    Glass: 750
+
+- type: latheRecipe
+  id: RipleyLLeg
+  result: RipleyLLeg
+  category: Ripley # Goobstation
+  completetime: 10
+  materials:
+    Steel: 1000
+    Glass: 750
+
+- type: latheRecipe
+  id: RipleyRLeg
+  result: RipleyRLeg
+  category: Ripley # Goobstation
+  completetime: 10
+  materials:
+    Steel: 1000
+    Glass: 750
+
+- type: latheRecipe
+  id: RipleyRArm
+  result: RipleyRArm
+  category: Ripley
+  completetime: 10
+  materials:
+    Steel: 1000
+    Glass: 750
+
+- type: latheRecipe
+  id: MechEquipmentGrabber
+  result: MechEquipmentGrabber
+  category: MechEquipment
+  completetime: 10
+  materials:
+    Steel: 1000
+    Glass: 750
+
+
+# H.O.N.K.
+- type: latheRecipe
+  id: HonkerHarness
+  result: HonkerHarness
+  category: Honker # Goobstation
+  completetime: 10
+  materials:
+    Steel: 3000
+    Glass: 1200
+    Bananium: 500
+
+- type: latheRecipe
+  id: HonkerLArm
+  result: HonkerLArm
+  category: Honker # Goobstation
+  completetime: 10
+  materials:
+    Steel: 3000
+    Glass: 1200
+    Bananium: 500
+
+- type: latheRecipe
+  id: HonkerLLeg
+  result: HonkerLLeg
+  category: Honker # Goobstation
+  completetime: 10
+  materials:
+    Steel: 3000
+    Glass: 1200
+    Bananium: 500
+
+- type: latheRecipe
+  id: HonkerRLeg
+  result: HonkerRLeg
+  category: Honker # Goobstation
+  completetime: 10
+  materials:
+    Steel: 3000
+    Glass: 1200
+    Bananium: 500
+
+- type: latheRecipe
+  id: HonkerRArm
+  result: HonkerRArm
+  category: Honker # Goobstation
+  completetime: 10
+  materials:
+    Steel: 3000
+    Glass: 1200
+    Bananium: 500
+
+- type: latheRecipe
+  id: MechEquipmentHorn
+  result: MechEquipmentHorn
+  category: MechEquipment
+  completetime: 10
+  materials:
+    Steel: 3000
+    Glass: 1200
+    Bananium: 500
+
+# HAMTR
+- type: latheRecipe
+  id: HamtrHarness
+  result: HamtrHarness
+  category: Hamptr # Goobstation
+  completetime: 10
+  materials:
+    Steel: 1200
+    Glass: 1000
+
+- type: latheRecipe
+  id: HamtrLArm
+  result: HamtrLArm
+  category: Hamptr # Goobstation
+  completetime: 10
+  materials:
+    Steel: 800
+    Glass: 600
+
+- type: latheRecipe
+  id: HamtrLLeg
+  result: HamtrLLeg
+  category: Hamptr # Goobstation
+  completetime: 10
+  materials:
+    Steel: 800
+    Glass: 600
+
+- type: latheRecipe
+  id: HamtrRLeg
+  result: HamtrRLeg
+  category: Hamptr # Goobstation
+  completetime: 10
+  materials:
+    Steel: 800
+    Glass: 600
+
+- type: latheRecipe
+  id: HamtrRArm
+  result: HamtrRArm
+  category: Hamptr # Goobstation
+  completetime: 10
+  materials:
+    Steel: 800
+    Glass: 600
+
+- type: latheRecipe
+  id: MechEquipmentGrabberSmall
+  result: MechEquipmentGrabberSmall
+  category: MechEquipment # Goobstation
+  completetime: 10
+  materials:
+    Steel: 400
+    Plastic: 100
+
+- type: latheRecipe
+  id: VimHarness
+  result: VimHarness
+  category: MechEquipment
+  completetime: 5
+  materials:
+    Steel: 400
+    Plastic: 100

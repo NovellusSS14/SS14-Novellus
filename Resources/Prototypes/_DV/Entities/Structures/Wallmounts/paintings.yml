@@ -1,0 +1,25 @@
+# SPDX-FileCopyrightText: 2023 Fluffiest Floofers <thebluewulf@gmail.com>
+# SPDX-FileCopyrightText: 2025 Rosycup <178287475+Rosycup@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: entity
+  parent: PaintingBase
+  id: PaintingBlunt
+  name: Blunt Painting
+  description: A blunt smoking weird-cat thing with a smug look.
+  components:
+  - type: Sprite
+    sprite: _DV/Structures/Wallmounts/Paintings/ps3moira.rsi
+    state: bluntpainting
+
+- type: entity
+  parent: PaintingBase
+  id: PaintingSpoon
+  name: Spoon Painting
+  description: The type of painting that really ties together a room.
+  components:
+  - type: Sprite
+    sprite: _DV/Structures/Wallmounts/Paintings/leonardodabepis.rsi
+    state: spoonpainting

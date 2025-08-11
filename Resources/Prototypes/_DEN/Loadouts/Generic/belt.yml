@@ -1,0 +1,50 @@
+# SPDX-FileCopyrightText: 2025 portfiend <109661617+portfiend@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+# Waist aprons!
+# Note that these can be equipped on both the belt slot and the outer clothing slot.
+- type: loadout
+  id: LoadoutClothingWaistApron
+  category: Belt
+  cost: 1
+  customColorTint: true
+  items:
+    -  ClothingWaistApron
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutBelt
+
+- type: loadout
+  id: LoadoutClothingWaistApronCheckered
+  category: Belt
+  cost: 1
+  customColorTint: true
+  items:
+    -  ClothingWaistApronCheckered
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutBelt
+
+- type: loadout
+  id: LoadoutClothingWaistApronStripesHorizontal
+  category: Belt
+  cost: 1
+  customColorTint: true
+  items:
+    -  ClothingWaistApronStripesHorizontal
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutBelt
+
+- type: loadout
+  id: LoadoutClothingWaistApronStripesVertical
+  category: Belt
+  cost: 1
+  customColorTint: true
+  items:
+    -  ClothingWaistApronStripesVertical
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutBelt

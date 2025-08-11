@@ -1,0 +1,184 @@
+# SPDX-FileCopyrightText: 2024 VMSolidus
+# SPDX-FileCopyrightText: 2025 Adrian16199
+# SPDX-FileCopyrightText: 2025 Lonofera
+# SPDX-FileCopyrightText: 2025 MajorMoth
+# SPDX-FileCopyrightText: 2025 sleepyyapril
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+# Warden
+# Backpacks
+
+# Belt
+
+# Ears
+
+# Equipment
+
+# Eyes
+
+# Gloves
+- type: loadout
+  id: LoadoutClothingHandsGlovesCombat
+  category: JobsSecurityWarden
+  cost: 0
+  exclusive: true
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutWardenGloves
+    - !type:CharacterJobRequirement
+      jobs:
+        - Warden
+  items:
+    - ClothingHandsGlovesCombat
+
+# Head
+- type: loadout
+  id: LoadoutClothingHeadHatBeretWarden
+  category: JobsSecurityWarden
+  cost: 0
+  exclusive: true
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutWardenHead
+    - !type:CharacterJobRequirement
+      jobs:
+        - Warden
+  items:
+    - ClothingHeadHatBeretWarden
+
+- type: loadout
+  id: LoadoutWardenHeadWardenCap
+  category: JobsSecurityWarden
+  cost: 0
+  exclusive: true
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutWardenHead
+    - !type:CharacterJobRequirement
+      jobs:
+        - Warden
+  items:
+    - ClothingHeadHatWarden
+
+# Id
+
+# Neck
+
+# Mask
+
+# Outer
+- type: loadout
+  id: LoadoutClothingOuterWinterCoatWarden
+  category: JobsSecurityWarden
+  cost: 0
+  exclusive: true
+  requirements:
+  - !type:CharacterItemGroupRequirement
+    group: LoadoutWardenOuter
+  - !type:CharacterJobRequirement
+    jobs:
+      - Warden
+  items:
+  - ClothingOuterWinterWardenUnarmored
+
+- type: loadout
+  id: LoadoutClothingOuterCoatWarden
+  category: JobsSecurityWarden
+  cost: 0
+  exclusive: true
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutWardenOuter
+    - !type:CharacterJobRequirement
+      jobs:
+        - Warden
+  items:
+    - ClothingOuterCoatWarden
+
+- type: loadout
+  id: LoadoutClothingOuterLongCoatWarden
+  category: JobsSecurityWarden
+  cost: 0
+  exclusive: true
+  requirements:
+  - !type:CharacterItemGroupRequirement
+    group: LoadoutWardenOuter
+  - !type:CharacterJobRequirement
+    jobs:
+      - Warden
+  items:
+  - ClothingLongcoatWarden
+
+- type: loadout
+  id: LoadoutWardenOuterCoatWinterCoatArmoured
+  category: JobsSecurityWarden
+  cost: 0
+  exclusive: true
+  requirements:
+  - !type:CharacterItemGroupRequirement
+    group: LoadoutWardenOuter
+  - !type:CharacterJobRequirement
+    jobs:
+      - Warden
+  items:
+  - ClothingOuterWinterWarden
+
+# Shoes
+
+# Uniforms
+- type: loadout
+  id: LoadoutUniformJumpsuitWardenBlue
+  category: JobsSecurityWarden
+  cost: 0
+  exclusive: true
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutWardenUniforms
+    - !type:CharacterJobRequirement
+      jobs:
+        - Warden
+  items:
+    - ClothingUniformJumpsuitWardenBlue
+
+- type: loadout
+  id: LoadoutUniformJumpsuitWardenGrey
+  category: JobsSecurityWarden
+  cost: 0
+  exclusive: true
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutWardenUniforms
+    - !type:CharacterJobRequirement
+      jobs:
+        - Warden
+  items:
+    - ClothingUniformJumpsuitWardenGrey
+
+- type: loadout
+  id: LoadoutUniformJumpskirtWardenBlue
+  category: JobsSecurityWarden
+  cost: 0
+  exclusive: true
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutWardenUniforms
+    - !type:CharacterJobRequirement
+      jobs:
+        - Warden
+  items:
+    - ClothingUniformJumpskirtWardenBlue
+
+- type: loadout
+  id: LoadoutUniformJumpskirtWardenGrey
+  category: JobsSecurityWarden
+  cost: 0
+  exclusive: true
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutWardenUniforms
+    - !type:CharacterJobRequirement
+      jobs:
+        - Warden
+  items:
+    - ClothingUniformJumpskirtWardenGrey

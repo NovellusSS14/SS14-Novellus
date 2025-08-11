@@ -1,0 +1,20 @@
+# SPDX-FileCopyrightText: 2021 Visne <39844191+Visne@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 Tayrtahn <tayrtahn@gmail.com>
+# SPDX-FileCopyrightText: 2024 Ubaser <134914314+UbaserB@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: messagePack
+  id: AmmoVendAds
+  messages:
+  - advertisement-ammo-1
+  - advertisement-ammo-2
+  - advertisement-ammo-3
+  - advertisement-ammo-4
+  - advertisement-ammo-5
+  - advertisement-ammo-6
+  - advertisement-ammo-7
+  - advertisement-ammo-8
+  - advertisement-ammo-9
+  - advertisement-ammo-10

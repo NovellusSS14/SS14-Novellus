@@ -1,0 +1,133 @@
+# SPDX-FileCopyrightText: 2025 Blitz
+# SPDX-FileCopyrightText: 2025 BlitzTheSquishy
+# SPDX-FileCopyrightText: 2025 Forzii
+# SPDX-FileCopyrightText: 2025 Tabitha
+# SPDX-FileCopyrightText: 2025 juniwoofs
+# SPDX-FileCopyrightText: 2025 portfiend
+# SPDX-FileCopyrightText: 2025 sleepyyapril
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: entity
+  save: false
+  name: Urist McSheepy
+  parent: BaseMobSpeciesOrganic
+  id: MobOviniaBase
+  abstract: true
+  components:
+  - type: Sprite
+    netsync: false
+    noRot: true
+    drawdepth: Mobs
+  - type: HumanoidAppearance
+    species: Ovinia
+  - type: Fixtures
+    fixtures: # TODO: This needs a second fixture just for mob collisions.
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.35
+        density: 215 # sheep be heavy
+        restitution: 0.0
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
+  - type: Body
+    prototype: Ovinia
+  - type: Damageable
+    damageModifierSet: Ovinia
+  - type: Speech
+    speechSounds: Alto
+    speechVerb: Ovinia
+    allowedEmotes: ["Baa"]
+  - type: Vocal
+    sounds:
+      Male: MaleOvinia
+      Female: FemaleOvinia
+      Unsexed: MaleOvinia
+  - type: LanguageKnowledge
+    speaks:
+    - TauCetiBasic
+    - Caprine
+    understands:
+    - TauCetiBasic
+    - Caprine
+  - type: StepTriggerImmune
+    whitelist:
+      types:
+        - Shard
+        - Mousetrap
+        - SlipEntity
+  - type: Tag
+    tags:
+    - CanPilot
+    - FootstepSound
+    - DoorBumpOpener
+    - OviniaEmotes
+  - type: TypingIndicator
+    proto: ovinia
+  - type: Inventory
+    speciesId: ovinia
+    templateId: human
+    displacements:
+      jumpsuit:
+        layer:
+          sprite: _DEN/Mobs/Species/Ovinia/displacement.rsi
+          state: jumpsuit
+          copyToShaderParameters:
+            # Value required, provide a dummy. Gets overridden when applied.
+            layerKey: dummy
+            parameterTexture: displacementMap
+            parameterUV: displacementUV
+      shoes:
+        layer:
+          sprite: _DEN/Mobs/Species/Ovinia/displacement.rsi
+          state: shoes
+          copyToShaderParameters:
+            # Value required, provide a dummy. Gets overridden when applied.
+            layerKey: dummy
+            parameterTexture: displacementMap
+            parameterUV: displacementUV
+  - type: Flammable
+    fireStackIncreaseMultiplier: .75 #wool isnt flammable
+  - type: Hunger
+    decayRateMultiplier: 0.75 #25% slower than normal (chewin they cud)
+  - type: Thirst
+    decayRateMultiplier: 0.75 # 25% slower than normal
+  - type: Carriable
+
+
+
+- type: entity
+  save: false
+  name: Urist McHands
+  parent: MobHumanDummy
+  id: MobOviniaDummy
+  categories: [ HideSpawnMenu ]
+  description: A dummy ovinia meant to be used in character setup.
+  components:
+  - type: HumanoidAppearance
+    species: Ovinia
+  - type: Inventory
+    speciesId: ovinia
+    templateId: human
+    displacements:
+      jumpsuit:
+        layer:
+          sprite: _DEN/Mobs/Species/Ovinia/displacement.rsi
+          state: jumpsuit
+          copyToShaderParameters:
+            # Value required, provide a dummy. Gets overridden when applied.
+            layerKey: dummy
+            parameterTexture: displacementMap
+            parameterUV: displacementUV
+      shoes:
+        layer:
+          sprite: _DEN/Mobs/Species/Ovinia/displacement.rsi
+          state: shoes
+          copyToShaderParameters:
+            # Value required, provide a dummy. Gets overridden when applied.
+            layerKey: dummy
+            parameterTexture: displacementMap
+            parameterUV: displacementUV

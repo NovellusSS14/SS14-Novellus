@@ -1,0 +1,188 @@
+# SPDX-FileCopyrightText: 2024 VMSolidus <evilexecutive@gmail.com>
+# SPDX-FileCopyrightText: 2024 sleepyyapril <flyingkarii@gmail.com>
+# SPDX-FileCopyrightText: 2025 Blitz <73762869+BlitzTheSquishy@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+# :TODO: Add the destroyed versions of these as a destruction spawn.
+
+- type: entity
+  parent: BaseStructure
+  id: StorageTankBase
+  name: storage tank
+  description: A liquids storage tank.
+  abstract: true
+  components:
+  - type: Sprite
+    noRot: true
+  - type: InteractionOutline
+  - type: Physics
+  - type: Damageable
+    damageContainer: Inorganic
+    damageModifierSet: Metallic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 100
+      behaviors:
+        - !type:DoActsBehavior
+          acts: [ "Destruction" ]
+    - trigger:
+        !type:DamageTypeTrigger
+        damageType: Heat
+        damage: 5
+      behaviors:
+      - !type:SolutionExplosionBehavior
+        solution: tank
+    - trigger:
+        !type:DamageTypeTrigger
+        damageType: Piercing
+        damage: 5
+      behaviors:
+      - !type:SolutionExplosionBehavior
+        solution: tank
+    - trigger:
+        !type:DamageTrigger
+        damage: 10
+      behaviors:
+      - !type:SpillBehavior
+        solution: tank
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+  - type: SolutionContainerManager
+    solutions:
+      tank:
+        maxVol: 1500
+  - type: DrainableSolution
+    solution: tank
+  - type: ReagentTank
+  - type: Transform
+    noRot: true
+
+# In use
+- type: entity
+  id: StorageTankWide
+  parent: StorageTankBase
+  name: fuel tank
+  description: A fuel tank. It's used to store high amounts of fuel.
+  suffix: Empty, Wide # TheDen
+  components:
+  - type: Sprite
+    sprite: Structures/Storage/tanksx64.rsi
+    layers:
+      - state: chemical_container
+      # - state: chemical_container
+        # map: ["enum.SolutionContainerLayers.Fill"]
+        # visible: false
+  - type: Appearance
+  # - type: SolutionContainerVisuals
+    # maxFillLevels: 3
+    # fillBaseName: fueltank-2-
+  - type: ExaminableSolution
+    solution: tank
+  - type: ReagentTank
+    tankType: Fuel
+  - type: DamageOnToolInteract
+    tools: Welding
+    weldingDamage:
+      types:
+        Heat: 10
+  - type: PacifismDangerousAttack
+  - type: Explosive
+    explosionType: Default
+    totalIntensity: 120 # ~ 5 tile radius
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.9,-0.5,0.9,0.2"
+        density: 155
+        mask:
+        - MachineMask
+        layer:
+        - WallLayer
+
+- type: entity
+  parent: StorageTankWide
+  id: StorageTankWideFullFuel
+  suffix: Full, Wide # TheDen
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      tank:
+        reagents:
+        - ReagentId: WeldingFuel
+          Quantity: 2000
+
+
+- type: entity
+  parent: StorageTankWide
+  id: StorageTank2
+  suffix: Empty, Tall # TheDen
+  components:
+  - type: Sprite
+    sprite: Structures/Storage/tanksx64.rsi
+    layers:
+      - state: largetank_chemical
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.9,-0.7,-0.1,0.4"
+        density: 155
+        mask:
+        - MachineMask
+        layer:
+        - WallLayer
+
+- type: entity
+  id: StorageTankFullFuel
+  parent: StorageTank2
+  suffix: Full, Tall # TheDen
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      tank:
+        reagents:
+        - ReagentId: WeldingFuel
+          Quantity: 1500
+
+- type: entity
+  id: StorageTankHuge
+  parent: StorageTankWide
+  suffix: Empty, Huge # TheDen
+  components:
+  - type: Sprite
+    sprite: Structures/Storage/tanksx64.rsi
+    layers:
+      - state: largetank_chemical_huge
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.7,-0.7,0.2,0.6"
+        density: 155
+        mask:
+        - MachineMask
+        layer:
+        - WallLayer
+
+- type: entity
+  id: StorageTankHugeFullFuel
+  parent: StorageTankHuge
+  suffix: Full, Huge # TheDen
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      tank:
+        reagents:
+        - ReagentId: WeldingFuel
+          Quantity: 2000

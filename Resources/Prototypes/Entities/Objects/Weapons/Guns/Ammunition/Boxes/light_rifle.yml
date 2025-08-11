@@ -1,0 +1,182 @@
+# SPDX-FileCopyrightText: 2022 Kara <lunarautomaton6@gmail.com>
+# SPDX-FileCopyrightText: 2022 metalgearsloth <31366439+metalgearsloth@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2023 Boaz1111 <149967078+Boaz1111@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2023 Nemanja <98561806+EmoGarbage404@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2023 Vordenburg <114301317+Vordenburg@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2023 lzk <124214523+lzk228@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 DEATHB4DEFEAT <77995199+DEATHB4DEFEAT@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 Debug <49997488+DebugOk@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 IProduceWidgets <107586145+IProduceWidgets@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 VMSolidus <evilexecutive@gmail.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: entity
+  abstract: true
+  parent: BaseMagazineBox
+  id: BaseMagazineBoxLightRifle
+  name: ammunition box (.30 rifle)
+  components:
+  - type: BallisticAmmoProvider
+    mayTransfer: true
+    whitelist:
+      tags:
+        - CartridgeLightRifle
+    proto: CartridgeLightRifle
+    capacity: 60
+  - type: Item
+    size: Small
+  - type: ContainerContainer
+    containers:
+      ballistic-ammo: !type:Container
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Ammunition/Boxes/light_rifle.rsi
+  - type: MagazineVisuals
+    magState: mag
+    steps: 2
+    zeroVisible: false
+  - type: Appearance
+
+# Boxes
+- type: entity
+  parent: BaseMagazineBoxLightRifle
+  id: MagazineBoxLightRifleBig
+  name: bulk ammunition box (.30 rifle)
+  components:
+  - type: BallisticAmmoProvider
+    capacity: 200
+    proto: CartridgeLightRifle
+  - type: Sprite
+    layers:
+    - state: base-b
+      map: ["enum.GunVisualLayers.Base"]
+    - state: magb-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: MagazineVisuals
+    magState: magb
+    steps: 2
+    zeroVisible: false
+  - type: Appearance
+
+- type: entity
+  parent: MagazineBoxLightRifleBig
+  id: MagazineBoxLightRifleBigPractice
+  name: bulk ammunition box (.30 rifle practice)
+  components:
+  - type: BallisticAmmoProvider
+    proto: CartridgeLightRiflePractice
+
+- type: entity
+  parent: MagazineBoxLightRifleBig
+  id: MagazineBoxLightRifleBigRubber
+  name: bulk ammunition box (.30 rifle rubber)
+  components:
+  - type: BallisticAmmoProvider
+    proto: CartridgeLightRifleRubber
+
+- type: entity
+  parent: MagazineBoxLightRifleBig
+  id: MagazineBoxLightRifleBigIncendiary
+  name: bulk ammunition box (.30 rifle incendiary)
+  components:
+  - type: BallisticAmmoProvider
+    proto: CartridgeLightRifleIncendiary
+
+- type: entity
+  parent: MagazineBoxLightRifleBig
+  id: MagazineBoxLightRifleBigUranium
+  name: bulk ammunition box (.30 rifle uranium)
+  components:
+  - type: BallisticAmmoProvider
+    proto: CartridgeLightRifleUranium
+
+- type: entity
+  parent: MagazineBoxLightRifleBig
+  id: MagazineBoxLightRifleBigShrapnel
+  name: bulk ammunition box (.30 rifle shrapnel)
+  components:
+  - type: BallisticAmmoProvider
+    proto: CartridgeLightRifleShrapnel
+
+- type: entity
+  parent: BaseMagazineBoxLightRifle
+  id: MagazineBoxLightRifle
+  name: ammunition box (.30 rifle)
+  components:
+  - type: BallisticAmmoProvider
+    proto: CartridgeLightRifle
+  - type: Sprite
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+
+- type: entity
+  parent: BaseMagazineBoxLightRifle
+  id: MagazineBoxLightRiflePractice
+  name: ammunition box (.30 rifle practice)
+  components:
+  - type: BallisticAmmoProvider
+    proto: CartridgeLightRiflePractice
+  - type: Sprite
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+    - state: practice
+
+- type: entity
+  parent: BaseMagazineBoxLightRifle
+  id: MagazineBoxLightRifleRubber
+  name: ammunition box (.30 rifle rubber)
+  components:
+  - type: BallisticAmmoProvider
+    proto: CartridgeLightRifleRubber
+  - type: Sprite
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+    - state: rubber
+
+- type: entity
+  id: MagazineBoxLightRifleIncendiary
+  parent: BaseMagazineBoxLightRifle
+  name: ammunition box (.30 rifle incendiary)
+  components:
+  - type: BallisticAmmoProvider
+    proto: CartridgeLightRifleIncendiary
+  - type: Sprite
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+    - state: incendiary
+
+- type: entity
+  parent: BaseMagazineBoxLightRifle
+  id: MagazineBoxLightRifleUranium
+  name: ammunition box (.30 rifle uranium)
+  components:
+  - type: BallisticAmmoProvider
+    proto: CartridgeLightRifleUranium
+  - type: Sprite
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+    - state: uranium
+
+- type: entity
+  parent: MagazineBoxLightRifle
+  id: MagazineBoxLightRifleShrapnel
+  name: ammunition box (.30 rifle shrapnel)
+  components:
+  - type: BallisticAmmoProvider
+    proto: CartridgeLightRifleShrapnel

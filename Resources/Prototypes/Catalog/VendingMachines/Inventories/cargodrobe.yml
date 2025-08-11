@@ -1,0 +1,49 @@
+# SPDX-FileCopyrightText: 2022 Andreas Kämper
+# SPDX-FileCopyrightText: 2022 Emisse
+# SPDX-FileCopyrightText: 2022 Fishfish458
+# SPDX-FileCopyrightText: 2022 fishfish458
+# SPDX-FileCopyrightText: 2022 mirrorcult
+# SPDX-FileCopyrightText: 2022 theashtronaut
+# SPDX-FileCopyrightText: 2023 AJCM-git
+# SPDX-FileCopyrightText: 2023 Kilk
+# SPDX-FileCopyrightText: 2023 OctoRocket
+# SPDX-FileCopyrightText: 2023 lzk
+# SPDX-FileCopyrightText: 2023 lzk228
+# SPDX-FileCopyrightText: 2023 potato1234_x
+# SPDX-FileCopyrightText: 2024 Dakota Haven
+# SPDX-FileCopyrightText: 2024 Pierson Arnold
+# SPDX-FileCopyrightText: 2025 Rosycup
+# SPDX-FileCopyrightText: 2025 Ted Lukin
+# SPDX-FileCopyrightText: 2025 sleepyyapril
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: vendingMachineInventory
+  id: CargoDrobeInventory
+  startingInventory:
+    ClothingBackpackCargo: 3
+    ClothingBackpackSatchelCargo: 3
+    ClothingBackpackDuffelCargo: 3
+    ClothingUniformJumpsuitCargoLight: 3 # CD
+    ClothingUniformJumpsuitCargoDark: 3 # CD
+    ClothingUniformJumpskirtCargoLight: 3 # CD
+    ClothingUniformJumpskirtCargoDark: 3 # CD
+    # ClothingUniformJumpsuitCargoPants: 3 # CD
+    ClothingBackpackMessengerCargo: 3 # Frontier
+    ClothingShoesColorBlack: 3
+    ClothingHandsGlovesFingerless: 3
+    ClothingHandsGlovesMechanic: 3 # CD
+    ClothingHeadHatCargosoft: 3
+    ClothingHeadBandBrown: 3
+    # ClothingMaskBandCargo : 3 # CD
+    ClothingHeadsetCargo: 3
+    ClothingOuterWinterCargo: 2
+    ClothingOuterWinterMiner: 2
+    ClothingOuterCoatCargoBomber: 2 # CD
+    ClothingNeckScarfStripedBrown: 3
+    ClothingShoesBootsWinterCargo: 2
+    ClothingShoesBootsSteel: 2 # CD
+    ClothingNeckCollarLogi: 1 # Floofstation - Collar addition
+    ClothingHandsLogisWarmers: 1 # Floofstation
+    ClothingUnderSocksLogis: 1 # Floofstation
+    ClothingUniformLogisThong: 1 # Floofstation

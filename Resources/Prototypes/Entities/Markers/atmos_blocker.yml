@@ -1,0 +1,142 @@
+# SPDX-FileCopyrightText: 2021 20kdc <asdd2808@gmail.com>
+# SPDX-FileCopyrightText: 2021 Paul Ritter <ritter.paul1@googlemail.com>
+# SPDX-FileCopyrightText: 2021 wrexbe <81056464+wrexbe@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2022 Rane <60792108+Elijahrane@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 Partmedia <kevinz5000@gmail.com>
+# SPDX-FileCopyrightText: 2025 VMSolidus <evilexecutive@gmail.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: entity
+  name: Atmos Fix Vacuum Marker
+  id: AtmosFixBlockerMarker
+  description: "Vacuum, T20C"
+  parent: MarkerBase
+  components:
+    - type: Sprite
+      layers:
+        - sprite: Markers/atmos.rsi # {
+          state: base
+          shader: unshaded
+        - sprite: Markers/atmos.rsi
+          shader: unshaded # }
+          state: vacuum
+    - type: AtmosFixMarker
+      mode: 1
+
+- type: entity
+  name: Atmos Fix Oxygen Marker
+  id: AtmosFixOxygenMarker
+  description: "Oxygen @ gas miner pressure, T20C"
+  parent: MarkerBase
+  components:
+    - type: Sprite
+      layers:
+        - sprite: Markers/atmos.rsi # {
+          state: base
+          shader: unshaded
+        - sprite: Markers/atmos.rsi
+          shader: unshaded # }
+          state: oxygen
+    - type: AtmosFixMarker
+      mode: 2
+
+- type: entity
+  name: Atmos Fix Nitrogen Marker
+  id: AtmosFixNitrogenMarker
+  description: "Nitrogen @ gas miner pressure, T20C"
+  parent: MarkerBase
+  components:
+    - type: Sprite
+      layers:
+        - sprite: Markers/atmos.rsi # {
+          state: base
+          shader: unshaded
+        - sprite: Markers/atmos.rsi
+          shader: unshaded # }
+          state: nitrogen
+    - type: AtmosFixMarker
+      mode: 3
+
+- type: entity
+  name: Atmos Fix Plasma Marker
+  id: AtmosFixPlasmaMarker
+  description: "Plasma @ gas miner pressure, T20C"
+  parent: MarkerBase
+  components:
+    - type: Sprite
+      layers:
+        - sprite: Markers/atmos.rsi # {
+          state: base
+          shader: unshaded
+        - sprite: Markers/atmos.rsi
+          shader: unshaded # }
+          state: plasma
+    - type: AtmosFixMarker
+      mode: 4
+
+- type: entity
+  name: Atmos Fix Instant Plasmafire Marker
+  id: AtmosFixInstantPlasmaFireMarker
+  description: "INSTANT PLASMAFIRE"
+  parent: MarkerBase
+  components:
+    - type: Sprite
+      layers:
+        - sprite: Markers/atmos.rsi # {
+          state: base-hot
+          shader: unshaded
+        - sprite: Markers/atmos.rsi
+          shader: unshaded # }
+          state: fire
+    - type: AtmosFixMarker
+      mode: 5
+
+- type: entity
+  name: Atmos Fix Freezer Marker
+  id: AtmosFixFreezerMarker
+  description: "Change air temp to 235K, for freezer with a big of wiggle room to get set up."
+  parent: MarkerBase
+  components:
+    - type: Sprite
+      layers:
+        - sprite: Markers/atmos.rsi # {
+          state: base
+          shader: unshaded
+        - sprite: Markers/atmos.rsi
+          shader: unshaded # }
+          state: freeze
+    - type: AtmosFixMarker
+      mode: 6
+
+- type: entity
+  parent: AtmosFixNitrogenMarker
+  id: AtmosFixVoxMarker
+  suffix: Vox Atmosphere
+  description: "Nitrogen @ 101 kPa, 20C"
+  components:
+  - type: AtmosFixMarker
+    mode: 7
+
+- type: entity
+  id: AtmosFixCoolant
+  suffix: Coolant
+  description: "Supermatter coolant, equivalent to a liquid nitrogen canister"
+  parent: MarkerBase
+  components:
+    - type: Sprite
+      layers:
+        - sprite: Markers/atmos.rsi # {
+          state: base
+          shader: unshaded
+        - sprite: Markers/atmos.rsi
+          shader: unshaded # }
+          state: nitrogen
+    - type: AtmosFixMarker
+      gasMix:
+        volume: 2500
+        moles:
+          - 0 # oxygen
+          - 18710.71051 # nitrogen
+        temperature: 72

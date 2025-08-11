@@ -1,0 +1,27 @@
+# SPDX-FileCopyrightText: 2024 Piras314 <p1r4s@proton.me>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: entity
+  id: CrateFunATV
+  parent: CrateLivestock
+  name: ATV crate
+  description: An Absolutely Taxable Vehicle to help cargo with hauling.
+  components:
+  - type: StorageFill
+    contents:
+      - id: VehicleATV
+      - id: VehicleKeyATV
+
+- type: entity
+  id: CrateFunSyndicateSegway
+  parent: CrateLivestock
+  name: Syndicate segway crate
+  description: A crate containing a two-wheeler that will help you escape from the security officers. Or not.
+  components:
+    - type: StorageFill
+      contents:
+        - id: VehicleSyndicateSegway
+        - id: VehicleKeySyndicateSegway
+

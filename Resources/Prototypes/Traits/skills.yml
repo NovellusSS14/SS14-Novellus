@@ -1,0 +1,463 @@
+# SPDX-FileCopyrightText: 2024 Angelo Fallaria
+# SPDX-FileCopyrightText: 2024 DEATHB4DEFEAT
+# SPDX-FileCopyrightText: 2024 Fansana
+# SPDX-FileCopyrightText: 2024 FoxxoTrystan
+# SPDX-FileCopyrightText: 2024 Memeji
+# SPDX-FileCopyrightText: 2024 Mnemotechnican
+# SPDX-FileCopyrightText: 2024 ShatteredSwords
+# SPDX-FileCopyrightText: 2024 Timemaster99
+# SPDX-FileCopyrightText: 2024 WarMechanic
+# SPDX-FileCopyrightText: 2024 foxfoxthepirate
+# SPDX-FileCopyrightText: 2025 GNUtopia
+# SPDX-FileCopyrightText: 2025 Jakumba
+# SPDX-FileCopyrightText: 2025 Rosycup
+# SPDX-FileCopyrightText: 2025 SX-7
+# SPDX-FileCopyrightText: 2025 Skubman
+# SPDX-FileCopyrightText: 2025 Tabitha
+# SPDX-FileCopyrightText: 2025 VMSolidus
+# SPDX-FileCopyrightText: 2025 Will Oliver
+# SPDX-FileCopyrightText: 2025 portfiend
+# SPDX-FileCopyrightText: 2025 sleepyyapril
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: trait
+  id: CPRTraining
+  category: Mental
+  points: -4
+  functions:
+    - !type:TraitAddComponent
+      components:
+        - type: CPRTraining
+  requirements:
+    - !type:CharacterJobRequirement
+      inverted: true
+      jobs:
+        - StationAi
+        - Borg
+        - MedicalBorg
+        - MedicalDoctor
+        - Chemist
+        - MedicalIntern
+        - Paramedic
+        - ChiefMedicalOfficer
+        - Brigmedic
+        - SeniorPhysician
+
+- type: trait
+  id: SelfAware
+  category: Mental
+  points: -4
+  requirements:
+    - !type:CharacterJobRequirement
+      inverted: true
+      jobs:
+        - StationAi
+        - Borg
+        - MedicalBorg
+  functions:
+    - !type:TraitAddComponent
+      components:
+        - type: SelfAware
+          analyzableTypes:
+            - Blunt
+            - Slash
+            - Piercing
+            - Heat
+            - Shock
+            - Cold
+            - Caustic
+          detectableGroups:
+            - Airloss
+            - Toxin
+
+- type: trait
+  id: HeavyweightDrunk
+  category: TraitsPhysicalBiological
+  points: -1
+  requirements:
+    - !type:CharacterJobRequirement
+      inverted: true
+      jobs:
+        - StationAi
+        - Borg
+        - MedicalBorg
+    - !type:CharacterTraitRequirement
+      inverted: true
+      traits:
+        - LightweightDrunk
+        - LiquorLifeline
+    - !type:CharacterSpeciesRequirement
+      inverted: true
+      species:
+        - Dwarf
+        - IPC
+  functions:
+    - !type:TraitReplaceComponent
+      components:
+        - type: LightweightDrunk
+          boozeStrengthMultiplier: 0.5
+
+- type: trait
+  id: LiquorLifeline
+  category: TraitsPhysicalBiological
+  points: -4
+  requirements:
+    - !type:CharacterJobRequirement
+      inverted: true
+      jobs:
+        - StationAi
+        - Borg
+        - MedicalBorg
+    - !type:CharacterTraitRequirement
+      inverted: true
+      traits:
+        - LightweightDrunk
+        - HeavyweightDrunk
+    - !type:CharacterSpeciesRequirement
+      inverted: true
+      species:
+        - Dwarf
+        - IPC
+  functions:
+    - !type:TraitReplaceComponent
+      components:
+        - type: LiquorLifeline
+        - type: LightweightDrunk
+          boozeStrengthMultiplier: 0.5
+
+- type: trait
+  id: Thieving
+  category: TraitsPhysicalFeats
+  points: -8
+  functions:
+    - !type:TraitReplaceComponent
+      components:
+        - type: Thieving
+          ignoreStripHidden: true
+          stealth: Subtle
+          stripTimeReduction: 0
+          stripTimeMultiplier: 0.667
+  requirements:
+    - !type:CharacterJobRequirement
+      inverted: true
+      jobs:
+        - StationAi
+        - Borg
+        - MedicalBorg
+    - !type:CharacterSpeciesRequirement
+      inverted: true
+      species:
+        - Felinid
+
+- type: trait
+  id: Voracious
+  category: TraitsPhysicalFeats
+  points: -2
+  functions:
+    - !type:TraitReplaceComponent
+      components:
+        - type: ConsumeDelayModifier
+          foodDelayMultiplier: 0.5
+          drinkDelayMultiplier: 0.5
+  requirements:
+    - !type:CharacterJobRequirement
+      inverted: true
+      jobs:
+        - StationAi
+        - Borg
+        - MedicalBorg
+    - !type:CharacterSpeciesRequirement
+      inverted: true
+      species:
+        - Vulpkanin
+        - IPC
+        - Rodentia
+
+- type: trait
+  id: ParkourTraining
+  category: TraitsPhysicalFeats
+  points: -5
+  requirements:
+    - !type:CharacterJobRequirement
+      inverted: true
+      jobs:
+        - StationAi
+        - Borg
+        - MedicalBorg
+    - !type:CharacterTraitRequirement
+      inverted: true
+      traits:
+        - Sluggish
+        - SnailPaced
+        - BadKnees
+        - WheelchairBound
+    - !type:CharacterSpeciesRequirement
+      inverted: true
+      species:
+        - Diona
+  functions:
+    - !type:TraitReplaceComponent
+      components:
+        - type: ClimbDelayModifier
+          climbDelayMultiplier: 0.5
+        - type: SlippableModifier
+          paralyzeTimeMultiplier: 0.7
+        - type: SpeedModifiedByContactModifier
+          walkModifierEffectiveness: 0.5
+          sprintModifierEffectiveness: 0.5
+
+- type: trait
+  id: LightStep
+  category: Auditory
+  points: -2
+  functions:
+    - !type:TraitReplaceComponent
+      components:
+        - type: FootstepVolumeModifier
+          sprintVolumeModifier: -10
+          walkVolumeModifier: -10
+  requirements:
+    - !type:CharacterJobRequirement
+      inverted: true
+      jobs:
+        - StationAi
+        - Borg
+        - MedicalBorg
+    - !type:CharacterSpeciesRequirement
+      inverted: true
+      species:
+        - Felinid
+        - Tajaran
+
+- type: trait
+  id: Singer
+  category: Auditory
+  points: 0
+  requirements:
+    - !type:CharacterJobRequirement
+      inverted: true
+      jobs:
+        - StationAi
+        - Borg
+        - MedicalBorg
+    - !type:CharacterSpeciesRequirement
+      inverted: true
+      species:
+        - Harpy
+    - !type:CharacterItemGroupRequirement
+      group: TraitsMuted
+  functions:
+    - !type:TraitAddComponent
+      components:
+        - type: Singer
+          proto: NormalSinger
+
+- type: trait
+  id: LyreBird
+  category: Auditory
+  points: -10
+  requirements:
+    - !type:CharacterJobRequirement
+      inverted: true
+      jobs:
+        - StationAi
+        - Borg
+        - MedicalBorg
+    - !type:CharacterSpeciesRequirement
+      species:
+        - Harpy
+    - !type:CharacterItemGroupRequirement
+      group: TraitsMuted
+  functions:
+    - !type:TraitReplaceComponent
+      components:
+        - type: Singer
+          proto: HarpySingerAll
+
+- type: trait
+  id: LatentPsychic
+  category: Mental
+  points: -4
+  functions:
+    - !type:TraitAddComponent
+      components:
+        - type: Psionic
+  requirements:
+    - !type:CharacterJobRequirement
+      inverted: true
+      jobs:
+        - StationAi
+        - Borg
+        - MedicalBorg
+        - ResearchDirector
+        - ForensicMantis
+        - Chaplain
+        - Librarian
+    - !type:CharacterLogicOrRequirement
+      requirements:
+        - !type:CharacterSpeciesRequirement
+          inverted: true
+          species:
+            - IPC
+        - !type:CharacterTraitRequirement
+          traits:
+            - AnomalousPositronics
+    - !type:CharacterLogicOrRequirement
+      requirements:
+        - !type:CharacterSpeciesRequirement
+          inverted: true
+          species:
+            - Shadowkin
+    - !type:CharacterTraitRequirement
+      inverted: true
+      traits:
+        - PsionicInsulation
+
+- type: trait
+  id: PsionicInsulation
+  category: Mental
+  points: -10 #Buy a significant disability to get this.
+  functions:
+    - !type:TraitAddComponent
+      components:
+        - type: PsionicInsulation
+    - !type:TraitPushDescription
+      descriptionExtensions:
+        - description: examine-psionic-insulation-message
+          fontSize: 12
+          requireDetailRange: true
+  requirements:
+    - !type:CharacterJobRequirement
+      inverted: true
+      jobs:
+        - StationAi
+        - Borg
+        - MedicalBorg
+        - ResearchDirector
+        - ForensicMantis
+        - Chaplain
+        - Librarian
+    - !type:CharacterLogicOrRequirement
+      requirements:
+        - !type:CharacterSpeciesRequirement
+          inverted: true
+          species:
+            - IPC
+        - !type:CharacterTraitRequirement
+          traits:
+            - AnomalousPositronics
+    - !type:CharacterTraitRequirement
+      inverted: true
+      traits:
+        - LatentPsychic
+    - !type:CharacterLogicOrRequirement
+      requirements:
+        - !type:CharacterSpeciesRequirement
+          inverted: true
+          species:
+            - Shadowkin
+
+- type: trait
+  id: NaturalTelepath
+  category: Mental
+  points: -2
+  functions:
+    - !type:TraitAddPsionics
+      psionicPowers:
+        - TelepathyPower
+  requirements:
+    - !type:CharacterJobRequirement
+      inverted: true
+      jobs:
+        - StationAi
+        - Borg
+        - MedicalBorg
+        - ResearchDirector
+        - ForensicMantis
+    - !type:CharacterLogicOrRequirement
+      requirements:
+        - !type:CharacterTraitRequirement
+          traits:
+            - LatentPsychic
+        - !type:CharacterJobRequirement
+          jobs:
+            - Chaplain
+            - Librarian
+    - !type:CharacterLogicOrRequirement
+      requirements:
+        - !type:CharacterSpeciesRequirement
+          inverted: true
+          species:
+            - IPC
+        - !type:CharacterTraitRequirement
+          traits:
+            - AnomalousPositronics
+
+- type: trait
+  id: TrapAvoider
+  category: TraitsPhysicalFeats
+  points: -3
+  functions:
+    - !type:TraitAddComponent
+      components:
+        - type: StepTriggerImmune
+          whitelist:
+            types:
+              - Shard
+              - Landmine
+              - Mousetrap
+              - SlipEntity
+  requirements:
+    - !type:CharacterJobRequirement
+      inverted: true
+      jobs:
+        - StationAi
+        - Borg
+        - MedicalBorg
+    - !type:CharacterSpeciesRequirement
+      inverted: true
+      species:
+        - Felinid
+        - Tajaran
+        - Harpy
+        - Rodentia # Floof - Rodentia
+
+- type: trait
+  id: AnomalousPositronics
+  category: Mental
+  points: -4
+  functions:
+    - !type:TraitRemoveComponent
+      components:
+        - type: PsionicInsulation
+  requirements:
+    - !type:CharacterJobRequirement
+      inverted: true
+      jobs:
+        - StationAi
+        - Borg
+        - MedicalBorg
+    - !type:CharacterSpeciesRequirement
+      species:
+        - IPC
+
+- type: trait
+  id: AnimalFriend
+  category: Mental
+  points: -4
+  functions:
+    - !type:TraitModifyFactions
+      addFactions:
+        - AnimalFriend
+  requirements:
+    - !type:CharacterJobRequirement
+      inverted: true
+      jobs:
+        - StationAi
+        - Borg
+        - MedicalBorg
+    - !type:CharacterSpeciesRequirement
+      inverted: true
+      species:
+        - Ovinia

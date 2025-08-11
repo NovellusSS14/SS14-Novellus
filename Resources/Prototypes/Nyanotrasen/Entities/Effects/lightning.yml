@@ -1,0 +1,16 @@
+# SPDX-FileCopyrightText: 2023 Colin-Tel <113523727+Colin-Tel@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 sleepyyapril <flyingkarii@gmail.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: entity
+  parent: BaseLightning
+  id: LightningNoospheric
+  name: noospheric lightning
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Electrified
+    enabled: false
+  - type: Lightning
+    canArc: false

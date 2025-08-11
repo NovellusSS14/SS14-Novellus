@@ -1,0 +1,275 @@
+# SPDX-FileCopyrightText: 2023 Boaz1111
+# SPDX-FileCopyrightText: 2023 HerCoyote23
+# SPDX-FileCopyrightText: 2023 Kevin Zheng
+# SPDX-FileCopyrightText: 2023 Nairod
+# SPDX-FileCopyrightText: 2023 Nemanja
+# SPDX-FileCopyrightText: 2023 Nim
+# SPDX-FileCopyrightText: 2023 RiceMar1244
+# SPDX-FileCopyrightText: 2023 Stanislav4ix
+# SPDX-FileCopyrightText: 2023 T-Stalker
+# SPDX-FileCopyrightText: 2023 Vordenburg
+# SPDX-FileCopyrightText: 2023 deltanedas
+# SPDX-FileCopyrightText: 2024 Alzore
+# SPDX-FileCopyrightText: 2024 DEATHB4DEFEAT
+# SPDX-FileCopyrightText: 2024 Debug
+# SPDX-FileCopyrightText: 2024 Ed
+# SPDX-FileCopyrightText: 2024 Fluffiest Floofers
+# SPDX-FileCopyrightText: 2024 Ghost581
+# SPDX-FileCopyrightText: 2024 John Space
+# SPDX-FileCopyrightText: 2024 gluesniffler
+# SPDX-FileCopyrightText: 2024 takemysoult
+# SPDX-FileCopyrightText: 2025 Blu
+# SPDX-FileCopyrightText: 2025 Jakumba
+# SPDX-FileCopyrightText: 2025 MajorMoth
+# SPDX-FileCopyrightText: 2025 Rosycup
+# SPDX-FileCopyrightText: 2025 Solaris
+# SPDX-FileCopyrightText: 2025 Solstice
+# SPDX-FileCopyrightText: 2025 Timfa
+# SPDX-FileCopyrightText: 2025 VMSolidus
+# SPDX-FileCopyrightText: 2025 sleepyyapril
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+# Tier 1
+
+# STOP. STOP ADDING NEW WEAPONS AS A SINGLE RESEARCH ENTRY. ADD NEW WEAPONS HERE, NOT ON THEIR OWN.
+# DO NOT ADD ANOTHER TECH
+- type: technology
+  id: BasicWeapons
+  name: research-technology-basic-weapons
+  icon:
+    sprite: Objects/Weapons/Guns/Battery/laser_gun.rsi
+    state: icon
+  discipline: Arsenal
+  tier: 1
+  cost: 10000
+  recipeUnlocks:
+  - WeaponProtoKineticAccelerator
+  - ShuttleGunKineticCircuitboard
+  - WeaponLaserCarbine
+  - WeaponMechCombatFiredartLaser # Goobstation
+  - WeaponEnergyGun
+  - WeaponEnergyGunMini
+  - WeaponLaserSvalinn
+  - WeaponEnergyGunPistol
+  - WeaponDisablerSMG
+  - Truncheon
+  - WeaponDisabler
+  - WeaponCivilianDisabler
+  - WeaponMechCombatDisabler # Goobstation
+  - WeaponMechCombatFlashbangLauncher
+  #- WeaponPistolMk58 #todo: Add a bunch of basic ballistic guns to the list and make lathe recipes for them.
+  - MechEquipmentKineticAccelerator # Goobstation
+  - WeaponPistolMk58
+  - CrossbowModern
+  # These are roundstart but not replenishable for salvage
+
+- type: technology
+  id: DraconicMunitions
+  name: research-technology-draconic-munitions
+  icon:
+    sprite: Objects/Weapons/Guns/Ammunition/Boxes/pistol.rsi
+    state: incendiarydisplay
+  discipline: Arsenal
+  tier: 1
+  cost: 10000
+  recipeUnlocks:
+  - BoxShotgunIncendiary
+  - MagazineRifleIncendiary
+  - MagazinePistolIncendiary
+  - MagazinePistolSubMachineGunIncendiary
+  - MagazineMagnumIncendiary
+  - MagazineLightRifleIncendiary
+  - MagazineCaselessRifleIncendiary
+  - SpeedLoaderMagnumIncendiary
+  - SpeedLoaderRifleHeavyIncendiary
+  - MagazineShotgunIncendiary
+  - MagazineBoxShotgunIncendiaryHighCaliber # Goobstation
+  - MagazineBoxPistolIncendiary
+  - MagazineBoxMagnumIncendiary
+  - MagazineBoxLightRifleIncendiary
+  - MagazineBoxRifleIncendiary
+  - MagazineBoxCaselessRifleIncendiary
+  - CartridgeSpecialIncendiary
+  - MagazineBoxSpecialIncendiary
+  - CrossbowBoltIncendiary
+  - CartridgeLightRifleIncendiary
+  - CartridgeMagnumIncendiary
+  - CartridgePistolIncendiary
+  - CartridgeRifleIncendiary
+
+- type: technology
+  id: UraniumMunitions
+  name: research-technology-uranium-munitions
+  icon:
+    sprite: Objects/Materials/Sheets/other.rsi
+    state: uranium
+  discipline: Arsenal
+  tier: 1
+  cost: 7500
+  recipeUnlocks:
+  - MagazineRifleUranium
+  - MagazinePistolUranium
+  - MagazinePistolSubMachineGunUranium
+  - MagazineMagnumUranium
+  - MagazineLightRifleUranium
+  - MagazineCaselessRifleUranium
+  - SpeedLoaderMagnumUranium
+  - SpeedLoaderRifleHeavyUranium # Frontier
+  - MagazineBoxPistolUranium
+  - MagazineBoxMagnumUranium
+  - MagazineBoxLightRifleUranium
+  - MagazineBoxRifleUranium
+  - MagazineBoxCaselessRifleUranium
+  - BoxShotgunUranium
+  - CartridgeSpecialUranium
+  - MagazineBoxSpecialUranium
+  - CrossbowBoltUranium
+  - CartridgeLightRifleUranium
+  - CartridgeMagnumUranium
+  - CartridgePistolUranium
+  - CartridgeRifleUranium
+  - MagazineBoxShotgunUraniumHighCaliber # Goobstation
+
+- type: technology
+  id: AdvancedTacsuits
+  name: research-technology-advanced-tacsuits
+  icon:
+    sprite: _DV/Clothing/OuterClothing/Hardsuits/Combat/standard.rsi
+    state: icon
+  discipline: Arsenal
+  tier: 2
+  cost: 15000
+  recipeUnlocks:
+  - ClothingOuterHardsuitCombatStandard
+  - ClothingOuterHardsuitCombatMedical
+  - ClothingOuterHardsuitCombatRiot
+
+- type: technology
+  id: ExplosiveTechnology
+  name: research-technology-explosive-technology
+  icon:
+    sprite: Objects/Devices/payload.rsi
+    state: payload-explosive-armed
+  discipline: Arsenal
+  tier: 2
+  cost: 10000
+  recipeUnlocks:
+  - SignallerAdvanced
+  - SignalTrigger
+  - VoiceTrigger
+  - TimerTrigger
+  - FlashPayload
+  - ExplosivePayload
+  - ChemicalPayload
+  # TODO: Add "Explosive Ammunition" to this tech to make it waaaay more interesting.
+
+# - type: technology
+#   id: ShrapnelMunitions
+#   name: research-technology-shrapnel-munitions
+#   icon:
+#     sprite: Objects/Weapons/Guns/Ammunition/Casings/shotgun_shell.rsi
+#     state: base
+#   discipline: Arsenal
+#   tier: 2
+#   cost: 7500
+#   recipeUnlocks:
+#   - MagazineRifleShrapnel
+#   - MagazinePistolShrapnel
+#   - MagazinePistolSubMachineGunShrapnel
+#   - MagazineMagnumShrapnel
+#   - MagazineLightRifleShrapnel
+#   - MagazineCaselessRifleShrapnel
+#   - MagazineBoxPistolShrapnel
+#   - MagazineBoxMagnumShrapnel
+#   - MagazineBoxLightRifleShrapnel
+#   - MagazineBoxRifleShrapnel
+#   - MagazineBoxCaselessRifleShrapnel
+
+- type: technology
+  id: AdvancedWeapons
+  name: research-technology-advanced-weapons
+  icon:
+    sprite: Objects/Weapons/Guns/Battery/laser_cannon.rsi
+    state: icon
+  discipline: Arsenal
+  tier: 2
+  cost: 15000
+  recipeUnlocks:
+  - PowerCageRechargerCircuitboard
+  - PowerCageSmall
+  - PowerCageMedium
+  - MagazineGrenadeEmpty
+  - GrenadeFlash
+  - GrenadeBlast
+  - ShuttleGunSvalinnMachineGunCircuitboard
+  - ShuttleGunPerforatorCircuitboard
+  - ShuttleGunFriendshipCircuitboard
+  - WeaponXrayCannon
+  - WeaponGunLaserCarbineAutomatic
+  - WeaponLaserCannon
+  - WeaponMechCombatSolarisLaser # Goobstation
+  - WeaponPistolN1984
+  - WeaponPistolViper
+  - Terminus
+  technologyPrerequisites:
+  - BasicWeapons
+
+# Tier 3
+
+- type: technology
+  id: PrototypeTacsuits
+  name: research-technology-prototype-tacsuits
+  icon:
+    sprite: Nyanotrasen/Clothing/OuterClothing/ReverseEngineering/syndicate.rsi
+    state: icon
+  discipline: Arsenal
+  tier: 3
+  cost: 25000
+  recipeUnlocks:
+  - ClothingOuterHardsuitCombatAdvanced
+  - ClothingOuterHardsuitShanlinUnpainted
+  - ClothingOuterHardsuitShiweiUnpainted
+  - ClothingOuterHardsuitJuggernautReverseEngineered
+  technologyPrerequisites:
+  - AdvancedTacsuits
+  softCapContribution: 1.5
+
+- type: technology
+  id: LaserTurrets
+  name: research-technology-laser-sentry-turrets
+  icon:
+    sprite: Objects/Weapons/Guns/Turrets/sentry_turret.rsi
+    state: base
+  discipline: Arsenal
+  tier: 3
+  cost: 20000
+  recipeUnlocks:
+  - WeaponEnergyTurretAIMachineCircuitboard
+  - WeaponEnergyTurretStationMachineCircuitboard
+  - WeaponEnergyTurretAIControlPanelElectronics
+  - WeaponEnergyTurretStationControlPanelElectronics
+  technologyPrerequisites:
+  - AdvancedWeapons
+  softCapContribution: 1.5
+
+- type: technology
+  id: PrototypeWeapons
+  name: research-technology-prototype-weapons
+  icon:
+    sprite: Objects/Weapons/Guns/Battery/advancedlasergun.rsi
+    state: icon
+  discipline: Arsenal
+  tier: 3
+  cost: 20000
+  recipeUnlocks:
+  - WeaponAdvancedLaser
+  - PortableRecharger
+  - GrenadeEMP
+  - PowerCageHigh
+  - ShuttleGunDusterCircuitboard
+  - WeaponMechCombatImmolationGun # Goobstation
+  - EnergyCutlass
+  - WeaponSubMachineGunFPA90
+  - WeaponSubMachineGunBRDIR25
+  softCapContribution: 1.5

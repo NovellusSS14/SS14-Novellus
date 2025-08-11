@@ -1,0 +1,174 @@
+# SPDX-FileCopyrightText: 2024 VMSolidus
+# SPDX-FileCopyrightText: 2025 Blitz
+# SPDX-FileCopyrightText: 2025 BlitzTheSquishy
+# SPDX-FileCopyrightText: 2025 Skubman
+# SPDX-FileCopyrightText: 2025 sleepyyapril
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+# Courier
+# Backpacks
+
+# Belt
+- type: loadout
+  id: LoadoutCourierBag
+  category: JobsLogisticsCourier
+  cost: 0
+  exclusive: true
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutCourierBelt
+    - !type:CharacterJobRequirement
+      jobs:
+        - MailCarrier
+  items:
+    - CourierBag
+
+- type: loadout
+  id: LoadoutCourierBagMail
+  category: JobsLogisticsCourier
+  cost: 0
+  exclusive: true
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutCourierBelt
+    - !type:CharacterJobRequirement
+      jobs:
+        - MailCarrier
+  items:
+    - MailBag
+
+# Ears
+
+# Equipment
+
+# Eyes
+
+# Gloves
+
+# Head
+- type: loadout
+  id: LoadoutCourierHeadMail
+  category: JobsLogisticsCourier
+  cost: 0
+  exclusive: true
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutCourierHead
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - Logistics
+  items:
+    - ClothingHeadMailCarrier
+
+- type: loadout
+  id: LoadoutCourierHeadCourier
+  category: JobsLogisticsCourier
+  cost: 0
+  exclusive: true
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutCourierHead
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - Logistics
+  items:
+    - ClothingHeadCourier
+
+# Id
+
+# Neck
+
+# Mask
+
+# Outer
+- type: loadout
+  id: LoadoutCourierOuterMail
+  category: JobsLogisticsCourier
+  cost: 0
+  exclusive: true
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutCourierOuter
+    - !type:CharacterJobRequirement
+      jobs:
+        - MailCarrier
+  items:
+    - ClothingOuterWinterCoatMail
+
+# Shoes
+
+# Uniforms
+- type: loadout
+  id: LoadoutCourierUniformSuit
+  category: JobsLogisticsCourier
+  cost: 0
+  exclusive: true
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutCourierUniforms
+    - !type:CharacterJobRequirement
+      jobs:
+        - MailCarrier
+  items:
+    - ClothingUniformCourier
+
+- type: loadout
+  id: LoadoutCourierUniformSkirt
+  category: JobsLogisticsCourier
+  cost: 0
+  exclusive: true
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutCourierUniforms
+    - !type:CharacterJobRequirement
+      jobs:
+        - MailCarrier
+  items:
+    - ClothingUniformSkirtCourier
+
+- type: loadout
+  id: LoadoutCourierUniformMailSuit
+  category: JobsLogisticsCourier
+  cost: 0
+  exclusive: true
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutCourierUniforms
+    - !type:CharacterJobRequirement
+      jobs:
+        - MailCarrier
+  items:
+    - ClothingUniformMailCarrier
+
+- type: loadout
+  id: LoadoutCourierUniformMailSkirt
+  category: JobsLogisticsCourier
+  cost: 0
+  exclusive: true
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutCourierUniforms
+    - !type:CharacterJobRequirement
+      jobs:
+        - MailCarrier
+  items:
+    - ClothingUniformSkirtMailCarrier
+
+- type: loadout
+  id: LoadoutCourierUniformEnvirosuitMailCarrier
+  category: JobsLogisticsCourier
+  cost: 0
+  exclusive: true
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutCourierUniforms
+    - !type:CharacterJobRequirement
+      jobs:
+        - MailCarrier
+    - !type:CharacterSpeciesRequirement
+      species:
+        - Plasmaman
+  items:
+    - ClothingUniformEnvirosuitMailCarrier
+    - ClothingHeadEnvirohelmMailCarrier

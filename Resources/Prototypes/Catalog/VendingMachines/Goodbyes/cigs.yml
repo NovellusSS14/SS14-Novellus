@@ -1,0 +1,12 @@
+# SPDX-FileCopyrightText: 2024 Tayrtahn <tayrtahn@gmail.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: messagePack
+  id: CigaretteMachineGoodbyes
+  messages:
+  - vending-machine-thanks
+  - thankyou-cigs-1
+  - thankyou-cigs-2
+  - thankyou-cigs-3

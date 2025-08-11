@@ -1,0 +1,48 @@
+# SPDX-FileCopyrightText: 2023 deltanedas <39013340+deltanedas@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2023 deltanedas <@deltanedas:kde.org>
+# SPDX-FileCopyrightText: 2024 lzk <124214523+lzk228@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: constructionGraph
+  id: LogicGate
+  start: start
+  graph:
+  - node: start
+    edges:
+    - to: logic_gate
+      steps:
+      - material: Steel
+        amount: 3
+        doAfter: 1
+      - material: Cable
+        amount: 2
+        doAfter: 1
+    - to: edge_detector
+      steps:
+      - material: Steel
+        amount: 3
+        doAfter: 1
+      - material: Cable
+        amount: 2
+        doAfter: 1
+    - to: power_sensor
+      steps:
+      - material: Steel
+        amount: 3
+        doAfter: 1
+      - material: Cable
+        amount: 2
+        doAfter: 1
+      - tag: Multitool
+        icon:
+          sprite: Objects/Tools/multitool.rsi
+          state: icon
+        name: a multitool
+  - node: logic_gate
+    entity: LogicGateOr
+  - node: edge_detector
+    entity: EdgeDetector
+  - node: power_sensor
+    entity: PowerSensor

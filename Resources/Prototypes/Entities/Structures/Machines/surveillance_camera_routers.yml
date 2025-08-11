@@ -1,0 +1,156 @@
+# SPDX-FileCopyrightText: 2022 Flipp Syder <76629141+vulppine@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2022 Leon Friedrich <60421075+ElectroJr@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2022 metalgearsloth <31366439+metalgearsloth@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2023 Fluffiest Floofers <thebluewulf@gmail.com>
+# SPDX-FileCopyrightText: 2024 DEATHB4DEFEAT <77995199+DEATHB4DEFEAT@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 mart <martgitomen@gmail.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: entity
+  abstract: true
+  parent: [ BaseMachinePowered, ConstructibleMachine ]
+  id: SurveillanceCameraRouterBase
+  name: camera router
+  description: A surveillance camera router. It routes. Perhaps.
+  components:
+    - type: DeviceNetwork
+      deviceNetId: Wireless
+      receiveFrequencyId: SurveillanceCamera
+      transmitFrequencyId: SurveillanceCamera
+    - type: WirelessNetworkConnection
+      range: 2000
+    - type: DeviceNetworkRequiresPower
+    - type: UserInterface
+      interfaces:
+        enum.SurveillanceCameraSetupUiKey.Router:
+          type: SurveillanceCameraSetupBoundUi
+    - type: Machine
+      board: SurveillanceCameraRouterCircuitboard
+    - type: Sprite
+      sprite: Structures/Machines/server.rsi
+      snapCardinals: true
+      layers:
+        - state: server
+
+- type: entity
+  parent: SurveillanceCameraRouterBase
+  id: SurveillanceCameraRouterConstructed
+  suffix: Constructed
+  components:
+    - type: SurveillanceCameraRouter
+      setupAvailableNetworks:
+        - SurveillanceCameraEngineering
+        - SurveillanceCameraSecurity
+        - SurveillanceCameraService
+        - SurveillanceCameraSupply
+        - SurveillanceCameraScience
+        - SurveillanceCameraGeneral
+        - SurveillanceCameraMedical
+        - SurveillanceCameraCommand
+
+- type: entity
+  parent: SurveillanceCameraRouterBase
+  id: SurveillanceCameraRouterEngineering
+  suffix: Engineering
+  components:
+    - type: SurveillanceCameraRouter
+      subnetFrequency: SurveillanceCameraEngineering
+
+- type: entity
+  parent: SurveillanceCameraRouterBase
+  id: SurveillanceCameraRouterSecurity
+  suffix: Security
+  components:
+    - type: SurveillanceCameraRouter
+      subnetFrequency: SurveillanceCameraSecurity
+
+- type: entity
+  parent: SurveillanceCameraRouterBase
+  id: SurveillanceCameraRouterScience
+  suffix: Epistemics # DeltaV - Epistemics Department replacing Science
+  components:
+    - type: SurveillanceCameraRouter
+      subnetFrequency: SurveillanceCameraScience
+
+- type: entity
+  parent: SurveillanceCameraRouterBase
+  id: SurveillanceCameraRouterSupply
+  suffix: Supply
+  components:
+    - type: SurveillanceCameraRouter
+      subnetFrequency: SurveillanceCameraSupply
+
+- type: entity
+  parent: SurveillanceCameraRouterBase
+  id: SurveillanceCameraRouterCommand
+  suffix: Command
+  components:
+    - type: SurveillanceCameraRouter
+      subnetFrequency: SurveillanceCameraCommand
+
+- type: entity
+  parent: SurveillanceCameraRouterBase
+  id: SurveillanceCameraRouterService
+  suffix: Service
+  components:
+    - type: SurveillanceCameraRouter
+      subnetFrequency: SurveillanceCameraService
+
+- type: entity
+  parent: SurveillanceCameraRouterBase
+  id: SurveillanceCameraRouterMedical
+  suffix: Medical
+  components:
+    - type: SurveillanceCameraRouter
+      subnetFrequency: SurveillanceCameraMedical
+
+- type: entity
+  parent: SurveillanceCameraRouterBase
+  id: SurveillanceCameraRouterGeneral
+  suffix: General
+  components:
+    - type: SurveillanceCameraRouter
+      subnetFrequency: SurveillanceCameraGeneral
+
+- type: entity
+  parent: [ BaseMachinePowered, ConstructibleMachine ]
+  id: SurveillanceCameraWirelessRouterBase
+  name: wireless camera router
+  description: A wireless surveillance camera router. It routes. Perhaps.
+  components:
+    - type: DeviceNetwork
+      deviceNetId: Wireless
+      receiveFrequencyId: SurveillanceCameraEntertainment
+      transmitFrequencyId: SurveillanceCameraEntertainment
+    - type: WirelessNetworkConnection
+      range: 2000
+    - type: DeviceNetworkRequiresPower
+    - type: UserInterface
+      interfaces:
+        enum.SurveillanceCameraSetupUiKey.Router:
+          type: SurveillanceCameraSetupBoundUi
+    - type: Machine
+      board: SurveillanceCameraWirelessRouterCircuitboard
+    - type: Sprite
+      sprite: Structures/Machines/server.rsi
+      layers:
+        - state: server
+
+- type: entity
+  parent: SurveillanceCameraWirelessRouterBase
+  id: SurveillanceCameraWirelessRouterConstructed
+  suffix: Constructed
+  components:
+    - type: SurveillanceCameraRouter
+      setupAvailableNetworks:
+        - SurveillanceCameraEntertainment
+
+- type: entity
+  parent: SurveillanceCameraWirelessRouterBase
+  id: SurveillanceCameraWirelessRouterEntertainment
+  suffix: Entertainment
+  components:
+    - type: SurveillanceCameraRouter
+      subnetFrequency: SurveillanceCameraEntertainment

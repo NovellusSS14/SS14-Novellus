@@ -1,0 +1,17 @@
+# SPDX-FileCopyrightText: 2025 Eris <eris@erisws.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: technology
+  id: ModularComputing
+  name: research-technology-modular-computing
+  icon:
+    sprite: Objects/Misc/cd.rsi
+    state: icon
+  discipline: Experimental
+  tier: 2
+  cost: 15000
+  recipeUnlocks:
+  - BaseComputerModularCircuitBoard
+  - DiskBurnerMachineCircuitboard

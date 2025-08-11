@@ -1,0 +1,218 @@
+# SPDX-FileCopyrightText: 2023 Velcroboy
+# SPDX-FileCopyrightText: 2025 Rosycup
+# SPDX-FileCopyrightText: 2025 SubspaceEmber
+# SPDX-FileCopyrightText: 2025 sleepyyapril
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: entity
+  parent: ClothingShoesBaseWinterBoots
+  id: ClothingShoesBootsWinterAtmos
+  name: atmospherics winter boots
+  components:
+  - type: Sprite
+    sprite: _DV/Clothing/Shoes/Boots/winterbootsatmos.rsi
+  - type: Clothing
+    sprite: _DV/Clothing/Shoes/Boots/winterbootsatmos.rsi
+
+- type: entity
+  parent: ClothingShoesBaseWinterBoots
+  id: ClothingShoesBootsWinterCap
+  name: captain's winter boots
+  components:
+  - type: Sprite
+    sprite: _DV/Clothing/Shoes/Boots/winterbootscap.rsi
+  - type: Clothing
+    sprite: _DV/Clothing/Shoes/Boots/winterbootscap.rsi
+
+- type: entity
+  parent: ClothingShoesBaseWinterBoots
+  id: ClothingShoesBootsWinterChiefEngineer
+  name: CE's winter boots
+  components:
+  - type: Sprite
+    sprite: _DV/Clothing/Shoes/Boots/winterbootsce.rsi
+  - type: Clothing
+    sprite: _DV/Clothing/Shoes/Boots/winterbootsce.rsi
+
+- type: entity
+  parent: ClothingShoesBaseWinterBoots
+  id: ClothingShoesBootsWinterCentCom
+  name: Centcom winter boots
+  components:
+  - type: Sprite
+    sprite: _DV/Clothing/Shoes/Boots/winterbootscentcom.rsi
+  - type: Clothing
+    sprite: _DV/Clothing/Shoes/Boots/winterbootscentcom.rsi
+
+- type: entity
+  parent: ClothingShoesBaseWinterBoots
+  id: ClothingShoesBootsWinterChef
+  name: chef winter boots
+  components:
+  - type: Sprite
+    sprite: _DV/Clothing/Shoes/Boots/winterbootschef.rsi
+  - type: Clothing
+    sprite: _DV/Clothing/Shoes/Boots/winterbootschef.rsi
+
+- type: entity
+  parent: ClothingShoesBaseWinterBoots
+  id: ClothingShoesBootsWinterChem
+  name: chemist winter boots
+  components:
+  - type: Sprite
+    sprite: _DV/Clothing/Shoes/Boots/winterbootschem.rsi
+  - type: Clothing
+    sprite: _DV/Clothing/Shoes/Boots/winterbootschem.rsi
+
+- type: entity
+  parent: ClothingShoesBaseWinterBoots
+  id: ClothingShoesBootsWinterClown
+  name: clown winter boots
+  components:
+  - type: Sprite
+    sprite: _DV/Clothing/Shoes/Boots/winterbootsclown.rsi
+  - type: Clothing
+    sprite: _DV/Clothing/Shoes/Boots/winterbootsclown.rsi
+
+- type: entity
+  parent: ClothingShoesBaseWinterBoots
+  id: ClothingShoesBootsWinterChiefMedicalOfficer
+  name: CMO winter boots
+  components:
+  - type: Sprite
+    sprite: _DV/Clothing/Shoes/Boots/winterbootscmo.rsi
+  - type: Clothing
+    sprite: _DV/Clothing/Shoes/Boots/winterbootscmo.rsi
+
+- type: entity
+  parent: ClothingShoesBaseWinterBoots
+  id: ClothingShoesBootsWinterGenetics
+  name: genetics winter boots
+  components:
+  - type: Sprite
+    sprite: _DV/Clothing/Shoes/Boots/winterbootsgen.rsi
+  - type: Clothing
+    sprite: _DV/Clothing/Shoes/Boots/winterbootsgen.rsi
+
+- type: entity
+  parent: ClothingShoesBaseWinterBoots
+  id: ClothingShoesBootsWinterHeadOfPersonel
+  name: HoP's winter boots
+  components:
+  - type: Sprite
+    sprite: _DV/Clothing/Shoes/Boots/winterbootshop.rsi
+  - type: Clothing
+    sprite: _DV/Clothing/Shoes/Boots/winterbootshop.rsi
+
+- type: entity
+  parent: ClothingShoesBaseWinterBoots
+  id: ClothingShoesBootsWinterHeadOfSecurity
+  name: HoS's winter boots
+  components:
+  - type: Sprite
+    sprite: _DV/Clothing/Shoes/Boots/winterbootshos.rsi
+  - type: Clothing
+    sprite: _DV/Clothing/Shoes/Boots/winterbootshos.rsi
+
+- type: entity
+  parent: ClothingShoesBaseWinterBoots
+  id: ClothingShoesBootsWinterHydro
+  name: Botanist winter boots
+  components:
+  - type: Sprite
+    sprite: _DV/Clothing/Shoes/Boots/winterbootshydro.rsi
+  - type: Clothing
+    sprite: _DV/Clothing/Shoes/Boots/winterbootshydro.rsi
+
+- type: entity
+  parent: ClothingShoesBaseWinterBoots
+  id: ClothingShoesBootsWinterJani
+  name: janitorial winter boots # The Den - changes to janitorial from custodial
+  description: Warm insulated purple shoes with no-slip soles for janitorial work. # The Den - new description
+  components:
+  - type: Sprite
+    sprite: _DV/Clothing/Shoes/Boots/winterbootsjani.rsi
+  - type: Clothing
+    sprite: _DV/Clothing/Shoes/Boots/winterbootsjani.rsi
+  - type: NoSlip # The Den - added noslip
+
+- type: entity
+  parent: ClothingShoesBaseWinterBoots
+  id: ClothingShoesBootsWinterMime
+  name: mime winter boots
+  components:
+  - type: Sprite
+    sprite: _DV/Clothing/Shoes/Boots/winterbootsmime.rsi
+  - type: Clothing
+    sprite: _DV/Clothing/Shoes/Boots/winterbootsmime.rsi
+
+- type: entity
+  parent: ClothingShoesBaseWinterBoots
+  id: ClothingShoesBootsWinterMiner
+  name: miner winter boots
+  components:
+  - type: Sprite
+    sprite: _DV/Clothing/Shoes/Boots/winterbootsminer.rsi
+  - type: Clothing
+    sprite: _DV/Clothing/Shoes/Boots/winterbootsminer.rsi
+
+- type: entity
+  parent: ClothingShoesBaseWinterBoots
+  id: ClothingShoesBootsWinterParamedic
+  name: paramedic winter boots
+  components:
+  - type: Sprite
+    sprite: _DV/Clothing/Shoes/Boots/winterbootsparamed.rsi
+  - type: Clothing
+    sprite: _DV/Clothing/Shoes/Boots/winterbootsparamed.rsi
+
+- type: entity
+  parent: ClothingShoesBaseWinterBoots
+  id: ClothingShoesBootsWinterLogisticsOfficer
+  name: LO's winter boots
+  components:
+  - type: Sprite
+    sprite: _DV/Clothing/Shoes/Boots/winterbootsqm.rsi
+  - type: Clothing
+    sprite: _DV/Clothing/Shoes/Boots/winterbootsqm.rsi
+
+- type: entity
+  parent: ClothingShoesBaseWinterBoots
+  id: ClothingShoesBootsWinterMystagogue
+  name: Mystagogue's winter boots
+  components:
+  - type: Sprite
+    sprite: _DV/Clothing/Shoes/Boots/winterbootsrd.rsi
+  - type: Clothing
+    sprite: _DV/Clothing/Shoes/Boots/winterbootsrd.rsi
+
+- type: entity
+  parent: ClothingShoesBaseWinterBoots
+  id: ClothingShoesBootsWinterRobo
+  name: robotics winter boots
+  components:
+  - type: Sprite
+    sprite: _DV/Clothing/Shoes/Boots/winterbootsrobo.rsi
+  - type: Clothing
+    sprite: _DV/Clothing/Shoes/Boots/winterbootsrobo.rsi
+
+- type: entity
+  parent: ClothingShoesBaseWinterBoots
+  id: ClothingShoesBootsWinterViro
+  name: virology winter boots
+  components:
+  - type: Sprite
+    sprite: _DV/Clothing/Shoes/Boots/winterbootsviro.rsi
+  - type: Clothing
+    sprite: _DV/Clothing/Shoes/Boots/winterbootsviro.rsi
+
+- type: entity
+  parent: ClothingShoesBaseWinterBoots
+  id: ClothingShoesBootsWinterWarden
+  name: Warden's winter boots
+  components:
+  - type: Sprite
+    sprite: _DV/Clothing/Shoes/Boots/winterbootswarden.rsi
+  - type: Clothing
+    sprite: _DV/Clothing/Shoes/Boots/winterbootswarden.rsi

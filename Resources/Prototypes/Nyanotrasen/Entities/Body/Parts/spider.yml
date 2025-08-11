@@ -1,0 +1,96 @@
+# SPDX-FileCopyrightText: 2023 Velcroboy <107660393+IamVelcroboy@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 VMSolidus <evilexecutive@gmail.com>
+# SPDX-FileCopyrightText: 2024 gluesniffler <159397573+gluesniffler@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 gluesniffler <linebarrelerenthusiast@gmail.com>
+# SPDX-FileCopyrightText: 2024 sleepyyapril <***>
+# SPDX-FileCopyrightText: 2025 Blitz <73762869+BlitzTheSquishy@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 Skubman <ba.fallaria@gmail.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: entity
+  id: PartSpider
+  parent: BaseItem
+  name: "spider body part"
+  abstract: true
+  components:
+  - type: Damageable
+    damageContainer: OrganicPart
+  - type: BodyPart
+  - type: ContainerContainer
+    containers:
+      bodypart: !type:Container
+        ents: []
+  - type: StaticPrice
+    price: 100
+  - type: Tag
+    tags:
+      - Trash
+  - type: Extractable
+    juiceSolution:
+      reagents:
+      - ReagentId: Fat
+        Quantity: 3
+      - ReagentId: DemonsBlood
+        Quantity: 10
+
+- type: entity
+  id: ThoraxSpider
+  name: "spider thorax" #for arachne, actual spiders should get a cephalothorax that combines with head.
+  parent: PartSpider
+  categories: [ HideSpawnMenu ] # TheDen - Removes from spawn menu
+  components:
+  - type: Sprite
+    sprite: Mobs/Species/Moth/parts.rsi # placeholder sprite
+    state: "torso_m"
+  - type: Icon
+    sprite: Mobs/Species/Moth/parts.rsi
+    state: "torso_m"
+  - type: BodyPart #"Other" type
+    slotId: thorax
+  - type: Extractable
+    juiceSolution:
+      reagents:
+      - ReagentId: Fat
+        Quantity: 10
+      - ReagentId: DemonsBlood
+        Quantity: 20
+
+- type: entity
+  id: RightLegSpider
+  name: "right spider leg"
+  parent: PartSpider
+  categories: [ HideSpawnMenu ] # TheDen - Removes from spawn menu
+  components:
+  - type: Sprite
+    sprite: Objects/Consumable/Food/meat.rsi # placeholder sprite
+    state: spiderleg
+  - type: Icon
+    sprite: Objects/Consumable/Food/meat.rsi
+    state: spiderleg
+  - type: BodyPart
+    partType: Leg
+    symmetry: Right
+  - type: MovementBodyPart #should actual spiders get a seperate part from arachne?
+    walkSpeed : 2.7
+    sprintSpeed : 5
+
+- type: entity
+  id: LeftLegSpider
+  name: "left spider leg"
+  parent: PartSpider
+  categories: [ HideSpawnMenu ] # TheDen - Removes from spawn menu
+  components:
+  - type: Sprite
+    sprite: Objects/Consumable/Food/meat.rsi # placeholder sprite
+    state: spiderleg
+  - type: Icon
+    sprite: Objects/Consumable/Food/meat.rsi
+    state: spiderleg
+  - type: BodyPart
+    partType: Leg
+    symmetry: Left
+  - type: MovementBodyPart #should actual spiders get a seperate part from arachne?
+    walkSpeed : 2.7
+    sprintSpeed : 5

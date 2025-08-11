@@ -1,0 +1,33 @@
+# SPDX-FileCopyrightText: 2025 Eagle-0 <114363363+Eagle-0@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 Eris <eris@erisws.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: alert
+  id: ModsuitPower
+  icons:
+  - sprite: /Textures/_Goobstation/Interface/Alerts/modpower.rsi
+    state: modpower0
+  - sprite: /Textures/_Goobstation/Interface/Alerts/modpower.rsi
+    state: modpower1
+  - sprite: /Textures/_Goobstation/Interface/Alerts/modpower.rsi
+    state: modpower2
+  - sprite: /Textures/_Goobstation/Interface/Alerts/modpower.rsi
+    state: modpower3
+  - sprite: /Textures/_Goobstation/Interface/Alerts/modpower.rsi
+    state: modpower4
+  - sprite: /Textures/_Goobstation/Interface/Alerts/modpower.rsi
+    state: modpower5
+  name: alerts-modsuit-power-name
+  description: alerts-modsuit-power-desc
+  minSeverity: 0
+  maxSeverity: 5
+
+- type: alert
+  id: KnockedDown
+  icons:
+  - sprite: /Textures/_Goobstation/Interface/Alerts/knockdown.rsi
+    state: icon
+  name: alerts-knocked-down-name
+  description: alerts-knocked-down-desc

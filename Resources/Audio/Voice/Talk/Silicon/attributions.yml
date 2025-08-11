@@ -1,0 +1,15 @@
+# SPDX-FileCopyrightText: 2024 DEATHB4DEFEAT <77995199+DEATHB4DEFEAT@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- files:
+  - borg.ogg
+  - borg_ask.ogg
+  - borg_exclaim.ogg
+  - syndieborg.ogg
+  - syndieborg_ask.ogg
+  - syndieborg_exclaim.ogg
+  license: "CC-BY-SA-4.0"
+  copyright: "Recorded and mixed by https://github.com/MilenVolf"
+  source: "https://github.com/space-wizards/space-station-14/pull/27205"

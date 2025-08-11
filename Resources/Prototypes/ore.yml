@@ -1,0 +1,174 @@
+# SPDX-FileCopyrightText: 2023 Alekshhh <44923899+Alekshhh@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2023 Nemanja <98561806+EmoGarbage404@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2023 Velcroboy <107660393+IamVelcroboy@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2023 Vordenburg <114301317+Vordenburg@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2023 cOrigin <96662984+c0rigin@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2023 forthbridge <79264743+forthbridge@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2023 metalgearsloth <31366439+metalgearsloth@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2023 metalgearsloth <comedian_vs_clown@hotmail.com>
+# SPDX-FileCopyrightText: 2024 Ed <96445749+TheShuEd@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 Emisse <99158783+emisse@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 Zadeon <loldude9000@gmail.com>
+# SPDX-FileCopyrightText: 2024 brainfood1183 <113240905+brainfood1183@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 Eris <eris@erisws.com>
+# SPDX-FileCopyrightText: 2025 Rosycup <178287475+Rosycup@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 VMSolidus <evilexecutive@gmail.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+# TODO: Kill ore veins
+# Split it into 2 components, 1 for "spawn XYZ on destruction" and 1 for "randomly select one of these for spawn on destruction"
+
+# High yields
+- type: ore
+  id: OreSteel
+  oreEntity: SteelOre1Unprocessed
+  minOreYield: 1
+  maxOreYield: 5
+
+- type: ore
+  id: OreSpaceQuartz
+  oreEntity: SpaceQuartz1Unprocessed
+  minOreYield: 1
+  maxOreYield: 5
+
+- type: ore
+  id: OreCoal
+  oreEntity: Coal1Unprocessed
+  minOreYield: 1
+  maxOreYield: 5
+
+# Medium yields
+- type: ore
+  id: OreGold
+  oreEntity: GoldOre1Unprocessed
+  minOreYield: 1
+  maxOreYield: 3
+
+- type: ore
+  id: OreSilver
+  oreEntity: SilverOre1Unprocessed
+  minOreYield: 1
+  maxOreYield: 3
+
+- type: ore
+  id: OreSalt
+  oreEntity: Salt1
+  minOreYield: 1
+  maxOreYield: 3
+
+# Low yields
+- type: ore
+  id: OrePlasma
+  oreEntity: PlasmaOre1Unprocessed
+  minOreYield: 1
+  maxOreYield: 2
+
+- type: ore
+  id: OreUranium
+  oreEntity: UraniumOre1Unprocessed
+  minOreYield: 1
+  maxOreYield: 2
+
+- type: ore
+  id: OreBananium
+  oreEntity: BananiumOre1Unprocessed
+  minOreYield: 1
+  maxOreYield: 3
+
+- type: ore
+  id: OreDiamond
+  oreEntity: DiamondOre1Unprocessed
+  minOreYield: 1
+  maxOreYield: 2
+
+- type: ore
+  id: OreTungsten
+  oreEntity: TungstenOre1
+  minOreYield: 1
+  maxOreYield: 2
+
+- type: ore
+  id: OreQuartzCrab
+  oreEntity: MobSpawnCrabQuartz
+
+- type: ore
+  id: OreIronCrab
+  oreEntity: MobSpawnCrabIron
+
+- type: ore
+  id: OreSilverCrab
+  oreEntity: MobSpawnCrabSilver
+
+- type: ore
+  id: OreUraniumCrab
+  oreEntity: MobSpawnCrabUranium
+
+- type: ore
+  id: OreArtifactFragment
+  oreEntity: ArtifactFragment1
+  minOreYield: 2
+  maxOreYield: 4
+
+- type: ore
+  id: OreBluespace
+  oreEntity: BluespaceOre1
+  minOreYield: 1
+  maxOreYield: 1
+
+- type: ore
+  id: OreNormality
+  oreEntity: NormalityOre1
+  minOreYield: 1
+  maxOreYield: 1
+
+- type: weightedRandomOre
+  id: RandomOreDistributionStandard
+  weights:
+    OreSteel: 10
+    OreCoal: 10
+    OreSpaceQuartz: 8
+    OreGold: 2
+    OrePlasma: 4
+    OreSilver: 1
+    OreUranium: 1
+    OreBananium: 0.5
+    OreArtifactFragment: 0.5
+    OreBluespace: 0.5
+    OreNormality: 0.3
+    OreAluminium: 2
+    OreLead: 2
+    OreCopper: 2
+
+- type: weightedRandomOre
+  id: RandomOreDistributionBasalt
+  weights:
+    OreSteel: 20
+    OreCoal: 1.6
+    OreSpaceQuartz: 0.8
+    OreGold: 10
+    OrePlasma: 0.32
+    OreSilver: 0.8
+    OreUranium: 0.8
+    OreBananium: 0.8
+    OreArtifactFragment: 0.8
+    OreBluespace: 0.5
+    OreNormality: 0.3
+    OreAluminium: 8
+    OreLead: 1.6
+    OreCopper: 1.6
+    OreTungsten: 5
+
+- type: weightedRandomOre
+  id: OreCrab
+  weights:
+    OreQuartzCrab: 5
+    OreIronCrab: 5
+    OreUraniumCrab: 2
+    OreSilverCrab: 3
+    OreBananiumCrab: 1
+    OreGoldCrab: 3
+    OreCoalCrab: 5
+    OrePlasmaCrab: 2
+    OreSaltCrab: 1

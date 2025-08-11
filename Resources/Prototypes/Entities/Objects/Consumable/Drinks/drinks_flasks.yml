@@ -1,0 +1,118 @@
+# SPDX-FileCopyrightText: 2021 cheesePizza2 <34486300+cheesePizza2@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2022 EmoGarbage404 <98561806+EmoGarbage404@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2022 Mervill <mervills.email@gmail.com>
+# SPDX-FileCopyrightText: 2022 Peptide90 <78795277+Peptide90@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2023 Moony <moony@hellomouse.net>
+# SPDX-FileCopyrightText: 2023 Nemanja <98561806+EmoGarbage404@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2023 OctoRocket <88291550+OctoRocket@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2023 Psychpsyo <60073468+Psychpsyo@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 Skubman <ba.fallaria@gmail.com>
+# SPDX-FileCopyrightText: 2024 Tayrtahn <tayrtahn@gmail.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: entity
+  parent: DrinkBase
+  id: FlaskBase
+  abstract: true
+  components:
+  - type: Drink
+  - type: PhysicalComposition
+    materialComposition:
+      Steel: 300
+  - type: FitsInDispenser
+    solution: drink
+  - type: DamageOtherOnHit
+    damage:
+      types:
+        Blunt: 5
+
+- type: entity
+  parent: FlaskBase
+  id: DrinkShinyFlask
+  name: shiny flask
+  description: A shiny metal flask. It appears to have a Greek symbol inscribed on it.
+  components:
+  - type: Sprite
+    sprite: Objects/Consumable/Drinks/shinyflask.rsi
+
+- type: entity
+  parent: FlaskBase
+  id: DrinkMREFlask
+  name: MRE flask
+  description: An old military flask, filled with the finest contents for soldiers
+  components:
+  - type: Sprite
+    sprite: Objects/Consumable/Drinks/mreflask.rsi
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        reagents:
+        - ReagentId: Water
+          Quantity: 50
+  - type: TrashOnSolutionEmpty
+    solution: drink
+
+- type: entity
+  parent: FlaskBase
+  id: DrinkDetFlask
+  name: inspector's flask
+  description: A metal flask with a leather band and golden badge belonging to the inspector.
+  components:
+  - type: Sprite
+    sprite: Objects/Consumable/Drinks/detflask.rsi
+
+- type: entity
+  parent: FlaskBase
+  id: DrinkHosFlask
+  name: hos's flask
+  description: A metal flask, fit for a hard working HoS.
+  components:
+  - type: Sprite
+    sprite: Objects/Consumable/Drinks/hosflask.rsi
+
+- type: entity
+  parent: FlaskBase
+  id: DrinkFlask
+  name: captain's flask
+  description: A metal flask belonging to the captain
+  components:
+  - type: Sprite
+    sprite: Objects/Consumable/Drinks/flask.rsi
+
+- type: entity
+  parent: FlaskBase
+  id: DrinkFlaskBar
+  name: bar flask
+  description: A metal flask often given out by the bartender on loan. Don't forget to return it!
+  components:
+    - type: Sprite
+      sprite: Objects/Consumable/Drinks/barflask.rsi
+
+- type: entity
+  parent: FlaskBase
+  id: DrinkFlaskOld
+  name: flask
+  description: ''
+  components:
+  - type: Sprite
+    sprite: Objects/Consumable/Drinks/flask_old.rsi
+
+- type: entity
+  parent: FlaskBase
+  id: DrinkLithiumFlask
+  name: lithium flask
+  description: A flask with a Lithium Atom symbol on it.
+  components:
+  - type: Sprite
+    sprite: Objects/Consumable/Drinks/lithiumflask.rsi
+
+- type: entity
+  parent: FlaskBase
+  id: DrinkVacuumFlask
+  name: vacuum flask
+  description: Keeping your drinks at the perfect temperature since 1892.
+  components:
+  - type: Sprite
+    sprite: Objects/Consumable/Drinks/vacuumflask.rsi

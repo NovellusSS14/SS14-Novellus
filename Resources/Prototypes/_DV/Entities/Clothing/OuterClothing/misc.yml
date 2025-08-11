@@ -1,0 +1,22 @@
+# SPDX-FileCopyrightText: 2024 BriBrooo
+# SPDX-FileCopyrightText: 2025 Rosycup
+# SPDX-FileCopyrightText: 2025 Sir Warock
+# SPDX-FileCopyrightText: 2025 sleepyyapril
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: entity
+  parent: ClothingOuterStorageBase
+  id: ClothingOuterApronChemist
+  name: chemical resistant apron
+  suffix: Chemistry
+  description: Made out of thick rubber, the color of this apron still leaves you perplexed.
+  components:
+  - type: Sprite
+    sprite: _DV/Clothing/OuterClothing/Misc/chemapron.rsi
+  - type: Clothing
+    sprite: _DV/Clothing/OuterClothing/Misc/chemapron.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Caustic: 0.25

@@ -1,0 +1,21 @@
+# SPDX-FileCopyrightText: 2023 Fluffiest Floofers <9823203+FluffiestFloof@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 Will-Oliver-Br <164823659+Will-Oliver-Br@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: barSign
+  id: WhiskeyEcho
+  name: barsign-prototype-name-whiskeyecho
+  icon:
+    sprite: Structures/Wallmounts/barsign.rsi
+    state: whiskeyechoes
+  description: barsign-prototype-description-whiskeyecho
+
+- type: barSign
+  id: KlubSkub
+  name: barsign-prototype-name-klubskub
+  icon:
+    sprite: Structures/Wallmounts/barsign.rsi
+    state: klubskub
+  description: barsign-prototype-description-klubskub

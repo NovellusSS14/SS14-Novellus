@@ -1,0 +1,27 @@
+# SPDX-FileCopyrightText: 2022 Rane <60792108+Elijahrane@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 VMSolidus <evilexecutive@gmail.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: entity
+  parent: ClothingUniformSkirtBase
+  id: UniformShortsRed
+  name: boxing shorts
+  description: These are shorts, not boxers.
+  components:
+  - type: Sprite
+    sprite: Clothing/Uniforms/Shorts/Color/red.rsi
+  - type: Clothing
+    sprite: Clothing/Uniforms/Shorts/Color/red.rsi
+
+- type: entity
+  parent: ClothingUniformSkirtBase
+  id: UniformShortsRedWithTop
+  name: boxing shorts with top
+  description: These are shorts, not boxers.
+  components:
+  - type: Sprite
+    sprite: Clothing/Uniforms/Shorts/Color/red_female.rsi
+  - type: Clothing
+    sprite: Clothing/Uniforms/Shorts/Color/red_female.rsi

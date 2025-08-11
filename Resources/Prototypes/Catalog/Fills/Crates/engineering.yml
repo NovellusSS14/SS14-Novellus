@@ -1,0 +1,447 @@
+# SPDX-FileCopyrightText: 2020 Vera Aguilera Puerto
+# SPDX-FileCopyrightText: 2021 20kdc
+# SPDX-FileCopyrightText: 2021 Pieter-Jan Briers
+# SPDX-FileCopyrightText: 2021 Swept
+# SPDX-FileCopyrightText: 2022 Easypoller
+# SPDX-FileCopyrightText: 2022 Leon Friedrich
+# SPDX-FileCopyrightText: 2022 Rinkashikachi
+# SPDX-FileCopyrightText: 2022 Scribbles0
+# SPDX-FileCopyrightText: 2022 corentt
+# SPDX-FileCopyrightText: 2022 magmodius
+# SPDX-FileCopyrightText: 2022 metalgearsloth
+# SPDX-FileCopyrightText: 2023 Nemanja
+# SPDX-FileCopyrightText: 2023 Puro
+# SPDX-FileCopyrightText: 2023 lzk228
+# SPDX-FileCopyrightText: 2024 Aidenkrz
+# SPDX-FileCopyrightText: 2024 Ed
+# SPDX-FileCopyrightText: 2024 Eoin Mcloughlin
+# SPDX-FileCopyrightText: 2024 Kara
+# SPDX-FileCopyrightText: 2024 PoTeletubby
+# SPDX-FileCopyrightText: 2024 chromiumboy
+# SPDX-FileCopyrightText: 2024 eoineoineoin
+# SPDX-FileCopyrightText: 2024 lzk
+# SPDX-FileCopyrightText: 2025 Aiden
+# SPDX-FileCopyrightText: 2025 Dinner
+# SPDX-FileCopyrightText: 2025 GoobBot
+# SPDX-FileCopyrightText: 2025 Jakumba
+# SPDX-FileCopyrightText: 2025 MajorMoth
+# SPDX-FileCopyrightText: 2025 Southbridge
+# SPDX-FileCopyrightText: 2025 Steve
+# SPDX-FileCopyrightText: 2025 juniwoofs
+# SPDX-FileCopyrightText: 2025 marc-pelletier
+# SPDX-FileCopyrightText: 2025 sleepyyapril
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: entity
+  id: CrateEngineeringGear
+  parent: CrateEngineering
+  name: engineering gear crate
+  description: Various engineering gear parts.
+  components:
+  - type: StorageFill
+    contents:
+      - id: ClothingBeltUtility
+        amount: 2
+      - id: ClothingEyesGlassesMeson
+        amount: 2
+      - id: ClothingHeadHatHardhatYellow
+        amount: 2
+      - id: ClothingHeadHatWelding
+        amount: 2
+      - id: ClothingOuterVestHazard
+        amount: 3
+      - id: ClothingHandsGlovesColorYellow
+        amount: 2
+
+- type: entity
+  id: CrateEngineeringToolbox
+  parent: CrateEngineering
+  name: toolbox crate
+  description: Two mechanical and two electrical toolboxes.
+  components:
+  - type: StorageFill
+    contents:
+      - id: ToolboxMechanicalFilled
+        amount: 2
+      - id: ToolboxElectricalFilled
+        amount: 2
+
+#- type: entity
+#  id: CrateEngineeringPowercell
+#  parent: CrateElectrical
+#  name: AME crate
+#  description: Three microcreactor powercells.
+#  components:
+#  - type: StorageFill
+#    contents:
+#      - id: PowerCellMicroreactor
+#        amount: 3
+
+- type: entity
+  id: CrateEngineeringCableLV
+  parent: CrateElectrical
+  name: LV cable crate
+  description: 3 coils of LV cables.
+  components:
+  - type: StorageFill
+    contents:
+      - id: CableApcStack
+        amount: 3
+
+- type: entity
+  id: CrateEngineeringCableMV
+  parent: CrateElectrical
+  name: MV cable crate
+  description: 3 coils of LV cables.
+  components:
+  - type: StorageFill
+    contents:
+      - id: CableMVStack
+        amount: 3
+
+- type: entity
+  id: CrateEngineeringCableHV
+  parent: CrateElectrical
+  name: HV cable crate
+  description: 3 coils of HV cables.
+  components:
+  - type: StorageFill
+    contents:
+      - id: CableHVStack
+        amount: 3
+
+- type: entity
+  id: CrateEngineeringCableBulk
+  parent: CrateElectrical
+  name: bulk cable crate
+  description: 2 coils each for every cable type.
+  components:
+  - type: StorageFill
+    contents:
+      - id: CableHVStack
+        amount: 2
+      - id: CableMVStack
+        amount: 2
+      - id: CableApcStack
+        amount: 2
+
+- type: entity
+  id: CrateEngineeringElectricalSupplies
+  parent: CrateElectrical
+  name: electrical supplies crate
+  description: NT is not responsible for any workplace infighting relating to the insulated gloves included within these crates.
+  components:
+  - type: StorageFill
+    contents:
+      - id: ToolboxElectricalFilled
+        amount: 2
+      - id: ClothingHandsGlovesColorYellow
+        amount: 2
+
+- type: entity
+  id: CrateEngineeringStationBeaconBundle
+  parent: CratePlastic
+  name: station beacon bundle
+  description: A crate containing 5 station beacon assemblies for modifying the station map.
+  components:
+  - type: StorageFill
+    contents:
+    - id: StationBeaconPart
+      amount: 5
+
+- type: entity
+  id: CrateEngineeringJetpack
+  parent: CrateGenericSteel
+  name: jetpack crate
+  description: Two jetpacks for those who don't know how to use fire extinguishers.
+  components:
+  - type: StorageFill
+    contents:
+      - id: JetpackBlue
+        amount: 2
+
+- type: entity
+  id: CrateEngineeringMiniJetpack
+  parent: CrateGenericSteel
+  name: mini jetpack crate
+  description: Two mini jetpacks for those who want an extra challenge.
+  components:
+  - type: StorageFill
+    contents:
+      - id: JetpackMini
+        amount: 2
+
+- type: entity
+  id: CrateAirlockKit
+  parent: CrateGenericSteel
+  name: airlock kit
+  description: A kit for building 6 airlocks, doesn't include tools.
+  components:
+  - type: StorageFill
+    contents:
+      - id: SheetSteel
+      - id: CableApcStack
+      - id: DoorElectronics
+        amount: 6
+
+- type: entity
+  id: CrateEvaKit
+  parent: CrateCommandSecure
+  name: EVA kit
+  description: A set consisting of two prestigious EVA suits and helmets.
+  components:
+  - type: StorageFill
+    contents:
+      - id: ClothingHeadHelmetEVA
+        amount: 2
+      - id: ClothingOuterHardsuitEVA
+        amount: 2
+
+- type: entity
+  id: CrateRCDAmmo
+  parent: CrateEngineering
+  name: compressed matter crate
+  description: Contains three compressed matter cartridges.
+  components:
+  - type: StorageFill
+    contents:
+    - id: RCDAmmo
+      amount: 6
+
+- type: entity
+  id: CrateRCD
+  parent: CrateEngineeringSecure
+  name: RCD crate
+  description: A crate containing a single rapid construction device.
+  components:
+  - type: StorageFill
+    contents:
+    - id: RCD
+
+- type: entity
+  id: CrateParticleDecelerators
+  parent: CrateEngineeringSecure
+  name: particle decelerators crate
+  description: A crate containing 3 Particle Decelerators.
+  components:
+  - type: StorageFill
+    contents:
+    - id: WeaponParticleDecelerator
+      amount: 3
+
+- type: entityTable
+  id: RandomTechBoardTable
+  table: !type:GroupSelector
+    children:
+    - id: AirAlarmElectronics
+    - id: FireAlarmElectronics
+    - id: DoorElectronics
+    - id: FirelockElectronics
+    - id: APCElectronics
+    - id: SignalTimerElectronics
+    - id: SMESMachineCircuitboard
+    - id: SubstationMachineCircuitboard
+    - id: SpaceVillainArcadeComputerCircuitboard
+    - id: BlockGameArcadeComputerCircuitboard
+
+- type: entity
+  id: CrateTechBoardRandom
+  parent: CrateEngineering
+  name: surplus boards
+  description: Surplus boards from somewhere.
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      entity_storage: !type:NestedSelector
+        tableId: RandomTechBoardTable
+        rolls: !type:RangeNumberSelector
+          range: 3, 7
+
+# RPD
+- type: entity
+  id: CrateRPD
+  parent: CrateEngineeringSecure
+  name: RPD crate
+  description: A crate containing a single rapid piping device.
+  components:
+  - type: StorageFill
+    contents:
+    - id: RPD
+
+# Assmos - Extinguisher Nozzle
+- type: entity
+  id: CrateEngineeringFirefighterBackpackTank
+  parent: CrateEngineering
+  name: firefighter crate
+  description: Contains a firefighter backpack water tank.
+  components:
+  - type: StorageFill
+    contents:
+      - id: ClothingBackpackFirefighterTank
+
+- type: entity #TheDen
+  id: CrateEngiSurplus
+  name: engineering surplus crate
+  description: A box containing surplus tools for the engineering department.
+  parent: CrateEngineeringSecure
+  components:
+  - type: StorageFill
+    contents:
+#clothing
+    - id: ClothingShoesBootsMag
+      prob: 0.01
+      orGroup: Clothing
+    - id: ClothingShoesBootsMagAdv
+      prob: 0.0015
+      orGroup: Clothing
+    - id: ClothingShoesBootsWork
+      prob: 0.01
+      orGroup: Clothing
+    - id: ClothingHeadHatBeretEngineering
+      prob: 0.01
+      orGroup: Clothing
+#ppe
+    - id: ClothingHeadHatWelding
+      prob: 0.01
+      orGroup: PPE
+    - id: ClothingEyesGlassesMeson
+      prob: 0.01
+      orGroup: PPE
+    - id: ClothingOuterVestHazard
+      prob: 0.015
+      orGroup: PPE
+    - id: ClothingHeadHatHardhatYellow
+      prob: 0.015
+      orGroup: PPE
+    - id: ClothingHeadHatHardhatOrange
+      prob: 0.015
+      orGroup: PPE
+    - id: ClothingHeadHatHardhatArmored
+      prob: 0.01
+      orGroup: PPE
+    - id: ClothingHeadHelmetFire
+      prob: 0.008
+      orGroup: PPE
+    - id: ClothingOuterSuitFire
+      prob: 0.008
+      orGroup: PPE
+#hardsuit
+    - id: ClothingOuterHardsuitEngineering
+      prob: 0.008
+      orGroup: Hardsuit
+    - id: ClothingOuterHardsuitAtmos
+      prob: 0.008
+      orGroup: Hardsuit
+    - id: ClothingOuterHardsuitEngineeringWhite
+      prob: 0.0015
+      orGroup: Hardsuit
+#material
+    - id: SheetSteel
+      prob: 0.015
+      orGroup: Material
+    - id: SheetPlasteel
+      prob: 0.012
+      orGroup: Material
+    - id: SheetGlass
+      prob: 0.015
+      orGroup: Material
+    - id: SheetRGlass
+      prob: 0.012
+      orGroup: Material
+    - id: SheetPGlass
+      prob: 0.012
+      orGroup: Material
+    - id: SheetRPGlass
+      prob: 0.012
+      orGroup: Material
+    - id: SheetUGlass
+      prob: 0.012
+      orGroup: Material
+    - id: SheetRUGlass
+      prob: 0.012
+      orGroup: Material
+#tools
+    - id: RPD
+      prob: 0.01
+      orGroup: Tools
+    - id: RCD
+      prob: 0.01
+      orGroup: Tools
+    - id: RCDRecharging
+      prob: 0.0015
+      orGroup: Tools
+    - id: RPDRecharging
+      prob: 0.0015
+      orGroup: Tools
+    - id: Omnitool
+      prob: 0.004
+      orGroup: Tools
+    - id: PowerDrill
+      prob: 0.008
+      orGroup: Tools
+    - id: WelderIndustrial
+      prob: 0.008
+      orGroup: Tools
+    - id: WelderIndustrialAdvanced
+      prob: 0.005
+      orGroup: Tools
+    - id: ToolboxMechanical
+      prob: 0.01
+      orGroup: Tools
+    - id: ToolboxElectrical
+      prob: 0.01
+      orGroup: Tools
+    - id: ClothingBeltUtilityAtmos
+      prob: 0.01
+      orGroup: Tools
+    - id: ClothingBeltUtilityEngineering
+      prob: 0.01
+      orGroup: Tools
+    - id: ClothingBeltChiefEngineerFilled
+      prob: 0.0015
+      orGroup: Tools
+#misc
+    - id: CableHVStack
+      prob: 0.01
+      orGroup: Misc
+    - id: CableMVStack
+      prob: 0.01
+      orGroup: Misc
+    - id: CableApcStack
+      prob: 0.01
+      orGroup: Misc
+    - id: RCDAmmo
+      prob: 0.01
+      orGroup: Misc
+#canisters
+    - id: AirCanister
+      prob: 0.001
+      orGroup: Canister
+    - id: AmmoniaCanister
+      prob: 0.001
+      orGroup: Canister
+    - id: CarbonDioxideCanister
+      prob: 0.001
+      orGroup: Canister
+    - id: FrezonCanister
+      prob: 0.001
+      orGroup: Canister
+    - id: NitrogenCanister
+      prob: 0.001
+      orGroup: Canister
+    - id: NitrousOxideCanister
+      prob: 0.001
+      orGroup: Canister
+    - id: OxygenCanister
+      prob: 0.001
+      orGroup: Canister
+    - id: PlasmaCanister
+      prob: 0.001
+      orGroup: Canister
+    - id: TritiumCanister
+      prob: 0.001
+      orGroup: Canister
+    - id: WaterVaporCanister
+      prob: 0.001
+      orGroup: Canister

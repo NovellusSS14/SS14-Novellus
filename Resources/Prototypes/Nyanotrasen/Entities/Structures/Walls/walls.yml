@@ -1,0 +1,100 @@
+# SPDX-FileCopyrightText: 2023 Colin-Tel <113523727+Colin-Tel@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 DEATHB4DEFEAT <77995199+DEATHB4DEFEAT@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 Debug <49997488+DebugOk@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 VMSolidus <evilexecutive@gmail.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: entity
+  parent: WallSolid #basically non-Reinforced Wall (shuttle variant)
+  id: WallShuttleInterior
+  name: shuttle wall
+  suffix: Interior
+  components:
+  - type: Sprite
+    sprite: Nyanotrasen/Structures/Walls/shuttleinterior.rsi
+  - type: Icon
+    sprite: Nyanotrasen/Structures/Walls/shuttleinterior.rsi
+  - type: Construction
+    graph: Girder
+    node: shuttleInteriorWall
+  - type: IconSmooth
+    key: walls
+    base: state
+  - type: Reflect
+    reflectProb: 1
+
+- type: entity
+  parent: BaseWall
+  id: WallPaper
+  name: paper wall
+  description: Helps to contain the repeated screams of martial artists.
+  components:
+  - type: Sprite
+    sprite: Nyanotrasen/Structures/Walls/paper.rsi
+  - type: Icon
+    sprite: Nyanotrasen/Structures/Walls/paper.rsi
+  - type: Construction
+    graph: Girder
+    node: paperWall
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 300 # #excess damage (nuke?). avoid computational cost of spawning entities.
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+    - trigger:
+        !type:DamageTrigger
+        damage: 150
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
+      - !type:ChangeConstructionNodeBehavior
+        node: girder
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+  - type: IconSmooth
+    key: walls
+    base: paperwall
+
+# TODO: construction graph, material, better sounds
+- type: entity
+  parent: BaseWall
+  id: WallDrywall
+  name: drywall
+  description: It looks sturdy enough.
+  components:
+  - type: Sprite
+    sprite: Nyanotrasen/Structures/Walls/drywall.rsi
+  - type: Icon
+    sprite: Nyanotrasen/Structures/Walls/drywall.rsi
+  - type: Damageable
+    damageContainer: Inorganic
+    damageModifierSet: Wood
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 100
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+    - trigger:
+        !type:DamageTrigger
+        damage: 50
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: WoodDestroy
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+  - type: IconSmooth
+    key: walls
+    base: drywall
+  - type: Tag
+    tags:
+      - Wall

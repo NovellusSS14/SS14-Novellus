@@ -1,0 +1,16 @@
+# SPDX-FileCopyrightText: 2023 Colin-Tel <113523727+Colin-Tel@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2023 Fluffiest Floofers <9823203+FluffiestFloof@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2023 Fluffiest Floofers <thebluewulf@gmail.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: MIT
+
+- type: entity
+  parent: PaintingBase
+  id: PaintingMothBigCatch
+  name: Big Catch
+  description: Depicts a blue moth wearing a tophat who caught a relatively large space carp. 
+  components:
+  - type: Sprite
+    sprite: Nyanotrasen/Structures/Wallmounts/Paintings/wabungus.rsi
+    state: bigcatch

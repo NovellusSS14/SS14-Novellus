@@ -1,0 +1,96 @@
+# SPDX-FileCopyrightText: 2024 VMSolidus
+# SPDX-FileCopyrightText: 2025 Blitz
+# SPDX-FileCopyrightText: 2025 Lonofera
+# SPDX-FileCopyrightText: 2025 MajorMoth
+# SPDX-FileCopyrightText: 2025 sleepyyapril
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: characterItemGroup
+  id: LoadoutBotanistBackpacks
+  maxItems: 1
+  items:
+    - type: loadout
+      id: LoadoutServiceBotanistHydroponics
+    - type: loadout
+      id: LoadoutServiceBotanistDuffelHydroponics
+    - type: loadout
+      id: LoadoutServiceBotanistSatchelHydroponics
+    - type: loadout
+      id: LoadoutServiceBotanistMessengerHydroponics
+
+#- type: characterItemGroup
+#  id: LoadoutBotanistBelt
+#  maxItems: 1
+#  items:
+#
+#- type: characterItemGroup
+#  id: LoadoutBotanistEars
+#  maxItems: 1
+#  items:
+#
+#- type: characterItemGroup
+#  id: LoadoutBotanistEquipment
+#  maxItems: 1
+#  items:
+#
+#- type: characterItemGroup
+#  id: LoadoutBotanistEyes
+#  maxItems: 1
+#  items:
+
+- type: characterItemGroup # The Den literally their own gloves
+  id: LoadoutBotanistGloves
+  maxItems: 1
+  items:
+  - type: loadout
+    id: LoadoutHandsGlovesLeather
+
+#- type: characterItemGroup
+#  id: LoadoutBotanistHead
+#  maxItems: 1
+#  items:
+#
+#- type: characterItemGroup
+#  id: LoadoutBotanistId
+#  maxItems: 1
+#  items:
+#
+#- type: characterItemGroup
+#  id: LoadoutBotanistNeck
+#  maxItems: 1
+#  items:
+#
+#- type: characterItemGroup
+#  id: LoadoutBotanistMask
+#  maxItems: 1
+#  items:
+#
+- type: characterItemGroup
+  id: LoadoutBotanistOuter
+  maxItems: 1
+  items:
+  - type: loadout
+    id: LoadoutServiceBotanistWinterCoat
+#
+#- type: characterItemGroup
+#  id: LoadoutBotanistShoes
+#  maxItems: 1
+#  items:
+#
+- type: characterItemGroup
+  id: LoadoutBotanistUniforms
+  maxItems: 1
+  items:
+    - type: loadout
+      id: LoadoutServiceBotanistUniformOveralls
+    - type: loadout
+      id: LoadoutServiceJumpsuitHydroponicsNt
+    - type: loadout
+      id: LoadoutServiceJumpsuitHydroponicsIdris
+    - type: loadout
+      id: LoadoutServiceJumpsuitHydroponicsOrion
+    - type: loadout
+      id: ClothingUniformJumpsuitHydroponics
+    - type: loadout
+      id: ClothingUniformJumpskirtHydroponics

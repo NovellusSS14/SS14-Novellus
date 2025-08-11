@@ -1,0 +1,17 @@
+# SPDX-FileCopyrightText: 2023 Tad "Taddy" Johnson <120885811+TadJohnson00@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 Danger Revolution! <142105406+DangerRevolution@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 Rosycup <178287475+Rosycup@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: entity
+  parent: ClothingNeckMedalBase
+  id: ClothingNeckBlackStar
+  name: black star medal
+  description: Given to crewmates that make the greatest of sacrifices in the performance of their duties.
+  components:
+  - type: Sprite
+    sprite: _DV/Clothing/Neck/Medals/blackstar.rsi
+  - type: Clothing
+    sprite: _DV/Clothing/Neck/Medals/blackstar.rsi

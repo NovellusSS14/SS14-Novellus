@@ -1,0 +1,29 @@
+# SPDX-FileCopyrightText: 2025 SX-7 <92227810+SX-7@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 Your Name <EctoplasmIsGood@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: damageModifierSet
+  id: Tajaran
+  coefficients:
+    Blunt: 1.15
+    Slash: 1.15
+    Piercing: 1.15
+    Heat: 1.35
+    Cold: 0.65
+
+- type: damageModifierSet
+  id: Smile
+  coefficients:
+    Blunt: 0
+    Slash: 0
+    Piercing: 0
+    Heat: 0
+    Shock: 0
+    Cold: 0.
+    Bloodloss: 0
+    Poison: 0
+    Radiation : 0
+    Cellular: 0
+

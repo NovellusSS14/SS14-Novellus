@@ -1,0 +1,15 @@
+# SPDX-FileCopyrightText: 2025 Blitz <73762869+BlitzTheSquishy@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+# If your species wants to metabolize stuff differently,
+# you'll likely have to tag its metabolizers with something other than Human.
+
+- type: metabolizerType
+  id: Feroxi
+  name: metabolizer-type-feroxi
+
+- type: metabolizerType
+  id: FeroxiDehydrated
+  name: metabolizer-type-feroxi-dehydrated

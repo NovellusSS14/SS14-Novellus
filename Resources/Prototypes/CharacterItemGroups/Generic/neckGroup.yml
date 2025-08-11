@@ -1,0 +1,230 @@
+# SPDX-FileCopyrightText: 2024 VMSolidus
+# SPDX-FileCopyrightText: 2025 Blitz
+# SPDX-FileCopyrightText: 2025 KekaniCreates
+# SPDX-FileCopyrightText: 2025 Skubman
+# SPDX-FileCopyrightText: 2025 portfiend
+# SPDX-FileCopyrightText: 2025 sleepyyapril
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: characterItemGroup
+  id: LoadoutNeck
+  items:
+    - type: loadout
+      id: LoadoutNeckHeadphones
+    - type: loadout
+      id: LoadoutNeckBellCollar
+    - type: loadout
+      id: LoadoutNeckOldMantle
+    - type: loadout
+      id: LoadoutNeckUnathiMantle
+    - type: loadout
+      id: LoadoutNeckDogtags
+    - type: loadout
+      id: LoadoutNeckScarfStripedRed
+    - type: loadout
+      id: LoadoutNeckScarfStripedBlue
+    - type: loadout
+      id: LoadoutNeckScarfStripedGreen
+    - type: loadout
+      id: LoadoutNeckScarfStripedBlack
+    - type: loadout
+      id: LoadoutNeckScarfStripedBrown
+    - type: loadout
+      id: LoadoutNeckScarfStripedOrange
+    - type: loadout
+      id: LoadoutNeckScarfStripedPurple
+    - type: loadout
+      id: LoadoutNeckScarfStripedZebra
+    - type: loadout
+      id: LoadoutNeckTieRed
+    - type: loadout
+      id: LoadoutNeckTieWhite
+    - type: loadout
+      id: LoadoutNeckTieBlack
+    - type: loadout
+      id: LoadoutNeckTieBlue
+    - type: loadout
+      id: LoadoutNeckTieGreen
+    - type: loadout
+      id: LoadoutNeckTieShort
+    - type: loadout
+      id: LoadoutNeckTieBow
+    - type: loadout
+      id: LoadoutNeckTieBowTie
+    - type: loadout
+      id: LoadoutNeckTieRibbon
+    - type: loadout
+      id: LoadoutNeckBedsheetBlack
+    - type: loadout
+      id: LoadoutNeckBedsheetBlue
+    - type: loadout
+      id: LoadoutNeckBedsheetBrown
+    - type: loadout
+      id: LoadoutNeckCrucifixColor
+    - type: loadout
+      id: LoadoutNeckCrucifixColorSaintPeter
+    - type: loadout
+      id: LoadoutNeckCrucifixGold
+    - type: loadout
+      id: LoadoutNeckCrucifixGoldSaintPeter
+    - type: loadout
+      id: LoadoutNeckCrucifixSilver
+    - type: loadout
+      id: LoadoutNeckCrucifixSilverSaintPeter
+    - type: loadout
+      id: LoadoutNeckScapular
+    - type: loadout
+      id: LoadoutNeckTallit
+    - type: loadout
+      id: LoadoutNeckBedsheetCosmos
+    - type: loadout
+      id: LoadoutNeckBedsheetGreen
+    - type: loadout
+      id: LoadoutNeckBedsheetGrey
+    - type: loadout
+      id: LoadoutNeckBedsheetOrange
+    - type: loadout
+      id: LoadoutNeckBedsheetPurple
+    - type: loadout
+      id: LoadoutNeckBedsheetRainbow
+    - type: loadout
+      id: LoadoutNeckBedsheetRed
+    - type: loadout
+      id: LoadoutNeckBedsheetWhite
+    - type: loadout
+      id: LoadoutNeckBedsheetYellow
+    - type: loadout
+      id: LoadoutNeckBedsheetNT
+    - type: loadout
+      id: LoadoutNeckNecklaceStandard
+    - type: loadout
+      id: LoadoutNeckNecklaceLow
+    - type: loadout
+      id: LoadoutNeckNecklaceRound
+    - type: loadout
+      id: LoadoutNeckNecklaceSmall
+    - type: loadout
+      id: LoadoutNeckNecklaceGold
+    - type: loadout
+      id: LoadoutNeckNecklaceSilver
+    - type: loadout
+      id: LoadoutNeckNecklaceChainGold
+    - type: loadout
+      id: LoadoutNeckNecklaceChainSilver
+    - type: loadout
+      id: LoadoutNeckNecklacePendantGold
+    - type: loadout
+      id: LoadoutNeckNecklacePendantGoldLarge
+    - type: loadout
+      id: LoadoutNeckNecklacePendantSilver
+    - type: loadout
+      id: LoadoutNeckNecklacePendantSilverLarge
+    # Pride Pins
+    - type: loadout
+      id: LoadoutNeckLGBTPin
+    - type: loadout
+      id: LoadoutNeckAromanticPin
+    - type: loadout
+      id: LoadoutNeckAsexualPin
+    - type: loadout
+      id: LoadoutNeckBisexualPin
+    - type: loadout
+      id: LoadoutNeckGayPin
+    - type: loadout
+      id: LoadoutNeckIntersexPin
+    - type: loadout
+      id: LoadoutNeckLesbianPin
+    - type: loadout
+      id: LoadoutNeckNonBinaryPin
+    - type: loadout
+      id: LoadoutNeckPansexualPin
+    - type: loadout
+      id: LoadoutNeckTransPin
+    # Pride Cloaks
+    - type: loadout
+      id: LoadoutNeckCloakProgressPride
+    - type: loadout
+      id: LoadoutNeckCloakTrans
+    - type: loadout
+      id: LoadoutNeckCloakAro
+    - type: loadout
+      id: LoadoutNeckCloakAce
+    - type: loadout
+      id: LoadoutNeckCloakCloakBi
+    - type: loadout
+      id: LoadoutNeckCloakIntersex
+    - type: loadout
+      id: LoadoutNeckCloakEnby
+    - type: loadout
+      id: LoadoutNeckCloakPan
+    - type: loadout
+      id: LoadoutNeckCloakGay
+    - type: loadout
+      id: LoadoutNeckCloakLesbian
+    # Pride Scarves
+    - type: loadout
+      id: LoadoutNeckScarfStripedAce
+    - type: loadout
+      id: LoadoutNeckScarfStripedAro
+    - type: loadout
+      id: LoadoutNeckScarfStripedBiSexual
+    - type: loadout
+      id: LoadoutNeckScarfStripedGay
+    - type: loadout
+      id: LoadoutNeckScarfStripedInter
+    - type: loadout
+      id: LoadoutNeckScarfStripedLesbian
+    - type: loadout
+      id: LoadoutNeckScarfStripedPan
+    - type: loadout
+      id: LoadoutNeckScarfStripedNonBinary
+    - type: loadout
+      id: LoadoutNeckScarfStripedRainbow
+    - type: loadout
+      id: LoadoutNeckScarfStripedTrans
+    - type: loadout
+      id: LoadoutNeckScarfStripedLesbianLong
+    - type: loadout
+      id: LoadoutBedsheetRainbow
+    - type: loadout
+      id: LoadoutNeckVetCone
+    # TheDen - Below
+    - type: loadout
+      id: LoadoutNeckCowBellCollar
+    - type: loadout
+      id: LoadoutNeckCloakMoth
+    - type: loadout
+      id: LoadoutItemsNeckBlueCollar
+    - type: loadout
+      id: LoadoutItemsNeckBlackCollar
+    - type: loadout
+      id: LoadoutItemsNeckPinkCollar
+    - type: loadout
+      id: LoadoutItemsNeckSyndieCollar
+    - type: loadout
+      id: LoadoutNeckScarfColorable
+    - type: loadout
+      id: LoadoutNeckScarfStripedColorable
+    - type: loadout
+      id: LoadoutNeckMantleColorable
+    - type: loadout
+      id: LoadoutNeckCloakColorable
+    - type: loadout
+      id: LoadoutNeckAllyPin
+    - type: loadout
+      id: LoadoutNeckAroacePin
+    - type: loadout
+      id: LoadoutNeckGenderfluidPin
+    - type: loadout
+      id: LoadoutNeckGenderqueerPin
+    - type: loadout
+      id: LoadoutNeckOmnisexualPin
+    - type: loadout
+      id: LoadoutNeckPluralPin
+    - type: loadout
+      id: LoadoutNeckCloakAroace
+    - type: loadout
+      id: LoadoutNeckCloakBear
+    - type: loadout
+      id: LoadoutNeckScarfStripedAroace

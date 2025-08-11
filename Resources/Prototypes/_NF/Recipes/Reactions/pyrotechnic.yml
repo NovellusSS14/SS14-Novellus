@@ -1,0 +1,17 @@
+# SPDX-FileCopyrightText: 2024 dustylens <54123313+dustylens@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: reaction
+  id: HotOilVegetableAndWater
+  impact: Medium
+  minTemp: 373.15
+  reactants:
+    OilVegetable:
+      amount: 1
+    Water:
+      amount: 1
+  effects:
+  - !type:CreateGas
+    gas: WaterVapor

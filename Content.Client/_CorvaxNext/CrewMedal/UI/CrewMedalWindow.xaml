@@ -1,0 +1,20 @@
+<!--
+SPDX-FileCopyrightText: 2025 Kill_Me_I_Noobs <118206719+Vonsant@users.noreply.github.com>
+SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+
+SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+-->
+
+<DefaultWindow xmlns="https://spacestation14.io"
+               xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+               Title="{Loc 'crew-medal-ui-header'}">
+    <BoxContainer Orientation="Vertical" SeparationOverride="4" MinWidth="150">
+        <Label Text="{Loc 'crew-medal-ui-reason'}" />
+        <BoxContainer Orientation="Horizontal">
+            <LineEdit Name="ReasonLineEdit" HorizontalExpand="True" />
+            <Button Name="SaveButton" Text="{Loc 'crew-medal-ui-save'}" />
+        </BoxContainer>
+        <Label Name="CharacterLabel" Text="" />
+        <Label Text="{Loc 'crew-medal-ui-info'}" />
+    </BoxContainer>
+</DefaultWindow>

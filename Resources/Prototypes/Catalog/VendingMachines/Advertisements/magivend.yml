@@ -1,0 +1,21 @@
+# SPDX-FileCopyrightText: 2021 Visne <39844191+Visne@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 Tayrtahn <tayrtahn@gmail.com>
+# SPDX-FileCopyrightText: 2024 Ubaser <134914314+UbaserB@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: messagePack
+  id: MagiVendAds
+  messages:
+  - advertisement-magivend-1
+  - advertisement-magivend-2
+  - advertisement-magivend-3
+  - advertisement-magivend-4
+  - advertisement-magivend-5
+  - advertisement-magivend-6
+  - advertisement-magivend-7
+  - advertisement-magivend-8
+  - advertisement-magivend-9
+  - advertisement-magivend-10
+  - advertisement-magivend-11

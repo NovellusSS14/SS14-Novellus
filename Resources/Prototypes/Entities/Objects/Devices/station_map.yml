@@ -1,0 +1,63 @@
+# SPDX-FileCopyrightText: 2023 Nemanja <98561806+EmoGarbage404@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2023 metalgearsloth <31366439+metalgearsloth@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 DEATHB4DEFEAT <77995199+DEATHB4DEFEAT@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 deltanedas <39013340+deltanedas@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 lzk <124214523+lzk228@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: entity
+  parent: BaseItem
+  id: BaseHandheldStationMap
+  name: station map
+  description: Displays a readout of the current station.
+  abstract: true
+  components:
+    - type: StationMap
+    - type: Sprite
+      sprite: Objects/Devices/tablets.rsi
+      layers:
+        - state: tablet
+        - state: generic
+          shader: unshaded
+    - type: ActivatableUI
+      inHandsOnly: true
+      singleUser: true
+      key: enum.StationMapUiKey.Key
+    - type: Damageable
+      damageContainer: Inorganic
+    - type: Destructible
+      thresholds:
+        - trigger:
+            !type:DamageTrigger
+            damage: 100
+          behaviors:
+            - !type:DoActsBehavior
+              acts: [ "Destruction" ]
+    - type: UserInterface
+      interfaces:
+        enum.StationMapUiKey.Key:
+          type: StationMapBoundUserInterface
+
+- type: entity
+  id: HandheldStationMap
+  parent:
+  - BaseHandheldStationMap
+  - BaseHandheldComputer
+  suffix: Handheld, Powered
+
+- type: entity
+  id: HandheldStationMapEmpty
+  parent: HandheldStationMap
+  suffix: Handheld, Empty
+  components:
+  - type: ItemSlots
+    slots:
+      cell_slot:
+        name: power-cell-slot-component-slot-name-default
+
+- type: entity
+  id: HandheldStationMapUnpowered
+  parent: BaseHandheldStationMap
+  suffix: Handheld, Unpowered

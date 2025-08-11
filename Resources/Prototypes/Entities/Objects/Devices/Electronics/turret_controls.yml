@@ -1,0 +1,31 @@
+# SPDX-FileCopyrightText: 2025 Solaris <60526456+SolarisBirb@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: entity
+  id: WeaponEnergyTurretStationControlPanelElectronics
+  parent: BaseElectronics
+  name: sentry turret control panel electronics
+  description: An electronics board used in a sentry turret control panel.
+  components:
+  - type: Sprite
+    sprite: Objects/Misc/module.rsi
+    state: security
+  - type: ElectronicsBoard
+    prototype: WeaponEnergyTurretStationControlPanel
+  - type: Tag
+    tags:
+    - TurretControlElectronics
+
+- type: entity
+  id: WeaponEnergyTurretAIControlPanelElectronics
+  parent: WeaponEnergyTurretStationControlPanelElectronics
+  name: AI sentry turret control panel electronics
+  description: An electronics board used in an AI sentry turret control panel.
+  components:
+  - type: Sprite
+    sprite: Objects/Misc/module.rsi
+    state: command
+  - type: ElectronicsBoard
+    prototype: WeaponEnergyTurretAIControlPanel

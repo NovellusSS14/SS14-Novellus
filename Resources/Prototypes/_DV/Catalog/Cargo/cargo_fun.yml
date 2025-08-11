@@ -1,0 +1,26 @@
+# SPDX-FileCopyrightText: 2024 Velcroboy <107660393+IamVelcroboy@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 dge21 <129136517+dge21@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 Rosycup <178287475+Rosycup@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: cargoProduct
+  id: CrateFunBBGun
+  icon:
+    sprite: Objects/Weapons/Guns/Pistols/water_pistol.rsi
+    state: display
+  product: CrateFunBBGun
+  cost: 1000
+  category: Fun
+  group: market
+
+- type: cargoProduct
+  id: CapGunSet
+  icon:
+    sprite: Objects/Fun/caps.rsi
+    state: icon
+  product: CrateCapGunSet
+  cost: 1000
+  category: Fun
+  group: market

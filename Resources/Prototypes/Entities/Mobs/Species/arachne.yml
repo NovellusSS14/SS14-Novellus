@@ -1,0 +1,118 @@
+# SPDX-FileCopyrightText: 2024 Aiden
+# SPDX-FileCopyrightText: 2024 DEATHB4DEFEAT
+# SPDX-FileCopyrightText: 2024 Mnemotechnican
+# SPDX-FileCopyrightText: 2025 EctoplasmIsGood
+# SPDX-FileCopyrightText: 2025 Eris
+# SPDX-FileCopyrightText: 2025 Raikyr0
+# SPDX-FileCopyrightText: 2025 Rosycup
+# SPDX-FileCopyrightText: 2025 Sapphire
+# SPDX-FileCopyrightText: 2025 Skubman
+# SPDX-FileCopyrightText: 2025 Tabitha
+# SPDX-FileCopyrightText: 2025 VMSolidus
+# SPDX-FileCopyrightText: 2025 portfiend
+# SPDX-FileCopyrightText: 2025 sleepyyapril
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: entity
+  abstract: true
+  parent: TaurSpeciesLayers
+  id: BaseArachneAppearance
+  components:
+  - type: Inventory
+    templateId: anytaur
+  - type: HumanoidAppearance
+    species: Arachne
+
+- type: entity
+  save: false
+  name: Urist McArachne
+  parent: [ BaseArachneAppearance, BaseMobHuman ]
+  id: MobArachneBase
+  abstract: true
+  components:
+  - type: Sericulture
+    action: ActionSericulture
+    productionLength: 2
+    entityProduced: MaterialWebSilk1
+    hungerCost: 4 # Should total to 25 total silk on full hunger
+  - type: Fixtures
+    fixtures: # TODO: This needs a second fixture just for mob collisions.
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.40
+        density: 140
+        restitution: 0.0
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
+  - type: Body
+    prototype: Arachne
+    requiredLegs: 8
+  - type: Speech
+    speechSounds: Alto
+  - type: Vocal
+    sounds:
+      Male: MaleArachne
+      Female: FemaleArachne
+      Unsexed: MaleArachne
+  - type: LanguageKnowledge
+    speaks:
+    - TauCetiBasic
+    - Arachnic
+    understands:
+    - TauCetiBasic
+    - Arachnic
+  - type: Tag
+    tags:
+    - CanPilot
+    - FootstepSound
+    - DoorBumpOpener
+    - SpiderCraft
+    - ArachneEmotes
+  - type: StepTriggerImmune
+  - type: Bloodstream
+    bloodReagent: DemonsBlood
+    bloodRegenerationThirst: 4 # 1 unit of demon's blood satiates 4 thirst
+  - type: BloodSucker
+    webRequired: true
+  - type: Cocooner
+  - type: DamageVisuals
+    targetLayers:
+      - "enum.HumanoidVisualLayers.Chest"
+      - "enum.HumanoidVisualLayers.Head"
+      - "enum.HumanoidVisualLayers.LArm"
+      - "enum.HumanoidVisualLayers.RArm"
+  - type: MovedByPressure
+  - type: Barotrauma
+    damage:
+      types:
+        Blunt: 0.05 #per second, scales with pressure and other constants. Reduced Damage. This allows medicine to heal faster than damage.
+  - type: MovementAlwaysTouching
+  - type: MovementSpeedModifier
+    baseWalkSpeed : 3.0
+    baseSprintSpeed : 5.0
+  - type: FootstepModifier # Spider multi-step noise // TheDen
+    footstepSoundCollection:
+      collection: FootstepSpider
+  - type: FireVisuals
+    sprite: Mobs/Effects/onfire.rsi
+    normalState: Generic_mob_burning
+    alternateState: arachne_standing
+    fireStackAlternateState: 3
+  - type: Spider
+  - type: IgnoreSpiderWeb
+  - type: FootPrints
+    leftBarePrint: "footprint-left-bare-spider"
+    rightBarePrint: "footprint-right-bare-spider"
+  - type: NoSlip
+
+- type: entity
+  save: false
+  name: Urist McHands
+  parent: [ BaseArachneAppearance, MobHumanDummy ]
+  id: MobArachneDummy
+  categories: [ HideSpawnMenu ]
+  description: A dummy arachne meant to be used in character setup.

@@ -1,0 +1,17 @@
+# SPDX-FileCopyrightText: 2025 Blu
+# SPDX-FileCopyrightText: 2025 MajorMoth
+# SPDX-FileCopyrightText: 2025 Solstice
+# SPDX-FileCopyrightText: 2025 sleepyyapril
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: entity
+  parent: BlueshieldAmmunitionBox
+  id: BlueshieldAmmunitionBoxFilled
+  suffix: Filled
+  components:
+  - type: StorageFill
+    contents:
+    - id: MagazineBoxShotgunHighCaliber
+      amount: 2
+    - id: MagazineBoxShotgunSlugHighCaliber

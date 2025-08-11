@@ -1,0 +1,80 @@
+# SPDX-FileCopyrightText: 2025 John Willis <143434770+CerberusWolfie@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 KekaniCreates <87507256+KekaniCreates@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 Rosycup <178287475+Rosycup@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 Rouge2t7 <81053047+Sarahon@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 SixplyDev <einlichen@gmail.com>
+# SPDX-FileCopyrightText: 2025 Skubman <ba.fallaria@gmail.com>
+# SPDX-FileCopyrightText: 2025 Timfa <timfalken@hotmail.com>
+# SPDX-FileCopyrightText: 2025 astriloqua <129308840+astriloqua@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: job
+  id: BlueshieldOfficer
+  name: Blueshield Officer
+  description: "Act as a bodyguard and advisor for Command and CentComm VIPs."
+  playTimeTracker: JobBlueshieldOfficer
+  requirements:
+    - !type:CharacterDepartmentTimeRequirement
+      department: Command
+      min: 54000 # 15 hours
+    - !type:CharacterDepartmentTimeRequirement
+      department: Medical
+      min: 54000 # 15 hours
+    - !type:CharacterDepartmentTimeRequirement
+      department: Security
+      min: 54000 # 15 hours
+  weight: 20
+  startingGear: BlueshieldOfficerGear
+  icon: "JobIconBlueshield"
+  requireAdminNotify: true
+  joinNotifyCrew: true
+  supervisors: job-supervisors-centcom
+  canBeAntag: false
+  accessGroups:
+  - BasicAllAccess
+  access:
+  - BlueshieldOfficer
+  - CentralCommand
+  - Corpsman
+  special:
+  - !type:AddImplantSpecial
+    implants: [ MindShieldImplant ]
+  - !type:AddComponentSpecial
+    components:
+      - type: CommandStaff
+  afterLoadoutSpecial:
+  - !type:ModifyEnvirosuitSpecial
+    charges: 8
+  - !type:ModifyEnvirohelmSpecial
+    powerCell: PowerCellHigh
+
+- type: startingGear
+  id: BlueshieldOfficerGear
+  subGear:
+  - BlueshieldPlasmamanGear
+  equipment:
+    back: ClothingBackpackBlueshield
+    jumpsuit: ClothingUniformJumpsuitBlueshieldOfficer
+    shoes: ClothingShoesBootsCombatFilled
+    eyes: ClothingEyesGlassesMedSec
+    ears: ClothingHeadsetAltCentCom
+    gloves: ClothingHandsGlovesCombat
+    id: BlueshieldPDA
+    pocket1: UniqueBlueshieldOfficerLockerTeleporter
+    pocket2: BluespaceLifelineImplanter
+
+    #outerClothing: ClothingBlueshieldArmourVest
+    #ears: ClothingHeadsetAltCommand
+    #belt: ClothingBeltSecurityFilled
+    #pocket1: WeaponPistolMk58
+    #pocket2: DeathAcidifierImplanter
+
+- type: startingGear
+  id: BlueshieldPlasmamanGear
+  parent: BasePlasmamanGear
+  equipment:
+    jumpsuit: ClothingUniformEnvirosuitBlueshield
+    head: ClothingHeadEnvirohelmBlueshield
+    gloves: ClothingHandsGlovesEnviroglovesBlack

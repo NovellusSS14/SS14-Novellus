@@ -1,0 +1,61 @@
+# SPDX-FileCopyrightText: 2024 VMSolidus <evilexecutive@gmail.com>
+# SPDX-FileCopyrightText: 2025 Blitz <73762869+BlitzTheSquishy@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 Skubman <ba.fallaria@gmail.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: characterItemGroup
+  id: LoadoutEyes
+  items:
+    - type: loadout
+      id: LoadoutEyesEyepatch
+    - type: loadout
+      id: LoadoutEyesEyepatchColor
+    - type: loadout
+      id: LoadoutEyesEyepatchColorFlipped
+    - type: loadout
+      id: LoadoutEyesGlasses
+    - type: loadout
+      id: LoadoutEyesGlassesJamjar
+    - type: loadout
+      id: LoadoutEyesGlassesJensen
+    - type: loadout
+      id: LoadoutEyesGlasses3D
+    - type: loadout
+      id: LoadoutEyesGlassesHipster
+    - type: loadout
+      id: LoadoutEyesGlassesMonocle
+    - type: loadout
+      id: LoadoutEyesGlassesPanto
+    - type: loadout
+      id: LoadoutEyesBlindfold
+    - type: loadout
+      id: LoadoutEyesBlindfoldColor
+    - type: loadout
+      id: LoadoutItemCheapSunglasses
+    - type: loadout
+      id: LoadoutEyesGlassesCheapSunglassesAviator
+    - type: loadout
+      id: LoadoutEyesGlassesCheapSunglassesBig
+    - type: loadout
+      id: LoadoutEyesGlassesCheapSunglassesVisor
+    - type: loadout
+      id: LoadoutItemSunglasses
+    - type: loadout
+      id: LoadoutEyesGlassesSunglassesAviator
+    - type: loadout
+      id: LoadoutEyesGlassesSunglassesBig
+    - type: loadout
+      id: LoadoutEyesGlassesSunglassesVisor
+    - type: loadout
+      id: LoadoutItemBlindfoldFake
+    - type: loadout
+      id: LoadoutEyesBlindfoldFakeColor
+    # TheDen - Below
+    - type: loadout
+      id: LoadoutEyesThermalBudget
+    - type: loadout
+      id: LoadoutEyesChemicalBudget
+    - type: loadout
+      id: LoadoutEyesMesonBudget

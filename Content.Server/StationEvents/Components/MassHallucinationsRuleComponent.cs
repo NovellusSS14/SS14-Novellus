@@ -1,0 +1,32 @@
+// SPDX-FileCopyrightText: 2023 DrSmugleaf <DrSmugleaf@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2023 Slava0135 <40753025+Slava0135@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+//
+// SPDX-License-Identifier: MIT
+
+using Content.Server.StationEvents.Events;
+using Robust.Shared.Audio;
+
+namespace Content.Server.StationEvents.Components;
+
+[RegisterComponent, Access(typeof(MassHallucinationsRule))]
+public sealed partial class MassHallucinationsRuleComponent : Component
+{
+    /// <summary>
+    /// The maximum time between incidents in seconds
+    /// </summary>
+    [DataField("maxTimeBetweenIncidents", required: true), ViewVariables(VVAccess.ReadWrite)]
+    public float MaxTimeBetweenIncidents;
+
+    /// <summary>
+    /// The minimum time between incidents in seconds
+    /// </summary>
+    [DataField("minTimeBetweenIncidents", required: true), ViewVariables(VVAccess.ReadWrite)]
+    public float MinTimeBetweenIncidents;
+
+    [DataField("maxSoundDistance", required: true), ViewVariables(VVAccess.ReadWrite)]
+    public float MaxSoundDistance;
+
+    [DataField("sounds", required: true)]
+    public SoundSpecifier Sounds = default!;
+}

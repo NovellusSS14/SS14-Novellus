@@ -1,0 +1,64 @@
+# SPDX-FileCopyrightText: 2024 VMSolidus <evilexecutive@gmail.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: constructionGraph
+  id: N14TableCounterBarRecipes
+  start: start
+  graph:
+    - node: start
+      edges:
+        - to: TableCounterBar
+          completed:
+            - !type:SnapToGrid
+              southRotation: true
+          conditions:
+            - !type:EntityAnchored {}
+          steps:
+            - material: WoodPlank
+              amount: 2
+              doAfter: 2
+
+    - node: TableCounterBar
+      entity: N14TableCounterBar
+
+- type: constructionGraph
+  id: N14TableMetalGrateRecipes
+  start: start
+  graph:
+    - node: start
+      edges:
+        - to: TableMetalGrate
+          completed:
+            - !type:SnapToGrid
+              southRotation: true
+          conditions:
+            - !type:EntityAnchored {}
+          steps:
+            - material: Steel
+              amount: 2
+              doAfter: 2
+
+    - node: TableMetalGrate
+      entity: N14TableMetalGrate
+
+- type: constructionGraph
+  id: N14TableRecipes
+  start: start
+  graph:
+    - node: start
+      edges:
+        - to: TableWoodSettler
+          completed:
+            - !type:SnapToGrid
+              southRotation: true
+          conditions:
+            - !type:EntityAnchored {}
+          steps:
+            - material: WoodPlank
+              amount: 2
+              doAfter: 2
+
+    - node: TableWoodSettler
+      entity: N14TableWoodSettler

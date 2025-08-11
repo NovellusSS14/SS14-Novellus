@@ -1,0 +1,137 @@
+# SPDX-FileCopyrightText: 2021 Swept <sweptwastaken@protonmail.com>
+# SPDX-FileCopyrightText: 2021 Vera Aguilera Puerto <6766154+Zumorica@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2022 Kara <lunarautomaton6@gmail.com>
+# SPDX-FileCopyrightText: 2022 Profane McBane <profanedbane+github@gmail.com>
+# SPDX-FileCopyrightText: 2022 Vordenburg <114301317+Vordenburg@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2023 Guilherme Ornel <86210200+joshepvodka@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2023 lzk <124214523+lzk228@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 Debug <49997488+DebugOk@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 BlueHNT <79374236+BlueHNT@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: Tag
+  id: Cigar
+
+- type: entity
+  id: Cigar
+  parent: BaseCigar
+  name: cigar
+  description: "A brown roll of tobacco and... well, you're not quite sure."
+  components:
+  - type: Sprite
+    sprite: Objects/Consumable/Smokeables/Cigars/cigar.rsi
+    state: unlit-icon
+  - type: Tag
+    tags:
+      - Cigar
+      - Trash
+  - type: SolutionContainerManager
+    solutions:
+      smokable:
+        maxVol: 50
+        reagents:
+          - ReagentId: Nicotine
+            Quantity: 25
+  - type: Clothing
+    sprite: Objects/Consumable/Smokeables/Cigars/cigar.rsi
+    slots: [ mask ]
+    equippedPrefix: unlit
+  - type: Item
+    size: Tiny
+
+- type: entity
+  id: CigarSpent
+  parent: Cigar
+  suffix: spent
+  components:
+  - type: Sprite
+    state: burnt-icon
+  - type: Smokable
+    state: Burnt
+  - type: SolutionContainerManager
+    solutions:
+      smokable:
+        maxVol: 50
+  - type: Tag
+    tags:
+      - Cigar
+      - Trash
+      - Burnt
+
+- type: entity
+  id: CigarGold
+  parent: Cigar
+  name: premium Havanian cigar
+  description: A cigar fit for only the best of the best.
+  components:
+  - type: Sprite
+    sprite: Objects/Consumable/Smokeables/Cigars/cigar-gold.rsi
+    state: unlit-icon
+  - type: Clothing
+    sprite: Objects/Consumable/Smokeables/Cigars/cigar-gold.rsi
+    slots: [ mask ]
+    equippedPrefix: unlit
+  - type: Item
+    size: Tiny
+  - type: SolutionContainerManager
+    solutions:
+      smokable:
+        maxVol: 50
+        reagents:
+          - ReagentId: Nicotine
+            Quantity: 25
+          - ReagentId: Gold
+            Quantity: 5
+
+- type: entity
+  id: CigarGoldSpent
+  parent: CigarGold
+  suffix: spent
+  components:
+  - type: Sprite
+    state: burnt-icon
+  - type: Smokable
+    state: Burnt
+  - type: SolutionContainerManager
+    solutions:
+      smokable:
+        maxVol: 50
+
+- type: entity
+  id: CigarRobust
+  parent: Cigar
+  name: Cohiba Robusto cigar
+  description: There's little more you could want from a cigar.
+  components:
+  - type: Sprite
+    sprite: Objects/Consumable/Smokeables/Cigars/cigar-gold.rsi
+    state: unlit-icon
+  - type: Clothing
+    sprite: Objects/Consumable/Smokeables/Cigars/cigar-gold.rsi
+    slots: [ mask ]
+    equippedPrefix: unlit
+  - type: Item
+    size: Tiny
+  - type: SolutionContainerManager
+    solutions:
+      smokable:
+        maxVol: 50
+        reagents:
+          - ReagentId: Nicotine
+            Quantity: 40 # infinite cancer works
+
+- type: entity
+  id: CigarRobustSpent
+  parent: CigarRobust
+  suffix: spent
+  components:
+  - type: Sprite
+    state: burnt-icon
+  - type: Smokable
+    state: Burnt
+  - type: SolutionContainerManager
+    solutions:
+      smokable:
+        maxVol: 50

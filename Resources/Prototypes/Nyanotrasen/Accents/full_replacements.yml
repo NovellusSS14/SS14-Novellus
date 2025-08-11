@@ -1,0 +1,13 @@
+# SPDX-FileCopyrightText: 2023 Fluffiest Floofers <thebluewulf@gmail.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: MIT
+
+- type: accent
+  id: mothroach
+  fullReplacements:
+  - accent-words-mothroach-1
+  - accent-words-mothroach-2
+  - accent-words-mothroach-3
+  - accent-words-mothroach-4
+  - accent-words-mothroach-5

@@ -1,0 +1,51 @@
+# SPDX-FileCopyrightText: 2023 Colin-Tel <113523727+Colin-Tel@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2023 JJ <47927305+PHCodes@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: MIT
+
+# Curd Cheese
+- type: reaction
+  id: CurdlingCurdCheese
+  impact: Low
+  quantized: true
+  reactants:
+    Milk:
+      amount: 15
+    Vinegar:
+      amount: 5
+    Cream:
+      amount: 5
+  effects:
+    - !type:CreateEntityReactionEffect
+      entity: FoodCurdCheese
+      number: 2
+      
+# Mozzarella
+- type: reaction
+  id: CurdlingMozzarella
+  impact: Low
+  quantized: true
+  reactants:
+    Milk:
+      amount: 15
+    Cream:
+      amount: 10
+    Enzyme:
+      amount: 5
+      catalyst: true
+  effects:
+    - !type:CreateEntityReactionEffect
+      entity: FoodMozzarella
+      number: 2
+
+- type: reaction
+  id: Ghee
+  impact: Low
+  minTemp: 373
+  reactants:
+    Butter:
+      amount: 1
+  products:
+    OilGhee: 1
+    

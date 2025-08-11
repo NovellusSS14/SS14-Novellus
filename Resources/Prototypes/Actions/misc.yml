@@ -1,0 +1,16 @@
+# SPDX-FileCopyrightText: 2024 Mnemotechnican <69920617+Mnemotechnician@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 sleepyyapril <flyingkarii@gmail.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: entity
+  id: ActionCancelEscape
+  name: Stop escaping
+  description: Calm down and sit peacefuly in your carrier's inventory
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: InstantAction
+    icon: Actions/escapeinventory.rsi/cancel-escape.png
+    event: !type:EscapeInventoryCancelActionEvent
+    useDelay: 2

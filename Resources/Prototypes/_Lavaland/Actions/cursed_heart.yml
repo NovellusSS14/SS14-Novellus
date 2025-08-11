@@ -1,0 +1,18 @@
+# SPDX-FileCopyrightText: 2025 Eris <eris@erisws.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: entity
+  id: ActionPumpCursedHeart
+  name: action-pump-heart
+  description: action-pump-heart-desc
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: InstantAction
+    icon:
+      sprite: _Lavaland/Objects/Specific/Lavaland/loot.rsi
+      state: cursed_heart
+    itemIconStyle: BigAction
+    event: !type:PumpHeartActionEvent
+    useDelay: 1

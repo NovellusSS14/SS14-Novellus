@@ -1,0 +1,277 @@
+# SPDX-FileCopyrightText: 2022 Kara <lunarautomaton6@gmail.com>
+# SPDX-FileCopyrightText: 2022 metalgearsloth <metalgearsloth@gmail.com>
+# SPDX-FileCopyrightText: 2023 Leon Friedrich <60421075+ElectroJr@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2023 Nemanja <98561806+EmoGarbage404@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2023 Nim <128169402+Nimfar11@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2023 coolmankid12345 <55817627+coolmankid12345@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2023 coolmankid12345 <coolmankid12345@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2023 metalgearsloth <31366439+metalgearsloth@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 Remuchi <72476615+Remuchi@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 deltanedas <39013340+deltanedas@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 Nathaniel Adams <60526456+Nathaniel-Adams@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 Rosycup <178287475+Rosycup@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 Solaris <60526456+SolarisBirb@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 Timfa <timfalken@hotmail.com>
+# SPDX-FileCopyrightText: 2025 VMSolidus <evilexecutive@gmail.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 stellar-novas <stellar_novas@riseup.net>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: npcFaction
+  id: Dragon
+  hostile:
+    - NanoTrasen
+    - Syndicate
+    - Xeno
+    - PetsNT
+    - Zombie
+    - Revolutionary
+    - GladiabotFFA
+    - GladiabotRed
+    - GladiabotGreen
+    - GladiabotBlue
+    - GladiabotYellow
+    - SAN
+    - Changeling
+
+- type: npcFaction
+  id: NanoTrasen
+  hostile:
+    - SimpleHostile
+    - Syndicate
+    - Xeno
+    - Zombie
+    - Revolutionary
+    - Dragon
+    - SAN
+
+- type: npcFaction
+  id: Mouse
+  hostile:
+    - PetsNT
+
+- type: npcFaction
+  id: Passive
+
+- type: npcFaction
+  id: PetsNT
+  hostile:
+    - Mouse
+    - SimpleHostile
+    - Zombie
+    - Xeno
+
+- type: npcFaction
+  id: SimpleHostile
+  friendly:
+  - AnimalFriend
+  hostile:
+    - NanoTrasen
+    - Syndicate
+    - Passive
+    - PetsNT
+    - Zombie
+    - Revolutionary
+    - GeometerOfBlood
+    - GladiabotFFA
+    - GladiabotRed
+    - GladiabotGreen
+    - GladiabotBlue
+    - GladiabotYellow
+    - SAN
+    - Changeling
+
+- type: npcFaction
+  id: SimpleNeutral
+
+- type: npcFaction
+  id: Syndicate
+  hostile:
+    - NanoTrasen
+    - SimpleHostile
+    - Xeno
+    - PetsNT
+    - Zombie
+    - SAN
+    - Changeling
+
+- type: npcFaction
+  id: Xeno
+  hostile:
+    - NanoTrasen
+    - Syndicate
+    - Passive
+    - PetsNT
+    - Zombie
+    - Revolutionary
+    - GladiabotFFA
+    - GladiabotRed
+    - GladiabotGreen
+    - GladiabotBlue
+    - GladiabotYellow
+    - SAN
+    - Changeling
+
+- type: npcFaction
+  id: Zombie
+  hostile:
+    - NanoTrasen
+    - SimpleNeutral
+    - SimpleHostile
+    - Syndicate
+    - Passive
+    - PetsNT
+    - Revolutionary
+    - GladiabotFFA
+    - GladiabotRed
+    - GladiabotGreen
+    - GladiabotBlue
+    - GladiabotYellow
+    - SAN
+    - Changeling
+
+- type: npcFaction
+  id: Revolutionary
+  hostile:
+    - NanoTrasen
+    - Zombie
+    - SimpleHostile
+    - Dragon
+    - SAN
+
+- type: npcFaction
+  id: Pibble
+  friendly:
+  - AnimalFriend
+  hostile:
+    - Cat
+    - Birb
+    - Mailman
+
+- type: npcFaction
+  id: Mailman
+
+- type: npcFaction
+  id: Cat
+  hostile:
+    - Mouse
+    - SimpleHostile
+
+- type: npcFaction
+  id: Birb
+
+- type: npcFaction
+  id: AnimalFriend
+
+- type: npcFaction
+  id: GladiabotFFA
+  hostile:
+    - GladiabotFFA
+    - GladiabotRed
+    - GladiabotGreen
+    - GladiabotBlue
+    - GladiabotYellow
+    - SimpleHostile
+    - Xeno
+    - Zombie
+    - Dragon
+
+- type: npcFaction
+  id: GladiabotRed
+  hostile:
+    - GladiabotFFA
+    - GladiabotGreen
+    - GladiabotBlue
+    - GladiabotYellow
+    - SimpleHostile
+    - Xeno
+    - Zombie
+    - Dragon
+
+- type: npcFaction
+  id: GladiabotGreen
+  hostile:
+    - GladiabotFFA
+    - GladiabotRed
+    - GladiabotBlue
+    - GladiabotYellow
+    - SimpleHostile
+    - Xeno
+    - Zombie
+    - Dragon
+
+- type: npcFaction
+  id: GladiabotBlue
+  hostile:
+    - GladiabotFFA
+    - GladiabotRed
+    - GladiabotGreen
+    - GladiabotYellow
+    - SimpleHostile
+    - Xeno
+    - Zombie
+    - Dragon
+
+- type: npcFaction
+  id: GladiabotYellow
+  hostile:
+    - GladiabotFFA
+    - GladiabotRed
+    - GladiabotGreen
+    - GladiabotBlue
+    - SimpleHostile
+    - Xeno
+    - Zombie
+    - Dragon
+
+- type: npcFaction
+  id: SAN
+  hostile:
+    - NanoTrasen
+    - SimpleHostile
+    - Syndicate
+    - Xeno
+    - Zombie
+    - Revolutionary
+    - Dragon
+    - Changeling
+
+- type: npcFaction
+  id: AllHostile
+  hostile:
+  - NanoTrasen
+  - Dragon
+  - Mouse
+  - Passive
+  - PetsNT
+  - SimpleHostile
+  - SimpleNeutral
+  - Syndicate
+  - Xeno
+  - Zombie
+  - Revolutionary
+  - Changeling # goob edit - changelings
+# Commented out until we add theses factions into EE
+#  - Heretic # goob edit - heretics
+#  - Blob # Goobstation - Blob
+# - Wizard # goob edit - wizard
+#  - PirateFaction # goob - pirates
+
+- type: npcFaction
+  id: LavalandHostile
+  hostile:
+    - NanoTrasen
+    - Syndicate
+    - Passive
+    - PetsNT
+    - Zombie
+    - Revolutionary
+    - GeometerOfBlood
+    - GladiabotFFA
+    - GladiabotRed
+    - GladiabotGreen
+    - GladiabotBlue
+    - GladiabotYellow
+    - SAN
+    - Changeling

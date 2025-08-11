@@ -1,0 +1,162 @@
+# SPDX-FileCopyrightText: 2022 Rane
+# SPDX-FileCopyrightText: 2023 Colin-Tel
+# SPDX-FileCopyrightText: 2023 Darkie
+# SPDX-FileCopyrightText: 2023 DrSmugleaf
+# SPDX-FileCopyrightText: 2023 EnDecc
+# SPDX-FileCopyrightText: 2023 Fluffiest Floofers
+# SPDX-FileCopyrightText: 2023 JJ
+# SPDX-FileCopyrightText: 2023 Kara
+# SPDX-FileCopyrightText: 2023 Morb
+# SPDX-FileCopyrightText: 2023 Nemanja
+# SPDX-FileCopyrightText: 2023 Nim
+# SPDX-FileCopyrightText: 2023 Sif
+# SPDX-FileCopyrightText: 2024 Boaz1111
+# SPDX-FileCopyrightText: 2024 Ed
+# SPDX-FileCopyrightText: 2024 FoxxoTrystan
+# SPDX-FileCopyrightText: 2024 Remuchi
+# SPDX-FileCopyrightText: 2024 ShatteredSwords
+# SPDX-FileCopyrightText: 2024 SimpleStation14
+# SPDX-FileCopyrightText: 2024 SlamBamActionman
+# SPDX-FileCopyrightText: 2024 VMSolidus
+# SPDX-FileCopyrightText: 2024 Wrexbe (Josh)
+# SPDX-FileCopyrightText: 2024 deltanedas
+# SPDX-FileCopyrightText: 2024 flyingkarii
+# SPDX-FileCopyrightText: 2024 lzk
+# SPDX-FileCopyrightText: 2024 reverie collection
+# SPDX-FileCopyrightText: 2025 BlitzTheSquishy
+# SPDX-FileCopyrightText: 2025 MajorMoth
+# SPDX-FileCopyrightText: 2025 Rosycup
+# SPDX-FileCopyrightText: 2025 Skubman
+# SPDX-FileCopyrightText: 2025 Timfa
+# SPDX-FileCopyrightText: 2025 sleepyyapril
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+# Traitor
+- type: weightedRandom
+  id: TraitorObjectiveGroups
+  weights:
+    TraitorObjectiveGroupSteal: 1
+    TraitorObjectiveGroupKill: 1
+    TraitorObjectiveGroupState: 1 #As in, something about your character. Alive, dead, arrested, gained an ability...
+    TraitorObjectiveGroupSocial: 1 #Involves helping/harming others without killing them or stealing their stuff
+
+- type: weightedRandom
+  id: TraitorObjectiveGroupSteal
+  weights:
+    CaptainIDStealObjective: 1
+    CMOHyposprayStealObjective: 1
+    RDHardsuitStealObjective: 1
+    NukeDiskStealObjective: 1
+    MagbootsStealObjective: 1
+    CorgiMeatStealObjective: 1
+    MantisKnifeStealObjective: 1 # Nyanotrasen - ForensicMantis steal objective, see Resources/Prototypes/Nyanotrasen/Objectives/traitor.yml
+    ClipboardStealObjective: 1
+    #RdClipboardStealObjective: 1 # DeltaV - Mysta steal Objective see Resources/Prototypes/_DV/Objectives/traitor.yml
+    CaptainGunStealObjective: 0.5
+    NTRepGunStealObjective: 0.5
+    CaptainJetpackStealObjective: 0.5
+    HandTeleporterStealObjective: 0.5
+    LOLuckyBillStealObjective: 0.5 # DeltaV - LO steal objective, see Resources/Prototypes/_DV/Objectives/traitor.yml
+    HoPBookIanDossierStealObjective: 1 # DeltaV - HoP steal objective, see Resources/Prototypes/_DV/Objectives/traitor.yml
+    HoSGunStealObjective: 0.5
+    StealSupermatterSliverObjective: 0.5
+    EnergyShotgunStealObjective: 0.5
+
+- type: weightedRandom
+  id: TraitorObjectiveGroupKill
+  weights:
+    KillRandomPersonObjective: 1
+    TeachLessonRandomPersonObjective: 1
+    #KillRandomHeadObjective: 0.25
+
+- type: weightedRandom
+  id: TraitorObjectiveGroupState
+  weights:
+    EscapeShuttleObjective: 1
+    DieObjective: 0.05
+    #HijackShuttleObjective: 0.02
+
+- type: weightedRandom
+  id: TraitorObjectiveGroupSocial
+  weights:
+    RandomTraitorAliveObjective: 1
+    RandomTraitorProgressObjective: 1
+    # RaiseGlimmerObjective: 0.5 # Nyanotrasen - Raise glimmer to a target amount, see Resources/Prototypes/Nyanotrasen/Objectives/traitor.yml
+
+#Thief groups
+- type: weightedRandom
+  id: ThiefObjectiveGroups
+  weights:
+    ThiefObjectiveGroupCollection: 1
+    ThiefObjectiveGroupItem: 1
+
+- type: weightedRandom
+  id: ThiefBigObjectiveGroups
+  weights:
+    ThiefObjectiveGroupStructure: 0 #Temporarily disabled until obvious ways to steal structures are added
+    ThiefObjectiveGroupAnimal: 2
+
+- type: weightedRandom
+  id: ThiefObjectiveGroupCollection
+  weights:
+    HeadCloakStealCollectionObjective: 1 #command
+    HeadBedsheetStealCollectionObjective: 1
+    StampStealCollectionObjective: 1
+    DoorRemoteStealCollectionObjective: 1
+    TechnologyDiskStealCollectionObjective: 1 #rnd
+    FigurineStealCollectionObjective: 0.3 #service
+    IDCardsStealCollectionObjective: 1
+    LAMPStealCollectionObjective: 2 #only for moth
+
+- type: weightedRandom
+  id: ThiefObjectiveGroupItem
+  weights:
+    ForensicScannerStealObjective: 1 #sec
+    FlippoEngravedLighterStealObjective: 0.5
+    ClothingHeadHatWardenStealObjective: 1
+    ClothingOuterHardsuitVoidParamedStealObjective: 1 #med
+    MedicalTechFabCircuitboardStealObjective: 1
+    ClothingHeadsetAltMedicalStealObjective: 1
+    FireAxeStealObjective: 1 #eng
+    AmePartFlatpackStealObjective: 1
+    ExpeditionsCircuitboardStealObjective: 1 #sup
+    CargoShuttleCircuitboardStealObjective: 1
+    SalvageShuttleCircuitboardStealObjective: 1
+    ClothingEyesHudBeerStealObjective: 1 #srv
+    BibleStealObjective: 1
+    ClothingNeckGoldmedalStealObjective: 1 #other
+    ClothingNeckClownmedalStealObjective: 0.5
+
+- type: weightedRandom
+  id: ThiefObjectiveGroupStructure
+  weights:
+    NuclearBombStealObjective: 0.5
+    FaxMachineCaptainStealObjective: 1
+    VehicleSecwayStealObjective: 1
+    ChemDispenserStealObjective: 1
+    XenoArtifactStealObjective: 1
+    FreezerHeaterStealObjective: 1
+    TegStealObjective: 1
+    BoozeDispenserStealObjective: 1
+    AltarNanotrasenStealObjective: 1
+    PlantRDStealObjective: 1
+
+- type: weightedRandom
+  id: ThiefObjectiveGroupAnimal
+  weights:
+    IanStealObjective: 1
+    BingusStealObjective: 1
+    McGriffStealObjective: 1
+    WalterStealObjective: 1
+    MortyStealObjective: 1
+    RenaultStealObjective: 1
+    ShivaStealObjective: 1
+    TropicoStealObjective: 1
+    SilviaStealObjective: 1 #DeltaV - CMO steal objective, see Resources/Prototypes/DeltaV/Objectives/traitor.yml
+
+- type: weightedRandom
+  id: ThiefObjectiveGroupEscape
+  weights:
+    EscapeThiefShuttleObjective: 1
+#Changeling, crew, wizard, when you code it...

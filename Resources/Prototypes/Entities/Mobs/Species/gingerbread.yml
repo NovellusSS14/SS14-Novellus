@@ -1,0 +1,69 @@
+# SPDX-FileCopyrightText: 2023 Flareguy
+# SPDX-FileCopyrightText: 2024 Ed
+# SPDX-FileCopyrightText: 2024 Mr. 27
+# SPDX-FileCopyrightText: 2024 Piras314
+# SPDX-FileCopyrightText: 2024 Plykiya
+# SPDX-FileCopyrightText: 2024 Tadeo
+# SPDX-FileCopyrightText: 2024 sleepyyapril
+# SPDX-FileCopyrightText: 2024 username
+# SPDX-FileCopyrightText: 2024 whateverusername0
+# SPDX-FileCopyrightText: 2025 88tv
+# SPDX-FileCopyrightText: 2025 Jakumba
+# SPDX-FileCopyrightText: 2025 YoungThug
+# SPDX-FileCopyrightText: 2025 lzk
+# SPDX-FileCopyrightText: 2025 taydeo
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: entity
+  save: false
+  name: Urist McCookie
+  parent: BaseMobSpeciesOrganic
+  id: BaseMobGingerbread
+  abstract: true
+  components:
+  - type: HumanoidAppearance
+    species: Gingerbread
+  - type: Icon
+    sprite: Mobs/Species/Gingerbread/parts.rsi
+    state: full
+  - type: Body
+    prototype: Gingerbread
+    requiredLegs: 2
+  - type: Damageable
+    damageContainer: Biological
+    damageModifierSet: Gingerbread
+  - type: DamageVisuals
+    damageOverlayGroups:
+      Brute:
+        sprite: Mobs/Effects/brute_damage.rsi
+        color: "#896e55"
+  - type: Butcherable
+    butcheringType: Spike
+    spawned:
+      - id: FoodBakedCookie #should be replaced with gingerbread sheets or something... provided you're willing to make a full spriteset of those.
+        amount: 5
+  - type: Bloodstream
+    bloodReagent: Sugar
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.35
+        density: 100 #fairly light
+        restitution: 0.0
+        mask:
+          - MobMask
+        layer:
+          - MobLayer
+  - type: TypingIndicator
+    proto: gingerbread
+
+- type: entity
+  parent: BaseSpeciesDummy
+  id: MobGingerbreadDummy
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: HumanoidAppearance
+    species: Gingerbread

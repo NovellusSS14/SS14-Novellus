@@ -1,0 +1,75 @@
+# SPDX-FileCopyrightText: 2025 BramvanZijp <56019239+BramvanZijp@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 Eagle-0 <114363363+Eagle-0@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: martialArt
+  id: CloseQuartersCombat
+  martialArtsForm: CloseQuartersCombat
+  roundstartCombos: CQCMoves
+
+- type: comboList
+  id: CQCMoves
+  combos:
+  - CQCConsecutive
+  - CQCPressure
+  - CQCRestrain
+  - CQCKick
+  - CQCSlam
+
+- type: combo
+  id: CQCSlam
+  name: Slam
+  martialArtsForm: CloseQuartersCombat
+  attacks:
+  - Grab
+  - Harm
+  event: !type:CqcSlamPerformedEvent { }
+  extraDamage: 10 #
+  paralyzeTime: 12 # in seconds
+
+
+- type: combo
+  id: CQCKick
+  name: Kick
+  martialArtsForm: CloseQuartersCombat
+  attacks:
+  - Harm
+  - Harm
+  event: !type:CqcKickPerformedEvent
+  extraDamage: 10
+  staminaDamage: 25
+
+- type: combo
+  id: CQCRestrain
+  name: Restrain
+  martialArtsForm: CloseQuartersCombat
+  attacks:
+  - Grab
+  - Grab
+  event: !type:CqcRestrainPerformedEvent
+  paralyzeTime: 10
+  staminaDamage: 30
+
+- type: combo
+  id: CQCPressure
+  name: Pressure
+  martialArtsForm: CloseQuartersCombat
+  attacks:
+  - Disarm
+  - Grab
+  event: !type:CqcPressurePerformedEvent
+  staminaDamage: 65
+
+- type: combo
+  id: CQCConsecutive
+  name: Consecutive
+  martialArtsForm: CloseQuartersCombat
+  attacks:
+  - Disarm
+  - Disarm
+  - Harm
+  event: !type:CqcConsecutivePerformedEvent
+  extraDamage: 10
+  staminaDamage: 70

@@ -1,0 +1,25 @@
+# SPDX-FileCopyrightText: 2023 Fluffiest Floofers <thebluewulf@gmail.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: MIT
+
+# - type: constructionGraph
+#   id: GolemSilver
+#   start: start
+#   graph:
+#     - node: start
+#       edges:
+#         - to: golem
+#           steps:
+#             - material: Plasteel
+#               amount: 20
+#             - material: Uranium
+#               amount: 10
+#             - tag: CoreSilver
+#               icon:
+#                 sprite: Objects/Misc/guardian_info.rsi
+#                 state: guardian_info
+#               name: a silver core
+#               doAfter: 10
+#     - node: golem
+#       entity: MobGolemSilver

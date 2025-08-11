@@ -1,0 +1,214 @@
+# SPDX-FileCopyrightText: 2025 ElusiveCoin
+# SPDX-FileCopyrightText: 2025 Jakumba
+# SPDX-FileCopyrightText: 2025 Rosycup
+# SPDX-FileCopyrightText: 2025 Tabitha
+# SPDX-FileCopyrightText: 2025 TheOneTrueWolfio
+# SPDX-FileCopyrightText: 2025 foxcurl
+# SPDX-FileCopyrightText: 2025 juniwoofs
+# SPDX-FileCopyrightText: 2025 portfiend
+# SPDX-FileCopyrightText: 2025 sleepyyapril
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: trait
+  id: Heavyweight
+  category: TraitsPhysicalBiological
+  points: -2 # Has pros and cons, not sure
+  requirements:
+  - !type:CharacterJobRequirement
+    inverted: true
+    jobs:
+      - StationAi
+      - Borg
+      - MedicalBorg
+  - !type:CharacterTraitRequirement
+    inverted: true
+    traits:
+    - Lightweight
+    - UltraHeavyweight
+    - UltraLightweight
+  functions:
+    - !type:TraitAddComponent
+      components:
+        - type: FixtureDensityModifier
+          min: 100
+          factor: 1.33
+
+- type: trait
+  id: UltraHeavyweight
+  category: TraitsPhysicalBiological
+  points: -4 # Has pros and cons, not sure
+  requirements:
+  - !type:CharacterJobRequirement
+    inverted: true
+    jobs:
+      - StationAi
+      - Borg
+      - MedicalBorg
+  - !type:CharacterTraitRequirement
+    inverted: true
+    traits:
+    - Lightweight
+    - Heavyweight
+    - UltraLightweight
+  functions:
+    - !type:TraitAddComponent
+      components:
+        - type: FixtureDensityModifier
+          min: 100
+          factor: 2
+
+- type: trait
+  id: UltraLightweight
+  category: TraitsPhysicalBiological
+  points: 4 # Has pros and cons, not sure
+  requirements:
+  - !type:CharacterJobRequirement
+    inverted: true
+    jobs:
+      - StationAi
+      - Borg
+      - MedicalBorg
+  - !type:CharacterTraitRequirement
+    inverted: true
+    traits:
+    - Heavyweight
+    - UltraHeavyweight
+    - Lightweight
+  functions:
+    - !type:TraitAddComponent
+      components:
+        - type: FixtureDensityModifier
+          min: 100
+          factor: 0.33
+
+- type: trait
+  id: ZeroGTraining
+  category: TraitsPhysicalFeats
+  points: -2 # Suggested value, tweak as appropriate
+  requirements:
+  - !type:CharacterJobRequirement
+    inverted: true
+    jobs:
+      - StationAi
+      - Borg
+      - MedicalBorg
+  - !type:CharacterSpeciesRequirement
+    inverted: true
+    species:
+    - Moth
+    - Harpy
+    - Resomi #Species trait
+  - !type:CharacterTraitRequirement
+    inverted: true
+    traits:
+    - ZeroGAverse
+    - WheelchairBound
+  functions:
+    - !type:TraitReplaceComponent
+      components:
+        - type: MovementSpeedModifier
+          weightlessAcceleration: 2.5
+
+- type: trait
+  id: ZeroGAverse
+  category: TraitsPhysicalDisabilities
+  points: 2 # Suggested value, tweak as appropriate
+  requirements:
+  - !type:CharacterJobRequirement
+    inverted: true
+    jobs:
+      - StationAi
+      - Borg
+      - MedicalBorg
+  - !type:CharacterSpeciesRequirement
+    inverted: true
+    species:
+    - Moth
+    - Harpy
+  - !type:CharacterTraitRequirement
+    inverted: true
+    traits:
+    - ZeroGTraining
+    - WheelchairBound
+  functions:
+    - !type:TraitReplaceComponent
+      components:
+        - type: MovementSpeedModifier
+          weightlessAcceleration: 0.35
+
+- type: trait
+  id: TailWag
+  category: TraitsPhysicalBiological
+  points: 0
+  slots: 0
+  requirements:
+  - !type:CharacterJobRequirement
+    inverted: true
+    jobs:
+      - StationAi
+      - Borg
+      - MedicalBorg
+  functions:
+    - !type:TraitAddComponent
+      components:
+        - type: Wagging
+
+- type: trait
+  id: HealingFactor
+  category: TraitsPhysicalBiological
+  points: -6
+  requirements:
+    - !type:CharacterJobRequirement
+      inverted: true
+      jobs:
+        - StationAi
+        - Borg
+        - MedicalBorg
+    - !type:CharacterSpeciesRequirement
+      inverted: true
+      species:
+        - IPC
+    - !type:CharacterTraitRequirement
+      inverted: true
+      traits:
+        - PlateletFactories
+  functions:
+    - !type:TraitReplaceComponent
+      components:
+        - type: PassiveDamage
+          allowedStates:
+          - Alive
+          - Critical
+          damageCap: 400
+          damage:
+            groups:
+              Brute: -0.2
+              Burn: -0.2
+              Airloss: -0.3
+
+- type: trait
+  id: HandsFreePulling
+  category: TraitsPhysicalBiological
+  points: -10
+  requirements:
+    - !type:CharacterJobRequirement
+      inverted: true
+      jobs:
+        - StationAi
+        - Borg
+        - MedicalBorg
+    - !type:CharacterTraitRequirement
+      inverted: true
+      traits:
+        - Bodybuilder
+        - Weakling
+    - !type:CharacterSpeciesRequirement
+      inverted: true
+      species:
+        - Reptilian
+  functions:
+    - !type:TraitReplaceComponent
+      components:
+        - type: Puller
+          needsHands: false

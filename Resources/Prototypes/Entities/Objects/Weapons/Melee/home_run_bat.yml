@@ -1,0 +1,51 @@
+# SPDX-FileCopyrightText: 2024 Angelo Fallaria <ba.fallaria@gmail.com>
+# SPDX-FileCopyrightText: 2024 OldDanceJacket <98985560+OldDanceJacket@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 Skubman <ba.fallaria@gmail.com>
+# SPDX-FileCopyrightText: 2024 sleepyyapril <flyingkarii@gmail.com>
+# SPDX-FileCopyrightText: 2025 Rosycup <178287475+Rosycup@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: entity
+  parent: BaseBallBat
+  id: BaseBallBatHomeRun
+  name: home run bat
+  description: Heavy metal bat with an extra kick.
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Melee/home_run_bat.rsi
+    state: icon
+  - type: MeleeWeapon
+    damage:
+      types:
+        Blunt: 11
+    bluntStaminaDamageFactor: 2.0
+    heavyRateModifier: 1.5
+    heavyDamageBaseModifier: 1.75
+    heavyStaminaCost: 2.5
+    angle: 120
+    soundHit:
+      collection: ExplosionSmall
+  - type: DamageOtherOnHit
+    soundHit:
+      collection: MetalThud # A throw won't knock them back so it's just a normal thud
+  - type: MeleeRequiresWield # You can't hit a home run with one hand, jimbo.
+  - type: MeleeThrowOnHit
+    speed: 30
+    lifetime: 5
+  - type: Item
+    size: Large
+  - type: Tool
+    speedModifier: 0.5 # it's very heavy, it rolls slower than a wooden bat
+  - type: Clothing
+    sprite: Objects/Weapons/Melee/home_run_bat.rsi
+    quickEquip: false
+    slots:
+    - back
+    - suitStorage
+  - type: UseDelay
+    delay: 2
+  - type: PhysicalComposition
+    materialComposition:
+      Steel: 350 # it's not made of wood

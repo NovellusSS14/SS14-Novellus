@@ -1,0 +1,20 @@
+# SPDX-FileCopyrightText: 2023 MisterMecky <mrmecky@hotmail.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: MIT
+
+- type: constructionGraph
+  id: BoxCardboard
+  start: start
+  graph:
+    - node: start
+      edges:
+        - to: boxcardboard
+          steps:
+            - material: Cardboard
+              amount: 1
+              doAfter: 4
+
+
+    - node: boxcardboard
+      entity: BoxCardboard

@@ -1,0 +1,45 @@
+# SPDX-FileCopyrightText: 2023 Vordenburg <114301317+Vordenburg@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2023 eclips_e <67359748+Just-a-Unity-Dev@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 sleepyyapril <flyingkarii@gmail.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: entity
+  parent: BaseItem
+  id: BaseBoardEntity # Board item
+  name: board
+  abstract: true
+  description: A blank board.
+  components:
+    - type: TabletopGame
+      size: 256, 256
+      setup:
+        !type:TabletopEmptySetup
+        boardPrototype: Crowbar
+
+- type: entity
+  id: BaseTabletopPiece # Board piece
+  parent: BaseItem
+  abstract: true
+  components:
+  - type: TabletopDraggable
+  - type: Sprite
+    noRot: true
+  - type: Appearance
+  - type: Tag
+    tags:
+      - TabletopPiece
+
+- type: entity
+  id: BaseBoardTabletop
+  name: baseboard
+  abstract: true
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Tag
+    tags:
+      - TabletopBoard
+  - type: Sprite
+    noRot: false
+    drawdepth: FloorTiles

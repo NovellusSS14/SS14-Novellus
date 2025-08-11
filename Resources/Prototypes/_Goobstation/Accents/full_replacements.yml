@@ -1,0 +1,26 @@
+# SPDX-FileCopyrightText: 2025 fishbait <gnesse@gmail.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+# Accents that work off of full replacements rather than word replacements.
+
+- type: accent
+  id: gondola
+  fullReplacements:
+  - accent-words-gondola-1
+
+- type: accent
+  id: bingle
+  fullReplacements:
+  - bingle-accent-1  # for the odds
+  - bingle-accent-1
+  - bingle-accent-1
+  - bingle-accent-1
+  - bingle-accent-1
+  - bingle-accent-1
+  - bingle-accent-1
+  - bingle-accent-2
+  - bingle-accent-3
+  - bingle-accent-4
+  - bingle-accent-5

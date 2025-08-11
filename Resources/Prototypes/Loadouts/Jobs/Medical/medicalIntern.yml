@@ -1,0 +1,58 @@
+# SPDX-FileCopyrightText: 2024 VMSolidus <evilexecutive@gmail.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+# Medical Intern
+# Backpacks
+
+# Belt
+- type: loadout
+  id: LoadoutMedicalInternBeltMedical
+  category: JobsMedicalMedicalIntern
+  cost: 0
+  exclusive: true
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutMedicalInternBelt
+    - !type:CharacterJobRequirement
+      jobs:
+        - MedicalIntern
+  items:
+    - ClothingBeltMedical
+
+- type: loadout
+  id: LoadoutMedicalInternBeltMedicalFilled
+  category: JobsMedicalMedicalIntern
+  cost: 0
+  exclusive: true
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutMedicalInternBelt
+    - !type:CharacterJobRequirement
+      jobs:
+        - MedicalIntern
+  items:
+    - ClothingBeltMedicalFilled
+
+# Ears
+
+# Equipment
+
+# Eyes
+
+# Gloves
+
+# Head
+
+# Id
+
+# Neck
+
+# Mask
+
+# Outer
+
+# Shoes
+
+# Uniforms

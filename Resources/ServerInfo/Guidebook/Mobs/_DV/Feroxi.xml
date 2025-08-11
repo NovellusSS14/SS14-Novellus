@@ -1,0 +1,40 @@
+<!--
+SPDX-FileCopyrightText: 2025 Blitz <73762869+BlitzTheSquishy@users.noreply.github.com>
+SPDX-FileCopyrightText: 2025 portfiend <109661617+portfiend@users.noreply.github.com>
+SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+
+SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+-->
+
+<Document>
+  # Feroxi
+
+  <Box>
+    <GuideEntityEmbed Entity="MobFeroxiDummy" Caption=""/>
+  </Box>
+
+  The Feroxi (fer-ox-i) are a race of humanoid shark-like beings. Carnivourous in nature with a strong bite force.
+
+  They natively speak the Nēhina language.
+
+  ## Diet
+
+  - Can ONLY eat meat.
+  - Will get poisoned by Theobromine (Chocolate, Tea, Coffee) and Allicin (Onion, Garlic).
+
+  ## Benefits
+
+  - Uses their jaws to do piercing damage, and harder than other species, rivaling Oni.
+  - Their cartilaginous skeleton allows them to resist blunt force trauma more easily.
+  - Their adaptation to native environments allows them to resist the cold more easily.
+  - Their biology allow them to breathe water vapour.
+
+  ## Drawbacks
+
+  - They take 10% more Slash damage.
+  - Gets thirsty 100% faster. That's faster than a Diona!
+  - When thirst falls to "Parched" they begin to suffocate. Have water handy!
+  - Saline is too salty! It hydrates you much less!
+  - Your lungs are unremovable as theyre intergrated with your gills.
+
+</Document>

@@ -1,0 +1,45 @@
+# SPDX-FileCopyrightText: 2025 Blitz
+# SPDX-FileCopyrightText: 2025 BlitzTheSquishy
+# SPDX-FileCopyrightText: 2025 sleepyyapril
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: loadout
+  id: LoadoutServiceLawyerUniformBlackSuit
+  category: JobsServiceLawyer
+  cost: 0
+  exclusive: true
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutLawyerUniforms
+    - !type:CharacterJobRequirement
+      jobs:
+        - Lawyer
+  items:
+    - ClothingUniformJumpsuitLawyerBlack
+
+- type: loadout
+  id: LoadoutServiceLawyerUniformBlackSkirt
+  category: JobsServiceLawyer
+  cost: 0
+  exclusive: true
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutLawyerUniforms
+    - !type:CharacterJobRequirement
+      jobs:
+        - Lawyer
+  items:
+    - ClothingUniformJumpskirtLawyerBlack
+
+- type: loadout
+  id: LoadoutTowelMaroon
+  category: JobsServiceLawyer
+  cost: 1
+  canBeHeirloom: true
+  requirements:
+    - !type:CharacterJobRequirement
+      jobs:
+        - Lawyer
+  items:
+    - TowelColorMaroon

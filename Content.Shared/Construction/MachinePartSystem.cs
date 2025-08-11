@@ -1,0 +1,171 @@
+// SPDX-FileCopyrightText: 2022 Rane <60792108+Elijahrane@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 Kara <lunarautomaton6@gmail.com>
+// SPDX-FileCopyrightText: 2024 Nemanja <98561806+EmoGarbage404@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 Nemanja <98561806+emogarbage404@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 VMSolidus <evilexecutive@gmail.com>
+// SPDX-FileCopyrightText: 2024 sleepyyapril <flyingkarii@gmail.com>
+// SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+using System.Linq;
+using Content.Shared.Construction.Components;
+using Content.Shared.Construction.Prototypes;
+using Content.Shared.Examine;
+using Content.Shared.Lathe;
+using Content.Shared.Materials;
+using Content.Shared.Stacks;
+using Robust.Shared.Prototypes;
+
+namespace Content.Shared.Construction
+{
+    /// <summary>
+    /// Deals with machine parts and machine boards.
+    /// </summary>
+    public sealed class MachinePartSystem : EntitySystem
+    {
+        [Dependency] private readonly IPrototypeManager _prototype = default!;
+        [Dependency] private readonly SharedLatheSystem _lathe = default!;
+
+        public override void Initialize()
+        {
+            base.Initialize();
+            SubscribeLocalEvent<MachineBoardComponent, ExaminedEvent>(OnMachineBoardExamined);
+            SubscribeLocalEvent<MachinePartComponent, ExaminedEvent>(OnMachinePartExamined);
+        }
+
+        private void OnMachineBoardExamined(EntityUid uid, MachineBoardComponent component, ExaminedEvent args)
+        {
+            if (!args.IsInDetailsRange)
+                return;
+
+            using (args.PushGroup(nameof(MachineBoardComponent)))
+            {
+                args.PushMarkup(Loc.GetString("machine-board-component-on-examine-label"));
+                foreach (var (part, amount) in component.Requirements)
+                {
+                    args.PushMarkup(Loc.GetString("machine-board-component-required-element-entry-text",
+                        ("amount", amount),
+                        ("requiredElement", Loc.GetString(_prototype.Index<MachinePartPrototype>(part).Name))));
+                }
+
+                foreach (var (material, amount) in component.MaterialRequirements)
+                {
+                    args.PushMarkup(Loc.GetString("machine-board-component-required-element-entry-text",
+                        ("amount", amount),
+                        ("requiredElement", Loc.GetString(material.Name))));
+                }
+
+                foreach (var (_, info) in component.ComponentRequirements)
+                {
+                    args.PushMarkup(Loc.GetString("machine-board-component-required-element-entry-text",
+                        ("amount", info.Amount),
+                        ("requiredElement", Loc.GetString(info.ExamineName))));
+                }
+
+                foreach (var (_, info) in component.TagRequirements)
+                {
+                    args.PushMarkup(Loc.GetString("machine-board-component-required-element-entry-text",
+                        ("amount", info.Amount),
+                        ("requiredElement", Loc.GetString(info.ExamineName))));
+                }
+            }
+        }
+
+        private void OnMachinePartExamined(EntityUid uid, MachinePartComponent component, ExaminedEvent args)
+        {
+            if (!args.IsInDetailsRange)
+                return;
+
+            using (args.PushGroup(nameof(MachinePartComponent)))
+            {
+                args.PushMarkup(Loc.GetString("machine-part-component-on-examine-rating-text",
+                    ("rating", component.Rating)));
+                args.PushMarkup(Loc.GetString("machine-part-component-on-examine-type-text", ("type",
+                    Loc.GetString(_prototype.Index<MachinePartPrototype>(component.PartType).Name))));
+            }
+        }
+
+        public Dictionary<string, int> GetMachineBoardMaterialCost(Entity<MachineBoardComponent> entity, int coefficient = 1)
+        {
+            var (_, comp) = entity;
+
+            var materials = new Dictionary<string, int>();
+            foreach (var (partId, amount) in comp.Requirements)
+            {
+                var partProto = _prototype.Index<MachinePartPrototype>(partId);
+
+                if (!_lathe.TryGetRecipesFromEntity(partProto.StockPartPrototype, out var recipes))
+                    continue;
+
+                var partRecipe = recipes[0];
+                if (recipes.Count > 1)
+                    partRecipe = recipes.MinBy(p => p.Materials.Values.Sum());
+
+                foreach (var (mat, matAmount) in partRecipe!.Materials)
+                {
+                    materials.TryAdd(mat, 0);
+                    materials[mat] += matAmount * amount * coefficient;
+                }
+            }
+
+            foreach (var (stackId, amount) in comp.MaterialIdRequirements)
+            {
+                var stackProto = _prototype.Index<StackPrototype>(stackId);
+
+                if (_prototype.TryIndex(stackProto.Spawn, out var defaultProto) &&
+                    defaultProto.TryGetComponent<PhysicalCompositionComponent>(out var physComp))
+                {
+                    foreach (var (mat, matAmount) in physComp.MaterialComposition)
+                    {
+                        materials.TryAdd(mat, 0);
+                        materials[mat] += matAmount * amount * coefficient;
+                    }
+                }
+                else if (_lathe.TryGetRecipesFromEntity(stackProto.Spawn, out var recipes))
+                {
+                    var partRecipe = recipes[0];
+                    if (recipes.Count > 1)
+                        partRecipe = recipes.MinBy(p => p.Materials.Values.Sum());
+
+                    foreach (var (mat, matAmount) in partRecipe!.Materials)
+                    {
+                        materials.TryAdd(mat, 0);
+                        materials[mat] += matAmount * amount * coefficient;
+                    }
+                }
+            }
+
+            var genericPartInfo = comp.ComponentRequirements.Values.Concat(comp.ComponentRequirements.Values);
+            foreach (var info in genericPartInfo)
+            {
+                var amount = info.Amount;
+                var defaultProtoId = info.DefaultPrototype;
+
+                if (_lathe.TryGetRecipesFromEntity(defaultProtoId, out var recipes))
+                {
+                    var partRecipe = recipes[0];
+                    if (recipes.Count > 1)
+                        partRecipe = recipes.MinBy(p => p.Materials.Values.Sum());
+
+                    foreach (var (mat, matAmount) in partRecipe!.Materials)
+                    {
+                        materials.TryAdd(mat, 0);
+                        materials[mat] += matAmount * amount * coefficient;
+                    }
+                }
+                else if (_prototype.TryIndex(defaultProtoId, out var defaultProto) &&
+                         defaultProto.TryGetComponent<PhysicalCompositionComponent>(out var physComp))
+                {
+                    foreach (var (mat, matAmount) in physComp.MaterialComposition)
+                    {
+                        materials.TryAdd(mat, 0);
+                        materials[mat] += matAmount * amount * coefficient;
+                    }
+                }
+            }
+
+            return materials;
+        }
+    }
+}

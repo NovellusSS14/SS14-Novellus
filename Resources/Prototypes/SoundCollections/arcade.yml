@@ -1,0 +1,16 @@
+# SPDX-FileCopyrightText: 2024 Tayrtahn <tayrtahn@gmail.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: soundCollection
+  id: ArcadeNoise
+  files:
+    - /Audio/Machines/Arcade/hahaha.ogg
+    - /Audio/Machines/Arcade/pew_pew.ogg
+    - /Audio/Machines/Arcade/sting_01.ogg
+    - /Audio/Machines/Arcade/sting_02.ogg
+    - /Audio/Machines/Arcade/sting_03.ogg
+    - /Audio/Machines/Arcade/sting_04.ogg
+    - /Audio/Machines/Arcade/sting_05.ogg
+    - /Audio/Machines/Arcade/sting_06.ogg

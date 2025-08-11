@@ -1,0 +1,122 @@
+# SPDX-FileCopyrightText: 2024 VMSolidus
+# SPDX-FileCopyrightText: 2025 Adrian16199
+# SPDX-FileCopyrightText: 2025 Alice
+# SPDX-FileCopyrightText: 2025 Blitz
+# SPDX-FileCopyrightText: 2025 BlitzTheSquishy
+# SPDX-FileCopyrightText: 2025 MajorMoth
+# SPDX-FileCopyrightText: 2025 Tanix
+# SPDX-FileCopyrightText: 2025 sleepyyapril
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+# Corpsman
+- type: characterItemGroup
+  id: LoadoutCorpsmanBackpacks
+  maxItems: 1
+  items:
+    - type: loadout
+      id: LoadoutCorpsmanBackpackBackpack
+    - type: loadout
+      id: LoadoutCorpsmanBackpackSatchel
+    - type: loadout
+      id: LoadoutCorpsmanBackpackDuffel
+    - type: loadout
+      id: LoadoutCorpsmanBackpackMessenger
+
+- type: characterItemGroup
+  id: LoadoutCorpsmanBelt
+  maxItems: 1
+  items:
+    - type: loadout
+      id: LoadoutClothingBeltCorpsmanWebbing
+
+#- type: characterItemGroup
+#  id: LoadoutCorpsmanEars
+#  maxItems: 1
+#  items:
+#
+#- type: characterItemGroup
+#  id: LoadoutCorpsmanEquipment
+#  maxItems: 1
+#  items:
+
+- type: characterItemGroup
+  id: LoadoutCorpsmanEyes
+  maxItems: 1
+  items:
+    - type: loadout
+      id: LoadoutClothingEyesGlassesCorpsman
+    - type: loadout
+      id: LoadoutClothingEyesCorpsmanHudMedSec
+    - type: loadout
+      id: LoadoutClothingEyesCorpsmanHudMed
+    - type: loadout
+      id: LoadoutMedicalEyesCorpsmanEyepatchHudMedical
+    - type: loadout
+      id: LoadoutClothingEyesCorpsmanHudMedPrescription
+
+- type: characterItemGroup
+  id: LoadoutCorpsmanGloves
+  maxItems: 1
+  items:
+    - type: loadout
+      id: LoadoutClothingHandsGlovesNitrile
+    - type: loadout
+      id: LoadoutClothingHandsGlovesLatex
+    - type: loadout
+      id: LoadoutClothingHandsGlovesChemist
+
+- type: characterItemGroup
+  id: LoadoutCorpsmanHead
+  maxItems: 1
+  items:
+    - type: loadout
+      id: LoadoutClothingHeadHatBeretBrigmedic
+    - type: loadout
+      id: LoadoutClothingHeadHatBeretCorpsman
+
+#- type: characterItemGroup
+#  id: LoadoutCorpsmanId
+#  maxItems: 1
+#  items:
+
+- type: characterItemGroup
+  id: LoadoutCorpsmanNeck
+  maxItems: 1
+  items:
+    - type: loadout
+      id: LoadoutBedsheetBrigmedic
+    - type: loadout
+      id: LoadoutClothingNeckStethoscope
+
+- type: characterItemGroup
+  id: LoadoutCorpsmanMask
+  maxItems: 1
+  items:
+    - type: loadout
+      id: LoadoutClothingMaskSterileCorpsman
+    - type: loadout
+      id: LoadoutClothingMaskBreathMedical
+
+- type: characterItemGroup
+  id: LoadoutCorpsmanOuter
+  maxItems: 1
+  items:
+    - type: loadout
+      id: LoadoutClothingOuterLongCoatCorpsman
+
+#- type: characterItemGroup
+#  id: LoadoutCorpsmanShoes
+#  maxItems: 1
+#  items:
+
+- type: characterItemGroup
+  id: LoadoutCorpsmanUniforms
+  maxItems: 1
+  items:
+    - type: loadout
+      id: LoadoutClothingUniformJumpsuitCorpsman
+    - type: loadout
+      id: LoadoutClothingUniformJumpskirtCorpsman
+    - type: loadout
+      id: LoadoutClothingUniformJumpsuitCorpsmanSummer

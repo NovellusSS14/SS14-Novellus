@@ -1,0 +1,34 @@
+<!--
+SPDX-FileCopyrightText: 2023 AJCM-git <60196617+AJCM-git@users.noreply.github.com>
+SPDX-FileCopyrightText: 2023 Julian Giebel <juliangiebel@live.de>
+SPDX-FileCopyrightText: 2023 end <72604018+laok233@users.noreply.github.com>
+SPDX-FileCopyrightText: 2024 DEATHB4DEFEAT <77995199+DEATHB4DEFEAT@users.noreply.github.com>
+SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+
+SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+-->
+
+<Document>
+  # Networking
+  Some devices on the station need to communicate with each other, and they do this by utilizing device networking.
+  With networking, machines and devices can send arbitrary data between each other.
+  There are multiple networks that get used, such as the wireless and wired network.
+  Each network device has a frequency it receives on. PDAs for example, use the frequency: [color=green]220.2[/color]
+
+  Note: The following operations will require use of the Network Configurator to be performed:
+
+  ## Device Lists
+  Some devices need to know which other devices to communicate with specifically.
+  <Box>
+    <GuideEntityEmbed Entity="AirAlarm"/>
+  </Box>
+  Air alarms, for example, require you to tell it which vents, scrubbers, sensors, and firelocks to interact with.
+
+  ## Linking
+  If a device, basic or advanced, needs finer controls of how and which devices it connects to, it will generally use device linking.
+    <Box>
+      <GuideEntityEmbed Entity="SignalSwitch"/>
+      <GuideEntityEmbed Entity="Airlock"/>
+    </Box>
+  With linking, you can connect the outputs of a device, like [color=gray]On[/color] or [color=gray]Off[/color], with the inputs of a device, like the airlocks [color=gray]Open[/color] or [color=gray]Close[/color] inputs.
+</Document>

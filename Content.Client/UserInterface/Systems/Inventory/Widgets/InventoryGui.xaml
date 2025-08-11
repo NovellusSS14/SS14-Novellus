@@ -1,0 +1,37 @@
+<!--
+SPDX-FileCopyrightText: 2023 Nemanja <98561806+EmoGarbage404@users.noreply.github.com>
+SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+
+SPDX-License-Identifier: MIT
+-->
+
+<widgets:InventoryGui
+    xmlns="https://spacestation14.io"
+    xmlns:inventory="clr-namespace:Content.Client.UserInterface.Systems.Inventory.Controls"
+    xmlns:widgets="clr-namespace:Content.Client.UserInterface.Systems.Inventory.Widgets"
+    xmlns:controls="clr-namespace:Content.Client.UserInterface.Controls"
+    Name="InventoryInterface"
+    VerticalExpand="True"
+    VerticalAlignment="Bottom"
+    Orientation="Horizontal"
+    HorizontalAlignment="Center">
+    <Control HorizontalAlignment="Center">
+        <controls:SlotButton
+            Name="InventoryButton"
+            Access="Public"
+            VerticalAlignment="Bottom"
+            HorizontalExpand="False"
+            VerticalExpand="False"
+            ButtonTexturePath="Slots/toggle"/>
+        <inventory:ItemSlotButtonContainer
+            Name="InventoryHotbar"
+            Access="Public"
+            Visible="False"
+            MaxColumns="3"
+            SlotGroup="Default"
+            ExpandBackwards="True"
+            VerticalExpand="True"
+            HorizontalAlignment="Center"
+        />
+    </Control>
+</widgets:InventoryGui>

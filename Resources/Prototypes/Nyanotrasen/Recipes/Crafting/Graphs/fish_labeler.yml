@@ -1,0 +1,26 @@
+# SPDX-FileCopyrightText: 2023 PHCodes <47927305+PHCodes@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: MIT
+
+- type: constructionGraph
+  id: fishlabeler
+  start: start
+  graph:
+  - node: start
+    edges:
+    - to: fishlabeler
+      steps:
+      - tag: HandLabeler
+        icon:
+          sprite: Objects/Tools/hand_labeler.rsi
+          state: hand_labeler
+        name: hand labeler
+      - tag: PlushieCarp
+        icon:
+          sprite: Objects/Fun/toys.rsi
+          state: carpplush
+        name: carp plushie
+        doAfter: 2
+  - node: fishlabeler
+    entity: FishLabeler

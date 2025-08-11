@@ -1,0 +1,59 @@
+# SPDX-FileCopyrightText: 2025 Rosycup <178287475+Rosycup@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 Stop-Signs <stopsign221@gmail.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: entity
+  parent: ReagentPacketBase
+  id: ReagentContainerSalt
+  name: salt container
+  description: A big container of salt. Good for cooking!
+  components:
+  - type: Sprite
+    sprite: _DV/Objects/Consumable/Food/ingredients.rsi
+    state: salt-big
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 50
+        reagents:
+        - ReagentId: TableSalt
+          Quantity: 50
+  - type: Drink
+    solution: food
+    useSound:
+      path: /Audio/Items/eating_1.ogg
+
+- type: entity
+  parent: ReagentPacketBase
+  id: ReagentContainerPepper
+  name: pepper container
+  description: A big container of pepper. Good for cooking!
+  components:
+  - type: Sprite
+    sprite: _DV/Objects/Consumable/Food/ingredients.rsi
+    state: pepper-big
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 50
+        reagents:
+        - ReagentId: Blackpepper
+          Quantity: 50
+
+- type: entity
+  parent: ReagentPacketBase
+  id: ReagentContainerChocolate
+  name: cocoa powder bag
+  description: A big bag of cocoa powder. Good for cooking!
+  components:
+  - type: Sprite
+    sprite: _DV/Objects/Consumable/Food/ingredients.rsi
+    state: cocoa-chip-big
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        reagents:
+        - ReagentId: CocoaPowder
+          Quantity: 50

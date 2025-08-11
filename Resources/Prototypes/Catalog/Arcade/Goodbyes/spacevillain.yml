@@ -1,0 +1,20 @@
+# SPDX-FileCopyrightText: 2024 Tayrtahn <tayrtahn@gmail.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: messagePack
+  id: SpaceVillainGoodbyes
+  messages:
+  - thankyou-space-villain-1
+  - thankyou-space-villain-2
+  - thankyou-space-villain-3
+  - thankyou-space-villain-4
+  - thankyou-space-villain-5
+  - thankyou-space-villain-6
+  - thankyou-space-villain-7
+  - thankyou-space-villain-8
+  - thankyou-space-villain-9
+  - thankyou-space-villain-10
+  - thankyou-space-villain-11
+  - thankyou-space-villain-12

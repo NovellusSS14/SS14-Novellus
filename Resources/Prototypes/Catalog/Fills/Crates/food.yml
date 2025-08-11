@@ -1,0 +1,197 @@
+# SPDX-FileCopyrightText: 2021 Leon Friedrich <60421075+ElectroJr@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2021 Swept <sweptwastaken@protonmail.com>
+# SPDX-FileCopyrightText: 2022 Abregado <rasti_farian@hotmail.com>
+# SPDX-FileCopyrightText: 2022 EmoGarbage404 <98561806+EmoGarbage404@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2022 KIBORG04 <bossmira4@gmail.com>
+# SPDX-FileCopyrightText: 2022 Kevin Zheng <kevinz5000@gmail.com>
+# SPDX-FileCopyrightText: 2022 Rinkashikachi <15rinkashikachi15@gmail.com>
+# SPDX-FileCopyrightText: 2022 ZeroDayDaemon <60460608+ZeroDayDaemon@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2022 lapatison <100279397+lapatison@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2022 metalgearsloth <31366439+metalgearsloth@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2022 metalgearsloth <comedian_vs_clown@hotmail.com>
+# SPDX-FileCopyrightText: 2023 Checkraze <71046427+Cheackraze@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2023 EnDecc <33369477+Endecc@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2023 JJ <47927305+PHCodes@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2023 Tom Leys <tom@crump-leys.com>
+# SPDX-FileCopyrightText: 2023 Velcroboy <107660393+IamVelcroboy@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 Memeji Dankiri <39416235+Memeji@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 Pierson Arnold <greyalphawolf7@gmail.com>
+# SPDX-FileCopyrightText: 2024 lzk <124214523+lzk228@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 Rosycup <178287475+Rosycup@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: entity
+  id: CrateFoodPizza
+  parent: CratePlastic
+  name: emergency pizza delivery
+  description: Help do your part to end station hunger by distributing pizza to underfunded departments! Includes 4 pizzas.
+  components:
+  - type: StorageFill
+    contents:
+    - id: FoodBoxPizzaFilled
+      amount: 4
+    - id: KnifePlastic
+    - id: LidSalami
+      prob: 0.01
+
+- type: entity
+  id: CrateFoodPizzaLarge
+  parent: CratePlastic
+  name: disaster pizza delivery
+  description: In the ultimate event that all else has failed, Find comfort in that more pizza solves everything. Includes 16 pizzas.
+  components:
+  - type: StorageFill
+    contents:
+    - id: FoodBoxPizzaFilled
+      amount: 16
+    - id: KnifePlastic
+      amount: 4
+    - id: LidSalami
+      prob: 0.04
+
+- type: entity
+  id: CrateFoodMRE
+  parent: CratePlastic
+  name: MRE crate
+  description: A military style meal fit to feed a whole department.
+  components:
+  - type: StorageFill
+    contents:
+    - id: BoxMRE
+      amount: 6
+
+- type: entity
+  id: CrateFoodCooking
+  parent: CratePlastic
+  name: kitchen supplies crate
+  description: Extra kitchen supplies, in case the botanists are absent.
+  components:
+  - type: StorageFill
+    contents:
+    - id: OilJarCorn #Nyano - Summary: Begin Nyano oils.
+      amount: 1
+    - id: OilJarGhee
+      amount: 1
+    - id: OilJarOlive
+      amount: 1 #End Nyano code.
+    - id: ReagentContainerFlour
+      amount: 3
+    - id: ReagentContainerRice
+      amount: 3
+    - id: DrinkMilkCarton
+      amount: 4
+    - id: DrinkSoyMilkCarton
+      amount: 2
+    - id: ReagentContainerSugar
+      amount: 2
+    - id: FoodCondimentPacketSalt
+      amount: 3
+    - id: FoodCondimentBottleEnzyme
+      amount: 2
+    - id: FoodContainerEgg
+      amount: 2
+
+- type: entity
+  id: CrateFoodDinnerware
+  parent: CratePlastic
+  name: kitchen dinnerware crate
+  description: Extra kitchen supplies, in case the clown was allowed in the cafeteria unsupervised.
+  components:
+  - type: StorageFill
+    contents:
+    - id: FoodBowlBig
+      amount: 4
+    - id: FoodPlate
+      amount: 4
+    - id: FoodPlateSmall
+      amount: 4
+    - id: FoodKebabSkewer
+      amount: 4
+    - id: KitchenKnife
+      amount: 1
+    - id: DrinkGlass
+      amount: 4
+    - id: FoodPlateTin
+      amount: 4
+    - id: Fork
+      amount: 2
+    - id: Spoon
+      amount: 2
+
+- type: entity
+  id: CrateFoodBarSupply
+  parent: CratePlastic
+  name: bartending supplies crate
+  description: Extra Bar supplies, in case the clown was allowed in the bar unsupervised.
+  components:
+  - type: StorageFill
+    contents:
+    - id: DrinkGlass
+      amount: 5
+    - id: DrinkShotGlass
+      amount: 5
+    - id: DrinkShaker
+      amount: 2
+    - id: DrinkOrangeJuice
+      amount: 2
+    - id: DrinkLimeJuice
+      amount: 2
+    - id: DrinkTomatoJuice
+      amount: 2
+    - id: DrinkWaterBottleFull
+      amount: 2
+    - id: DrinkSodaWaterCan
+      amount: 2
+    - id: DrinkCreamCarton
+      amount: 2
+    - id: DrinkIceJug # Floof
+      amount: 2
+
+- type: entity
+  id: CrateFoodSoftdrinks
+  parent: CratePlastic
+  name: softdrinks crate
+  description: A variety of sodas to complement a small party, without having to empty the soda machines. Includes 14 sodas.
+  components:
+  - type: StorageFill
+    contents:
+    - id: DrinkColaCan
+      amount: 4
+    - id: DrinkGrapeCan
+      amount: 2
+    - id: DrinkRootBeerCan
+      amount: 2
+    - id: DrinkIcedTeaCan
+      amount: 2
+    - id: DrinkLemonLimeCan
+      amount: 2
+    - id: DrinkFourteenLokoCan
+      amount: 2
+  #  - id: DrinkNNNCan # Floof
+  #    amount: 2
+
+- type: entity
+  id: CrateFoodSoftdrinksLarge
+  parent: CratePlastic
+  name: softdrinks bulk crate
+  description: Lots of sodas taken straight out of Centcomm's own vending machines, because you just can't leave your department. Includes 28 sodas.
+  components:
+  - type: StorageFill
+    contents:
+      - id: DrinkColaCan
+        amount: 8
+      - id: DrinkGrapeCan
+        amount: 4
+      - id: DrinkRootBeerCan
+        amount: 4
+      - id: DrinkIcedTeaCan
+        amount: 4
+      - id: DrinkLemonLimeCan
+        amount: 4
+      - id: DrinkFourteenLokoCan
+        amount: 2
+  #    - id: DrinkNNNCan # Floof
+  #      amount: 4
+

@@ -1,0 +1,80 @@
+# SPDX-FileCopyrightText: 2024 Blu <79374236+BlueHNT@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 FoxxoTrystan <trystan.garnierhein@gmail.com>
+# SPDX-FileCopyrightText: 2025 Rosycup <178287475+Rosycup@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 VMSolidus <evilexecutive@gmail.com>
+# SPDX-FileCopyrightText: 2025 juniwoofs <180479595+juniwoofs@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+# Engineering
+- type: cargoProduct
+  id: EngineeringFotiaHardsuit
+  icon:
+    sprite: Clothing/OuterClothing/Hardsuits/atmospherics.rsi
+    state: icon
+  product: CrateEngineeringFotiaHardsuit
+  cost: 2250
+  category: cargoproduct-category-name-hardsuits
+  group: market
+
+- type: cargoProduct
+  id: EngineeringLampsiHardsuit
+  icon:
+    sprite: Clothing/OuterClothing/Hardsuits/engineering-base.rsi
+    state: icon
+  product: CrateEngineeringLampsiHardsuit
+  cost: 2250
+  category: cargoproduct-category-name-hardsuits
+  group: market
+
+# Logistics
+- type: cargoProduct
+  id: LogisticsKritiHardsuit
+  icon:
+    sprite: Clothing/OuterClothing/Hardsuits/spatio.rsi
+    state: icon
+  product: CrateLogisticsKritiHardsuit
+  cost: 1250
+  category: cargoproduct-category-name-hardsuits
+  group: market
+
+- type: cargoProduct
+  id: LogisticsLavrionHardsuit
+  icon:
+    sprite: Clothing/OuterClothing/Hardsuits/salvage.rsi
+    state: icon
+  product: CrateLogisticsLavrionHardsuit
+  cost: 3500
+  category: cargoproduct-category-name-hardsuits
+  group: market
+
+- type: cargoProduct
+  id: SecurityBaghaturTacsuit
+  icon:
+    sprite: _DV/Clothing/OuterClothing/Hardsuits/Combat/standard.rsi
+    state: icon
+  product: CrateSecurityBaghaturTacsuit
+  cost: 5000
+  category: cargoproduct-category-name-hardsuits
+  group: market
+
+- type: cargoProduct
+  id: SecuritySuldeTacsuit
+  icon:
+    sprite: _DV/Clothing/OuterClothing/Hardsuits/Combat/riot.rsi
+    state: icon
+  product: CrateSecuritySuldeTacsuit
+  cost: 7500
+  category: cargoproduct-category-name-hardsuits
+  group: market
+
+- type: cargoProduct
+  id: SecurityTsagaanTacsuit
+  icon:
+    sprite: _DV/Clothing/OuterClothing/Hardsuits/Combat/medical.rsi
+    state: icon
+  product: CrateSecurityTsagaanTacsuit
+  cost: 5500
+  category: cargoproduct-category-name-hardsuits
+  group: market

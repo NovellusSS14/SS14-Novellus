@@ -1,0 +1,161 @@
+# SPDX-FileCopyrightText: 2023 Bakke
+# SPDX-FileCopyrightText: 2024 DEATHB4DEFEAT
+# SPDX-FileCopyrightText: 2024 FoxxoTrystan
+# SPDX-FileCopyrightText: 2024 Mnemotechnican
+# SPDX-FileCopyrightText: 2024 fox
+# SPDX-FileCopyrightText: 2024 gluesniffler
+# SPDX-FileCopyrightText: 2025 Aiden
+# SPDX-FileCopyrightText: 2025 GNUtopia
+# SPDX-FileCopyrightText: 2025 Rosycup
+# SPDX-FileCopyrightText: 2025 Sapphire
+# SPDX-FileCopyrightText: 2025 Skubman
+# SPDX-FileCopyrightText: 2025 VMSolidus
+# SPDX-FileCopyrightText: 2025 portfiend
+# SPDX-FileCopyrightText: 2025 sleepyyapril
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: entity
+  abstract: true
+  parent: HarpySpeciesLayers
+  id: BaseHarpyAppearance
+  components:
+  - type: HumanoidAppearance
+    species: Harpy
+  - type: Inventory
+    speciesId: harpy
+    templateId: digitigrade
+    displacements:
+      jumpsuit:
+        layer:
+          sprite: Mobs/Species/Harpy/displacement.rsi
+          state: jumpsuit
+          copyToShaderParameters:
+            # Value required, provide a dummy. Gets overridden when applied.
+            layerKey: dummy
+            parameterTexture: displacementMap
+            parameterUV: displacementUV
+
+- type: entity
+  save: false
+  name: Urist McHarpy
+  parent: [ BaseHarpyAppearance, BaseMobHuman ]
+  id: MobHarpyBase
+  abstract: true
+  components:
+  - type: Singer
+    proto: HarpySinger
+  - type: Fixtures
+    fixtures: # TODO: This needs a second fixture just for mob collisions.
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.32
+        density: 90
+        restitution: 0.0
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
+  - type: Body
+    prototype: Harpy
+  - type: Damageable
+    damageModifierSet: Harpy
+  - type: MeleeWeapon
+    soundHit:
+      collection: AlienClaw
+    animation: WeaponArcClaw
+    damage:
+      types:
+        Piercing: 5
+  - type: Speech
+    speechSounds: Harpy
+    speechVerb: Harpy
+  - type: Vocal
+    sounds:
+      Male: SoundsHarpy
+      Female: SoundsHarpy
+      Unsexed: SoundsHarpy
+  - type: GenericVisualizer
+    visuals:
+      enum.HarpyVisualLayers.Singing:
+        singingLayer:
+          False: {visible: false}
+          True: {visible: true}
+      enum.CreamPiedVisuals.Creamed:
+        clownedon:
+          True: {visible: true}
+          False: {visible: false}
+  - type: MovementSpeedModifier
+    baseWalkSpeed: 3
+    baseSprintSpeed: 5.5
+    weightlessAcceleration: 2.5
+    weightlessModifier: 1.12
+  - type: HarpyVisuals
+  - type: UltraVision
+  - type: Tag
+    tags:
+    - CanPilot
+    - FootstepSound
+    - DoorBumpOpener
+    - HarpyEmotes
+  - type: LanguageKnowledge
+    speaks:
+    - TauCetiBasic
+    - ValyrianStandard
+    understands:
+    - TauCetiBasic
+    - ValyrianStandard
+  - type: StepTriggerImmune
+    whitelist:
+      types:
+      - Shard
+      - Landmine
+      - Mousetrap
+  - type: FootPrints
+    leftBarePrint: "footprint-left-bare-lizard"
+    rightBarePrint: "footprint-right-bare-lizard" # I was about to complain about this, then I remembered birbs have dinosaur feet. So this is valid.
+  - type: CanMoveInAir
+
+- type: entity
+  save: false
+  categories: [ HideSpawnMenu ]
+  name: Urist McBirb
+  parent: [ HarpySpeciesLayers, MobHumanDummy ]
+  id: MobHarpyDummy
+  description: A dummy Harpy meant to be used in character setup.
+
+- type: entity
+  id: ActionHarpyPlayMidi
+  name: Play MIDI
+  description: Sing your heart out! Right click yourself to set an instrument.
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: InstantAction
+    checkCanInteract: false
+    icon: _DV/Interface/Actions/harpy_sing.png
+    event: !type:OpenUiActionEvent
+      key: enum.InstrumentUiKey.Key
+
+- type: entity
+  id: ActionSyrinxChangeVoiceMask
+  name: Set name
+  description: Change the name others hear to something else.
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: InstantAction
+    icon: _DV/Interface/Actions/harpy_syrinx.png
+    itemIconStyle: BigAction
+    event: !type:VoiceMaskSetNameEvent
+
+- type: entity
+  id: ActionToggleFlight
+  name: Fly
+  description: Make use of your wings to fly. Beat the flightlessness allegations.
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: InstantAction
+    checkCanInteract: false
+    icon: { sprite: Interface/Actions/flight.rsi, state: flight_off }
+    iconOn: { sprite : Interface/Actions/flight.rsi, state: flight_on }
+    event: !type:ToggleFlightEvent

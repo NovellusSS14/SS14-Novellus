@@ -1,0 +1,382 @@
+# SPDX-FileCopyrightText: 2023 Fluffiest Floofers
+# SPDX-FileCopyrightText: 2023 Tad "Taddy" Johnson
+# SPDX-FileCopyrightText: 2023 rosieposie
+# SPDX-FileCopyrightText: 2024 Flareguy
+# SPDX-FileCopyrightText: 2024 SimpleStation14
+# SPDX-FileCopyrightText: 2024 Stop-Signs
+# SPDX-FileCopyrightText: 2024 gluesniffler
+# SPDX-FileCopyrightText: 2024 lzk
+# SPDX-FileCopyrightText: 2025 Angelo Fallaria
+# SPDX-FileCopyrightText: 2025 Rosycup
+# SPDX-FileCopyrightText: 2025 Skubman
+# SPDX-FileCopyrightText: 2025 VMSolidus
+# SPDX-FileCopyrightText: 2025 Vanessa
+# SPDX-FileCopyrightText: 2025 Velcroboy
+# SPDX-FileCopyrightText: 2025 juniwoofs
+# SPDX-FileCopyrightText: 2025 sleepyyapril
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+#SOFTSUITS
+#Basic EVA
+- type: entity
+  id: SuitStorageEVA
+  parent: SuitStorageBase
+  suffix: EVA
+  components:
+  - type: StorageFill
+    contents:
+        - id: OxygenTankFilled
+        - id: NitrogenTankFilled #Den
+        - id: ClothingOuterHardsuitEVA
+        - id: ClothingHeadHelmetEVA
+        - id: ClothingMaskBreath
+
+#Basic EVA (Big Ass Helmet)
+- type: entity
+  id: SuitStorageEVAAlternate
+  parent: SuitStorageBase
+  suffix: EVA, Large Helmet
+  components:
+  - type: StorageFill
+    contents:
+        - id: OxygenTankFilled
+        - id: NitrogenTankFilled #Den
+        - id: ClothingOuterHardsuitEVA
+        - id: ClothingHeadHelmetEVALarge
+        - id: ClothingMaskBreath
+
+#Emergency EVA
+- type: entity
+  id: SuitStorageEVAEmergency
+  parent: SuitStorageBase
+  suffix: Emergency EVA
+  components:
+  - type: StorageFill
+    contents:
+        - id: OxygenTankFilled
+        - id: NitrogenTankFilled #Den
+        - id: ClothingOuterSuitEmergency
+        - id: ClothingMaskBreath
+
+#Prisoner EVA
+- type: entity
+  id: SuitStorageEVAPrisoner
+  parent: SuitStorageBase
+  suffix: Prisoner EVA
+  components:
+  - type: StorageFill
+    contents:
+        - id: OxygenTankFilled
+        - id: NitrogenTankFilled #Den
+        - id: ClothingOuterHardsuitEVAPrisoner
+        - id: ClothingHeadHelmetEVALarge
+        - id: ClothingMaskBreath
+
+#Syndicate EVA
+- type: entity
+  id: SuitStorageEVASyndicate
+  parent: SuitStorageBase
+  suffix: Syndicate EVA
+  components:
+  - type: StorageFill
+    contents:
+        - id: OxygenTankFilled
+        - id: NitrogenTankFilled #Den
+        - id: ClothingOuterHardsuitSyndicate
+        - id: ClothingHeadHelmetSyndicate
+        - id: ClothingMaskGasSyndicate
+
+#Pirate EVA
+- type: entity
+  id: SuitStorageEVAPirate
+  parent: SuitStorageBase
+  suffix: Pirate EVA
+  components:
+  - type: StorageFill
+    contents:
+        - id: OxygenTankFilled
+        - id: NitrogenTankFilled #Den
+        - id: ClothingOuterHardsuitPirateEVA
+        - id: ClothingMaskGas
+
+#NTSRA Voidsuit
+- type: entity
+  id: SuitStorageNTSRA
+  parent: SuitStorageBase
+  suffix: Ancient EVA
+  components:
+  - type: StorageFill
+    contents:
+        - id: JetpackVoidFilled
+        - id: ClothingOuterHardsuitAncientEVA
+        - id: ClothingHeadHelmetAncient
+        - id: ClothingMaskBreath
+
+#HARDSUITS
+#Basic hardsuit
+- type: entity
+  id: SuitStorageBasic
+  parent: SuitStorageBase
+  suffix: Basic Hardsuit
+  components:
+  - type: StorageFill
+    contents:
+        - id: OxygenTankFilled
+        - id: NitrogenTankFilled #Den
+        - id: ClothingOuterHardsuitBasic
+        - id: ClothingMaskBreath
+
+#Engineering hardsuit
+- type: entity
+  id: SuitStorageEngi
+  parent: SuitStorageBase
+  suffix: Station Engineer
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      entity_storage: !type:NestedSelector
+        tableId: FillEngineerHardsuit
+  - type: AccessReader
+    access: [["Engineering"]]
+
+#Atmospherics hardsuit
+- type: entity
+  id: SuitStorageAtmos
+  parent: SuitStorageBase
+  suffix: Atmospheric Technician
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      entity_storage: !type:NestedSelector
+        tableId: FillAtmosphericsHardsuit
+  - type: AccessReader
+    access: [["Atmospherics"]]
+
+#Security hardsuit
+- type: entity
+  id: SuitStorageSec
+  parent: SuitStorageBase
+  suffix: Security
+  components:
+  - type: StorageFill
+    contents:
+        - id: OxygenTankFilled
+          amount: 2 #DeltaV - Double the tanks
+        - id: NitrogenTankFilled #Den
+          amount: 2
+        - id: ClothingOuterHardsuitCombatOfficer # DeltaV - ClothingOuterHardsuitSecurity replaced in favour of security combat hardsuit.
+          amount: 2 #DeltaV - Double the suits
+        - id: ClothingMaskBreath
+          amount: 2 #Delta-V Double the masks
+  - type: AccessReader
+    access: [["Security"]]
+
+#CE's hardsuit
+- type: entity
+  id: SuitStorageCE
+  parent: SuitStorageBase
+  suffix: Chief Engineer
+  components:
+  - type: StorageFill
+    contents:
+        - id: OxygenTankFilled
+        - id: NitrogenTankFilled #Den
+        - id: JetpackVoidFilled
+        - id: ClothingShoesBootsMagAdv
+        - id: ClothingOuterHardsuitEngineeringWhite
+        - id: ClothingMaskBreath
+  - type: AccessReader
+    access: [["ChiefEngineer"]]
+
+#CMO's hardsuit
+- type: entity
+  id: SuitStorageCMO
+  parent: SuitStorageBase
+  suffix: Chief Medical Officer
+  components:
+  - type: StorageFill
+    contents:
+        - id: OxygenTankFilled
+        - id: NitrogenTankFilled #Den
+        - id: ClothingOuterHardsuitMedical
+        - id: ClothingMaskBreathMedical
+  - type: AccessReader
+    access: [ [ "ChiefMedicalOfficer" ] ]
+
+#RD's hardsuit
+- type: entity
+  id: SuitStorageRD
+  parent: SuitStorageBase
+  suffix: Mystagogue # DeltaV - Epistemics Department replacing Science
+  components:
+  - type: StorageFill
+    contents:
+        - id: OxygenTankFilled
+        - id: NitrogenTankFilled #Den
+        - id: ClothingOuterHardsuitRd
+        - id: ClothingMaskBreath
+  - type: AccessReader
+    access: [ [ "ResearchDirector" ] ]
+
+#HOS's hardsuit
+- type: entity
+  id: SuitStorageHOS
+  parent: SuitStorageBase
+  suffix: Head of Security
+  components:
+  - type: StorageFill
+    contents:
+        - id: OxygenTankFilled
+        - id: NitrogenTankFilled #Den
+        - id: JetpackSecurityFilled
+        - id: ClothingOuterHardsuitCombatHoS # DeltaV - ClothingOuterHardsuitSecurityRed replaced in favour of head of security's advanced combat hardsuit.
+        - id: ClothingMaskGasSwat
+  - type: AccessReader
+    access: [["HeadOfSecurity"]]
+
+#Warden's hardsuit
+- type: entity
+  id: SuitStorageWarden
+  parent: SuitStorageBase
+  suffix: Warden
+  components:
+  - type: StorageFill
+    contents:
+        - id: OxygenTankFilled
+        - id: NitrogenTankFilled #Den
+        - id: ClothingOuterHardsuitCombatWarden # DeltaV - ClothingOuterHardsuitWarden replaced in favour of warden's riot combat hardsuit.
+        - id: ClothingMaskBreath
+  - type: AccessReader
+    access: [["Armory"]]
+
+#Captain's hardsuit
+- type: entity
+  id: SuitStorageCaptain
+  parent: SuitStorageBase
+  suffix: Captain
+  components:
+  - type: StorageFill
+    contents:
+        - id: OxygenTankFilled
+        - id: NitrogenTankFilled #Den
+        - id: ClothingOuterHardsuitCap
+        - id: ClothingMaskGasCaptain
+        - id: ClothingMaskGasCaptainCombat #TheDen
+  - type: AccessReader
+    access: [["Captain"]]
+
+#Salvage hardsuit
+- type: entity
+  id: SuitStorageSalv
+  parent: SuitStorageBase
+  suffix: Salvage
+  components:
+  - type: StorageFill
+    contents:
+      - id: OxygenTankFilled
+      - id: NitrogenTankFilled #Den
+      - id: ClothingShoesBootsMag
+      - id: ClothingOuterHardsuitSpatio
+      - id: ClothingMaskGasExplorer
+  - type: AccessReader
+    access: [["Salvage"]]
+
+# DeltaV - Adding Paramedic Suit Storage Unit
+#Paramedic hardsuit
+- type: entity
+  id: SuitStorageParamedic
+  parent: SuitStorageBase
+  suffix: Paramedic
+  components:
+  - type: StorageFill
+    contents:
+        - id: NitrogenTankFilled
+        - id: OxygenTankFilled
+        - id: ClothingOuterHardsuitVoidParamed
+        - id: ClothingMaskBreathMedical
+        - id: ClothingShoesBootsMagParamed # The Den
+  - type: AccessReader
+    access: [ [ "Paramedic" ] ]
+
+# DeltaV - Adding Corpsman Suit Storage Unit
+- type: entity
+  id: SuitStorageCorpsman
+  parent: SuitStorageBase
+  suffix: Corpsman
+  components:
+  - type: StorageFill
+    contents:
+      - id: NitrogenTankFilled
+      - id: OxygenTankFilled
+      - id: ClothingOuterHardsuitCombatCorpsman
+      - id: ClothingMaskBreath
+  - type: AccessReader
+    access: [ [ "Corpsman" ] ]
+
+# DeltaV - End Changes
+
+#Blood-red hardsuit
+- type: entity
+  id: SuitStorageSyndie
+  parent: SuitStorageBase
+  suffix: Syndicate Hardsuit
+  components:
+  - type: StorageFill
+    contents:
+        - id: OxygenTankFilled
+        - id: NitrogenTankFilled #Den
+        - id: ClothingOuterHardsuitSyndie
+        - id: ClothingShoesBootsMagSyndie
+        - id: ClothingMaskGasSyndicate
+
+#Pirate Captain's hardsuit
+- type: entity
+  id: SuitStoragePirateCap
+  parent: SuitStorageBase
+  suffix: Pirate Captain
+  components:
+  - type: StorageFill
+    contents:
+        - id: OxygenTankFilled
+        - id: NitrogenTankFilled #Den
+        - id: ClothingOuterHardsuitPirateCap
+        - id: ClothingMaskGas
+
+#Wizard
+- type: entity
+  id: SuitStorageWizard
+  parent: SuitStorageBase
+  suffix: Wizard
+  components:
+  - type: StorageFill
+    contents:
+        - id: OxygenTankFilled
+        - id: NitrogenTankFilled #Den
+        - id: ClothingOuterHardsuitWizard
+        - id: ClothingMaskBreath
+
+# Cybersun Armoring Corporation
+- type: entity
+  id: SuitStorageShanlin
+  parent: SuitStorageBase
+  suffix: CSA-51a
+  components:
+    - type: StorageFill
+      contents:
+          - id: OxygenTankFilled
+          - id: NitrogenTankFilled #Den
+          - id: ClothingOuterHardsuitShanlinUnpainted
+          - id: ClothingMaskBreath
+
+- type: entity
+  id: SuitStorageShiwei
+  parent: SuitStorageBase
+  suffix: CSA-54UA
+  components:
+    - type: StorageFill
+      contents:
+          - id: OxygenTankFilled
+          - id: NitrogenTankFilled #Den
+          - id: ClothingOuterHardsuitShiweiUnpainted
+          - id: ClothingMaskBreath

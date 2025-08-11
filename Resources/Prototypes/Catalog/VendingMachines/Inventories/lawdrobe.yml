@@ -1,0 +1,45 @@
+# SPDX-FileCopyrightText: 2022 Andreas Kämper
+# SPDX-FileCopyrightText: 2022 Emisse
+# SPDX-FileCopyrightText: 2022 Fishfish458
+# SPDX-FileCopyrightText: 2022 Morb
+# SPDX-FileCopyrightText: 2022 fishfish458
+# SPDX-FileCopyrightText: 2022 mirrorcult
+# SPDX-FileCopyrightText: 2023 Sailor
+# SPDX-FileCopyrightText: 2023 Tad "Taddy" Johnson
+# SPDX-FileCopyrightText: 2024 Guess-My-Name
+# SPDX-FileCopyrightText: 2024 SimpleStation14
+# SPDX-FileCopyrightText: 2024 Timemaster99
+# SPDX-FileCopyrightText: 2024 lzk
+# SPDX-FileCopyrightText: 2025 Jakumba
+# SPDX-FileCopyrightText: 2025 Skubman
+# SPDX-FileCopyrightText: 2025 sleepyyapril
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: vendingMachineInventory
+  id: LawDrobeInventory
+  startingInventory:
+    ClothingUniformJumpsuitLawyerBlue: 1
+    ClothingUniformJumpskirtLawyerBlue: 1
+    ClothingUniformJumpsuitLawyerPurple: 1
+    ClothingUniformJumpskirtLawyerPurple: 1
+    ClothingUniformJumpsuitLawyerRed: 1
+    ClothingUniformJumpskirtLawyerRed: 1
+    ClothingUniformJumpsuitLawyerBlack: 1
+    ClothingUniformJumpskirtLawyerBlack: 1
+    ClothingUniformJumpsuitLawyerGood: 1
+    ClothingUniformJumpskirtLawyerGood: 1
+    ClothingShoesBootsLaceup: 2
+    ClothingHeadsetJustice: 2 # DeltaV - Justice dept
+    ClothingNeckLawyerbadge: 2
+    ClothingOuterCoatOvercoat: 2 # DeltaV - add overcoat to LawDrobe
+    RubberStampLawyer: 1 # DeltaV
+    BriefcaseBrown: 2
+    LuxuryPen: 2
+    PrinterDocFlatpack: 2
+  contrabandInventory:
+    ClothingOuterRobesJudge: 1
+    ClothingHeadHatPwig: 1
+    SpaceCash100: 2 # "Legally" obtained currency
+  emaggedInventory:
+    CyberPen: 1

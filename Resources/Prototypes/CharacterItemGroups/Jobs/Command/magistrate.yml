@@ -1,0 +1,40 @@
+# SPDX-FileCopyrightText: 2025 John Willis <143434770+CerberusWolfie@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: characterItemGroup
+  id: LoadoutMagistrateHead
+  maxItems: 1
+  items:
+    - type: loadout
+      id: LoadoutClothingHeadChiefJustice
+
+- type: characterItemGroup
+  id: LoadoutMagistrateNeck
+  maxItems: 1
+  items:
+    - type: loadout
+      id: LoadoutClothingNeckChiefJustice
+
+- type: characterItemGroup
+  id: LoadoutMagistrateOuter
+  maxItems: 1
+  items:
+    - type: loadout
+      id: LoadoutClothingOuterChiefJustice
+
+- type: characterItemGroup
+  id: LoadoutMagistrateUniforms
+  maxItems: 1
+  items:
+    - type: loadout
+      id: LoadoutClothingUniformJumpsuitMagistrate
+    - type: loadout
+      id: LoadoutClothingUniformJumpskirtMagistrate
+    - type: loadout
+      id: LoadoutClothingUniformJumpsuitChiefJustice
+    - type: loadout
+      id: LoadoutClothingUniformJumpsuitChiefJusticeFormal
+    - type: loadout
+      id: LoadoutClothingUniformJumpsuitChiefJusticeWhite

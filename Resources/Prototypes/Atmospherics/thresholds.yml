@@ -1,0 +1,125 @@
+# SPDX-FileCopyrightText: 2022 Eoin Mcloughlin <helloworld@eoinrul.es>
+# SPDX-FileCopyrightText: 2022 Flipp Syder <76629141+vulppine@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2022 Vera Aguilera Puerto <6766154+Zumorica@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2022 corentt <36075110+corentt@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2022 eoineoineoin <eoin.mcloughlin+gh@gmail.com>
+# SPDX-FileCopyrightText: 2023 Kara <lunarautomaton6@gmail.com>
+# SPDX-FileCopyrightText: 2024 Partmedia <kevinz5000@gmail.com>
+# SPDX-FileCopyrightText: 2024 Tmanzxd <164098915+Tmanzxd@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 zelezniciar1 <39102800+zelezniciar1@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 deltanedas <39013340+deltanedas@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 deltanedas <@deltanedas:kde.org>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: alarmThreshold
+  id: stationTemperature
+  upperBound: !type:AlarmThresholdSetting
+    threshold: 393.15 # T20C + 200
+  lowerBound: !type:AlarmThresholdSetting
+    threshold: 193.15 # T20C - 100
+  upperWarnAround: !type:AlarmThresholdSetting
+    threshold: 0.8
+  lowerWarnAround: !type:AlarmThresholdSetting
+    threshold: 1.1
+
+- type: alarmThreshold
+  id: stationPressure
+  upperBound: !type:AlarmThresholdSetting
+    threshold: 550 # HazardHighPressure from Atmospherics.cs
+  lowerBound: !type:AlarmThresholdSetting
+    # Actual low pressure damage threshold is at 20 kPa, but below ~85 kPa you can't breathe due to lack of oxygen.
+    threshold: 40 # DeltaV - was 80
+  upperWarnAround: !type:AlarmThresholdSetting
+    threshold: 0.7 # 385 kPa, WarningHighPressure from Atmospherics.cs
+  lowerWarnAround: !type:AlarmThresholdSetting
+    threshold: 2 # DeltaV - 80kpa, was 1.05 (90kpa)
+
+# a reminder that all of these are percentages (where 1 is 100%),
+# so 0.01 is 1%,
+# 0.0001 is 0.01%
+# etc.
+
+- type: alarmThreshold
+  id: stationOxygen
+  lowerBound: !type:AlarmThresholdSetting
+    threshold: 0.10
+  upperBound: !type:AlarmThresholdSetting
+    threshold: 0.8 # DeltaV - was 0.3, ridiculous
+  lowerWarnAround: !type:AlarmThresholdSetting
+    threshold: 1.5
+  upperWarnAround: !type:AlarmThresholdSetting
+    threshold: 0.8
+
+- type: alarmThreshold
+  id: stationNitrogen
+  lowerBound: !type:AlarmThresholdSetting
+    threshold: 0.10
+  lowerWarnAround: !type:AlarmThresholdSetting
+    threshold: 1.5
+
+- type: alarmThreshold
+  id: stationCO2
+  upperBound: !type:AlarmThresholdSetting
+    threshold: 0.006
+  upperWarnAround: !type:AlarmThresholdSetting
+    threshold: 0.5 # minor gasping and airloss at 0.3%
+
+- type: alarmThreshold
+  id: stationPlasma
+  upperBound: !type:AlarmThresholdSetting
+    threshold: 0.005 # lightable beyond this concentration
+  upperWarnAround: !type:AlarmThresholdSetting
+    threshold: 0.5
+
+- type: alarmThreshold
+  id: stationTritium
+  upperBound: !type:AlarmThresholdSetting
+    threshold: 0.004 # lightable beyond this concentration
+  upperWarnAround: !type:AlarmThresholdSetting
+    threshold: 0.5
+
+- type: alarmThreshold
+  id: stationWaterVapor
+  upperBound: !type:AlarmThresholdSetting
+    threshold: 1.5
+  upperWarnAround: !type:AlarmThresholdSetting
+    threshold: 0.5
+
+- type: alarmThreshold
+  id: stationNO
+  upperBound: !type:AlarmThresholdSetting
+    threshold: 0.01
+  upperWarnAround: !type:AlarmThresholdSetting
+    threshold: 0.5
+
+- type: alarmThreshold
+  id: stationAmmonia
+  upperBound: !type:AlarmThresholdSetting
+    threshold: 0.05
+  upperWarnAround: !type:AlarmThresholdSetting
+    threshold: 0.5
+
+- type: alarmThreshold
+  id: ignore # just ignore nitrogen??? ??? ???
+  ignore: true
+
+- type: alarmThreshold
+  id: danger # just any gas you don't want at all
+  upperBound: !type:AlarmThresholdSetting
+    threshold: 0.0001
+
+- type: alarmThreshold
+  id: voxOxygen
+  upperBound: !type:AlarmThresholdSetting
+    threshold: 0.02 # 2%
+  upperWarnAround: !type:AlarmThresholdSetting
+    threshold: 0.5 # 1%
+
+- type: alarmThreshold
+  id: voxNitrogen
+  lowerBound: !type:AlarmThresholdSetting
+    threshold: 0.8 # danger below 80% nitrogen
+  lowerWarnAround: !type:AlarmThresholdSetting
+    threshold: 1.125 # warning below 90%

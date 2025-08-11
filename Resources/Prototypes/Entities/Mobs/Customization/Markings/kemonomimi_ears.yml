@@ -1,0 +1,169 @@
+# SPDX-FileCopyrightText: 2024 Sushiburger <***>
+# SPDX-FileCopyrightText: 2024 VMSolidus <evilexecutive@gmail.com>
+# SPDX-FileCopyrightText: 2025 Blitz <73762869+BlitzTheSquishy@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 BloodfiendishOperator <141253729+Diggy0@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 Rosycup <178287475+Rosycup@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 Skubman <ba.fallaria@gmail.com>
+# SPDX-FileCopyrightText: 2025 portfiend <109661617+portfiend@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: marking
+  id: BullishHorns
+  bodyPart: HeadTop
+  markingCategory: HeadTop
+  speciesRestriction: [Human, SlimePerson, IPC]
+  coloring:
+    default:
+      type:
+        !type:CategoryColoring
+          category: Hair
+      fallbackTypes:
+        - !type:SkinColoring
+  sprites:
+  - sprite: Mobs/Customization/kemonomimi-ears.rsi
+    state: bullishhorns
+
+- type: marking
+  id: BunnyEars
+  bodyPart: HeadTop
+  markingCategory: HeadTop
+  speciesRestriction: [Human, SlimePerson, IPC]
+  coloring:
+    default:
+      type:
+        !type:CategoryColoring
+          category: Hair
+      fallbackTypes:
+        - !type:SkinColoring
+    layers:
+      bunnyearstone2:
+        type:
+          !type:SimpleColoring
+            color: "#FFFFFF"
+  sprites:
+  - sprite: Mobs/Customization/kemonomimi-ears.rsi
+    state: bunnyearstone1
+  - sprite: Mobs/Customization/kemonomimi-ears.rsi
+    state: bunnyearstone2
+
+- type: marking
+  id: BunnyEarsAlt
+  bodyPart: HeadTop
+  markingCategory: HeadTop
+  speciesRestriction: [Human,]
+  coloring:
+    default:
+      type:
+        !type:CategoryColoring
+          category: Hair
+      fallbackTypes:
+        - !type:SkinColoring
+  sprites:
+  - sprite: Mobs/Customization/kemonomimi-ears.rsi
+    state: bunnyearsalt
+
+- type: marking
+  id: FoxEars
+  bodyPart: HeadTop
+  markingCategory: HeadTop
+  speciesRestriction: [Human, SlimePerson, IPC, Canid] # The Den - Add Canid
+  coloring:
+    default:
+      type:
+        !type:CategoryColoring
+          category: Hair
+      fallbackTypes:
+        - !type:SkinColoring
+  sprites:
+  - sprite: Mobs/Customization/kemonomimi-ears.rsi
+    state: foxears
+
+- type: marking
+  id: GoatHorns
+  bodyPart: HeadTop
+  markingCategory: HeadTop
+  speciesRestriction: [Human, SlimePerson, IPC]
+  coloring:
+    default:
+      type:
+        !type:CategoryColoring
+          category: Hair
+      fallbackTypes:
+        - !type:SkinColoring
+    layers:
+      goathornstone2:
+        type:
+          !type:SimpleColoring
+            color: "#FFFFFF"
+  sprites:
+  - sprite: Mobs/Customization/kemonomimi-ears.rsi
+    state: goathornstone1
+  - sprite: Mobs/Customization/kemonomimi-ears.rsi
+    state: goathornstone2
+
+- type: marking
+  id: LambHorns
+  bodyPart: HeadTop
+  markingCategory: HeadTop
+  speciesRestriction: [Human, SlimePerson, IPC]
+  coloring:
+    default:
+      type:
+        !type:CategoryColoring
+          category: Hair
+      fallbackTypes:
+        - !type:SkinColoring
+    layers:
+      lambhornstone2:
+        type:
+          !type:SimpleColoring
+            color: "#FFFFFF"
+  sprites:
+  - sprite: Mobs/Customization/kemonomimi-ears.rsi
+    state: lambhornstone1
+  - sprite: Mobs/Customization/kemonomimi-ears.rsi
+    state: lambhornstone2
+
+- type: marking
+  id: GoatHornsNoEars
+  bodyPart: HeadTop
+  markingCategory: HeadTop
+  speciesRestriction: [Human, SlimePerson, IPC]
+  coloring:
+    default:
+      type:
+        !type:CategoryColoring
+          category: Hair
+      fallbackTypes:
+        - !type:SkinColoring
+    layers:
+      goathornstone2:
+        type:
+          !type:SimpleColoring
+            color: "#FFFFFF"
+  sprites:
+  - sprite: Mobs/Customization/kemonomimi-ears.rsi
+    state: goathornstone2
+
+- type: marking
+  id: LambHornsNoEars
+  bodyPart: HeadTop
+  markingCategory: HeadTop
+  speciesRestriction: [Human, SlimePerson, IPC]
+  coloring:
+    default:
+      type:
+        !type:CategoryColoring
+          category: Hair
+      fallbackTypes:
+        - !type:SkinColoring
+    layers:
+      lambhornstone2:
+        type:
+          !type:SimpleColoring
+            color: "#FFFFFF"
+  sprites:
+  - sprite: Mobs/Customization/kemonomimi-ears.rsi
+    state: lambhornstone2

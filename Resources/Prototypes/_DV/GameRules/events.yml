@@ -1,0 +1,89 @@
+# SPDX-FileCopyrightText: 2023 Colin-Tel
+# SPDX-FileCopyrightText: 2023 Fluffiest Floofers
+# SPDX-FileCopyrightText: 2023 PHCodes
+# SPDX-FileCopyrightText: 2024 DEATHB4DEFEAT
+# SPDX-FileCopyrightText: 2024 Danger Revolution!
+# SPDX-FileCopyrightText: 2024 Mnemotechnican
+# SPDX-FileCopyrightText: 2024 VMSolidus
+# SPDX-FileCopyrightText: 2025 Jakumba
+# SPDX-FileCopyrightText: 2025 Rosycup
+# SPDX-FileCopyrightText: 2025 sleepyyapril
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: entity
+  id: XenoVents
+  parent: BaseVentCritterSpawn
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: StationEvent
+    startAnnouncement: true
+    earliestStart: 15
+    reoccurrenceDelay: 12
+    minimumPlayers: 10
+    weight: 8 # Really weak compared to other critters
+    duration: 30
+  - type: VentCrittersRule
+    sound: /Audio/_DEN/VentCritters/vent_xeno.ogg #Den
+    specialEntries:
+      - id: MobXenoPraetorian
+    table: !type:GroupSelector # DeltaV: EntityTable instead of spawn entries
+      children:
+      - id: MobXeno
+        weight: 0.55
+      - id: MobXenoRouny
+        weight: 0.01
+      - id: MobXenoDrone
+        weight: 0.25
+      - id: MobXenoSpitter
+        weight: 0.05
+      - id: MobXenoRunner
+        weight: 0.08
+      - id: MobXenoPraetorian
+        weight: 0.03
+      - id: MobXenoRavager
+        weight: 0.02
+      - id: MobXenoQueen
+        weight: 0.01
+
+# Weaker version of xenos, meant to provide some dangers in low pop.
+- type: entity
+  id: XenoVentsWeak
+  parent: XenoVents
+  # categories: [ HideSpawnMenu ]
+  components:
+  - type: StationEvent
+    startAnnouncement: true
+    reoccurrenceDelay: 12
+    minimumPlayers: 1
+    duration: 30
+  - type: VentCrittersRule
+    specialEntries:
+      - id: MobXenoDrone
+    table: !type:GroupSelector # DeltaV: EntityTable instead of spawn entries
+      children:
+      - id: MobXeno
+        weight: 0.55
+      - id: MobXenoRouny
+        weight: 0.01
+      - id: MobXenoDrone
+        weight: 0.25
+      - id: MobXenoSpitter
+        weight: 0.05
+      - id: MobXenoRunner
+        weight: 0.08
+      - id: MobXenoRavager
+        weight: 0.02
+
+- type: entity
+  id: PirateRadioSpawn
+  parent: BaseGameRule
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: StationEvent
+    weight: 7.5
+    minimumPlayers: 10
+    maxOccurrences: 1
+    duration: 1
+  - type: PirateRadioSpawnRule
+    debrisCount: 6

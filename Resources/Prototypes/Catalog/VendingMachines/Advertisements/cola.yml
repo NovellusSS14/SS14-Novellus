@@ -1,0 +1,18 @@
+# SPDX-FileCopyrightText: 2021 Visne <39844191+Visne@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 Tayrtahn <tayrtahn@gmail.com>
+# SPDX-FileCopyrightText: 2024 Ubaser <134914314+UbaserB@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: messagePack
+  id: RobustSoftdrinksAds
+  messages:
+  - advertisement-cola-1
+  - advertisement-cola-2
+  - advertisement-cola-3
+  - advertisement-cola-4
+  - advertisement-cola-5
+  - advertisement-cola-6
+  - advertisement-cola-7
+  - advertisement-cola-8

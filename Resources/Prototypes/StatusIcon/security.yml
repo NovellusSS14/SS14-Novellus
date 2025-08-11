@@ -1,0 +1,60 @@
+# SPDX-FileCopyrightText: 2024 AJCM-git <60196617+AJCM-git@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 Mnemotechnican <69920617+Mnemotechnician@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 PrPleGoo <PrPleGoo@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 SimpleStation14 <130339894+SimpleStation14@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 slarticodefast <161409025+slarticodefast@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: securityIcon
+  id: SecurityIcon
+  abstract: true
+  offset: 1
+  locationPreference: Left
+  isShaded: true
+
+- type: securityIcon
+  parent: SecurityIcon
+  id: SecurityIconDischarged
+  icon:
+    sprite: /Textures/Interface/Misc/security_icons.rsi
+    state: hud_discharged
+
+- type: securityIcon
+  parent: SecurityIcon
+  id: SecurityIconIncarcerated
+  icon:
+    sprite: /Textures/Interface/Misc/security_icons.rsi
+    state: hud_incarcerated
+
+- type: securityIcon
+  parent: SecurityIcon
+  id: SecurityIconParoled
+  icon:
+    sprite: /Textures/Interface/Misc/security_icons.rsi
+    state: hud_paroled
+
+- type: securityIcon
+  parent: SecurityIcon
+  id: SecurityIconSuspected
+  icon:
+    sprite: /Textures/Interface/Misc/security_icons.rsi
+    state: hud_suspected
+
+- type: securityIcon
+  parent: SecurityIcon
+  id: SecurityIconWanted
+  icon:
+    sprite: /Textures/Interface/Misc/security_icons.rsi
+    state: hud_wanted
+
+- type: securityIcon
+  id: MindShieldIcon
+  priority: 2
+  locationPreference: Right
+  layer: Mod
+  isShaded: true
+  icon:
+    sprite: /Textures/Interface/Misc/job_icons.rsi
+    state: MindShield

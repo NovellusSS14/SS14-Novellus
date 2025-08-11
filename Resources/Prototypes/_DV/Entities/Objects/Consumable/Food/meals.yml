@@ -1,0 +1,28 @@
+# SPDX-FileCopyrightText: 2023 Fluffiest Floofers <thebluewulf@gmail.com>
+# SPDX-FileCopyrightText: 2025 Rosycup <178287475+Rosycup@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: entity
+  name: grilled cheese
+  parent: FoodMealBase
+  id: FoodMealGrilledCheese
+  description: Two slices of bread cooked in butter with a lofty wedge of cheese in the middle.
+  components:
+  - type: FlavorProfile
+    flavors:
+      - butter
+      - cheesy
+  - type: Sprite
+    sprite: _DV/Objects/Consumable/Food/Baked/grilledcheese.rsi
+    state: grilledcheese
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 15
+        reagents:
+        - ReagentId: Nutriment
+          Quantity: 6
+        - ReagentId: Vitamin
+          Quantity: 2

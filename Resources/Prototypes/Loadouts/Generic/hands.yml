@@ -1,0 +1,236 @@
+# SPDX-FileCopyrightText: 2024 Angelo Fallaria <ba.fallaria@gmail.com>
+# SPDX-FileCopyrightText: 2024 DEATHB4DEFEAT <77995199+DEATHB4DEFEAT@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 ShatteredSwords <135023515+ShatteredSwords@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 VMSolidus <evilexecutive@gmail.com>
+# SPDX-FileCopyrightText: 2024 sleepyyapril <flyingkarii@gmail.com>
+# SPDX-FileCopyrightText: 2025 Blitz <73762869+BlitzTheSquishy@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 BlitzTheSquishy <73762869+BlitzTheSquishy@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 BloodfiendishOperator <141253729+Diggy0@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 Hedera <185189451+Hederadaii@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 Skubman <ba.fallaria@gmail.com>
+# SPDX-FileCopyrightText: 2025 Tabitha <64847293+KyuPolaris@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 Timfa <timfalken@hotmail.com>
+# SPDX-FileCopyrightText: 2025 Tonk-GCR <190437025+Tonk-GCR@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: loadout
+  id: LoadoutHandsColorPurple
+  category: Hands
+  cost: 0
+  items:
+    - ClothingHandsGlovesColorPurple
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutGloves
+
+- type: loadout
+  id: LoadoutHandsColorRed
+  category: Hands
+  cost: 0
+  items:
+    - ClothingHandsGlovesColorRed
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutGloves
+
+- type: loadout
+  id: LoadoutHandsColorBlack
+  category: Hands
+  cost: 0
+  items:
+    - ClothingHandsGlovesColorBlack
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutGloves
+
+- type: loadout
+  id: LoadoutHandsColorBlue
+  category: Hands
+  cost: 0
+  items:
+    - ClothingHandsGlovesColorBlue
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutGloves
+
+- type: loadout
+  id: LoadoutHandsColorBrown
+  category: Hands
+  cost: 0
+  items:
+    - ClothingHandsGlovesColorBrown
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutGloves
+
+- type: loadout
+  id: LoadoutHandsColorGray
+  category: Hands
+  cost: 0
+  items:
+    - ClothingHandsGlovesColorGray
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutGloves
+
+- type: loadout
+  id: LoadoutHandsColorGreen
+  category: Hands
+  cost: 0
+  items:
+    - ClothingHandsGlovesColorGreen
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutGloves
+
+- type: loadout
+  id: LoadoutHandsColorLightBrown
+  category: Hands
+  cost: 0
+  items:
+    - ClothingHandsGlovesColorLightBrown
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutGloves
+
+- type: loadout
+  id: LoadoutHandsColorOrange
+  category: Hands
+  cost: 0
+  items:
+    - ClothingHandsGlovesColorOrange
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutGloves
+
+- type: loadout
+  id: LoadoutHandsColorWhite
+  category: Hands
+  cost: 0
+  customColorTint: true
+  canBeHeirloom: true
+  items:
+    - ClothingHandsGlovesColorWhite
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutGloves
+    - !type:CharacterSpeciesRequirement # Use the envirogloves that use the same sprite instead.
+      inverted: true
+      species:
+        - Plasmaman
+
+- type: loadout
+  id: LoadoutHandsColorYellowBudget
+  category: Hands
+  cost: 3
+  canBeHeirloom: true
+  requirements:
+    - !type:CharacterJobRequirement
+      jobs:
+        - Passenger
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutGloves # TheDen
+  items:
+    - ClothingHandsGlovesColorYellowBudget
+
+- type: loadout
+  id: LoadoutHandsGlovesLeather
+  category: JobsServiceBotanist # TheDen - they are called botonist's gloves
+  cost: 0
+  items:
+    - ClothingHandsGlovesLeather
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutBotanistGloves
+    - !type:CharacterJobRequirement
+      jobs:
+      - Botanist
+
+- type: loadout
+  id: LoadoutHandsGlovesPowerglove
+  category: Hands
+  cost: 1
+  canBeHeirloom: true
+  items:
+    - ClothingHandsGlovesPowerglove
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutGloves # TheDen
+
+- type: loadout
+  id: LoadoutHandsGlovesRobohands
+  category: Hands
+  cost: 0
+  items:
+    - ClothingHandsGlovesRobohands
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutGloves # TheDen
+
+- type: loadout
+  id: LoadoutHandsGlovesFingerless
+  category: Hands
+  cost: 0
+  items:
+    - ClothingHandsGlovesFingerless
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutGloves
+#    - !type:CharacterSpeciesRequirement - TheDen - pointless to restrict them
+#      inverted: true
+#      species:
+#        - Plasmaman
+
+- type: loadout
+  id: LoadoutHandsGlovesEvening
+  category: Hands
+  cost: 0
+  customColorTint: true
+  items:
+    - ClothingHandsGlovesEvening
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutGloves
+    - !type:CharacterSpeciesRequirement # Use the evening envirogloves that use the same sprite instead.
+      inverted: true
+      species:
+        - Plasmaman
+
+- type: loadout
+  id: LoadoutHandsClothWrap
+  category: Hands
+  cost: 0
+  customColorTint: true
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutGloves
+  items:
+    - ClothingClothWrap
+
+- type: loadout
+  id: ClothingHandsTacticalMaidGlovesLoadout
+  category: Hands
+  cost: 1
+  items:
+    - ClothingHandsTacticalMaidGlovesLoadout
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutGloves
+
+- type: loadout # TheDen
+  id: ClothingHandsGoldenRingLoadout
+  category: Hands
+  cost: 0
+  customColorTint: true
+  canBeHeirloom: true
+  items:
+    - ClothingHandsGoldenRing
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutGloves
+#    - !type:CharacterSpeciesRequirement - TheDen - pointless to restrict them
+#      inverted: true
+#      species:
+#        - Plasmaman

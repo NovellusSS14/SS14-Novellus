@@ -1,0 +1,36 @@
+# SPDX-FileCopyrightText: 2024 VMSolidus <evilexecutive@gmail.com>
+# SPDX-FileCopyrightText: 2025 Blitz <73762869+BlitzTheSquishy@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: entity
+  parent: BaseMaterialDoor
+  id: N14DoorShutterFramedRoller
+  name: shutter
+  description: A lightweight airtight roller shutter door.
+  suffix: Door # TheDen
+  components:
+  - type: Door
+    bumpOpen: false
+    crushDamage:
+      types:
+        Blunt: 5
+    openSound:
+      path: /Audio/Machines/airlock_ext_open.ogg
+    closeSound:
+      path: /Audio/Machines/airlock_ext_close.ogg
+    denySound:
+      path: /Audio/Machines/airlock_deny.ogg
+  - type: Sprite
+    sprite: _Nuclear14/Structures/Doors/RollerDoors/framedshutter.rsi
+    
+- type: entity
+  parent: BaseMaterialDoor
+  id: N14DoorShutterRoller
+  name: garage shutter
+  suffix: frameless
+  description: A lightweight airtight roller shutter door.
+  components:
+  - type: Sprite
+    sprite: _Nuclear14/Structures/Doors/RollerDoors/garageshutter.rsi

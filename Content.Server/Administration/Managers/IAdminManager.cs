@@ -1,0 +1,87 @@
+// SPDX-FileCopyrightText: 2020 Pieter-Jan Briers <pieterjan.briers+git@gmail.com>
+// SPDX-FileCopyrightText: 2021 Acruid <shatter66@gmail.com>
+// SPDX-FileCopyrightText: 2021 DrSmugleaf <DrSmugleaf@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2021 Paul <ritter.paul1+git@googlemail.com>
+// SPDX-FileCopyrightText: 2021 Visne <39844191+Visne@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2022 wrexbe <81056464+wrexbe@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2023 Debug <49997488+DebugOk@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2023 Leon Friedrich <60421075+ElectroJr@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2023 Moony <moony@hellomouse.net>
+// SPDX-FileCopyrightText: 2024 SimpleStation14 <130339894+SimpleStation14@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+using Content.Shared.Administration;
+using Content.Shared.Administration.Managers;
+using Robust.Shared.Player;
+using Robust.Shared.Toolshed;
+
+namespace Content.Server.Administration.Managers
+{
+    /// <summary>
+    ///     Manages server administrators and their permission flags.
+    /// </summary>
+    public interface IAdminManager : ISharedAdminManager
+    {
+        /// <summary>
+        ///     Fired when the permissions of an admin on the server changed.
+        /// </summary>
+        event Action<AdminPermsChangedEventArgs> OnPermsChanged;
+
+        /// <summary>
+        ///     Gets all active admins currently on the server.
+        /// </summary>
+        /// <remarks>
+        ///     This does not include admins that are de-adminned.
+        /// </remarks>
+        IEnumerable<ICommonSession> ActiveAdmins { get; }
+
+        /// <summary>
+        /// Gets all admins currently on the server, even de-adminned ones.
+        /// </summary>
+        IEnumerable<ICommonSession> AllAdmins { get; }
+
+        /// <summary>
+        ///     De-admins an admin temporarily so they are effectively a normal player.
+        /// </summary>
+        /// <remarks>
+        ///     De-adminned admins are able to re-admin at any time if they so desire.
+        /// </remarks>
+        void DeAdmin(ICommonSession session);
+
+        /// <summary>
+        ///     Re-admins a de-adminned admin.
+        /// </summary>
+        void ReAdmin(ICommonSession session);
+
+        /// <summary>
+        ///     Make admin hidden from adminwho.
+        /// </summary>
+        void Stealth(ICommonSession session);
+
+        /// <summary>
+        ///     Unhide admin from adminwho.
+        /// </summary>
+        void UnStealth(ICommonSession session);
+
+        /// <summary>
+        ///     Re-loads the permissions of an player in case their admin data changed DB-side.
+        /// </summary>
+        /// <seealso cref="ReloadAdminsWithRank"/>
+        void ReloadAdmin(ICommonSession player);
+
+        /// <summary>
+        ///     Reloads admin permissions for all admins with a certain rank.
+        /// </summary>
+        /// <param name="rankId">The database ID of the rank.</param>
+        /// <seealso cref="ReloadAdmin"/>
+        void ReloadAdminsWithRank(int rankId);
+
+        void Initialize();
+
+        void PromoteHost(ICommonSession player);
+
+        bool TryGetCommandFlags(CommandSpec command, out AdminFlags[]? flags);
+    }
+}

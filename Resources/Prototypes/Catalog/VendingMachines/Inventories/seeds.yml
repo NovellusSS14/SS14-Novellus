@@ -1,0 +1,88 @@
+# SPDX-FileCopyrightText: 2019 DamianX <DamianX@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2020 AJCM-git <60196617+AJCM-git@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2020 Hugo Laloge <hugo.laloge@gmail.com>
+# SPDX-FileCopyrightText: 2020 Víctor Aguilera Puerto <6766154+Zumorica@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2020 Ygg01 <daniel.fath7@gmail.com>
+# SPDX-FileCopyrightText: 2021 Swept <sweptwastaken@protonmail.com>
+# SPDX-FileCopyrightText: 2021 Visne <39844191+Visne@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2022 Andreas Kämper <andreas@kaemper.tech>
+# SPDX-FileCopyrightText: 2022 Kevin Zheng <kevinz5000@gmail.com>
+# SPDX-FileCopyrightText: 2022 Michael Phillips <1194692+MeltedPixel@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2022 Nemanja <98561806+EmoGarbage404@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2022 Peptide90 <78795277+Peptide90@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2022 Rane <60792108+Elijahrane@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2022 Stealthbomber16 <100171035+Stealthbomber16@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2023 Debug <49997488+DebugOk@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2023 Doru991 <75124791+Doru991@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2023 DoubleRiceEddiedd <149714181+DoubleRiceEddiedd@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2023 Fluffiest Floofers <thebluewulf@gmail.com>
+# SPDX-FileCopyrightText: 2023 Nim <128169402+Nimfar11@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2023 Vladislav Kadira <130583174+FillerVK@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2023 ZeroDayDaemon <60460608+ZeroDayDaemon@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2023 lapatison <100279397+lapatison@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 FoxxoTrystan <45297731+FoxxoTrystan@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 RichardRahl123 <130261520+RichardRahl123@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 RumiTiger <154005209+RumiTiger@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 SleepyScarecrow <136123749+SleepyScarecrow@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 SleepyScarecrow <sharedjunkemail69@gmail.com>
+# SPDX-FileCopyrightText: 2024 dustylens <54123313+dustylens@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 sleepyyapril <flyingkarii@gmail.com>
+# SPDX-FileCopyrightText: 2025 Hedera <185189451+Hederadaii@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 KyuPolaris <tabi@kyuudev.me>
+# SPDX-FileCopyrightText: 2025 MajorMoth <61519600+MajorMoth@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: vendingMachineInventory
+  id: MegaSeedServitorInventory
+  startingInventory:
+    AloeSeeds: 3
+    AmbrosiaVulgarisSeeds: 3
+    AppleSeeds: 5
+    AvocadoSeeds: 5 # Frontier
+    BananaSeeds: 5
+    BeeSeeds: 5 # Frontier
+    BeetrootSeeds: 5
+    PearSeeds: 3 # Floof - Botany Additions
+    CarrotSeeds: 5
+    CabbageSeeds: 5
+    ChanterelleSeeds: 5
+    CherrySeeds: 5
+    ChiliSeeds: 5
+    CornSeeds: 5
+    CottonSeeds: 5
+    CucumberSeeds: 5 # Frontier
+    EggplantSeeds: 5
+    EggySeeds: 5
+    GalaxythistleSeeds: 3
+    GarlicSeeds: 3
+    GrapeSeeds: 5
+    LemonSeeds: 5
+    LimeSeeds: 5
+    LingzhiSeeds: 3
+    OatSeeds: 5
+    OnionSeeds: 5
+    OnionRedSeeds: 5
+    OrangeSeeds: 5
+    PomegranateSeeds: 3 # Floofstation
+    PoppySeeds: 3
+    PotatoSeeds: 5
+    PumpkinSeeds: 5
+    PineappleSeeds: 5
+    RiceSeeds: 5
+    SoybeanSeeds: 5
+    SugarcaneSeeds: 5
+    TomatoSeeds: 5
+    TowercapSeeds: 5
+    WheatSeeds: 5
+    CoffeeSeeds: 3 # Floof - Botany Additions
+    WatermelonSeeds: 5
+    CocoaSeeds: 3
+    BerrySeeds: 5
+    PeaSeeds: 5
+  contrabandInventory:
+    CannabisSeeds: 3 # Floof - Botany Additions
+    TobaccoSeeds: 3 # Floof - Botany Additions
+  emaggedInventory:
+    FlyAmanitaSeeds: 1

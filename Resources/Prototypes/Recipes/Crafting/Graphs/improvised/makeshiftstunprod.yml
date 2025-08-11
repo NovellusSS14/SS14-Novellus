@@ -1,0 +1,36 @@
+# SPDX-FileCopyrightText: 2023 kxv <136233650+kxvvv@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 DEATHB4DEFEAT <77995199+DEATHB4DEFEAT@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: constructionGraph
+  id: makeshiftstunprod
+  start: start
+  graph:
+    - node: start
+      edges:
+        - to: msstunprod
+          steps:
+            - material: MetalRod
+              amount: 1
+            - tag: PowerCellSmall
+              name: Power Cell Small
+              icon:
+                sprite: Objects/Power/power_cells.rsi
+                state: small
+            - tag: Handcuffs
+              icon:
+                sprite: Objects/Misc/cablecuffs.rsi
+                state: cuff
+                color: red
+              name: cuffs
+            - tag: Igniter
+              name: Igniter
+              icon:
+                sprite: Objects/Devices/igniter.rsi
+                state: icon
+              doAfter: 15
+    - node: msstunprod
+      entity: Stunprod
+      

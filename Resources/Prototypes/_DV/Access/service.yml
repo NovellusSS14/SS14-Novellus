@@ -1,0 +1,33 @@
+# SPDX-FileCopyrightText: 2023 Velcroboy <107660393+IamVelcroboy@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 Rosycup <178287475+Rosycup@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: accessLevel
+  id: Boxer
+  name: id-card-access-level-boxer
+
+- type: accessLevel
+  id: Clown
+  name: id-card-access-level-clown
+
+- type: accessLevel
+  id: Library
+  name: id-card-access-level-library
+
+- type: accessLevel
+  id: Mime
+  name: id-card-access-level-mime
+
+- type: accessLevel
+  id: Musician
+  name: id-card-access-level-musician
+
+- type: accessLevel
+  id: Reporter
+  name: id-card-access-level-reporter
+
+- type: accessLevel
+  id: Zookeeper
+  name: id-card-access-level-zookeeper

@@ -1,0 +1,80 @@
+# SPDX-FileCopyrightText: 2024 VMSolidus
+# SPDX-FileCopyrightText: 2025 BlitzTheSquishy
+# SPDX-FileCopyrightText: 2025 Rosycup
+# SPDX-FileCopyrightText: 2025 sleepyyapril
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+# Cargo Technician
+#- type: characterItemGroup
+#  id: LoadoutCargoTechnicianBackpacks
+#  maxItems: 1
+#  items:
+#
+#- type: characterItemGroup
+#  id: LoadoutCargoTechnicianBelt
+#  maxItems: 1
+#  items:
+#
+#- type: characterItemGroup
+#  id: LoadoutCargoTechnicianEars
+#  maxItems: 1
+#  items:
+#
+#- type: characterItemGroup
+#  id: LoadoutCargoTechnicianEquipment
+#  maxItems: 1
+#  items:
+#
+#- type: characterItemGroup
+#  id: LoadoutCargoTechnicianEyes
+#  maxItems: 1
+#  items:
+#
+#- type: characterItemGroup
+#  id: LoadoutCargoTechnicianGloves
+#  maxItems: 1
+#  items:
+#
+#- type: characterItemGroup
+#  id: LoadoutCargoTechnicianHead
+#  maxItems: 1
+#  items:
+#
+#- type: characterItemGroup
+#  id: LoadoutCargoTechnicianId
+#  maxItems: 1
+#  items:
+#
+#- type: characterItemGroup
+#  id: LoadoutCargoTechnicianNeck
+#  maxItems: 1
+#  items:
+#
+#- type: characterItemGroup
+#  id: LoadoutCargoTechnicianMask
+#  maxItems: 1
+#  items:
+#
+#- type: characterItemGroup
+#  id: LoadoutCargoTechnicianOuter
+#  maxItems: 1
+#  items:
+#
+#- type: characterItemGroup
+#  id: LoadoutCargoTechnicianShoes
+#  maxItems: 1
+#  items:
+
+- type: characterItemGroup
+  id: LoadoutCargoTechnicianUniforms
+  maxItems: 1
+  items:
+    - type: loadout
+      id: LoadoutCargoTechnicianUniformSuitLight
+    - type: loadout
+      id: LoadoutCargoTechnicianUniformSuitDark
+    - type: loadout
+      id: LoadoutCargoTechnicianUniformSkirtLight
+    - type: loadout
+      id: LoadoutCargoTechnicianUniformSkirtDark

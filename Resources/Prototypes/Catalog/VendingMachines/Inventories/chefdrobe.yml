@@ -1,0 +1,34 @@
+# SPDX-FileCopyrightText: 2022 Andreas Kämper <andreas@kaemper.tech>
+# SPDX-FileCopyrightText: 2022 Fishfish458 <47410468+Fishfish458@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2022 fishfish458 <fishfish458>
+# SPDX-FileCopyrightText: 2023 Alithsko <84513092+Alithsko@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2023 Flareguy <78941145+Flareguy@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2023 Velcroboy <107660393+IamVelcroboy@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2023 Velcroboy <107660393+iamvelcroboy@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 Dakota Haven <TotallyDemonicDragon@Gmail.com>
+# SPDX-FileCopyrightText: 2024 Jackal298 <129199891+jackal298@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 portfiend <109661617+portfiend@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: vendingMachineInventory
+  id: ChefDrobeInventory
+  startingInventory:
+    ClothingHeadsetService: 2
+    ClothingOuterApronChef: 3
+    ClothingWaistApron: 2 # The Den: Added waist apron.
+    ClothingOuterWinterChef: 2
+    ClothingOuterJacketChef: 1
+    ClothingUniformJumpsuitChef: 1
+    ClothingMaskItalianMoustache: 2
+    ClothingUniformJumpskirtChef:  2
+    ClothingHeadHatChef: 2
+    ClothingShoesColorBlack: 2
+    ClothingShoesBootsWinterChef: 2 #Delta V: Add departmental winter boots
+    ClothingShoesChef: 2
+    ClothingBeltChef: 2
+    # Floofstation - Departmental Socks ect
+    ClothingHandsChefWarmers: 2
+    ClothingUnderSocksChef: 2
+    ClothingUniformChefThong: 2

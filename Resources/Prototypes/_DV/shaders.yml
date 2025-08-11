@@ -1,0 +1,22 @@
+# SPDX-FileCopyrightText: 2023 Debug <49997488+DebugOk@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2023 JJ <47927305+PHCodes@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 Rosycup <178287475+Rosycup@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <flyingkarii@gmail.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+# hologram
+- type: shader
+  id: HologramDeltaV
+  kind: source
+  path: "/Textures/_DV/Shaders/hologram.swsl"
+  params:
+    textureHeight: 32
+    hue: 0.64
+
+# deep-fried food
+- type: shader
+  id: Crispy
+  kind: source
+  path: "/Textures/Shaders/crispy.swsl"

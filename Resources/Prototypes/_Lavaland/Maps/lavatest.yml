@@ -1,0 +1,20 @@
+# SPDX-FileCopyrightText: 2025 Eris <eris@erisws.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: gameMap
+  id: Lavatest
+  mapName: Lavaland Playtest
+  mapPath: /Maps/_Lavaland/lavaland_playtest.yml
+  minPlayers: 0
+  stations:
+    Lavatest:
+      stationProto: StandardNanotrasenStation
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: "LavaTest"
+        - type: StationJobs
+          availableJobs:
+            Quartermaster: [ 1, 1 ]
+            SalvageSpecialist: [ -1, -1 ]

@@ -1,0 +1,36 @@
+# SPDX-FileCopyrightText: 2022 Nemanja <98561806+EmoGarbage404@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2022 OctoRocket <88291550+OctoRocket@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2022 Rane <60792108+Elijahrane@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 Timfa <timfalken@hotmail.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: constructionGraph
+  id: MineBot
+  start: start
+  graph:
+  - node: start
+    edges:
+    - to: bot
+      steps:
+      - tag: ProximitySensor
+        icon:
+          sprite: Objects/Misc/proximity_sensor.rsi
+          state: icon
+        name: proximity sensor
+        doAfter: 2
+      - tag: ItemPickaxe
+        icon:
+          sprite: Objects/Weapons/Melee/pickaxe.rsi
+          state: pickaxe
+        name: pickaxe
+        doAfter: 2
+      - tag: HardHat
+        icon:
+          sprite: Clothing/Head/Hardhats/yellow.rsi
+          state: icon
+        name: hardhat
+        doAfter: 2
+  - node: bot
+    entity: MobMineBot

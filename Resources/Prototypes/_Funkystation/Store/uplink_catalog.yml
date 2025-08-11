@@ -1,0 +1,15 @@
+# SPDX-FileCopyrightText: 2025 Eris <eris@erisws.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+# - type: listing
+#   id: UplinkChangelingInfectImplanter
+#   name: uplink-changelinginfect-implant-name
+#   description: uplink-changelinginfect-implant-desc
+#   icon: { sprite: /Textures/Objects/Specific/Medical/syndi_implanter.rsi, state: implanter0 }
+#   productEntity: ChangelingInfectionImplanter
+#   cost:
+#     Telecrystal: 75 # Over half the budget
+#   categories:
+#     - UplinkImplants

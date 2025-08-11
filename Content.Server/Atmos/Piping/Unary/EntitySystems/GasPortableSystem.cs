@@ -1,0 +1,94 @@
+// SPDX-FileCopyrightText: 2021 20kdc <asdd2808@gmail.com>
+// SPDX-FileCopyrightText: 2021 Pieter-Jan Briers <pieterjan.briers+git@gmail.com>
+// SPDX-FileCopyrightText: 2021 Vera Aguilera Puerto <6766154+Zumorica@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2022 Acruid <shatter66@gmail.com>
+// SPDX-FileCopyrightText: 2022 Rane <60792108+Elijahrane@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2022 Vera Aguilera Puerto <gradientvera@outlook.com>
+// SPDX-FileCopyrightText: 2022 metalgearsloth <31366439+metalgearsloth@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2022 metalgearsloth <comedian_vs_clown@hotmail.com>
+// SPDX-FileCopyrightText: 2022 mirrorcult <lunarautomaton6@gmail.com>
+// SPDX-FileCopyrightText: 2022 wrexbe <81056464+wrexbe@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2023 Visne <39844191+Visne@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2023 faint <46868845+ficcialfaint@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 Leon Friedrich <60421075+ElectroJr@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 VMSolidus <evilexecutive@gmail.com>
+// SPDX-FileCopyrightText: 2024 sleepyyapril <flyingkarii@gmail.com>
+// SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+using System.Diagnostics.CodeAnalysis;
+using Content.Server.Atmos.Piping.Binary.Components;
+using Content.Server.Atmos.Piping.Unary.Components;
+using Content.Server.NodeContainer;
+using Content.Server.NodeContainer.EntitySystems;
+using Content.Server.NodeContainer.Nodes;
+using Content.Shared.Atmos.Piping.Unary.Components;
+using Content.Shared.Construction.Components;
+using JetBrains.Annotations;
+using Robust.Shared.Map;
+using Robust.Shared.Map.Components;
+
+namespace Content.Server.Atmos.Piping.Unary.EntitySystems
+{
+    [UsedImplicitly]
+    public sealed class GasPortableSystem : EntitySystem
+    {
+        [Dependency] private readonly SharedAppearanceSystem _appearance = default!;
+        [Dependency] private readonly NodeContainerSystem _nodeContainer = default!;
+        [Dependency] private readonly SharedMapSystem _sharedMapSystem = default!;
+
+        public override void Initialize()
+        {
+            base.Initialize();
+
+            SubscribeLocalEvent<GasPortableComponent, AnchorAttemptEvent>(OnPortableAnchorAttempt);
+            // Shouldn't need re-anchored event.
+            SubscribeLocalEvent<GasPortableComponent, AnchorStateChangedEvent>(OnAnchorChanged);
+        }
+
+        private void OnPortableAnchorAttempt(EntityUid uid, GasPortableComponent component, AnchorAttemptEvent args)
+        {
+            if (!EntityManager.TryGetComponent(uid, out TransformComponent? transform))
+                return;
+
+            // If we can't find any ports, cancel the anchoring.
+            if (!FindGasPortIn(transform.GridUid, transform.Coordinates, out _))
+                args.Cancel();
+        }
+
+        private void OnAnchorChanged(EntityUid uid, GasPortableComponent portable, ref AnchorStateChangedEvent args)
+        {
+            if (!_nodeContainer.TryGetNode(uid, portable.PortName, out PipeNode? portableNode))
+                return;
+
+            portableNode.ConnectionsEnabled = args.Anchored;
+
+            if (EntityManager.TryGetComponent(uid, out AppearanceComponent? appearance))
+            {
+                _appearance.SetData(uid, GasPortableVisuals.ConnectedState, args.Anchored, appearance);
+            }
+        }
+
+        public bool FindGasPortIn(EntityUid? gridId, EntityCoordinates coordinates, [NotNullWhen(true)] out GasPortComponent? port)
+        {
+            port = null;
+
+            if (gridId == null)
+                return false;
+
+            if (!TryComp<MapGridComponent>(gridId, out var grid))
+                return false;
+
+            foreach (var entityUid in _sharedMapSystem.GetLocal((EntityUid) gridId, grid, coordinates))
+            {
+                if (EntityManager.TryGetComponent(entityUid, out port))
+                {
+                    return true;
+                }
+            }
+
+            return false;
+        }
+    }
+}

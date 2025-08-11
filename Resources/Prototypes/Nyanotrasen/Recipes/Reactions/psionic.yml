@@ -1,0 +1,42 @@
+# SPDX-FileCopyrightText: 2023 Colin-Tel <113523727+Colin-Tel@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2023 Fluffiest Floofers <thebluewulf@gmail.com>
+# SPDX-FileCopyrightText: 2024 Aiden <aiden@djkraz.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+# - type: reaction
+#  id: LotophagoiOil
+#  reactants:
+#    SpaceDrugs:
+#      amount: 1
+#    Cognizine:
+#      amount: 1
+#    Plasma:
+#      amount: 5
+#      catalyst: true
+#  products:
+#    LotophagoiOil: 1
+
+- type: reaction
+  id: CreateNormalityCrystal
+  impact: Low
+  quantized: true
+  minTemp: 400
+  reactants:
+    Ash:
+      amount: 5 # DeltaV - Change from 10 to 5 to fit the guidebook recipe
+    Water:
+      amount: 5 # DeltaV - Change from 10 to 5 to fit the guidebook recipe
+    Blood:
+      amount: 5 # DeltaV - Change from 10 to 5 to fit the guidebook recipe
+    Ectoplasm:
+      amount: 5 # DeltaV - Make Normality Crystals need only 5 Ectoplasm, was 10.
+    Plasma:
+      amount: 5 # DeltaV - Change from 10 to 5 to fit the guidebook recipe
+      catalyst: true
+  effects:
+    - !type:CreateEntityReactionEffect
+      entity: MaterialNormality1
+    - !type:ChangeGlimmerReactionEffect
+      count: -10

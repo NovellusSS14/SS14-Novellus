@@ -1,0 +1,24 @@
+# SPDX-FileCopyrightText: 2024 metalgearsloth <31366439+metalgearsloth@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: entity
+  id: FTLPoint
+  parent: MarkerBase
+  name: FTL point
+  components:
+    - type: FTLSmashImmune
+    - type: FTLBeacon
+    - type: Sprite
+      state: pink
+
+- type: entity
+  id: FTLExclusion
+  parent: MarkerBase
+  name: FTL exclusion point
+  components:
+    - type: FTLExclusion
+      range: 32
+    - type: Sprite
+      state: pink

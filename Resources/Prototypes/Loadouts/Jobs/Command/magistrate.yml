@@ -1,0 +1,148 @@
+# SPDX-FileCopyrightText: 2025 Blitz <73762869+BlitzTheSquishy@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 John Willis <143434770+CerberusWolfie@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+# Uncategorized
+# Backpacks
+
+# Belt
+
+# Ears
+
+# Equipment
+
+# Eyes
+
+# Gloves
+
+# Head
+- type: loadout
+  id: LoadoutClothingHeadChiefJustice
+  category: JobsCommandMagistrate
+  cost: 0
+  exclusive: true
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutMagistrateHead
+    - !type:CharacterJobRequirement
+      jobs:
+        - ChiefJustice
+        - Magistrate
+  items:
+    - ClothingHeadHatCJToque
+
+# Id
+
+# Neck
+- type: loadout
+  id: LoadoutClothingNeckChiefJustice
+  category: JobsCommandMagistrate
+  cost: 0
+  exclusive: true
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutMagistrateNeck
+    - !type:CharacterJobRequirement
+      jobs:
+        - ChiefJustice
+        - Magistrate
+  items:
+    - ClothingNeckCloakCJ
+
+# Mask
+
+# Outer
+- type: loadout
+  id: LoadoutClothingOuterChiefJustice
+  category: JobsCommandMagistrate
+  cost: 0
+  exclusive: true
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutMagistrateOuter
+    - !type:CharacterJobRequirement
+      jobs:
+        - ChiefJustice
+        - Magistrate
+  items:
+    - ClothingOuterChiefJustice
+
+# Shoes
+
+# Uniforms
+- type: loadout
+  id: LoadoutClothingUniformJumpskirtMagistrate
+  category: JobsCommandMagistrate
+  cost: 0
+  exclusive: true
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutMagistrateUniforms
+    - !type:CharacterJobRequirement
+      jobs:
+        - ChiefJustice
+        - Magistrate
+  items:
+    - ClothingUniformJumpskirtChiefJustice
+
+- type: loadout
+  id: LoadoutClothingUniformJumpsuitMagistrate
+  category: JobsCommandMagistrate
+  cost: 0
+  exclusive: true
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutMagistrateUniforms
+    - !type:CharacterJobRequirement
+      jobs:
+        - ChiefJustice # TheDen
+        - Magistrate
+  items:
+    - ClothingUniformJumpsuitMagistrate
+
+- type: loadout
+  id: LoadoutClothingUniformJumpsuitChiefJustice
+  category: JobsCommandMagistrate
+  cost: 0
+  exclusive: true
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutMagistrateUniforms
+    - !type:CharacterJobRequirement
+      jobs:
+        - ChiefJustice
+        - Magistrate
+  items:
+    - ClothingUniformJumpsuitChiefJustice
+
+- type: loadout
+  id: LoadoutClothingUniformJumpsuitChiefJusticeFormal
+  category: JobsCommandMagistrate
+  cost: 0
+  exclusive: true
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutMagistrateUniforms
+    - !type:CharacterJobRequirement
+      jobs:
+        - ChiefJustice
+        - Magistrate
+  items:
+    - ClothingUniformJumpsuitChiefJusticeFormal
+
+- type: loadout
+  id: LoadoutClothingUniformJumpsuitChiefJusticeWhite
+  category: JobsCommandMagistrate
+  cost: 0
+  exclusive: true
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutMagistrateUniforms
+    - !type:CharacterJobRequirement
+      jobs:
+        - ChiefJustice
+        - Magistrate
+  items:
+    - ClothingUniformJumpsuitChiefJusticeWhite

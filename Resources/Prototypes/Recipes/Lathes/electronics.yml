@@ -1,0 +1,1286 @@
+# SPDX-FileCopyrightText: 2021 20kdc
+# SPDX-FileCopyrightText: 2021 MehimoNemo
+# SPDX-FileCopyrightText: 2021 SethLafuente
+# SPDX-FileCopyrightText: 2021 Swept
+# SPDX-FileCopyrightText: 2021 Vera Aguilera Puerto
+# SPDX-FileCopyrightText: 2021 iczero
+# SPDX-FileCopyrightText: 2022 0x6273
+# SPDX-FileCopyrightText: 2022 August Eymann
+# SPDX-FileCopyrightText: 2022 BubblegumBlue
+# SPDX-FileCopyrightText: 2022 Chris V
+# SPDX-FileCopyrightText: 2022 Flipp Syder
+# SPDX-FileCopyrightText: 2022 Francesco
+# SPDX-FileCopyrightText: 2022 Jack Fox
+# SPDX-FileCopyrightText: 2022 Lamrr
+# SPDX-FileCopyrightText: 2022 Leon Friedrich
+# SPDX-FileCopyrightText: 2022 Paul Ritter
+# SPDX-FileCopyrightText: 2022 Peptide90
+# SPDX-FileCopyrightText: 2022 Rane
+# SPDX-FileCopyrightText: 2022 Starm4ncer
+# SPDX-FileCopyrightText: 2022 fishfish458
+# SPDX-FileCopyrightText: 2022 mirrorcult
+# SPDX-FileCopyrightText: 2023 ChilbroBaggins
+# SPDX-FileCopyrightText: 2023 Jeff
+# SPDX-FileCopyrightText: 2023 Kevin Zheng
+# SPDX-FileCopyrightText: 2023 MishaUnity
+# SPDX-FileCopyrightText: 2023 Moony
+# SPDX-FileCopyrightText: 2023 Nairod
+# SPDX-FileCopyrightText: 2023 Nim
+# SPDX-FileCopyrightText: 2023 Pieter-Jan Briers
+# SPDX-FileCopyrightText: 2023 Segonist
+# SPDX-FileCopyrightText: 2023 Slava0135
+# SPDX-FileCopyrightText: 2023 brainfood1183
+# SPDX-FileCopyrightText: 2023 crazybrain23
+# SPDX-FileCopyrightText: 2023 deltanedas
+# SPDX-FileCopyrightText: 2023 keronshb
+# SPDX-FileCopyrightText: 2023 metalgearsloth
+# SPDX-FileCopyrightText: 2023 Арт
+# SPDX-FileCopyrightText: 2024 ArtisticRoomba
+# SPDX-FileCopyrightText: 2024 Boaz1111
+# SPDX-FileCopyrightText: 2024 DEATHB4DEFEAT
+# SPDX-FileCopyrightText: 2024 DJB1gYAPPA
+# SPDX-FileCopyrightText: 2024 Ed
+# SPDX-FileCopyrightText: 2024 Ilya246
+# SPDX-FileCopyrightText: 2024 Julian Giebel
+# SPDX-FileCopyrightText: 2024 Menshin
+# SPDX-FileCopyrightText: 2024 Nemanja
+# SPDX-FileCopyrightText: 2024 VMSolidus
+# SPDX-FileCopyrightText: 2024 WarMechanic
+# SPDX-FileCopyrightText: 2024 sleepyyapril
+# SPDX-FileCopyrightText: 2024 zelezniciar1
+# SPDX-FileCopyrightText: 2025 AirFryerBuyOneGetOneFree
+# SPDX-FileCopyrightText: 2025 MajorMoth
+# SPDX-FileCopyrightText: 2025 Rosycup
+# SPDX-FileCopyrightText: 2025 Solaris
+# SPDX-FileCopyrightText: 2025 Spatison
+# SPDX-FileCopyrightText: 2025 Steve
+# SPDX-FileCopyrightText: 2025 Timfa
+# SPDX-FileCopyrightText: 2025 Your Name
+# SPDX-FileCopyrightText: 2025 lzk
+# SPDX-FileCopyrightText: 2025 marc-pelletier
+# SPDX-FileCopyrightText: 2025 portfiend
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: latheRecipe
+  abstract: true
+  id: BaseElectronicsRecipe
+  category: Circuitry
+  completetime: 2
+  materials:
+    Steel: 100
+    Plastic: 300
+
+- type: latheRecipe
+  abstract: true
+  parent: BaseElectronicsRecipe
+  id: BaseCheapElectronicsRecipe
+  materials:
+    Steel: 50
+    Plastic: 50
+
+- type: latheRecipe
+  abstract: true
+  parent: BaseElectronicsRecipe
+  id: BaseCheapCircuitboardRecipe
+  materials:
+     Steel: 50
+     Glass: 250
+
+- type: latheRecipe
+  abstract: true
+  parent: BaseElectronicsRecipe
+  id: BaseCircuitboardRecipe
+  completetime: 4
+  materials:
+    Steel: 100
+    Glass: 500
+
+- type: latheRecipe
+  abstract: true
+  parent: BaseCircuitboardRecipe
+  id: BaseGoldCircuitboardRecipe
+  materials:
+    Steel: 100
+    Glass: 500
+    Gold: 100
+
+- type: latheRecipe
+  abstract: true
+  parent: BaseCircuitboardRecipe
+  id: BaseSilverCircuitboardRecipe
+  materials:
+    Steel: 100
+    Glass: 500
+    Silver: 100
+
+- type: latheRecipe
+  abstract: true
+  parent: BaseCircuitboardRecipe
+  id: BaseBananiumCircuitboardRecipe
+  materials:
+    Steel: 100
+    Glass: 500
+    Bananium: 100
+
+- type: latheRecipe
+  id: FirelockElectronics
+  result: FirelockElectronics
+  category: Circuitry
+  completetime: 2
+  materials:
+     Steel: 100
+     Plastic: 300
+
+- type: latheRecipe
+  id: MailingUnitElectronics
+  result: MailingUnitElectronics
+  category: Circuitry
+  completetime: 4
+  materials:
+    Steel: 50
+    Plastic: 300
+
+- type: latheRecipe
+  id: CellRechargerCircuitboard
+  result: CellRechargerCircuitboard
+  category: Circuitry
+  completetime: 2
+  materials:
+    Steel: 50
+    Plastic: 50
+
+- type: latheRecipe
+  id: BorgChargerCircuitboard
+  result: BorgChargerCircuitboard
+  category: Circuitry
+  completetime: 2
+  materials:
+    Steel: 50
+    Plastic: 50
+
+- type: latheRecipe
+  id: WeaponCapacitorRechargerCircuitboard
+  result: WeaponCapacitorRechargerCircuitboard
+  category: Circuitry
+  completetime: 2
+  materials:
+    Steel: 50
+    Plastic: 50
+
+- type: latheRecipe
+  id: TurboItemRechargerCircuitboard
+  result: TurboItemRechargerCircuitboard
+  category: Circuitry
+  completetime: 2
+  materials:
+    Steel: 500
+    Plastic: 500
+    Gold: 100
+
+- type: latheRecipe
+  id: DroneElectronics
+  result: DroneElectronics
+  category: Circuitry
+  completetime: 2
+  materials:
+    Steel: 1000
+    Plastic: 1000
+    Gold: 500
+
+- type: latheRecipe
+  id: DoorElectronics
+  result: DoorElectronics
+  category: Circuitry
+  completetime: 2
+  materials:
+     Steel: 50
+     Plastic: 300
+
+- type: latheRecipe
+  parent: BaseCheapElectronicsRecipe
+  id: FreezerElectronics
+  result: FreezerElectronics
+
+- type: latheRecipe
+  id: AirAlarmElectronics
+  result: AirAlarmElectronics
+  category: Circuitry
+  completetime: 2
+  materials:
+     Steel: 100
+     Plastic: 300
+
+- type: latheRecipe
+  id: StationMapElectronics
+  result: StationMapCircuitboard
+  category: Circuitry
+  completetime: 2
+  materials:
+     Steel: 50
+     Plastic: 50
+
+- type: latheRecipe
+  id: IntercomElectronics
+  result: IntercomElectronics
+  category: Circuitry
+  completetime: 2
+  materials:
+     Steel: 50
+     Plastic: 300
+
+- type: latheRecipe
+  id: FireAlarmElectronics
+  result: FireAlarmElectronics
+  category: Circuitry
+  completetime: 2
+  materials:
+     Steel: 100
+     Plastic: 300
+
+- type: latheRecipe
+  id: SignalTimerElectronics
+  result: SignalTimerElectronics
+  category: Circuitry
+  completetime: 2
+  materials:
+     Steel: 50
+     Plastic: 50
+
+- type: latheRecipe
+  id: CloningPodMachineCircuitboard
+  result: CloningPodMachineCircuitboard
+  category: Circuitry
+  completetime: 4
+  materials:
+     Steel: 100
+     Glass: 500
+     Gold: 100
+
+- type: latheRecipe
+  id: MetempsychoticMachineCircuitboard
+  result: MetempsychoticMachineCircuitboard
+  completetime: 4
+  materials:
+     Steel: 100
+     Glass: 900
+     Gold: 100
+
+- type: latheRecipe
+  id: ThermomachineFreezerMachineCircuitBoard
+  result: ThermomachineFreezerMachineCircuitBoard
+  category: Circuitry
+  completetime: 4
+  materials:
+    Steel: 150
+    Glass: 500
+    Gold: 50
+
+- type: latheRecipe
+  id: HellfireFreezerMachineCircuitBoard
+  result: HellfireFreezerMachineCircuitBoard
+  category: Circuitry
+  completetime: 4
+  materials:
+    Steel: 150
+    Glass: 500
+    Gold: 50
+
+# Assmos
+- type: latheRecipe
+  parent: BaseGoldCircuitboardRecipe
+  id: ThermomachineUpgradedFreezerMachineCircuitBoard
+  result: ThermomachineUpgradedFreezerMachineCircuitBoard
+
+# Assmos
+- type: latheRecipe
+  parent: BaseSilverCircuitboardRecipe
+  id: ThermomachineAdvancedFreezerMachineCircuitBoard
+  result: ThermomachineAdvancedFreezerMachineCircuitBoard
+
+- type: latheRecipe
+  id: CondenserMachineCircuitBoard
+  result: CondenserMachineCircuitBoard
+  category: Circuitry
+  completetime: 4
+  materials:
+    Steel: 100
+    Glass: 500
+
+- type: latheRecipe
+  id: PortableScrubberMachineCircuitBoard
+  result: PortableScrubberMachineCircuitBoard
+  category: Circuitry
+  completetime: 4
+  materials:
+    Steel: 150
+    Glass: 500
+    Gold: 50
+
+- type: latheRecipe
+  id: SpaceHeaterMachineCircuitBoard
+  result: SpaceHeaterMachineCircuitBoard
+  category: Circuitry
+  completetime: 4
+  materials:
+    Steel: 150
+    Glass: 500
+    Gold: 50
+
+- type: latheRecipe
+  id: MedicalScannerMachineCircuitboard
+  result: MedicalScannerMachineCircuitboard
+  category: Circuitry
+  completetime: 4
+  materials:
+     Steel: 100
+     Glass: 500
+
+- type: latheRecipe
+  id: CryoPodMachineCircuitboard
+  result: CryoPodMachineCircuitboard
+  category: Circuitry
+  completetime: 4
+  materials:
+    Steel: 100
+    Glass: 500
+    Gold: 100
+
+- type: latheRecipe
+  id: ChemMasterMachineCircuitboard
+  result: ChemMasterMachineCircuitboard
+  category: Circuitry
+  completetime: 4
+  materials:
+     Steel: 100
+     Glass: 500
+
+- type: latheRecipe
+  id: ChemDispenserMachineCircuitboard
+  result: ChemDispenserMachineCircuitboard
+  category: Circuitry
+  completetime: 4
+  materials:
+     Steel: 100
+     Glass: 500
+     Gold: 100
+
+- type: latheRecipe
+  id: BiomassReclaimerMachineCircuitboard
+  result: BiomassReclaimerMachineCircuitboard
+  category: Circuitry
+  completetime: 4
+  materials:
+     Steel: 100
+     Glass: 500
+     Gold: 100
+
+- type: latheRecipe
+  id: BiofabricatorMachineCircuitboard
+  result: BiofabricatorMachineCircuitboard
+  category: Circuitry
+  completetime: 4
+  materials:
+     Steel: 100
+     Glass: 500
+     Gold: 100
+
+- type: latheRecipe
+  id: HydroponicsTrayMachineCircuitboard
+  result: HydroponicsTrayMachineCircuitboard
+  category: Circuitry
+  completetime: 4
+  materials:
+     Steel: 100
+     Glass: 500
+
+- type: latheRecipe
+  id: AutolatheMachineCircuitboard
+  result: AutolatheMachineCircuitboard
+  category: Circuitry
+  completetime: 4
+  materials:
+     Steel: 100
+     Glass: 500
+
+- type: latheRecipe
+  id: BookPressMachineCircuitboard
+  result: BookPressMachineCircuitboard
+  category: Circuitry
+  completetime: 4
+  materials:
+     Steel: 100
+     Glass: 500
+
+- type: latheRecipe
+  id: ProtolatheMachineCircuitboard
+  result: ProtolatheMachineCircuitboard
+  category: Circuitry
+  completetime: 4
+  materials:
+     Steel: 100
+     Glass: 500
+
+- type: latheRecipe
+  abstract: true # DeltaV
+  parent: BaseGoldCircuitboardRecipe
+  id: AutolatheHyperConvectionMachineCircuitboard
+  result: AutolatheHyperConvectionMachineCircuitboard
+  category: Circuitry
+  completetime: 4
+  materials:
+    Steel: 100
+    Glass: 500
+    Gold: 100
+
+- type: latheRecipe
+  abstract: true # DeltaV
+  id: ProtolatheHyperConvectionMachineCircuitboard
+  result: ProtolatheHyperConvectionMachineCircuitboard
+  completetime: 4
+  materials:
+    Steel: 100
+    Glass: 500
+    Gold: 100
+
+- type: latheRecipe
+  id: CircuitImprinterMachineCircuitboard
+  result: CircuitImprinterMachineCircuitboard
+  category: Circuitry
+  completetime: 4
+  materials:
+    Steel: 100
+    Glass: 500
+
+- type: latheRecipe
+  abstract: true # DeltaV
+  parent: BaseGoldCircuitboardRecipe
+  id: CircuitImprinterHyperConvectionMachineCircuitboard
+  result: CircuitImprinterHyperConvectionMachineCircuitboard
+  category: Circuitry
+  completetime: 4
+  materials:
+    Steel: 100
+    Glass: 900
+    Gold: 100
+
+
+- type: latheRecipe
+  id: ExosuitFabricatorMachineCircuitboard
+  result: ExosuitFabricatorMachineCircuitboard
+  category: Circuitry
+  completetime: 5
+  materials:
+     Steel: 100
+     Glass: 500
+
+- type: latheRecipe
+  id: UniformPrinterMachineCircuitboard
+  result: UniformPrinterMachineCircuitboard
+  category: Circuitry
+  completetime: 4
+  materials:
+     Steel: 100
+     Glass: 500
+
+- type: latheRecipe
+  id: BiogeneratorMachineCircuitboard
+  result: BiogeneratorMachineCircuitboard
+  category: Circuitry
+  completetime: 4
+  materials:
+    Steel: 100
+    Glass: 500
+
+- type: latheRecipe
+  id: VaccinatorMachineCircuitboard
+  result: VaccinatorMachineCircuitboard
+  category: Circuitry
+  completetime: 4
+  materials:
+     Steel: 100
+     Glass: 500
+     Gold: 100
+
+- type: latheRecipe
+  id: DiagnoserMachineCircuitboard
+  result: DiagnoserMachineCircuitboard
+  category: Circuitry
+  completetime: 4
+  materials:
+     Steel: 100
+     Glass: 500
+     Gold: 100
+
+- type: latheRecipe
+  id: ArtifactAnalyzerMachineCircuitboard
+  result: ArtifactAnalyzerMachineCircuitboard
+  category: Circuitry
+  completetime: 4
+  materials:
+     Steel: 100
+     Glass: 500
+     Gold: 100
+
+- type: latheRecipe
+  id: ArtifactCrusherMachineCircuitboard
+  result: ArtifactCrusherMachineCircuitboard
+  category: Circuitry
+  completetime: 4
+  materials:
+    Steel: 100
+    Glass: 500
+    Gold: 100
+
+- type: latheRecipe
+  id: AnomalyVesselCircuitboard
+  result: AnomalyVesselCircuitboard
+  category: Circuitry
+  completetime: 4
+  materials:
+     Steel: 100
+     Glass: 500
+
+- type: latheRecipe
+  id: AnomalyVesselExperimentalCircuitboard
+  result: AnomalyVesselExperimentalCircuitboard
+  category: Circuitry
+  completetime: 4
+  materials:
+    Steel: 100
+    Glass: 500
+    Gold: 100
+
+- type: latheRecipe
+  id: AnomalySynchronizerCircuitboard
+  result: AnomalySynchronizerCircuitboard
+  category: Circuitry
+  completetime: 4
+  materials:
+     Steel: 100
+     Glass: 700
+     Silver: 100
+
+- type: latheRecipe
+  id: APECircuitboard
+  result: APECircuitboard
+  category: Circuitry
+  completetime: 4
+  materials:
+     Steel: 100
+     Glass: 500
+
+- type: latheRecipe
+  id: ReagentGrinderMachineCircuitboard
+  result: ReagentGrinderMachineCircuitboard
+  category: Circuitry
+  completetime: 4
+  materials:
+     Steel: 100
+     Glass: 500
+
+- type: latheRecipe
+  id: HotplateMachineCircuitboard
+  result: HotplateMachineCircuitboard
+  category: Circuitry
+  completetime: 4
+  materials:
+     Steel: 100
+     Glass: 500
+
+- type: latheRecipe
+  id: AnalysisComputerCircuitboard
+  result: AnalysisComputerCircuitboard
+  category: Circuitry
+  completetime: 4
+  materials:
+     Steel: 100
+     Glass: 500
+     Gold: 100
+
+- type: latheRecipe
+  id: TechDiskComputerCircuitboard
+  result: TechDiskComputerCircuitboard
+  category: Circuitry
+  completetime: 4
+  materials:
+     Steel: 100
+     Glass: 500
+     Gold: 100
+
+- type: latheRecipe
+  id: ShuttleConsoleCircuitboard
+  result: ShuttleConsoleCircuitboard
+  category: Circuitry
+  completetime: 4
+  materials:
+     Steel: 100
+     Glass: 500
+     Gold: 100
+
+- type: latheRecipe
+  id: RadarConsoleCircuitboard
+  result: RadarConsoleCircuitboard
+  category: Circuitry
+  completetime: 4
+  materials:
+     Steel: 100
+     Glass: 500
+
+- type: latheRecipe
+  id: DawInstrumentMachineCircuitboard
+  result: DawInstrumentMachineCircuitboard
+  category: Circuitry
+  completetime: 4
+  materials:
+    Steel: 100
+    Glass: 500
+
+- type: latheRecipe
+  id: StasisBedMachineCircuitboard
+  result: StasisBedMachineCircuitboard
+  category: Circuitry
+  completetime: 4
+  materials:
+    Steel: 100
+    Glass: 500
+    Gold: 100
+
+- type: latheRecipe
+  id: ElectrolysisUnitMachineCircuitboard
+  result: ElectrolysisUnitMachineCircuitboard
+  category: Circuitry
+  completetime: 4
+  materials:
+    Steel: 100
+    Glass: 500
+
+- type: latheRecipe
+  id: CentrifugeMachineCircuitboard
+  result: CentrifugeMachineCircuitboard
+  category: Circuitry
+  completetime: 4
+  materials:
+    Steel: 100
+    Glass: 500
+
+- type: latheRecipe
+  id: MaterialReclaimerMachineCircuitboard
+  result: MaterialReclaimerMachineCircuitboard
+  category: Circuitry
+  completetime: 4
+  materials:
+    Steel: 100
+    Glass: 500
+
+- type: latheRecipe
+  id: OreProcessorMachineCircuitboard
+  result: OreProcessorMachineCircuitboard
+  category: Circuitry
+  completetime: 4
+  materials:
+    Steel: 100
+    Glass: 500
+
+- type: latheRecipe
+  id: OreProcessorIndustrialMachineCircuitboard
+  result: OreProcessorIndustrialMachineCircuitboard
+  category: Circuitry
+  completetime: 4
+  materials:
+    Steel: 100
+    Glass: 500
+    Gold: 100
+
+- type: latheRecipe
+  id: RipleyCentralElectronics
+  result: RipleyCentralElectronics
+  category: Circuitry
+  completetime: 4
+  materials:
+    Steel: 100
+    Glass: 500
+    Gold: 100
+
+- type: latheRecipe
+  id: RipleyPeripheralsElectronics
+  result: RipleyPeripheralsElectronics
+  category: Circuitry
+  completetime: 4
+  materials:
+    Steel: 100
+    Glass: 500
+    Gold: 100
+
+- type: latheRecipe
+  id: HonkerCentralElectronics
+  result: HonkerCentralElectronics
+  category: Circuitry
+  completetime: 4
+  materials:
+    Steel: 100
+    Glass: 500
+    Bananium: 100
+
+- type: latheRecipe
+  id: HonkerPeripheralsElectronics
+  result: HonkerPeripheralsElectronics
+  category: Circuitry
+  completetime: 4
+  materials:
+    Steel: 100
+    Glass: 500
+    Bananium: 100
+
+- type: latheRecipe
+  id: HonkerTargetingElectronics
+  result: HonkerTargetingElectronics
+  category: Circuitry
+  completetime: 4
+  materials:
+    Steel: 100
+    Glass: 500
+    Bananium: 100
+
+- type: latheRecipe
+  id: HamtrCentralElectronics
+  result: HamtrCentralElectronics
+  category: Circuitry
+  completetime: 4
+  materials:
+    Steel: 100
+    Glass: 500
+    Gold: 100
+
+- type: latheRecipe
+  id: HamtrPeripheralsElectronics
+  result: HamtrPeripheralsElectronics
+  category: Circuitry
+  completetime: 4
+  materials:
+    Steel: 100
+    Glass: 500
+    Gold: 100
+
+# Power
+- type: latheRecipe
+  id: APCElectronics
+  result: APCElectronics
+  category: Circuitry
+  completetime: 2
+  materials:
+     Steel: 50
+     Glass: 250
+
+- type: latheRecipe
+  id: SubstationMachineCircuitboard
+  result: SubstationMachineCircuitboard
+  category: Circuitry
+  completetime: 4
+  materials:
+     Steel: 50
+     Glass: 450
+
+- type: latheRecipe
+  id: WallmountSubstationElectronics
+  result: WallmountSubstationElectronics
+  category: Circuitry
+  completetime: 4
+  materials:
+     Steel: 50
+     Glass: 450
+
+- type: latheRecipe
+  id: SMESMachineCircuitboard
+  result: SMESMachineCircuitboard
+  category: Circuitry
+  completetime: 4
+  materials:
+     Steel: 100
+     Glass: 500
+
+- type: latheRecipe
+  parent: BaseGoldCircuitboardRecipe
+  id: SMESAdvancedMachineCircuitboard
+  result: SMESAdvancedMachineCircuitboard
+
+- type: latheRecipe
+  parent: BaseCircuitboardRecipe
+  id: PortableGeneratorPacmanMachineCircuitboard
+  result: PortableGeneratorPacmanMachineCircuitboard
+  category: Circuitry
+  completetime: 4
+  materials:
+     Steel: 50
+     Glass: 450
+
+- type: latheRecipe
+  id: PortableGeneratorSuperPacmanMachineCircuitboard
+  result: PortableGeneratorSuperPacmanMachineCircuitboard
+  category: Circuitry
+  completetime: 4
+  materials:
+     Steel: 50
+     Glass: 450
+
+- type: latheRecipe
+  id: PortableGeneratorJrPacmanMachineCircuitboard
+  result: PortableGeneratorJrPacmanMachineCircuitboard
+  category: Circuitry
+  completetime: 4
+  materials:
+    Steel: 50
+    Glass: 450
+
+- type: latheRecipe
+  id: WallmountGeneratorElectronics
+  result: WallmountGeneratorElectronics
+  category: Circuitry
+  completetime: 4
+  materials:
+     Steel: 50
+     Glass: 150
+
+- type: latheRecipe
+  id: WallmountGeneratorAPUElectronics
+  result: WallmountGeneratorAPUElectronics
+  category: Circuitry
+  completetime: 4
+  materials:
+     Steel: 50
+     Glass: 350
+
+- type: latheRecipe
+  id: SolarControlComputerCircuitboard
+  result: SolarControlComputerCircuitboard
+  category: Circuitry
+  completetime: 4
+  materials:
+     Steel: 100
+     Glass: 500
+
+- type: latheRecipe
+  id: SolarTrackerElectronics
+  result: SolarTrackerElectronics
+  category: Circuitry
+  completetime: 4
+  materials:
+     Steel: 150
+     Glass: 600
+
+- type: latheRecipe
+  id: PowerComputerCircuitboard
+  result: PowerComputerCircuitboard
+  category: Circuitry
+  completetime: 4
+  materials:
+     Steel: 100
+     Glass: 500
+
+- type: latheRecipe
+  id: AlertsComputerCircuitboard
+  result: AlertsComputerCircuitboard
+  category: Circuitry
+  completetime: 4
+  materials:
+     Steel: 100
+     Glass: 500
+
+- type: latheRecipe
+  id: CloningConsoleComputerCircuitboard
+  result: CloningConsoleComputerCircuitboard
+  category: Circuitry
+  completetime: 4
+  materials:
+     Steel: 100
+     Glass: 500
+
+- type: latheRecipe
+  id: MicrowaveMachineCircuitboard
+  result: MicrowaveMachineCircuitboard
+  category: Circuitry
+  completetime: 4
+  materials:
+     Steel: 100
+     Glass: 500
+
+- type: latheRecipe
+  id: ElectricGrillMachineCircuitboard
+  result: ElectricGrillMachineCircuitboard
+  category: Circuitry
+  completetime: 4
+  materials:
+     Steel: 100
+     Glass: 500
+
+- type: latheRecipe
+  id: FatExtractorMachineCircuitboard
+  result: FatExtractorMachineCircuitboard
+  category: Circuitry
+  completetime: 4
+  materials:
+     Steel: 100
+     Glass: 500
+
+- type: latheRecipe
+  id: FlatpackerMachineCircuitboard
+  result: FlatpackerMachineCircuitboard
+  category: Circuitry
+  completetime: 4
+  materials:
+    Steel: 100
+    Glass: 500
+    Gold: 100
+
+- type: latheRecipe
+  id: SheetifierMachineCircuitboard
+  result: SheetifierMachineCircuitboard
+  category: Circuitry
+  completetime: 4
+  materials:
+    Steel: 100
+    Glass: 500
+
+- type: latheRecipe
+  id: SurveillanceCameraRouterCircuitboard
+  result: SurveillanceCameraRouterCircuitboard
+  category: Circuitry
+  completetime: 4
+  materials:
+    Steel: 100
+    Glass: 500
+
+- type: latheRecipe
+  id: SurveillanceCameraWirelessRouterCircuitboard
+  result: SurveillanceCameraWirelessRouterCircuitboard
+  category: Circuitry
+  completetime: 4
+  materials:
+    Steel: 100
+    Glass: 500
+
+- type: latheRecipe
+  id: SurveillanceWirelessCameraAnchoredCircuitboard
+  result: SurveillanceWirelessCameraAnchoredCircuitboard
+  category: Circuitry
+  completetime: 4
+  materials:
+    Steel: 100
+    Glass: 500
+
+- type: latheRecipe
+  id: SurveillanceWirelessCameraMovableCircuitboard
+  result: SurveillanceWirelessCameraMovableCircuitboard
+  category: Circuitry
+  completetime: 4
+  materials:
+    Steel: 100
+    Glass: 500
+
+- type: latheRecipe
+  id: SurveillanceCameraMonitorCircuitboard
+  result: SurveillanceCameraMonitorCircuitboard
+  category: Circuitry
+  completetime: 4
+  materials:
+    Steel: 100
+    Glass: 500
+
+- type: latheRecipe
+  id: SurveillanceWirelessCameraMonitorCircuitboard
+  result: SurveillanceWirelessCameraMonitorCircuitboard
+  category: Circuitry
+  completetime: 4
+  materials:
+    Steel: 100
+    Glass: 500
+
+- type: latheRecipe
+  id: ComputerTelevisionCircuitboard
+  result: ComputerTelevisionCircuitboard
+  category: Circuitry
+  completetime: 4
+  materials:
+    Steel: 100
+    Glass: 500
+
+- type: latheRecipe
+  id: EmitterCircuitboard
+  result: EmitterCircuitboard
+  category: Circuitry
+  completetime: 4
+  materials:
+    Steel: 100
+    Glass: 500
+
+- type: latheRecipe
+  id: ThrusterMachineCircuitboard
+  result: ThrusterMachineCircuitboard
+  category: Circuitry
+  completetime: 4
+  materials:
+    Steel: 100
+    Glass: 500
+
+- type: latheRecipe
+  id: GyroscopeMachineCircuitboard
+  result: GyroscopeMachineCircuitboard
+  category: Circuitry
+  completetime: 4
+  materials:
+    Steel: 100
+    Glass: 500
+
+- type: latheRecipe
+  id: GasRecyclerMachineCircuitboard
+  result: GasRecyclerMachineCircuitboard
+  category: Circuitry
+  completetime: 4
+  materials:
+    Steel: 100
+    Glass: 500
+
+- type: latheRecipe
+  id: SeedExtractorMachineCircuitboard
+  result: SeedExtractorMachineCircuitboard
+  category: Circuitry
+  completetime: 4
+  materials:
+    Steel: 100
+    Glass: 500
+
+- type: latheRecipe
+  id: BoozeDispenserMachineCircuitboard
+  result: BoozeDispenserMachineCircuitboard
+  category: Circuitry
+  completetime: 4
+  materials:
+     Steel: 100
+     Glass: 500
+
+- type: latheRecipe
+  id: CargoTelepadMachineCircuitboard
+  result: CargoTelepadMachineCircuitboard
+  category: Circuitry
+  completetime: 4
+  materials:
+    Steel: 100
+    Glass: 500
+    Gold: 100
+
+- type: latheRecipe
+  id: SodaDispenserMachineCircuitboard
+  result: SodaDispenserMachineCircuitboard
+  category: Circuitry
+  completetime: 4
+  materials:
+     Steel: 100
+     Glass: 500
+
+- type: latheRecipe
+  id: TelecomServerCircuitboard
+  result: TelecomServerCircuitboard
+  category: Circuitry
+  completetime: 4
+  materials:
+     Steel: 100
+     Glass: 500
+
+- type: latheRecipe
+  id: MassMediaCircuitboard
+  result: ComputerMassMediaCircuitboard
+  category: Circuitry
+  completetime: 4
+  materials:
+     Steel: 100
+     Glass: 500
+
+- type: latheRecipe
+  id: MiniGravityGeneratorCircuitboard
+  result: MiniGravityGeneratorCircuitboard
+  category: Circuitry
+  completetime: 6
+  materials:
+     Steel: 100
+     Glass: 500
+     Gold: 100
+
+- type: latheRecipe
+  id: PowerCageRechargerCircuitboard
+  result: PowerCageRechargerCircuitboard
+  completetime: 6
+  materials:
+     Steel: 100
+     Glass: 500
+
+- type: latheRecipe
+  id: ShuttleGunSvalinnMachineGunCircuitboard
+  result: ShuttleGunSvalinnMachineGunCircuitboard
+  completetime: 6
+  materials:
+     Steel: 100
+     Glass: 500
+
+- type: latheRecipe
+  id: ShuttleGunPerforatorCircuitboard
+  result: ShuttleGunPerforatorCircuitboard
+  completetime: 10
+  materials:
+     Steel: 100
+     Glass: 500
+     Gold: 100
+
+- type: latheRecipe
+  id: ShuttleGunKineticCircuitboard
+  result: ShuttleGunKineticCircuitboard
+  completetime: 6
+  materials:
+     Steel: 100
+     Glass: 500
+
+- type: latheRecipe
+  id: ShuttleGunFriendshipCircuitboard
+  result: ShuttleGunFriendshipCircuitboard
+  completetime: 8
+  materials:
+     Steel: 100
+     Glass: 500
+     Gold: 50
+
+- type: latheRecipe
+  id: ShuttleGunDusterCircuitboard
+  result: ShuttleGunDusterCircuitboard
+  completetime: 12
+  materials:
+     Steel: 100
+     Glass: 500
+     Gold: 100
+
+- type: latheRecipe
+  id: StationAnchorCircuitboard
+  result: StationAnchorCircuitboard
+  category: Circuitry
+  completetime: 8
+  materials:
+    Steel: 100
+    Glass: 900
+    Gold: 100
+
+- type: latheRecipe
+  id: ReagentGrinderIndustrialMachineCircuitboard
+  result: ReagentGrinderIndustrialMachineCircuitboard
+  completetime: 5
+  materials:
+     Steel: 100
+     Glass: 500
+     Gold: 100
+
+- type: latheRecipe
+  id: JukeboxCircuitBoard
+  result: JukeboxCircuitBoard
+  completetime: 4
+  materials:
+    Steel: 100
+    Glass: 500
+
+- type: latheRecipe
+  id: MaterialSiloCircuitboard
+  result: MaterialSiloCircuitboard
+  category: Circuitry
+  completetime: 5
+  materials:
+    Steel: 100
+    Glass: 500
+    Gold: 100
+
+- type: latheRecipe
+  id: WeaponEnergyTurretAIMachineCircuitboard
+  result: WeaponEnergyTurretAIMachineCircuitboard
+  category: Circuitry
+  completetime: 5
+  materials:
+    Steel: 100
+    Glass: 500
+    Gold: 100
+
+- type: latheRecipe
+  id: WeaponEnergyTurretStationMachineCircuitboard
+  result: WeaponEnergyTurretStationMachineCircuitboard
+  category: Circuitry
+  completetime: 5
+  materials:
+    Steel: 100
+    Glass: 500
+    Gold: 100
+
+- type: latheRecipe
+  id: WeaponEnergyTurretAIControlPanelElectronics
+  result: WeaponEnergyTurretAIControlPanelElectronics
+  category: Circuitry
+  completetime: 5
+  materials:
+    Steel: 100
+    Glass: 500
+    Gold: 100
+
+- type: latheRecipe
+  id: WeaponEnergyTurretStationControlPanelElectronics
+  result: WeaponEnergyTurretStationControlPanelElectronics
+  category: Circuitry
+  completetime: 5
+  materials:
+    Steel: 100
+    Glass: 500
+    Gold: 100
+
+- type: latheRecipe
+  id: CutterMachineCircuitboard
+  result: CutterMachineCircuitboard
+  category: Circuitry
+  completetime: 5
+  materials:
+    Steel: 100
+    Glass: 500
+
+- type: latheRecipe
+  parent: BaseCircuitboardRecipe
+  id: HolopadMachineCircuitboard
+  result: HolopadMachineCircuitboard
+  category: Circuitry
+  completetime: 5
+  materials:
+    Steel: 100
+    Glass: 500
+
+# Assmos - /tg/ gases
+- type: latheRecipe
+  parent: BaseCircuitboardRecipe
+  id: ElectrolyzerMachineCircuitboard
+  result: ElectrolyzerMachineCircuitboard
+  category: Circuitry
+  completetime: 5
+  materials:
+    Steel: 100
+    Glass: 500
+
+# Assmos - Crystallizer
+- type: latheRecipe
+  parent: BaseCircuitboardRecipe
+  id: CrystallizerMachineCircuitboard
+  result: CrystallizerMachineCircuitboard
+  category: Circuitry
+  completetime: 5
+  materials:
+    Steel: 100
+    Glass: 500
+
+# Assmos - Bluespace Gas
+- type: latheRecipe
+  parent: BaseCircuitboardRecipe
+  id: BluespaceGasSenderMachineBoard
+  result: BluespaceGasSenderMachineBoard
+  category: Circuitry
+  completetime: 5
+  materials:
+    Steel: 100
+    Glass: 500

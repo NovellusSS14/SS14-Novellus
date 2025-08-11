@@ -1,0 +1,37 @@
+# SPDX-FileCopyrightText: 2025 Solaris <60526456+SolarisBirb@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: entity
+  id: WeaponEnergyTurretStationMachineCircuitboard
+  parent: BaseMachineCircuitboard
+  name: sentry turret machine board
+  description: A machine printed circuit board for a sentry turret.
+  components:
+    - type: Sprite
+      state: security
+    - type: MachineBoard
+      prototype: WeaponEnergyTurretStation
+      requirements:
+        PowerCell: 1
+      tagRequirements:
+        TurretCompatibleWeapon:
+          Amount: 1
+          DefaultPrototype: WeaponLaserCannon
+          ExamineName: Laser Cannon
+        ProximitySensor:
+          Amount: 1
+          DefaultPrototype: ProximitySensor
+          ExamineName: Proximity Sensor
+
+- type: entity
+  id: WeaponEnergyTurretAIMachineCircuitboard
+  parent: WeaponEnergyTurretStationMachineCircuitboard
+  name: AI sentry turret machine board
+  description: A machine printed circuit board for an AI sentry turret.
+  components:
+    - type: Sprite
+      state: command
+    - type: MachineBoard
+      prototype: WeaponEnergyTurretAI

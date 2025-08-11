@@ -1,0 +1,52 @@
+# SPDX-FileCopyrightText: 2023 Fluffiest Floofers <thebluewulf@gmail.com>
+# SPDX-FileCopyrightText: 2024 sleepyyapril <flyingkarii@gmail.com>
+# SPDX-FileCopyrightText: 2025 VMSolidus <evilexecutive@gmail.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: listing
+  id: UplinkKanabou
+  name: uplink-kanabou-name
+  description: uplink-kanabou-desc
+  productEntity: Kanabou
+  cost:
+    Telecrystal: 50
+  categories:
+  - UplinkWeaponry
+  conditions:
+  - !type:BuyerSpeciesCondition
+    whitelist:
+    - Oni
+
+- type: listing
+  id: UplinkRickenbacker
+  name: uplink-rickenbacker4001-name
+  description: uplink-rickenbacker4001-desc
+  productEntity: Rickenbacker4001Instrument
+  cost:
+    Telecrystal: 50
+  categories:
+  - UplinkJob
+  conditions:
+  - !type:BuyerJobCondition
+    whitelist:
+    - Musician
+
+- type: listing
+  id: UplinkSamurai
+  name: uplink-samurai-crate-name
+  description: uplink-samurai-crate-desc
+  productEntity: CrateSyndicateSamurai
+  cost:
+    Telecrystal: 30
+  categories:
+  - UplinkWearables
+  conditions:
+  - !type:BuyerSpeciesCondition
+    whitelist:
+    - Oni
+  - !type:BuyerWhitelistCondition
+    blacklist:
+      components:
+      - SurplusBundle

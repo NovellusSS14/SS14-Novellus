@@ -1,0 +1,47 @@
+# SPDX-FileCopyrightText: 2023 Fluffiest Floofers <thebluewulf@gmail.com>
+# SPDX-FileCopyrightText: 2024 sleepyyapril <flyingkarii@gmail.com>
+# SPDX-FileCopyrightText: 2025 Rosycup <178287475+Rosycup@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: entity
+  name: pumpkin pie
+  parent: FoodPieBase
+  id: FoodPiePumpkin
+  description: A seasonal favorite, consisting mostly of pumpkin and a handful of spooky spices.
+  components:
+  - type: FlavorProfile
+    flavors:
+      - sweet
+      - pumpkin
+  - type: Sprite
+    layers:
+    - state: tin
+    - sprite: _DV/Objects/Consumable/Food/Baked/pie.rsi
+      state: pumpkin
+  - type: SliceableFood
+    slice: FoodPiePumpkinSlice
+  - type: Tag
+    tags:
+    - Fruit
+    - Pie
+
+- type: entity
+  name: slice of pumpkin pie
+  parent: FoodPieSliceBase
+  id: FoodPiePumpkinSlice
+  components:
+  - type: FlavorProfile
+    flavors:
+      - sweet
+      - pumpkin
+  - type: Sprite
+    sprite: _DV/Objects/Consumable/Food/Baked/pie.rsi
+    state: pumpkin-slice
+  - type: Tag
+    tags:
+    - Fruit
+    - Pie
+    - Slice
+# Tastes like pie, pumpkin.

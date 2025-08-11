@@ -1,0 +1,25 @@
+# SPDX-FileCopyrightText: 2024 Aiden <aiden@djkraz.com>
+# SPDX-FileCopyrightText: 2024 VMSolidus <evilexecutive@gmail.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+action-name-suck-blood = Suck Blood
+action-description-suck-blood = Suck the blood of the victim in your hand.
+
+bloodsucker-fail-helmet = You'd need to remove {THE($helmet)}.
+bloodsucker-fail-mask = You'd need to remove your mask!
+
+bloodsucker-not-blood = {$target} doesn't have delicious, nourishing blood.
+bloodsucker-fail-no-blood = {$target} has no blood in { POSS-ADJ($target) } body.
+bloodsucker-fail-no-blood-bloodsucked = {$target} has been sucked dry.
+
+bloodsucker-blood-sucked = You suck some blood from {$target}.
+bloodsucker-doafter-start = You try to suck blood from {$target}.
+
+bloodsucker-doafter-start-victim = {CAPITALIZE(THE($sucker))} is trying to bite your neck!
+bloodsucker-blood-sucked-victim = {CAPITALIZE(THE($sucker))} sucks some of your blood!
+
+bloodsucked-health-examine = [color=red]{ CAPITALIZE(SUBJECT($target)) } { CONJUGATE-HAVE($target) } bite marks on { POSS-ADJ($target) } neck.[/color]
+
+bloodsucker-glands-throb = The glands behind your fangs feel a bit sore.

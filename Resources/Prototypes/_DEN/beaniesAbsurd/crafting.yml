@@ -1,0 +1,97 @@
+# SPDX-FileCopyrightText: 2025 KekaniCreates <kekanisb@gmail.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: latheRecipe
+  id: ClothingHeadHatBeanieBlackAbsurd
+  result: ClothingHeadHatBeanieBlackAbsurd
+  completetime: 4
+  materials:
+    Cloth: 200
+
+- type: latheRecipe
+  id: ClothingHeadHatBeanieBlackWithPinAbsurd
+  result: ClothingHeadHatBeanieBlackWithPinAbsurd
+  completetime: 4
+  materials:
+    Cloth: 200
+
+- type: latheRecipe
+  id: ClothingHeadHatBeanieBlueAbsurd
+  result: ClothingHeadHatBeanieBlueAbsurd
+  completetime: 4
+  materials:
+    Cloth: 200
+
+- type: latheRecipe
+  id: ClothingHeadHatBeanieGoldAbsurd
+  result: ClothingHeadHatBeanieGoldAbsurd
+  completetime: 4
+  materials:
+    Cloth: 200
+
+- type: latheRecipe
+  id: ClothingHeadHatBeanieGreenAbsurd
+  result: ClothingHeadHatBeanieGreenAbsurd
+  completetime: 4
+  materials:
+    Cloth: 200
+
+- type: latheRecipe
+  id: ClothingHeadHatBeanieKhakiAbsurd
+  result: ClothingHeadHatBeanieKhakiAbsurd
+  completetime: 4
+  materials:
+    Cloth: 200
+
+- type: latheRecipe
+  id: ClothingHeadHatBeanieKhakiWithPinAbsurd
+  result: ClothingHeadHatBeanieKhakiWithPinAbsurd
+  completetime: 4
+  materials:
+    Cloth: 200
+
+- type: latheRecipe
+  id: ClothingHeadHatBeanieNavyBlueAbsurd
+  result: ClothingHeadHatBeanieNavyBlueAbsurd
+  completetime: 4
+  materials:
+    Cloth: 200
+
+- type: latheRecipe
+  id: ClothingHeadHatBeanieNavyBlueWithPinAbsurd
+  result: ClothingHeadHatBeanieNavyBlueWithPinAbsurd
+  completetime: 4
+  materials:
+    Cloth: 200
+
+- type: latheRecipe
+  id: ClothingHeadHatBeaniePurpleAbsurd
+  result: ClothingHeadHatBeaniePurpleAbsurd
+  completetime: 4
+  materials:
+    Cloth: 200
+
+- type: latheRecipe
+  id: ClothingHeadHatBeanieWhiteAbsurd
+  result: ClothingHeadHatBeanieWhiteAbsurd
+  completetime: 4
+  materials:
+    Cloth: 200
+
+- type: latheRecipe
+  id: ClothingHeadHatBeanieYellowAbsurd
+  result: ClothingHeadHatBeanieYellowAbsurd
+  completetime: 4
+  materials:
+    Cloth: 200
+
+# Red Beanie - Kekani - Hi, Coin!
+
+- type: latheRecipe
+  id: ClothingHeadHatBeanieRedAbsurd
+  result: ClothingHeadHatBeanieRedAbsurd
+  completetime: 4
+  materials:
+    Cloth: 200

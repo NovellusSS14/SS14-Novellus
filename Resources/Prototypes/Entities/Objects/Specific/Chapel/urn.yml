@@ -1,0 +1,27 @@
+# SPDX-FileCopyrightText: 2023 NkoKirkto <153374559+NkoKirkto@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 DEATHB4DEFEAT <77995199+DEATHB4DEFEAT@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 Debug <49997488+DebugOk@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 degradka <69397649+degradka@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: entity
+  name: urn
+  description: Store the Dead smart and Compact since 2300
+  parent: BaseStorageItem
+  id: Urn
+  components:
+  - type: Storage
+    grid:
+      - 0,0,0,1
+  - type: UserInterface
+    interfaces:
+      enum.StorageUiKey.Key:
+        type: StorageBoundUserInterface
+  - type: Sprite
+    sprite: Objects/Specific/Chapel/chaplainurn.rsi
+    state: icon
+  - type: Item
+    size: Normal
+    sprite: Objects/Specific/Chapel/chaplainurn.rsi

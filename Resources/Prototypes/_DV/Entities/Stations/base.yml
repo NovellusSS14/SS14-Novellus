@@ -1,0 +1,37 @@
+# SPDX-FileCopyrightText: 2024 Milon <milonpl.git@proton.me>
+# SPDX-FileCopyrightText: 2024 SolStar <44028047+ewokswagger@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 Rosycup <178287475+Rosycup@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: entity
+  id: BaseStationStockMarket
+  abstract: true
+  components:
+  - type: StationStockMarket
+    companies:
+    - displayName: stock-trading-company-nanotrasen
+      basePrice: 100
+      currentPrice: 100
+    - displayName: stock-trading-company-gorlex
+      basePrice: 75
+      currentPrice: 75
+    - displayName: stock-trading-company-interdyne
+      basePrice: 300
+      currentPrice: 300
+    - displayName: stock-trading-company-fishinc
+      basePrice: 25
+      currentPrice: 25
+    - displayName: stock-trading-company-donk
+      basePrice: 90
+      currentPrice: 90
+    - displayName: stock-trading-company-hydroco
+      basePrice: 30
+      currentPrice: 30
+
+- type: entity
+  id: BaseStationCaptainState
+  abstract: true
+  components:
+  - type: CaptainState

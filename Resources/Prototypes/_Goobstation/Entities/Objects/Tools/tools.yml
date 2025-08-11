@@ -1,0 +1,79 @@
+# SPDX-FileCopyrightText: 2025 deltanedas <39013340+deltanedas@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: entity
+  name: handheld fax
+  parent: BaseItem
+  id: HandheldFax
+  description: A tool that can send ton of paper on Centcomm fax.
+  components:
+  - type: Item
+    size: Huge
+  - type: Sprite
+    sprite: Structures/Machines/fax_machine.rsi
+    drawdepth: SmallObjects
+    layers:
+    - state: icon
+      map: [ "enum.FaxMachineVisuals.VisualState" ]
+  - type: Icon
+    sprite: Structures/Machines/fax_machine.rsi
+    state: icon
+  - type: Appearance
+  - type: ActivatableUI
+    key: enum.FaxUiKey.Key
+  - type: UserInterface
+    interfaces:
+      enum.FaxUiKey.Key:
+        type: FaxBoundUi
+  - type: Faxecute
+    damage:
+      types:
+        Blunt: 100
+  - type: ApcPowerReceiver
+    needsPower: false
+    powerLoad: 250
+  - type: FaxMachine
+    paperSlot:
+      insertSound: /Audio/Machines/scanning.ogg
+      ejectSound: /Audio/Machines/tray_eject.ogg
+      whitelist:
+        components:
+          - FaxableObject #used to be PaperComponent - brainfood1183
+  - type: GenericVisualizer
+    visuals:
+      enum.PowerDeviceVisuals.Powered:
+        enum.FaxMachineVisuals.VisualState:
+          True: { state: idle }
+          False: { state: icon }
+      enum.FaxMachineVisuals.VisualState:
+        enum.FaxMachineVisuals.VisualState:
+          Printing: { state: printing }
+          Normal: {state: idle}
+  - type: DeviceNetwork
+    deviceNetId: Wireless
+    receiveFrequencyId: Fax
+    transmitFrequencyId: Fax
+  - type: ItemSlots
+  - type: ContainerContainer
+    containers:
+      Paper: !type:ContainerSlot
+  - type: MultiHandedItem
+
+- type: entity
+  name: nanotrasen representative handheld fax
+  parent: HandheldFax
+  id: HandheldFaxNanorep
+  suffix: Nanotrasen Representative
+  components:
+  - type: FaxMachine
+    name: "Nanotrasen Representative"
+  - type: Sprite
+    sprite: _Goobstation/Objects/Tools/handheld_fax.rsi
+    drawdepth: SmallObjects
+    layers:
+    - state: icon
+      map: [ "enum.FaxMachineVisuals.VisualState" ]
+    - state: scanner
+      shader: unshaded

@@ -1,0 +1,26 @@
+# SPDX-FileCopyrightText: 2025 Solaris <60526456+SolarisBirb@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: accessLevel
+  id: Borg
+  name: id-card-access-level-borg
+  canAddToIdCard: false
+
+- type: accessLevel
+  id: BasicSilicon
+  name: id-card-access-level-basic-silicon
+  canAddToIdCard: false
+
+- type: accessLevel
+  id: StationAi
+  name: id-card-access-level-station-ai
+  canAddToIdCard: false
+
+- type: accessGroup
+  id: Silicon
+  tags:
+  - StationAi
+  - Borg
+  - BasicSilicon

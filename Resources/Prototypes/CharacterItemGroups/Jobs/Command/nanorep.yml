@@ -1,0 +1,35 @@
+# SPDX-FileCopyrightText: 2025 BlitzTheSquishy
+# SPDX-FileCopyrightText: 2025 Timfa
+# SPDX-FileCopyrightText: 2025 sleepyyapril
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: characterItemGroup
+  id: LoadoutNanorepBackpacks
+  maxItems: 1
+  items:
+    - type: loadout
+      id: LoadoutClothingBackpackSatchelNanorep
+
+- type: characterItemGroup
+  id: LoadoutNanorepOuter
+  maxItems: 1
+  items:
+    - type: loadout
+      id: LoadoutNanotrasenRepresentativeOuterLongCoat
+
+- type: characterItemGroup
+  id: LoadoutNanorepUniforms
+  maxItems: 1
+  items:
+    - type: loadout
+      id: LoadoutClothingUniformJumpskirtNanotrasenRepresentative
+    - type: loadout
+      id: LoadoutClothingUniformJumpsuitNanotrasenRepresentative
+
+- type: characterItemGroup
+  id: LoadoutNanorepWeapon
+  maxItems: 1
+  items:
+    - type: loadout
+      id: LoadoutNanotrasenRepresentativeDisabler

@@ -1,0 +1,25 @@
+# SPDX-FileCopyrightText: 2023 Ygg01 <y.laughing.man.y@gmail.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: MIT
+
+- type: tile
+  id: FloorBedrock
+  name: tiles-bedrock-floor
+  sprite: /Textures/Nyanotrasen/Tiles/bedrock.png
+  variants: 4
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  baseTurf: Space
+  isSubfloor: true
+  #canCrowbar: true # Come back
+  # Maybe if there's ever some way to combine grids or prevent overly simple spacing.
+  # canShovel: true
+  footstepSounds:
+    collection: FootstepAsteroid
+  itemDrop: FloorTileItemBedrock # Delta V
+  heatCapacity: 10000
+  weather: true

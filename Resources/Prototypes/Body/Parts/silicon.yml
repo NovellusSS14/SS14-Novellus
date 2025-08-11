@@ -1,0 +1,193 @@
+# SPDX-FileCopyrightText: 2022 DrSmugleaf <DrSmugleaf@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2022 Jezithyr <Jezithyr@gmail.com>
+# SPDX-FileCopyrightText: 2022 Leon Friedrich <60421075+ElectroJr@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2022 Rane <60792108+Elijahrane@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2022 Visne <39844191+Visne@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2023 M3739 <47579354+M3739@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2023 Nemanja <98561806+EmoGarbage404@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2023 Whisper <121047731+QuietlyWhisper@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2023 brainfood1183 <113240905+brainfood1183@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2023 deltanedas <39013340+deltanedas@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2023 deltanedas <@deltanedas:kde.org>
+# SPDX-FileCopyrightText: 2023 lzk <124214523+lzk228@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2023 metalgearsloth <31366439+metalgearsloth@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 Pieter-Jan Briers <pieterjan.briers+git@gmail.com>
+# SPDX-FileCopyrightText: 2024 gluesniffler <159397573+gluesniffler@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 gluesniffler <linebarrelerenthusiast@gmail.com>
+# SPDX-FileCopyrightText: 2024 sleepyyapril <flyingkarii@gmail.com>
+# SPDX-FileCopyrightText: 2024 sleepyyapril <***>
+# SPDX-FileCopyrightText: 2025 Blitz <73762869+BlitzTheSquishy@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 dootythefrooty <awhunter8@gmail.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: entity
+  id: PartSilicon
+  parent: BaseItem
+  abstract: true
+  components:
+  - type: Sprite
+    sprite: Objects/Specific/Robotics/cyborg_parts.rsi
+  - type: Icon
+    sprite: Objects/Specific/Robotics/cyborg_parts.rsi
+  - type: Damageable
+    damageContainer: Inorganic
+  - type: BodyPart
+  - type: ContainerContainer
+    containers:
+      bodypart: !type:Container
+        ents: []
+  - type: StaticPrice
+    price: 5
+  - type: Tag
+    tags:
+      - Trash
+  - type: PhysicalComposition
+    materialComposition:
+      Steel: 25
+  - type: GuideHelp
+    guides:
+      - Cyborgs
+  # Shitmed Change Start
+  - type: SurgeryTool
+    startSound:
+      path: /Audio/_Shitmed/Medical/Surgery/organ1.ogg
+    endSound:
+      path: /Audio/_Shitmed/Medical/Surgery/organ2.ogg
+  - type: Gibbable
+  # Shitmed Change End
+
+- type: entity
+  id: BaseBorgLeftArm
+  parent: PartSilicon
+  name: cyborg left arm
+  categories: [ HideSpawnMenu ] # TheDen - Removes from spawn menu
+  components:
+  - type: BodyPart
+    partType: Arm # Shitmed Change
+    symmetry: Left
+  - type: Sprite
+    state: borg_l_arm
+  - type: Icon
+    state: borg_l_arm
+    toolName: "a left arm" # Shitmed Change
+    children: # Shitmed Change
+      left hand:
+        id: "left hand"
+        type: Hand
+  - type: Tag
+    tags:
+    - Trash
+    - BorgArm
+    - BorgLArm
+
+- type: entity
+  id: BaseBorgRightArm
+  parent: PartSilicon
+  name: cyborg right arm
+  categories: [ HideSpawnMenu ] # TheDen - Removes from spawn menu
+  components:
+  - type: BodyPart
+    partType: Arm # Shitmed Change
+    symmetry: Right
+  - type: Sprite
+    state: borg_r_arm
+  - type: Icon
+    state: borg_r_arm
+    toolName: "a right arm" # Shitmed Change
+    children: # Shitmed Change
+      right hand:
+        id: "right hand"
+        type: Hand
+  - type: Tag
+    tags:
+    - Trash
+    - BorgArm
+    - BorgRArm
+
+- type: entity
+  id: BaseBorgLegLeft
+  parent: PartSilicon
+  name: cyborg left leg
+  categories: [ HideSpawnMenu ] # TheDen - Removes from spawn menu
+  components:
+  - type: BodyPart
+    partType: Leg
+    symmetry: Left
+  - type: Sprite
+    state: borg_l_leg
+  - type: Icon
+    state: borg_l_leg
+    toolName: "a left leg" # Shitmed Change
+    children: # Shitmed Change
+      left foot:
+        id: "left foot"
+        type: Foot
+  - type: Tag
+    tags:
+    - Trash
+    - BorgLeg
+    - BorgLLeg
+  - type: MovementBodyPart
+
+- type: entity
+  id: BaseBorgLegRight
+  parent: PartSilicon
+  name: cyborg right leg
+  categories: [ HideSpawnMenu ] # TheDen - Removes from spawn menu
+  components:
+  - type: BodyPart
+    partType: Leg
+    symmetry: Right
+  - type: Sprite
+    state: borg_r_leg
+  - type: Icon
+    state: borg_r_leg
+    toolName: "a right leg" # Shitmed Change
+    children: # Shitmed Change
+      right foot:
+        id: "right foot"
+        type: Foot
+  - type: Tag
+    tags:
+    - Trash
+    - BorgLeg
+    - BorgRLeg
+  - type: MovementBodyPart
+
+- type: entity
+  id: BaseLightHeadBorg
+  parent: PartSilicon
+  name: cyborg head
+  categories: [ HideSpawnMenu ] # TheDen - Removes from spawn menu
+  components:
+  - type: BodyPart
+    partType: Head
+  - type: Sprite
+    state: borg_head
+  - type: Icon
+    state: borg_head
+    toolName: "a head" # Shitmed Change
+  - type: Tag
+    tags:
+    - Trash
+    - BorgHead
+
+- type: entity
+  id: BaseBorgTorso
+  parent: PartSilicon
+  name: cyborg torso
+  categories: [ HideSpawnMenu ] # TheDen - Removes from spawn menu
+  components:
+  - type: BodyPart
+    partType: Torso
+  - type: Sprite
+    state: borg_chest
+  - type: Icon
+    state: borg_chest
+    toolName: "a torso" # Shitmed Change
+  - type: Tag
+    tags:
+    - Trash
+    - BorgTorso

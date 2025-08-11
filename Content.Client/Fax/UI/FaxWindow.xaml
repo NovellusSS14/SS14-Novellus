@@ -1,0 +1,53 @@
+<!--
+SPDX-FileCopyrightText: 2022 Morb <14136326+Morb0@users.noreply.github.com>
+SPDX-FileCopyrightText: 2023 Arimah Greene <30327355+arimah@users.noreply.github.com>
+SPDX-FileCopyrightText: 2023 Visne <39844191+Visne@users.noreply.github.com>
+SPDX-FileCopyrightText: 2024 Guilherme Ornel <86210200+joshepvodka@users.noreply.github.com>
+SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+
+SPDX-License-Identifier: MIT
+-->
+
+<DefaultWindow xmlns="https://spacestation14.io"
+               Title="{Loc 'fax-machine-ui-window'}"
+               MinWidth="250">
+    <BoxContainer Orientation="Vertical" VerticalExpand="True">
+        <BoxContainer Orientation="Horizontal" HorizontalExpand="True">
+            <Label Text="{Loc 'fax-machine-ui-paper'}" />
+            <Control MinWidth="4" />
+            <Label Name="PaperStatusLabel" />
+        </BoxContainer>
+        <Control HorizontalExpand="True" MinHeight="20" />
+        <BoxContainer Orientation="Horizontal" HorizontalExpand="True">
+            <Label Text="{Loc 'fax-machine-ui-from'}" />
+            <Control MinWidth="4" />
+            <Label Name="FromLabel" />
+        </BoxContainer>
+        <BoxContainer Orientation="Horizontal" HorizontalExpand="True">
+            <Label Text="{Loc 'fax-machine-ui-to'}" />
+            <Control MinWidth="4" />
+            <OptionButton Name="PeerSelector" HorizontalExpand="True" />
+        </BoxContainer>
+        <Control HorizontalExpand="True" MinHeight="20" />
+        <BoxContainer Orientation="Horizontal" HorizontalExpand="True">
+            <Button Name="FileButton"
+                    Text="{Loc 'fax-machine-ui-file-button'}"
+                    HorizontalExpand="False"/>
+            <Button Name="PaperButton"
+                    Text="{Loc 'fax-machine-ui-paper-button-normal'}"
+                    HorizontalExpand="False"/>
+        </BoxContainer>
+        <BoxContainer Orientation="Horizontal" HorizontalExpand="True">
+            <Button Name="CopyButton"
+                    Text="{Loc 'fax-machine-ui-copy-button'}"
+                    HorizontalExpand="False"
+                    Disabled="True" />
+            <Button Name="SendButton"
+                    Text="{Loc 'fax-machine-ui-send-button'}"
+                    HorizontalExpand="True"
+                    Disabled="True" />
+            <Button Name="RefreshButton"
+                    Text="{Loc 'fax-machine-ui-refresh-button'}" />
+        </BoxContainer>
+    </BoxContainer>
+</DefaultWindow>

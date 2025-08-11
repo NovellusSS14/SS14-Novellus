@@ -1,0 +1,27 @@
+# SPDX-FileCopyrightText: 2024 VMSolidus
+# SPDX-FileCopyrightText: 2025 Skubman
+# SPDX-FileCopyrightText: 2025 sleepyyapril
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: characterItemGroup
+  id: LoadoutBackpacks
+  items:
+    - type: loadout
+      id: LoadoutBackpack
+    - type: loadout
+      id: LoadoutBackpackDuffel
+    - type: loadout
+      id: LoadoutBackpackSatchel
+    - type: loadout
+      id: LoadoutClothingBackpackMessenger
+    - type: loadout
+      id: LoadoutItemBackpackSatchelLeather
+    - type: loadout
+      id: LoadoutBackpackMerc
+    - type: loadout
+      id: LoadoutBackpackSatchelHydroponics
+    - type: loadout
+      id: LoadoutBackpackSatchelPurse
+    - type: loadout
+      id: LoadoutBackpackSatchelPurseFlipped

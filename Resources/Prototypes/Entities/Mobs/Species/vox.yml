@@ -1,0 +1,128 @@
+# SPDX-FileCopyrightText: 2021 Pieter-Jan Briers
+# SPDX-FileCopyrightText: 2021 Silver
+# SPDX-FileCopyrightText: 2021 Swept
+# SPDX-FileCopyrightText: 2021 Vera Aguilera Puerto
+# SPDX-FileCopyrightText: 2022 20kdc
+# SPDX-FileCopyrightText: 2022 EmoGarbage404
+# SPDX-FileCopyrightText: 2022 Flipp Syder
+# SPDX-FileCopyrightText: 2022 Jezithyr
+# SPDX-FileCopyrightText: 2022 Paul Ritter
+# SPDX-FileCopyrightText: 2022 Peptide90
+# SPDX-FileCopyrightText: 2022 metalgearsloth
+# SPDX-FileCopyrightText: 2022 mirrorcult
+# SPDX-FileCopyrightText: 2023 Alex Evgrashin
+# SPDX-FileCopyrightText: 2023 DrSmugleaf
+# SPDX-FileCopyrightText: 2023 I.K
+# SPDX-FileCopyrightText: 2023 Leon Friedrich
+# SPDX-FileCopyrightText: 2023 Visne
+# SPDX-FileCopyrightText: 2024 DEATHB4DEFEAT
+# SPDX-FileCopyrightText: 2024 Errant
+# SPDX-FileCopyrightText: 2024 Nemanja
+# SPDX-FileCopyrightText: 2024 SimpleStation14
+# SPDX-FileCopyrightText: 2024 VMSolidus
+# SPDX-FileCopyrightText: 2025 Sapphire
+# SPDX-FileCopyrightText: 2025 Skubman
+# SPDX-FileCopyrightText: 2025 Tanix
+# SPDX-FileCopyrightText: 2025 portfiend
+# SPDX-FileCopyrightText: 2025 sleepyyapril
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: entity
+  abstract: true
+  parent: VoxSpeciesLayers
+  id: BaseVoxAppearance
+  components:
+  - type: HumanoidAppearance
+    species: Vox
+  - type: Body
+    prototype: Vox
+  - type: Inventory
+    speciesId: vox
+    displacements:
+      jumpsuit:
+        layer:
+          sprite: Mobs/Species/Vox/displacement.rsi
+          state: jumpsuit
+          copyToShaderParameters:
+            layerKey: dummy
+            parameterTexture: displacementMap
+            parameterUV: displacementUV
+  - type: CreamPied
+    layer:
+      sprite: Effects/creampie.rsi
+      state: creampie_vox
+
+- type: entity
+  parent: [BaseVoxAppearance, BaseMobSpeciesOrganic]
+  id: BaseMobVox
+  abstract: true
+  components:
+  - type: Hunger
+  - type: Thirst
+  - type: Icon
+    sprite: Mobs/Species/Vox/parts.rsi
+    state: vox_m
+  - type: Body
+    requiredLegs: 2
+    #- type: VoxAccent # Not yet coded
+  - type: Speech
+    speechVerb: Vox
+    speechSounds: Vox
+  - type: TypingIndicator
+    proto: vox
+  - type: Vocal
+    sounds:
+      Male: UnisexVox
+      Female: UnisexVox
+      Unsexed: UnisexVox
+  - type: Butcherable
+    butcheringType: Spike
+    spawned:
+    - id: FoodMeatChicken
+      amount: 5
+  - type: Damageable
+    damageContainer: Biological
+    damageModifierSet: Vox
+  - type: PassiveDamage
+    # Augment normal health regen to be able to tank some Poison damage
+    # This allows Vox to take their mask off temporarily to eat something without needing a trip to medbay afterwards.
+    allowedStates:
+    - Alive
+    damageCap: 20
+    damage:
+      types:
+        Heat: -0.07
+        Poison: -0.2 # needs to be less than the PendingZombieComponent does or they never become zombies by the disease.
+      groups:
+        Brute: -0.07
+  - type: DamageVisuals
+    damageOverlayGroups:
+      Brute:
+        sprite: Mobs/Effects/brute_damage.rsi
+        color: "#7a8bf2"
+  - type: Bloodstream
+    bloodReagent: AmmoniaBlood
+  - type: MeleeWeapon
+    soundHit:
+      collection: AlienClaw
+    angle: 30
+    animation: WeaponArcClaw
+    damage:
+      types:
+        Slash: 5 # Reduce?
+  - type: LanguageKnowledge
+    speaks:
+    - TauCetiBasic
+    - VoxPidgin
+    understands:
+    - TauCetiBasic
+    - VoxPidgin
+  - type: FootPrints
+    leftBarePrint: "footprint-left-bare-lizard"
+    rightBarePrint: "footprint-right-bare-lizard"
+
+- type: entity
+  parent: [BaseVoxAppearance, BaseSpeciesDummy]
+  id: MobVoxDummy
+  categories: [ HideSpawnMenu ]

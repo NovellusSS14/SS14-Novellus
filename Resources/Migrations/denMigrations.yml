@@ -1,0 +1,133 @@
+# SPDX-FileCopyrightText: 2025 Falcon
+# SPDX-FileCopyrightText: 2025 Gregg
+# SPDX-FileCopyrightText: 2025 Mono
+# SPDX-FileCopyrightText: 2025 Rosycup
+# SPDX-FileCopyrightText: 2025 SleepyScarecrow
+# SPDX-FileCopyrightText: 2025 sleepyyapril
+# SPDX-FileCopyrightText: 2025 therealDLondon
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+PlushieTrystan: PlushieDignifiedVulp
+PlushieDino: null
+PlushieChillHuman: null
+PlushieSlimeTider: null
+PlushieHarpy: PlushieVega
+AirlockMaintRoboticsLocked: null
+AirlockRoboticsGlassLocked: null
+AirlockRoboticsLocked: null
+Biogenerator: null
+BoxEnvelope: null
+CigPackCandy: null
+CigPackPurple: null
+HandgunSafeSpawner: null
+LauncherSyringe: null
+MiniSyringe: null
+RifleSafeSpawner: null
+ShotgunSafeSpawner: null
+SpawnMobSecLaikaOrShiva: null
+SuitStorageSecDeltaV: null
+SpawnPointCourier: SpawnPointMailCarrier
+AirlockMaintCorpsmanLocked: null
+AirlockMaintMailLocked: null
+AirlockMaintParamedicLocked: null
+ComputerShuttleMining: null
+GameMasterCircuitBoard: null
+ScrapAirlock1: null
+ScrapCloset: null
+ScrapFireExtinguisher: null
+ScrapFirelock1: null
+ScrapFirelock2: null
+ScrapFirelock3: null
+ScrapGlass: null
+ScrapIntercom: null
+ScrapMopBucket: null
+ScrapPAIGold: null
+ScrapSteel: null
+ShuttleManipulator: null
+SignDirectionaAI: null
+SignVox: null
+SpaceDisposalUnit: DisposalUnit
+SpawnMobJusticePet: null
+SpawnPointCargoAssistant: null
+ToiletGoldenDirtyWater: null
+WoodenKegBeer: null
+WoodenKegWine: null
+FoodDonutBluePumpkin: FoodDonutBlumpkin
+FoodDonutJellyBluePumpkin: FoodDonutJellyBlumpkin
+SpawnPointSecurityBorg: null
+
+# Shoukou - 02-22-2025 - Quite a lot of Delta Content, reminder for April to look over this generally.
+AirlockSurgeryLocked: null
+BlastDoorUnlinkedEpistemics: null
+BookGorlexGirlfriends: null # :agony:
+BookSpaceLaw: null
+ClothingBeltFoamSheathFilled: null
+Dinkystar: null
+Envelope: null # Wizdenvelopes
+LockableButtonRobotics: null
+LockerPsychologistFilled: null
+LockerSurgeonFilled: null # If Surgeon ever becomes a thing, un-null / remove
+LootSpawnerCableCoil: null
+LootSpawnerMaterials: null
+LootSpawnerRandomCrateEngineering: null
+LootSpawnerRandomCrateSecurity: null
+MeteorSpaceDust: null # No clue what this is
+PosterLegitEarth: null # The posters that are from the associated PR are really cool.
+PrisonKnife: null
+RandomSmokables: null
+RandomSolarPanelState: null
+RubberStampGreytide: null
+ScrapBucket: null # Should look over scrap generally to see if we Want That.
+ScrapPAI: null
+ScrapCamera: null
+ScrapFaxMachine: null
+SecureCabinetAttorney: null #There's a lot of these, keep the legal department ones in this list if we choose to have these.
+SecureCabinetCJ: null #Would probably have to be migrated to SecureCabinetMagistrate theoretically
+SecureCabinetClerk: null
+SecureCabinetMantis: null
+SecureCabinetProsecutor: null
+SecureCabinetPsychologist: null
+SecureCabinetWarden: null
+SheetPlasma10: null
+SpawnMobCatClippy: null
+SpawnPointSurgeon: null # If Surgeon ever becomes a thing, un-null / remove
+SuperweaponSafeSpawner: null # Beam Devastator
+TreasureCoinGold: null # These are the opposite of scrap, so if we bring scrap back, question treasure too
+TreasureHardDiskDrive: null
+
+# April 5th 2025 This only happened after the EE merge and im going to FUCKING LOSE MY MIND -Fox
+SpawnMobArcticFoxSeb: null
+
+# 09/06/25 i totally know how migrations work
+ChurchOrganInstrument: PipeOrganInstrument
+
+# June 12th, 2025 - v260.0.2 engine update
+ClothingOuterHardsuitSyndicateDurathread: null
+PoweredDimSmallLight: PoweredSmallLight
+VendingMachineBoozeSyndicate: null
+PosterLegitGoobFaded: null
+ClothingOuterWinterColorBlue: null
+ClothingOuterWinterColorBrown: null
+MineralScanner: null # port later
+FoamThrongler: null
+GlueGrenade: null
+LubeGrenade: null
+PlushieBlackburn: null
+PlushieBlackburnMatryoskya: null
+PlushieDesislavaBlackburn: null
+PlushieDurk: null
+PlushieLouie: null
+PlushieRainbowLizard: null
+SoapHomemadeBanana: null
+AirlockHydroponics: null # port later
+BoxAgrichem: null
+WallRockBasaltBSCrystal: null
+portableChemicalMixer: null
+FloraGreyStalagmite: null
+FelinidCube: null # what
+OwOLab: null
+LootSpawnerMedicalMinor: null
+LootSpawnerMedicalClassy: null
+PillCanisterMultiver: null
+SyringeCognizine: null

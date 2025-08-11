@@ -1,0 +1,58 @@
+# SPDX-FileCopyrightText: 2023 Nemanja <98561806+EmoGarbage404@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2023 PixelTK <85175107+PixelTheKermit@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 gluesniffler <159397573+gluesniffler@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 gluesniffler <linebarrelerenthusiast@gmail.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: body
+  id: Arachnid
+  name: "Arachnid"
+  root: torso
+  slots:
+    head:
+      part: HeadArachnid
+      connections:
+      - torso
+      organs:
+        brain: OrganHumanBrain
+        eyes: OrganArachnidEyes
+    torso:
+      part: TorsoArachnid
+      organs:
+        heart: OrganArachnidHeart
+        lungs: OrganAnimalLungs
+        stomach: OrganArachnidStomach
+        liver: OrganArachnidLiver
+        kidneys: OrganArachnidKidneys
+      connections:
+      - right arm
+      - left arm
+      - right leg
+      - left leg
+      - head # Shitmed
+    right arm:
+      part: RightArmArachnid
+      connections:
+      - right hand
+    left arm:
+      part: LeftArmArachnid
+      connections:
+      - left hand
+    right hand:
+      part: RightHandArachnid
+    left hand:
+      part: LeftHandArachnid
+    right leg:
+      part: RightLegArachnid
+      connections:
+      - right foot
+    left leg:
+      part: LeftLegArachnid
+      connections:
+      - left foot
+    right foot:
+      part: RightFootArachnid
+    left foot:
+      part: LeftFootArachnid

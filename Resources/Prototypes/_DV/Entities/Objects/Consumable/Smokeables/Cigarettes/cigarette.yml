@@ -1,0 +1,51 @@
+# SPDX-FileCopyrightText: 2024 KittenColony <149278380+KittenColony@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 Rosycup <178287475+Rosycup@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: entity
+  id: CigaretteOlive
+  suffix: olive
+  parent: Cigarette
+  name: cigarette
+  description: A roll of tobacco and nicotine soaked in some chemical, smells like olives.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      smokable:
+        maxVol: 15
+        reagents:
+          - ReagentId: Nicotine
+            Quantity: 10
+          - ReagentId: OilOlive
+            Quantity: 5
+
+- type: entity
+  id: CigaretteCandy
+  suffix: candy
+  parent: [Cigarette, FoodBase]
+  name: cigarette
+  description: Sugar sticks designed to look like a roll of nicotine and tobacco.
+  components:
+  - type: Appearance
+  - type: Food
+  - type: Tag
+    tags:
+      - FoodSnack
+  - type: FlavorProfile
+    flavors:
+      - sweet
+  - type: Sprite
+    sprite: Objects/Consumable/Smokeables/Cigarettes/cigarette.rsi
+    state: unlit-icon
+  - type: Clothing
+    sprite: Objects/Consumable/Smokeables/Cigarettes/cigarette.rsi
+    slots: [ mask ]
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 10
+        reagents:
+          - ReagentId: Sugar
+            Quantity: 10

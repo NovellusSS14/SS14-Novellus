@@ -1,0 +1,277 @@
+# SPDX-FileCopyrightText: 2024 Unkn0wn_Gh0st
+# SPDX-FileCopyrightText: 2024 gluesniffler
+# SPDX-FileCopyrightText: 2025 Adrian16199
+# SPDX-FileCopyrightText: 2025 Blitz
+# SPDX-FileCopyrightText: 2025 BlitzTheSquishy
+# SPDX-FileCopyrightText: 2025 Blu
+# SPDX-FileCopyrightText: 2025 Jakumba
+# SPDX-FileCopyrightText: 2025 Lonofera
+# SPDX-FileCopyrightText: 2025 M3739
+# SPDX-FileCopyrightText: 2025 Rosycup
+# SPDX-FileCopyrightText: 2025 Skubman
+# SPDX-FileCopyrightText: 2025 Tabitha
+# SPDX-FileCopyrightText: 2025 Tad "Taddy" Johnson
+# SPDX-FileCopyrightText: 2025 Tanix
+# SPDX-FileCopyrightText: 2025 VMSolidus
+# SPDX-FileCopyrightText: 2025 juniwoofs
+# SPDX-FileCopyrightText: 2025 neuPanda
+# SPDX-FileCopyrightText: 2025 sleepyyapril
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+# All Security
+- type: characterItemGroup
+  id: LoadoutSecurityBackpacks
+  maxItems: 1
+  items:
+    - type: loadout
+      id: LoadoutClothingBackSecurity
+    - type: loadout
+      id: LoadoutClothingBackSecuritySatchel
+    - type: loadout
+      id: LoadoutClothingBackSecurityDuffel
+    - type: loadout
+      id: LoadoutClothingBackSecurityMessenger
+
+- type: characterItemGroup
+  id: LoadoutSecurityBelt
+  maxItems: 1
+  items:
+    - type: loadout
+      id: LoadoutSecurityBeltWebbing
+    - type: loadout
+      id: LoadoutClothingBeltSecurity
+    - type: loadout
+      id: LoadoutClothingBeltHolster
+
+#- type: characterItemGroup
+#  id: LoadoutSecurityEars
+#  maxItems: 1
+#  items:
+
+- type: characterItemGroup
+  maxItems: 5
+  id: LoadoutSecurityEquipment
+  items:
+    - type: loadout
+      id: LoadoutSecurityCombatKnife
+    - type: loadout
+      id: LoadoutSecurityFlash
+    - type: loadout
+      id: LoadoutMagazinePistol
+    - type: loadout
+      id: LoadoutMagazinePistolSpare
+    - type: loadout
+      id: LoadoutMagazinePistolRubber
+    - type: loadout
+      id: LoadoutMagazinePistolRubberSpare
+    - type: loadout
+      id: LoadoutSpeedLoaderMagnum
+    - type: loadout
+      id: LoadoutSpeedLoaderMagnumSpare
+    - type: loadout
+      id: LoadoutSpeedLoaderMagnumRubber
+    - type: loadout
+      id: LoadoutSpeedLoaderMagnumRubberSpare
+    - type: loadout
+      id: LoadoutSpeedLoaderSpecial
+    - type: loadout
+      id: LoadoutSpeedLoaderSpecialSpare
+    - type: loadout
+      id: LoadoutSpeedLoaderSpecialRubber
+    - type: loadout
+      id: LoadoutSpeedLoaderSpecialRubberSpare
+    - type: loadout
+      id: LoadoutMagazineSpecial
+    - type: loadout
+      id: LoadoutMagazineSpecialRubber
+    - type: loadout
+      id: LoadoutMagazineSpecialSpare
+    - type: loadout
+      id: LoadoutMagazineSpecialRubberSpare
+    - type: loadout
+      id: LoadoutSpeedLoaderRifleHeavy
+    - type: loadout
+      id: LoadoutSpeedLoaderRifleHeavySpare
+    - type: loadout
+      id: LoadoutSpeedLoaderRifleHeavyRubber
+    - type: loadout
+      id: LoadoutSpeedLoaderRifleHeavyRubberSpare
+    - type: loadout
+      id: LoadoutMagazineMagnumMagnumLeverRifle
+    - type: loadout
+      id: LoadoutMagazineMagnumMagnumLeverRifleSpare
+    - type: loadout
+      id: LoadoutMagazineShotgunBeanbag
+
+- type: characterItemGroup
+  maxItems: 1
+  id: LoadoutSecurityWeapons
+  items:
+    - type: loadout
+      id: LoadoutSecurityMk58NonLethal
+    - type: loadout
+      id: LoadoutSecurityRevolverNonLethal
+    - type: loadout
+      id: LoadoutSecurityRevolverDeckardNonLethal
+    - type: loadout
+      id: LoadoutSecurityPistolN1984NonLethal
+    - type: loadout
+      id: LoadoutSecurityPistolViperNonLethal
+    - type: loadout
+      id: LoadoutSecurityPistolViperWoodNonlethal
+    - type: loadout
+      id: LoadoutSecurityEquipmentTruncheon
+    - type: loadout
+      id: LoadoutSecurityEnergyGunMini
+    - type: loadout
+      id: LoadoutSecurityEquipmentEnergySword
+    - type: loadout
+      id: LoadoutSecurityPistolPollockNonlethal
+    - type: loadout
+      id: LoadoutSecurityRevolverSnubNonlethal
+    - type: loadout
+      id: LoadoutSecurityRevolverK38MasterNonlethal
+    - type: loadout
+      id: LoadoutSecurityRevolverFitzNonlethal
+    - type: loadout
+      id: LoadoutSecurityRevolverPythonNonlethal
+    - type: loadout
+      id: LoadoutSecurityArgentiNonLethal
+    - type: loadout
+      id: LoadoutSecurityShotgunSawn
+    - type: loadout
+      id: LoadoutSecurityPlasteelArmingSword
+
+- type: characterItemGroup
+  id: LoadoutSecurityEyes
+  maxItems: 1
+  items:
+    - type: loadout
+      id: LoadoutSecurityEyesHudSecurity
+    - type: loadout
+      id: ClothingEyesGlassesSunglasses
+    - type: loadout
+      id: LoadoutSecurityEyesEyepatchHudSecurity
+    - type: loadout
+      id: LoadoutSecurityEyesHudSecurityPrescription
+    - type: loadout
+      id: LoadoutClothingEyesGlassesSecurity
+    - type: loadout
+      id: LoadoutClothingEyesGlassesSecurityAviator
+    - type: loadout
+      id: LoadoutClothingEyesGlassesSecurityBig
+    - type: loadout
+      id: LoadoutClothingEyesGlassesSecurityVisor
+    - type: loadout
+      id: LoadoutClothingEyesGlassesCorpsman
+
+- type: characterItemGroup
+  id: LoadoutSecurityGloves
+  maxItems: 1
+  items:
+    - type: loadout
+      id: LoadoutClothingHandsSecurityWarmers
+    - type: loadout
+      id: LoadoutClothingHandsGlovesSecurityBlack
+
+- type: characterItemGroup
+  id: LoadoutSecurityHead
+  maxItems: 1
+  items:
+    - type: loadout
+      id: LoadoutSecurityHeadHatBeret
+    - type: loadout
+      id: LoadoutSecurityHeadHatSeniorTrooper
+    - type: loadout
+      id: LoadoutClothingHeadHelmetBasic
+    - type: loadout
+      id: LoadoutSecurityHeadHelmetInsulated
+    - type: loadout
+      id: LoadoutSecurityHeadHelmetCombat
+
+#- type: characterItemGroup
+#  id: LoadoutSecurityId
+#  maxItems: 1
+#  items:
+
+- type: characterItemGroup
+  id: LoadoutSecurityNeck # Floof - M3739 - #988
+  maxItems: 1
+  items:
+    - type: loadout
+      id: LoadoutSecurityNeckNeckerchief
+    - type: loadout
+      id: LoadoutSecurityNeckCollar
+
+- type: characterItemGroup
+  id: LoadoutSecurityMask
+  maxItems: 1
+  items:
+    - type: loadout
+      id: LoadoutClothingMaskGasSecurity
+    - type: loadout
+      id: LoadoutSecurityMaskGasSwat
+    - type: loadout
+      id: LoadoutSecurityMaskGasCombat
+    - type: loadout
+      id: LoadoutSecurityMaskGasBallistic
+
+- type: characterItemGroup
+  id: LoadoutSecurityOuter
+  maxItems: 1
+  items:
+    - type: loadout
+      id: LoadoutClothingOuterArmorPlateCarrier
+    - type: loadout
+      id: LoadoutClothingOuterWinterCoatSec
+    - type: loadout
+      id: LoadoutClothingOuterArmorDuraVest
+    - type: loadout
+      id: LoadoutClothingOuterArmorBasic
+    - type: loadout
+      id: LoadoutClothingOuterArmorSlim
+    - type: loadout
+      id: LoadoutClothingLongcoatSec
+
+- type: characterItemGroup
+  id: LoadoutSecurityShoes
+  maxItems: 1
+  items:
+    - type: loadout
+      id: LoadoutSecurityShoesJackboots
+    - type: loadout
+      id: LoadoutClothingShoesBootsCombat
+    - type: loadout
+      id: LoadoutClothingUnderSocksSecurity
+    - type: loadout
+      id: LoadoutShoesSecheelsBlackstockings
+
+- type: characterItemGroup
+  id: LoadoutSecurityUniforms
+  maxItems: 1
+  items:
+    - type: loadout
+      id: LoadoutSecurityUniformJumpsuitBlue
+    - type: loadout
+      id: LoadoutSecurityUniformJumpsuitGrey
+    - type: loadout
+      id: LoadoutSecurityUniformJumpskirtGrey
+    - type: loadout
+      id: LoadoutSecurityUniformJumpskirtBlue
+    - type: loadout
+      id: LoadoutSecurityUniformJumpsuitSeniorTrooper
+    - type: loadout
+      id: LoadoutUniformJumpsuitSecFormal
+    - type: loadout
+      id: LoadoutUniformJumpsuitSecSummer
+    - type: loadout
+      id: LoadoutSecurityUniformEnvirosuitBlue
+    - type: loadout
+      id: LoadoutSecurityUniformEnvirosuitGrey
+    - type: loadout
+      id: LoadoutSecurityUniformJumpsuit
+    - type: loadout
+      id: LoadoutSecurityUniformJumpskirt
+    - type: loadout
+      id: LoadoutClothingUniformSecurityThong

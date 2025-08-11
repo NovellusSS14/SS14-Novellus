@@ -1,0 +1,96 @@
+# SPDX-FileCopyrightText: 2024 VMSolidus <evilexecutive@gmail.com>
+# SPDX-FileCopyrightText: 2025 Blitz <73762869+BlitzTheSquishy@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 BlitzTheSquishy <73762869+BlitzTheSquishy@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+# Medical Doctor
+#- type: characterItemGroup
+#  id: LoadoutMedicalDoctorBackpacks
+#  maxItems: 1
+#  items:
+
+- type: characterItemGroup
+  id: LoadoutMedicalDoctorBelt
+  maxItems: 1
+  items:
+    - type: loadout
+      id: LoadoutMedicalDoctorBeltMedical
+    - type: loadout
+      id: LoadoutMedicalDoctorBeltMedicalFilled
+    - type: loadout
+      id: LoadoutMedicalDoctorBeltMedicalAdvancedFilled
+
+#- type: characterItemGroup
+#  id: LoadoutMedicalDoctorEars
+#  maxItems: 1
+#  items:
+#
+#- type: characterItemGroup
+#  id: LoadoutMedicalDoctorEquipment
+#  maxItems: 1
+#  items:
+#
+#- type: characterItemGroup
+#  id: LoadoutMedicalDoctorEyes
+#  maxItems: 1
+#  items:
+#
+#- type: characterItemGroup
+#  id: LoadoutMedicalDoctorGloves
+#  maxItems: 1
+#  items:
+
+#- type: characterItemGroup
+#  id: LoadoutMedicalDoctorHead
+#  maxItems: 1
+#  items:
+#
+#- type: characterItemGroup
+#  id: LoadoutMedicalDoctorId
+#  maxItems: 1
+#  items:
+#
+#- type: characterItemGroup
+#  id: LoadoutMedicalDoctorNeck
+#  maxItems: 1
+#  items:
+#
+#- type: characterItemGroup
+#  id: LoadoutMedicalDoctorMask
+#  maxItems: 1
+#  items:
+
+- type: characterItemGroup
+  id: LoadoutMedicalDoctorOuter
+  maxItems: 1
+  items:
+  - type: loadout # TheDen
+    id: LoadoutMedicalOuterLabcoat
+  - type: loadout
+    id: LoadoutMedicalOuterLabcoatViro
+  - type: loadout
+    id: LoadoutMedicalOuterLabcoatGen
+
+#- type: characterItemGroup
+#  id: LoadoutMedicalDoctorShoes
+#  maxItems: 1
+#  items:
+
+- type: characterItemGroup
+  id: LoadoutMedicalDoctorUniforms
+  maxItems: 1
+  items:
+    - type: loadout
+      id: LoadoutMedicalDoctorJumpsuit
+    - type: loadout
+      id: LoadoutMedicalDoctorJumpskirt
+    - type: loadout
+      id: LoadoutMedicalDoctorJumpsuitViro
+    - type: loadout
+      id: LoadoutMedicalDoctorJumpskirtViro
+    - type: loadout
+      id: LoadoutMedicalDoctorJumpsuitGen
+    - type: loadout
+      id: LoadoutMedicalDoctorJumpskirtGen

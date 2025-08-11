@@ -1,0 +1,70 @@
+# SPDX-FileCopyrightText: 2024 FoxxoTrystan <trystan.garnierhein@gmail.com>
+# SPDX-FileCopyrightText: 2024 Mnemotechnican <69920617+Mnemotechnician@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 Timemaster99 <57200767+Timemaster99@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 flyingkarii <flyingkarii@gmail.com>
+# SPDX-FileCopyrightText: 2025 Rosycup <178287475+Rosycup@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 Skubman <ba.fallaria@gmail.com>
+# SPDX-FileCopyrightText: 2025 VMSolidus <evilexecutive@gmail.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: job
+  id: ChiefJustice
+  name: job-name-chief-justice
+  description: job-description-chief-justice
+  playTimeTracker: JobChiefJustice
+  requirements:
+    - !type:CharacterPlaytimeRequirement
+      tracker: JobClerk
+      min: 7200 # 2 hours
+    - !type:CharacterPlaytimeRequirement
+      tracker: JobLawyer
+      min: 7200 # 2 hours
+    - !type:CharacterPlaytimeRequirement
+      tracker: JobProsecutor
+      min: 7200 # 2 hours
+    - !type:CharacterOverallTimeRequirement
+      min: 90000 # 25 hours
+  weight: 20
+  startingGear: CJGear
+  icon: "JobIconChiefJustice"
+  requireAdminNotify: true
+  supervisors: job-supervisors-captain
+  canBeAntag: false
+  access:
+  - Command
+  - ChiefJustice
+  - Justice
+  - Lawyer
+  - Prosecutor
+  - Clerk
+  - Security
+  - Maintenance
+  - External
+  special:
+  - !type:AddImplantSpecial
+    implants: [ MindShieldImplant ]
+  - !type:AddComponentSpecial
+    components:
+      - type: CommandStaff
+
+- type: startingGear
+  id: CJGear
+  subGear:
+  - PassengerPlasmamanGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitChiefJustice
+    back: ClothingBackpackFilled # TODO- make Justice department bags
+    shoes: ClothingShoesLeather
+    head: ClothingHeadHatCJToque
+    outerClothing: ClothingOuterChiefJustice
+    id: ChiefJusticePDA
+    ears: ClothingHeadsetAltJustice
+    gloves: ClothingHandsGlovesColorWhite
+    # Todo - pocket1: Gavel
+  innerClothingSkirt: ClothingUniformJumpskirtChiefJustice
+  satchel: ClothingBackpackSatchelFilled # TODO- make Justice departmebt bags
+  duffelbag: ClothingBackpackDuffelFilled
+
+

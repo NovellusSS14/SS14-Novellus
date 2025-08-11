@@ -1,0 +1,251 @@
+# SPDX-FileCopyrightText: 2024 VMSolidus <evilexecutive@gmail.com>
+# SPDX-FileCopyrightText: 2024 sleepyyapril <flyingkarii@gmail.com>
+# SPDX-FileCopyrightText: 2025 MajorMoth <61519600+MajorMoth@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 RadsammyT <32146976+RadsammyT@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 Tabitha <64847293+KyuPolaris@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 Tonk-GCR <190437025+Tonk-GCR@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: characterItemGroup
+  id: LoadoutSmokes
+  items:
+    - type: loadout
+      id: LoadoutItemCig
+    - type: loadout
+      id: LoadoutItemCigsGreen
+    - type: loadout
+      id: LoadoutItemCigsRed
+    - type: loadout
+      id: LoadoutItemCigsBlue
+    - type: loadout
+      id: LoadoutItemCigsBlack
+    - type: loadout
+      id: LoadoutItemCigsMixed
+    - type: loadout
+      id: LoadoutItemCigsSyndicate
+    - type: loadout
+      id: LoadoutItemSmokingPipeFilledTobacco
+    - type: loadout
+      id: LoadoutItemBlunt
+    - type: loadout
+      id: LoadoutItemJoint
+
+- type: characterItemGroup
+  id: LoadoutLighters
+  items:
+    - type: loadout
+      id: LoadoutItemLighter
+    - type: loadout
+      id: LoadoutItemLighterCheap
+    - type: loadout
+      id: LoadoutItemLighterFlippo
+
+- type: characterItemGroup
+  id: LoadoutInstrumentsAny
+  maxItems: 2
+  items:
+    - type: loadout
+      id: LoadoutItemMicrophoneInstrument
+    - type: loadout
+      id: LoadoutItemKalimbaInstrument
+    - type: loadout
+      id: LoadoutItemTrumpetInstrument
+    - type: loadout
+      id: LoadoutItemElectricGuitar
+    - type: loadout
+      id: LoadoutItemBassGuitar
+    - type: loadout
+      id: LoadoutItemRockGuitar
+    - type: loadout
+      id: LoadoutItemAcousticGuitar
+    - type: loadout
+      id: LoadoutItemViolin
+    - type: loadout
+      id: LoadoutItemHarmonica
+    - type: loadout
+      id: LoadoutItemAccordion
+    - type: loadout
+      id: LoadoutItemFlute
+    - type: loadout
+      id: LoadoutItemOcarina
+    - type: loadout
+      id: LoadoutItemRickenbacker
+    - type: loadout
+      id: LoadoutItemBagpipe
+    - type: loadout
+      id: LoadoutItemBanjo
+    - type: loadout
+      id: LoadoutItemClarinet
+    - type: loadout
+      id: LoadoutItemSax
+
+- type: characterItemGroup
+  id: LoadoutAirTank
+  items:
+    - type: loadout
+      id: LoadoutItemsEmergencyOxygenTank
+    - type: loadout
+      id: LoadoutItemsExtendedEmergencyOxygenTank
+    - type: loadout
+      id: LoadoutItemsDoubleEmergencyOxygenTank
+    - type: loadout
+      id: LoadoutSpeciesEmergencyNitrogenTank
+    - type: loadout
+      id: LoadoutSpeciesExtendedEmergencyNitrogenTank
+    - type: loadout
+      id: LoadoutSpeciesDoubleEmergencyNitrogenTank
+
+- type: characterItemGroup
+  id: LoadoutBoxKits
+  items:
+    - type: loadout
+      id: LoadoutMedkitFilled
+    - type: loadout
+      id: LoadoutMedkitBruteFilled
+    - type: loadout
+      id: LoadoutMedkitBurnFilled
+    - type: loadout
+      id: LoadoutMedkitToxinFilled
+    - type: loadout
+      id: LoadoutMedkitOxygenFilled
+    - type: loadout
+      id: LoadoutMedkitRadiationFilled
+    - type: loadout
+      id: LoadoutMedkitAdvancedFilled
+    - type: loadout
+      id: LoadoutMedkitCombatFilled
+
+- type: characterItemGroup
+  id: LoadoutWritables
+  maxItems: 2
+  items:
+    - type: loadout
+      id: LoadoutItemPapers
+    - type: loadout
+      id: LoadoutItemBoxFolderGrey
+    - type: loadout
+      id: LoadoutBookRandom
+    - type: loadout
+      id: LoadoutPen
+    - type: loadout
+      id: LuxuryPen
+
+- type: characterItemGroup
+  id: LoadoutPets
+  maxItems: 1
+  items:
+    - type: loadout
+      id: LoadoutItemPetMouse
+    - type: loadout
+      id: LoadoutItemPetHamster
+    - type: loadout
+      id: LoadoutItemPetMothroach
+    - type: loadout
+      id: LoadoutItemPetCockroach
+
+- type: characterItemGroup
+  id: LoadoutCards
+  maxItems: 1
+  items:
+    - type: loadout
+      id: LoadoutItemBlackDeck
+    - type: loadout
+      id: LoadoutItemNTDeck
+
+- type: characterItemGroup
+  id: LoadoutPlushie
+  items:
+    - type: loadout
+      id: PlushieSharkBlue
+    - type: loadout
+      id: PlushieSharkGrey
+    - type: loadout
+      id: PlushieLizard
+    - type: loadout
+      id: PlushieArachind
+    - type: loadout
+      id: PlushieMoth
+    - type: loadout
+      id: PlushieHampter
+    - type: loadout
+      id: PlushieRouny
+    - type: loadout
+      id: PlushieCarp
+    - type: loadout
+      id: PlushieSlime
+    - type: loadout
+      id: PlushieVox
+    - type: loadout
+      id: PlushieHuman
+    - type: loadout
+      id: PlushieArachne
+    - type: loadout
+      id: PlushieVulp
+    - type: loadout
+      id: PlushieShadowkin
+    - type: loadout
+      id: ToyThrongler
+    - type: loadout
+      id: ToyAmongPequeno
+    - type: loadout
+      id: PlushieCorgi
+    - type: loadout
+      id: PlushieGirlyCorgi
+    - type: loadout
+      id: PlushieRobotCorgi
+    - type: loadout
+      id: PlushieMothBartender
+    - type: loadout
+      id: PlushieMothMusician
+    - type: loadout
+      id: PlushieMort
+    - type: loadout
+      id: PlushieXeno
+    - type: loadout
+      id: PlushieCatBlack
+    - type: loadout
+      id: PlushieCatGrey
+    - type: loadout
+      id: PlushieCatOrange
+    - type: loadout
+      id: PlushieCatSiames
+    - type: loadout
+      id: PlushieCatTabby
+    - type: loadout
+      id: PlushieCatTuxedo
+    - type: loadout
+      id: PlushieCatWhite
+    - type: loadout
+      id: PlushieBlackFox
+    - type: loadout
+      id: PlushieBlueFox
+    - type: loadout
+      id: PlushieCoffeeFox
+    - type: loadout
+      id: PlushieCrimsonFox
+    - type: loadout
+      id: PlushieMarbleFox
+    - type: loadout
+      id: PlushieOrangeFox
+    - type: loadout
+      id: PlushiePinkFox
+    - type: loadout
+      id: PlushiePurpleFox
+    - type: loadout
+      id: PlushieRedFox
+    - type: loadout
+      id: PlushieDeer
+    - type: loadout
+      id: MysteryFigureBox
+    - type: loadout
+      id: PrizeBall
+
+- type: characterItemGroup
+  id: AACTabletVersions
+  items:
+    - type: loadout
+      id: LoadoutItemAACTablet
+    - type: loadout
+      id: LoadoutItemAACTablet_SAS

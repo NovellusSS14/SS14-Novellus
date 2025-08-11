@@ -1,0 +1,34 @@
+# SPDX-FileCopyrightText: 2025 Rosycup <178287475+Rosycup@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: entity
+  parent: BaseItem
+  id: Clicker
+  name: clicker
+  description: A clicker used for training animals, it also doubles as a nice stim toy.
+  components:
+  - type: Sprite
+    sprite: _DEN/Objects/Fun/clicker.rsi
+    state: icon
+  - type: Item
+    sprite: _DEN/Objects/Fun/clicker.rsi
+    size: Tiny
+  - type: Tag
+    tags:
+      - Payload
+  - type: EmitSoundOnUse
+    sound:
+      path: /Audio/Items/clicker.ogg
+  - type: EmitSoundOnActivate
+    sound:
+      path: /Audio/Items/clicker.ogg
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/Items/clicker.ogg
+  - type: EmitSoundOnTrigger
+    sound:
+      path: /Audio/Items/clicker.ogg
+  - type: UseDelay
+    delay: 1.5

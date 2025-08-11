@@ -1,0 +1,31 @@
+# SPDX-FileCopyrightText: 2025 John Willis <143434770+CerberusWolfie@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: entity
+  id: UniqueLockerNanorepFilled
+  suffix: MAP THIS, Unique, Filled
+  parent: LockerNanorepFilled
+  components:
+  - type: ConditionalSpawner
+    prototypes:
+    - UniqueMarkerNanorepLocker
+
+- type: entity
+  id: UniqueLockerBlueshieldOfficerFilled
+  suffix: MAP THIS, Unique, Filled
+  parent: LockerBlueshieldOfficerFilled
+  components:
+  - type: ConditionalSpawner
+    prototypes:
+    - UniqueMarkerBlueshieldLocker
+
+- type: entity
+  id: UniqueLockerMagistrateFilled
+  suffix: MAP THIS, Unique, Filled
+  parent: LockerMagistrateFilled
+  components:
+  - type: ConditionalSpawner
+    prototypes:
+    - UniqueMarkerMagistrateLocker

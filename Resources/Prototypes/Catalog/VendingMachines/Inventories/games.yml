@@ -1,0 +1,39 @@
+# SPDX-FileCopyrightText: 2022 Andreas Kämper
+# SPDX-FileCopyrightText: 2022 Fishfish458
+# SPDX-FileCopyrightText: 2022 dontbetank
+# SPDX-FileCopyrightText: 2022 fishfish458
+# SPDX-FileCopyrightText: 2023 Flareguy
+# SPDX-FileCopyrightText: 2023 eclips_e
+# SPDX-FileCopyrightText: 2025 RadsammyT
+# SPDX-FileCopyrightText: 2025 TheLuggage05
+# SPDX-FileCopyrightText: 2025 sleepyyapril
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: vendingMachineInventory
+  id: GoodCleanFunInventory
+  startingInventory:
+    DiceBag: 6
+    Paper: 8
+    d6Dice: 8
+    ChessBoard: 1
+    BackgammonBoard: 1
+    ParchisBoard: 1
+    CheckerBoard: 1
+    ShipBattlemap: 1
+    SnowBattlemap: 1
+    SandBattlemap: 1
+    MoonBattlemap: 1
+    GrassBattlemap: 1
+    PaperCNCSheet: 6
+    MysteryFigureBox: 2
+    BooksBag: 3
+    CardBoxBlack: 3
+  contrabandInventory:
+    Basketball: 1
+    FoodSnackBoritos: 3
+    DrinkSpaceMountainWindCan: 3
+    CardBoxNanotrasen: 1 # imp
+    CardBoxTarot: 1 # imp
+  emaggedInventory:
+    CardBoxSyndicate: 1 # imp

@@ -1,0 +1,15 @@
+# SPDX-FileCopyrightText: 2025 Savante-Sam
+# SPDX-FileCopyrightText: 2025 sleepyyapril
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: latheRecipe 
+  id: TrashBagBluespace
+  result: TrashBagBluespace
+  completetime: 5
+  materials:
+    Plastic: 1500
+    Steel: 500
+    Silver: 800
+    Plasma: 700
+    Bluespace: 300

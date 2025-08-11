@@ -1,0 +1,25 @@
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: entityTable
+  id: RingTableCommon
+  table: !type:GroupSelector
+    children:
+    - id: SilverRing
+      weight: 0.55
+    - id: GoldRing
+      weight: 0.45
+
+- type: entityTable
+  id: RingTableRare
+  table: !type:GroupSelector
+    children:
+    - id: GoldRingDiamond
+      weight: 0.1
+    - id: SilverRingDiamond
+      weight: 0.1
+    - id: GoldRingGem
+      weight: 0.35
+    - id: SilverRingGem
+      weight: 0.45

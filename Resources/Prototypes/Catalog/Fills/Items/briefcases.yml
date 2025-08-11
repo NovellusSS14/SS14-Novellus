@@ -1,0 +1,122 @@
+# SPDX-FileCopyrightText: 2022 Zymem <97173622+Zymem@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2022 mirrorcult <lunarautomaton6@gmail.com>
+# SPDX-FileCopyrightText: 2023 JoeHammad1844 <130668733+JoeHammad1844@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2023 Kara <lunarautomaton6@gmail.com>
+# SPDX-FileCopyrightText: 2023 Whisper <121047731+QuietlyWhisper@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2023 lapatison <100279397+lapatison@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 Agoichi <92464780+Agoichi@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 Brandon Hu <103440971+Brandon-Huu@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 Debug <49997488+DebugOk@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 lzk <124214523+lzk228@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 Skubman <ba.fallaria@gmail.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: entity
+  id: BriefcaseBrownFilled
+  parent: BriefcaseBrown
+  suffix: Filled, Paper
+  components:
+  - type: StorageFill
+    contents:
+      - id: Paper
+        amount: 3
+
+- type: entity
+  id: BriefcaseSyndieSniperBundleFilled
+  parent: BriefcaseSyndie
+  suffix: Syndicate, Sniper Bundle
+  components:
+  - type: Item
+    size: Ginormous
+  - type: Storage
+    maxItemSize: Huge
+    grid:
+    - 0,0,6,3
+  - type: StorageFill
+    contents:
+      - id: WeaponSniperHristov
+      - id: MagazineBoxAntiMateriel
+      - id: ClothingNeckTieRed
+      - id: ClothingHandsGlovesLatex
+      - id: ClothingUniformJumpsuitLawyerBlack
+      - id: BarberScissors
+
+- type: entity
+  id: BriefcaseSyndieLobbyingBundleFilled
+  parent: BriefcaseSyndie
+  suffix: Syndicate, Spesos
+  components:
+  - type: StorageFill
+    contents:
+      - id: ClothingEyesGlassesSunglasses
+      - id: SpaceCash30000
+        amount: 1
+      - id: EncryptionKeySyndie
+      - id: RubberStampTrader
+      - id: PhoneInstrumentSyndicate
+      - id: ClothingUniformJumpsuitTacticool
+      - id: ClothingOuterCoatJensen
+      - id: ClothingHandsGlovesCombat
+      - id: ClothingMaskNeckGaiter
+      - id: SyndieHandyFlag
+
+- type: entity
+  id: BriefcaseSyndieLobbyingBundlePlasmamanFilled
+  parent: BriefcaseSyndie
+  suffix: Syndicate, Spesos, Plasmaman
+  components:
+  - type: StorageFill
+    contents:
+      - id: ClothingEyesGlassesSunglasses
+      - id: SpaceCash30000
+        amount: 1
+      - id: EncryptionKeySyndie
+      - id: RubberStampTrader
+      - id: PhoneInstrumentSyndicate
+      - id: ClothingUniformEnvirosuitTacticool
+      - id: ClothingHeadEnvirohelmTacticool
+      - id: ClothingOuterCoatJensenFilled
+      - id: ClothingHandsGlovesCombat
+
+- type: entity # No more space in briefcase due to envirohelm so put the syndicate flag in the jensen coat
+  id: ClothingOuterCoatJensenFilled
+  parent: ClothingOuterCoatJensen
+  suffix: Syndicate Flag Inside
+  components:
+  - type: StorageFill
+    contents:
+      - id: SyndieHandyFlag
+
+- type: entity
+  id: BriefcaseThiefBribingBundleFilled
+  parent: BriefcaseSyndie
+  suffix: Thief, Spesos
+  components:
+  - type: StorageFill
+    contents:
+      - id: ClothingEyesGlassesSunglasses
+      - id: SpaceCash20000
+        amount: 1
+      - id: ClothingUniformJumpsuitTacticool
+      - id: ClothingOuterCoatJensen
+      - id: ClothingHandsGlovesCombat
+      - id: ClothingMaskNeckGaiter
+      - id: ToyFigurineThief
+
+- type: entity
+  id: BriefcaseThiefBribingBundlePlasmamanFilled
+  parent: BriefcaseSyndie
+  suffix: Thief, Spesos, Plasmaman
+  components:
+  - type: StorageFill
+    contents:
+      - id: ClothingEyesGlassesSunglasses
+      - id: SpaceCash20000
+        amount: 1
+      - id: ClothingUniformEnvirosuitTacticool
+      - id: ClothingHeadEnvirohelmTacticool
+      - id: ClothingOuterCoatJensen
+      - id: ClothingHandsGlovesCombat
+      - id: ToyFigurineThief

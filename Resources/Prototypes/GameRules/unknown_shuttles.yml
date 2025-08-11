@@ -1,0 +1,64 @@
+# SPDX-FileCopyrightText: 2024 DEATHB4DEFEAT <77995199+DEATHB4DEFEAT@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 sleepyyapril <flyingkarii@gmail.com>
+# SPDX-FileCopyrightText: 2025 Blitz <73762869+BlitzTheSquishy@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: entity
+  abstract: true
+  parent: BaseGameRule
+  id: BaseUnknownShuttleRule
+  categories: [ HideSpawnMenu ] # TheDen - Removes from spawn menu
+  components:
+  - type: StationEvent
+    startAnnouncement: false
+    weight: 5
+    reoccurrenceDelay: 30
+    duration: 1
+  - type: RuleGrids
+  - type: LoadMapRule
+
+- type: entity
+  parent: BaseUnknownShuttleRule
+  id: UnknownShuttleCargoLost
+  categories: [ HideSpawnMenu ] # TheDen - Removes from spawn menu
+  components:
+  - type: LoadMapRule
+    preloadedGrid: ShuttleCargoLost
+
+- type: entity
+  parent: BaseUnknownShuttleRule
+  id: UnknownShuttleTravelingCuisine
+  categories: [ HideSpawnMenu ] # TheDen - Removes from spawn menu
+  components:
+  - type: LoadMapRule
+    preloadedGrid: TravelingCuisine
+
+- type: entity
+  parent: BaseUnknownShuttleRule
+  id: UnknownShuttleDisasterEvacPod
+  categories: [ HideSpawnMenu ] # TheDen - Removes from spawn menu
+  components:
+  - type: LoadMapRule
+    preloadedGrid: DisasterEvacPod
+
+- type: entity
+  parent: BaseUnknownShuttleRule
+  id: UnknownShuttleHonki
+  categories: [ HideSpawnMenu ] # TheDen - Removes from spawn menu
+  components:
+  - type: StationEvent
+    weight: 2
+  - type: LoadMapRule
+    preloadedGrid: Honki
+
+- type: entity
+  parent: BaseUnknownShuttleRule
+  id: UnknownShuttleSyndieEvacPod
+  categories: [ HideSpawnMenu ] # TheDen - Removes from spawn menu
+  components:
+  - type: StationEvent
+    weight: 2
+  - type: LoadMapRule
+    preloadedGrid: SyndieEvacPod

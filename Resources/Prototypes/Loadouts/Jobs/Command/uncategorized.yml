@@ -1,0 +1,104 @@
+# SPDX-FileCopyrightText: 2024 DEATHB4DEFEAT
+# SPDX-FileCopyrightText: 2024 VMSolidus
+# SPDX-FileCopyrightText: 2025 BlitzTheSquishy
+# SPDX-FileCopyrightText: 2025 sleepyyapril
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+# Uncategorized
+# Backpacks
+
+# Belt
+
+# Ears
+
+# Equipment
+- type: loadout
+  id: LoadoutCommandTelescopicBaton
+  category: JobsCommandAUncategorized
+  cost: 3
+  canBeHeirloom: true
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutCommandSelfDefense
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - Command
+        - Dignitary
+  items:
+    - TelescopicBaton
+
+- type: loadout
+  id: LoadoutCommandDisabler
+  category: JobsCommandAUncategorized
+  cost: 2
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutCommandSelfDefense
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - Command
+        - Dignitary
+    - !type:CharacterJobRequirement
+      inverted: true
+      jobs:
+        - HeadOfSecurity
+        - BlueshieldOfficer
+        - NanotrasenRepresentative
+  items:
+    - WeaponDisabler
+
+- type: loadout
+  id: LoadoutCommandStunBaton
+  category: JobsCommandAUncategorized
+  cost: 1
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutCommandSelfDefense
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - Command
+        - Dignitary
+    - !type:CharacterJobRequirement
+      inverted: true
+      jobs:
+        - HeadOfSecurity
+        - BlueshieldOfficer
+  items:
+    - Stunbaton
+
+- type: loadout
+  id: LoadoutCommandFlash
+  category: JobsCommandAUncategorized
+  cost: 0
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutCommandSelfDefense
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - Command
+        - Dignitary
+    - !type:CharacterJobRequirement
+      inverted: true
+      jobs:
+        - HeadOfSecurity
+        - BlueshieldOfficer
+  items:
+    - Flash
+# Eyes
+
+# Gloves
+
+# Head
+
+# Id
+
+# Neck
+
+# Mask
+
+# Outer
+
+# Shoes
+
+# Uniforms

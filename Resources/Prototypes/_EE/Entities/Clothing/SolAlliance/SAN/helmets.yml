@@ -1,0 +1,17 @@
+# SPDX-FileCopyrightText: 2025 VMSolidus <evilexecutive@gmail.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+# Helmets
+- type: entity
+  parent: [ClothingHeadHelmetBasic, SolAllianceInfo, BaseClothingRadio]
+  id: ClothingHeadHelmetSAN
+  name: SAN tactical helmet
+  suffix: SAN
+  description: A simple Solarian helmet design, only marginally different than the ancient sallet which inspired it. Today they're made from the same alloy as starship hulls.
+  components:
+    - type: Sprite
+      sprite: _EE/Clothing/SolAlliance/Helmet/SAN_tactical_helmet.rsi
+    - type: Clothing
+      sprite: _EE/Clothing/SolAlliance/Helmet/SAN_tactical_helmet.rsi

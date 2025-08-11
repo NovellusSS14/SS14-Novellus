@@ -1,0 +1,69 @@
+# SPDX-FileCopyrightText: 2023 Adrian16199 <144424013+Adrian16199@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2023 Colin-Tel <113523727+Colin-Tel@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2023 Fluffiest Floofers <thebluewulf@gmail.com>
+# SPDX-FileCopyrightText: 2024 VMSolidus <evilexecutive@gmail.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: damageModifierSet
+  id: Oni
+  coefficients:
+    Blunt: 0.85
+    Slash: 0.85
+    Piercing: 0.85
+
+- type: damageModifierSet
+  id: Felinid
+  coefficients:
+    Blunt: 1.15
+    Slash: 1.15
+    Piercing: 1.15
+
+# For airlocks, etc, to prevent cheesing.
+- type: damageModifierSet
+  id: MetallicStructure
+  coefficients:
+    Blunt: 0.7
+    Slash: 0.5
+    Piercing: 0.7
+    Shock: 1.2
+  flatReductions:
+    Blunt: 5
+    Heat: 5
+#  minimumDamageToDamage: 10
+
+- type: damageModifierSet
+  id: CancerMouse
+  coefficients:
+    Radiation: -0.25
+
+- type: damageModifierSet
+  id: Spirit
+  coefficients:
+    Cold: 0.0
+    Shock: 0.2
+    Heat: 3.0
+    Holy: 5.0
+
+- type: damageModifierSet
+  id: CorporealSpirit
+  coefficients:
+    Cold: 0.0
+    Shock: 1.5
+    Blunt: 0.5
+    Slash: 0.5
+    Piercing: 0.5
+    Heat: 1.5
+    Holy: 5.0
+
+- type: damageModifierSet
+  id: ShockAbsorber
+  coefficients:
+    Blunt: 0.7
+    Slash: 0.5
+    Piercing: 0.7
+    Shock: 0
+  flatReductions:
+    Blunt: 5
+    Heat: 5

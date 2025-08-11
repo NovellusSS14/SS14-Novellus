@@ -1,0 +1,20 @@
+# SPDX-FileCopyrightText: 2025 John Willis <143434770+CerberusWolfie@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+# "funny" placeholders of extremely minor/non-crimes for wanted reason dialog
+- type: dataset
+  id: PsionicsRecordsRecordsPlaceholders
+  values:
+  - Mindswapped with a rat 2 billion times
+  - Ascended into the telepathic realm with mind control
+  - Forced a clown to punch himself
+  - Forced a mime to speak in owo accent
+  - Mindcontrolled Captain to say bad words
+  - Pissed off the Oracle
+  - Became a Psionic
+  - Usurped the throne
+  - Mindswapped the Mantis with a shoe
+  - Drew stick figures in the Chaplain's bible
+  - Revived a cockroach

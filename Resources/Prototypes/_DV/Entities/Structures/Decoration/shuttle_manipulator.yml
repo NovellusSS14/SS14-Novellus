@@ -1,0 +1,21 @@
+# SPDX-FileCopyrightText: 2023 Ps3Moira <113228053+ps3moira@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 Rosycup <178287475+Rosycup@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: entity
+  id: shuttle_manipulator
+  parent: BaseStructure
+  name: station holograph
+  description: A three-dimensional hologram projection of a space station.
+  components:
+  - type: Sprite
+    sprite: _DV/Structures/Decoration/shuttle_manipulator.rsi
+    state: holograph_station
+  - type: PointLight
+    radius: 1.4
+    energy: 2
+    color: "#26DEB3"
+  - type: Damageable
+    damageContainer: Inorganic

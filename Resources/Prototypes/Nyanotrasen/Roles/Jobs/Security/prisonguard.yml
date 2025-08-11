@@ -1,0 +1,74 @@
+# SPDX-FileCopyrightText: 2023 Bakke <luringens@protonmail.com>
+# SPDX-FileCopyrightText: 2023 Colin-Tel <113523727+Colin-Tel@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2023 Debug <sidneymaatman@gmail.com>
+# SPDX-FileCopyrightText: 2023 Fluffiest Floofers <thebluewulf@gmail.com>
+# SPDX-FileCopyrightText: 2023 Velcroboy <107660393+IamVelcroboy@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 Adrian16199 <144424013+Adrian16199@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 Angelo Fallaria <ba.fallaria@gmail.com>
+# SPDX-FileCopyrightText: 2024 BonkTrauma <123421227+Shadowwailker@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 DEATHB4DEFEAT <77995199+DEATHB4DEFEAT@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 Fansana <fansana95@googlemail.com>
+# SPDX-FileCopyrightText: 2024 FoxxoTrystan <trystan.garnierhein@gmail.com>
+# SPDX-FileCopyrightText: 2025 Skubman <ba.fallaria@gmail.com>
+# SPDX-FileCopyrightText: 2025 Timfa <timfalken@hotmail.com>
+# SPDX-FileCopyrightText: 2025 VMSolidus <evilexecutive@gmail.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <flyingkarii@gmail.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: job
+  id: PrisonGuard
+  name: job-name-guard
+  description: job-description-guard
+  playTimeTracker: JobPrisonGuard
+  requirements:
+    - !type:CharacterOverallTimeRequirement
+      min: 18000
+    - !type:CharacterDepartmentTimeRequirement
+      department: Security
+      min: 7200 # 2hr floof
+  startingGear: PrisonGuardGear
+  alwaysUseSpawner: true
+  canBeAntag: false
+  icon: "JobIconPrisonGuard"
+  supervisors: job-supervisors-warden
+  setPreference: true
+#  whitelistRequired: true
+  access:
+  - Security
+  #- Brig #Delta V: Removed brig access
+  - Maintenance
+  special:
+  - !type:AddImplantSpecial
+    implants: [ MindShieldImplant ]
+  afterLoadoutSpecial:
+  - !type:ModifyEnvirosuitSpecial
+    charges: 6
+  - !type:ModifyEnvirohelmSpecial
+    powerCell: PowerCellHigh
+
+- type: startingGear
+  id: PrisonGuardGear
+  subGear:
+  - PrisonGuardPlasmamanGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitPrisonGuard
+    back: ClothingBackpackSecurityFilled
+    shoes: ClothingShoesBootsCombatFilled
+    eyes: ClothingEyesGlassesSecurity
+    head: ClothingHeadPrisonGuard
+    id: PrisonGuardPDA
+    ears: ClothingHeadsetPrisonGuard #DeltaV
+    belt: ClothingBeltSecurityFilled
+  innerClothingSkirt: ClothingUniformJumpsuitPrisonGuard
+  satchel: ClothingBackpackSatchelSecurityFilled
+  duffelbag: ClothingBackpackDuffelSecurityFilled
+
+- type: startingGear
+  id: PrisonGuardPlasmamanGear
+  parent: BasePlasmamanSecurityGear
+  equipment:
+    jumpsuit: ClothingUniformEnvirosuitPrisonGuard
+    head: ClothingHeadEnvirohelmPrisonGuard
+    gloves: ClothingHandsGlovesEnviroglovesBlack

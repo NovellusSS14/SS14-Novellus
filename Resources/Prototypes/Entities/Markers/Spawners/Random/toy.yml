@@ -1,0 +1,230 @@
+# SPDX-FileCopyrightText: 2020 Paul Ritter <ritter.paul1@googlemail.com>
+# SPDX-FileCopyrightText: 2020 Vera Aguilera Puerto <zddm@outlook.es>
+# SPDX-FileCopyrightText: 2021 DrSmugleaf <DrSmugleaf@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2021 Peptide90 <78795277+Peptide90@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2021 Swept <sweptwastaken@protonmail.com>
+# SPDX-FileCopyrightText: 2021 metalgearsloth <31366439+metalgearsloth@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2022 Emisse <99158783+Emisse@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2022 Nemanja <98561806+EmoGarbage404@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2022 Pieter-Jan Briers <pieterjan.briers+git@gmail.com>
+# SPDX-FileCopyrightText: 2022 T-Stalker <43253663+DogZeroX@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2022 Willhelm53 <97707302+Willhelm53@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2023 AR <121322002+toasterpm87@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2023 Chief-Engineer <119664036+Chief-Engineer@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2023 Colin-Tel <113523727+Colin-Tel@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2023 DerbyX <50932435+DerbyX@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2023 Ed <96445749+TheShuEd@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2023 Flareguy <78941145+Flareguy@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2023 Fluffiest Floofers <thebluewulf@gmail.com>
+# SPDX-FileCopyrightText: 2023 Puro <103608145+PuroSlavKing@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2023 metalgearsloth <comedian_vs_clown@hotmail.com>
+# SPDX-FileCopyrightText: 2023 mhamster <81412348+mhamsterr@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 CodedCrow <114866135+CodedCrow@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 FoxxoTrystan <45297731+FoxxoTrystan@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 Mr. 27 <45323883+dutch-vanderlinde@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 juniwoofs <180479595+juniwoofs@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 juniwoofs <jakbroeder@gmail.com>
+# SPDX-FileCopyrightText: 2025 Rosycup <178287475+Rosycup@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 SixplyDev <einlichen@gmail.com>
+# SPDX-FileCopyrightText: 2025 portfiend <109661617+portfiend@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <flyingkarii@gmail.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: entity
+  name: Toy Spawner
+  id: ToySpawner
+  parent: MarkerBase
+  components:
+    - type: Sprite
+      layers:
+        - state: red
+        - sprite: Objects/Fun/toys.rsi
+          state: plushie_h
+    - type: RandomSpawner
+      rarePrototypes:
+        - FoamBlade
+        - PlushieGhost
+        - PlushieAbductorAgent
+      rareChance: 0.03
+      prototypes:
+        - PlushieBee
+        - PlushieAtmosian
+        - PlushieNuke
+        - PlushieLizard
+        - PlushieNar
+        - PlushieCarp
+        - PlushieSlime
+        - PlushieSnake
+        - PlushieVox
+        - PlushieRatvar
+        - PlushieSpaceLizard
+        - PlushieRouny
+        - PlushieLamp
+        - PlushieSharkBlue
+        - PlushieSharkPink
+        - PlushieSharkGrey
+        - ToyAmongPequeno
+        - ToyMouse
+        - PlushieDiona
+        - PlushieMoth
+        - PlushieMothRandom # Nyanotrasen Random Moth Plushies
+        - PlushieArachind
+        - PlushieArachne
+        - PlushieAbductor
+        - PlushieGnome
+        - PlushieLoveable
+        - PlushieDeer
+        - PlushieIpc
+        - PlushieGrey
+        - PlushieRedFox
+        - PlushiePurpleFox
+        - PlushiePinkFox
+        - PlushieOrangeFox
+        - PlushieMarbleFox
+        - PlushieCrimsonFox
+        - PlushieCoffeeFox
+        - PlushieBlueFox
+        - PlushieBlackFox
+        - PlushieVulp
+        - PlushieCorgi
+        - PlushieGirlyCorgi
+        - PlushieRobotCorgi
+        - PlushieCatBlack
+        - PlushieCatGrey
+        - PlushieCatOrange
+        - PlushieCatSiames
+        - PlushieCatTabby
+        - PlushieCatTuxedo
+        - PlushieCatWhite
+        - PlushieRatvar
+        - PlushieNar
+        - PlushieDignifiedVulp
+        - PlushieSlips
+        - PlushieJester
+        - PlushieVega
+        - PlushieMort
+        - PlushieGrim
+        - PlushieAlice
+        # Begin DeltaV - see Resources/Prototypes/_DV/Entities/Objects/Fun/toys.yml
+        - PlushieFelinid
+        - PlushieOni
+        - PlushieHarpy
+        - PlushieRodentia
+        - PlushieFeroxi
+        - PlushieChitinid
+        # End DeltaV
+        - PlushieOvinia
+        - PlushieTeddyBear
+        - PlushieTeddyBearRecolorableRandom
+        - SqueakySmileyGuy
+        - SqueakySmileyGuyRandom
+        - SqueakySmileyBall
+        - PlushieAlienGerm
+        - PlushieAlienGermMini
+      chance: 0.5
+      offset: 0.2
+
+- type: entity
+  name: Prize Figurine Spawner
+  id: FigureSpawner
+  parent: MarkerBase
+  components:
+    - type: Sprite
+      layers:
+        - state: red
+        - sprite: Objects/Fun/mech_figurines.rsi
+          state: ripley
+    - type: RandomSpawner
+      prototypes:
+        - ToyAi
+        - ToyNuke
+        - ToyFigurinePassenger
+        - ToyGriffin
+        - ToyHonk
+        - ToyIan
+        - ToyMarauder
+        - ToyMauler
+        - ToyGygax
+        - ToyOdysseus
+        - ToyOwlman
+        - ToyDeathRipley
+        - ToyPhazon
+        - ToyFireRipley
+        - ToyReticence
+        - ToyRipley
+        - ToySeraph
+        - ToyDurand
+        - ToySkeleton
+        - MysteryFigureBox
+        - ToyZero # DeltaV Toy, see Resources/Prototypes/_DV/Entities/Objects/Fun/toys.yml
+        - ToyRenault # DeltaV Toy, see Resources/Prototypes/_DV/Entities/Objects/Fun/toys.yml
+        - ToySiobhan # DeltaV Toy, see Resources/Prototypes/_DV/Entities/Objects/Fun/toys.yml
+      chance: 0.5
+      offset: 0.2
+
+- type: entity
+  name: Spacemen Minifigure Spawner
+  suffix: Librarian only, map with care!
+  id: SpacemenFigureSpawner
+  parent: MarkerBase
+  components:
+    - type: Sprite
+      layers:
+        - sprite: Objects/Fun/figurines.rsi
+          state: figurine_spawner
+    - type: RandomSpawner
+      rarePrototypes:
+      - ToyFigurineNukieElite
+      - ToyFigurineNukieCommander
+      rareChance: 0.05
+      prototypes:
+      - ToyFigurinePassenger
+      - ToyFigurineClown
+      - ToyFigurineMime
+      - ToyFigurineMusician
+      - ToyFigurineBoxer
+      - ToyFigurineCaptain
+      - ToyFigurineHeadOfSecurity
+      - ToyFigurineWarden
+      - ToyFigurineDetective
+      - ToyFigurineSecurity
+      - ToyFigurineLawyer
+      - ToyFigurineCargoTech
+      - ToyFigurineSalvage
+      - ToyFigurineQuartermaster
+      - ToyFigurineChiefEngineer
+      - ToyFigurineAtmosTech
+      - ToyFigurineEngineer
+      - ToyFigurineResearchDirector
+      - ToyFigurineScientist
+      - ToyFigurineChiefMedicalOfficer
+      - ToyFigurineChemist
+      - ToyFigurineParamedic
+      - ToyFigurineMedicalDoctor
+      - ToyFigurineHeadOfPersonnel
+      - ToyFigurineLibrarian
+      - ToyFigurineChaplain
+      - ToyFigurineChef
+      - ToyFigurineBartender
+      - ToyFigurineBotanist
+      - ToyFigurineJanitor
+      - ToyFigurineNukie
+      - ToyFigurineFootsoldier
+      - ToyFigurineWizardFake
+      - ToyFigurineSlime
+      - ToyFigurineGreytider
+      - ToyFigurineWizard
+      - ToyGriffin
+      - ToyOwlman
+      - ToySkeleton
+      - ToyFigurineQueen
+      - ToyFigurineSpaceDragon
+      - ToyFigurineRatKing
+      - ToyFigurineRatServant
+      - ToyFigurineMouse
+      - ToyFigurineHamlet
+      - ToyFigurineThief
+      chance: 0.90
+      offset: 0.2

@@ -1,0 +1,37 @@
+# SPDX-FileCopyrightText: 2023 rosieposie <52761126+rosieposieeee@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 Rosycup <178287475+Rosycup@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: entity
+  id: NapalmChemistryBottle
+  name: napalm bottle
+  parent: BaseChemistryEmptyBottle
+  components:
+    - type: SolutionContainerManager
+      solutions:
+        drink:
+          maxVol: 30
+          reagents:
+            - ReagentId: Napalm
+              Quantity: 30
+    - type: Tag
+      tags:
+        - Bottle
+
+- type: entity
+  id: UltravasculineChemistryBottle
+  name: ultravasculine bottle
+  parent: BaseChemistryEmptyBottle
+  components:
+    - type: SolutionContainerManager
+      solutions:
+        drink:
+          maxVol: 30
+          reagents:
+            - ReagentId: Ultravasculine
+              Quantity: 30
+    - type: Tag
+      tags:
+        - Bottle

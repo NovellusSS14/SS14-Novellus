@@ -1,0 +1,120 @@
+# SPDX-FileCopyrightText: 2023 AJCM-git <60196617+AJCM-git@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2023 Aru Moon <anton17082003@gmail.com>
+# SPDX-FileCopyrightText: 2023 Julian Giebel <juliangiebel@live.de>
+# SPDX-FileCopyrightText: 2023 Leon Friedrich <60421075+ElectroJr@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2023 Naive817 <31364560+Naive817@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2023 Pieter-Jan Briers <pieterjan.briers+git@gmail.com>
+# SPDX-FileCopyrightText: 2023 chromiumboy <50505512+chromiumboy@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2023 end <72604018+laok233@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 Ben Velie <veliebm@gmail.com>
+# SPDX-FileCopyrightText: 2024 VMSolidus <evilexecutive@gmail.com>
+# SPDX-FileCopyrightText: 2025 deltanedas <39013340+deltanedas@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: guideEntry
+  id: Engineering
+  name: guide-entry-engineering
+  text: "/ServerInfo/Guidebook/Engineering/Engineering.xml"
+  children:
+  - Atmospherics
+  - Construction
+  - Power
+  - ShuttleCraft
+  - Networking
+  - Automation # Goobstation
+
+- type: guideEntry
+  id: Construction
+  name: guide-entry-construction
+  text: "/ServerInfo/Guidebook/Engineering/Construction.xml"
+  children: 
+  - AirlockSecurity
+  
+- type: guideEntry
+  id: AirlockSecurity
+  name: guide-entry-airlock-security
+  text: "/ServerInfo/Guidebook/Engineering/AirlockSecurity.xml"
+
+- type: guideEntry
+  id: Atmospherics
+  name: guide-entry-atmospherics
+  text: "/ServerInfo/Guidebook/Engineering/Atmospherics.xml"
+  children:
+  - Fires
+
+- type: guideEntry
+  id: Fires
+  name: guide-entry-fires
+  text: "/ServerInfo/Guidebook/Engineering/Fires.xml"
+
+- type: guideEntry
+  id: ShuttleCraft
+  name: guide-entry-shuttle-craft
+  text: "/ServerInfo/Guidebook/Engineering/Shuttlecraft.xml"
+
+- type: guideEntry
+  id: Networking
+  name: guide-entry-networking
+  text: "/ServerInfo/Guidebook/Engineering/Networking.xml"
+  children:
+  - NetworkConfigurator
+  - AccessConfigurator
+
+- type: guideEntry
+  id: NetworkConfigurator
+  name: guide-entry-network-configurator
+  text: "/ServerInfo/Guidebook/Engineering/NetworkConfigurator.xml"
+
+- type: guideEntry
+  id: AccessConfigurator
+  name: guide-entry-access-configurator
+  text: "/ServerInfo/Guidebook/Engineering/AccessConfigurator.xml"
+
+- type: guideEntry
+  id: Power
+  name: guide-entry-power
+  text: "/ServerInfo/Guidebook/Engineering/Power.xml"
+  children:
+  - PortableGenerator
+  - AME
+  - Singularity
+  - TEG
+  - RTG
+  - Supermatter
+
+- type: guideEntry
+  id: AME
+  name: guide-entry-ame
+  text: "/ServerInfo/Guidebook/Engineering/AME.xml"
+
+- type: guideEntry
+  id: Singularity
+  name: guide-entry-singularity
+  text: "/ServerInfo/Guidebook/Engineering/Singularity.xml"
+
+- type: guideEntry
+  id: TEG
+  name: guide-entry-teg
+  text: "/ServerInfo/Guidebook/Engineering/TEG.xml"
+
+- type: guideEntry
+  id: RTG
+  name: guide-entry-rtg
+  text: "/ServerInfo/Guidebook/Engineering/RTG.xml"
+
+- type: guideEntry
+  id: PortableGenerator
+  name: guide-entry-portable-generator
+  text: "/ServerInfo/Guidebook/Engineering/PortableGenerator.xml"
+
+- type: guideEntry
+  id: Supermatter
+  name: guide-entry-sm
+  text: "/ServerInfo/Guidebook/Engineering/Supermatter.xml"
+
+- type: guideEntry
+  id: Thermomachines # funky
+  name: guide-entry-thermomachines
+  text: "/ServerInfo/Guidebook/Engineering/Thermomachines.xml"

@@ -1,0 +1,202 @@
+# SPDX-FileCopyrightText: 2021 20kdc
+# SPDX-FileCopyrightText: 2021 Swept
+# SPDX-FileCopyrightText: 2021 mirrorcult
+# SPDX-FileCopyrightText: 2022 CommieFlowers
+# SPDX-FileCopyrightText: 2022 Jack Fox
+# SPDX-FileCopyrightText: 2022 Moony
+# SPDX-FileCopyrightText: 2022 Paul Ritter
+# SPDX-FileCopyrightText: 2022 Peptide90
+# SPDX-FileCopyrightText: 2022 Visne
+# SPDX-FileCopyrightText: 2022 corentt
+# SPDX-FileCopyrightText: 2022 rolfero
+# SPDX-FileCopyrightText: 2023 DrSmugleaf
+# SPDX-FileCopyrightText: 2023 Kara
+# SPDX-FileCopyrightText: 2023 Leon Friedrich
+# SPDX-FileCopyrightText: 2023 Morb
+# SPDX-FileCopyrightText: 2023 TemporalOroboros
+# SPDX-FileCopyrightText: 2023 Tom Leys
+# SPDX-FileCopyrightText: 2023 chromiumboy
+# SPDX-FileCopyrightText: 2023 lzk
+# SPDX-FileCopyrightText: 2023 metalgearsloth
+# SPDX-FileCopyrightText: 2024 ArtisticRoomba
+# SPDX-FileCopyrightText: 2024 Nemanja
+# SPDX-FileCopyrightText: 2024 Tayrtahn
+# SPDX-FileCopyrightText: 2025 Pieter-Jan Briers
+# SPDX-FileCopyrightText: 2025 VMSolidus
+# SPDX-FileCopyrightText: 2025 sleepyyapril
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+# Base SMES
+- type: entity
+  abstract: true
+  id: BaseSMES
+  parent: [ BaseMachine, ConstructibleMachine ]
+  name: SMES
+  description: A high-capacity superconducting magnetic energy storage (SMES) unit.
+  placement:
+    mode: SnapgridCenter
+  components:
+    - type: AmbientSound
+      volume: -7
+      range: 3
+      sound:
+        path: /Audio/Ambience/Objects/periodic_beep.ogg
+    - type: Sprite
+      sprite: Structures/Power/smes.rsi
+      snapCardinals: true
+      layers:
+        - state: smes
+        - map: ["enum.SmesVisualLayers.Charge"]
+          state: "smes-og1" # -og0 does not exist
+          shader: unshaded
+          visible: false
+        - map: ["enum.SmesVisualLayers.Input"]
+          state: "smes-oc0"
+          shader: unshaded
+        - map: ["enum.SmesVisualLayers.Output"]
+          state: "smes-op1"
+          shader: unshaded
+    - type: Smes
+    - type: UpgradeBattery
+      maxChargeMultiplier: 2
+      baseMaxCharge: 120000000
+    - type: UpgradePowerSupplyRamping
+      scaling: Linear
+      supplyRampingMultiplier: 1
+    - type: Appearance
+    - type: Battery
+      startingCharge: 0
+    - type: ExaminableBattery
+    - type: NodeContainer
+      examinable: true
+      nodes:
+        input:
+          !type:CableTerminalPortNode
+          nodeGroupID: HVPower
+        output:
+          !type:CableDeviceNode
+          nodeGroupID: HVPower
+    - type: PowerMonitoringDevice
+      group: SMES
+      sourceNode: input
+      loadNode: output
+      collectionName: smes
+      sprite: Structures/Power/smes.rsi
+      state: static
+    - type: BatteryDischarger
+      voltage: High
+      node: output
+    - type: BatteryCharger
+      voltage: High
+      node: input
+    - type: PowerNetworkBattery
+      maxSupply: 750000
+      maxChargeRate: 25000
+      supplyRampTolerance: 25000
+      supplyRampRate: 5000
+    - type: PointLight
+      radius: 1.5
+      energy: 1.6
+      color: "#c9c042"
+      castShadows: false
+    - type: WiresPanel
+    - type: Machine
+      board: SMESMachineCircuitboard
+    - type: StationInfiniteBatteryTarget
+    - type: Electrified
+      onHandInteract: false
+      onInteractUsing: false
+      onBump: false
+      requirePower: true
+      highVoltageNode: input
+      mediumVoltageNode: output
+    - type: Damageable
+      damageContainer: Inorganic
+      damageModifierSet: StrongMetallic
+    - type: BatterySensor
+    - type: DeviceNetwork
+      deviceNetId: AtmosDevices
+      receiveFrequencyId: AtmosMonitor
+      transmitFrequencyId: AtmosMonitor
+      prefix: device-address-prefix-smes
+      sendBroadcastAttemptEvent: true
+      examinableAddress: true
+    - type: WiredNetworkConnection
+
+    # Interface
+    - type: BatteryInterface
+      minChargeRate: 5000
+      maxChargeRate: 150000
+      minSupply: 5000
+      maxSupply: 150000
+    - type: UserInterface
+      interfaces:
+        enum.BatteryUiKey.Key:
+          type: BatteryBoundUserInterface
+    - type: ActivatableUI
+      key: enum.BatteryUiKey.Key
+
+# SMES' in use
+
+- type: entity
+  parent: BaseSMES
+  id: SMESBasic
+  suffix: Basic, 120MW
+  components:
+  - type: Battery
+    maxCharge: 120000000
+    startingCharge: 120000000
+
+- type: entity
+  parent: SMESBasic
+  id: SMESBasicEmpty
+  suffix: Empty
+  components:
+  - type: Battery
+    startingCharge: 0
+
+- type: entity
+  parent: BaseSMES
+  id: SMESAdvanced
+  suffix: Advanced, 480MJ
+  name: advanced SMES
+  description: An even-higher-capacity superconducting magnetic energy storage (SMES) unit.
+  components:
+  - type: Sprite
+    sprite: Structures/Power/smes.rsi
+    snapCardinals: true
+    layers:
+    - state: advancedsmes
+    - map: [ "enum.SmesVisualLayers.Charge" ]
+      state: "smes-og1" # -og0 does not exist
+      shader: unshaded
+      visible: false
+    - map: [ "enum.SmesVisualLayers.Input" ]
+      state: "smes-oc0"
+      shader: unshaded
+    - map: [ "enum.SmesVisualLayers.Output" ]
+      state: "smes-op1"
+      shader: unshaded
+    - map: ["enum.WiresVisualLayers.MaintenancePanel"]
+      state: advancedsmes-open
+  - type: Machine
+    board: SMESAdvancedMachineCircuitboard
+  - type: Battery
+    maxCharge: 240000000
+    startingCharge: 240000000
+  - type: PowerMonitoringDevice
+    group: SMES
+    sourceNode: input
+    loadNode: output
+    collectionName: smes
+    sprite: Structures/Power/smes.rsi
+    state: advancedsmes-static
+
+- type: entity
+  parent: SMESAdvanced
+  id: SMESAdvancedEmpty
+  suffix: Empty
+  components:
+  - type: Battery
+    startingCharge: 0

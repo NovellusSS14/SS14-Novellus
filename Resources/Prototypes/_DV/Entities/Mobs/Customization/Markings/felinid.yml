@@ -1,0 +1,50 @@
+# SPDX-FileCopyrightText: 2024 Adrian16199 <144424013+Adrian16199@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 Sushiburger <***>
+# SPDX-FileCopyrightText: 2024 VMSolidus <evilexecutive@gmail.com>
+# SPDX-FileCopyrightText: 2025 Rosycup <178287475+Rosycup@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 SX-7 <92227810+SX-7@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: marking
+  id: FelinidFluffyTailRings
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [Felinid, SlimePerson, Human, IPC, Tajaran]
+  sprites:
+  - sprite: _DV/Mobs/Customization/Felinid/felinid_tails.rsi
+    state: Felinid_fluffy_tail_full
+  - sprite: _DV/Mobs/Customization/Felinid/felinid_tails.rsi
+    state: felinid_fluffy_tail_rings
+
+- type: marking
+  id: FelinidFluffyTail
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [Felinid, SlimePerson, Human, IPC, Tajaran]
+  sprites:
+  - sprite: _DV/Mobs/Customization/Felinid/felinid_tails.rsi
+    state: Felinid_fluffy_tail_full
+
+- type: marking
+  id: FelinidAlternativeTail
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [Felinid, SlimePerson, Human, IPC, Tajaran]
+  sprites:
+    - sprite: _DV/Mobs/Customization/Felinid/alternative_tail.rsi
+      state: m_waggingtail_cat_FRONT
+
+- type: marking
+  id: FelinidTiger
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [Felinid, Human, Tajaran] # Einstein Engines - Tajaran
+  sprites:
+    - sprite: _DV/Mobs/Customization/Felinid/tiger_tail.rsi
+      state: m_tail_tiger_primary
+    - sprite: _DV/Mobs/Customization/Felinid/tiger_tail.rsi
+      state: m_tail_tiger_secondary
+    - sprite: _DV/Mobs/Customization/Felinid/tiger_tail.rsi
+      state: m_tail_tiger_tertiary

@@ -1,0 +1,19 @@
+# SPDX-FileCopyrightText: 2024 Angelo Fallaria <ba.fallaria@gmail.com>
+# SPDX-FileCopyrightText: 2024 VMSolidus <evilexecutive@gmail.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: marking
+  id: OniTwoToedFeet
+  bodyPart: RFoot # Can't be LFoot to avoid visual glitches
+  markingCategory: RightFoot
+  speciesRestriction: [Oni]
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#454545"
+  sprites:
+  - sprite: Mobs/Customization/oni_feet.rsi
+    state: two_toes

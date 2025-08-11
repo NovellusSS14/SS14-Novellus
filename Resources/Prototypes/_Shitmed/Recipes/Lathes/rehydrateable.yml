@@ -1,0 +1,106 @@
+# SPDX-FileCopyrightText: 2024 Ilya246 <57039557+Ilya246@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 gluesniffler <159397573+gluesniffler@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 gluesniffler <linebarrelerenthusiast@gmail.com>
+# SPDX-FileCopyrightText: 2024 sleepyyapril <***>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+
+- type: latheRecipe
+  id: SynthHeart
+  result: BioSynthHeart
+  completetime: 30
+  materials:
+    Biomass: 10
+
+- type: latheRecipe
+  id: SynthLungs
+  result: BioSynthLungs
+  completetime: 30
+  materials:
+    Biomass: 10
+
+- type: latheRecipe
+  id: SynthLiver
+  result: BioSynthLiver
+  completetime: 30
+  materials:
+    Biomass: 10
+
+- type: latheRecipe
+  id: SynthEyes
+  result: BioSynthEyes
+  completetime: 30
+  materials:
+    Biomass: 10
+
+- type: latheRecipe
+  id: SynthLeftArm
+  result: BioSynthLeftArm
+  completetime: 30
+  materials:
+    Biomass: 10
+
+- type: latheRecipe
+  id: SynthLeftHand
+  result: BioSynthLeftHand
+  completetime: 30
+  materials:
+    Biomass: 10
+
+- type: latheRecipe
+  id: SynthRightArm
+  result: BioSynthRightArm
+  completetime: 30
+  materials:
+    Biomass: 10
+
+- type: latheRecipe
+  id: SynthRightHand
+  result: BioSynthRightHand
+  completetime: 30
+  materials:
+    Biomass: 10
+
+- type: latheRecipe
+  id: SynthLeftLeg
+  result: BioSynthLeftLeg
+  completetime: 30
+  materials:
+    Biomass: 10
+
+- type: latheRecipe
+  id: SynthRightLeg
+  result: BioSynthRightLeg
+  completetime: 30
+  materials:
+    Biomass: 10
+
+- type: latheRecipe
+  id: SynthLeftFoot
+  result: BioSynthLeftFoot
+  completetime: 30
+  materials:
+    Biomass: 10
+
+- type: latheRecipe
+  id: SynthRightFoot
+  result: BioSynthRightFoot
+  completetime: 30
+  materials:
+    Biomass: 10
+
+- type: latheRecipe
+  id: PizzaLeftArm
+  result: PizzaLeftArm
+  completetime: 30
+  materials:
+    Biomass: 5
+
+- type: latheRecipe
+  id: PizzaRightArm
+  result: PizzaRightArm
+  completetime: 30
+  materials:
+    Biomass: 5

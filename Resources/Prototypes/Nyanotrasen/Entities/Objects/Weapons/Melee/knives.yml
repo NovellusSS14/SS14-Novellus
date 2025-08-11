@@ -1,0 +1,43 @@
+# SPDX-FileCopyrightText: 2023 Fluffiest Floofers <thebluewulf@gmail.com>
+# SPDX-FileCopyrightText: 2023 PHCodes <47927305+PHCodes@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 Debug <49997488+DebugOk@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 dge21 <129136517+dge21@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 Rosycup <178287475+Rosycup@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: entity
+  parent: CombatKnife
+  id: AntiPsychicKnife
+  name: anti-psychic knife
+  description: A special knife designed for killing psychics.
+  components:
+  - type: MeleeWeapon
+    attackRate: .6666
+    damage:
+      types:
+        Slash: 10
+        Holy: 5
+  - type: StaminaDamageOnHit
+    damage: 0
+  - type: AntiPsionicWeapon
+    punish: false
+    modifiers:
+      coefficients:
+        Slash: 1.25
+        Holy: 1.2
+  - type: Sprite
+    sprite: Nyanotrasen/Objects/Weapons/Melee/anti_psychic_knife.rsi
+    state: icon
+  - type: Item
+    sprite: Nyanotrasen/Objects/Weapons/Melee/anti_psychic_knife.rsi
+    storedSprite:
+      state: icon
+      sprite: Nyanotrasen/Objects/Weapons/Melee/anti_psychic_knife.rsi
+  - type: Tag
+    tags:
+    - ForensicBeltEquip
+    - HighRiskItem
+  - type: StealTarget
+    stealGroup: AntiPsychicKnife

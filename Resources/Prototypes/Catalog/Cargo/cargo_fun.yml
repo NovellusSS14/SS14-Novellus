@@ -1,0 +1,230 @@
+# SPDX-FileCopyrightText: 2021 Fishfish458 <47410468+Fishfish458@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2021 Swept <sweptwastaken@protonmail.com>
+# SPDX-FileCopyrightText: 2021 SweptWasTaken <sweptwastaken@protonmail.com>
+# SPDX-FileCopyrightText: 2022 Checkraze <71046427+Cheackraze@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2022 EmoGarbage404 <98561806+EmoGarbage404@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2022 Rane <60792108+Elijahrane@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2022 Rinkashikachi <15rinkashikachi15@gmail.com>
+# SPDX-FileCopyrightText: 2022 Visne <39844191+Visne@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2022 keronshb <54602815+keronshb@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2023 Arendian <137322659+Arendian@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2023 Debug <49997488+DebugOk@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2023 Ed <96445749+TheShuEd@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2023 Emisse <99158783+Emisse@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2023 EnDecc <33369477+Endecc@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2023 Gotimanga <127038462+Gotimanga@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2023 Leon Friedrich <60421075+ElectroJr@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2023 Link <131011403+LinkUyx@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2023 Nemanja <98561806+EmoGarbage404@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2023 brainfood1183 <113240905+brainfood1183@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2023 lapatison <100279397+lapatison@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 DEATHB4DEFEAT <77995199+DEATHB4DEFEAT@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 FoxxoTrystan <45297731+FoxxoTrystan@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 Kukutis96513 <146854220+Kukutis96513@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 SimpleStation14 <130339894+SimpleStation14@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 fenndragon <fenndragon@gmail.com>
+# SPDX-FileCopyrightText: 2024 metalgearsloth <31366439+metalgearsloth@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <flyingkarii@gmail.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: cargoProduct
+  id: FunInstrumentsVariety
+  icon:
+    sprite: Objects/Fun/Instruments/accordion.rsi
+    state: icon
+  product: CrateFunInstrumentsVariety
+  cost: 2000
+  category: cargoproduct-category-name-fun
+  group: market
+
+- type: cargoProduct
+  id: FunInstrumentsBrass
+  icon:
+    sprite: Objects/Fun/Instruments/structureinstruments.rsi
+    state: tuba
+  product: CrateFunInstrumentsBrass
+  cost: 2500
+  category: cargoproduct-category-name-fun
+  group: market
+
+- type: cargoProduct
+  id: FunInstrumentsString
+  icon:
+    sprite: Objects/Fun/Instruments/bassguitar.rsi
+    state: icon
+  product: CrateFunInstrumentsString
+  cost: 2500
+  category: cargoproduct-category-name-fun
+  group: market
+
+- type: cargoProduct
+  id: FunInstrumentsWoodwind
+  icon:
+    sprite: Objects/Fun/Instruments/harmonica.rsi
+    state: icon
+  product: CrateFunInstrumentsWoodwind
+  cost: 2500
+  category: cargoproduct-category-name-fun
+  group: market
+
+- type: cargoProduct
+  id: FunInstrumentsKeyedPercussion
+  icon:
+    sprite: Objects/Fun/Instruments/h_synthesizer.rsi
+    state: icon
+  product: CrateFunInstrumentsKeyedPercussion
+  cost: 2500
+  category: cargoproduct-category-name-fun
+  group: market
+
+- type: cargoProduct
+  id: FunInstrumentsSpecial
+  icon:
+    sprite: Objects/Fun/Instruments/gunpet.rsi
+    state: icon
+  product: CrateFunInstrumentsSpecial
+  cost: 10000
+  category: cargoproduct-category-name-fun
+  group: market
+
+- type: cargoProduct
+  id: FunArtSupplies
+  icon:
+    sprite: Objects/Fun/crayons.rsi
+    state: box
+  product: CrateFunArtSupplies
+  cost: 500
+  category: cargoproduct-category-name-fun
+  group: market
+
+- type: cargoProduct
+  id: FunSprayPaints
+  icon:
+    sprite: Objects/Fun/spraycans.rsi
+    state: death2_cap
+  product: CrateFunSprayPaints
+  cost: 2000
+  category: Fun
+  group: market
+
+- type: cargoProduct
+  id: FunParty
+  icon:
+    sprite: Objects/Consumable/Food/Baked/cake.rsi
+    state: birthday
+  product: CrateFunParty
+  cost: 1000
+  category: cargoproduct-category-name-fun
+  group: market
+
+- type: cargoProduct
+  id: CrateFunWaterGuns
+  icon:
+    sprite: Objects/Weapons/Guns/Pistols/water_pistol.rsi
+    state: display
+  product: CrateFunWaterGuns
+  cost: 750
+  category: cargoproduct-category-name-fun
+  group: market
+
+- type: cargoProduct
+  id: FunBoardGames
+  icon:
+    sprite: Objects/Fun/dice.rsi
+    state: d6_6
+  product: CrateFunBoardGames
+  cost: 1500
+  category: cargoproduct-category-name-fun
+  group: market
+
+- type: cargoProduct
+  id: FunSadTromboneImplants
+  icon:
+    sprite: Objects/Specific/Medical/implanter.rsi
+    state: implanter0
+  product: CrateFunSadTromboneImplants
+  cost: 1000
+  category: cargoproduct-category-name-fun
+  group: market
+
+- type: cargoProduct
+  id: FunLightImplants
+  icon:
+    sprite: Objects/Specific/Medical/implanter.rsi
+    state: implanter0
+  product: CrateFunLightImplants
+  cost: 1000
+  category: cargoproduct-category-name-fun
+  group: market
+
+- type: cargoProduct
+  id: FunBoxing
+  icon:
+    sprite: Clothing/Hands/Gloves/Boxing/boxingred.rsi
+    state: icon
+  product: CrateFunBoxing
+  cost: 500
+  category: cargoproduct-category-name-fun
+  group: market
+
+- type: cargoProduct
+  id: FunPirate
+  icon:
+    sprite: Structures/Storage/Crates/piratechest.rsi
+    state: crate_icon
+  product: CrateFunPirate
+  cost: 400
+  category: cargoproduct-category-name-fun
+  group: market
+
+- type: cargoProduct
+  id: FunToyBox
+  icon:
+    sprite: Structures/Storage/Crates/toybox.rsi
+    state: crate_icon
+  product: CrateFunToyBox
+  cost: 900
+  category: cargoproduct-category-name-fun
+  group: market
+
+- type: cargoProduct
+  id: FunBikeHornImplants
+  icon:
+    sprite: Objects/Specific/Medical/implanter.rsi
+    state: implanter0
+  product: CrateFunBikeHornImplants
+  cost: 1000
+  category: cargoproduct-category-name-fun
+  group: market
+
+- type: cargoProduct
+  id: FunMysteryFigurines
+  icon:
+    sprite: Objects/Fun/figurines.rsi
+    state: fig_box
+  product: CrateFunMysteryFigurines
+  cost: 4000
+  category: cargoproduct-category-name-fun
+  group: market
+
+- type: cargoProduct
+  id: FunDartsSet
+  icon:
+    sprite: Objects/Fun/Darts/dart_red.rsi
+    state: icon
+  product: CrateFunDartsSet
+  cost: 900
+  category: cargoproduct-category-name-fun
+  group: market
+
+- type: cargoProduct
+  id: FunCrateGambling
+  icon:
+    sprite: Objects/Economy/cash.rsi
+    state: cash_1000000
+  product: CrateCargoGambling
+  cost: 12500
+  category: cargoproduct-category-name-fun
+  group: market

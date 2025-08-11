@@ -1,0 +1,152 @@
+# SPDX-FileCopyrightText: 2023 Adrian16199
+# SPDX-FileCopyrightText: 2023 DrSmugleaf
+# SPDX-FileCopyrightText: 2023 Fluffiest Floofers
+# SPDX-FileCopyrightText: 2023 I.K
+# SPDX-FileCopyrightText: 2023 Kara
+# SPDX-FileCopyrightText: 2023 LankLTE
+# SPDX-FileCopyrightText: 2023 MilenVolf
+# SPDX-FileCopyrightText: 2023 Nairod
+# SPDX-FileCopyrightText: 2023 Simon
+# SPDX-FileCopyrightText: 2023 lzk
+# SPDX-FileCopyrightText: 2024 DEATHB4DEFEAT
+# SPDX-FileCopyrightText: 2024 FoxxoTrystan
+# SPDX-FileCopyrightText: 2024 Mnemotechnican
+# SPDX-FileCopyrightText: 2024 Nemanja
+# SPDX-FileCopyrightText: 2024 OldDanceJacket
+# SPDX-FileCopyrightText: 2024 Pieter-Jan Briers
+# SPDX-FileCopyrightText: 2024 Ubaser
+# SPDX-FileCopyrightText: 2024 VMSolidus
+# SPDX-FileCopyrightText: 2024 fox
+# SPDX-FileCopyrightText: 2025 Blitz
+# SPDX-FileCopyrightText: 2025 BlitzTheSquishy
+# SPDX-FileCopyrightText: 2025 ElusiveCoin
+# SPDX-FileCopyrightText: 2025 Forzii
+# SPDX-FileCopyrightText: 2025 Rosycup
+# SPDX-FileCopyrightText: 2025 Sapphire
+# SPDX-FileCopyrightText: 2025 Sir Warock
+# SPDX-FileCopyrightText: 2025 Skubman
+# SPDX-FileCopyrightText: 2025 portfiend
+# SPDX-FileCopyrightText: 2025 sleepyyapril
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: entity
+  save: false
+  name: Urist McAnt
+  parent: BaseMobSpeciesOrganic
+  id: BaseMobChitinid
+  abstract: true
+  components:
+  - type: HumanoidAppearance
+    species: Chitinid
+    hideLayersOnEquip:
+    - HeadTop
+
+  - type: Hunger
+    decayRateMultiplier: 1.33
+  - type: Thirst
+
+  - type: Carriable
+
+  - type: Icon
+    sprite: _DV/Mobs/Species/Chitinid/parts.rsi
+    state: full
+
+  - type: Body
+    prototype: Chitinid
+    requiredLegs: 2
+
+  - type: Damageable
+    damageContainer: Biological
+    damageModifierSet: Chitinid
+
+  - type: Speech
+    speechVerb: Chitinid
+    allowedEmotes: ['Chitter', 'Click', 'Hiss']
+
+  - type: MeleeWeapon
+    animation: WeaponArcBite
+    soundHit:
+      path: /Audio/Effects/bite.ogg
+    damage:
+      types:
+        Piercing: 5
+
+
+  - type: TypingIndicator
+    proto: Chitinid
+
+  - type: Butcherable
+    butcheringType: Spike
+    spawned:
+    - id: FoodMeat
+      amount: 5
+
+  - type: Bloodstream
+    bloodReagent: InsectBlood
+
+  - type: DamageVisuals
+    damageOverlayGroups:
+      Brute:
+        sprite: Mobs/Effects/brute_damage.rsi
+        color: "#808A51"
+      Burn:
+        sprite: Mobs/Effects/burn_damage.rsi
+
+  - type: Vocal
+    sounds:
+      Male: UnisexChitinid
+      Female: UnisexChitinid
+      Unsexed: UnisexChitinid
+
+  - type: Fixtures
+    fixtures: # TODO: This needs a second fixture just for mob collisions.
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.42
+        density: 220
+        restitution: 0.0
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
+
+  - type: Temperature # Ants hate the cold
+    heatDamageThreshold: 320
+    coldDamageThreshold: 230
+    currentTemperature: 310.15
+    specificHeat: 46
+    coldDamage:
+      types:
+        Cold : 1.25 #per second, scales with temperature & other constants
+    heatDamage:
+      types:
+        Heat : 1.0 #per second, scales with temperature & other constants
+  - type: TemperatureSpeed
+    thresholds:
+      289: 0.7
+      275: 0.6
+      250: 0.5
+  - type: CreamPied
+    layer:
+      sprite: Effects/creampie.rsi
+      state: creampie_moth
+  - type: Chitinid
+  - type: BlockInjection
+    blockReason: chitinid
+  - type: LanguageKnowledge
+    speaks:
+    - TauCetiBasic
+    - Chittin
+    understands:
+    - TauCetiBasic
+    - Chittin
+
+- type: entity
+  parent: BaseSpeciesDummy
+  id: MobChitinidDummy
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: HumanoidAppearance
+    species: Chitinid

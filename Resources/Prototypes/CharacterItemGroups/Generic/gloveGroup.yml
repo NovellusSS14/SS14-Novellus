@@ -1,0 +1,72 @@
+# SPDX-FileCopyrightText: 2024 VMSolidus <evilexecutive@gmail.com>
+# SPDX-FileCopyrightText: 2024 sleepyyapril <flyingkarii@gmail.com>
+# SPDX-FileCopyrightText: 2025 Blitz <73762869+BlitzTheSquishy@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 BloodfiendishOperator <141253729+Diggy0@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 Skubman <ba.fallaria@gmail.com>
+# SPDX-FileCopyrightText: 2025 Tabitha <64847293+KyuPolaris@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 Timfa <timfalken@hotmail.com>
+# SPDX-FileCopyrightText: 2025 Tonk-GCR <190437025+Tonk-GCR@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: characterItemGroup
+  id: LoadoutGloves
+  items:
+    - type: loadout
+      id: LoadoutHandsColorPurple
+    - type: loadout
+      id: LoadoutHandsColorRed
+    - type: loadout
+      id: LoadoutHandsColorBlack
+    - type: loadout
+      id: LoadoutHandsColorBlue
+    - type: loadout
+      id: LoadoutHandsColorBrown
+    - type: loadout
+      id: LoadoutHandsColorGray
+    - type: loadout
+      id: LoadoutHandsColorGreen
+    - type: loadout
+      id: LoadoutHandsColorLightBrown
+    - type: loadout
+      id: LoadoutHandsColorOrange
+    - type: loadout
+      id: LoadoutHandsColorWhite
+    - type: loadout
+      id: LoadoutHandsColorYellowBudget
+#    - type: loadout - TheDen - Because its moved to botonist
+#      id: LoadoutHandsGlovesLeather
+    - type: loadout
+      id: LoadoutHandsGlovesPowerglove
+    - type: loadout
+      id: LoadoutHandsGlovesRobohands
+    - type: loadout
+      id: LoadoutHandsGlovesFingerlessWhite
+    - type: loadout
+      id: LoadoutHandsGlovesEvening
+    - type: loadout
+      id: LoadoutHandsGlovesEnviroglovesColor
+    - type: loadout
+      id: LoadoutHandsGlovesEnviroglovesEvening
+    - type: loadout
+      id: LoadoutHandsClothWrap
+    - type: loadout
+      id: ClothingHandsTacticalMaidGlovesLoadout
+      # The Den - Below
+    - type: loadout
+      id: ClothingHandsGoldenRingLoadout
+    - type: loadout
+      id: LoadoutHandsGlovesFingerless
+    - type: loadout
+      id: LoadoutClothingHandsPlainWarmers
+    - type: loadout
+      id: LoadoutClothingHandsStripePurpleWarmers
+    - type: loadout
+      id: LoadoutClothingHandsStripeRainbowWarmers
+    - type: loadout
+      id: LoadoutClothingHandsCoderWarmers
+    - type: loadout
+      id: LoadoutClothingHandsCoderValidWarmers
+    - type: loadout
+      id: LoadoutClothingHandsBeeWarmers

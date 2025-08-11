@@ -1,0 +1,168 @@
+# SPDX-FileCopyrightText: 2024 VMSolidus <evilexecutive@gmail.com>
+# SPDX-FileCopyrightText: 2025 Blitz <73762869+BlitzTheSquishy@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+# Psychologist
+# Backpacks
+- type: loadout
+  id: LoadoutPsychologistBackpackBackpack
+  category: JobsMedicalPsychologist
+  cost: 0
+  exclusive: true
+  items:
+    - ClothingBackpackPsychologistFilled
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutPsychologistBackpacks
+    - !type:CharacterJobRequirement
+      jobs:
+        - Psychologist
+
+- type: loadout
+  id: LoadoutPsychologistBackpackSatchel
+  category: JobsMedicalPsychologist
+  cost: 0
+  exclusive: true
+  items:
+    - ClothingBackpackSatchelPsychologistFilled
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutPsychologistBackpacks
+    - !type:CharacterJobRequirement
+      jobs:
+        - Psychologist
+
+- type: loadout
+  id: LoadoutPsychologistBackpackDuffel
+  category: JobsMedicalPsychologist
+  cost: 0
+  exclusive: true
+  items:
+    - ClothingBackpackDuffelPsychologistFilled
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutPsychologistBackpacks
+    - !type:CharacterJobRequirement
+      jobs:
+        - Psychologist
+
+- type: loadout
+  id: LoadoutPsychologistBackpackMessenger
+  category: JobsMedicalPsychologist
+  cost: 0
+  exclusive: true
+  items:
+    - ClothingBackpackMessengerPsychologistFilled
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutPsychologistBackpacks
+    - !type:CharacterJobRequirement
+      jobs:
+        - Psychologist
+
+# Belt
+
+# Ears
+
+# Equipment
+# The Psychologist chooses freely from drugs that change the mind.
+# If we ever get more mind-affecting drugs, add them here.
+- type: loadout
+  id: LoadoutPsychologistPillCanisterSpaceDrugs
+  category: JobsMedicalPsychologist
+  cost: 0
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutPsychologistEquipment
+    - !type:CharacterJobRequirement
+      jobs:
+        - Psychologist
+  items:
+    - PillCanisterSpaceDrugs
+
+- type: loadout
+  id: LoadoutPsychologistPillCanisterPax
+  category: JobsMedicalPsychologist
+  cost: 0
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutPsychologistEquipment
+    - !type:CharacterJobRequirement
+      jobs:
+        - Psychologist
+  items:
+    - PillCanisterPax
+
+- type: loadout
+  id: LoadoutPsychologistPillCanisterCryptobiolin
+  category: JobsMedicalPsychologist
+  cost: 0
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutPsychologistEquipment
+    - !type:CharacterJobRequirement
+      jobs:
+        - Psychologist
+  items:
+    - PillCanisterCryptobiolin
+
+# Yes this one is a little dangerous. Keeps the job interesting. :)
+- type: loadout
+  id: LoadoutPsychologistPillCanisterChloralHydrate
+  category: JobsMedicalPsychologist
+  cost: 0
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutPsychologistEquipment
+    - !type:CharacterJobRequirement
+      jobs:
+        - Psychologist
+  items:
+    - PillCanisterChloralHydrate
+
+# Eyes
+
+# Gloves
+
+# Head
+
+# Id
+
+# Neck
+
+# Mask
+
+# Outer
+
+# Shoes
+
+# Uniforms
+- type: loadout
+  id: LoadoutPsychologistJumpsuit
+  category: JobsMedicalPsychologist
+  cost: 0
+  exclusive: true
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutPsychologistUniforms
+    - !type:CharacterJobRequirement
+      jobs:
+        - Psychologist
+  items:
+    - ClothingUniformJumpsuitPsychologist
+
+# psychologist jumpskirt doesnt exist
+#- type: loadout
+#  id: LoadoutPsychologistJumpskirt
+#  category: JobsMedicalPsychologist
+#  cost: 0
+#  requirements:
+#    - !type:CharacterItemGroupRequirement
+#      group: LoadoutPsychologistUniforms
+#    - !type:CharacterJobRequirement
+#      jobs:
+#        - Psychologist
+#  items:
+#    - ClothingUniformJumpskirtPsychologist

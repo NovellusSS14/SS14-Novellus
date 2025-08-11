@@ -1,0 +1,109 @@
+# SPDX-FileCopyrightText: 2024 VMSolidus
+# SPDX-FileCopyrightText: 2025 Blitz
+# SPDX-FileCopyrightText: 2025 BlitzTheSquishy
+# SPDX-FileCopyrightText: 2025 MajorMoth
+# SPDX-FileCopyrightText: 2025 Rosycup
+# SPDX-FileCopyrightText: 2025 Tabitha
+# SPDX-FileCopyrightText: 2025 sleepyyapril
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+# Paramedic
+- type: characterItemGroup
+  id: LoadoutParamedicBackpacks
+  maxItems: 1
+  items:
+    - type: loadout
+      id: LoadoutMedicalBackpacksBackpack
+    - type: loadout
+      id: LoadoutMedicalBackpacksDuffel
+    - type: loadout
+      id: LoadoutMedicalBackpacksSatchel
+    - type: loadout
+      id: LoadoutMedicalBackpacksMessenger
+
+- type: characterItemGroup
+  id: LoadoutParamedicBelt
+  maxItems: 1
+  items:
+    - type: loadout
+      id: LoadoutParamedicBeltEMT
+    - type: loadout
+      id: LoadoutParamedicBeltEMTFilled
+
+#- type: characterItemGroup
+#  id: LoadoutParamedicEars
+#  maxItems: 1
+#  items:
+#
+#- type: characterItemGroup
+#  id: LoadoutParamedicEquipment
+#  maxItems: 1
+#  items:
+#
+#- type: characterItemGroup
+#  id: LoadoutParamedicEyes
+#  maxItems: 1
+#  items:
+#
+- type: characterItemGroup
+  id: LoadoutParamedicGloves
+  maxItems: 1
+  items:
+    - type: loadout
+      id: LoadoutClothingHandsParaMedicWarmers
+
+- type: characterItemGroup
+  id: LoadoutParamedicHead
+  maxItems: 1
+  items:
+    - type: loadout
+      id: LoadoutMedicalHeadHatParamedicsoft
+
+#- type: characterItemGroup
+#  id: LoadoutParamedicId
+#  maxItems: 1
+#  items:
+#
+#- type: characterItemGroup
+#  id: LoadoutParamedicNeck
+#  maxItems: 1
+#  items:
+#
+#- type: characterItemGroup
+#  id: LoadoutParamedicMask
+#  maxItems: 1
+#  items:
+
+- type: characterItemGroup
+  id: LoadoutParamedicOuter
+  maxItems: 1
+  items:
+    - type: loadout
+      id: LoadoutMedicalOuterWinterPara
+    - type: loadout # TheDen
+      id: LoadoutMedicalOuterCybersunWindbreaker
+
+- type: characterItemGroup
+  id: LoadoutParamedicShoes
+  maxItems: 1
+  items:
+    - type: loadout
+      id: LoadoutMedicalShoesBootsWinterParamedic
+    - type: loadout
+      id: LoadoutClothingUnderSocksParaMedic
+
+- type: characterItemGroup
+  id: LoadoutParamedicUniforms
+  maxItems: 1
+  items:
+    - type: loadout
+      id: LoadoutMedicalUniformParamedicJumpsuit
+    - type: loadout
+      id: LoadoutMedicalUniformParamedicJumpskirt
+    - type: loadout
+      id: LoadoutClothingUniformJumpsuitParamedicNT
+    - type: loadout
+      id: LoadoutClothingUniformJumpsuitParamedicCybersun
+    - type: loadout
+      id: LoadoutClothingUniformParaMedicThong

@@ -1,0 +1,127 @@
+# SPDX-FileCopyrightText: 2022 CommieFlowers
+# SPDX-FileCopyrightText: 2022 Moony
+# SPDX-FileCopyrightText: 2022 Rane
+# SPDX-FileCopyrightText: 2022 rolfero
+# SPDX-FileCopyrightText: 2023 Morb
+# SPDX-FileCopyrightText: 2023 Scribbles0
+# SPDX-FileCopyrightText: 2023 Vasilis
+# SPDX-FileCopyrightText: 2023 metalgearsloth
+# SPDX-FileCopyrightText: 2024 Angelo Fallaria
+# SPDX-FileCopyrightText: 2024 DEATHB4DEFEAT
+# SPDX-FileCopyrightText: 2024 Miller
+# SPDX-FileCopyrightText: 2024 Mnemotechnican
+# SPDX-FileCopyrightText: 2024 Timemaster99
+# SPDX-FileCopyrightText: 2024 WarMechanic
+# SPDX-FileCopyrightText: 2025 Jakumba
+# SPDX-FileCopyrightText: 2025 M3739
+# SPDX-FileCopyrightText: 2025 MajorMoth
+# SPDX-FileCopyrightText: 2025 VMSolidus
+# SPDX-FileCopyrightText: 2025 portfiend
+# SPDX-FileCopyrightText: 2025 sleepyyapril
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: trait
+  id: LightweightDrunk
+  category: TraitsPhysicalBiological
+  requirements:
+    - !type:CharacterJobRequirement
+      inverted: true
+      jobs:
+        - StationAi
+        - Borg
+        - MedicalBorg
+    - !type:CharacterTraitRequirement
+      inverted: true
+      traits:
+        - HeavyweightDrunk
+        - LiquorLifeline
+    - !type:CharacterSpeciesRequirement
+      inverted: true
+      species:
+        - Dwarf
+        - IPC
+        - Kitsune # Floof - M3739 - #937 - Kitsune have an equivalent by default.
+  functions:
+    - !type:TraitAddComponent
+      components:
+        - type: LightweightDrunk
+          boozeStrengthMultiplier: 2
+
+- type: trait
+  id: Stutter
+  category: TraitsSpeechAccents
+  requirements:
+    - !type:CharacterJobRequirement
+      inverted: true
+      jobs:
+        - StationAi
+        - Borg
+        - MedicalBorg
+    - !type:CharacterItemGroupRequirement
+      group: TraitsAccents
+  functions:
+    - !type:TraitAddComponent
+      components:
+        - type: StutteringAccent
+          matchRandomProb: 0.1
+          fourRandomProb: 0
+          threeRandomProb: 0
+          cutRandomProb: 0
+
+- type: trait
+  id: ForeignerLight
+  category: TraitsSpeechLanguages
+  points: 2
+  requirements:
+    - !type:CharacterJobRequirement
+      inverted: true
+      jobs:
+        - StationAi
+        - Borg
+        - MedicalBorg
+    - !type:CharacterTraitRequirement
+      inverted: true
+      traits:
+        - Foreigner
+        - XenoglossyPower
+    - !type:CharacterItemGroupRequirement
+      group: TraitsMuted
+    - !type:CharacterJobRequirement
+      inverted: true
+      jobs:
+        - Mime
+  functions:
+    - !type:TraitAddComponent
+      components:
+        - type: ForeignerTrait
+          cantUnderstand: false
+          baseTranslator: TranslatorForeigner
+
+- type: trait
+  id: Foreigner
+  category: TraitsSpeechLanguages
+  points: 4
+  requirements: # TODO: Add a requirement to know at least 1 non-gc language
+    - !type:CharacterJobRequirement
+      inverted: true
+      jobs:
+        - StationAi
+        - Borg
+        - MedicalBorg
+    - !type:CharacterTraitRequirement
+      inverted: true
+      traits:
+        - ForeignerLight
+        - XenoglossyPower
+    - !type:CharacterItemGroupRequirement
+      group: TraitsMuted
+    - !type:CharacterJobRequirement
+      inverted: true
+      jobs:
+        - Mime
+  functions:
+    - !type:TraitAddComponent
+      components:
+        - type: ForeignerTrait
+          baseTranslator: TranslatorForeigner

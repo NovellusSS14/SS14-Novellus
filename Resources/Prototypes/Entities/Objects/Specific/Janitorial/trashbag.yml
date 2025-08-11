@@ -1,0 +1,102 @@
+# SPDX-FileCopyrightText: 2021 E F R
+# SPDX-FileCopyrightText: 2021 Galactic Chimp
+# SPDX-FileCopyrightText: 2021 Swept
+# SPDX-FileCopyrightText: 2022 Alex Evgrashin
+# SPDX-FileCopyrightText: 2022 CrudeWax
+# SPDX-FileCopyrightText: 2022 Fishfish458
+# SPDX-FileCopyrightText: 2022 Kara
+# SPDX-FileCopyrightText: 2022 Peptide90
+# SPDX-FileCopyrightText: 2022 Rane
+# SPDX-FileCopyrightText: 2022 fishfish458
+# SPDX-FileCopyrightText: 2022 metalgearsloth
+# SPDX-FileCopyrightText: 2022 mirrorcult
+# SPDX-FileCopyrightText: 2023 lzk
+# SPDX-FileCopyrightText: 2024 DEATHB4DEFEAT
+# SPDX-FileCopyrightText: 2024 Debug
+# SPDX-FileCopyrightText: 2024 Jessica M
+# SPDX-FileCopyrightText: 2024 Pancake
+# SPDX-FileCopyrightText: 2025 Blitz
+# SPDX-FileCopyrightText: 2025 Savante-Sam
+# SPDX-FileCopyrightText: 2025 Your Name
+# SPDX-FileCopyrightText: 2025 fishbait
+# SPDX-FileCopyrightText: 2025 sleepyyapril
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: entity
+  name: trash bag
+  id: TrashBag
+  parent: BaseStorageItem
+  description: A plastic garbage bag. Stores another man's treasure. 
+  components:
+  - type: Sprite
+    sprite: Objects/Specific/Janitorial/trashbag.rsi
+    layers:
+      - state: icon-0
+        map: ["enum.StorageFillLayers.Fill"]
+  - type: Storage
+    maxItemSize: Normal
+    grid:
+    - 0,0,7,5
+    quickInsert: true
+    areaInsert: true
+    storageOpenSound:
+      collection: trashBagRustle
+    storageInsertSound:
+      collection: trashBagRustle
+    whitelist:
+      tags:
+        - Cartridge
+        - Trash
+  - type: UseDelay
+    delay: 0.5
+  - type: Tag
+    tags:
+    - TrashBag
+  - type: Appearance
+  - type: StorageFillVisualizer
+    maxFillLevels: 4
+    fillBaseName: icon
+  - type: Dumpable
+  - type: Clothing
+    slots: [belt]
+    sprite: Objects/Specific/Janitorial/trashbag.rsi
+  - type: Item
+    size: Normal
+  - type: MagnetPickup 
+    range: 1
+
+- type: entity
+  name: trash bag 
+  id: TrashBagBlue
+  parent: TrashBag
+  suffix: Blue # TheDen
+  description: A mundane, blue garbage bag. Stores one or more men's trash. 
+  components:
+  - type: Sprite
+    sprite: Objects/Specific/Janitorial/bluetrashbag.rsi
+    layers:
+      - state: icon-0
+        map: ["enum.StorageFillLayers.Fill"]
+  - type: Item
+    heldPrefix: blue
+  - type: Clothing
+    slots: [belt]
+    sprite: Objects/Specific/Janitorial/bluetrashbag.rsi
+  - type: StorageFillVisualizer
+
+- type: entity
+  name: spell of all-consuming cleanliness
+  id: BagOfSummoningGarbage
+  parent: TrashBagBlue
+  description: A mystical blue sack that swallows waste whole. Looks smaller on the outside. 
+  components:
+  - type: Storage
+    maxItemSize: Normal 
+    grid:
+    - 0,0,19,9
+    quickInsert: true
+    areaInsert: true
+    areaInsertRadius: 5
+  - type: MagnetPickup 
+    range: 3

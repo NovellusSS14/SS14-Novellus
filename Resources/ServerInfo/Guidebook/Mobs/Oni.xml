@@ -1,0 +1,30 @@
+<!--
+SPDX-FileCopyrightText: 2025 Alice <alicecoupland45@gmail.com>
+SPDX-FileCopyrightText: 2025 portfiend <109661617+portfiend@users.noreply.github.com>
+SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+
+SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+-->
+
+<Document>
+ # Oni, The Spur's Giants
+
+  <Box>
+    <GuideEntityEmbed Entity="MobOni" Caption=""/>
+  </Box>
+
+  Large, horned people that come in a variety of colors. Their accuracy with guns is terrible, but their physical strength brings them a lot of boons both in and out of combat.
+
+  ## Upsides
+  -35% Blunt melee damage increase, 25% increase for other brute types (can be changed with traits)
+  -15 extra stamina and increased stamina regeneration
+  -Higher base mass
+  -Unique traitor item: the kanabou
+
+  <GuideEntityEmbed Entity="Kanabou" Caption=""/>
+
+  ## Negatives
+  -Lower psionic potential, cannot take psi potential traits
+  -Accuracy with ranged weapons is laughable
+
+</Document>

@@ -1,0 +1,19 @@
+# SPDX-FileCopyrightText: 2023 Fluffiest Floofers <thebluewulf@gmail.com>
+# SPDX-FileCopyrightText: 2025 Rosycup <178287475+Rosycup@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: entity
+  name: courier bag
+  id: CourierBag
+  parent: MailBag
+  description: Keeps your parcels safe.
+  components:
+  - type: Sprite
+    sprite: _DV/Clothing/Belt/courierbag.rsi
+    state: icon
+  - type: Clothing
+    sprite: _DV/Clothing/Belt/courierbag.rsi
+    quickEquip: false
+    slots: [belt]

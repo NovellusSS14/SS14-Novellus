@@ -1,0 +1,20 @@
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: constructionGraph
+  id: FishingRodMakeshift
+  start: start
+  graph:
+    - node: start
+      edges:
+        - to: makeshiftRod
+          steps:
+            - material: Cloth
+              amount: 3
+              doAfter: 2
+            - material: WoodPlank
+              amount: 5
+              doAfter: 2
+    - node: makeshiftRod
+      entity: FishingRodMakeshift

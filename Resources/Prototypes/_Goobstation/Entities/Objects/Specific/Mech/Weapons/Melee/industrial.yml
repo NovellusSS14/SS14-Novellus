@@ -1,0 +1,61 @@
+# SPDX-FileCopyrightText: 2024 John Space <bigdumb421@gmail.com>
+# SPDX-FileCopyrightText: 2024 gluesniffler <159397573+gluesniffler@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 Rosycup <178287475+Rosycup@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <flyingkarii@gmail.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: entity
+  id: WeaponMechMeleeDrill
+  parent: BaseMechWeaponMelee
+  name: exosuit drill
+  suffix: Mech Weapon, Melee, Industrial
+  description: Equipment for mining exosuits. This is the drill that'll pierce the rocks!
+  components:
+  - type: Sprite
+    state: mecha_drill
+  - type: Tag
+    tags:
+    - Pickaxe
+    - IndustrialMech
+  - type: MeleeWeapon
+    canWideSwing: false
+    autoAttack: true
+    angle: 0
+    wideAnimationRotation: -90
+    soundHit:
+      path: "/Audio/Items/drill_hit.ogg"
+    attackRate: 0.25 # 4 seconds between each attack for a drill seemed too much
+    damage:
+      groups:
+        Brute: 9
+      types:
+        Structural: 40 # ~10 seconds for solid wall / ~21 secods for reinforced wall
+
+- type: entity
+  id: WeaponMechMeleeDrillDiamond
+  parent: BaseMechWeaponMelee
+  name: diamond-tipped exosuit drill
+  suffix: Mech Weapon, Melee, Industrial
+  description: Equipment for mining exosuits. This is an upgraded version of the drill that'll pierce the rocks!
+  components:
+  - type: Sprite
+    state: mecha_diamond_drill
+  - type: Tag
+    tags:
+    - Pickaxe
+    - IndustrialMech
+  - type: MeleeWeapon
+    canWideSwing: false
+    autoAttack: true
+    angle: 0
+    wideAnimationRotation: -90
+    soundHit:
+      path: "/Audio/Items/drill_hit.ogg"
+    attackRate: 0.25
+    damage:
+      groups:
+        Brute: 18
+      types:
+        Structural: 60 # ~3 seconds for solid wall / 9 seconds for reinforced wall

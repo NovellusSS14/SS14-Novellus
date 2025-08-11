@@ -1,0 +1,25 @@
+# SPDX-FileCopyrightText: 2023 ErhardSteinhauer <65374927+ErhardSteinhauer@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 sleepyyapril <flyingkarii@gmail.com>
+# SPDX-FileCopyrightText: 2025 KyuPolaris <tabi@kyuudev.me>
+# SPDX-FileCopyrightText: 2025 VMSolidus <evilexecutive@gmail.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckCrucifix
+  name: crucifix
+  description: Damn, it feels good to be so pious.
+  components:
+  - type: Item
+    size: Small
+  - type: Sprite
+    sprite: _NF/Clothing/Neck/Misc/crucifix.rsi
+  - type: Clothing
+    sprite: _NF/Clothing/Neck/Misc/crucifix.rsi
+  - type: ReactionMixer # I'm assuming that this is used to make holy water
+    mixMessage: "bible-mixing-success"
+    reactionTypes:
+    - Holy
+  - type: Tag

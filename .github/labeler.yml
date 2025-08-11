@@ -1,0 +1,63 @@
+# SPDX-FileCopyrightText: 2022 mirrorcult <lunarautomaton6@gmail.com>
+# SPDX-FileCopyrightText: 2024 DEATHB4DEFEAT <77995199+DEATHB4DEFEAT@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 VMSolidus <evilexecutive@gmail.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+"Changes: Audio":
+  - changed-files:
+    - any-glob-to-any-file: "**/*.ogg"
+
+"Changes: C#":
+  - changed-files:
+    - any-glob-to-any-file: "**/*.cs"
+
+"Changes: Config":
+- changed-files:
+  - any-glob-to-any-file:
+    - "**/*.toml"
+    - "**/*.config"
+    - "*.json"
+    - ".github/*.yml"
+    - ".github/*.json"
+    - ".vscode/*.json"
+    - ".editorconfig"
+
+"Changes: Documentation":
+  - changed-files:
+    - any-glob-to-any-file:
+      - "**/*.xml"
+      - "**/*.md"
+
+"Changes: Localization":
+  - changed-files:
+    - any-glob-to-any-file: 'Resources/Locale/**/*.ftl'
+
+"Changes: Map":
+  - changed-files:
+    - any-glob-to-any-file:
+      - "Resources/Maps/**/*.yml"
+      - "Resources/Prototypes/Maps/**/*.yml"
+
+"Changes: Sprite":
+  - changed-files:
+    - any-glob-to-any-file:
+      - "**/*.rsi/*.png"
+      - "**/*.rsi/*.json"
+
+"Changes: UI":
+  - changed-files:
+    - any-glob-to-any-file: "**/*.xaml*"
+
+"Changes: YML":
+  - changed-files:
+    - any-glob-to-any-file:
+      - "**/*.yml"
+    - all-globs-to-all-files:
+      - "!Resources/Maps/**/*.yml"
+      - "!Resources/Prototypes/Maps/**/*.yml"
+
+"Changes: Workflow":
+  - changed-files:
+    - any-glob-to-any-file: ".github/workflows/*.yml"

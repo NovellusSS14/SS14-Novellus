@@ -1,0 +1,17 @@
+# SPDX-FileCopyrightText: 2024 Timemaster99 <57200767+Timemaster99@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: soundCollection
+  id: buzzes
+  files:
+  - /Audio/Effects/Buzzes/buzz1.ogg
+  - /Audio/Effects/Buzzes/buzz2.ogg
+  - /Audio/Effects/Buzzes/buzz3.ogg
+  - /Audio/Effects/Buzzes/buzz4.ogg
+  - /Audio/Effects/Buzzes/buzz5.ogg
+  - /Audio/Effects/Buzzes/buzz6.ogg
+  - /Audio/Effects/Buzzes/buzz7.ogg
+  - /Audio/Effects/Buzzes/buzz8.ogg
+  - /Audio/Effects/Buzzes/buzz9.ogg

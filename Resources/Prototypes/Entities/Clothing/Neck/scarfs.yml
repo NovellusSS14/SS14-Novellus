@@ -1,0 +1,300 @@
+# SPDX-FileCopyrightText: 2020 Swept
+# SPDX-FileCopyrightText: 2023 OctoRocket
+# SPDX-FileCopyrightText: 2023 faint
+# SPDX-FileCopyrightText: 2025 GNUtopia
+# SPDX-FileCopyrightText: 2025 January Nelson
+# SPDX-FileCopyrightText: 2025 Mae
+# SPDX-FileCopyrightText: 2025 Momo
+# SPDX-FileCopyrightText: 2025 portfiend
+# SPDX-FileCopyrightText: 2025 sleepyyapril
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: entity
+  parent: ClothingNeckScarfBase
+  id: ClothingNeckScarfStripedRed
+  name: striped red scarf
+  description: A stylish striped red scarf. The perfect winter accessory for those with a keen fashion sense, and those who just can't handle a cold breeze on their necks.
+  components:
+  - type: Sprite
+    sprite: Clothing/Neck/Scarfs/red.rsi
+  - type: Clothing
+    sprite: Clothing/Neck/Scarfs/red.rsi
+
+- type: entity
+  parent: ClothingNeckScarfBase
+  id: ClothingNeckScarfStripedBlue
+  name: striped blue scarf
+  description: A stylish striped blue scarf. The perfect winter accessory for those with a keen fashion sense, and those who just can't handle a cold breeze on their necks.
+  components:
+  - type: Sprite
+    sprite: Clothing/Neck/Scarfs/blue.rsi
+  - type: Clothing
+    sprite: Clothing/Neck/Scarfs/blue.rsi
+
+- type: entity
+  parent: ClothingNeckScarfBase
+  id: ClothingNeckScarfStripedGreen
+  name: striped green scarf
+  description: A stylish striped green scarf. The perfect winter accessory for those with a keen fashion sense, and those who just can't handle a cold breeze on their necks.
+  components:
+  - type: Sprite
+    sprite: Clothing/Neck/Scarfs/green.rsi
+  - type: Clothing
+    sprite: Clothing/Neck/Scarfs/green.rsi
+
+- type: entity
+  parent: ClothingNeckScarfBase
+  id: ClothingNeckScarfStripedBlack
+  name: striped black scarf
+  description: A stylish striped black scarf. The perfect winter accessory for those with a keen fashion sense, and those who just can't handle a cold breeze on their necks.
+  components:
+    - type: Sprite
+      sprite: Clothing/Neck/Scarfs/black.rsi
+    - type: Clothing
+      sprite: Clothing/Neck/Scarfs/black.rsi
+
+- type: entity
+  parent: ClothingNeckScarfBase
+  id: ClothingNeckScarfStripedBrown
+  name: striped brown scarf
+  description: A stylish striped brown scarf. The perfect winter accessory for those with a keen fashion sense, and those who just can't handle a cold breeze on their necks.
+  components:
+    - type: Sprite
+      sprite: Clothing/Neck/Scarfs/brown.rsi
+    - type: Clothing
+      sprite: Clothing/Neck/Scarfs/brown.rsi
+
+- type: entity
+  parent: ClothingNeckScarfBase
+  id: ClothingNeckScarfStripedLightBlue
+  name: striped light blue scarf
+  description: A stylish striped light blue scarf. The perfect winter accessory for those with a keen fashion sense, and those who just can't handle a cold breeze on their necks.
+  components:
+    - type: Sprite
+      sprite: Clothing/Neck/Scarfs/lightblue.rsi
+    - type: Clothing
+      sprite: Clothing/Neck/Scarfs/lightblue.rsi
+
+- type: entity
+  parent: ClothingNeckScarfBase
+  id: ClothingNeckScarfStripedOrange
+  name: striped orange scarf
+  description: A stylish striped orange scarf. The perfect winter accessory for those with a keen fashion sense, and those who just can't handle a cold breeze on their necks.
+  components:
+    - type: Sprite
+      sprite: Clothing/Neck/Scarfs/orange.rsi
+    - type: Clothing
+      sprite: Clothing/Neck/Scarfs/orange.rsi
+
+- type: entity
+  parent: ClothingNeckScarfBase
+  id: ClothingNeckScarfStripedPurple
+  name: striped purple scarf
+  description: A stylish striped purple scarf. The perfect winter accessory for those with a keen fashion sense, and those who just can't handle a cold breeze on their necks.
+  components:
+    - type: Sprite
+      sprite: Clothing/Neck/Scarfs/purple.rsi
+    - type: Clothing
+      sprite: Clothing/Neck/Scarfs/purple.rsi
+
+- type: entity
+  parent: ClothingNeckScarfBase
+  id: ClothingNeckScarfStripedSyndieGreen
+  name: striped syndicate green scarf
+  description: A stylish striped syndicate green scarf. The perfect winter accessory for those with a keen fashion sense, and those who are in the mood to steal something.
+  components:
+    - type: Sprite
+      sprite: Clothing/Neck/Scarfs/syndiegreen.rsi
+    - type: Clothing
+      sprite: Clothing/Neck/Scarfs/syndiegreen.rsi
+
+- type: entity
+  parent: ClothingNeckScarfBase
+  id: ClothingNeckScarfStripedSyndieRed
+  name: striped syndicate red scarf
+  description: A stylish striped syndicate red scarf. The perfect winter accessory for those with a keen fashion sense, and those who are in the mood to steal something.
+  components:
+    - type: Sprite
+      sprite: Clothing/Neck/Scarfs/syndiered.rsi
+    - type: Clothing
+      sprite: Clothing/Neck/Scarfs/syndiered.rsi
+
+- type: entity
+  parent: ClothingNeckScarfBase
+  id: ClothingNeckScarfStripedCentcom
+  name: striped CentComm scarf
+  description: A stylish striped centcom colored scarf. The perfect winter accessory for those with a keen fashion sense, and those who need to do paperwork in the cold.
+  components:
+    - type: Sprite
+      sprite: Clothing/Neck/Scarfs/centcom.rsi
+    - type: Clothing
+      sprite: Clothing/Neck/Scarfs/centcom.rsi
+
+- type: entity
+  parent: ClothingNeckScarfBase
+  id: ClothingNeckScarfStripedZebra
+  name: zebra scarf
+  description: A striped scarf, a mandatory accessory for artists.
+  components:
+  - type: Sprite
+    sprite: Clothing/Neck/Scarfs/zebra.rsi
+  - type: Clothing
+    sprite: Clothing/Neck/Scarfs/zebra.rsi
+
+# Pride Scarves
+- type: entity
+  parent: [ ClothingNeckScarfBase, BaseObviousScarf ] # imp
+  id: ClothingNeckScarfStripedAce
+  name: striped asexual scarf
+  description: A stylish striped asexual scarf. The perfect winter accessory for those with a keen fashion sense, and those who just can't handle a cold breeze on their necks.
+  components:
+  - type: Sprite
+    sprite: Clothing/Neck/Scarfs/PrideScarfs/ace.rsi
+  - type: Clothing
+    sprite: Clothing/Neck/Scarfs/PrideScarfs/ace.rsi
+  - type: WearerGetsExamineText # imp
+    thingType: obvious-type-pride-ace
+
+- type: entity
+  parent: [ ClothingNeckScarfBase, BaseObviousScarf ] # imp
+  id: ClothingNeckScarfStripedAro
+  name: striped aromantic scarf
+  description: A stylish striped aromantic scarf. The perfect winter accessory for those with a keen fashion sense, and those who just can't handle a cold breeze on their necks.
+  components:
+  - type: Sprite
+    sprite: Clothing/Neck/Scarfs/PrideScarfs/aro.rsi
+  - type: Clothing
+    sprite: Clothing/Neck/Scarfs/PrideScarfs/aro.rsi
+  - type: WearerGetsExamineText # imp
+    thingType: obvious-type-pride-aro
+
+- type: entity
+  parent: [ ClothingNeckScarfBase, BaseObviousScarf ] # imp
+  id: ClothingNeckScarfStripedAroace
+  name: striped aroace scarf
+  description: A stylish striped aroace scarf. The perfect winter accessory for those with a keen fashion sense, and those who just can't handle a cold breeze on their necks.
+  components:
+  - type: Sprite
+    sprite: Clothing/Neck/Scarfs/PrideScarfs/aroace.rsi
+  - type: Clothing
+    sprite: Clothing/Neck/Scarfs/PrideScarfs/aroace.rsi
+  - type: WearerGetsExamineText # imp
+    thingType: obvious-type-pride-aroace
+
+- type: entity
+  parent: [ ClothingNeckScarfBase, BaseObviousScarf ] # imp
+  id: ClothingNeckScarfStripedBiSexual
+  name: striped bisexual scarf
+  description: A stylish striped bisexual scarf. The perfect winter accessory for those with a keen fashion sense, and those who just can't handle a cold breeze on their necks.
+  components:
+  - type: Sprite
+    sprite: Clothing/Neck/Scarfs/PrideScarfs/bi.rsi
+  - type: Clothing
+    sprite: Clothing/Neck/Scarfs/PrideScarfs/bi.rsi
+  - type: WearerGetsExamineText # imp
+    thingType: obvious-type-pride-bi
+
+- type: entity
+  parent: [ ClothingNeckScarfBase, BaseObviousScarf ] # imp
+  id: ClothingNeckScarfStripedGay
+  name: striped gay scarf
+  description: A stylish striped gay scarf. The perfect winter accessory for those with a keen fashion sense, and those who just can't handle a cold breeze on their necks.
+  components:
+  - type: Sprite
+    sprite: Clothing/Neck/Scarfs/PrideScarfs/gay.rsi
+  - type: Clothing
+    sprite: Clothing/Neck/Scarfs/PrideScarfs/gay.rsi
+  - type: WearerGetsExamineText # imp
+    thingType: obvious-type-pride-gay
+
+- type: entity
+  parent: [ ClothingNeckScarfBase, BaseObviousScarf ] # imp
+  id: ClothingNeckScarfStripedInter
+  name: striped intersex scarf
+  description: A stylish striped intersex scarf. The perfect winter accessory for those with a keen fashion sense, and those who just can't handle a cold breeze on their necks.
+  components:
+  - type: Sprite
+    sprite: Clothing/Neck/Scarfs/PrideScarfs/inter.rsi
+  - type: Clothing
+    sprite: Clothing/Neck/Scarfs/PrideScarfs/inter.rsi
+  - type: WearerGetsExamineText # imp
+    thingType: obvious-type-pride-intersex
+
+- type: entity
+  parent: [ ClothingNeckScarfBase, BaseObviousScarf ] # imp
+  id: ClothingNeckScarfStripedLesbian
+  name: striped lesbian scarf
+  description: A stylish striped lesbian scarf. The perfect winter accessory for those with a keen fashion sense, and those who just can't handle a cold breeze on their necks.
+  components:
+  - type: Sprite
+    sprite: Clothing/Neck/Scarfs/PrideScarfs/lesbian.rsi
+  - type: Clothing
+    sprite: Clothing/Neck/Scarfs/PrideScarfs/lesbian.rsi
+  - type: WearerGetsExamineText # imp
+    thingType: obvious-type-pride-lesbian
+
+- type: entity
+  parent: [ ClothingNeckScarfBase, BaseObviousScarf ] # imp
+  id: ClothingNeckScarfStripedPan
+  name: striped pan scarf
+  description: A stylish striped pan scarf. The perfect winter accessory for those with a keen fashion sense, and those who just can't handle a cold breeze on their necks.
+  components:
+  - type: Sprite
+    sprite: Clothing/Neck/Scarfs/PrideScarfs/pan.rsi
+  - type: Clothing
+    sprite: Clothing/Neck/Scarfs/PrideScarfs/pan.rsi
+  - type: WearerGetsExamineText # imp
+    thingType: obvious-type-pride-pan
+
+- type: entity
+  parent: [ ClothingNeckScarfBase, BaseObviousScarf ] # imp
+  id: ClothingNeckScarfStripedNonBinary
+  name: striped non-binary scarf
+  description: A stylish striped non-binary scarf. The perfect winter accessory for those with a keen fashion sense, and those who just can't handle a cold breeze on their necks.
+  components:
+  - type: Sprite
+    sprite: Clothing/Neck/Scarfs/PrideScarfs/non.rsi
+  - type: Clothing
+    sprite: Clothing/Neck/Scarfs/PrideScarfs/non.rsi
+  - type: WearerGetsExamineText # imp
+    thingType: obvious-type-pride-nonbinary
+
+- type: entity
+  parent: [ ClothingNeckScarfBase, BaseObviousScarf ] # imp
+  id: ClothingNeckScarfStripedRainbow
+  name: rainbow scarf
+  description: A stylish rainbow scarf. The perfect winter accessory for those with a keen fashion sense, and those who just can't handle a cold breeze on their necks.
+  components:
+  - type: Sprite
+    sprite: Clothing/Neck/Scarfs/PrideScarfs/rainbow.rsi
+  - type: Clothing
+    sprite: Clothing/Neck/Scarfs/PrideScarfs/rainbow.rsi
+  - type: WearerGetsExamineText # imp
+    thingType: obvious-type-pride
+
+- type: entity
+  parent: [ ClothingNeckScarfBase, BaseObviousScarf ] # imp
+  id: ClothingNeckScarfStripedTrans
+  name: striped trans scarf
+  description: A stylish striped trans scarf. The perfect winter accessory for those with a keen fashion sense, and those who just can't handle a cold breeze on their necks.
+  components:
+  - type: Sprite
+    sprite: Clothing/Neck/Scarfs/PrideScarfs/trans.rsi
+  - type: Clothing
+    sprite: Clothing/Neck/Scarfs/PrideScarfs/trans.rsi
+  - type: WearerGetsExamineText # imp
+    thingType: obvious-type-pride-trans
+
+- type: entity
+  parent: [ ClothingNeckScarfBase, BaseObviousScarf ] # imp
+  id: ClothingNeckScarfStripedLesbianLong
+  name: long bacon
+  description: Long bacon! Perfect for sharing with your girlfriend!
+  components:
+  - type: Sprite
+    sprite: Clothing/Neck/Scarfs/PrideScarfs/lesbian-long.rsi
+  - type: Clothing
+    sprite: Clothing/Neck/Scarfs/PrideScarfs/lesbian-long.rsi
+  - type: WearerGetsExamineText # imp
+    examineText: obvious-x-scarf-lesbian-long

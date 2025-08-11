@@ -1,0 +1,1875 @@
+# SPDX-FileCopyrightText: 2021 20kdc
+# SPDX-FileCopyrightText: 2021 Alexander Evgrashin
+# SPDX-FileCopyrightText: 2021 Metal Gear Sloth
+# SPDX-FileCopyrightText: 2021 Pancake
+# SPDX-FileCopyrightText: 2021 Swept
+# SPDX-FileCopyrightText: 2021 Ygg01
+# SPDX-FileCopyrightText: 2021 cyclowns
+# SPDX-FileCopyrightText: 2022 Alex Evgrashin
+# SPDX-FileCopyrightText: 2022 Chris V
+# SPDX-FileCopyrightText: 2022 E F R
+# SPDX-FileCopyrightText: 2022 Fishfish458
+# SPDX-FileCopyrightText: 2022 Flipp Syder
+# SPDX-FileCopyrightText: 2022 Francesco
+# SPDX-FileCopyrightText: 2022 Interrobang01
+# SPDX-FileCopyrightText: 2022 Joosep Jääger
+# SPDX-FileCopyrightText: 2022 Justin Trotter
+# SPDX-FileCopyrightText: 2022 Moony
+# SPDX-FileCopyrightText: 2022 Peptide90
+# SPDX-FileCopyrightText: 2022 Rane
+# SPDX-FileCopyrightText: 2022 T-Stalker
+# SPDX-FileCopyrightText: 2022 Vera Aguilera Puerto
+# SPDX-FileCopyrightText: 2022 Veritius
+# SPDX-FileCopyrightText: 2022 Willhelm53
+# SPDX-FileCopyrightText: 2022 corentt
+# SPDX-FileCopyrightText: 2022 dontbetank
+# SPDX-FileCopyrightText: 2022 fishfish458
+# SPDX-FileCopyrightText: 2022 mirrorcult
+# SPDX-FileCopyrightText: 2022 ninruB
+# SPDX-FileCopyrightText: 2022 vulppine
+# SPDX-FileCopyrightText: 2023 AJCM-git
+# SPDX-FileCopyrightText: 2023 Bixkitts
+# SPDX-FileCopyrightText: 2023 Checkraze
+# SPDX-FileCopyrightText: 2023 CrigCrag
+# SPDX-FileCopyrightText: 2023 Dawid Bla
+# SPDX-FileCopyrightText: 2023 Doru991
+# SPDX-FileCopyrightText: 2023 ElectroJr
+# SPDX-FileCopyrightText: 2023 Guilherme Ornel
+# SPDX-FileCopyrightText: 2023 Jeff
+# SPDX-FileCopyrightText: 2023 Joel Hedtjärn
+# SPDX-FileCopyrightText: 2023 Julian Giebel
+# SPDX-FileCopyrightText: 2023 Kara
+# SPDX-FileCopyrightText: 2023 Kilk
+# SPDX-FileCopyrightText: 2023 Kit0vras
+# SPDX-FileCopyrightText: 2023 LankLTE
+# SPDX-FileCopyrightText: 2023 Nairod
+# SPDX-FileCopyrightText: 2023 PixelTK
+# SPDX-FileCopyrightText: 2023 TaralGit
+# SPDX-FileCopyrightText: 2023 Tom Leys
+# SPDX-FileCopyrightText: 2023 Topy
+# SPDX-FileCopyrightText: 2023 Visne
+# SPDX-FileCopyrightText: 2023 Vordenburg
+# SPDX-FileCopyrightText: 2023 and_a
+# SPDX-FileCopyrightText: 2023 coolmankid12345
+# SPDX-FileCopyrightText: 2023 eclips_e
+# SPDX-FileCopyrightText: 2023 gus
+# SPDX-FileCopyrightText: 2023 kxv
+# SPDX-FileCopyrightText: 2023 moonheart08
+# SPDX-FileCopyrightText: 2024 0x6273
+# SPDX-FileCopyrightText: 2024 12rabbits
+# SPDX-FileCopyrightText: 2024 21Melkuu
+# SPDX-FileCopyrightText: 2024 AWF
+# SPDX-FileCopyrightText: 2024 Adrian16199
+# SPDX-FileCopyrightText: 2024 Aexxie
+# SPDX-FileCopyrightText: 2024 Alice "Arimah" Heurlin
+# SPDX-FileCopyrightText: 2024 Alzore
+# SPDX-FileCopyrightText: 2024 BeeRobynn
+# SPDX-FileCopyrightText: 2024 BlueHNT
+# SPDX-FileCopyrightText: 2024 BramvanZijp
+# SPDX-FileCopyrightText: 2024 Brandon Hu
+# SPDX-FileCopyrightText: 2024 CaasGit
+# SPDX-FileCopyrightText: 2024 CatMagic
+# SPDX-FileCopyrightText: 2024 Chief-Engineer
+# SPDX-FileCopyrightText: 2024 Cojoke
+# SPDX-FileCopyrightText: 2024 DEATHB4DEFEAT
+# SPDX-FileCopyrightText: 2024 Debug
+# SPDX-FileCopyrightText: 2024 Dimastra
+# SPDX-FileCopyrightText: 2024 DrSmugleaf
+# SPDX-FileCopyrightText: 2024 Ed
+# SPDX-FileCopyrightText: 2024 Emisse
+# SPDX-FileCopyrightText: 2024 EmoGarbage404
+# SPDX-FileCopyrightText: 2024 Eoin Mcloughlin
+# SPDX-FileCopyrightText: 2024 Errant
+# SPDX-FileCopyrightText: 2024 Firewatch
+# SPDX-FileCopyrightText: 2024 Flareguy
+# SPDX-FileCopyrightText: 2024 FoxxoTrystan
+# SPDX-FileCopyrightText: 2024 FungiFellow
+# SPDX-FileCopyrightText: 2024 Geekyhobo
+# SPDX-FileCopyrightText: 2024 GitHubUser53123
+# SPDX-FileCopyrightText: 2024 Golinth
+# SPDX-FileCopyrightText: 2024 Gyrandola
+# SPDX-FileCopyrightText: 2024 HS
+# SPDX-FileCopyrightText: 2024 Hrosts
+# SPDX-FileCopyrightText: 2024 IProduceWidgets
+# SPDX-FileCopyrightText: 2024 Ian
+# SPDX-FileCopyrightText: 2024 Ilya246
+# SPDX-FileCopyrightText: 2024 Ivan
+# SPDX-FileCopyrightText: 2024 JIPDawg
+# SPDX-FileCopyrightText: 2024 Jark255
+# SPDX-FileCopyrightText: 2024 Joel Zimmerman
+# SPDX-FileCopyrightText: 2024 JustCone
+# SPDX-FileCopyrightText: 2024 K-Dynamic
+# SPDX-FileCopyrightText: 2024 Keer-Sar
+# SPDX-FileCopyrightText: 2024 Kevin Zheng
+# SPDX-FileCopyrightText: 2024 Killerqu00
+# SPDX-FileCopyrightText: 2024 Kira Bridgeton
+# SPDX-FileCopyrightText: 2024 Ko4ergaPunk
+# SPDX-FileCopyrightText: 2024 Krunklehorn
+# SPDX-FileCopyrightText: 2024 Kukutis96513
+# SPDX-FileCopyrightText: 2024 Lamrr
+# SPDX-FileCopyrightText: 2024 Leon Friedrich
+# SPDX-FileCopyrightText: 2024 Lye
+# SPDX-FileCopyrightText: 2024 MACMAN2003
+# SPDX-FileCopyrightText: 2024 Magnus Larsen
+# SPDX-FileCopyrightText: 2024 MendaxxDev
+# SPDX-FileCopyrightText: 2024 MerrytheManokit
+# SPDX-FileCopyrightText: 2024 Mervill
+# SPDX-FileCopyrightText: 2024 MilenVolf
+# SPDX-FileCopyrightText: 2024 Mnemotechnican
+# SPDX-FileCopyrightText: 2024 Moomoobeef
+# SPDX-FileCopyrightText: 2024 Mr. 27
+# SPDX-FileCopyrightText: 2024 MureixloI
+# SPDX-FileCopyrightText: 2024 Naive817
+# SPDX-FileCopyrightText: 2024 NakataRin
+# SPDX-FileCopyrightText: 2024 Nemanja
+# SPDX-FileCopyrightText: 2024 Nim
+# SPDX-FileCopyrightText: 2024 OrangeMoronage9622
+# SPDX-FileCopyrightText: 2024 PJBot
+# SPDX-FileCopyrightText: 2024 Pieter-Jan Briers
+# SPDX-FileCopyrightText: 2024 Plykiya
+# SPDX-FileCopyrightText: 2024 PoTeletubby
+# SPDX-FileCopyrightText: 2024 PopGamer46
+# SPDX-FileCopyrightText: 2024 Preston Smith
+# SPDX-FileCopyrightText: 2024 Ps3Moira
+# SPDX-FileCopyrightText: 2024 Psychpsyo
+# SPDX-FileCopyrightText: 2024 PursuitInAshes
+# SPDX-FileCopyrightText: 2024 QueerNB
+# SPDX-FileCopyrightText: 2024 Repo
+# SPDX-FileCopyrightText: 2024 RiceMar1244
+# SPDX-FileCopyrightText: 2024 Rouge2t7
+# SPDX-FileCopyrightText: 2024 Saphire Lattice
+# SPDX-FileCopyrightText: 2024 Scruq445
+# SPDX-FileCopyrightText: 2024 ShadowCommander
+# SPDX-FileCopyrightText: 2024 Simon
+# SPDX-FileCopyrightText: 2024 SimpleStation14
+# SPDX-FileCopyrightText: 2024 SlamBamActionman
+# SPDX-FileCopyrightText: 2024 Sphiral
+# SPDX-FileCopyrightText: 2024 Stalen
+# SPDX-FileCopyrightText: 2024 TakoDragon
+# SPDX-FileCopyrightText: 2024 Tayrtahn
+# SPDX-FileCopyrightText: 2024 Thomas
+# SPDX-FileCopyrightText: 2024 TinManTim
+# SPDX-FileCopyrightText: 2024 Trevor Day
+# SPDX-FileCopyrightText: 2024 Truoizys
+# SPDX-FileCopyrightText: 2024 TsjipTsjip
+# SPDX-FileCopyrightText: 2024 Ubaser
+# SPDX-FileCopyrightText: 2024 Unkn0wn_Gh0st
+# SPDX-FileCopyrightText: 2024 VMSolidus
+# SPDX-FileCopyrightText: 2024 Vasilis
+# SPDX-FileCopyrightText: 2024 Velcroboy
+# SPDX-FileCopyrightText: 2024 Vigers Ray
+# SPDX-FileCopyrightText: 2024 Whisper
+# SPDX-FileCopyrightText: 2024 Winkarst
+# SPDX-FileCopyrightText: 2024 beck-thompson
+# SPDX-FileCopyrightText: 2024 brainfood1183
+# SPDX-FileCopyrightText: 2024 coolboy911
+# SPDX-FileCopyrightText: 2024 deathride58
+# SPDX-FileCopyrightText: 2024 dffdff2423
+# SPDX-FileCopyrightText: 2024 eoineoineoin
+# SPDX-FileCopyrightText: 2024 foboscheshir
+# SPDX-FileCopyrightText: 2024 github-actions[bot]
+# SPDX-FileCopyrightText: 2024 icekot8
+# SPDX-FileCopyrightText: 2024 lunarcomets
+# SPDX-FileCopyrightText: 2024 metalgearsloth
+# SPDX-FileCopyrightText: 2024 nikthechampiongr
+# SPDX-FileCopyrightText: 2024 osjarw
+# SPDX-FileCopyrightText: 2024 plykiya
+# SPDX-FileCopyrightText: 2024 poemota
+# SPDX-FileCopyrightText: 2024 saintmuntzer
+# SPDX-FileCopyrightText: 2024 shamp
+# SPDX-FileCopyrightText: 2024 slarticodefast
+# SPDX-FileCopyrightText: 2024 stellar-novas
+# SPDX-FileCopyrightText: 2024 strO0pwafel
+# SPDX-FileCopyrightText: 2024 stroopwafel
+# SPDX-FileCopyrightText: 2024 superjj18
+# SPDX-FileCopyrightText: 2024 themias
+# SPDX-FileCopyrightText: 2024 to4no_fix
+# SPDX-FileCopyrightText: 2024 username
+# SPDX-FileCopyrightText: 2024 voidnull000
+# SPDX-FileCopyrightText: 2024 wafehling
+# SPDX-FileCopyrightText: 2024 whateverusername0
+# SPDX-FileCopyrightText: 2024 Арт
+# SPDX-FileCopyrightText: 2025 Aiden
+# SPDX-FileCopyrightText: 2025 Aidenkrz
+# SPDX-FileCopyrightText: 2025 ArtisticRoomba
+# SPDX-FileCopyrightText: 2025 August Sun
+# SPDX-FileCopyrightText: 2025 Aviu00
+# SPDX-FileCopyrightText: 2025 Blitz
+# SPDX-FileCopyrightText: 2025 DESKTOP-0V0K4HQ\Rosy
+# SPDX-FileCopyrightText: 2025 EctoplasmIsGood
+# SPDX-FileCopyrightText: 2025 Falcon
+# SPDX-FileCopyrightText: 2025 Fansana
+# SPDX-FileCopyrightText: 2025 Firewars763
+# SPDX-FileCopyrightText: 2025 GoobBot
+# SPDX-FileCopyrightText: 2025 Hedera
+# SPDX-FileCopyrightText: 2025 Jakumba
+# SPDX-FileCopyrightText: 2025 KekaniCreates
+# SPDX-FileCopyrightText: 2025 Momo
+# SPDX-FileCopyrightText: 2025 Piras314
+# SPDX-FileCopyrightText: 2025 Rosycup
+# SPDX-FileCopyrightText: 2025 SX-7
+# SPDX-FileCopyrightText: 2025 Sapphire
+# SPDX-FileCopyrightText: 2025 Savante-Sam
+# SPDX-FileCopyrightText: 2025 ScarKy0
+# SPDX-FileCopyrightText: 2025 Sir Warock
+# SPDX-FileCopyrightText: 2025 Skubman
+# SPDX-FileCopyrightText: 2025 Solaris
+# SPDX-FileCopyrightText: 2025 Solstice
+# SPDX-FileCopyrightText: 2025 Southbridge
+# SPDX-FileCopyrightText: 2025 Spessmann
+# SPDX-FileCopyrightText: 2025 Steve
+# SPDX-FileCopyrightText: 2025 Tabitha
+# SPDX-FileCopyrightText: 2025 Tanix
+# SPDX-FileCopyrightText: 2025 Terraspark4941
+# SPDX-FileCopyrightText: 2025 Timfa
+# SPDX-FileCopyrightText: 2025 Tiniest Shark
+# SPDX-FileCopyrightText: 2025 august-sun
+# SPDX-FileCopyrightText: 2025 chromiumboy
+# SPDX-FileCopyrightText: 2025 coderabbitai[bot]
+# SPDX-FileCopyrightText: 2025 deltanedas
+# SPDX-FileCopyrightText: 2025 dootythefrooty
+# SPDX-FileCopyrightText: 2025 juniwoofs
+# SPDX-FileCopyrightText: 2025 keronshb
+# SPDX-FileCopyrightText: 2025 lzk
+# SPDX-FileCopyrightText: 2025 marc-pelletier
+# SPDX-FileCopyrightText: 2025 portfiend
+# SPDX-FileCopyrightText: 2025 sleepyyapril
+# SPDX-FileCopyrightText: 2025 terminatorbo
+# SPDX-FileCopyrightText: 2025 wheelwrightt
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+# PUT YOUR TAGS IN ALPHABETICAL ORDER
+
+- type: Tag
+  id: AccessBreakerImmune
+
+- type: Tag
+  id: AirAlarm
+
+- type: Tag
+  id: AirAlarmElectronics
+
+- type: Tag
+  id: Airlock
+
+- type: Tag
+  id: AirSensor
+
+- type: Tag
+  id: AllowGhostShownByEvent
+
+- type: Tag
+  id: Ambrosia
+
+- type: Tag
+  id: AppraisalTool
+
+- type: Tag
+  id: ArachneWeb
+
+- type: Tag
+  id: ArtifactFragment
+
+- type: Tag
+  id: Arrow
+
+- type: Tag
+  id: Ash
+
+- type: Tag
+  id: ATVKeys
+
+- type: Tag
+  id: Balloon
+
+- type: Tag
+  id: Banana
+
+- type: Tag
+  id: BananaPeel
+
+- type: Tag
+  id: Bandana
+
+- type: Tag
+  id: BaseballBat
+
+- type: Tag
+  id: BBQsauce
+
+- type: Tag
+  id: Bedsheet
+
+- type: Tag
+  id: Bee
+
+- type: Tag
+  id: Beer
+
+- type: Tag
+  id: Beetroot
+
+- type: Tag
+  id: BikeHorn
+
+- type: Tag
+  id: Bloodpack
+
+- type: Tag
+  id: BodyBag
+
+- type: Tag
+  id: Book
+
+- type: Tag
+  id: BorgArm
+
+- type: Tag
+  id: BorgEngineerHead
+
+- type: Tag
+  id: BorgEngineerLArm
+
+- type: Tag
+  id: BorgEngineerLLeg
+
+- type: Tag
+  id: BorgEngineerRArm
+
+- type: Tag
+  id: BorgEngineerRLeg
+
+- type: Tag
+  id: BorgEngineerTorso
+
+- type: Tag
+  id: BorgGenericHead
+
+- type: Tag
+  id: BorgGenericLArm
+
+- type: Tag
+  id: BorgGenericLLeg
+
+- type: Tag
+  id: BorgGenericRArm
+
+- type: Tag
+  id: BorgGenericRLeg
+
+- type: Tag
+  id: BorgGenericTorso
+
+- type: Tag
+  id: BorgHead
+
+- type: Tag
+  id: BorgLArm
+
+- type: Tag
+  id: BorgLLeg
+
+- type: Tag
+  id: BorgRArm
+
+- type: Tag
+  id: BorgRLeg
+
+- type: Tag
+  id: BorgTorso
+
+- type: Tag
+  id: BorgLeg
+
+- type: Tag
+  id: BorgJanitorHead
+
+- type: Tag
+  id: BorgJanitorLLeg
+
+- type: Tag
+  id: BorgJanitorRLeg
+
+- type: Tag
+  id: BorgJanitorTorso
+
+- type: Tag
+  id: BorgMedicalHead
+
+- type: Tag
+  id: BorgMedicalLArm
+
+- type: Tag
+  id: BorgMedicalLLeg
+
+- type: Tag
+  id: BorgMedicalRArm
+
+- type: Tag
+  id: BorgMedicalRLeg
+
+- type: Tag
+  id: BorgMedicalTorso
+
+- type: Tag
+  id: BorgMiningHead
+
+- type: Tag
+  id: BorgMiningLArm
+
+- type: Tag
+  id: BorgMiningLLeg
+
+- type: Tag
+  id: BorgMiningRArm
+
+- type: Tag
+  id: BorgMiningRLeg
+
+- type: Tag
+  id: BorgMiningTorso
+
+- type: Tag
+  id: BorgModuleCargo
+
+- type: Tag
+  id: BorgModuleEngineering
+
+- type: Tag
+  id: BorgModuleGeneric
+
+- type: Tag
+  id: BorgModuleJanitor
+
+- type: Tag
+  id: BorgModuleMedical
+
+- type: Tag
+  id: BorgModuleService
+
+- type: Tag
+  id: BorgModuleSyndicate
+
+- type: Tag
+  id: BorgModuleSyndicateAssault
+
+- type: Tag
+  id: Bot
+
+- type: Tag
+  id: BorgServiceHead
+
+- type: Tag
+  id: BorgServiceLArm
+
+- type: Tag
+  id: BorgServiceLLeg
+
+- type: Tag
+  id: BorgServiceRArm
+
+- type: Tag
+  id: BorgServiceRLeg
+
+- type: Tag
+  id: BorgServiceTorso
+
+- type: Tag
+  id: BotanyHatchet
+
+- type: Tag
+  id: BotanyHoe
+
+- type: Tag
+  id: BotanyShovel
+
+- type: Tag
+  id: Bottle
+
+- type: Tag
+  id: BoxCardboard
+
+- type: Tag
+  id: MaterialCardboard
+
+- type: Tag
+  id: MaterialPaper
+
+- type: Tag
+  id: BoxHug
+
+- type: Tag
+  id: Brain
+
+- type: Tag
+  id: BrassInstrument
+
+- type: Tag
+  id: Bread
+
+- type: Tag
+  id: Briefcase
+
+- type: Tag
+  id: BrimFlatcapBrown
+
+- type: Tag
+  id: BrimFlatcapGrey
+
+- type: Tag
+  id: Brutepack
+
+- type: Tag
+  id: Bucket
+
+- type: Tag
+  id: Burger
+
+- type: Tag
+  id: BulletFoam
+
+- type: Tag
+  id: BulletRubber
+
+- type: Tag
+  id: Burnt
+
+- type: Tag
+  id: Bun
+
+- type: Tag
+  id: BypassDropChecks
+
+- type: Tag
+  id: BypassInteractionRangeChecks
+
+- type: Tag
+  id: Cable
+
+- type: Tag
+  id: CableCoil
+
+- type: Tag
+  id: Cake
+
+- type: Tag
+  id: CaneBlade
+
+- type: Tag
+  id: CapacitorStockPart
+
+- type: Tag
+  id: Carrot
+
+- type: Tag
+  id: CarrotFries
+
+- type: Tag
+  id: Carpet
+
+- type: Tag
+  id: CarpetBlack
+
+- type: Tag
+  id: CarpetBlue
+
+- type: Tag
+  id: CarpetCyan
+
+- type: Tag
+  id: CarpetGreen
+
+- type: Tag
+  id: CarpetOrange
+
+- type: Tag
+  id: CarpetPurple
+
+- type: Tag
+  id: CarpetSBlue
+
+- type: Tag
+  id: CarpetPink
+
+- type: Tag
+  id: CarpetRed
+
+- type: Tag
+  id: CarpetWhite
+
+- type: Tag
+  id: CanPilot
+
+- type: Tag
+  id: CannonBall
+
+- type: Tag
+  id: CannonRestrict
+
+- type: Tag
+  id: CannotSuicide
+
+- type: Tag
+  id: CaptainSabre
+
+- type: Tag
+  id: Carp
+
+- type: Tag
+  id: Cartridge
+
+- type: Tag
+  id: CartridgeAntiMateriel
+
+- type: Tag
+  id: CartridgeCap
+
+- type: Tag
+  id: CartridgeCaselessRifle
+
+- type: Tag
+  id: CartridgeCHIMP
+
+- type: Tag
+  id: CartridgeHeavyRifle
+
+- type: Tag
+  id: CartridgeMinigun
+
+- type: Tag
+  id: CartridgeLightRifle
+
+- type: Tag
+  id: CartridgeMagnum
+
+- type: Tag
+  id: CartridgePistol
+
+- type: Tag
+  id: CartridgeRifle
+
+- type: Tag
+  id: CartridgeRocket
+
+- type: Tag
+  id: CaveFactory
+
+# Allows you to walk over tile entities such as lava without steptrigger
+- type: Tag
+  id: Catwalk
+
+- type: Tag
+  id: CentrifugeCompatible
+
+- type: Tag
+  id: Chicken
+
+- type: Tag
+  id: CheapSunglasses
+
+- type: Tag
+  id: Cheese
+
+# Allowed to control someone wearing a Chef's hat if inside their hat.
+- type: Tag
+  id: ChefPilot
+
+- type: Tag
+  id: ChemDispensable # container that can go into the chem dispenser
+
+- type: Tag
+  id: ChiliBowl
+
+- type: Tag
+  id: Cigarette
+
+- type: Tag
+  id: CigFilter
+
+- type: Tag
+  id: CigPack
+
+- type: Tag
+  id: Cleaver
+
+- type: Tag
+  id: ClockworkGlassShard
+
+- type: Tag
+  id: ClothMade
+
+- type: Tag
+  id: ClothingHeadHelmetBasic
+
+- type: Tag
+  id: ClownMask
+
+- type: Tag
+  id: ClownRecorder
+
+- type: Tag
+  id: ClownRubberStamp
+
+- type: Tag
+  id: ClownShoes
+
+- type: Tag
+  id: ClownSuit
+
+- type: Tag
+  id: CluwneHappyHonk
+
+- type: Tag
+  id: CluwneHorn
+
+- type: Tag
+  id: Coldsauce
+
+- type: Tag
+  id: CoordinatesDisk
+
+#- type: Tag #VASH - Deemed too invasive. Kept for reference.
+#  id: Condom
+
+- type: Tag
+  id: Corn
+
+- type: Tag
+  id: CottonBoll
+
+- type: Tag
+  id: Cow
+
+- type: Tag
+  id: Crab
+
+- type: Tag
+  id: Crayon
+
+- type: Tag
+  id: CrayonBlack
+
+- type: Tag
+  id: CrayonBlue
+
+- type: Tag
+  id: CrayonGreen
+
+- type: Tag
+  id: CrayonOrange
+
+- type: Tag
+  id: CrayonPurple
+
+- type: Tag
+  id: CrayonRed
+
+- type: Tag
+  id: CrayonWhite
+
+- type: Tag
+  id: CrayonYellow
+
+- type: Tag
+  id: Crowbar
+
+- type: Tag
+  id: CrowbarRed
+
+- type: Tag
+  id: Cryobeaker
+
+- type: Tag
+  id: CrystalCyan
+
+- type: Tag
+  id: CrystalBlue
+
+- type: Tag
+  id: CrystalPink
+
+- type: Tag
+  id: CrystalGreen
+
+- type: Tag
+  id: CrystalOrange
+
+- type: Tag
+  id: CrystalRed
+
+- type: Tag
+  id: ConveyorAssembly
+
+- type: Tag
+  id: Cola
+
+- type: Tag
+  id: CombatKnife
+
+- type: Tag
+  id: ComputerTelevisionCircuitboard
+
+- type: Tag
+  id: CubanCarp
+
+- type: Tag
+  id: DeathAcidifier
+
+- type: Tag
+  id: Debug
+
+- type: Tag
+  id: Diamond
+
+- type: Tag
+  id: Dice
+
+- type: Tag
+  id: DiscreteHealthAnalyzer #So construction recipes don't eat medical PDAs
+
+- type: Tag
+  id: Disposal
+
+- type: Tag
+  id: DNASolutionScannable
+
+- type: Tag
+  id: DockArrivals
+
+- type: Tag
+  id: DockCargo
+
+- type: Tag
+  id: DockEmergency
+
+- type: Tag
+  id: Document
+
+- type: Tag
+  id: DoorBumpOpener
+
+- type: Tag
+  id: DoorElectronics
+
+- type: Tag
+  id: DoorElectronicsConfigurator
+
+- type: Tag
+  id: DonkPocket
+
+- type: Tag
+  id: Donut
+
+- type: Tag
+  id: DrinkCan
+
+- type: Tag
+  id: DrinkGlass
+
+- type: Tag
+  id: DrinkSpaceGlue
+
+- type: Tag
+  id: DrinkBottle
+
+- type: Tag
+  id: Dropper
+
+- type: Tag
+  id: Duck
+
+- type: Tag
+  id: Ectoplasm
+
+- type: Tag
+  id: Egg
+
+- type: Tag
+  id: EmagImmune
+
+- type: Tag
+  id: EmitterBolt
+
+- type: Tag
+  id: Envirohelm
+
+- type: Tag
+  id: Enzyme
+
+- type: Tag
+  id: ExplosivePassable
+
+- type: Tag
+  id: Figurine
+
+- type: Tag
+  id: FireAlarm
+
+- type: Tag
+  id: FireAlarmElectronics
+
+- type: Tag
+  id: FireAxe
+
+- type: Tag
+  id: Flesh
+
+- type: Tag
+  id: FirelockElectronics
+
+- type: Tag
+  id: Flare
+
+- type: Tag
+  id: Flashlight
+
+- type: Tag
+  id: Flower
+
+- type: Tag
+  id: Folder
+
+- type: Tag
+  id: FoodSnack
+
+- type: Tag
+  id: FootstepSound
+
+- type: Tag
+  id: ForceableFollow
+
+- type: Tag
+  id: ForceFixRotations # fixrotations command WILL target this
+
+- type: Tag
+  id: ForceNoFixRotations # fixrotations command WON'T target this
+
+- type: Tag
+  id: FreezerElectronics
+
+- type: Tag
+  id: Fruit
+
+- type: Tag
+  id: FullBodyOuter
+
+- type: Tag
+  id: Galaxythistle
+
+- type: Tag
+  id: GasScrubber
+
+- type: Tag
+  id: GasVent
+
+- type: Tag
+  id: Gauze
+
+- type: Tag
+  id: GeigerCounter
+
+- type: Tag
+  id: GlassAirlock
+
+- type: Tag
+  id: GlassBeaker
+
+- type: Tag
+  id: GlassesNearsight
+
+- type: Tag
+  id: GlassShard
+
+- type: Tag
+  id: Goat
+
+- type: Tag
+  id: GoldenPlunger
+
+- type: Tag
+  id: Goliath
+
+- type: Tag
+  id: GPS
+
+- type: Tag
+  id: Grenade
+
+- type: Tag
+  id: HudMedical
+
+- type: Tag
+  id: HudSecurity
+
+- type: Tag
+  id: GuideEmbeded
+
+- type: Tag
+  id: Hamster
+
+- type: Tag
+  id: HamsterWearable
+
+- type: Tag
+  id: HamtrCentralControlModule
+
+- type: Tag
+  id: HamtrPeripheralsControlModule
+
+- type: Tag
+  id: HamtrLArm
+
+- type: Tag
+  id: HamtrLLeg
+
+- type: Tag
+  id: HamtrRLeg
+
+- type: Tag
+  id: HamtrRArm
+
+- type: Tag
+  id: Handcuffs
+
+- type: Tag
+  id: HappyHonk
+
+- type: Tag
+  id: Hardsuit # Prevent melee injectors that can't penetrate hardsuits from injecting the wearer (nettles)
+
+- type: Tag
+  id: HardsuitSpatio
+
+- type: Tag
+  id: Haunted
+
+- type: Tag
+  id: Head
+
+- type: Tag
+  id: HelmetEVA
+
+- type: Tag
+  id: HideContextMenu
+
+- type: Tag
+  id: HideCorgi # corgi hide for crafting, not for making corgis invisible
+
+- type: Tag
+  id: HidesHair # for headwear.
+
+- type: Tag
+  id: HidesNose # for non-standard noses.
+
+- type: Tag
+  id: HidesBeard # for full coverage helmet / masks where beard shouldn't show
+
+- type: Tag
+  id: HighRiskItem
+
+- type: Tag
+  id: HighSecDoor
+
+- type: Tag
+  id: HiViz
+
+- type: Tag
+  id: Hoe
+
+- type: Tag
+  id: HolofanProjector
+
+- type: Tag
+  id: HolosignProjector
+
+- type: Tag
+  id: HonkerCentralControlModule
+
+- type: Tag
+  id: HonkerPeripheralsControlModule
+
+- type: Tag
+  id: HonkerTargetingControlModule
+
+- type: Tag
+  id: HonkerLArm
+
+- type: Tag
+  id: HonkerLLeg
+
+- type: Tag
+  id: HonkerRLeg
+
+- type: Tag
+  id: HonkerRArm
+
+- type: Tag
+  id: Hotsauce
+
+- type: Tag
+  id: Ice
+
+- type: Tag
+  id: IceCream
+
+- type: Tag
+  id: Igniter
+
+- type: Tag
+  id: Ingredient
+
+- type: Tag #Drop this innate tool instead of deleting it.
+  id: InnateDontDelete
+
+- type: Tag
+  id: Ingot
+
+- type: Tag
+  id: InstantDoAfters
+
+- type: Tag
+  id: IntercomElectronics
+
+- type: Tag # Goobstation
+  id: JanicartKeys
+
+- type: Tag
+  id: JawsOfLife
+
+- type: Tag
+  id: Katana
+
+- type: Tag
+  id: Kangaroo
+
+- type: Tag
+  id: Ketchup
+
+- type: Tag
+  id: KeyedInstrument
+
+- type: Tag
+  id: KitchenKnife
+
+- type: Tag
+  id: Knife
+
+- type: Tag
+  id: LavaBrig
+
+- type: Tag
+  id: Lemon
+
+#- type: Tag #VASH - Deemed too invasive. Kept for reference.
+#  id: Liner
+
+- type: Tag
+  id: Lime
+
+- type: Tag
+  id: Machete
+
+- type: Tag
+  id: MacroBomb
+
+- type: Tag
+  id: Mail
+
+- type: Tag
+  id: MailCapsule
+
+- type: Tag
+  id: MimeBelt
+
+- type: Tag
+  id: MimeHappyHonk
+
+- type: Tag
+  id: Mineshaft
+
+# Magazines ordered by slot then caliber
+
+- type: Tag
+  id: MagazineCalico
+
+- type: Tag
+  id: MagazineCaselessRifle
+
+- type: Tag
+  id: MagazineHeavyRifle
+
+- type: Tag
+  id: MagazineHeavyRifleBox
+
+- type: Tag
+  id: MagazineBoxRifleMinigun
+
+- type: Tag
+  id: MagazineLightRifle
+
+- type: Tag
+  id: MagazineLightRifleBox
+
+- type: Tag
+  id: MagazineLightRiflePan
+
+- type: Tag
+  id: MagazineMagnum
+
+- type: Tag
+  id: MagazinePistol
+
+- type: Tag
+  id: MagazinePistolCaselessRifle
+
+- type: Tag
+  id: MagazinePistolHighCapacity
+
+- type: Tag
+  id: MagazinePistolSubMachineGunTopMounted
+
+- type: Tag
+  id: MagazineRifle
+
+- type: Tag
+  id: MagazineShotgun
+
+- type: Tag
+  id: MagazineShotgunLeverRifle
+
+- type: Tag
+  id: MagazineMagnumSubMachineGun
+
+- type: Tag
+  id: MagazinePistolSubMachineGun
+
+- type: Tag
+  id: MagazineGrenade
+
+- type: Tag
+  id: MailingUnitElectronics
+
+- type: Tag
+  id: Matchstick
+
+- type: Tag
+  id: Mayo
+
+- type: Tag
+  id: Meat
+
+- type: Tag
+  id: Medal
+
+- type: Tag
+  id: Medkit
+
+- type: Tag
+  id: Metal
+
+- type: Tag
+  id: MicroBomb
+
+- type: Tag
+  id: MicrowaveMachineBoard
+
+- type: Tag
+  id: MindShield
+
+- type: Tag
+  id: MindTransferTarget
+
+- type: Tag
+  id: ModularReceiver
+
+- type: Tag
+  id: MonkeyCube
+
+- type: Tag
+  id: Mop
+
+- type: Tag
+  id: MopAdv
+
+- type: Tag
+  id: MopBasic
+
+- type: Tag
+  id: Mouse
+
+- type: Tag
+  id: Mousetrap
+
+- type: Tag
+  id: Multitool
+
+- type: Tag
+  id: Mustard
+
+- type: Tag
+  id: MysteryFigureBox
+
+- type: Tag
+  id: NoBlockAnchoring
+
+- type: Tag
+  id: NoConsoleSound
+
+- type: Tag
+  id: NoPaint
+
+- type: Tag
+  id: NoRecharge # Assmos - Crystallizer
+
+- type: Tag
+  id: NozzleBackTank
+
+- type: Tag
+  id: Nozzle # Assmos - Extinguisher Nozzle
+
+- type: Tag
+  id: AtmosBackTank # Assmos - Extinguisher Nozzle
+
+- type: Tag
+  id: Nugget # for chicken nuggets
+
+- type: Tag
+  id: FakeNukeDisk
+
+- type: Tag
+  id: NukeOpsUplink
+
+- type: Tag
+  id: Ointment
+
+- type: Tag
+  id: Oneirophage
+
+- type: Tag
+  id: Oni
+
+- type: Tag
+  id: Ore
+
+- type: Tag
+  id: Packet
+
+#- type: Tag #VASH - Deemed too invasive. Kept for reference.
+#  id: Pad
+
+- type: Tag
+  id: Paper
+
+- type: Tag
+  id: Payload # for grenade/bomb crafting
+
+- type: Tag
+  id: Pancake
+
+- type: Tag
+  id: Pen
+
+- type: Tag
+  id: PepperShaker
+
+- type: Tag
+  id: PercussionInstrument
+
+- type: Tag
+  id: PetWearable
+
+- type: Tag
+  id: HardHat
+
+- type: Tag
+  id: MonkeyWearable
+
+- type: Tag
+  id: Pickaxe
+
+- type: Tag
+  id: ItemPickaxe
+
+- type: Tag
+  id: Pie
+
+- type: Tag
+  id: Pig
+
+- type: Tag
+  id: Pill
+
+- type: Tag
+  id: PillCanister
+
+- type: Tag
+  id: Pipe
+
+- type: Tag
+  id: Pizza
+
+- type: Tag
+  id: PlantAnalyzer
+
+- type: Tag
+  id: PlantBGone
+
+- type: Tag
+  id: PlantSampleTaker
+
+- type: Tag
+  id: HydroponicsToolClippers
+
+- type: Tag
+  id: PlasmaGlassShard
+
+- type: Tag
+  id: PlasmamanSafe
+
+- type: Tag
+  id: Plastic
+
+- type: Tag
+  id: Plunger
+
+- type: Tag
+  id: PlushieGhost
+
+- type: Tag
+  id: SiliconMob
+
+- type: Tag
+  id: WeldbotFixableStructure
+
+- type: Tag
+  id: PlushieSharkBlue
+
+- type: Tag
+  id: PlushieSharkPink
+
+- type: Tag
+  id: PlushieSharkGrey
+
+- type: Tag
+  id: Potato
+
+- type: Tag
+  id: PotatoBattery
+
+- type: Tag
+  id: PowerCell
+
+- type: Tag
+  id: PowerCellSmall
+
+- type: Tag
+  id: PowerCage
+
+- type: Tag
+  id: Powerdrill
+
+- type: Tag
+  id: PrisonUniform
+
+- type: Tag
+  id: PrizeTicket
+
+- type: Tag
+  id: ProximitySensor
+
+- type: Tag
+  id: QuantumSpinInverter
+
+# for the Damp Rag. From VASH, but doesn't necessarily require it.
+- type: Tag
+  id: Rag
+
+- type: Tag
+  id: Radio
+
+- type: Tag
+  id: RawMaterial
+
+# Give this to something that doesn't need any special recycler behavior and just needs deleting.
+- type: Tag
+  id: Recyclable
+
+- type: Tag
+  id: ReinforcedGlassShard
+
+- type: Tag
+  id: ReptilianFood
+
+- type: Tag
+  id: RifleStock
+
+- type: Tag
+  id: Ring
+
+- type: Tag
+  id: RipleyCentralControlModule
+
+- type: Tag
+  id: RipleyPeripheralsControlModule
+
+- type: Tag
+  id: RipleyLArm
+
+- type: Tag
+  id: RipleyLLeg
+
+- type: Tag
+  id: RipleyRLeg
+
+- type: Tag
+  id: RipleyRArm
+
+- type: Tag
+  id: RodMetal1
+
+- type: Tag
+  id: RollingPaper
+
+- type: Tag
+  id: RollingPin
+
+- type: Tag
+  id: RPD
+
+- type: Tag
+  id: SaltShaker
+
+- type: Tag
+  id: SalvageExperiment
+
+- type: Tag
+  id: Screwdriver
+
+- type: Tag
+  id: SecBeltEquip
+
+- type: Tag
+  id: SecurePlasmaWindoor
+
+- type: Tag
+  id: SecureUraniumWindoor
+
+- type: Tag
+  id: SecureWindoor
+
+- type: Tag
+  id: SecurityHelmet
+
+- type: Tag
+  id: SecwayKeys
+
+- type: Tag
+  id: Sheet
+
+- type: Tag
+  id: ShellShotgun
+
+- type: Tag
+  id: ShellShotgunLight # shotgun shells that are compatible with the flare gun.
+
+- type: Tag
+  id: Shiv
+
+- type: Tag
+  id: Shovel
+
+- type: Tag
+  id: Sidearm
+
+- type: Tag
+  id: SignalTrigger
+
+- type: Tag
+  id: SkeletonMotorcycleKeys
+
+- type: Tag
+  id: Skewer
+
+- type: Tag
+  id: Slice # sliced fruit, vegetables, pizza etc.
+
+- type: Tag
+  id: SmallAIChip
+
+- type: Tag
+  id: SmallMech
+
+- type: Tag
+  id: Smokable
+
+- type: Tag
+  id: SnowyLabs
+
+- type: Tag
+  id: Soap
+
+- type: Tag
+  id: SolarTrackerElectronics
+
+- type: Tag
+  id: Soup
+
+- type: Tag
+  id: SpookyFog
+
+- type: Tag
+  id: Spray
+
+- type: Tag
+  id: Spear
+
+- type: Tag
+  id: SpeedLoaderCap
+
+- type: Tag
+  id: SpeedLoaderMagnum
+
+- type: Tag
+  id: SpeedLoaderPistol
+
+- type: Tag
+  id: SpeedLoaderRifle
+
+- type: Tag
+  id: SpiderCraft
+
+- type: Tag
+  id: SpreaderIgnore
+
+- type: Tag
+  id: StringInstrument
+
+- type: Tag
+  id: StationAi
+
+- type: Tag
+  id: StationMapElectronics
+
+- type: Tag
+  id: Steak
+
+- type: Tag
+  id: Stunbaton
+
+- type: Tag
+  id: SubdermalImplant
+
+- type: Tag
+  id: SuitEVA
+
+- type: Tag
+  id: Sunglasses
+
+- type: Tag
+  id: SurgeryTool
+
+- type: Tag
+  id: SurveillanceCameraMonitorCircuitboard
+
+- type: Tag
+  id: Syndicate
+
+- type: Tag
+  id: SyndicateSegwayKeys
+
+- type: Tag
+  id: Syringe
+
+- type: Tag
+  id: Spellbook
+
+- type: Tag
+  id: Taser
+
+#- type: Tag #VASH - Deemed too invasive. Kept for reference.
+#  id: Tampon
+
+- type: Tag
+  id: TabletopBoard
+
+- type: Tag
+  id: Taco
+
+- type: Tag
+  id: TabletopPiece
+
+- type: Tag
+  id: TimerBrigElectronics
+
+- type: Tag
+  id: TimerScreenElectronics
+
+- type: Tag
+  id: TimerSignalElectronics
+
+- type: Tag
+  id: Toolbox
+
+- type: Tag
+  id: Torch
+
+- type: Tag
+  id: ToyRubberDuck
+
+- type: Tag
+  id: ToySidearm
+
+- type: Tag
+  id: Trash
+
+- type: Tag
+  id: TrashBag
+
+- type: Tag
+  id: Truncheon
+
+- type: Tag
+  id: TurretCompatibleWeapon # Used in the construction of sentry turrets
+
+- type: Tag
+  id: TurretControlElectronics # Used in the construction of sentry turret control panels
+
+- type: Tag
+  id: Unimplantable
+
+- type: Tag
+  id: Unstackable # To prevent things like atmos devices (filters etc) being stacked on one tile. See NoUnstackableInTile
+
+- type: Tag
+  id: UraniumGlassShard
+
+- type: Tag
+  id: Vegetable
+
+- type: Tag # Goobstation
+  id: VehicleKey
+
+- type: Tag
+  id: VimPilot
+
+- type: Tag
+  id: VoiceTrigger
+
+- type: Tag # Eating fix tag
+  id: VoxFood
+
+- type: Tag
+  id: Wall
+
+- type: Tag
+  id: WallmountGeneratorAPUElectronics
+
+- type: Tag
+  id: WallmountGeneratorElectronics
+
+- type: Tag
+  id: WallmountSubstationElectronics
+
+- type: Tag
+  id: WeaponAntiqueLaser
+
+- type: Tag
+  id: WeaponDisabler
+
+- type: Tag
+  id: WeaponPistolCHIMPUpgradeKit
+
+- type: Tag
+  id: WeaponShotgunKammerer
+
+- type: Tag
+  id: WeldingMask
+
+- type: Tag
+  id: WeldingTool
+
+- type: Tag
+  id: WetFloorSign
+
+- type: Tag
+  id: Wheat
+
+- type: Tag
+  id: WhitelistChameleon
+
+- type: Tag
+  id: WhoopieCushion
+
+- type: Tag
+  id: Window
+
+- type: Tag
+  id: Wine
+
+- type: Tag
+  id: WizardWand # that evil vvizard vvand
+
+- type: Tag
+  id: WizardStaff
+
+- type: Tag
+  id: Wirecutter
+
+- type: Tag
+  id: Wooden # just like our atmos
+
+- type: Tag
+  id: WoodwindInstrument # even more like our atmos
+
+- type: Tag
+  id: Wrench
+
+- type: Tag
+  id: Wringer
+
+- type: Tag
+  id: Write
+
+- type: Tag
+  id: WriteIgnoreStamps
+
+# ALPHABETICAL
+
+- type: Tag
+  id: FelinidEmotes
+
+- type: Tag
+  id: HarpyEmotes
+
+- type: Tag
+  id: HumanEmotes
+
+- type: Tag
+  id: VulpEmotes
+
+- type: Tag
+  id: OniEmotes
+
+- type: Tag
+  id: ShadowkinEmotes
+
+- type: Tag
+  id: SiliconEmotes
+
+- type: Tag
+  id: UnathiEmotes
+
+- type: Tag
+  id: KitsuneEmotes
+
+- type: Tag
+  id: MothEmotes
+
+- type: Tag
+  id: Portafib
+
+- type: Tag
+  id: Rollerbed
+
+- type: Tag
+  id: Jaunter

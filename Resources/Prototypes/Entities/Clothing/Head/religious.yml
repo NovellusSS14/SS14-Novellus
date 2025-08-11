@@ -1,0 +1,37 @@
+# SPDX-FileCopyrightText: 2024 VMSolidus <evilexecutive@gmail.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadHatHijabColorable
+  name: hijab
+  description: Encompassing cloth headwear worn by some human cultures and religions.
+  components:
+  - type: Sprite
+    sprite: Clothing/Head/ReligiousHeadgear/hijab.rsi
+  - type: Clothing
+    sprite: Clothing/Head/ReligiousHeadgear/hijab.rsi
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadHatTurbanColorable
+  name: turban
+  description: A sturdy cloth, worn around the head.
+  components:
+  - type: Sprite
+    sprite: Clothing/Head/ReligiousHeadgear/turban.rsi
+  - type: Clothing
+    sprite: Clothing/Head/ReligiousHeadgear/turban.rsi
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadHatKippahColorable
+  name: kippah
+  description: A head covering commonly worn by those of Jewish faith.
+  components:
+  - type: Sprite
+    sprite: Clothing/Head/ReligiousHeadgear/kippah.rsi
+  - type: Clothing
+    sprite: Clothing/Head/ReligiousHeadgear/kippah.rsi

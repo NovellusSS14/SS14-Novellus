@@ -1,0 +1,25 @@
+<!--
+SPDX-FileCopyrightText: 2024 gluesniffler <159397573+gluesniffler@users.noreply.github.com>
+SPDX-FileCopyrightText: 2024 gluesniffler <linebarrelerenthusiast@gmail.com>
+SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+
+SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+-->
+
+<ui:XenoChoiceControl
+    xmlns="https://spacestation14.io"
+    xmlns:ui="clr-namespace:Content.Client._Shitmed.Xenonids.UI">
+    <BoxContainer Orientation="Horizontal">
+        <Button Name="Button" Access="Public"
+                HorizontalExpand="True" VerticalExpand="False"
+                StyleClasses="ButtonSquare" Margin="0">
+            <BoxContainer Orientation="Horizontal" Margin="0">
+                <TextureRect Name="Texture" Access="Public"
+                             HorizontalExpand="False" VerticalExpand="False"
+                             Margin="1"/>
+                <Control MinWidth="5"/>
+                <RichTextLabel Name="NameLabel" Access="Public" VerticalAlignment="Center"/>
+            </BoxContainer>
+        </Button>
+    </BoxContainer>
+</ui:XenoChoiceControl>

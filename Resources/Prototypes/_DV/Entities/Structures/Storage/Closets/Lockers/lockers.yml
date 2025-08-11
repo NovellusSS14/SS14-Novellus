@@ -1,0 +1,46 @@
+# SPDX-FileCopyrightText: 2024 Timemaster99 <57200767+Timemaster99@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 VMSolidus <evilexecutive@gmail.com>
+# SPDX-FileCopyrightText: 2025 Rosycup <178287475+Rosycup@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 Skubman <ba.fallaria@gmail.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: entity
+  id: LockerChiefJustice
+  parent: LockerBaseSecure
+  name: chief justice's locker
+  components:
+  - type: Appearance
+  - type: EntityStorageVisuals
+    stateBaseClosed: cj
+    stateDoorOpen: cj_open
+    stateDoorClosed: cj_door
+  - type: AccessReader
+    access: [["ChiefJustice"]]
+
+- type: entity
+  id: LockerClerk
+  parent: LockerBaseSecure
+  name: clerk's locker
+  components:
+  - type: Appearance
+  - type: EntityStorageVisuals
+    stateBaseClosed: clerk
+    stateDoorOpen: clerk_open
+    stateDoorClosed: clerk_door
+  - type: AccessReader
+    access: [["Clerk"]]
+
+- type: entity
+  id: LockerAdministrativeAssistant
+  parent: LockerBaseSecure
+  name: administrative assistant's locker
+  components:
+  - type: Appearance
+  - type: EntityStorageVisuals
+    stateBaseClosed: admin_assist
+    stateDoorOpen: admin_assist_open
+    stateDoorClosed: admin_assist_door
+  - type: AccessReader
+    access: [["Command"]]

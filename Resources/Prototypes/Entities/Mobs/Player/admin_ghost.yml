@@ -1,0 +1,264 @@
+# SPDX-FileCopyrightText: 2020 Vince
+# SPDX-FileCopyrightText: 2020 Víctor Aguilera Puerto
+# SPDX-FileCopyrightText: 2021 ShadowCommander
+# SPDX-FileCopyrightText: 2021 Swept
+# SPDX-FileCopyrightText: 2022 20kdc
+# SPDX-FileCopyrightText: 2022 Alex Evgrashin
+# SPDX-FileCopyrightText: 2022 Jacob Tong
+# SPDX-FileCopyrightText: 2022 Jezithyr
+# SPDX-FileCopyrightText: 2022 Leon Friedrich
+# SPDX-FileCopyrightText: 2022 Moony
+# SPDX-FileCopyrightText: 2022 Rane
+# SPDX-FileCopyrightText: 2022 Vera Aguilera Puerto
+# SPDX-FileCopyrightText: 2022 Veritius
+# SPDX-FileCopyrightText: 2022 mirrorcult
+# SPDX-FileCopyrightText: 2023 Chief-Engineer
+# SPDX-FileCopyrightText: 2023 Julian Giebel
+# SPDX-FileCopyrightText: 2023 Kara
+# SPDX-FileCopyrightText: 2023 Nairod
+# SPDX-FileCopyrightText: 2023 Pieter-Jan Briers
+# SPDX-FileCopyrightText: 2023 Vordenburg
+# SPDX-FileCopyrightText: 2023 crazybrain23
+# SPDX-FileCopyrightText: 2023 metalgearsloth
+# SPDX-FileCopyrightText: 2024 AJCM-git
+# SPDX-FileCopyrightText: 2024 DEATHB4DEFEAT
+# SPDX-FileCopyrightText: 2024 DrSmugleaf
+# SPDX-FileCopyrightText: 2024 Ed
+# SPDX-FileCopyrightText: 2024 FoxxoTrystan
+# SPDX-FileCopyrightText: 2024 Geekyhobo
+# SPDX-FileCopyrightText: 2024 MendaxxDev
+# SPDX-FileCopyrightText: 2024 Mnemotechnican
+# SPDX-FileCopyrightText: 2024 Nemanja
+# SPDX-FileCopyrightText: 2024 OCO_Omega
+# SPDX-FileCopyrightText: 2024 ScarKy0
+# SPDX-FileCopyrightText: 2024 Tayrtahn
+# SPDX-FileCopyrightText: 2024 VMSolidus
+# SPDX-FileCopyrightText: 2024 Vasilis
+# SPDX-FileCopyrightText: 2024 WarMechanic
+# SPDX-FileCopyrightText: 2024 deltanedas
+# SPDX-FileCopyrightText: 2024 nikthechampiongr
+# SPDX-FileCopyrightText: 2025 John Willis
+# SPDX-FileCopyrightText: 2025 Lyndomen
+# SPDX-FileCopyrightText: 2025 M3739
+# SPDX-FileCopyrightText: 2025 Quanteey
+# SPDX-FileCopyrightText: 2025 Solaris
+# SPDX-FileCopyrightText: 2025 Spatison
+# SPDX-FileCopyrightText: 2025 sleepyyapril
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: entity
+  parent: [MobObserver, InventoryBase]
+  id: AdminObserver
+  name: admin observer
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Eye
+    visMask:
+      - TelegnosticProjection
+      - PsionicInvisibility
+      - Ghost
+      - Normal
+      - Ethereal
+  - type: ContentEye
+    maxZoom: 8.916104, 8.916104
+  - type: Tag
+    tags:
+    - InstantDoAfters
+    - CanPilot
+    - BypassInteractionRangeChecks
+    - BypassDropChecks
+    - NoConsoleSound
+  - type: Input
+    context: "aghost"
+  - type: Ghost
+    canInteract: true
+  - type: GhostHearing
+  - type: Hands
+  - type: ComplexInteraction
+  - type: Puller
+    needsHands: false # Tail Drag
+    pushAcceleration: 1000000 # Will still be capped in max speed
+    maxPushRange: 20
+  - type: CombatMode
+  - type: Physics
+    ignorePaused: true
+    bodyType: Kinematic
+  - type: Body
+    prototype: Aghost
+    thermalVisibility: false
+  - type: Access
+    groups:
+    - AllAccess
+    - Silicon
+    tags:
+    - NuclearOperative
+    - SyndicateAgent
+    - CentralCommand
+  - type: UserInterface
+    interfaces:
+      enum.SolarControlConsoleUiKey.Key:
+        type: SolarControlConsoleBoundUserInterface
+      enum.CommunicationsConsoleUiKey.Key:
+        type: CommunicationsConsoleBoundUserInterface
+      enum.RadarConsoleUiKey.Key:
+        type: RadarConsoleBoundUserInterface
+      enum.CargoConsoleUiKey.Orders:
+        type: CargoOrderConsoleBoundUserInterface
+      enum.CrewMonitoringUIKey.Key:
+        type: CrewMonitoringBoundUserInterface
+      # Begin CD - Character Records
+      enum.CharacterRecordConsoleKey.Key:
+        type: CharacterRecordConsoleBoundUserInterface
+      # End CD - Character Records
+      enum.GeneralStationRecordConsoleKey.Key:
+      # who the fuck named this bruh
+        type: GeneralStationRecordConsoleBoundUserInterface
+  - type: IntrinsicUI
+    uis:
+      enum.SolarControlConsoleUiKey.Key:
+        toggleAction: ActionAGhostShowSolar
+      enum.CommunicationsConsoleUiKey.Key:
+        toggleAction: ActionAGhostShowCommunications
+      enum.RadarConsoleUiKey.Key:
+        toggleAction: ActionAGhostShowRadar
+      enum.CargoConsoleUiKey.Orders:
+        toggleAction: ActionAGhostShowCargo
+      enum.CrewMonitoringUIKey.Key:
+        toggleAction: ActionAGhostShowCrewMonitoring
+      enum.GeneralStationRecordConsoleKey.Key:
+        toggleAction: ActionAGhostShowStationRecords
+      # Begin CD - Character Records
+      enum.CharacterRecordConsoleKey.Key:
+        toggleAction: ActionAGhostShowCharacterRecords
+      # End CD - Character Records
+  - type: SolarControlConsole # look ma i AM the computer!
+  - type: CommunicationsConsole
+    title: comms-console-announcement-title-centcom
+    color: "#228b22"
+  - type: RadarConsole
+    followEntity: true
+  - type: CargoOrderConsole
+  - type: BankClient
+  - type: CrewMonitoringConsole
+    alertsEnabled: false # DeltaV - crew monitors beeping is specific to deltaV, and we don't want it for aghost.
+  - type: GeneralStationRecordConsole
+    canDeleteEntries: true
+  # Begin CD - Character Records
+  - type: CharacterRecordConsole
+    consoleType: Admin
+  - type: CriminalRecordsConsole
+  # End CD - Character Records
+  - type: DeviceNetwork
+    deviceNetId: Wireless
+    receiveFrequencyId: CrewMonitor
+    transmitFrequencyId: ShuttleTimer
+  - type: WirelessNetworkConnection
+    range: 500
+  - type: StationLimitedNetwork
+  - type: Thieving
+    stripTimeMultiplier: 0
+    ignoreStripHidden: true
+  - type: Stripping
+  - type: SolutionScanner
+  - type: IgnoreUIRange
+  - type: ShowAntagIcons
+  - type: Inventory
+    templateId: aghost
+  - type: Loadout
+    prototypes: [ MobAghostGear ]
+  - type: SupermatterImmune
+  - type: BypassInteractionChecks
+
+- type: entity
+  id: ActionAGhostShowSolar
+  name: Solar Control Interface
+  description: View a solar control interface.
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: InstantAction
+    icon: { sprite: Structures/Machines/parts.rsi, state: box_0 }
+    iconOn: Structures/Machines/parts.rsi/box_2.png
+    keywords: [ "AI", "console", "interface" ]
+    priority: -10
+    event: !type:ToggleIntrinsicUIEvent { key: enum.SolarControlConsoleUiKey.Key }
+
+- type: entity
+  id: ActionAGhostShowCommunications
+  name: Communications Interface
+  description: View a communications interface.
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: InstantAction
+    icon: { sprite: Interface/Actions/actions_ai.rsi, state: comms_console }
+    iconOn: Interface/Actions/actions_ai.rsi/comms_console.png
+    keywords: [ "AI", "console", "interface" ]
+    priority: -4
+    event: !type:ToggleIntrinsicUIEvent { key: enum.CommunicationsConsoleUiKey.Key }
+
+- type: entity
+  id: ActionAGhostShowRadar
+  name: Mass Scanner Interface
+  description: View a mass scanner interface.
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: InstantAction
+    icon: { sprite: Interface/Actions/actions_ai.rsi, state: mass_scanner }
+    iconOn: Interface/Actions/actions_ai.rsi/mass_scanner.png
+    keywords: [ "AI", "console", "interface" ]
+    priority: -7
+    event: !type:ToggleIntrinsicUIEvent { key: enum.RadarConsoleUiKey.Key }
+
+- type: entity
+  id: ActionAGhostShowCargo
+  name: Cargo Ordering Interface
+  description: View a cargo ordering interface.
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: InstantAction
+    icon: { sprite: Structures/Machines/parts.rsi, state: box_0 }
+    iconOn: Structures/Machines/parts.rsi/box_2.png
+    keywords: [ "AI", "console", "interface" ]
+    priority: -10
+    event: !type:ToggleIntrinsicUIEvent { key: enum.CargoConsoleUiKey.Orders }
+
+- type: entity
+  id: ActionAGhostShowCrewMonitoring
+  name: Crew Monitoring Interface
+  description: View a crew monitoring interface.
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: InstantAction
+    icon: { sprite: Interface/Actions/actions_ai.rsi, state: crew_monitor }
+    iconOn: Interface/Actions/actions_ai.rsi/crew_monitor.png
+    keywords: [ "AI", "console", "interface" ]
+    priority: -9
+    event: !type:ToggleIntrinsicUIEvent { key: enum.CrewMonitoringUIKey.Key }
+
+- type: entity
+  id: ActionAGhostShowStationRecords
+  name: Station Records Interface
+  description: View a station records Interface
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: InstantAction
+    icon: { sprite: Interface/Actions/actions_ai.rsi, state: station_records }
+    iconOn: Interface/Actions/actions_ai.rsi/station_records.png
+    keywords: [ "AI", "console", "interface" ]
+    priority: -8
+    event: !type:ToggleIntrinsicUIEvent { key: enum.GeneralStationRecordConsoleKey.Key }
+
+# Begin CD - Character Records
+- type: entity
+  id: ActionAGhostShowCharacterRecords
+  name: Character Records Interface
+  description: View all of the character records
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: InstantAction
+    icon: { sprite: Structures/Machines/parts.rsi, state: box_0 }
+    iconOn: Structures/Machines/parts.rsi/box_2.png
+    keywords: [ "AI", "console", "interface" ]
+    priority: -10
+    event: !type:ToggleIntrinsicUIEvent { key: enum.CharacterRecordConsoleKey.Key }
+# Edn CD - Character Records

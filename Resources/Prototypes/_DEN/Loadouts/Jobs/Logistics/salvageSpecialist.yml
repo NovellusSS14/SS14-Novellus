@@ -1,0 +1,41 @@
+# SPDX-FileCopyrightText: 2025 Rosycup <178287475+Rosycup@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: loadout
+  id: LoadoutSalvageGearJaunter
+  category: JobsLogisticsSalvageSpecialist
+  cost: 0
+  requirements:
+    - !type:CharacterJobRequirement
+      jobs:
+        - SalvageSpecialist
+  items:
+    - LavalandJaunter
+
+- type: loadout
+  id: LoadoutSalvageGearJaunterSpare
+  category: JobsLogisticsSalvageSpecialist
+  cost: 4
+  requirements:
+    - !type:CharacterJobRequirement
+      jobs:
+        - SalvageSpecialist
+  items:
+    - LavalandJaunter
+
+- type: loadout
+  id: LoadoutSalvageMessengerBackpack
+  category: JobsLogisticsSalvageSpecialist
+  cost: 0
+  exclusive: true
+  customColorTint: true
+  items:
+    - ClothingBackpackMessengerSalvage
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutSalvageSpecialistBackpacks
+    - !type:CharacterJobRequirement
+      jobs:
+        - SalvageSpecialist

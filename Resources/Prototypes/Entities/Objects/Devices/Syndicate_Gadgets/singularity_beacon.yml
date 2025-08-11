@@ -1,0 +1,45 @@
+# SPDX-FileCopyrightText: 2024 Ilya246 <57039557+Ilya246@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 Tayrtahn <tayrtahn@gmail.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: entity
+  id: SingularityBeacon
+  parent: BaseMachinePowered
+  name: singularity beacon
+  description: A syndicate device that attracts the singularity. If it's loose and you're seeing this, run.
+  components:
+  - type: Sprite
+    sprite: Objects/Devices/singularity_beacon.rsi
+    layers:
+    - state: icon
+  - type: Item
+    size: Huge
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.40,-0.40,0.40,0.40"
+        density: 80
+        mask:
+        - MachineMask
+        layer:
+        - MachineLayer
+  - type: SingularityAttractor
+    baseRange: 80
+  - type: SinguloFood
+    energy: 120
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 50
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+  - type: ApcPowerReceiver
+    powerLoad: 15000
+  - type: StaticPrice
+    price: 1500

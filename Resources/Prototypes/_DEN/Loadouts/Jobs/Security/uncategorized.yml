@@ -1,0 +1,202 @@
+# SPDX-FileCopyrightText: 2025 Blitz
+# SPDX-FileCopyrightText: 2025 BlitzTheSquishy
+# SPDX-FileCopyrightText: 2025 Rosycup
+# SPDX-FileCopyrightText: 2025 Skubman
+# SPDX-FileCopyrightText: 2025 sleepyyapril
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: loadout
+  id: LoadoutSecurityHeadHatSeniorTrooper
+  category: JobsSecurityAUncategorized
+  cost: 0
+  exclusive: true
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutSecurityHead
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - Security
+  items:
+    - ClothingHeadHatSeniorTrooper
+
+- type: loadout
+  id: LoadoutMagazineShotgunBeanbag
+  category: JobsSecurityAUncategorized
+  cost: 0
+  requirements:
+    - !type:CharacterDepartmentTimeRequirement
+      department: Security
+      min: 10800 # 3 hours
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutSecurityEquipment
+    - !type:CharacterLogicOrRequirement
+      requirements:
+        - !type:CharacterDepartmentRequirement
+          departments:
+            - Security
+  items:
+    - MagazineShotgunBeanbag
+
+- type: loadout
+  id: LoadoutSecurityShotgunSawn
+  category: JobsSecurityAUncategorized
+  cost: 4
+  canBeHeirloom: true
+  guideEntry: SecurityWeapons
+  requirements:
+    - !type:CharacterDepartmentTimeRequirement
+      department: Security
+      min: 10800 # 3 hours
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutSecurityWeapons
+    - !type:CharacterLogicOrRequirement
+      requirements:
+        - !type:CharacterDepartmentRequirement
+          departments:
+            - Security
+  items:
+    - WeaponShotgunSawnSecurity
+
+- type: loadout
+  id: LoadoutSecurityPlasteelArmingSword
+  category: JobsSecurityAUncategorized
+  cost: 3
+  requirements:
+    - !type:CharacterDepartmentTimeRequirement
+      department: Security
+      min: 10800 # 3 hours
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutSecurityWeapons
+    - !type:CharacterLogicOrRequirement
+      requirements:
+        - !type:CharacterDepartmentRequirement
+          departments:
+            - Security
+  items:
+    - PlasteelArmingSwordSecurity
+
+- type: loadout
+  id: LoadoutSecurityHeadHelmetCombat
+  category: JobsSecurityAUncategorized
+  cost: 0
+  exclusive: true
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutSecurityHead
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - Security
+  items:
+    - ClothingHeadHelmetSecurityCombat
+
+- type: loadout
+  id: LoadoutSecurityMaskGasCombat
+  category: JobsSecurityAUncategorized
+  cost: 2 # Slightly tougher than the normal security mask
+  exclusive: true
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutSecurityMask
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - Security
+  items:
+    - ClothingMaskGasSecurityCombat
+
+- type: loadout
+  id: LoadoutSecurityMaskGasBallistic
+  category: JobsSecurityAUncategorized
+  cost: 2 # Slightly tougher than the normal security mask
+  exclusive: true
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutSecurityMask
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - Security
+  items:
+    - ClothingMaskGasSecurityBallistic
+
+- type: loadout
+  id: LoadoutSecurityUniformJumpsuitSeniorTrooper
+  category: JobsSecurityAUncategorized
+  cost: 0
+  exclusive: true
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutSecurityUniforms
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - Security
+  items:
+    - ClothingUniformJumpsuitSeniorTrooper
+
+- type: loadout
+  id: LoadoutSecurityUniformJumpsuit
+  category: JobsSecurityAUncategorized
+  cost: 0
+  exclusive: true
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutSecurityUniforms
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - Security
+    - !type:CharacterJobRequirement
+      inverted: true
+      jobs:
+        - Brigmedic # Corpsman has ClothingUniformJumpsuitBrigmedic
+        - Warden # Warden has ClothingUniformJumpsuitWarden
+        - HeadOfSecurity # HoS has ClothingUniformJumpsuitHoS
+  items:
+    - ClothingUniformJumpsuitSec
+
+- type: loadout
+  id: LoadoutSecurityUniformJumpskirt
+  category: JobsSecurityAUncategorized
+  cost: 0
+  exclusive: true
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutSecurityUniforms
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - Security
+    - !type:CharacterJobRequirement
+      inverted: true
+      jobs:
+        - Brigmedic # Corpsman has ClothingUniformJumpskirtBrigmedic
+        - Warden # Warden has ClothingUniformJumpskirtWarden
+        - HeadOfSecurity # HoS has ClothingUniformJumpskirtHoS
+  items:
+    - ClothingUniformJumpskirtSec
+
+- type: loadout
+  id: LoadoutTowelRed
+  category: JobsSecurityAUncategorized
+  cost: 1
+  requirements:
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - Security
+  items:
+    - TowelColorRed
+
+- type: loadout
+  id: LoadoutClothingBackSecurityMessenger
+  category: JobsSecurityAUncategorized
+  cost: 0
+  exclusive: true
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutSecurityBackpacks
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - Security
+    - !type:CharacterJobRequirement
+      inverted: true
+      jobs:
+        - Brigmedic # Mostly for corpsman recognizibility
+  items:
+    - ClothingBackpackMessengerSecurity

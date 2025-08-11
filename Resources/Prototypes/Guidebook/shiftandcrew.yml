@@ -1,0 +1,62 @@
+# SPDX-FileCopyrightText: 2023 AjexRose
+# SPDX-FileCopyrightText: 2023 Hebi
+# SPDX-FileCopyrightText: 2023 Kevin Zheng
+# SPDX-FileCopyrightText: 2023 Leon Friedrich
+# SPDX-FileCopyrightText: 2023 Nails+Tape
+# SPDX-FileCopyrightText: 2023 Nemanja
+# SPDX-FileCopyrightText: 2023 Sir Winters
+# SPDX-FileCopyrightText: 2023 end
+# SPDX-FileCopyrightText: 2023 faint
+# SPDX-FileCopyrightText: 2023 liltenhead
+# SPDX-FileCopyrightText: 2024 Mnemotechnican
+# SPDX-FileCopyrightText: 2024 f0x-n3rd
+# SPDX-FileCopyrightText: 2025 portfiend
+# SPDX-FileCopyrightText: 2025 sleepyyapril
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: guideEntry
+  id: Jobs
+  name: guide-entry-jobs
+  text: "/ServerInfo/Guidebook/Jobs.xml"
+  children:
+  - Bartender
+  - Chef
+  - Botany
+  - Engineering
+  - Science
+  - Security
+  - Janitorial
+  - Cargo
+  - Salvage
+  - Medical
+
+- type: guideEntry
+  id: Survival
+  name: guide-entry-survival
+  text: "/ServerInfo/Guidebook/Survival.xml"
+
+- type: guideEntry
+  id: Janitorial
+  name: guide-entry-janitorial
+  text: "/ServerInfo/Guidebook/Service/Janitorial.xml"
+
+- type: guideEntry
+  id: Bartender
+  name: guide-entry-bartender
+  text: "/ServerInfo/Guidebook/Service/Bartender.xml"
+  filterEnabled: True
+
+- type: guideEntry
+  id: Chef
+  name: guide-entry-chef
+  text: "/ServerInfo/Guidebook/Service/Chef.xml"
+  children:
+  - Food Recipes
+  - SequenceCooking # DEN
+
+- type: guideEntry
+  id: Food Recipes
+  name: guide-entry-foodrecipes
+  text: "/ServerInfo/Guidebook/Service/FoodRecipes.xml"
+  filterEnabled: true

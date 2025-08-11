@@ -1,0 +1,23 @@
+# SPDX-FileCopyrightText: 2025 Rosycup <178287475+Rosycup@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: entity
+  parent: ClothingHandsBase
+  id: ClothingHandsGlovesMechanic
+  name: mechanic gloves
+  description: Reinforced gloves to prevent crushing when working with heavy machinery.
+  components:
+  - type: Sprite
+    sprite: _CD/Clothing/Hands/Gloves/reinforced.rsi
+  - type: Clothing
+    sprite: _CD/Clothing/Hands/Gloves/reinforced.rsi
+  - type: Fiber
+    fiberMaterial: fibers-durathread
+    fiberColor: fibers-black
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.95
+  - type: FingerprintMask

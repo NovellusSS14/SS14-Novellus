@@ -1,0 +1,27 @@
+# SPDX-FileCopyrightText: 2025 Rosycup <178287475+Rosycup@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+# Blueshield
+- type: entity
+  parent: IDCardStandard
+  id: BlueshieldIDCard
+  name: blueshield officer ID card
+  components:
+  - type: Sprite
+    layers:
+    - state: centcom
+    - state: departmenthead
+      color: "#1B67A5"
+    - state: subdepartment
+      color: "#030e17"
+    - state: blueshieldofficer
+  - type: Item
+    heldPrefix:
+  - type: PresetIdCard
+    job: BlueshieldOfficer
+  - type: Access
+    tags:
+    - CentralCommand
+    - BlueshieldOfficer

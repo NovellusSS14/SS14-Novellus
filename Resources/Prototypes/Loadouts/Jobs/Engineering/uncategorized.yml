@@ -1,0 +1,325 @@
+# SPDX-FileCopyrightText: 2024 DEATHB4DEFEAT
+# SPDX-FileCopyrightText: 2024 VMSolidus
+# SPDX-FileCopyrightText: 2025 Blitz
+# SPDX-FileCopyrightText: 2025 BlitzTheSquishy
+# SPDX-FileCopyrightText: 2025 Lonofera
+# SPDX-FileCopyrightText: 2025 MajorMoth
+# SPDX-FileCopyrightText: 2025 Rosycup
+# SPDX-FileCopyrightText: 2025 mart
+# SPDX-FileCopyrightText: 2025 sleepyyapril
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+# All Engineering Department Jobs
+# Backpacks
+- type: loadout
+  id: LoadoutBackpackEngineering
+  category: JobsEngineeringAAUncategorized
+  cost: 0
+  exclusive: true
+  items:
+    - ClothingBackpackEngineering
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutEngineeringBackpacks
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - Engineering
+    - !type:CharacterJobRequirement
+      inverted: true
+      jobs:
+        - ChiefEngineer # CE has ClothingBackpackChiefEngineerFilled
+
+- type: loadout
+  id: LoadoutBackpackSatchelEngineering
+  category: JobsEngineeringAAUncategorized
+  cost: 0
+  exclusive: true
+  items:
+    - ClothingBackpackSatchelEngineering
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutEngineeringBackpacks
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - Engineering
+    - !type:CharacterJobRequirement
+      inverted: true
+      jobs:
+        - ChiefEngineer # CE has ClothingBackpackSatchelChiefEngineerFilled
+
+- type: loadout
+  id: LoadoutBackpackDuffelEngineering
+  category: JobsEngineeringAAUncategorized
+  cost: 0
+  exclusive: true
+  items:
+    - ClothingBackpackDuffelEngineering
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutEngineeringBackpacks
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - Engineering
+    - !type:CharacterJobRequirement
+      inverted: true
+      jobs:
+        - ChiefEngineer # CE has ClothingBackpackDuffelChiefEngineerFilled
+
+# Belt
+
+# Ears
+
+# Equipment
+
+# Eyes
+- type: loadout
+  id: LoadoutEngineeringEyesMeson
+  category: JobsEngineeringAAUncategorized
+  cost: 0
+  exclusive: true
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutEngineeringEyes
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - Engineering
+  items:
+    - ClothingEyesGlassesMeson
+
+# Gloves
+- type: loadout
+  id: LoadoutEngineeringGlovesInsulated
+  category: JobsEngineeringAAUncategorized
+  cost: 0
+  exclusive: true
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutEngineeringGloves
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - Engineering
+  items:
+    - ClothingHandsGlovesColorYellow
+
+- type: loadout
+  id: LoadoutEngineeringGlovesCombat
+  category: JobsEngineeringAAUncategorized
+  cost: 0
+  exclusive: true
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutEngineeringGloves
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - Engineering
+  items:
+    - ClothingHandsGlovesCombat
+
+- type: loadout
+  id: LoadoutEngineeringGlovesMerc
+  category: JobsEngineeringAAUncategorized
+  cost: 0
+  exclusive: true
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutEngineeringGloves
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - Engineering
+  items:
+    - ClothingHandsMercGlovesCombat
+
+# Head
+- type: loadout
+  id: LoadoutEngineeringHeadBeret
+  category: JobsEngineeringAAUncategorized
+  cost: 0
+  exclusive: true
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutEngineeringHead
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - Engineering
+  items:
+    - ClothingHeadHatBeretEngineering
+
+- type: loadout
+  id: LoadoutEngineeringHeadHardhatBlue
+  category: JobsEngineeringAAUncategorized
+  cost: 0
+  exclusive: true
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutEngineeringHead
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - Engineering
+  items:
+    - ClothingHeadHatHardhatBlue
+
+- type: loadout
+  id: LoadoutEngineeringHeadHardhatOrange
+  category: JobsEngineeringAAUncategorized
+  cost: 0
+  exclusive: true
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutEngineeringHead
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - Engineering
+  items:
+    - ClothingHeadHatHardhatOrange
+
+- type: loadout
+  id: LoadoutEngineeringHeadHardhatYellow
+  category: JobsEngineeringAAUncategorized
+  cost: 0
+  exclusive: true
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutEngineeringHead
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - Engineering
+  items:
+    - ClothingHeadHatHardhatYellow
+
+- type: loadout
+  id: LoadoutEngineeringHeadHardhatWhite
+  category: JobsEngineeringAAUncategorized
+  cost: 0
+  exclusive: true
+  customColorTint: true
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutEngineeringHead
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - Engineering
+  items:
+    - ClothingHeadHatHardhatWhite
+
+- type: loadout
+  id: LoadoutEngineeringHeadHardhatRed
+  category: JobsEngineeringAAUncategorized
+  cost: 0
+  exclusive: true
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutEngineeringHead
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - Engineering
+  items:
+    - ClothingHeadHatHardhatRed
+
+# Id
+
+# Neck
+
+# Mask
+
+# Outer
+
+- type: loadout
+  id: LoadoutEngineeringWinterCoat
+  category: JobsEngineeringAAUncategorized
+  cost: 0
+  exclusive: true
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutEngineeringOuter
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - Engineering
+  items:
+    - ClothingOuterWinterEngi
+
+- type: loadout
+  id: LoadoutEngineeringOuterHazard
+  category: JobsEngineeringAAUncategorized
+  cost: 0
+  exclusive: true
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutEngineeringOuter
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - Engineering
+  items:
+    - ClothingOuterVestHazard
+
+# Shoes
+- type: loadout
+  id: LoadoutEngineeringShoesBootsWork
+  category: JobsEngineeringAAUncategorized
+  cost: 0
+  exclusive: true
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutEngineeringShoes
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - Engineering
+  items:
+    - ClothingShoesBootsWork
+
+- type: loadout
+  id: LoadoutEngineeringShoesBootsWinter
+  category: JobsEngineeringAAUncategorized
+  cost: 0
+  exclusive: true
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutEngineeringShoes
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - Engineering
+  items:
+    - ClothingShoesBootsWinterEngi
+
+# Uniforms
+- type: loadout
+  id: LoadoutEngineeringUniformHazard
+  category: JobsEngineeringAAUncategorized
+  cost: 0
+  exclusive: true
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutEngineeringUniforms
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - Engineering
+  items:
+    - ClothingUniformJumpsuitEngineeringHazard
+
+- type: loadout
+  id: LoadoutClothingUniformJumpsuitRepairmanNT
+  category: JobsEngineeringAAUncategorized
+  cost: 0
+  exclusive: true
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutEngineeringUniforms
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - Engineering
+  items:
+    - ClothingUniformJumpsuitRepairmanNT
+
+- type: loadout
+  id: LoadoutClothingUniformJumpsuitRepairmanCybersun
+  category: JobsEngineeringAAUncategorized
+  cost: 1
+  exclusive: true
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutEngineeringUniforms
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - Engineering
+  items:
+    - ClothingUniformJumpsuitRepairmanCybersun

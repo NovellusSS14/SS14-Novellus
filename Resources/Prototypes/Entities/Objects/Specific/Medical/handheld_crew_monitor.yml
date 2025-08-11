@@ -1,0 +1,132 @@
+# SPDX-FileCopyrightText: 2022 Fishfish458
+# SPDX-FileCopyrightText: 2022 Leon Friedrich
+# SPDX-FileCopyrightText: 2022 Visne
+# SPDX-FileCopyrightText: 2022 fishfish458
+# SPDX-FileCopyrightText: 2022 theashtronaut
+# SPDX-FileCopyrightText: 2023 Ed
+# SPDX-FileCopyrightText: 2023 Julian Giebel
+# SPDX-FileCopyrightText: 2023 Nemanja
+# SPDX-FileCopyrightText: 2023 PHCodes
+# SPDX-FileCopyrightText: 2024 DEATHB4DEFEAT
+# SPDX-FileCopyrightText: 2024 ERROR404
+# SPDX-FileCopyrightText: 2024 I.K
+# SPDX-FileCopyrightText: 2024 Skubman
+# SPDX-FileCopyrightText: 2024 degradka
+# SPDX-FileCopyrightText: 2024 deltanedas
+# SPDX-FileCopyrightText: 2024 metalgearsloth
+# SPDX-FileCopyrightText: 2025 Aiden
+# SPDX-FileCopyrightText: 2025 GoobBot
+# SPDX-FileCopyrightText: 2025 Killerqu00
+# SPDX-FileCopyrightText: 2025 Quanteey
+# SPDX-FileCopyrightText: 2025 Ted Lukin
+# SPDX-FileCopyrightText: 2025 pheenty
+# SPDX-FileCopyrightText: 2025 sleepyyapril
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: entity
+  name: handheld crew monitor
+  #suffix: DO NOT MAP
+  parent: BaseHandheldComputer
+  # CMO-only bud, don't add more. # haha lol
+  id: HandheldCrewMonitor
+  description: A hand-held crew monitor displaying the status of suit sensors.
+  components:
+  - type: Sprite
+    sprite: Objects/Specific/Medical/handheldcrewmonitor.rsi
+    state: scanner
+  - type: ActivatableUI
+    key: enum.CrewMonitoringUIKey.Key
+  - type: UserInterface
+    interfaces:
+      enum.CrewMonitoringUIKey.Key:
+        type: CrewMonitoringBoundUserInterface
+  - type: CrewMonitoringConsole
+  - type: DeviceNetwork
+    deviceNetId: Wireless
+    receiveFrequencyId: CrewMonitor
+  - type: WirelessNetworkConnection
+    range: 500
+  - type: StationLimitedNetwork
+  - type: ReverseEngineering # Nyano
+    difficulty: 2
+    recipes:
+      - HandheldCrewMonitor
+  - type: StaticPrice
+    price: 500
+  - type: Tag
+    tags:
+    - HighRiskItem
+  - type: StealTarget
+    stealGroup: HandheldCrewMonitor
+  - type: DamageOtherOnHit
+    damage:
+      types:
+        Blunt: 5
+
+- type: entity
+  id: HandheldCrewMonitorEmpty
+  parent: HandheldCrewMonitor
+  suffix: Empty
+  components:
+  - type: ItemSlots
+    slots:
+      cell_slot:
+        name: power-cell-slot-component-slot-name-default
+
+- type: entity
+  id: SpyCrewMonitor
+  name: spy monitor
+  description: A spy device capable of connecting to crew monitoring servers.
+  parent: HandheldCrewMonitor
+  components:
+  - type: Sprite
+    sprite: Objects/Tools/spy_device.rsi
+    state: icon
+  - type: Item
+    sprite: Objects/Tools/spy_device.rsi
+  - type: PowerCellDraw
+    useRate: 10
+  - type: StaticPrice
+    price: 750
+  - type: Tag
+    tags: []
+  - type: CrewMonitoringConsole # DeltaV - disable crew crit / dead beeping alerts
+    alertsEnabled: false
+
+
+- type: entity
+  id: SpyCrewMonitorEmpty
+  parent: SpyCrewMonitor
+  suffix: Empty
+  components:
+  - type: ItemSlots
+    slots:
+      cell_slot:
+        name: power-cell-slot-component-slot-name-default
+
+- type: entity
+  id: SyndiCrewMonitor
+  name: syndicate crew monitor
+  description: The syndicated version of crew monitor, intercepts information from the server.
+  parent: HandheldCrewMonitor
+  components:
+  - type: Sprite
+    sprite: Objects/Specific/Medical/syndihandheldcrewmonitor.rsi
+    state: syndiscanner
+  - type: Item
+    sprite: Objects/Specific/Medical/syndihandheldcrewmonitor.rsi
+  - type: PowerCellDraw
+    useRate: 40
+  - type: CrewMonitoringConsole # DeltaV - disable crew crit / dead beeping alerts
+    alertsEnabled: false
+
+- type: entity
+  id: SyndiCrewMonitorEmpty
+  parent: SyndiCrewMonitor
+  suffix: Empty
+  components:
+  - type: ItemSlots
+    slots:
+      cell_slot:
+        name: power-cell-slot-component-slot-name-default

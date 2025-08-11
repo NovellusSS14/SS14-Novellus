@@ -1,0 +1,117 @@
+# SPDX-FileCopyrightText: 2023 Ed
+# SPDX-FileCopyrightText: 2023 Flareguy
+# SPDX-FileCopyrightText: 2023 Sailor
+# SPDX-FileCopyrightText: 2023 Tony
+# SPDX-FileCopyrightText: 2023 brainfood1183
+# SPDX-FileCopyrightText: 2023 crazybrain23
+# SPDX-FileCopyrightText: 2023 metalgearsloth
+# SPDX-FileCopyrightText: 2024 Emisse
+# SPDX-FileCopyrightText: 2024 Mr. 27
+# SPDX-FileCopyrightText: 2024 Nemanja
+# SPDX-FileCopyrightText: 2024 Ubaser
+# SPDX-FileCopyrightText: 2024 degradka
+# SPDX-FileCopyrightText: 2024 gluesniffler
+# SPDX-FileCopyrightText: 2025 Eris
+# SPDX-FileCopyrightText: 2025 VMSolidus
+# SPDX-FileCopyrightText: 2025 VividPups
+# SPDX-FileCopyrightText: 2025 sleepyyapril
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+#Basic EVA
+- type: entity
+  parent: ClothingOuterEVASuitBase
+  id: ClothingOuterHardsuitEVA
+  name: vacsuit
+  description: A lightweight vacsuit with the basic ability to protect the wearer from the vacuum of space during emergencies.
+  components:
+  - type: Sprite
+    sprite: Clothing/OuterClothing/Suits/eva.rsi
+  - type: Clothing
+    sprite: Clothing/OuterClothing/Suits/eva.rsi
+  - type: Tag
+    tags:
+    - SuitEVA
+    - MonkeyWearable
+    - WhitelistChameleon
+    - AllowLamiaHardsuit
+    # HidesHarpyWings #Floof change, caused vulp tails to be hidden in hardsuits(with singer trait only)
+
+#Syndicate EVA
+- type: entity
+  parent: ClothingOuterEVASuitBase
+  id: ClothingOuterHardsuitSyndicate # TODO: rename to ClothingOuterEVASuitSyndicate
+  name: syndicate vacsuit
+  description: "Has a tag on the back that reads: 'Totally not property of an enemy corporation, honest!'"
+  components:
+  - type: Sprite
+    sprite: Clothing/OuterClothing/Suits/eva_syndicate.rsi
+  - type: Clothing
+    sprite: Clothing/OuterClothing/Suits/eva_syndicate.rsi
+  - type: Tag
+    tags:
+    - SuitEVA
+    - MonkeyWearable
+    - WhitelistChameleon
+    - AllowLamiaHardsuit
+    # HidesHarpyWings  Floof Change
+
+#Emergency EVA
+- type: entity
+  parent: ClothingOuterEVASuitBase
+  id: ClothingOuterSuitEmergency
+  name: emergency vacsuit
+  description: An emergency vacsuit with a built-in helmet. It's horribly slow and lacking in temperature protection, but enough to bide you time from the harsh vaccuum of space.
+  components:
+  - type: Sprite
+    sprite: Clothing/OuterClothing/Suits/eva_emergency.rsi
+  - type: Clothing
+    sprite: Clothing/OuterClothing/Suits/eva_emergency.rsi
+  - type: ClothingSpeedModifier
+    walkModifier: 0.7
+    sprintModifier: 0.7
+  - type: HeldSpeedModifier
+  - type: TemperatureProtection
+    heatingCoefficient: 0.75
+    coolingCoefficient: 0.5
+  - type: ToggleableClothing
+    clothingPrototype: ClothingHeadHelmetEVALarge
+    slot: head
+  - type: ContainerContainer
+    containers:
+      toggleable-clothing: !type:Container {}
+
+#Prisoner EVA
+- type: entity
+  parent: ClothingOuterEVASuitBase
+  id:  ClothingOuterHardsuitEVAPrisoner
+  name: prisoner vacsuit
+  description: A lightweight space suit for prisoners to protect them from the vacuum of space during emergencies.
+  components:
+  - type: Sprite
+    sprite: Clothing/OuterClothing/Suits/eva_prisoner.rsi
+  - type: Clothing
+    sprite: Clothing/OuterClothing/Suits/eva_prisoner.rsi
+  - type: Tag
+    tags:
+    - SuitEVA
+    - MonkeyWearable
+    - WhitelistChameleon
+    - AllowLamiaHardsuit
+    # HidesHarpyWings  Floof Change
+
+#NTSRA Voidsuit / Ancient Voidsuit
+- type: entity
+  parent: ClothingOuterEVASuitBase
+  id: ClothingOuterHardsuitAncientEVA
+  name: NTSRA vacsuit #Nanotrasen Space Research Association
+  description: An ancient vacsuit, designed by the NTSRA branch of CentCom. It is very finely crafted, allowing for greater mobility than most modern vacsuits.
+  components:
+  - type: Sprite
+    sprite: Clothing/OuterClothing/Suits/ancient_voidsuit.rsi
+  - type: Clothing
+    sprite: Clothing/OuterClothing/Suits/ancient_voidsuit.rsi
+  - type: ClothingSpeedModifier
+    walkModifier: 0.85
+    sprintModifier: 0.85
+  - type: HeldSpeedModifier

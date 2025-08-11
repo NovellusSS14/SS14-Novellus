@@ -1,0 +1,53 @@
+# SPDX-FileCopyrightText: 2023 JJ <47927305+PHCodes@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2023 PHCodes <47927305+PHCodes@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 Squishy77 <165165480+Squishy77@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 VMSolidus <evilexecutive@gmail.com>
+# SPDX-FileCopyrightText: 2024 sleepyyapril <***>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: latheRecipe
+  id: ReverseEngineeringMachineCircuitboard
+  result: ReverseEngineeringMachineCircuitboard
+  completetime: 4
+  materials:
+     Steel: 100
+     Glass: 700
+     Gold: 100
+
+- type: latheRecipe
+  id: SalvageMagnetMachineCircuitboard
+  result: SalvageMagnetMachineCircuitboard
+  completetime: 4
+  materials:
+     Steel: 100
+     Glass: 700
+     Gold: 100
+
+- type: latheRecipe
+  id: CrewMonitoringComputerCircuitboard
+  result: CrewMonitoringComputerCircuitboard
+  completetime: 4
+  materials:
+    Steel: 100
+    Glass: 700
+
+- type: latheRecipe
+  id: ClothingEyesHudMedical
+  icon: { sprite: Clothing/Eyes/Hud/med.rsi, state: icon }
+  result: ClothingEyesHudMedical
+  completetime: 4
+  materials:
+    Steel: 100
+    Glass: 300
+    Plasma: 200
+
+- type: latheRecipe
+  id: DeepFryerMachineCircuitboard
+  icon: { sprite: Objects/Misc/module.rsi, state: id_mod }
+  result: DeepFryerMachineCircuitboard
+  completetime: 4
+  materials:
+     Steel: 100
+     Glass: 700

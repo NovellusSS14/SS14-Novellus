@@ -1,0 +1,18 @@
+# SPDX-FileCopyrightText: 2025 Jakumba
+# SPDX-FileCopyrightText: 2025 sleepyyapril
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: presetPicker
+  id: HighDanger
+  possibleWeightedPresets:
+    Survival: 0.25
+    Hellshift: 0.75
+    # Nukeops: 0.25
+
+- type: presetPicker
+  id: LowDanger
+  possibleWeightedPresets:
+    SurvivalIrregularExtended: 0.6
+    Extended: 0.2
+    Traitor: 0.2

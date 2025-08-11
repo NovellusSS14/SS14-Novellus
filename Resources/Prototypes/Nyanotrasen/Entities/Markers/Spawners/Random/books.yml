@@ -1,0 +1,91 @@
+# SPDX-FileCopyrightText: 2023 Fluffiest Floofers <thebluewulf@gmail.com>
+# SPDX-FileCopyrightText: 2023 Velcroboy <107660393+IamVelcroboy@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2023 deltanedas <39013340+deltanedas@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 DEATHB4DEFEAT <zachcaffee@outlook.com>
+# SPDX-FileCopyrightText: 2024 SimpleStation14 <130339894+SimpleStation14@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 VMSolidus <evilexecutive@gmail.com>
+# SPDX-FileCopyrightText: 2024 sleepyyapril <flyingkarii@gmail.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: entity
+  parent: MarkerBase
+  id: RandomBook
+  name: random book spawner
+  placement:
+    mode: PlaceFree # want to be able to free place books for stacks, etc.
+  components:
+  - type: Transform
+    anchored: false
+  - type: Sprite
+    layers:
+      - sprite: Objects/Misc/books.rsi
+        state: book_icon
+  - type: RandomSpawner
+    offset: 0
+    prototypes:
+      # Author Books
+      - BookNarsieLegend
+      - BookTruth
+      - BookWorld
+      - BookIanAntarctica
+      - BookSlothClownSSS
+      - BookSlothClownPranks
+      - BookSlothClownMMD
+      - BookStruck
+      - BookSun
+      - BookPossum
+      - BookCafe
+      - BookFeather
+      - BookIanLostWolfPup
+      - BookIanRanch
+      - BookIanOcean
+      - BookIanMountain
+      - BookIanCity
+      - BookIanArctic
+      - BookIanDesert
+      - BookNames
+      - BookEarth
+      - BookTemple
+      - BookAurora
+      - BookWatched
+      - BookMedicalOfficer
+      - BookMorgue
+      - BookRufus
+      - BookMap
+      - BookJourney
+      - BookInspiration
+      - BookJanitorTale
+      # Guidebook Books
+      - BookSpaceEncyclopedia
+      - BookTheBookOfControl
+      - BookBartendersManual
+      - BookHowToCookForFortySpaceman
+      - BookLeafLoversSecret
+      - BookEngineersHandbook
+      - BookScientistsGuidebook
+      - BookSecurity
+      - BookHowToKeepStationClean
+      - BookHowToRockAndStone
+      - BookMedicalReferenceBook
+      - BookHowToSurvive
+      - BookChemicalCompendium
+      # Other Books
+      #- BookEscalation
+      #- BookEscalationSecurity
+      - BookAtmosDistro
+      - BookAtmosWaste
+      - BookAtmosAirAlarms
+      - BookAtmosVentsMore
+      - BookRandom # The empty random book because why not
+    chance: 0.9
+   # rarePrototypes:
+   #   - BookChemistryInsane
+   #   - BookBotanicalTextbook
+   #   - BookGnominomicon
+   #   - BookFishing
+   #   - BookFishops # DeltaV - fishops book
+   #   - BookDetective
+   #   - BookSalvageEpistemics1 # Nyanotrasen - Epistemic Lore Book
+   # rareChance: 0.25

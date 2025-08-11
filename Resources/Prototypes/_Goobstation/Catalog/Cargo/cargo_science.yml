@@ -1,0 +1,14 @@
+# SPDX-FileCopyrightText: 2025 Eris <eris@erisws.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: cargoProduct
+  id: ScienceModsuitCores
+  icon:
+    sprite: _Goobstation/Objects/Specific/Robotics/modsuit_parts.rsi
+    state: mod-core-standard
+  product: CrateScienceModsuitCoresFilled
+  cost: 3000
+  category: cargoproduct-category-name-science
+  group: market

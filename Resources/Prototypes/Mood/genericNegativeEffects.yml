@@ -1,0 +1,70 @@
+# SPDX-FileCopyrightText: 2024 DEATHB4DEFEAT <77995199+DEATHB4DEFEAT@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 VMSolidus <evilexecutive@gmail.com>
+# SPDX-FileCopyrightText: 2024 gluesniffler <159397573+gluesniffler@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 gluesniffler <linebarrelerenthusiast@gmail.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <flyingkarii@gmail.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: moodEffect
+  id: Handcuffed
+  moodChange: -3
+
+- type: moodEffect
+  id: Suffocating
+  moodChange: -7
+  timeout: 6
+
+- type: moodEffect
+  id: OnFire
+  moodChange: -10
+  timeout: 600
+
+- type: moodEffect
+  id: Creampied
+  moodChange: -3
+
+- type: moodEffect
+  id: MobSlipped
+  moodChange: -3
+  timeout: 180
+
+- type: moodEffect
+  id: MobVomit
+  moodChange: -3
+  timeout: 480
+
+- type: moodEffect
+  id: MobLowPressure
+  moodChange: -7
+  timeout: 10
+
+- type: moodEffect
+  id: MobHighPressure
+  moodChange: -7
+  timeout: 10
+
+- type: moodEffect
+  id: TraitSaturnine
+  moodChange: -20
+
+- type: moodEffect
+  id: Dead
+  moodChange: -1000
+
+# Surgery
+- type: moodEffect
+  id: SurgeryPain
+  moodChange: -30 # lol too lazy to make a category of ramping surgery moods, wonder how bad this will be.
+  timeout: 360
+
+- type: moodEffect
+  id: HeirloomLost
+  moodChange: -15
+  category: Heirloom
+
+- type: moodEffect
+  id: HeirloomNeutral
+  moodChange: -5
+  category: Heirloom

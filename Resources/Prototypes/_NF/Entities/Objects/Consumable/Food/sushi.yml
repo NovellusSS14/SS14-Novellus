@@ -1,0 +1,124 @@
+# SPDX-FileCopyrightText: 2024 dustylens <54123313+dustylens@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 Blitz <73762869+BlitzTheSquishy@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 Rosycup <178287475+Rosycup@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: entity
+  name: avocado sushi
+  parent: FoodMealBase
+  id: FoodMealAvocadoSushi
+  description: Where did the seaweed come from?
+  components:
+  - type: FlavorProfile
+    flavors:
+      - cucumber
+      - avocado
+  - type: Sprite
+    sprite: _NF/Objects/Consumable/Food/sushi.rsi
+    state: avocadosushi
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 40
+        reagents:
+        - ReagentId: Nutriment
+          Quantity: 20
+        - ReagentId: Flavorol
+          Quantity: 10
+        - ReagentId: CucumberWater
+          Quantity: 2
+  - type: SliceableFood
+    count: 5
+    slice: FoodMealAvocadoSushiSlice
+
+- type: entity
+  name: avocado sushi
+  parent: FoodInjectableBase
+  id: FoodMealAvocadoSushiSlice
+  description: Where did the seaweed come from?
+  suffix: Slice # TheDen
+  components:
+  - type: FlavorProfile
+    flavors:
+      - cucumber
+      - avocado
+  - type: Sprite
+    sprite: _NF/Objects/Consumable/Food/sushi.rsi
+    state: avocadosushislice
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 8
+        reagents:
+        - ReagentId: Nutriment
+          Quantity: 4
+        - ReagentId: Flavorol
+          Quantity: 2
+        - ReagentId: CucumberWater
+          Quantity: .4
+
+- type: entity
+  name: carp sushi
+  parent: FoodMealBase
+  id: FoodMealCarpSushi
+  description: Certainly worth the risk.
+  components:
+  - type: FlavorProfile
+    flavors:
+      - cucumber
+      - fishy
+  - type: Sprite
+    sprite: _NF/Objects/Consumable/Food/sushi.rsi
+    state: carpsushi
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 45
+        reagents:
+        - ReagentId: Nutriment
+          Quantity: 20
+        - ReagentId: Flavorol
+          Quantity: 10
+        - ReagentId: CarpoToxin
+          Quantity: 5
+        - ReagentId: CucumberWater
+          Quantity: 2
+  - type: SliceableFood
+    count: 5
+    slice: FoodMealCarpSushiSlice
+  - type: Tag
+    tags:
+    - Meat
+
+- type: entity
+  name: carp sushi
+  parent: FoodInjectableBase
+  id: FoodMealCarpSushiSlice
+  description: Certainly worth the smaller risk.
+  suffix: Slice # TheDen
+  components:
+  - type: FlavorProfile
+    flavors:
+      - cucumber
+      - fishy
+  - type: Sprite
+    sprite: _NF/Objects/Consumable/Food/sushi.rsi
+    state: carpsushislice
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 9
+        reagents:
+        - ReagentId: Nutriment
+          Quantity: 4
+        - ReagentId: Flavorol
+          Quantity: 2
+        - ReagentId: CarpoToxin
+          Quantity: 1
+        - ReagentId: CucumberWater
+          Quantity: .4
+  - type: Tag
+    tags:
+    - Meat

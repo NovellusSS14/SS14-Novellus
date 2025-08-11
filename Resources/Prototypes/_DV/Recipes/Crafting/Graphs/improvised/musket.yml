@@ -1,0 +1,83 @@
+# SPDX-FileCopyrightText: 2024 Tryded <139474617+Tryded@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 Rosycup <178287475+Rosycup@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: constructionGraph
+  id: WeaponRifleMusketGraph
+  start: start
+  graph:
+  - node: start
+    edges:
+    - to: musket
+      steps:
+      - tag: Pipe
+        icon:
+          sprite: Structures/Piping/Atmospherics/pipe.rsi
+          state: pipeStraight
+        name: pipe
+      - tag: ModularBreech
+        icon:
+          sprite: _DV/Objects/Misc/modular_breech.rsi
+          state: base
+        name: modular breech
+      - tag: ModularTrigger
+        icon:
+          sprite: _DV/Objects/Misc/modular_trigger.rsi
+          state: base
+        name: modular trigger
+      - tag: RifleStock
+        icon:
+          sprite: Objects/Misc/rifle_stock.rsi
+          state: icon
+        name: rifle stock
+      - tag: Bayonet
+        icon:
+          sprite: _DV/Objects/Misc/bayonet.rsi
+          state: base
+        name: bayonet
+      - material: WoodPlank
+        amount: 3
+        doAfter: 10
+  - node: musket
+    entity: WeaponRifleMusket
+    
+- type: constructionGraph
+  id: WeaponPistolFlintlockCraftedGraph
+  start: start
+  graph:
+  - node: start
+    edges:
+    - to: flintlock
+      steps:
+      - tag: GasPipeHalf
+        icon:
+          sprite: Structures/Piping/Atmospherics/pipe.rsi
+          state: pipeHalf
+        name: half pipe
+      - tag: ModularBreech
+        icon:
+          sprite: _DV/Objects/Misc/modular_breech.rsi
+          state: base
+        name: modular breech
+      - tag: ModularTrigger
+        icon:
+          sprite: _DV/Objects/Misc/modular_trigger.rsi
+          state: base
+        name: modular trigger
+      - tag: RifleStock
+        icon:
+          sprite: Objects/Misc/rifle_stock.rsi
+          state: icon
+        name: rifle stock
+      - tag: Bayonet
+        icon:
+          sprite: _DV/Objects/Misc/bayonet.rsi
+          state: base
+        name: bayonet
+      - material: WoodPlank
+        amount: 2
+        doAfter: 10
+  - node: flintlock
+    entity: WeaponPistolFlintlockCrafted

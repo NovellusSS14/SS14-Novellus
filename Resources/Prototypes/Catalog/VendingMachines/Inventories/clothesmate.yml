@@ -1,0 +1,90 @@
+# SPDX-FileCopyrightText: 2022 Andreas Kämper
+# SPDX-FileCopyrightText: 2022 ChilbroBaggins
+# SPDX-FileCopyrightText: 2022 Emisse
+# SPDX-FileCopyrightText: 2022 Fishfish458
+# SPDX-FileCopyrightText: 2022 Jeff
+# SPDX-FileCopyrightText: 2022 Level10Cybermancer
+# SPDX-FileCopyrightText: 2022 Nairod
+# SPDX-FileCopyrightText: 2022 fishfish458
+# SPDX-FileCopyrightText: 2022 mirrorcult
+# SPDX-FileCopyrightText: 2023 Debug
+# SPDX-FileCopyrightText: 2023 Flareguy
+# SPDX-FileCopyrightText: 2023 Fluffiest Floofers
+# SPDX-FileCopyrightText: 2023 LEVELcat
+# SPDX-FileCopyrightText: 2023 Nemanja
+# SPDX-FileCopyrightText: 2023 OctoRocket
+# SPDX-FileCopyrightText: 2023 Sailor
+# SPDX-FileCopyrightText: 2023 Sir Winters
+# SPDX-FileCopyrightText: 2023 Ubaser
+# SPDX-FileCopyrightText: 2023 Whisper
+# SPDX-FileCopyrightText: 2023 deathride58
+# SPDX-FileCopyrightText: 2023 lzk
+# SPDX-FileCopyrightText: 2023 lzk228
+# SPDX-FileCopyrightText: 2023 nmajask
+# SPDX-FileCopyrightText: 2024 FoxxoTrystan
+# SPDX-FileCopyrightText: 2024 GNF54
+# SPDX-FileCopyrightText: 2024 Hanz
+# SPDX-FileCopyrightText: 2024 Holinka4ever
+# SPDX-FileCopyrightText: 2024 Jackal298
+# SPDX-FileCopyrightText: 2024 Lonely Fox
+# SPDX-FileCopyrightText: 2024 LovelyLophi
+# SPDX-FileCopyrightText: 2024 Pierson Arnold
+# SPDX-FileCopyrightText: 2024 SimpleStation14
+# SPDX-FileCopyrightText: 2024 VMSolidus
+# SPDX-FileCopyrightText: 2025 ElusiveCoin
+# SPDX-FileCopyrightText: 2025 Ted Lukin
+# SPDX-FileCopyrightText: 2025 cynical
+# SPDX-FileCopyrightText: 2025 sleepyyapril
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: vendingMachineInventory
+  id: ClothesMateInventory
+  startingInventory:
+  # STOP! ADD NOTHING TO THIS! GO PUT YOUR CLOTHES IN LOADOUTS INSTEAD!
+    ClothingBackpack: 2
+    ClothingBackpackDuffel: 2
+    ClothingBackpackSatchel: 2
+    ClothingBackpackSatchelLeather: 2
+    ClothingBackpackMessenger: 5 # Frontier
+    ClothingRandomSpawner: 8
+    ClothingHeadHatBeret: 4
+    ClothingHeadBandBlack: 2
+    ClothingHeadHatGreyFlatcap: 2
+    ClothingUniformJumpsuitColorGrey: 2
+    ClothingUniformJumpskirtColorGrey: 2
+    ClothingShoesColorBlack: 4
+    ClothingHeadHatGreysoft: 2
+    ClothingHeadHatCorpsoft: 2
+    ClothingOuterWinterCoat: 2
+    ClothingOuterCorporateJacket: 2
+    ClothingBeltStorageWaistbag: 3
+    ClothingEyesGlasses: 6
+    ClothingHandsGlovesColorBlack: 4
+    ClothingEyesGlassesCheapSunglasses: 2
+    ClothingUniformNudityPermit: 5 # FloofStation
+    ClothingNeckCollarBlue: 1 # Floofstation - Collar addition
+    ClothingNeckCollarBlack: 1 # Floofstation - Collar addition
+    ClothingNeckCollarPink: 1 # Floofstation - Collar addition
+    ClothingLongcoatNT: 2 # Floofstation
+    ClothingLongcoatAL: 2 # Floofstation
+    ClothingLongcoatBrown: 2 # Floofstation
+    ClothingLongcoatBlack: 2 # Floofstation
+    ClothingClothWrap: 4
+    ClothingHeadHatBeanieBlackAbsurd: 2 # Den
+    ClothingHeadHatBeanieBlackWithPinAbsurd: 2 # Den
+    ClothingHeadHatBeanieBlueAbsurd: 2 # Den
+    ClothingHeadHatBeanieGoldAbsurd: 2 # Den
+    ClothingHeadHatBeanieGreenAbsurd: 2 # Den
+    ClothingHeadHatBeanieKhakiAbsurd: 2 # Den
+    ClothingHeadHatBeanieKhakiWithPinAbsurd: 2 # Den
+    ClothingHeadHatBeanieNavyBlueAbsurd: 2 # Den
+    ClothingHeadHatBeanieNavyBlueWithPinAbsurd: 2 # Den
+    ClothingHeadHatBeaniePurpleAbsurd: 2 # Den
+    ClothingHeadHatBeanieWhiteAbsurd: 2 # Den
+    ClothingHeadHatBeanieYellowAbsurd: 2 # Den
+  contrabandInventory:
+    ClothingMaskNeckGaiter: 2
+    ClothingUniformJumpsuitTacticool: 1
+    ClothingUniformJumpskirtTacticool: 1
+    ClothingBackpackSatchelSmugglerUnanchored: 1 # this definitely is not intended for loadout

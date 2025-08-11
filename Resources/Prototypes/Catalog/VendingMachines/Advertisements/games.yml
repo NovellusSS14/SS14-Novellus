@@ -1,0 +1,21 @@
+# SPDX-FileCopyrightText: 2022 Fishfish458 <47410468+Fishfish458@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2022 fishfish458 <fishfish458>
+# SPDX-FileCopyrightText: 2024 Tayrtahn <tayrtahn@gmail.com>
+# SPDX-FileCopyrightText: 2024 Ubaser <134914314+UbaserB@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: messagePack
+  id: GoodCleanFunAds
+  messages:
+  - advertisement-goodcleanfun-1
+  - advertisement-goodcleanfun-2
+  - advertisement-goodcleanfun-3
+  - advertisement-goodcleanfun-4
+  - advertisement-goodcleanfun-5
+  - advertisement-goodcleanfun-6
+  - advertisement-goodcleanfun-7
+  - advertisement-goodcleanfun-8
+  - advertisement-goodcleanfun-9
+  - advertisement-goodcleanfun-10

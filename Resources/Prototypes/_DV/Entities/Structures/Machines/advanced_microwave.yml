@@ -1,0 +1,31 @@
+# SPDX-FileCopyrightText: 2025 Rosycup <178287475+Rosycup@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 Stop-Signs <stopsign221@gmail.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: entity
+  parent: KitchenMicrowave
+  id: AdvancedMicrowave
+  name: Advanced Microwave
+  description: Don't stand too close to this thing, definitely dont put anything metal in.
+  components:
+  - type: Microwave
+    cookTimeMultiplier: 0.5
+    capacity: 30
+    canMicrowaveIdsSafely: false # No AA farm
+  - type: Sprite
+    sprite: _DV/Structures/Machines/advanced_microwave.rsi
+  - type: Machine
+    board: AdvancedMicrowaveMachineCircuitBoard
+  - type: Explosive
+    explosionType: Radioactive
+    maxIntensity: 60
+    totalIntensity: 50
+    intensitySlope: 10
+    canCreateVacuum: false
+    deleteAfterExplosion: false
+  - type: FoodRecipeProvider
+    providedRecipes: # if any new unique foods get added this will need updating
+    - RecipeBaguetteSword
+    - RecipeThrowingCroissant

@@ -1,0 +1,43 @@
+<!--
+SPDX-FileCopyrightText: 2022 DrSmugleaf <DrSmugleaf@users.noreply.github.com>
+SPDX-FileCopyrightText: 2022 Jezithyr <Jezithyr.@gmail.com>
+SPDX-FileCopyrightText: 2025 Falcon <falcon@zigtag.dev>
+SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+
+SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+-->
+
+<controls:ChannelFilterPopup
+    xmlns="https://spacestation14.io"
+    xmlns:gfx="clr-namespace:Robust.Client.Graphics;assembly=Robust.Client"
+    xmlns:controls="clr-namespace:Content.Client.UserInterface.Systems.Chat.Controls">
+    <PanelContainer Name="FilterPopupPanel" StyleClasses="BorderedWindowPanel">
+        <!-- DeltaV - Additional outer BoxContainer for changed layout including message highlighting -->
+        <BoxContainer Orientation="Horizontal" SeparationOverride="8" Margin="10 0">
+            <BoxContainer Orientation="Vertical" Margin="0 10">
+                <Label Text="{Loc 'hud-chatbox-select-channels'}"/>
+                <BoxContainer Name="FilterVBox" MinWidth="105" Orientation="Vertical" SeparationOverride="4"/>
+            </BoxContainer>
+            <!-- DeltaV - Message highlighting start -->
+            <BoxContainer Name="HighlightsVBox" MinWidth="120" Margin="0 10" Orientation="Vertical" SeparationOverride="4">
+                <Label Text="{Loc 'hud-chatbox-highlights'}"/>
+                <!-- Custom background for the TextEdit -->
+                <PanelContainer>
+                    <PanelContainer.PanelOverride>
+                        <gfx:StyleBoxFlat BackgroundColor="#323446"/>
+                    </PanelContainer.PanelOverride>
+                    <TextEdit Name="HighlightEdit" MinHeight="150" Margin="5 5"/>
+                </PanelContainer>
+                <Label Name="AutoHighlightLabel" Text="{Loc 'hud-chatbox-auto-highlights'}"/>
+                <PanelContainer>
+                    <PanelContainer.PanelOverride>
+                        <gfx:StyleBoxFlat BackgroundColor="#323446"/>
+                    </PanelContainer.PanelOverride>
+                    <TextEdit Name="AutoHighlightEdit" MinHeight="150" Margin="5 5" Editable="false" />
+                </PanelContainer>
+                <Button Name="HighlightButton" Text="{Loc 'hud-chatbox-highlights-button'}" ToolTip="{Loc 'hud-chatbox-highlights-tooltip'}"/>
+            </BoxContainer>
+            <!-- DeltaV - Message highlighting end -->
+        </BoxContainer>
+    </PanelContainer>
+</controls:ChannelFilterPopup>

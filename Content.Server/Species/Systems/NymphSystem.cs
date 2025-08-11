@@ -1,0 +1,58 @@
+// SPDX-FileCopyrightText: 2024 Arendian <137322659+Arendian@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 LankLTE <135308300+LankLTE@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 LankLTE <135308300+lanklte@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 VMSolidus <evilexecutive@gmail.com>
+// SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+using Content.Server.Mind;
+using Content.Shared.Species.Components;
+using Content.Shared.Body.Events;
+using Content.Shared.Zombies;
+using Content.Server.Zombies;
+using Robust.Shared.Prototypes;
+using Robust.Shared.Timing;
+
+namespace Content.Server.Species.Systems;
+
+public sealed partial class NymphSystem : EntitySystem
+{
+    [Dependency] private readonly IPrototypeManager _protoManager= default!;
+    [Dependency] private readonly MindSystem _mindSystem = default!;
+    [Dependency] private readonly IGameTiming _timing = default!;
+    [Dependency] private readonly ZombieSystem _zombie = default!;
+
+    public override void Initialize()
+    {
+        base.Initialize();
+
+        SubscribeLocalEvent<NymphComponent, OrganRemovedFromBodyEvent>(OnRemovedFromPart);
+    }
+
+    private void OnRemovedFromPart(EntityUid uid, NymphComponent comp, ref OrganRemovedFromBodyEvent args)
+    {
+        if (!_timing.IsFirstTimePredicted)
+            return;
+
+        if (TerminatingOrDeleted(uid) || TerminatingOrDeleted(args.OldBody))
+            return;
+
+        if (!_protoManager.TryIndex<EntityPrototype>(comp.EntityPrototype, out var entityProto))
+            return;
+
+        // Get the organs' position & spawn a nymph there
+        var coords = Transform(uid).Coordinates;
+        var nymph = EntityManager.SpawnAtPosition(entityProto.ID, coords);
+
+        if (HasComp<ZombieComponent>(args.OldBody)) // Zombify the new nymph if old one is a zombie
+            _zombie.ZombifyEntity(nymph);
+
+        // Move the mind if there is one and it's supposed to be transferred
+        if (comp.TransferMind == true && _mindSystem.TryGetMind(args.OldBody, out var mindId, out var mind))
+            _mindSystem.TransferTo(mindId, nymph, mind: mind);
+
+        // Delete the old organ
+        QueueDel(uid);
+    }
+}

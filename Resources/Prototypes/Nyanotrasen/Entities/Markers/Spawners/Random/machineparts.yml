@@ -1,0 +1,47 @@
+# SPDX-FileCopyrightText: 2023 Fluffiest Floofers <thebluewulf@gmail.com>
+# SPDX-FileCopyrightText: 2024 Debug <49997488+DebugOk@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 SimpleStation14 <130339894+SimpleStation14@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+
+- type: entity
+  name: Salvage Parts Spawner
+  id: SalvagePartsSpawnerLow
+  suffix: Low
+  parent: MarkerBase
+  components:
+    - type: Sprite
+      layers:
+        - state: red
+        - sprite: Objects/Misc/stock_parts.rsi
+          state: matter_bin
+    - type: RandomSpawner
+      prototypes:
+        - CapacitorStockPart
+        - MicroManipulatorStockPart
+        - MatterBinStockPart
+      chance: 0.9
+      offset: 0.0
+
+- type: entity
+  name: Salvage Parts Spawner
+  id: SalvagePartsSpawnerMid
+  suffix: High
+  parent: MarkerBase
+  components:
+    - type: Sprite
+      layers:
+        - state: red
+        - sprite: Objects/Misc/stock_parts.rsi
+          state: advanced_matter_bin
+    - type: RandomSpawner
+      prototypes:
+        - CapacitorStockPart
+        - MicroManipulatorStockPart
+        - MatterBinStockPart
+        - CrateMaterialSteel
+        - CrateMaterialGlass
+      chance: 0.50
+      offset: 0.0

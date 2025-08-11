@@ -1,0 +1,23 @@
+# SPDX-FileCopyrightText: 2023 Fluffiest Floofers <thebluewulf@gmail.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: MIT
+
+- type: constructionGraph
+  id: MothPlushie
+  start: start
+  graph:
+  - node: start
+    edges:
+    - to: plush
+      steps:
+      - tag: MothroachHide
+        icon:
+          sprite: Nyanotrasen/Objects/Materials/mothroach.rsi
+          state: mothroachhide
+        name: mothroach hide
+      - material: Cloth
+        amount: 3
+        doAfter: 5
+  - node: plush
+    entity: PlushieMoth

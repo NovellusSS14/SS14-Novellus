@@ -1,0 +1,95 @@
+# SPDX-FileCopyrightText: 2024 VMSolidus
+# SPDX-FileCopyrightText: 2025 Blitz
+# SPDX-FileCopyrightText: 2025 sleepyyapril
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+# Clown
+- type: characterItemGroup
+  id: LoadoutClownBackpacks
+  maxItems: 1
+  items:
+    - type: loadout
+      id: LoadoutBackpackClown
+    - type: loadout
+      id: LoadoutBackpackSatchelClown
+    - type: loadout
+      id: LoadoutBackpackDuffelClown
+    - type: loadout
+      id: LoadoutBackpackMessengerClown
+
+#- type: characterItemGroup
+#  id: LoadoutClownBelt
+#  maxItems: 1
+#  items:
+#
+#- type: characterItemGroup
+#  id: LoadoutClownEars
+#  maxItems: 1
+#  items:
+#
+#- type: characterItemGroup
+#  id: LoadoutClownEquipment
+#  maxItems: 1
+#  items:
+#
+#- type: characterItemGroup
+#  id: LoadoutClownEyes
+#  maxItems: 1
+#  items:
+#
+#- type: characterItemGroup
+#  id: LoadoutClownGloves
+#  maxItems: 1
+#  items:
+#
+#- type: characterItemGroup
+#  id: LoadoutClownHead
+#  maxItems: 1
+#  items:
+#
+#- type: characterItemGroup
+#  id: LoadoutClownId
+#  maxItems: 1
+#  items:
+#
+- type: characterItemGroup
+  id: LoadoutClownNeck
+  maxItems: 1
+  items:
+    - type: loadout
+      id: LoadoutServiceClownBedsheetClown
+
+- type: characterItemGroup
+  id: LoadoutClownMask
+  maxItems: 1
+  items:
+    - type: loadout
+      id: LoadoutServiceClownMaskSexy
+
+- type: characterItemGroup
+  id: LoadoutClownOuter
+  maxItems: 1
+  items:
+    - type: loadout
+      id: LoadoutServiceClownOuterWinter
+    - type: loadout
+      id: LoadoutServiceClownOuterClownPriest
+
+- type: characterItemGroup
+  id: LoadoutClownShoes
+  maxItems: 1
+  items:
+    - type: loadout
+      id: LoadoutServiceClownBootsWinter
+    - type: loadout # TheDen
+      id: LoadoutShoesSlippersDuck
+
+- type: characterItemGroup
+  id: LoadoutClownUniforms
+  maxItems: 1
+  items:
+    - type: loadout
+      id: LoadoutServiceClownOutfitJester
+    - type: loadout
+      id: LoadoutServiceClownOutfitJesterAlt

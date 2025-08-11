@@ -1,0 +1,23 @@
+# SPDX-FileCopyrightText: 2025 Rosycup <178287475+Rosycup@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: entity
+  parent: BaseItem
+  id: TableFlagBase
+  name: table flag
+  description: A blank flag for your office table.
+  components:
+  - type: Sprite
+    sprite: _DEN/Objects/Misc/tableflag.rsi
+    state: tableflagblank
+
+- type: entity
+  parent: TableFlagBase
+  id: TableFlagTrans
+  name: trans table flag
+  description: A flag you can place in your office as a symbol of support or a safe space.
+  components:
+  - type: Sprite
+    state: tableflagtrans

@@ -1,0 +1,60 @@
+# SPDX-FileCopyrightText: 2022 DrSmugleaf <DrSmugleaf@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2022 Jezithyr <Jezithyr@gmail.com>
+# SPDX-FileCopyrightText: 2023 Flareguy <78941145+Flareguy@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2023 Nemanja <98561806+EmoGarbage404@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 gluesniffler <159397573+gluesniffler@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 gluesniffler <linebarrelerenthusiast@gmail.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: body
+  id: Gingerbread
+  name: gingerbread
+  root: torso
+  slots:
+    head:
+      part: HeadGingerbread
+      connections:
+      - torso
+      organs:
+        brain: OrganHumanBrain
+        eyes: OrganHumanEyes
+    torso:
+      part: TorsoGingerbread
+      connections:
+      - right arm
+      - left arm
+      - right leg
+      - left leg
+      - head # Shitmed
+      organs:
+        heart: OrganHumanHeart
+        lungs: OrganHumanLungs
+        stomach: OrganHumanStomach
+        liver: OrganHumanLiver
+        kidneys: OrganHumanKidneys
+    right arm:
+      part: RightArmGingerbread
+      connections:
+      - right hand
+    left arm:
+      part: LeftArmGingerbread
+      connections:
+      - left hand
+    right hand:
+      part: RightHandGingerbread
+    left hand:
+      part: LeftHandGingerbread
+    right leg:
+      part: RightLegGingerbread
+      connections:
+      - right foot
+    left leg:
+      part: LeftLegGingerbread
+      connections:
+      - left foot
+    right foot:
+      part: RightFootGingerbread
+    left foot:
+      part: LeftFootGingerbread

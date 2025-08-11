@@ -1,0 +1,221 @@
+# SPDX-FileCopyrightText: 2022 EmoGarbage404 <98561806+EmoGarbage404@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2022 Kara <lunarautomaton6@gmail.com>
+# SPDX-FileCopyrightText: 2022 Moony <moonheart08@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2022 Pancake <Pangogie@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2022 themias <89101928+themias@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2023 Arendian <137322659+Arendian@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2023 Moony <moony@hellomouse.net>
+# SPDX-FileCopyrightText: 2023 Nemanja <98561806+EmoGarbage404@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2023 Nim <128169402+Nimfar11@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2023 QuantumSeanyGlass <quantum1002@gmail.com>
+# SPDX-FileCopyrightText: 2023 Sailor <109166122+Equivocateur@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2023 brainfood1183 <113240905+brainfood1183@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2023 deltanedas <39013340+deltanedas@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2023 deltanedas <@deltanedas:kde.org>
+# SPDX-FileCopyrightText: 2024 AJCM-git <60196617+AJCM-git@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 Bakke <luringens@protonmail.com>
+# SPDX-FileCopyrightText: 2024 DEATHB4DEFEAT <77995199+DEATHB4DEFEAT@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 Rosycup <178287475+Rosycup@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: polymorph
+  id: Mouse
+  configuration:
+    entity: MobMouse
+    forced: true
+    duration: 30
+
+- type: polymorph
+  id: Chicken
+  configuration:
+    entity: MobChicken
+    forced: true
+    inventory: Drop
+
+- type: polymorph
+  id: Monkey
+  configuration:
+    entity: MobMonkey
+    forced: true
+    inventory: Drop
+    revertOnCrit: true
+    revertOnDeath: true
+
+- type: polymorph
+  id: WizardForcedCarp
+  configuration:
+    entity: MobCarpMagic
+    forced: true
+    inventory: None
+    transferName: true
+    transferDamage: true
+    revertOnCrit: false
+    revertOnDeath: true
+
+- type: polymorph
+  id: WizardForcedSkeleton
+  configuration:
+    entity: MobSkeletonPerson
+    forced: true
+    inventory: Drop
+    transferName: true
+    transferDamage: true
+    revertOnCrit: false
+    revertOnDeath: false
+
+- type: polymorph
+  id: WizardForcedMonkey
+  configuration:
+    entity: MobMonkey
+    forced: true
+    inventory: None
+    transferName: true
+    transferDamage: true
+    revertOnCrit: false
+    revertOnDeath: true
+
+- type: polymorph
+  id: WizardWallDoor
+  configuration:
+    entity: WoodDoor
+    forced: true
+    inventory: None
+    transferName: false
+    transferDamage: false
+    revertOnCrit: false
+    revertOnDeath: false
+
+- type: polymorph
+  id: WizardForcedCluwne
+  configuration:
+    entity: MobCluwne
+    forced: true
+    transferName: true
+    transferHumanoidAppearance: true
+    inventory: Transfer
+    revertOnDeath: true
+
+- type: polymorph
+  id: SlimeMorphGeras
+  configuration:
+    entity: MobSlimesGeras
+    transferName: true
+    transferHumanoidAppearance: false
+    inventory: Drop
+    transferDamage: true
+    revertOnDeath: true
+    revertOnCrit: true
+
+# this is a test for transferring some visual appearance stuff
+- type: polymorph
+  id: TestHumanMorph
+  configuration:
+    entity: MobHuman
+    transferName: true
+    transferHumanoidAppearance: true
+    inventory: Transfer
+
+- type: polymorph
+  id: AMIVMorph
+  configuration:
+    entity: MobMonkey
+    forced: true
+    inventory: Transfer
+    transferName: true
+    revertOnCrit: false
+    revertOnDeath: false
+
+- type: polymorph
+  id: BreadMorph
+  configuration:
+    entity: FoodBreadPlain
+    forced: true
+    inventory: None
+    transferName: false
+    transferDamage: true
+    revertOnCrit: false
+    revertOnDeath: true
+    revertOnEat: true
+
+- type: polymorph
+  id: TreeMorph
+  configuration:
+    entity: FloraTree01
+    forced: true
+    transferName: true
+    revertOnDeath: true
+    inventory: Drop
+    cooldown: 160
+
+# this is the monkey polymorph for artifact.
+- type: polymorph
+  id: ArtifactMonkey
+  configuration:
+    entity: MobMonkey
+    forced: true
+    transferName: true
+    allowRepeatedMorphs: true
+    inventory: Transfer
+    revertOnCrit: true
+    revertOnDeath: true
+    duration: 20
+
+- type: polymorph
+  id: ArtifactCluwne
+  configuration:
+    entity: MobCluwne
+    forced: true
+    transferName: true
+    transferHumanoidAppearance: true
+    inventory: None
+    revertOnDeath: true
+    revertOnCrit: true
+    duration: 30
+
+- type: polymorph
+  id: ArtifactLizard
+  configuration:
+    entity: MobLizard
+    forced: true
+    transferName: true
+    transferHumanoidAppearance: true
+    inventory: None
+    revertOnDeath: true
+    revertOnCrit: true
+    duration: 20
+
+- type: polymorph
+  id: ArtifactLuminous
+  configuration:
+    entity: MobLuminousPerson
+    forced: true
+    transferName: true
+    transferHumanoidAppearance: true
+    inventory: None
+    revertOnDeath: true
+    revertOnCrit: true
+    duration: 20
+
+# Polymorphs for Wizards polymorph self spell
+- type: polymorph
+  id: WizardSpider
+  configuration:
+    entity: MobGiantSpiderWizard #Not angry so ghosts can't just take over the wizard
+    transferName: true
+    inventory: None
+    revertOnDeath: true
+    revertOnCrit: true
+
+- type: polymorph
+  id: WizardRod
+  configuration:
+    entity: ImmovableRodWizard #CLANG
+    transferName: true
+    transferDamage: false
+    inventory: None
+    duration: 1
+    forced: true
+    revertOnCrit: false
+    revertOnDeath: false

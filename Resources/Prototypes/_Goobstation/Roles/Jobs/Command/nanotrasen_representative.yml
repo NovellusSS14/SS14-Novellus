@@ -1,0 +1,60 @@
+# SPDX-FileCopyrightText: 2025 Eagle-0 <114363363+Eagle-0@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 SixplyDev <einlichen@gmail.com>
+# SPDX-FileCopyrightText: 2025 Skubman <ba.fallaria@gmail.com>
+# SPDX-FileCopyrightText: 2025 Timfa <timfalken@hotmail.com>
+# SPDX-FileCopyrightText: 2025 astriloqua <129308840+astriloqua@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: job
+  id: NanotrasenRepresentative
+  name: Nanotrasen Representative
+  description: "Represent NT, send reports back to them on the station's situation, inform the heads of anything CentComm orders them to do."
+  playTimeTracker: JobNanotrasenRepresentative
+  requirements:
+    - !type:CharacterDepartmentTimeRequirement
+      department: Command
+      min: 54000 # 15 hours
+  weight: 20
+  startingGear: NanotrasenRepresentativeGear
+  icon: "JobIconNanotrasenRepresentative"
+  requireAdminNotify: true
+  joinNotifyCrew: true
+  supervisors: job-supervisors-centcom
+  canBeAntag: false
+  accessGroups:
+  - BasicAllAccess
+  access:
+  - CentralCommand
+  - NanotrasenRepresentative
+  special:
+  - !type:AddImplantSpecial
+    implants: [ MindShieldImplant ]
+  - !type:AddComponentSpecial
+    components:
+      - type: CommandStaff
+  afterLoadoutSpecial:
+  - !type:ModifyEnvirosuitSpecial
+    charges: 8
+  - !type:ModifyEnvirohelmSpecial
+    powerCell: PowerCellHigh
+
+- type: startingGear
+  id: NanotrasenRepresentativeGear
+  subGear:
+  - NanotrasenRepresentativePlasmamanGear
+  equipment:
+    shoes: ClothingShoesColorBlack
+    id: CentcomPDA
+    jumpsuit: ClothingUniformJumpsuitNanotrasenRepresentative
+    ears: ClothingHeadsetAltCentCom
+    pocket1: UniqueNanorepLockerTeleporter
+
+- type: startingGear
+  id: NanotrasenRepresentativePlasmamanGear
+  parent: BasePlasmamanGear
+  equipment:
+    jumpsuit: ClothingUniformEnvirosuitNanotrasenRepresentative
+    head: ClothingHeadEnvirohelmNanotrasenRepresentative
+    gloves: ClothingHandsGlovesEnviroglovesBlack

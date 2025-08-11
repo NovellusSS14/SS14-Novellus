@@ -1,0 +1,32 @@
+# SPDX-FileCopyrightText: 2025 Savante-Sam
+# SPDX-FileCopyrightText: 2025 sleepyyapril
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: entity
+  name: bag of holding trash
+  id: TrashBagBluespace
+  parent: TrashBag
+  description: A development in janitorial technology allowing for rapid and repetitive collection of trash to be nearly effortless, featuring bluespace! Best not to put anything sharp in it...
+  components:
+  - type: Storage
+    maxItemSize: Normal
+    grid:
+    - 0,0,19,9
+    quickInsert: true
+    areaInsert: true
+    areaInsertRadius: 4
+  - type: MagnetPickup 
+    range: 2
+  - type: Sprite
+    sprite: _DEN/Objects/Specific/Janitorial/trashbag.rsi
+    layers:
+      - state: icon-0
+        map: ["enum.StorageFillLayers.Fill"]
+  - type: Clothing
+    slots: [belt]
+    sprite: _DEN/Objects/Specific/Janitorial/trashbag.rsi
+  - type: Item
+    size: Huge
+  - type: StorageFillVisualizer
+    fillBaseName: icon

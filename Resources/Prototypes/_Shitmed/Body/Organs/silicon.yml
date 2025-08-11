@@ -1,0 +1,35 @@
+# SPDX-FileCopyrightText: 2025 Rosycup <178287475+Rosycup@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 Timfa <timfalken@hotmail.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: entity
+  id: RightArmSiliconIndestructible
+  name: "right silicon arm"
+  parent: [BaseItem, BaseRightArm]
+  components:
+    - type: Damageable
+    - type: BodyPart
+      partType: Arm
+      symmetry: Right
+      toolName: "a right arm" # Shitmed Change
+      canSever: false
+    - type: Sprite
+      sprite: Mobs/Customization/cyberlimbs/bishop/bishop_main.rsi
+      state: "l_arm-combined"
+
+- type: entity
+  id: RightHandSiliconIndestructible
+  name: "right silicon hand"
+  parent: [BaseItem, BaseRightArm]
+  components:
+    - type: Damageable
+    - type: BodyPart
+      partType: Hand
+      symmetry: Right
+      toolName: "a right hand" # Shitmed Change
+      canSever: false
+    - type: Sprite
+      sprite: Mobs/Customization/cyberlimbs/bishop/bishop_main.rsi
+      state: "r_hand"

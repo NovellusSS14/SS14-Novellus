@@ -1,0 +1,186 @@
+# SPDX-FileCopyrightText: 2022 DrSmugleaf
+# SPDX-FileCopyrightText: 2022 rolfero
+# SPDX-FileCopyrightText: 2023 Henry
+# SPDX-FileCopyrightText: 2023 Kara
+# SPDX-FileCopyrightText: 2023 Lazzi0706
+# SPDX-FileCopyrightText: 2023 Whisper
+# SPDX-FileCopyrightText: 2023 lzk
+# SPDX-FileCopyrightText: 2024 Jezithyr
+# SPDX-FileCopyrightText: 2024 fox
+# SPDX-FileCopyrightText: 2024 gluesniffler
+# SPDX-FileCopyrightText: 2025 portfiend
+# SPDX-FileCopyrightText: 2025 sleepyyapril
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: entity
+  id: BaseAnimalOrganUnGibbable
+  parent: BaseItem
+  abstract: true
+  components:
+  - type: Organ
+  - type: Food
+  - type: Sprite
+    sprite: Mobs/Species/Human/organs.rsi
+  - type: StaticPrice
+    price: 50
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 5
+        reagents:
+        - ReagentId: UncookedAnimalProteins
+          Quantity: 5
+  - type: FlavorProfile
+    flavors:
+      - chicken # everything kinda tastes like chicken
+  - type: Tag
+    tags:
+      - Meat
+
+- type: entity
+  id: BaseAnimalOrgan
+  parent: BaseAnimalOrganUnGibbable
+  abstract: true
+  components:
+  - type: Gibbable
+
+- type: entity
+  id: OrganAnimalLungs
+  parent: BaseAnimalOrgan
+  name: lungs
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    layers:
+    - state: lung-l
+    - state: lung-r
+  - type: Organ
+    slotId: lungs # Shitmed
+  - type: Lung
+  - type: Metabolizer
+    removeEmpty: true
+    solutionOnBody: false
+    solution: "Lung"
+    metabolizerTypes: [ Animal ]
+    groups:
+    - id: Gas
+      rateModifier: 100.0
+  - type: SolutionContainerManager
+    solutions:
+      Lung:
+        maxVol: 100.0
+        canReact: false
+      food:
+        maxVol: 5
+        reagents:
+        - ReagentId: UncookedAnimalProteins
+          Quantity: 5
+
+- type: entity
+  id: OrganAnimalStomach
+  parent: [ButcherIntoIntestineBase, BaseAnimalOrgan] # DEN - Butcher into sausage casing
+  name: stomach
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    state: stomach
+  - type: Organ
+    slotId: stomach # Shitmed
+  - type: SolutionContainerManager
+    solutions:
+      stomach:
+        maxVol: 40
+      food:
+        maxVol: 5
+        reagents:
+        - ReagentId: UncookedAnimalProteins
+          Quantity: 5
+  - type: Stomach
+  - type: Metabolizer
+    maxReagents: 3
+    metabolizerTypes: [ Animal ]
+    groups:
+    - id: Food
+    - id: Drink
+
+- type: entity
+  id: OrganMouseStomach
+  parent: OrganAnimalStomach
+  name: stomach
+  suffix: "mouse"
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      stomach:
+        maxVol: 30
+      food: # DEN fix whatever
+        maxVol: 5
+        reagents:
+        - ReagentId: UncookedAnimalProteins
+          Quantity: 5
+  - type: Metabolizer
+    metabolizerTypes: [ Animal, Detritivore ]
+
+- type: entity
+  id: OrganAnimalLiver
+  parent: BaseAnimalOrgan
+  name: liver
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    state: liver
+  - type: Organ
+    slotId: liver # Shitmed
+  - type: Metabolizer
+    maxReagents: 1
+    metabolizerTypes: [ Animal ]
+    groups:
+    - id: Alcohol
+      rateModifier: 0.1
+  - type: Liver # Shitmed
+
+- type: entity
+  id: OrganAnimalHeart
+  parent: BaseAnimalOrgan
+  name: heart
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    state: heart-on
+  - type: Organ
+    slotId: heart # Shitmed
+  - type: Metabolizer
+    maxReagents: 2
+    metabolizerTypes: [ Animal ]
+    groups:
+    - id: Medicine
+    - id: Poison
+    - id: Narcotic
+  - type: Heart # Shitmed
+
+- type: entity
+  id: OrganMouseHeart
+  parent: OrganAnimalHeart
+  suffix: "mouse"
+  components:
+  - type: Metabolizer
+    metabolizerTypes: [ Animal, Detritivore ]
+
+- type: entity
+  id: OrganAnimalKidneys
+  parent: BaseAnimalOrgan
+  name: kidneys
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    layers:
+    - state: kidney-l
+    - state: kidney-r
+  - type: Organ
+    slotId: kidneys # Shitmed
+  - type: Metabolizer
+    maxReagents: 5
+    metabolizerTypes: [ Animal ]
+    removeEmpty: true

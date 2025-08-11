@@ -1,0 +1,39 @@
+<!--
+SPDX-FileCopyrightText: 2021 Visne <39844191+Visne@users.noreply.github.com>
+SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+
+SPDX-License-Identifier: MIT
+-->
+
+<PanelContainer xmlns="https://spacestation14.io"
+                HorizontalExpand="True">
+    <BoxContainer Orientation="Horizontal"
+                  HorizontalExpand="True">
+        <TextureRect Name="Icon"
+                     Access="Public"
+                     MinSize="32 32"
+                     RectClipContent="True" />
+        <BoxContainer Orientation="Vertical"
+                      HorizontalExpand="True"
+                      VerticalExpand="True">
+            <Label Name="ProductName"
+                   Access="Public"
+                   HorizontalExpand="True"
+                   StyleClasses="LabelSubText"
+                   ClipText="True" />
+            <Label Name="Description"
+                   Access="Public"
+                   HorizontalExpand="True"
+                   StyleClasses="LabelSubText"
+                   ClipText="True" />
+        </BoxContainer>
+        <Button Name="Approve"
+                Access="Public"
+                Text="{Loc 'cargo-console-menu-cargo-order-row-approve-button'}"
+                StyleClasses="LabelSubText" />
+        <Button Name="Cancel"
+                Access="Public"
+                Text="{Loc 'cargo-console-menu-cargo-order-row-cancel-button'}"
+                StyleClasses="LabelSubText" />
+    </BoxContainer>
+</PanelContainer>

@@ -1,0 +1,61 @@
+# SPDX-FileCopyrightText: 2022 DrSmugleaf <DrSmugleaf@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2022 Jezithyr <Jezithyr@gmail.com>
+# SPDX-FileCopyrightText: 2023 LankLTE <135308300+LankLTE@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2023 Nemanja <98561806+EmoGarbage404@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 gluesniffler <159397573+gluesniffler@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 gluesniffler <linebarrelerenthusiast@gmail.com>
+# SPDX-FileCopyrightText: 2025 ElusiveCoin <elusivecoin@gmail.com>
+# SPDX-FileCopyrightText: 2025 Rosycup <178287475+Rosycup@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: body
+  id: Chitinid
+  name: "chitinid"
+  root: torso
+  slots:
+    head:
+      part: HeadChitinid
+      connections:
+      - torso
+      organs:
+        brain: OrganHumanBrain
+        eyes: OrganHumanEyes
+    torso:
+      part: TorsoChitinid
+      organs:
+        heart: OrganHumanHeart
+        lungs: OrganHumanLungs
+        stomach: OrganChitinidStomach
+        liver: OrganChitinidLiver
+        kidneys: OrganHumanKidneys
+      connections:
+      - right arm
+      - left arm
+      - right leg
+      - left leg
+    right arm:
+      part: RightArmChitinid
+      connections:
+      - right hand
+    left arm:
+      part: LeftArmChitinid
+      connections:
+      - left hand
+    right hand:
+      part: RightHandChitinid
+    left hand:
+      part: LeftHandChitinid
+    right leg:
+      part: RightLegChitinid
+      connections:
+      - right foot
+    left leg:
+      part: LeftLegChitinid
+      connections:
+      - left foot
+    right foot:
+      part: RightFootChitinid
+    left foot:
+      part: LeftFootChitinid

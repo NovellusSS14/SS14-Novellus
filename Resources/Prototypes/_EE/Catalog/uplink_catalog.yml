@@ -1,0 +1,45 @@
+# SPDX-FileCopyrightText: 2025 VMSolidus <evilexecutive@gmail.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: storeCategory
+  id: UplinkFaction
+  name: store-category-faction
+  priority: 12
+
+# Faction Gear Loadouts
+# Solarian Alliance
+- type: listing
+  id: UplinkFactionSolAllianceAsset
+  name: uplink-faction-san-asset-name
+  description: uplink-faction-san-asset-desc
+  icon: { sprite: /Textures/Structures/Storage/Crates/aluminiumcrate.rsi, state: icon }
+  productEntity: CrateSANModsuit
+  discountCategory: veryRareDiscounts
+  discountDownTo:
+    Telecrystal: 20
+  cost:
+    Telecrystal: 50
+  categories:
+  - UplinkFaction
+  conditions:
+  - !type:BuyerSpeciesCondition
+    whitelist: [ Human ]
+
+- type: listing
+  id: UplinkFactionSolAllianceAssetGroup
+  name: uplink-faction-san-asset-group-name
+  description: uplink-faction-san-asset-group-desc
+  icon: { sprite: /Textures/Structures/Storage/Crates/aluminiumcrate.rsi, state: icon }
+  productEntity: CrateSANModsuitGroup
+  discountCategory: veryRareDiscounts
+  discountDownTo:
+    Telecrystal: 80
+  cost:
+    Telecrystal: 200
+  categories:
+  - UplinkFaction
+  conditions:
+  - !type:BuyerSpeciesCondition
+    whitelist: [ Human ]

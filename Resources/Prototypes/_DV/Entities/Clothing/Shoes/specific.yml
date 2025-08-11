@@ -1,0 +1,20 @@
+# SPDX-FileCopyrightText: 2024 BriBrooo <45323530+Bribrooo@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 Rosycup <178287475+Rosycup@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: entity
+  parent: ClothingShoesBase
+  id: ClothingShoesEnclosedChem
+  name: enclosed shoes
+  description: Those shoes will protect you from melting your feet while working.
+  components:
+  - type: Sprite
+    sprite: _DV/Clothing/Shoes/Specific/enclosedshoes.rsi
+  - type: Clothing
+    sprite: _DV/Clothing/Shoes/Specific/enclosedshoes.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Caustic: 0.95

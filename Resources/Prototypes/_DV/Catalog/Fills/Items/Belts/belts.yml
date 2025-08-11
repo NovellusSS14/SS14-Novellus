@@ -1,0 +1,50 @@
+# SPDX-FileCopyrightText: 2023 Tad "Taddy" Johnson
+# SPDX-FileCopyrightText: 2024 VMSolidus
+# SPDX-FileCopyrightText: 2025 MajorMoth
+# SPDX-FileCopyrightText: 2025 Rosycup
+# SPDX-FileCopyrightText: 2025 Vanessa Louwagie
+# SPDX-FileCopyrightText: 2025 sleepyyapril
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: entity
+  id: ClothingBeltKatanaSheathFilled
+  parent: ClothingBeltKatanaSheath
+  suffix: Filled
+  components:
+  - type: StorageFill
+    contents:
+      - id: Wakizashi
+      - id: Katana
+
+- type: entity
+  id: ClothingBeltKatanaSheathFilledHoS
+  parent: ClothingBeltKatanaSheathFilled
+  suffix: Filled
+  name: antique katana sheaths
+  description: An ornate belt, wrapped in gold filigree, with a ribbon made from a stasis-field preserved swatch of linen. The history of this sheath has been lost to time.
+  components:
+    - type: StealTarget
+      stealGroup: HoSAntiqueWeapon
+
+# START TheDen
+- type: entity
+  id: ClothingBeltKatanaSheathFilledWarden
+  parent: ClothingBeltKatanaSheathFilled
+  suffix: Filled
+  name: antique katana sheaths
+  description: An ornate belt, wrapped in gold filigree, with a ribbon made from a stasis-field preserved swatch of linen. The history of this sheath has been lost to time.
+# END TheDen
+
+- type: entity
+  id: ClothingBeltCorpsmanWebbingFilled
+  parent: ClothingBeltCorpsmanWebbing
+  suffix: Filled
+  components:
+  - type: StorageFill
+    contents:
+      - id: SyringeEphedrine
+      - id: PunctAutoInjector
+      - id: EmergencyRollerBedSpawnFolded
+      - id: Portafib
+      - id: Bloodpack

@@ -1,0 +1,34 @@
+# SPDX-FileCopyrightText: 2025 Your Name <EctoplasmIsGood@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 fishbait <gnesse@gmail.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: entity
+  id: SpawnPointGhostBingle
+  name: ghost role spawn point
+  suffix: Bingle
+  parent: MarkerBase
+  components:
+  - type: GhostRole
+    name: ghost-role-information-bingle-name
+    description: ghost-role-information-bingle-description
+    rules: ghost-role-information-freeagent-rules
+    raffle:
+      settings: default
+  - type: GhostRoleMobSpawner
+    prototype: MobBingle
+  - type: Sprite
+    sprite: Markers/jobs.rsi
+    layers:
+      - state: green
+      - sprite: _Goobstation/Mobs/Bingle/bingle.rsi
+        state: icon
+
+- type: entity
+  id: SpawnPointGhostBinglePrime
+  parent: SpawnPointGhostBingle
+  suffix: Prime
+  components:
+  - type: GhostRoleMobSpawner
+    prototype: MobBinglePrime

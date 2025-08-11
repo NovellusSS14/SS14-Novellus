@@ -1,0 +1,30 @@
+# SPDX-FileCopyrightText: 2023 Colin-Tel <113523727+Colin-Tel@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2023 Fluffiest Floofers <thebluewulf@gmail.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: MIT
+
+#- type: entity
+#  name: moldy loaf
+#  parent: FoodBreadBase
+#  id: FoodBreadMoldy
+#  description: It's still good enough to eat, just eat around the moldy bits.
+#  components:
+#  - type: Food
+#  - type: Sprite
+#    layers:
+#    - state: moldy
+#  - type: SliceableFood
+#    slice: FoodBreadMoldySlice
+#  - type: SolutionContainerManager
+#    solutions:
+#      food:
+#        maxVol: 60
+#        reagents:
+#        - ReagentId: Nutriment
+#          Quantity: 20
+#        - ReagentId: Mold
+#          Quantity: 28
+#  - type: Tag
+#    tags:
+#    - Bread

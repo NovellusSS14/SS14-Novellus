@@ -1,0 +1,59 @@
+# SPDX-FileCopyrightText: 2024 DEATHB4DEFEAT
+# SPDX-FileCopyrightText: 2024 Danger Revolution!
+# SPDX-FileCopyrightText: 2024 VMSolidus
+# SPDX-FileCopyrightText: 2025 Eris
+# SPDX-FileCopyrightText: 2025 Rosycup
+# SPDX-FileCopyrightText: 2025 portfiend
+# SPDX-FileCopyrightText: 2025 sleepyyapril
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: entity
+  name: Syndicate Guard
+  parent: BaseMobHuman
+  id: MobRadioGuard
+  description: "Mindwiped and hypno-indoctrinated into perfect loyalty by the Syndicate. They will throw their life away to defend their objective."
+  components:
+    - type: NpcFactionMember
+      factions:
+        - Syndicate
+    - type: MobThresholds
+      thresholds:
+        0: Alive
+        100: Dead #Tweak for "Acidify on Crit"
+    - type: MindContainer
+      showExamineInfo: False
+    - type: Loadout
+      prototypes:
+        - RadioGuardGear
+    - type: InputMover
+    - type: MobMover
+    - type: HTN
+      rootTask:
+        task: SimpleHumanoidHostileCompound
+    - type: Respirator #Mobs can't turn on internals by themselves, so we have to simulate them having it on
+      damage:
+        types:
+          Asphyxiation: 0
+      damageRecovery:
+        types:
+          Asphyxiation: -1.0
+    - type: Gun #Mobs currently cannot bolt a gun, so we have to simulate them firing it
+      fireRate: 2
+      soundGunshot: /Audio/Weapons/Guns/Gunshots/pistol.ogg
+      useKey: false
+      selectedMode: SemiAuto
+      availableModes:
+        - SemiAuto
+    - type: CombatMode
+    - type: BasicEntityAmmoProvider
+      proto: CartridgePistol
+      capacity: 10
+      count: 10
+    - type: RechargeBasicEntityAmmo
+      rechargeCooldown: 1
+      rechargeSound:
+        path: /Audio/Weapons/Guns/MagIn/bullet_insert.ogg
+    - type: AutoImplant
+      implants:
+      - DeathAcidifierImplant

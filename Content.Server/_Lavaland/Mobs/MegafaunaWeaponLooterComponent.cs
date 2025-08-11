@@ -1,0 +1,13 @@
+// SPDX-FileCopyrightText: 2025 Eris <eris@erisws.com>
+// SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+namespace Content.Server._Lavaland.Mobs;
+
+/// <summary>
+/// Marker component that used for weapons.
+/// If weapon has this component, Megafauna can drop special loot.
+/// </summary>
+[RegisterComponent]
+public sealed partial class MegafaunaWeaponLooterComponent : Component;

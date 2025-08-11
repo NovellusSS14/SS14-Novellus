@@ -1,0 +1,28 @@
+<!--
+SPDX-FileCopyrightText: 2024 Ben Velie <veliebm@gmail.com>
+SPDX-FileCopyrightText: 2024 DEATHB4DEFEAT <77995199+DEATHB4DEFEAT@users.noreply.github.com>
+SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+
+SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+-->
+
+<Document>
+  # Radioisotope Thermoelectric Generator (RTG)
+
+  <Box>
+    <GuideEntityEmbed Entity="GeneratorRTG" Caption="RTG" />
+  </Box>
+
+  Making power using a Radioisotope Thermoelectric Generator (RTG) is similar to making power using solars.
+  RTGs only provide [color=#a4885c]10kW[/color] of power, but they provide it for free and for the entire round.
+  Basically, if you connect an RTG to your power grid, it'll give you [color=#a4885c]free power[/color].
+  However, they're only accessible through salvage finding one on an expedition. Should they bring some in, make sure to thank them!
+
+  <Box>
+    <GuideEntityEmbed Entity="GeneratorRTGDamaged" Caption="Damaged RTG" />
+  </Box>
+  Sometimes, RTGs appear damaged.
+  Damaged RTGs behave just like regular ones, but they're [color=yellow]radioactive[/color].
+  That means they're more dangerous, but on the bright side, you can put radiation collectors next to them to turn that radiation into more power.
+  This is usually more worthwhile, considering the power is still free, so long as you can find a safe spot to put the RTG(s) in.
+</Document>

@@ -1,0 +1,26 @@
+# SPDX-FileCopyrightText: 2024 Tryded <139474617+Tryded@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 Rosycup <178287475+Rosycup@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: constructionGraph
+  id: CartridgeMusketGraph
+  start: start
+  graph:
+  - node: start
+    edges:
+    - to: musketcartridge
+      steps:
+      - tag: Paper
+        icon: 
+          sprite: Objects/Misc/bureaucracy.rsi
+          state: paper
+        name: paper
+      - material: Gunpowder
+        amount: 1
+      - material: Steel
+        amount: 1
+        doAfter: 1
+  - node: musketcartridge
+    entity: CartridgeMusket

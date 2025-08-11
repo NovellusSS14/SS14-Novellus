@@ -1,0 +1,46 @@
+<!--
+SPDX-FileCopyrightText: 2025 SX-7 <92227810+SX-7@users.noreply.github.com>
+SPDX-FileCopyrightText: 2025 portfiend <109661617+portfiend@users.noreply.github.com>
+SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+
+SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+-->
+
+<Document>
+  # Tajaran
+
+  <Box>
+    <GuideEntityEmbed Entity="MobTajaran" Caption=""/>
+  </Box>
+
+  Tajara (Tah-jaw-rah) are a species of feline humanoids, with sharp claws and light steps.
+
+  They natively speak the Siik'maas language.
+
+  - [color=#1e90ff]Animal Diet[/color]: Tajara are poisoned by theobromine but can safely consume uncooked animal protein.
+
+  - [color=#1e90ff]Cold Resistance[/color]: Tajara are more resilient to cold than humans, receiving [color=#1e90ff]35% less cold damage[/color] and [color=#1e90ff]tolerating lower temperatures[/color].
+
+  - [color=#1e90ff]Hairballs[/color]: Tajara can spit out hairballs, which cause others to vomit when held.
+
+  - [color=#1e90ff]Claws[/color]: Tajara unarmed attacks deal Slash damage instead of Blunt.
+
+  - [color=#1e90ff]Reflexes[/color]: Tajara take reduced damage from high-speed impacts.
+
+  - [color=#1e90ff]Small Body[/color]: Tajara are small enough to fit in duffelbags.
+
+  - [color=#1e90ff]Night Vision[/color]: Tajara can see in darkness.
+
+  - [color=#1e90ff]Light Step[/color]: Thanks to their furred paw pads, Tajara can walk silently when not wearing shoes.
+
+  - [color=#ffa500]Heat Intolerance[/color]: Tajara take [color=#ffa500]35% more Heat damage[/color] and burn more easily. They also [color=#ffa500]suffer more damage from overheating[/color].
+
+  - [color=#ffa500]Light Build[/color]: Their small stature makes Tajara take 15% more Brute damage, and they are lighter than humans.
+
+  - [color=#ffa500]Weak Body[/color]: Tajara take 15% more stamina damage.
+
+  - [color=#ffa500]Sensitive Eyes[/color]: Tajara are more vulnerable to flashes.
+
+  - [color=#ffa500]Fast Metabolism[/color]: Tajara require more food to sustain themselves.
+
+</Document>

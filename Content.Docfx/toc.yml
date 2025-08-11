@@ -1,0 +1,24 @@
+# SPDX-FileCopyrightText: 2022 Silver <silvertorch5@gmail.com>
+# SPDX-FileCopyrightText: 2022 Zoldorf <silvertorch5@gmail.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: MIT
+
+- name: Articles
+  href: articles/
+  
+# Client 
+- name: Content.Client 
+  href: api/Content.Client/
+
+# Server
+- name: Content.Server
+  href: api/Content.Server/
+
+# Shared 
+- name: Content.Shared
+  href: api/Content.Shared/
+  
+# Unit testing
+- name: Content.Tests
+  href: api/Content.Tests/

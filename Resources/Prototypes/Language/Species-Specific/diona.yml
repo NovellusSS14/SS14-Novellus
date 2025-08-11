@@ -1,0 +1,24 @@
+# SPDX-FileCopyrightText: 2024 VMSolidus <evilexecutive@gmail.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <flyingkarii@gmail.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+# Spoken by dionas.
+# TODO: Replace this with a much better language.
+- type: language
+  id: RootSpeak
+  isVisibleLanguage: true
+  speech:
+    color: "#ce5e14dd"
+    fontId: Noganas
+  obfuscation:
+    !type:SyllableObfuscation
+    minSyllables: 1
+    maxSyllables: 5
+    replacement:
+    - hs
+    - zt
+    - kr
+    - st
+    - sh

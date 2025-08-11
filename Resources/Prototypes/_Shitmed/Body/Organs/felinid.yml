@@ -1,0 +1,33 @@
+# SPDX-FileCopyrightText: 2024 gluesniffler <159397573+gluesniffler@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 gluesniffler <linebarrelerenthusiast@gmail.com>
+# SPDX-FileCopyrightText: 2025 Blitz <73762869+BlitzTheSquishy@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: entity
+  id: OrganFelinidEars
+  parent: OrganHumanEars
+  name: cat ears
+  description: "Holding these might potentially be contagious."
+  categories: [ HideSpawnMenu ] # TheDen - Removes from spawn menu
+  components:
+  - type: Sprite
+    sprite: Clothing/Head/Hats/catears.rsi
+    state: icon
+  - type: MarkingContainer
+    marking: FelinidEarsBasic
+
+- type: entity
+  id: OrganFelinidTail
+  parent: BaseHumanOrgan
+  name: cat tail
+  description: "Should you really have this?"
+  categories: [ HideSpawnMenu ] # TheDen - Removes from spawn menu
+  components:
+  - type: Sprite
+    sprite: Nyanotrasen/Mobs/Customization/felinid_tails.rsi
+    state: basic_tail_tip
+  - type: MarkingContainer
+    marking: FelinidTailBasic
+  - type: Tail

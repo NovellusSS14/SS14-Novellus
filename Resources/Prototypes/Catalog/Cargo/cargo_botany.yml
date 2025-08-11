@@ -1,0 +1,63 @@
+# SPDX-FileCopyrightText: 2021 Swept <sweptwastaken@protonmail.com>
+# SPDX-FileCopyrightText: 2021 SweptWasTaken <sweptwastaken@protonmail.com>
+# SPDX-FileCopyrightText: 2022 Nemanja <98561806+EmoGarbage404@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2022 Rinkashikachi <15rinkashikachi15@gmail.com>
+# SPDX-FileCopyrightText: 2022 metalgearsloth <31366439+metalgearsloth@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2023 Debug <49997488+DebugOk@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2023 IProduceWidgets <107586145+IProduceWidgets@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2023 ZeroDayDaemon <60460608+ZeroDayDaemon@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 RumiTiger <154005209+RumiTiger@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 SimpleStation14 <130339894+SimpleStation14@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: cargoProduct
+  id: HydroponicsSeedsExotic
+  icon:
+    sprite: Objects/Specific/Hydroponics/banana.rsi
+    state: seed
+  product: CrateHydroponicsSeedsExotic
+  cost: 1000
+  category: cargoproduct-category-name-hydroponics
+  group: market
+
+- type: cargoProduct
+  id: HydroponicsSeedsMedicinal
+  icon:
+    sprite: Objects/Specific/Hydroponics/galaxythistle.rsi
+    state: seed
+  product: CrateHydroponicsSeedsMedicinal
+  cost: 500
+  category: cargoproduct-category-name-hydroponics
+  group: market
+
+- type: cargoProduct
+  id: HydroponicsTools
+  icon:
+    sprite: Objects/Tools/Hydroponics/hoe.rsi
+    state: icon
+  product: CrateHydroponicsTools
+  cost: 500
+  category: cargoproduct-category-name-hydroponics
+  group: market
+
+- type: cargoProduct
+  id: HydroponicsSeeds
+  icon:
+    sprite: Objects/Specific/Hydroponics/apple.rsi
+    state: seed
+  product: CrateHydroponicsSeeds
+  cost: 600
+  category: cargoproduct-category-name-hydroponics
+  group: market
+
+- type: cargoProduct
+  id: BulkPlantBGone
+  icon:
+    sprite: Objects/Specific/Chemistry/jug.rsi
+    state: jug
+  product: CratePlantBGone
+  cost: 750
+  category: cargoproduct-category-name-hydroponics
+  group: market

@@ -1,0 +1,85 @@
+# SPDX-FileCopyrightText: 2024 VMSolidus <evilexecutive@gmail.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+#- type: characterItemGroup
+#  id: LoadoutTechnicalAssistantBackpacks
+#  maxItems: 1
+#  items:
+
+#- type: characterItemGroup
+#  id: LoadoutTechnicalAssistantBelt
+#  maxItems: 1
+#  items:
+
+#- type: characterItemGroup
+#  id: LoadoutTechnicalAssistantEars
+#  maxItems: 1
+#  items:
+
+- type: characterItemGroup
+  id: LoadoutTechnicalAssistantEquipment
+  maxItems: 2
+  items:
+    - type: loadout
+      id: LoadoutTechnicalAssistantEquipmentBoxInflatable
+    - type: loadout
+      id: LoadoutTechnicalAssistantEquipmentSheetSteel10
+    - type: loadout
+      id: LoadoutTechnicalAssistantEquipmentSheetPlasteel10
+    - type: loadout
+      id: LoadoutTechnicalAssistantEquipmentSheetGlass10
+    - type: loadout
+      id: LoadoutTechnicalAssistantEquipmentMaterialWoodPlank10
+    - type: loadout
+      id: LoadoutTechnicalAssistantEquipmentSheetPlastic10
+
+#- type: characterItemGroup
+#  id: LoadoutTechnicalAssistantEyes
+#  maxItems: 1
+#  items:
+
+#- type: characterItemGroup
+#  id: LoadoutTechnicalAssistantGloves
+#  maxItems: 1
+#  items:
+
+#- type: characterItemGroup
+#  id: LoadoutTechnicalAssistantHead
+#  maxItems: 1
+#  items:
+
+#- type: characterItemGroup
+#  id: LoadoutTechnicalAssistantId
+#  maxItems: 1
+#  items:
+
+#- type: characterItemGroup
+#  id: LoadoutTechnicalAssistantNeck
+#  maxItems: 1
+#  items:
+
+#- type: characterItemGroup
+#  id: LoadoutTechnicalAssistantMask
+#  maxItems: 1
+#  items:
+
+#- type: characterItemGroup
+#  id: LoadoutTechnicalAssistantOuter
+#  maxItems: 1
+#  items:
+
+#- type: characterItemGroup
+#  id: LoadoutTechnicalAssistantShoes
+#  maxItems: 1
+#  items:
+
+- type: characterItemGroup
+  id: LoadoutTechnicalAssistantUniforms
+  maxItems: 1
+  items:
+    - type: loadout
+      id: LoadoutTechnicalAssistantSuit
+    - type: loadout
+      id: LoadoutTechnicalAssistantSkirt

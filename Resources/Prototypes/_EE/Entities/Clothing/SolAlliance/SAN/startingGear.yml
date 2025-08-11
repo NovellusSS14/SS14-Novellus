@@ -1,0 +1,34 @@
+# SPDX-FileCopyrightText: 2025 Rosycup <178287475+Rosycup@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 VMSolidus <evilexecutive@gmail.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: startingGear
+  id: SANMarineGreen
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitSolFatigueGreen
+    head: ClothingHeadHelmetSAN
+    back: ClothingBackpackMerc
+    mask: ClothingMaskGasMerc
+    gloves: ClothingHandsMercGlovesCombat
+    shoes: ClothingShoesBootsCombatFilled
+    id: SANIdCard
+    pocket1: WeaponPistolViperWood
+    pocket2: MagazinePistol
+    belt: ClothingBeltMilitaryWebbingDeserters
+    outerClothing: ClothingOuterVestWebSAN
+
+- type: startingGear
+  id: SANMarineOfficer
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitSolArmyServiceOfficer
+    head: ClothingHeadHatSANArmyCapOfficer
+    back: ClothingBackpackMerc
+    mask: ClothingMaskGasMerc
+    gloves: ClothingHandsMercGlovesCombat
+    shoes: ClothingShoesBootsCombatFilled
+    id: SANIdCard
+    pocket1: WeaponPistolViperWood
+    pocket2: MagazinePistolRubber
+    belt: ClothingBeltSheathSANMarineFilled

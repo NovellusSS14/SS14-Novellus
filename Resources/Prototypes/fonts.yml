@@ -1,0 +1,123 @@
+# SPDX-FileCopyrightText: 2023 /ʊniɹɑː/ <onoira@psiko.zone>
+# SPDX-FileCopyrightText: 2023 Nemanja <98561806+EmoGarbage404@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 FoxxoTrystan <45297731+FoxxoTrystan@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 FoxxoTrystan <trystan.garnierhein@gmail.com>
+# SPDX-FileCopyrightText: 2024 Julian Giebel <juliangiebel@live.de>
+# SPDX-FileCopyrightText: 2024 VMSolidus <evilexecutive@gmail.com>
+# SPDX-FileCopyrightText: 2024 XavierSomething <tylernguyen203@gmail.com>
+# SPDX-FileCopyrightText: 2025 Rocket <rocketboss360@gmail.com>
+# SPDX-FileCopyrightText: 2025 SX-7 <92227810+SX-7@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 Skubman <ba.fallaria@gmail.com>
+# SPDX-FileCopyrightText: 2025 Tabitha <64847293+KyuPolaris@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 portfiend <109661617+portfiend@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: font
+  id: Default
+  path: /Fonts/NotoSans/NotoSans-Regular.ttf
+
+- type: font
+  id: DefaultItalic
+  path: /Fonts/NotoSans/NotoSans-Italic.ttf
+
+- type: font
+  id: DefaultBold
+  path: /Fonts/NotoSans/NotoSans-Bold.ttf
+
+- type: font
+  id: DefaultBoldItalic
+  path: /Fonts/NotoSans/NotoSans-BoldItalic.ttf
+
+- type: font
+  id: NotoSansDisplay
+  path: /Fonts/NotoSansDisplay/NotoSansDisplay-Regular.ttf
+
+- type: font
+  id: NotoSansDisplayItalic
+  path: /Fonts/NotoSansDisplay/NotoSansDisplay-Italic.ttf
+
+- type: font
+  id: NotoSansDisplayBold
+  path: /Fonts/NotoSansDisplay/NotoSansDisplay-Bold.ttf
+
+- type: font
+  id: NotoSansDisplayBoldItalic
+  path: /Fonts/NotoSansDisplay/NotoSansDisplay-BoldItalic.ttf
+
+- type: font
+  id: BoxRound
+  path: /Fonts/Boxfont-round/Boxfont Round.ttf
+
+- type: font
+  id: AnimalSilence
+  path: /Fonts/Animal Silence.otf
+
+- type: font
+  id: Monospace
+  path: /EngineFonts/NotoSans/NotoSansMono-Regular.ttf
+
+- type: font
+  id: Emoji
+  path: /Fonts/NotoEmoji.ttf
+
+- type: font
+  id: RubikBubbles
+  path: /Fonts/RubikBubbles.ttf
+
+- type: font
+  id: Copperplate
+  path: /Fonts/Copperplate.otf
+
+- type: font
+  id: Manga
+  path: /Fonts/Mangat.ttf
+
+- type: font
+  id: Noganas
+  path: /Fonts/Noganas.ttf
+
+- type: font
+  id: StrawSerif
+  path: /Fonts/StrawSerifRegular.ttf
+
+- type: font
+  id: Lymphatic
+  path: /Fonts/Lymphatic.ttf
+
+- type: font
+  id: Cambria
+  path: /Fonts/Cambria.ttf
+
+- type: font
+  id: LDFComicSans
+  path: /Fonts/LDFComicSans/LDFComicSans-Medium.ttf
+
+- type: font
+  id: OnlyYou
+  path: /Fonts/Only_You.otf
+
+- type: font
+  id: Sriracha
+  path: /Fonts/Sriracha/Sriracha.ttf
+
+- type: font
+  id: GrenzeGotisch
+  path: /Fonts/Grenze_Gotisch/GrenzeGotisch.ttf
+
+- type: font
+  id: RubikDirt
+  path: /Fonts/Rubik_Dirt/RubikDirt.ttf
+
+- type: font
+  id: Megrim
+  path: /Fonts/Megrim/Megrim.ttf
+
+- type: font
+  id: OpenDyslexic
+  path: /Fonts/opendyslexic/OpenDyslexic-Regular.otf
+
+- type: font
+  id: Biscuitos
+  path: /Fonts/Biscuitos.ttf

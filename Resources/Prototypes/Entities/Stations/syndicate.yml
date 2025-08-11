@@ -1,0 +1,22 @@
+# SPDX-FileCopyrightText: 2024 Rainfey <rainfey0+github@gmail.com>
+# SPDX-FileCopyrightText: 2024 sleepyyapril <flyingkarii@gmail.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: entity
+  abstract: true
+  id: BaseStationSyndicate
+  components:
+    - type: NpcFactionMember
+      factions:
+        - Syndicate
+
+- type: entity
+  id: StandardNukieOutpost
+  parent:
+  - BaseStation
+  - BaseStationSyndicate
+  categories: [ HideSpawnMenu ]
+  components:
+    - type: Transform

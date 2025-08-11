@@ -1,0 +1,38 @@
+# SPDX-FileCopyrightText: 2022 Andreas Kämper
+# SPDX-FileCopyrightText: 2022 Emisse
+# SPDX-FileCopyrightText: 2022 Fishfish458
+# SPDX-FileCopyrightText: 2022 fishfish458
+# SPDX-FileCopyrightText: 2022 mirrorcult
+# SPDX-FileCopyrightText: 2023 Velcroboy
+# SPDX-FileCopyrightText: 2023 ar4ill
+# SPDX-FileCopyrightText: 2023 lzk
+# SPDX-FileCopyrightText: 2023 mhamster
+# SPDX-FileCopyrightText: 2024 Dakota Haven
+# SPDX-FileCopyrightText: 2024 FoxxoTrystan
+# SPDX-FileCopyrightText: 2024 Mnemotechnican
+# SPDX-FileCopyrightText: 2024 ShatteredSwords
+# SPDX-FileCopyrightText: 2024 Ubaser
+# SPDX-FileCopyrightText: 2025 BlitzTheSquishy
+# SPDX-FileCopyrightText: 2025 sleepyyapril
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: vendingMachineInventory
+  id: RoboDrobeInventory
+  startingInventory:
+    ClothingOuterCoatRobo: 2
+    ClothingUniformJumpsuitRoboticist: 2
+    ClothingUniformJumpskirtRoboticist: 2
+    ClothingShoesColorBlack: 2
+    ClothingHandsGlovesRobohands: 2
+    ClothingHeadHatCorpsoft: 2
+    ClothingHeadBandSkull: 2
+    ClothingHeadsetRobotics: 2
+    ClothingOuterWinterRobo: 2
+    ClothingShoesBootsWinterRobo: 2 #Delta V: Add departmental winter boots
+    ClothingBackpackRobotics: 2
+    ClothingBackpackSatchelRobotics: 2
+    ClothingBackpackDuffelRobotics: 2
+    ClothingBackpackMessengerRobotics: 2
+    ClothingOuterRoboOveralls: 2 #Floofstation - Add overalls
+    ClothingOuterPlainOveralls: 2 # Floofstation

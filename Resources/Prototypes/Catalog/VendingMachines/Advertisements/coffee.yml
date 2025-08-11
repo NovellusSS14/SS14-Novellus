@@ -1,0 +1,24 @@
+# SPDX-FileCopyrightText: 2021 Visne <39844191+Visne@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 Tayrtahn <tayrtahn@gmail.com>
+# SPDX-FileCopyrightText: 2024 Ubaser <134914314+UbaserB@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: messagePack
+  id: HotDrinksMachineAds
+  messages:
+    - advertisement-coffee-1
+    - advertisement-coffee-2
+    - advertisement-coffee-3
+    - advertisement-coffee-4
+    - advertisement-coffee-5
+    - advertisement-coffee-6
+    - advertisement-coffee-7
+    - advertisement-coffee-8
+    - advertisement-coffee-9
+    - advertisement-coffee-10
+    - advertisement-coffee-11
+    - advertisement-coffee-12
+    - advertisement-coffee-13
+    - advertisement-coffee-14

@@ -1,0 +1,444 @@
+# SPDX-FileCopyrightText: 2021 Swept
+# SPDX-FileCopyrightText: 2021 Ygg01
+# SPDX-FileCopyrightText: 2022 Alex Evgrashin
+# SPDX-FileCopyrightText: 2022 Easypoller
+# SPDX-FileCopyrightText: 2022 Fishfish458
+# SPDX-FileCopyrightText: 2022 Jacob Tong
+# SPDX-FileCopyrightText: 2022 Jessica M
+# SPDX-FileCopyrightText: 2022 Kara D
+# SPDX-FileCopyrightText: 2022 Mervill
+# SPDX-FileCopyrightText: 2022 Profane McBane
+# SPDX-FileCopyrightText: 2022 Rane
+# SPDX-FileCopyrightText: 2022 Willhelm53
+# SPDX-FileCopyrightText: 2022 fishfish458
+# SPDX-FileCopyrightText: 2022 keronshb
+# SPDX-FileCopyrightText: 2022 mirrorcult
+# SPDX-FileCopyrightText: 2022 rolfero
+# SPDX-FileCopyrightText: 2023 Alex
+# SPDX-FileCopyrightText: 2023 Arimah
+# SPDX-FileCopyrightText: 2023 CrigCrag
+# SPDX-FileCopyrightText: 2023 EnDecc
+# SPDX-FileCopyrightText: 2023 Jeff
+# SPDX-FileCopyrightText: 2023 Lei Yunxing
+# SPDX-FileCopyrightText: 2023 Nemanja
+# SPDX-FileCopyrightText: 2023 Panzer
+# SPDX-FileCopyrightText: 2023 Psychpsyo
+# SPDX-FileCopyrightText: 2023 ShadowCommander
+# SPDX-FileCopyrightText: 2023 Sir Winters
+# SPDX-FileCopyrightText: 2023 TNE
+# SPDX-FileCopyrightText: 2023 Topy
+# SPDX-FileCopyrightText: 2023 Vasilis
+# SPDX-FileCopyrightText: 2023 Velcroboy
+# SPDX-FileCopyrightText: 2023 Vordenburg
+# SPDX-FileCopyrightText: 2023 deltanedas
+# SPDX-FileCopyrightText: 2023 lapatison
+# SPDX-FileCopyrightText: 2023 lzk
+# SPDX-FileCopyrightText: 2023 metalgearsloth
+# SPDX-FileCopyrightText: 2023 themias
+# SPDX-FileCopyrightText: 2024 AJCM-git
+# SPDX-FileCopyrightText: 2024 Aexxie
+# SPDX-FileCopyrightText: 2024 DEATHB4DEFEAT
+# SPDX-FileCopyrightText: 2024 Debug
+# SPDX-FileCopyrightText: 2024 Flareguy
+# SPDX-FileCopyrightText: 2024 Ghagliiarghii
+# SPDX-FileCopyrightText: 2024 Kara
+# SPDX-FileCopyrightText: 2024 Magnus Larsen
+# SPDX-FileCopyrightText: 2024 Mr. 27
+# SPDX-FileCopyrightText: 2024 OldDanceJacket
+# SPDX-FileCopyrightText: 2024 SimpleStation14
+# SPDX-FileCopyrightText: 2024 Skubman
+# SPDX-FileCopyrightText: 2024 Vero
+# SPDX-FileCopyrightText: 2024 brainfood1183
+# SPDX-FileCopyrightText: 2024 dge21
+# SPDX-FileCopyrightText: 2024 slarticodefast
+# SPDX-FileCopyrightText: 2024 zzylex
+# SPDX-FileCopyrightText: 2025 Blitz
+# SPDX-FileCopyrightText: 2025 KekaniCreates
+# SPDX-FileCopyrightText: 2025 Rosycup
+# SPDX-FileCopyrightText: 2025 Savante-Sam
+# SPDX-FileCopyrightText: 2025 Tiniest Shark
+# SPDX-FileCopyrightText: 2025 VMSolidus
+# SPDX-FileCopyrightText: 2025 Your Name
+# SPDX-FileCopyrightText: 2025 fishbait
+# SPDX-FileCopyrightText: 2025 hoshizora
+# SPDX-FileCopyrightText: 2025 portfiend
+# SPDX-FileCopyrightText: 2025 sleepyyapril
+# SPDX-FileCopyrightText: 2025 wheelwrightt
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: entity
+  parent: BaseItem
+  name: mop
+  id: MopItem
+  description: A mop that can't be stopped, viscera cleanup detail awaits.
+  components:
+  - type: Sprite
+    sprite: Objects/Specific/Janitorial/mop.rsi
+    state: mop
+  - type: MeleeWeapon
+    range: 1.85
+    damage:
+      types:
+        Blunt: 5
+    bluntStaminaDamageFactor: 3
+    heavyRateModifier: 2.5
+    heavyRangeModifier: 2
+    heavyDamageBaseModifier: 1.25
+    heavyStaminaCost: 5
+    maxTargets: 7
+    angle: 160
+    soundHit:
+      collection: MetalThud
+  - type: DamageOtherOnHit
+    damage:
+      types:
+        Blunt: 6
+    staminaCost: 8
+  - type: Spillable
+    solution: absorbed
+    spillWhenThrown: false
+  - type: DrainableSolution
+    solution: absorbed
+  - type: Wieldable
+  - type: IncreaseDamageOnWield
+    damage:
+      types:
+        Blunt: 4
+  - type: Item
+    size: Large
+    sprite: Objects/Specific/Janitorial/mop.rsi
+  - type: Absorbent
+    footprintCleaningRange: 0.45
+    maxCleanedFootprints: 25
+  - type: SolutionContainerManager
+    solutions:
+      absorbed:
+        maxVol: 100
+  - type: UseDelay
+    delay: 1
+  - type: PhysicalComposition
+    materialComposition:
+      Plastic: 50
+  - type: Tag
+    tags:
+      - Mop
+      - MopBasic
+  - type: GuideHelp
+    guides:
+    - Janitorial
+
+- type: entity
+  parent: BaseItem
+  name: advanced mop
+  id: AdvMopItem
+  description: Motorized mop that has a bigger reservoir and quickly replaces reagents inside with water. Automatic Clown Countermeasure not included.
+  components:
+    - type: Sprite
+      sprite: Objects/Specific/Janitorial/advmop.rsi
+      state: advmop
+    - type: MeleeWeapon
+      range: 1.85
+      damage:
+        types:
+          Blunt: 7.5
+      bluntStaminaDamageFactor: 3
+      heavyRateModifier: 2.5
+      heavyRangeModifier: 2
+      heavyDamageBaseModifier: 1.25
+      heavyStaminaCost: 5
+      maxTargets: 7
+      angle: 160
+      soundHit:
+         collection: MetalThud
+    - type: DamageOtherOnHit
+      damage:
+        types:
+          Blunt: 7
+      staminaCost: 8
+    - type: Spillable
+      solution: absorbed
+      spillWhenThrown: false
+    - type: DrainableSolution
+      solution: absorbed
+    - type: Wieldable
+    - type: IncreaseDamageOnWield
+      damage:
+        types:
+          Blunt: 4.5
+    - type: Item
+      size: Large
+      sprite: Objects/Specific/Janitorial/advmop.rsi
+    - type: Absorbent
+      pickupAmount: 100
+      footprintCleaningRange: 0.75
+      maxCleanedFootprints: 25
+    - type: UseDelay
+      delay: 1.0
+    - type: SolutionRegeneration
+      solution: absorbed
+      generated:
+        reagents:
+        - ReagentId: Water
+          Quantity: 5
+    - type: SolutionPurge
+      solution: absorbed
+      preserve:
+      - Water
+      quantity: 10
+    - type: SolutionContainerManager
+      solutions:
+        absorbed:
+          maxVol: 100
+    - type: Tag
+      tags:
+        - Mop
+        - MopAdv
+
+- type: entity
+  name: wet floor sign
+  id: WetFloorSign
+  parent: ClothingOuterBase
+  description: Caution! Wet Floor!
+  components:
+  - type: Sprite
+    sprite: Objects/Specific/Janitorial/wet_floor_sign.rsi
+  - type: Item
+    sprite: Objects/Specific/Janitorial/wet_floor_sign.rsi
+    size: Normal
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.95
+        Slash: 0.95
+  - type: PhysicalComposition
+    materialComposition:
+      Plastic: 50
+  - type: Tag
+    tags:
+      - WetFloorSign
+      - WhitelistChameleon
+
+
+- type: entity
+  suffix: Explosive
+  parent: WetFloorSign
+  id: WetFloorSignMineExplosive
+  components:
+  - type: StepTrigger
+    intersectRatio: 0.2
+    requiredTriggeredSpeed: 0
+    stepOn: true
+  - type: CollisionWake
+    enabled: false
+  - type: Physics
+    bodyType: Dynamic
+  - type: Fixtures
+    fixtures:
+      slips:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.2,-0.2,0.2,0.2"
+        hard: false
+        layer:
+          - LowImpassable
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.2,-0.2,0.2,0.2"
+        density: 30
+        mask:
+        - ItemMask
+  - type: LandMine
+    sound:
+      path: /Audio/Effects/beep_landmine.ogg
+      params:
+        maxDistance: 10
+  - type: ExplodeOnTrigger
+  - type: Explosive
+    explosionType: HardBomb  # normally Default and max 5 total 60
+    maxIntensity: 10 # about a ~67.5 total damage
+    totalIntensity: 30 # about a ~3 tile radius
+    canCreateVacuum: false
+  - type: DeleteOnTrigger
+  - type: OnUseTimerTrigger
+    useVerbInstead: true
+    beepInterval: .25
+    beepSound:
+      path: /Audio/Items/Janitor/floor_sign_beep.ogg
+      params:
+        volume: 1
+    examinable: false
+  - type: Tag
+    tags: # ignore "WhitelistChameleon" tag
+      - WetFloorSign
+
+- type: entity
+  name: plunger
+  id: Plunger
+  parent: BaseItem
+  description: A plunger with a red plastic suction-cup and a wooden handle. Used to unclog drains.
+  components:
+  - type: Tag
+    tags:
+       - Plunger
+       - WhitelistChameleon
+  - type: Sprite
+    sprite: Objects/Specific/Janitorial/plunger.rsi
+    state: plunger
+  - type: Item
+    sprite: Objects/Specific/Janitorial/plunger.rsi
+    heldPrefix: plunger
+  - type: GuideHelp
+    guides:
+    - Janitorial
+  - type: Clothing
+    sprite: Objects/Specific/Janitorial/plunger.rsi
+    slots:
+      - HEAD
+    clothingVisuals:
+      head:
+        - state: equipped-HELMET
+          offset: "0, 0.15625"
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape: !type:PhysShapeCircle
+          radius: 0.2
+        density: 5
+        mask:
+        - ItemMask
+        restitution: 0.3
+        friction: 0.2
+      projectile:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.1,-0.1,0.1,0.1"
+        hard: false
+        mask:
+        - Impassable
+        - BulletImpassable
+  - type: EmbeddableProjectile
+    sound: /Audio/Weapons/pop.ogg
+    embedOnThrow: True
+  - type: ThrowingAngle
+    angle: 0
+  - type: LandAtCursor
+  - type: Ammo
+    muzzleFlash: null
+  - type: Projectile
+    deleteOnCollide: false
+    onlyCollideWhenShot: true
+    damage:
+      types:
+        Blunt: 3
+  - type: Plunger
+
+- type: entity
+  name: golden plunger
+  id: GoldenPlunger
+  parent: Plunger
+  description: A plunger with a plastic suction cup coated in a thin layer of gold given as a token of appreciation for years of service. Still used to unclog drains.
+  components:
+  - type: Tag
+    tags:
+    - GoldenPlunger
+  - type: Sprite
+    sprite: Objects/Specific/Janitorial/golden_plunger.rsi
+    state: plunger
+  - type: Item
+    sprite: Objects/Specific/Janitorial/golden_plunger.rsi
+    heldPrefix: plunger
+  - type: Clothing
+    sprite: Objects/Specific/Janitorial/golden_plunger.rsi
+    slots:
+      - HEAD
+    clothingVisuals:
+      head:
+        - state: equipped-HELMET
+          offset: "0, 0.15625"
+  - type: PointLight
+    radius: 1.5
+    energy: 0.75
+    color: "#ffc20e"
+  - type: PhysicalComposition
+    materialComposition:
+      Plastic: 50
+      Gold: 10
+      Wood: 25
+
+- type: weightedRandomEntity
+  id: PlungerLoot
+  weights:
+    RandomSpawner100: 56
+    SpacemenFigureSpawner: 28
+    SpawnMobCockroach: 5
+    MaintenanceToolSpawner: 5
+
+- type: entity
+  parent: BaseItem
+  name: damp rag
+  id: RagItem
+  description: For cleaning up messes, you suppose. Never seems to dry out fully.
+  components:
+    - type: Sprite
+      sprite: Objects/Specific/Janitorial/rag.rsi
+      state: rag
+    - type: Spillable
+      solution: absorbed
+      spillWhenThrown: false
+    - type: DrainableSolution
+      solution: absorbed
+    - type: MeleeWeapon
+      soundHit:
+        path: "/Audio/_Floof/Lewd/whip.ogg"
+      animation: WeaponArcThrust
+      wideAnimationRotation: -90
+      maxTargets: 1
+      damage:
+        types:
+          Blunt: 1
+    - type: DamageOtherOnHit
+      damage:
+        types:
+          Blunt: 0
+      soundHit:
+        collection: desecration
+      staminaCost: 5
+    - type: StaminaDamageOnCollide
+      damage: 10
+    - type: StaminaDamageOnHit
+      damage: 5
+    - type: LandAtCursor
+    - type: Clothing
+      slots: [mask]
+      quickEquip: false
+    - type: IngestionBlocker
+    - type: AddAccentClothing
+      accent: ReplacementAccent
+      replacement: mumble
+      toggleable: false # DEN - No alt verb for toggling accent
+    - type: Butcherable
+      butcheringType: Knife
+      spawned:
+      - id: MaterialCloth1
+        amount: 1
+    - type: Item
+      size: Small
+      sprite: Objects/Specific/Janitorial/rag.rsi
+    - type: Absorbent
+      pickupAmount: 30
+    - type: Construction
+      graph: Rag
+      node: rag
+    - type: SolutionContainerManager
+      solutions:
+        absorbed:
+          maxVol: 30
+    - type: PaintRemover
+    - type: UseDelay
+      delay: 1.25
+    - type: Tag
+      tags:
+        - Mop
+        - Rag #VASH change. Needed for bounties.

@@ -1,0 +1,41 @@
+# SPDX-FileCopyrightText: 2024 VMSolidus <evilexecutive@gmail.com>
+# SPDX-FileCopyrightText: 2025 Rosycup <178287475+Rosycup@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+# class
+- type: vesselCategory
+  id: Civilian
+
+- type: vesselCategory
+  id: Military
+
+- type: vesselCategory
+  id: Experimental
+
+# size
+- type: vesselCategory
+  id: Small
+
+- type: vesselCategory
+  id: Medium
+
+- type: vesselCategory
+  id: Large
+
+# purpose
+- type: vesselCategory
+  id: Medical
+
+- type: vesselCategory
+  id: Mining
+
+- type: vesselCategory
+  id: Research
+
+- type: vesselCategory
+  id: Shipping
+
+- type: vesselCategory
+  id: Transport

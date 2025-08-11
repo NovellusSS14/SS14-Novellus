@@ -1,0 +1,52 @@
+// SPDX-FileCopyrightText: 2024 DEATHB4DEFEAT <77995199+DEATHB4DEFEAT@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 brainfood1183 <113240905+brainfood1183@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+using Content.Server.Speech.Components;
+using System.Text.RegularExpressions;
+
+namespace Content.Server.Speech.EntitySystems;
+
+/// <summary>
+/// System that gives the speaker a faux-French accent.
+/// </summary>
+public sealed class FrenchAccentSystem : EntitySystem
+{
+    [Dependency] private readonly ReplacementAccentSystem _replacement = default!;
+
+    private static readonly Regex RegexTh = new(@"th", RegexOptions.IgnoreCase);
+    private static readonly Regex RegexStartH = new(@"(?<!\w)h", RegexOptions.IgnoreCase);
+    private static readonly Regex RegexSpacePunctuation = new(@"(?<=\w\w)[!?;:](?!\w)", RegexOptions.IgnoreCase);
+
+    public override void Initialize()
+    {
+        base.Initialize();
+
+        SubscribeLocalEvent<FrenchAccentComponent, AccentGetEvent>(OnAccentGet);
+    }
+
+    public string Accentuate(string message, FrenchAccentComponent component)
+    {
+        var msg = message;
+
+        msg = _replacement.ApplyReplacements(msg, "french");
+
+        // replaces th with dz
+        msg = RegexTh.Replace(msg, "'z");
+
+        // removes the letter h from the start of words.
+        msg = RegexStartH.Replace(msg, "'");
+
+        // spaces out ! ? : and ;.
+        msg = RegexSpacePunctuation.Replace(msg, " $&");
+
+        return msg;
+    }
+
+    private void OnAccentGet(EntityUid uid, FrenchAccentComponent component, AccentGetEvent args)
+    {
+        args.Message = Accentuate(args.Message, component);
+    }
+}

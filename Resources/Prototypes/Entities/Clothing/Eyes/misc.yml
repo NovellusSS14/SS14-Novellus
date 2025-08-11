@@ -1,0 +1,100 @@
+# SPDX-FileCopyrightText: 2020 Swept <sweptwastaken@protonmail.com>
+# SPDX-FileCopyrightText: 2022 Moony <moonheart08@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2022 Rane <60792108+Elijahrane@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2023 Naive817 <31364560+Naive817@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 Danger Revolution! <142105406+DangerRevolution@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 Skubman <ba.fallaria@gmail.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: entity
+  parent: ClothingEyesBase
+  id: ClothingEyesEyepatch
+  name: eyepatch
+  description: Yarr.
+  components:
+  - type: Sprite
+    sprite: Clothing/Eyes/Misc/eyepatch.rsi
+  - type: Clothing
+    sprite: Clothing/Eyes/Misc/eyepatch.rsi
+  - type: EyeProtection
+    protectionTime: 5
+
+- type: entity
+  parent: [ClothingEyesEyepatch, BaseFoldable]
+  id: ClothingEyesEyepatchColor
+  name: eyepatch
+  description: Yarr.
+  components:
+  - type: Sprite
+    sprite: Clothing/Eyes/Misc/eyepatch_color.rsi
+  - type: Clothing
+    sprite: Clothing/Eyes/Misc/eyepatch_color.rsi
+  - type: EyeProtection
+    protectionTime: 5
+  - type: Foldable
+    canFoldInsideContainer: true
+    unfoldVerbText: fold-flip-verb
+    foldVerbText: fold-flip-verb
+  - type: FoldableClothing
+    foldedEquippedPrefix: flipped
+
+- type: entity
+  parent: ClothingEyesEyepatchColor
+  id: ClothingEyesEyepatchColorFlipped
+  suffix: flipped
+  components:
+  - type: Foldable
+    folded: true
+  - type: Clothing
+    equippedPrefix: flipped
+
+- type: entity
+  parent: ClothingEyesBase
+  id: ClothingEyesBlindfold
+  name: blindfold
+  description: The bind leading the blind.
+  components:
+  - type: Sprite
+    sprite: Clothing/Eyes/Misc/blindfold.rsi
+  - type: Clothing
+    sprite: Clothing/Eyes/Misc/blindfold.rsi
+  - type: Blindfold
+  - type: Construction
+    graph: Blindfold
+    node: blindfold
+  - type: FlashImmunity
+
+- type: entity
+  parent: ClothingEyesBlindfold
+  id: ClothingEyesBlindfoldColor
+  suffix: colorable
+  components:
+  - type: Sprite
+    sprite: Clothing/Eyes/Misc/blindfold_color.rsi
+  - type: Clothing
+    sprite: Clothing/Eyes/Misc/blindfold_color.rsi
+
+- type: entity
+  parent: ClothingEyesBase
+  id: ClothingEyesBlindfoldFake
+  name: blindfold
+  description: The bind leading the blind.
+  suffix: fake
+  components:
+  - type: Sprite
+    sprite: Clothing/Eyes/Misc/blindfold.rsi
+  - type: Clothing
+    sprite: Clothing/Eyes/Misc/blindfold.rsi
+
+- type: entity
+  parent: ClothingEyesBlindfoldFake
+  id: ClothingEyesBlindfoldFakeColor
+  suffix: colorable, fake
+  components:
+  - type: Sprite
+    sprite: Clothing/Eyes/Misc/blindfold_color.rsi
+  - type: Clothing
+    sprite: Clothing/Eyes/Misc/blindfold_color.rsi
+

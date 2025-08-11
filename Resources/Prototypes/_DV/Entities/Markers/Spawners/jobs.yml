@@ -1,0 +1,89 @@
+# SPDX-FileCopyrightText: 2023 Fluffiest Floofers <thebluewulf@gmail.com>
+# SPDX-FileCopyrightText: 2024 Radezolid <snappednexus@gmail.com>
+# SPDX-FileCopyrightText: 2024 VMSolidus <evilexecutive@gmail.com>
+# SPDX-FileCopyrightText: 2024 Velcroboy <107660393+IamVelcroboy@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 Rosycup <178287475+Rosycup@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+
+- type: entity
+  id: SpawnPointMedicalBorg
+  parent: SpawnPointJobBase
+  name: medical cyborg
+  components:
+  - type: SpawnPoint
+    job_id: MedicalBorg
+  - type: Sprite
+    layers:
+    - state: green
+    - sprite: Mobs/Silicon/chassis.rsi
+      state: medical
+    - sprite: Mobs/Silicon/chassis.rsi
+      state: medical_e
+
+- type: entity
+  id: SpawnPointChiefJustice
+  parent: SpawnPointJobBase
+  name: chiefjustice
+  components:
+  - type: SpawnPoint
+    job_id: ChiefJustice
+  - type: Sprite
+    layers:
+    - state: green
+    - sprite: _DV/Markers/jobs.rsi
+      state: chiefjustice
+
+- type: entity
+  id: SpawnPointClerk
+  parent: SpawnPointJobBase
+  name: clerk
+  components:
+  - type: SpawnPoint
+    job_id: Clerk
+  - type: Sprite
+    layers:
+    - state: green
+    - sprite: _DV/Markers/jobs.rsi
+      state: clerk
+
+- type: entity
+  id: SpawnPointProsecutor
+  parent: SpawnPointJobBase
+  name: prosecutor
+  components:
+  - type: SpawnPoint
+    job_id: Prosecutor
+  - type: Sprite
+    layers:
+    - state: green
+    - sprite: _DV/Markers/jobs.rsi
+      state: prosecutor
+
+- type: entity
+  id: SpawnPointAdminAssistant
+  parent: SpawnPointJobBase
+  name: administrative assistant
+  components:
+  - type: SpawnPoint
+    job_id: AdministrativeAssistant
+  - type: Sprite
+    layers:
+      - state: green
+      - sprite: _DV/Markers/jobs.rsi
+        state: adminassistant
+
+- type: entity
+  parent: SpawnPointJobBase
+  id: SpawnPointRoboticist
+  name: roboticist
+  components:
+  - type: SpawnPoint
+    job_id: Roboticist
+  - type: Sprite
+    layers:
+    - state: green
+    - sprite: _DV/Markers/jobs.rsi
+      state: roboticist

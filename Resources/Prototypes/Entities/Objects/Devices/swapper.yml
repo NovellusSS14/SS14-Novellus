@@ -1,0 +1,37 @@
+# SPDX-FileCopyrightText: 2024 Nemanja <98561806+emogarbage404@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 Squishy77 <165165480+Squishy77@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: entity
+  parent: BaseItem
+  id: DeviceQuantumSpinInverter
+  name: quantum spin inverter
+  description: An experimental device that is able to swap the locations of two entities by switching their particles' spin values. Must be linked to another device to function.
+  components:
+  - type: Sprite
+    sprite: Objects/Devices/swapper.rsi
+    layers:
+    - state: icon
+      map: ["base"]
+  - type: Item
+    size: Small
+  - type: Appearance
+  - type: SwapTeleporter
+    teleporterWhitelist:
+      tags:
+      - QuantumSpinInverter
+  - type: GenericVisualizer
+    visuals:
+      enum.SwapTeleporterVisuals.Linked:
+        base:
+          True: { state: linked }
+          False: { state: icon }
+  - type: Tag
+    tags:
+    - QuantumSpinInverter
+  - type: ReverseEngineering # Delta
+    difficulty: 4
+    recipes:
+      - DeviceQuantumSpinInverter

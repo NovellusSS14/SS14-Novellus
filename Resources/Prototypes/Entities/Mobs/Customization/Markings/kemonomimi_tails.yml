@@ -1,0 +1,198 @@
+# SPDX-FileCopyrightText: 2024 Sushiburger <***>
+# SPDX-FileCopyrightText: 2024 VMSolidus <evilexecutive@gmail.com>
+# SPDX-FileCopyrightText: 2025 Blitz <73762869+BlitzTheSquishy@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 BloodfiendishOperator <141253729+Diggy0@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 Rosycup <178287475+Rosycup@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 Skubman <ba.fallaria@gmail.com>
+# SPDX-FileCopyrightText: 2025 Tabitha <64847293+KyuPolaris@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: marking
+  id: BunnyTail
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [Human, SlimePerson, IPC]
+  coloring:
+    default:
+      type:
+        !type:CategoryColoring
+          category: Hair
+      fallbackTypes:
+        - !type:CategoryColoring
+          category: FacialHair
+        - !type:SkinColoring
+  sprites:
+  - sprite: Mobs/Customization/kemonomimi-tails.rsi
+    state: bunnytail
+
+- type: marking
+  id: BunnyTailAlt
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [Human]
+  coloring:
+    default:
+      type:
+        !type:CategoryColoring
+          category: Hair
+      fallbackTypes:
+        - !type:CategoryColoring
+          category: FacialHair
+        - !type:SkinColoring
+  sprites:
+  - sprite: Mobs/Customization/kemonomimi-tails.rsi
+    state: bunnytailalt
+
+- type: marking
+  id: DobleFur
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [Human, SlimePerson, IPC]
+  coloring:
+    default:
+      type:
+        !type:CategoryColoring
+          category: Hair
+      fallbackTypes:
+        - !type:CategoryColoring
+          category: FacialHair
+        - !type:SkinColoring
+  sprites:
+  - sprite: Mobs/Customization/kemonomimi-tails.rsi
+    state: doblefurtailtone1
+  - sprite: Mobs/Customization/kemonomimi-tails.rsi
+    state: doblefurtailtone2
+
+- type: marking
+  id: FluffyTail
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [Human, SlimePerson, IPC]
+  coloring:
+    default:
+      type:
+        !type:CategoryColoring
+          category: Hair
+      fallbackTypes:
+        - !type:CategoryColoring
+          category: FacialHair
+        - !type:SkinColoring
+  sprites:
+  - sprite: Mobs/Customization/kemonomimi-tails.rsi
+    state: fluffytail
+
+- type: marking
+  id: FoxNineTails
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [Human, SlimePerson, IPC, Canid] # The Den - Add Canid
+  coloring:
+    default:
+      type:
+        !type:CategoryColoring
+          category: Hair
+      fallbackTypes:
+        - !type:CategoryColoring
+          category: FacialHair
+        - !type:SkinColoring
+  sprites:
+  - sprite: Mobs/Customization/kemonomimi-tails.rsi
+    state: foxninetailstone1
+  - sprite: Mobs/Customization/kemonomimi-tails.rsi
+    state: foxninetailstone2
+
+- type: marking
+  id: FoxThreeTails
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [Human, SlimePerson, IPC, Canid] # The Den - Add Canid
+  coloring:
+    default:
+      type:
+        !type:CategoryColoring
+          category: Hair
+      fallbackTypes:
+        - !type:CategoryColoring
+          category: FacialHair
+        - !type:SkinColoring
+  sprites:
+  - sprite: Mobs/Customization/kemonomimi-tails.rsi
+    state: foxthreetailstone1
+  - sprite: Mobs/Customization/kemonomimi-tails.rsi
+    state: foxthreetailstone2
+
+- type: marking
+  id: HorseTailCulty
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [Human, SlimePerson, IPC, Oni]
+  coloring:
+    default:
+      type:
+        !type:CategoryColoring
+          category: Hair
+      fallbackTypes:
+        - !type:CategoryColoring
+          category: FacialHair
+        - !type:SkinColoring
+  sprites:
+  - sprite: Mobs/Customization/kemonomimi-tails.rsi
+    state: horsetailculty
+
+- type: marking
+  id: HorseTailLong
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [Human, SlimePerson, IPC]
+  coloring:
+    default:
+      type:
+        !type:CategoryColoring
+          category: Hair
+      fallbackTypes:
+        - !type:CategoryColoring
+          category: FacialHair
+        - !type:SkinColoring
+  sprites:
+  - sprite: Mobs/Customization/kemonomimi-tails.rsi
+    state: horsetaillong
+
+- type: marking
+  id: SharkTail
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [Human, SlimePerson, IPC]
+  coloring:
+    default:
+      type:
+        !type:CategoryColoring
+          category: Hair
+      fallbackTypes:
+        - !type:CategoryColoring
+          category: FacialHair
+        - !type:SkinColoring
+  sprites:
+  - sprite: Mobs/Customization/kemonomimi-tails.rsi
+    state: sharktail
+
+- type: marking
+  id: TasselTail
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [Human, SlimePerson, IPC, Oni]
+  coloring:
+    default:
+      type:
+        !type:CategoryColoring
+          category: Hair
+      fallbackTypes:
+        - !type:CategoryColoring
+          category: FacialHair
+        - !type:SkinColoring
+  sprites:
+  - sprite: Mobs/Customization/kemonomimi-tails.rsi
+    state: tasseltailtone1
+  - sprite: Mobs/Customization/kemonomimi-tails.rsi
+    state: tasseltailtone2

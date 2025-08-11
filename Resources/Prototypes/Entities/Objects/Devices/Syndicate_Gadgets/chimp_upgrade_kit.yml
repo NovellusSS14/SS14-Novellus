@@ -1,0 +1,20 @@
+# SPDX-FileCopyrightText: 2023 chromiumboy <50505512+chromiumboy@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 Debug <49997488+DebugOk@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: MIT
+
+- type: entity
+  name: C.H.I.M.P. handcannon upgrade chip
+  parent: BaseItem
+  id: WeaponPistolCHIMPUpgradeKit
+  description: An experimental upgrade kit for the C.H.I.M.P.
+  components:
+  - type: Sprite
+    sprite: Objects/Misc/module.rsi
+    state: abductor_mod
+  - type: Item
+    size: Small
+  - type: Tag
+    tags:
+    - WeaponPistolCHIMPUpgradeKit

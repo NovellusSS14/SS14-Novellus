@@ -1,0 +1,21 @@
+# SPDX-FileCopyrightText: 2021 Swept <sweptwastaken@protonmail.com>
+# SPDX-FileCopyrightText: 2023 lapatison <100279397+lapatison@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 lzk <124214523+lzk228@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: MIT
+
+- type: entity
+  id: CrateScienceBiosuit
+  parent: CrateScienceSecure
+  name: scientist bio suit crate
+  description: Contains 2 biohazard suits to ensure that no disease will distract you from doing science. Requires Science access to open.
+  components:
+  - type: StorageFill
+    contents:
+      - id: ClothingOuterBioScientist
+        amount: 2
+      - id: ClothingHeadHatHoodBioScientist
+        amount: 2
+      - id: ClothingMaskSterile
+        amount: 2

@@ -1,0 +1,27 @@
+// SPDX-FileCopyrightText: 2024 SlamBamActionman <83650252+SlamBamActionman@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2024 sleepyyapril <flyingkarii@gmail.com>
+// SPDX-FileCopyrightText: 2025 Timfa <timfalken@hotmail.com>
+// SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+using Content.Shared.EntityEffects;
+using JetBrains.Annotations;
+
+namespace Content.Server.EntityEffects.Effects.PlantMetabolism;
+
+[UsedImplicitly]
+public sealed partial class PlantAdjustToxins : PlantAdjustAttribute
+{
+    public override string GuidebookAttributeName { get; set; } = "plant-attribute-toxins";
+    public override bool GuidebookIsAttributePositive { get; protected set; } = false;
+
+    public override void Effect(EntityEffectBaseArgs args)
+    {
+        if (!CanMetabolize(args.TargetEntity, out var plantHolderComp, args.EntityManager, mustHaveAlivePlant: false))
+            return;
+
+        plantHolderComp.Toxins += Amount;
+    }
+}
+

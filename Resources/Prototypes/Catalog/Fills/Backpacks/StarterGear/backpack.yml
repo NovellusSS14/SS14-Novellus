@@ -1,0 +1,397 @@
+# SPDX-FileCopyrightText: 2021 Pieter-Jan Briers <pieterjan.briers+git@gmail.com>
+# SPDX-FileCopyrightText: 2021 Swept <sweptwastaken@protonmail.com>
+# SPDX-FileCopyrightText: 2021 WlarusFromDaSpace <44726328+WlarusFromDaSpace@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2021 xRiriq <94037592+xRiriq@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2021 xRiriq <xRiriq.git@gmail.com>
+# SPDX-FileCopyrightText: 2022 Chris V <HoofedEar@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2022 Fishfish458 <47410468+Fishfish458@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2022 Flipp Syder <76629141+vulppine@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2022 Kara <lunarautomaton6@gmail.com>
+# SPDX-FileCopyrightText: 2022 Morb <14136326+Morb0@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2022 Paul Ritter <ritter.paul1@googlemail.com>
+# SPDX-FileCopyrightText: 2022 Peptide90 <78795277+Peptide90@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2022 Rane <60792108+Elijahrane@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2022 TaralGit <76408146+TaralGit@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2022 Vera Aguilera Puerto <gradientvera@outlook.com>
+# SPDX-FileCopyrightText: 2022 ZeroDayDaemon <60460608+ZeroDayDaemon@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2022 Zymem <97173622+Zymem@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2022 and_a <and_a@DESKTOP-RJENGIR>
+# SPDX-FileCopyrightText: 2022 dontbetank <59025279+dontbetank@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2022 fishfish458 <fishfish458>
+# SPDX-FileCopyrightText: 2022 ike709 <ike709@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2022 mirrorcult <lunarautomaton6@gmail.com>
+# SPDX-FileCopyrightText: 2023 Fluffiest Floofers <thebluewulf@gmail.com>
+# SPDX-FileCopyrightText: 2023 JoeHammad1844 <130668733+JoeHammad1844@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2023 Nemanja <98561806+EmoGarbage404@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2023 Puro <103608145+PuroSlavKing@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2023 Scribbles0 <91828755+Scribbles0@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2023 Whisper <121047731+QuietlyWhisper@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2023 brainfood1183 <113240905+brainfood1183@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2023 deltanedas <39013340+deltanedas@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2023 deltanedas <@deltanedas:kde.org>
+# SPDX-FileCopyrightText: 2023 kzhanik <102734625+kzhanik@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2023 lzk228 <124214523+lzk228@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2023 potato1234_x <79580518+potato1234x@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2023 randy10122 <88034663+randy10122@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 Debug <49997488+DebugOk@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 IProduceWidgets <107586145+IProduceWidgets@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 Mnemotechnican <69920617+Mnemotechnician@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 Tmanzxd <164098915+Tmanzxd@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 VMSolidus <evilexecutive@gmail.com>
+# SPDX-FileCopyrightText: 2024 sleepyyapril <flyingkarii@gmail.com>
+# SPDX-FileCopyrightText: 2025 Blitz <73762869+BlitzTheSquishy@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 Eris <eris@erisws.com>
+# SPDX-FileCopyrightText: 2025 MajorMoth <61519600+MajorMoth@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: entity
+  parent: ClothingBackpack
+  id: ClothingBackpackFilled
+  categories: [ HideSpawnMenu ]
+
+- type: entity
+  categories: [ HideSpawnMenu ]
+  parent: ClothingBackpackClown
+  id: ClothingBackpackClownFilled
+  components:
+  - type: StorageFill
+    contents:
+      - id: BoxHug
+      - id: RubberStampClown
+      - id: CrayonRainbow
+
+- type: entity
+  categories: [ HideSpawnMenu ]
+  parent: ClothingBackpackSecurity
+  id: ClothingBackpackSecurityFilled
+  components:
+  - type: StorageFill
+    contents:
+      - id: MagazinePistol
+
+- type: entity
+  categories: [ HideSpawnMenu ]
+  parent: ClothingBackpackSecurity
+  id: ClothingBackpackSecurityFilledDetective
+  components:
+  - type: StorageFill
+    contents:
+      - id: ForensicPad
+      - id: ForensicScanner
+
+
+
+- type: entity
+  categories: [ HideSpawnMenu ]
+  parent: ClothingBackpackMedical
+  id: ClothingBackpackMedicalFilled
+
+- type: entity
+  categories: [ HideSpawnMenu ]
+  parent: ClothingBackpackMedical
+  id: ClothingBackpackParamedicFilled
+  components:
+  - type: StorageFill
+    contents:
+      - id: EmergencyRollerBedSpawnFolded
+
+- type: entity
+  categories: [ HideSpawnMenu ]
+  parent: ClothingBackpackCaptain
+  id: ClothingBackpackCaptainFilled
+  components:
+  - type: StorageFill
+    contents:
+      - id: Flash
+      #- name: StationCharter
+      #- name: TelescopicBaton
+- type: entity
+  categories: [ HideSpawnMenu ]
+  parent: ClothingBackpackEngineering
+  id: ClothingBackpackChiefEngineerFilled
+  components:
+  - type: StorageFill
+    contents:
+      - id: Flash
+      #- id: TelescopicBaton
+
+- type: entity
+  categories: [ HideSpawnMenu ]
+  parent: ClothingBackpackScience
+  id: ClothingBackpackResearchDirectorFilled
+  components:
+  - type: StorageFill
+    contents:
+      - id: Flash
+      #- id: TelescopicBaton
+
+- type: entity
+  categories: [ HideSpawnMenu ]
+  parent: ClothingBackpack
+  id: ClothingBackpackHOPFilled
+  components:
+  - type: StorageFill
+    contents:
+      - id: Flash
+      #- id: TelescopicBaton
+
+- type: entity
+  categories: [ HideSpawnMenu ]
+  parent: ClothingBackpackMedical
+  id: ClothingBackpackCMOFilled
+  components:
+  - type: StorageFill
+    contents:
+      - id: Flash
+      #- id: TelescopicBaton
+
+- type: entity
+  categories: [ HideSpawnMenu ]
+  parent: ClothingBackpackCargo
+  id: ClothingBackpackQuartermasterFilled
+  components:
+  - type: StorageFill
+    contents:
+      - id: Flash
+      #- id: TelescopicBaton
+
+- type: entity
+  categories: [ HideSpawnMenu ]
+  parent: ClothingBackpackSecurity
+  id: ClothingBackpackHOSFilled
+  components:
+  - type: StorageFill
+    contents:
+      - id: Flash
+      - id: MagazinePistol
+
+- type: entity
+  categories: [ HideSpawnMenu ]
+  parent: ClothingBackpackEngineering
+  id: ClothingBackpackEngineeringFilled
+
+- type: entity
+  categories: [ HideSpawnMenu ]
+  parent: ClothingBackpackAtmospherics
+  id: ClothingBackpackAtmosphericsFilled
+
+- type: entity
+  categories: [ HideSpawnMenu ]
+  parent: ClothingBackpackScience
+  id: ClothingBackpackScienceFilled
+
+- type: entity
+  categories: [ HideSpawnMenu ]
+  parent: ClothingBackpackRobotics
+  id: ClothingBackpackRoboticsFilled
+
+- type: entity
+  categories: [ HideSpawnMenu ]
+  parent: ClothingBackpackHydroponics
+  id: ClothingBackpackHydroponicsFilled
+
+- type: entity
+  categories: [ HideSpawnMenu ]
+  parent: ClothingBackpackMime
+  id: ClothingBackpackMimeFilled
+  components:
+  - type: StorageFill
+    contents:
+      - id: RubberStampMime
+
+- type: entity
+  categories: [ HideSpawnMenu ]
+  parent: ClothingBackpackChemistry
+  id: ClothingBackpackChemistryFilled
+
+- type: entity
+  categories: [ HideSpawnMenu ]
+  parent: ClothingBackpack
+  id: ClothingBackpackChaplainFilled
+
+- type: entity
+  categories: [ HideSpawnMenu ]
+  parent: ClothingBackpack
+  id: ClothingBackpackMusicianFilled
+
+- type: entity
+  categories: [ HideSpawnMenu ]
+  parent: ClothingBackpack
+  id: ClothingBackpackLibrarianFilled
+  components:
+    - type: StorageFill
+      contents:
+        - id: BookRandom
+
+- type: entity
+  categories: [ HideSpawnMenu ]
+  parent: ClothingBackpack
+  id: ClothingBackpackDetectiveFilled
+  components:
+    - type: StorageFill
+      contents:
+      - id: Lighter
+      - id: CigPackBlack
+      - id: HandLabeler
+      - id: BoxForensicPad
+
+# ERT
+
+- type: entity
+  categories: [ HideSpawnMenu ]
+  parent: ClothingBackpackERTLeader
+  id: ClothingBackpackERTLeaderFilled
+  components:
+    - type: StorageFill
+      contents:
+        - id: BoxSurvivalEngineering
+        - id: WeaponDisabler
+        - id: MedicatedSuture
+        - id: RegenerativeMesh
+        - id: BoxZiptie
+        - id: CrowbarRed
+        - id: MagazineMagnum
+
+- type: entity
+  categories: [ HideSpawnMenu ]
+  parent: ClothingBackpackERTSecurity
+  id: ClothingBackpackERTSecurityFilled
+  components:
+    - type: StorageFill
+      contents:
+        - id: BoxSurvivalEngineering
+        - id: WeaponDisabler
+        - id: MedicatedSuture
+        - id: RegenerativeMesh
+        - id: BoxZiptie
+        - id: CrowbarRed
+        - id: MagazinePistol
+
+- type: entity
+  categories: [ HideSpawnMenu ]
+  parent: ClothingBackpackERTMedical
+  id: ClothingBackpackERTMedicalFilled
+  components:
+    - type: StorageFill
+      contents:
+        - id: BoxSurvivalMedical
+        - id: Hypospray
+        - id: MedkitAdvancedFilled
+        - id: CrowbarRed
+        - id: OmnizineChemistryBottle
+        - id: EpinephrineChemistryBottle
+        - id: EpinephrineChemistryBottle
+
+- type: entity
+  categories: [ HideSpawnMenu ]
+  parent: ClothingBackpackERTEngineer
+  id: ClothingBackpackERTEngineerFilled
+  components:
+    - type: StorageFill
+      contents:
+        - id: BoxSurvivalEngineering
+        - id: trayScanner
+        - id: RCD
+        - id: RCDAmmo
+          amount: 2
+        - id: CableMVStack
+        - id: CableHVStack
+        - id: CableApcStack
+        - id: SheetPlasteel
+        - id: SheetSteel
+        - id: SheetGlass
+
+- type: entity
+  categories: [ HideSpawnMenu ]
+  parent: ClothingBackpackERTJanitor
+  id: ClothingBackpackERTJanitorFilled
+  components:
+    - type: StorageFill
+      contents:
+        - id: BoxSurvivalEngineering
+        - id: LightReplacer
+        - id: BoxLightMixed
+        - id: BoxLightMixed
+        - id: Soap
+        - id: CrowbarRed
+        - id: AdvMopItem
+
+- type: entity
+  categories: [ HideSpawnMenu ]
+  parent: ClothingBackpackERTChaplain
+  id: ClothingBackpackERTChaplainFilled
+  components:
+    - type: StorageFill
+      contents:
+        - id: BoxSurvivalEngineering
+        - id: BoxCandle
+        - id: BoxBodyBag
+        - id: DrinkWaterMelonJuiceJug
+        - id: Lantern
+        - id: Lantern
+        - id: Bible
+        - id: CrowbarRed
+        - id: FoodBakedBunHotX
+        - id: FoodBakedBunHotX
+        - id: FoodBakedBunHotX
+        - id: FoodBakedBunHotX
+        - id: Lighter
+
+# Death Squad
+
+- type: entity
+  parent: ClothingBackpackERTSecurity
+  id: ClothingBackpackDeathSquadFilled
+  name: death squad backpack
+  description: Holds the kit of CentComm's most feared agents.
+  suffix: Filled # TheDen
+  components:
+    - type: Storage
+      grid:
+      - 0,0,7,6
+    - type: StorageFill
+      contents:
+        - id: BoxSurvivalEngineering
+        - id: WeaponPulseRifle
+        - id: WeaponPulsePistol
+        - id: WeaponRevolverMateba
+        - id: SpeedLoaderMagnumAP
+        - id: SpeedLoaderMagnumAP
+        - id: BoxFlashbang
+        - id: ToolDebug # spanish army knife
+        - id: WelderExperimental
+        - id: Hypospray
+        - id: DeathAcidifierImplanter # crew will try to steal their amazing hardsuits
+        - id: FreedomImplanter
+
+# Cargo
+
+- type: entity
+  categories: [ HideSpawnMenu ]
+  parent: ClothingBackpackCargo
+  id: ClothingBackpackCargoFilled
+
+- type: entity
+  categories: [ HideSpawnMenu ]
+  parent: ClothingBackpackSalvage
+  id: ClothingBackpackSalvageFilled
+  components:
+    - type: StorageFill
+      contents:
+        - id: MiningVoucher
+
+# Pirate
+
+- type: entity
+  parent: ClothingBackpackSatchelLeather
+  id: ClothingBackpackPirateFilled
+  suffix: Filled, Pirate
+  components:
+    - type: StorageFill
+      contents:
+        - id: BoxSurvival
+        - id: Cutlass
+        - id: WeaponRevolverPirate
+        - id: ClothingEyesEyepatch

@@ -1,0 +1,20 @@
+# SPDX-FileCopyrightText: 2024 Tayrtahn <tayrtahn@gmail.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: messagePack
+  id: BlockGameGoodbyes
+  messages:
+  - thankyou-block-game-1
+  - thankyou-block-game-2
+  - thankyou-block-game-3
+  - thankyou-block-game-4
+  - thankyou-block-game-5
+  - thankyou-block-game-6
+  - thankyou-block-game-7
+  - thankyou-block-game-8
+  - thankyou-block-game-9
+  - thankyou-block-game-10
+  - thankyou-block-game-11
+  - thankyou-block-game-12

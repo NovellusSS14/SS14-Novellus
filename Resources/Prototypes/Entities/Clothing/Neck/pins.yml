@@ -1,0 +1,274 @@
+# SPDX-FileCopyrightText: 2023 PixelTK
+# SPDX-FileCopyrightText: 2023 eclips_e
+# SPDX-FileCopyrightText: 2024 Debug
+# SPDX-FileCopyrightText: 2024 Terraspark4941
+# SPDX-FileCopyrightText: 2024 lzk
+# SPDX-FileCopyrightText: 2025 Cass
+# SPDX-FileCopyrightText: 2025 January Nelson
+# SPDX-FileCopyrightText: 2025 Julian Giebel
+# SPDX-FileCopyrightText: 2025 Momo
+# SPDX-FileCopyrightText: 2025 Skubman
+# SPDX-FileCopyrightText: 2025 T
+# SPDX-FileCopyrightText: 2025 centcomofficer24
+# SPDX-FileCopyrightText: 2025 lzk228
+# SPDX-FileCopyrightText: 2025 portfiend
+# SPDX-FileCopyrightText: 2025 sleepyyapril
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckPinBase
+  abstract: true
+  name: pin
+  description: be nothing do crime
+  components:
+  - type: Item
+    size: Tiny
+  - type: Sprite
+    sprite: Clothing/Neck/Misc/pins.rsi
+  - type: Clothing
+    sprite: Clothing/Neck/Misc/pins.rsi
+  - type: DamageOtherOnHit
+    damage:
+      types:
+        Blunt: 1
+    staminaCost: 1
+  - type: WearerGetsExamineText # imp
+    thing: obvious-thing-pin
+    examineText: obvious-desc-default
+    pocketEvident: true
+
+- type: entity
+  parent: ClothingNeckPinBase
+  id: ClothingNeckLGBTPin
+  name: LGBT pin
+  description: be gay do crime
+  components:
+  - type: Sprite
+    state: lgbt
+  - type: Clothing
+    equippedPrefix: lgbt
+  - type: WearerGetsExamineText # imp
+    thingType: obvious-type-pride
+
+- type: entity
+  parent: ClothingNeckPinBase
+  id: ClothingNeckAllyPin
+  name: straight ally pin
+  description: Be ally do crime.
+  components:
+  - type: Sprite
+    state: ally
+  - type: Clothing
+    equippedPrefix: ally
+  - type: WearerGetsExamineText # imp
+    thingType: obvious-type-pride-straightally
+
+- type: entity
+  parent: ClothingNeckPinBase
+  id: ClothingNeckAromanticPin
+  name: aromantic pin
+  description: be aro do crime
+  components:
+  - type: Sprite
+    state: aro
+  - type: Clothing
+    equippedPrefix: aro
+  - type: WearerGetsExamineText # imp
+    thingType: obvious-type-pride-aro
+
+- type: entity
+  parent: ClothingNeckPinBase
+  id: ClothingNeckAroacePin
+  name: aroace pin
+  description: Be aroace do crime.
+  components:
+  - type: Sprite
+    state: aroace
+  - type: Clothing
+    equippedPrefix: aroace
+  - type: WearerGetsExamineText # imp
+    thingType: obvious-type-pride-aroace
+
+- type: entity
+  parent: ClothingNeckPinBase
+  id: ClothingNeckAsexualPin
+  name: asexual pin
+  description: be ace do crime
+  components:
+  - type: Sprite
+    state: asex
+  - type: Clothing
+    equippedPrefix: asex
+  - type: WearerGetsExamineText # imp
+    thingType: obvious-type-pride-ace
+
+- type: entity
+  parent: ClothingNeckPinBase
+  id: ClothingNeckBisexualPin
+  name: bisexual pin
+  description: be bi do crime
+  components:
+  - type: Sprite
+    state: bi
+  - type: Clothing
+    equippedPrefix: bi
+  - type: WearerGetsExamineText # imp
+    thingType: obvious-type-pride-bi
+
+- type: entity
+  parent: ClothingNeckPinBase
+  id: ClothingNeckGayPin
+  name: gay pin
+  description: be gay do crime
+  components:
+  - type: Sprite
+    state: gay
+  - type: Clothing
+    equippedPrefix: gay
+  - type: WearerGetsExamineText # imp
+    thingType: obvious-type-pride-gay
+
+- type: entity
+  parent: ClothingNeckPinBase
+  id: ClothingNeckIntersexPin
+  name: intersex pin
+  description: be intersex do crime
+  components:
+  - type: Sprite
+    state: inter
+  - type: Clothing
+    equippedPrefix: inter
+  - type: WearerGetsExamineText # imp
+    thingType: obvious-type-pride-intersex
+
+- type: entity
+  parent: ClothingNeckPinBase
+  id: ClothingNeckLesbianPin
+  name: lesbian pin
+  description: be lesbian do crime
+  components:
+  - type: Sprite
+    state: les
+  - type: Clothing
+    equippedPrefix: les
+  - type: WearerGetsExamineText # imp
+    thingType: obvious-type-pride-lesbian
+
+- type: entity
+  parent: ClothingNeckPinBase
+  id: ClothingNeckNonBinaryPin
+  name: non-binary pin
+  description: "01100010 01100101 00100000 01100101 01101110 01100010 01111001 00100000 01100100 01101111 00100000 01100011 01110010 01101001 01101101 01100101"
+  components:
+  - type: Sprite
+    state: non
+  - type: Clothing
+    equippedPrefix: non
+  - type: WearerGetsExamineText # imp
+    thingType: obvious-type-pride-nonbinary
+
+- type: entity
+  parent: ClothingNeckPinBase
+  id: ClothingNeckPansexualPin
+  name: pansexual pin
+  description: be pan do crime
+  components:
+  - type: Sprite
+    state: pan
+  - type: Clothing
+    equippedPrefix: pan
+  - type: WearerGetsExamineText # imp
+    thingType: obvious-type-pride-pan
+
+- type: entity
+  parent: ClothingNeckPinBase
+  id: ClothingNeckPluralPin
+  name: plural pin
+  description: Be plural, do crimes.
+  components:
+  - type: Sprite
+    state: plural
+  - type: Clothing
+    equippedPrefix: plural
+  - type: WearerGetsExamineText # imp
+    thingType: obvious-type-pride-plural
+
+- type: entity
+  parent: ClothingNeckPinBase
+  id: ClothingNeckOmnisexualPin
+  name: omnisexual pin
+  description: Be omni do crime.
+  components:
+  - type: Sprite
+    state: omni
+  - type: Clothing
+    equippedPrefix: omni
+  - type: WearerGetsExamineText # imp
+    thingType: obvious-type-pride-omni
+
+- type: entity
+  parent: ClothingNeckPinBase
+  id: ClothingNeckGenderqueerPin
+  name: genderqueer pin
+  description: be crime, do gender
+  components:
+  - type: Sprite
+    state: gender
+  - type: Clothing
+    equippedPrefix: gender
+  - type: WearerGetsExamineText # imp
+    thingType: obvious-type-pride-gq
+
+- type: entity
+  parent: ClothingNeckPinBase
+  id: ClothingNeckGenderfluidPin
+  name: genderfluid pin
+  description: be gender, be fluid
+  components:
+  - type: Sprite
+    state: fluid
+  - type: Clothing
+    equippedPrefix: fluid
+  - type: WearerGetsExamineText # imp
+    thingType: obvious-type-pride-gf
+
+- type: entity
+  parent: ClothingNeckPinBase
+  id: ClothingNeckTransPin
+  name: transgender pin
+  description: be trans do crime
+  components:
+  - type: Sprite
+    state: trans
+  - type: Clothing
+    equippedPrefix: trans
+  - type: WearerGetsExamineText # imp
+    thingType: obvious-type-pride-trans
+
+- type: entity
+  parent: ClothingNeckPinBase
+  id: ClothingNeckAutismPin
+  name: autism pin
+  description: be autism do crime
+  components:
+  - type: Sprite
+    state: autism
+  - type: Clothing
+    equippedPrefix: autism
+  - type: WearerGetsExamineText # imp
+    thingType: obvious-type-pride-aut
+
+- type: entity
+  parent: ClothingNeckPinBase
+  id: ClothingNeckGoldAutismPin
+  name: golden autism pin
+  description: be autism do warcrime
+  components:
+  - type: Sprite
+    state: goldautism
+  - type: Clothing
+    equippedPrefix: goldautism
+  - type: WearerGetsExamineText # imp
+    thingType: obvious-type-pride-aut

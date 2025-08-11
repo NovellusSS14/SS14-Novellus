@@ -1,0 +1,92 @@
+# SPDX-FileCopyrightText: 2024 KyuPolaris <tabi@kyuudev.me>
+# SPDX-FileCopyrightText: 2024 sleepyyapril <flyingkarii@gmail.com>
+# SPDX-FileCopyrightText: 2025 SX-7 <92227810+SX-7@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 Tabitha <64847293+KyuPolaris@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 VMSolidus <evilexecutive@gmail.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: trait
+  id: SiikMaas
+  category: TraitsSpeechLanguages
+  points: -2
+  requirements:
+    - !type:CharacterSpeciesRequirement
+      inverted: true
+      species:
+        - Tajaran
+  functions:
+    - !type:TraitModifyLanguages
+      languagesSpoken:
+        - SiikMaas
+      languagesUnderstood:
+        - SiikMaas
+
+- type: trait
+  id: NalRasan
+  category: TraitsSpeechLanguages
+  points: -1
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: TraitsLanguagesTajaran
+    - !type:CharacterSpeciesRequirement
+      species:
+        - Tajaran
+  functions:
+    - !type:TraitModifyLanguages
+      languagesSpoken:
+        - NalRasan
+      languagesUnderstood:
+        - NalRasan
+
+- type: trait
+  id: SiikTajr
+  category: TraitsSpeechLanguages
+  points: -2
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: TraitsLanguagesTajaran
+    - !type:CharacterSpeciesRequirement
+      species:
+        - Tajaran
+  functions:
+    - !type:TraitModifyLanguages
+      languagesSpoken:
+        - SiikTajr
+      languagesUnderstood:
+        - SiikTajr
+
+- type: trait
+  id: YaSsa
+  category: TraitsSpeechLanguages
+  points: -2
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: TraitsLanguagesTajaran
+    - !type:CharacterSpeciesRequirement
+      species:
+        - Tajaran
+  functions:
+    - !type:TraitModifyLanguages
+      languagesSpoken:
+        - YaSsa
+      languagesUnderstood:
+        - YaSsa
+
+- type: trait
+  id: Delvahii
+  category: TraitsSpeechLanguages
+  points: -2
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: TraitsLanguagesTajaran
+    - !type:CharacterSpeciesRequirement
+      species:
+        - Tajaran
+  functions:
+    - !type:TraitModifyLanguages
+      languagesSpoken:
+        - Delvahii
+      languagesUnderstood:
+        - Delvahii

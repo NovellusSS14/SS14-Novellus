@@ -1,0 +1,841 @@
+# SPDX-FileCopyrightText: 2022 20kdc
+# SPDX-FileCopyrightText: 2022 Alex Evgrashin
+# SPDX-FileCopyrightText: 2022 EmoGarbage404
+# SPDX-FileCopyrightText: 2022 Flipp Syder
+# SPDX-FileCopyrightText: 2022 Leon Friedrich
+# SPDX-FileCopyrightText: 2022 Rane
+# SPDX-FileCopyrightText: 2022 mirrorcult
+# SPDX-FileCopyrightText: 2023 CrigCrag
+# SPDX-FileCopyrightText: 2023 Debug
+# SPDX-FileCopyrightText: 2023 Interrobang01
+# SPDX-FileCopyrightText: 2023 Kara
+# SPDX-FileCopyrightText: 2023 Kevin Zheng
+# SPDX-FileCopyrightText: 2023 LankLTE
+# SPDX-FileCopyrightText: 2023 Nemanja
+# SPDX-FileCopyrightText: 2023 PuceTint
+# SPDX-FileCopyrightText: 2023 Whisper
+# SPDX-FileCopyrightText: 2023 metalgearsloth
+# SPDX-FileCopyrightText: 2023 qwerltaz
+# SPDX-FileCopyrightText: 2024 ArchPigeon
+# SPDX-FileCopyrightText: 2024 DEATHB4DEFEAT
+# SPDX-FileCopyrightText: 2024 Errant
+# SPDX-FileCopyrightText: 2024 coderabbitai[bot]
+# SPDX-FileCopyrightText: 2024 gluesniffler
+# SPDX-FileCopyrightText: 2025 Blitz
+# SPDX-FileCopyrightText: 2025 Brandon Li
+# SPDX-FileCopyrightText: 2025 Skubman
+# SPDX-FileCopyrightText: 2025 Steve
+# SPDX-FileCopyrightText: 2025 Tanix
+# SPDX-FileCopyrightText: 2025 marc-pelletier
+# SPDX-FileCopyrightText: 2025 sleepyyapril
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: reagent
+  id: Oxygen
+  name: reagent-name-oxygen
+  desc: reagent-desc-oxygen
+  physicalDesc: reagent-physical-desc-gaseous
+  flavor: bitter
+  color: "#c4f5ff"
+  boilingPoint: -183.0
+  meltingPoint: -218.4
+  metabolisms:
+    Gas:
+      effects:
+      - !type:Oxygenate
+        conditions:
+        - !type:OrganType
+          type: Human
+      - !type:Oxygenate
+        conditions:
+        - !type:OrganType
+          type: Animal
+      - !type:Oxygenate
+        conditions:
+        - !type:OrganType
+          type: Rat
+      - !type:Oxygenate
+        conditions:
+        - !type:OrganType
+          type: Plant
+      - !type:Oxygenate # DeltaV - Feroxi Still need to breathe
+        conditions:
+        - !type:OrganType
+          type: Feroxi
+      # Convert Oxygen into CO2.
+      - !type:ModifyLungGas
+        conditions:
+        - !type:OrganType
+          type: Vox
+          shouldHave: false
+        - !type:OrganType
+          type: Plasmaman
+          shouldHave: false
+        ratios:
+          CarbonDioxide: 1.0
+          Oxygen: -1.0
+      - !type:HealthChange
+        conditions:
+        - !type:OrganType
+          type: Vox
+        scaleByQuantity: true
+        ignoreResistances: true
+        damage:
+          types:
+            Poison:
+              7
+      - !type:AdjustAlert
+        alertType: HighOxygen
+        conditions:
+          - !type:ReagentThreshold
+            min: 0.5
+          - !type:OrganType
+            type: Vox
+        clear: true
+        time: 5
+      - !type:HealthChange
+        conditions:
+        - !type:OrganType
+          type: Plasmaman
+        scaleByQuantity: true
+        ignoreResistances: true
+        damage:
+          types:
+            Poison:
+              7
+      - !type:AdjustAlert
+        alertType: HighOxygen
+        conditions:
+          - !type:ReagentThreshold
+            min: 0.5
+          - !type:OrganType
+            type: Plasmaman
+        clear: true
+        time: 5
+
+- type: reagent
+  id: Plasma
+  name: reagent-name-plasma
+  desc: reagent-desc-plasma
+  physicalDesc: reagent-physical-desc-gaseous
+  flavor: bitter
+  color: "#7e009e"
+  recognizable: true
+  boilingPoint: -127.3 # Random values picked between the actual values for CO2 and O2
+  meltingPoint: -186.4
+  tileReactions:
+  - !type:FlammableTileReaction
+    temperatureMultiplier: 1.5
+  metabolisms:
+    Poison:
+      effects:
+      - !type:HealthChange
+        damage:
+          types:
+            Poison: 3
+      - !type:HealthChange
+        conditions:
+        - !type:OrganType
+          type: Plasmaman
+        damage:
+          types:
+            Poison: -3
+      - !type:AdjustReagent
+        conditions:
+        - !type:OrganType
+          type: Plasmaman
+          shouldHave: false
+        reagent: Inaprovaline
+        amount: -2.0
+    Gas:
+      effects:
+      - !type:HealthChange
+        scaleByQuantity: true
+        ignoreResistances: true
+        damage:
+          types:
+            Poison:
+              1
+      - !type:HealthChange
+        conditions:
+        - !type:OrganType
+          type: Plasmaman
+        scaleByQuantity: true
+        ignoreResistances: true
+        damage:
+          types:
+            Poison:
+              -1
+      - !type:HealthChange
+        conditions:
+        - !type:OrganType
+          type: Plasmaman
+        scaleByQuantity: false
+        ignoreResistances: true
+        damage:
+          types:
+            Poison:
+              -10
+      # We need a metabolism effect on reagent removal
+      - !type:AdjustAlert
+        alertType: Toxins
+        conditions:
+          - !type:OrganType
+            type: Plasmaman
+            shouldHave: false
+          - !type:ReagentThreshold
+            min: 1.5
+        clear: True
+        time: 5
+      - !type:Oxygenate
+        factor: 4
+        conditions:
+        - !type:OrganType
+          type: Plasmaman
+      - !type:ModifyLungGas
+        conditions:
+        - !type:OrganType
+          type: Plasmaman
+        ratios:
+          Nitrogen: 1.0 # Interesting exhale for plasmamen
+          Plasma: -1.0
+    Medicine:
+      effects:
+      - !type:HealthChange
+        conditions:
+        - !type:OrganType
+          type: Plasmaman
+        damage:
+          groups:
+            Brute: -2
+          types:
+            Heat: -0.66
+            Shock: -0.66
+            Caustic: -0.66
+            Asphyxiation: -0.66
+            Poison: -0.66
+      - !type:ChemAddMoodlet
+        conditions:
+        - !type:OrganType
+          type: Plasmaman
+        - !type:ReagentThreshold
+          reagent: Plasma
+          min: 4
+        moodPrototype: PlasmamanIngestPlasma
+  reactiveEffects:
+    Flammable:
+      methods: [ Touch ]
+      effects:
+      - !type:FlammableReaction
+
+- type: reagent
+  id: Tritium
+  name: reagent-name-tritium
+  desc: reagent-desc-tritium
+  physicalDesc: reagent-physical-desc-ionizing
+  flavor: bitter
+  color: "#66ff33"
+  tileReactions:
+  - !type:FlammableTileReaction
+    temperatureMultiplier: 2.0
+  reactiveEffects:
+    Flammable:
+      methods: [ Touch ]
+      effects:
+      - !type:FlammableReaction
+        multiplier: 0.8
+  metabolisms:
+    Poison:
+      effects:
+      - !type:HealthChange
+        damage:
+          types:
+            Radiation: 3
+    Gas:
+      effects:
+      - !type:HealthChange
+        scaleByQuantity: true
+        ignoreResistances: true
+        damage:
+          types:
+            Radiation:
+              1
+      # We need a metabolism effect on reagent removal
+      - !type:AdjustAlert
+        alertType: Toxins
+        conditions:
+          - !type:ReagentThreshold
+            min: 1.5
+        clear: True
+        time: 5
+
+- type: reagent
+  id: CarbonDioxide
+  name: reagent-name-carbon-dioxide
+  desc: reagent-desc-carbon-dioxide
+  physicalDesc: reagent-physical-desc-odorless
+  flavor: bitter
+  color: "#66ff33"
+  metabolisms:
+    Gas:
+      effects:
+      - !type:Oxygenate
+        conditions:
+        - !type:OrganType
+          type: Plant
+      - !type:HealthChange
+        conditions:
+        - !type:OrganType
+          type: Plant
+          shouldHave: false
+        - !type:OrganType
+          type: Vox
+          shouldHave: false
+        # Don't want people to get toxin damage from the gas they just
+        # exhaled, right?
+        - !type:ReagentThreshold
+          min: 0.5
+        scaleByQuantity: true
+        ignoreResistances: true
+        damage:
+          types:
+            Poison:
+              0.8
+      - !type:Oxygenate # carbon dioxide displaces oxygen from the bloodstream, causing asphyxiation
+        conditions:
+        - !type:OrganType
+          type: Plant
+          shouldHave: false
+        factor: -4
+      # We need a metabolism effect on reagent removal
+      #- !type:AdjustAlert
+      #  alertType: CarbonDioxide
+
+- type: reagent
+  id: Nitrogen
+  name: reagent-name-nitrogen
+  desc: reagent-desc-nitrogen
+  physicalDesc: reagent-physical-desc-gaseous
+  flavor: bitter
+  color: "#a1e1ff"
+  boilingPoint: -195.8
+  meltingPoint: -210.0
+  metabolisms:
+    Poison:
+      effects:
+      - !type:HealthChange
+        damage:
+          types:
+            Cold: 1 # liquid nitrogen is cold
+    Gas:
+      effects:
+      - !type:Oxygenate
+        conditions:
+        - !type:OrganType
+          type: Vox
+      - !type:Oxygenate
+        conditions:
+        - !type:OrganType
+          type: Slime
+      # Converts Nitrogen into CO2
+      - !type:ModifyLungGas
+        conditions:
+        - !type:OrganType
+          type: Vox
+        ratios:
+          Ammonia: 1.0
+          Nitrogen: -1.0
+      - !type:ModifyLungGas
+        conditions:
+        - !type:OrganType
+          type: Slime
+        ratios:
+          NitrousOxide: 1.0
+          Nitrogen: -1.0
+
+- type: reagent
+  id: NitrousOxide
+  name: reagent-name-nitrous-oxide
+  desc: reagent-desc-nitrous-oxide
+  physicalDesc: reagent-physical-desc-gaseous
+  flavor: bitter
+  color: "#5d88c9"
+  boilingPoint: -88
+  meltingPoint: -90
+  metabolisms:
+    Gas:
+      effects:
+      - !type:Emote
+        conditions:
+        - !type:ReagentThreshold
+          reagent: NitrousOxide
+          min: 0.2
+          max: 0.5
+        - !type:OrganType
+          type: Slime
+          shouldHave: false
+        emote: Laugh
+        showInChat: true
+        probability: 0.1
+      - !type:PopupMessage
+        conditions:
+        - !type:ReagentThreshold
+          reagent: NitrousOxide
+          min: 0.5
+        - !type:OrganType
+          type: Slime
+          shouldHave: false
+        - !type:BloodReagentThreshold #  Assmos - /tg/ gases
+          reagent: NitrosylPlasmide
+          max: 0.1
+        type: Local
+        visualType: Medium
+        messages: [ "effect-sleepy" ]
+        probability: 0.1
+      - !type:MovespeedModifier
+        conditions:
+        - !type:ReagentThreshold
+          reagent: NitrousOxide
+          min: 1
+        - !type:OrganType
+          type: Slime
+          shouldHave: false
+        - !type:BloodReagentThreshold #  Assmos - /tg/ gases
+          reagent: NitrosylPlasmide
+          max: 0.1
+        walkSpeedModifier: 0.65
+        sprintSpeedModifier: 0.65
+      - !type:GenericStatusEffect
+        conditions:
+        - !type:ReagentThreshold
+          reagent: NitrousOxide
+          min: 1
+        - !type:OrganType
+          type: Slime
+          shouldHave: false
+        - !type:BloodReagentThreshold #  Assmos - /tg/ gases
+          reagent: NitrosylPlasmide
+          max: 0.1
+        key: ForcedSleep
+        component: ForcedSleeping
+        time: 200 # This reeks, but I guess it works LMAO
+        type: Add
+      - !type:HealthChange
+        conditions:
+        - !type:ReagentThreshold
+          reagent: NitrousOxide
+          min: 3.5
+        - !type:OrganType
+          type: Slime
+          shouldHave: false
+        ignoreResistances: true
+        damage:
+          types:
+            Poison: 0.25
+
+- type: reagent
+  id: Frezon
+  name: reagent-name-frezon
+  desc: reagent-desc-frezon
+  physicalDesc: reagent-physical-desc-gaseous
+  flavor: bitter
+  color: "#3a758c"
+  boilingPoint: -195.8
+  meltingPoint: -210.0
+  metabolisms:
+    Gas:
+      effects:
+      - !type:HealthChange
+        conditions:
+        - !type:ReagentThreshold
+          reagent: Frezon
+          min: 0.5
+        scaleByQuantity: true
+        ignoreResistances: true
+        damage:
+          types:
+            Cellular: 0.5
+      - !type:GenericStatusEffect
+        conditions:
+        - !type:ReagentThreshold
+          reagent: Frezon
+          min: 1
+        key: SeeingRainbows
+        component: SeeingRainbows
+        type: Add
+        time: 500
+        refresh: false
+      - !type:Drunk
+        boozePower: 500
+        conditions:
+        - !type:ReagentThreshold
+          reagent: Frezon
+          min: 1
+      - !type:PopupMessage
+        type: Local
+        messages: [ "frezon-lungs-cold" ]
+        probability: 0.1
+        conditions:
+        - !type:ReagentThreshold
+          reagent: Frezon
+          min: 0.5
+      - !type:PopupMessage
+        type: Local
+        visualType: Medium
+        messages: [ "frezon-euphoric" ]
+        probability: 0.1
+        conditions:
+        - !type:ReagentThreshold
+          reagent: Frezon
+          min: 1
+
+ # Assmos - /tg/ gases
+- type: reagent
+  id: BZ
+  name: reagent-name-bz
+  desc: reagent-desc-bz
+  physicalDesc: reagent-physical-desc-gaseous
+  flavor: bitter
+  color: "#9370db"
+  metabolisms:
+    Gas:
+      effects:
+      - !type:Emote
+        conditions:
+        - !type:ReagentThreshold
+          reagent: BZ
+          min: 0.2
+        - !type:OrganType
+          type: Slime
+          shouldHave: false
+        emote: Cough
+        showInChat: true
+        probability: 0.1
+      - !type:HealthChange
+        conditions:
+        - !type:ReagentThreshold
+          reagent: BZ
+          min: 0.5
+        - !type:OrganType
+          type: Slime
+          shouldHave: false
+        scaleByQuantity: true
+        ignoreResistances: true
+        damage:
+          types:
+            Asphyxiation: 10
+            Poison: 2.5
+      - !type:GenericStatusEffect
+        conditions:
+        - !type:ReagentThreshold
+          reagent: BZ
+          min: 0.3
+        - !type:OrganType
+          type: Slime
+          shouldHave: false
+        key: SeeingRainbows
+        component: SeeingRainbows
+        type: Add
+        time: 150
+        refresh: false
+      - !type:Emote
+        conditions:
+        - !type:ReagentThreshold
+          reagent: BZ
+          min: 0.2
+        - !type:OrganType
+          type: Slime
+          shouldHave: true
+        emote: Laugh
+        showInChat: true
+        probability: 0.1
+      - !type:Emote
+        conditions:
+        - !type:ReagentThreshold
+          reagent: BZ
+          min: 0.2
+        - !type:OrganType
+          type: Slime
+          shouldHave: true
+        emote: Scream
+        showInChat: true
+        probability: 0.01
+      - !type:PopupMessage
+        conditions:
+        - !type:ReagentThreshold
+          reagent: BZ
+          min: 0.5
+        - !type:OrganType
+          type: Slime
+          shouldHave: true
+        - !type:BloodReagentThreshold
+          reagent: NitrosylPlasmide
+          max: 0.1
+        type: Local
+        visualType: Medium
+        messages: [ "effect-sleepy" ]
+        probability: 0.1
+      - !type:MovespeedModifier
+        conditions:
+        - !type:ReagentThreshold
+          reagent: BZ
+          min: 1
+        - !type:OrganType
+          type: Slime
+          shouldHave: true
+        - !type:BloodReagentThreshold
+          reagent: NitrosylPlasmide
+          max: 0.1
+        walkSpeedModifier: 0.65
+        sprintSpeedModifier: 0.65
+      - !type:GenericStatusEffect
+        conditions:
+        - !type:ReagentThreshold
+          reagent: BZ
+          min: 1
+        - !type:OrganType
+          type: Slime
+          shouldHave: true
+        - !type:BloodReagentThreshold
+          reagent: NitrosylPlasmide
+          max: 0.1
+        key: ForcedSleep
+        component: ForcedSleeping
+        time: 10
+        type: Add
+
+- type: reagent
+  id: Healium
+  name: reagent-name-healium
+  desc: reagent-desc-healium
+  physicalDesc: reagent-physical-desc-gaseous
+  flavor: strange
+  color: "#90560b"
+  metabolisms:
+    Gas:
+      effects:
+      - !type:HealthChange
+        conditions:
+        - !type:ReagentThreshold
+          reagent: Healium
+          max: 24
+        scaleByQuantity: true
+        ignoreResistances: true
+        damage:
+          groups:
+            Burn: -2
+            Toxin: -5
+            Brute: -2
+      - !type:HealthChange
+        conditions:
+        - !type:ReagentThreshold
+          reagent: Healium
+          min: 24
+        ignoreResistances: true
+        damage:
+          groups:
+            Burn: -20
+            Toxin: -50
+            Brute: -20
+      - !type:PopupMessage
+        conditions:
+        - !type:ReagentThreshold
+          reagent: Healium
+          min: 4
+        - !type:BloodReagentThreshold
+          reagent: NitrosylPlasmide
+          max: 0.1
+        type: Local
+        visualType: Medium
+        messages: [ "effect-sleepy" ]
+        probability: 0.01
+      - !type:GenericStatusEffect
+        conditions:
+        - !type:ReagentThreshold
+          reagent: Healium
+          min: 8
+        - !type:BloodReagentThreshold
+          reagent: NitrosylPlasmide
+          max: 0.01
+        key: ForcedSleep
+        component: ForcedSleeping
+        time: 1
+        type: Add
+      - !type:Drunk
+        boozePower: 45
+        conditions:
+        - !type:ReagentThreshold
+          reagent: Healium
+          min: 4
+
+- type: reagent
+  id: Nitrium
+  name: reagent-name-nitrium
+  desc: reagent-desc-nitrium
+  physicalDesc: reagent-physical-desc-gaseous
+  flavor: sour
+  color: "#90560B"
+  metabolisms:
+    Gas:
+      effects:
+      - !type:NitriumMovespeedModifier
+        conditions:
+        - !type:ReagentThreshold
+          reagent: Nitrium
+          min: 1
+          max: 8
+        walkSpeedModifier: 1.25
+        sprintSpeedModifier: 1.25
+      - !type:NitriumMovespeedModifier
+        conditions:
+        - !type:ReagentThreshold
+          reagent: Nitrium
+          min: 8
+          max: 12
+        walkSpeedModifier: 1.4
+        sprintSpeedModifier: 1.4
+      - !type:NitriumMovespeedModifier
+        conditions:
+        - !type:ReagentThreshold
+          reagent: Nitrium
+          min: 12
+        walkSpeedModifier: 1.6
+        sprintSpeedModifier: 1.6
+      - !type:AddReagentToBlood
+        conditions:
+        - !type:ReagentThreshold
+          reagent: Nitrium
+          min: 6
+        reagent: NitrosylPlasmide
+        amount: 2.5
+      - !type:GenericStatusEffect
+        conditions:
+        - !type:ReagentThreshold
+          reagent: Nitrium
+          min: 8
+        key: Stutter
+        component: StutteringAccent
+        time: 8
+      - !type:HealthChange
+        conditions:
+        - !type:ReagentThreshold
+          reagent: Nitrium
+          min: 10
+        ignoreResistances: true
+        damage:
+          types:
+            Asphyxiation: 15
+      
+- type: reagent
+  id: Pluoxium
+  name: reagent-name-pluoxium
+  desc: reagent-desc-pluoxium
+  physicalDesc: reagent-physical-desc-gaseous
+  flavor: bitter
+  color: "#7b68ee"
+  metabolisms:
+    Gas:
+      effects:
+      - !type:Oxygenate
+        factor: 8
+        conditions:
+        - !type:OrganType
+          type: Human
+      - !type:Oxygenate
+        factor: 8
+        conditions:
+        - !type:OrganType
+          type: Animal
+      - !type:Oxygenate
+        factor: 8
+        conditions:
+        - !type:OrganType
+          type: Rat
+      - !type:Oxygenate
+        factor: 8
+        conditions:
+        - !type:OrganType
+          type: Plant
+      # Convert Pluoxium into CO2.
+      - !type:ModifyLungGas
+        ratios:
+          CarbonDioxide: 1.0
+          Pluoxium: -1.0
+
+- type: reagent
+  id: Hyper-Noblium
+  name: reagent-name-hyper-noblium
+  desc: reagent-desc-hyper-noblium
+  physicalDesc: reagent-physical-desc-gaseous
+  flavor: bitter
+  color: "#33cccc"
+
+- type: reagent
+  id: Proto-Nitrate
+  name: reagent-name-proto-nitrate
+  desc: reagent-desc-proto-nitrate
+  physicalDesc: reagent-physical-desc-gaseous
+  flavor: bitter
+  color: "#009933"
+
+- type: reagent
+  id: Zauker
+  name: reagent-name-zauker
+  desc: reagent-desc-zauker
+  physicalDesc: reagent-physical-desc-gaseous
+  flavor: bitter
+  color: "#1c1a1a"
+  metabolisms:
+    Gas:
+      effects:
+      - !type:HealthChange
+        conditions:
+        - !type:ReagentThreshold
+          reagent: Zauker
+          min: 0.25
+          max: 12
+        scaleByQuantity: true
+        ignoreResistances: true
+        damage:
+          types:
+            Slash: 6
+            Heat: 2
+            Poison: 2
+            Bloodloss: 1
+      - !type:HealthChange
+        conditions:
+        - !type:ReagentThreshold
+          reagent: Zauker
+          min: 12
+        ignoreResistances: true
+        damage:
+          types:
+            Slash: 30
+            Heat: 10
+            Poison: 10
+            Bloodloss: 5
+
+- type: reagent
+  id: Halon
+  name: reagent-name-halon
+  desc: reagent-desc-halon
+  physicalDesc: reagent-physical-desc-gaseous
+  flavor: bitter
+  color: "#e3574d"
+
+- type: reagent
+  id: Helium
+  name: reagent-name-helium
+  desc: reagent-desc-helium
+  physicalDesc: reagent-physical-desc-gaseous
+  flavor: bitter
+  color: "#005959"
+
+- type: reagent
+  id: Anti-Noblium
+  name: reagent-name-anti-noblium
+  desc: reagent-desc-anti-noblium
+  physicalDesc: reagent-physical-desc-gaseous
+  flavor: bitter
+  color: "#525151"

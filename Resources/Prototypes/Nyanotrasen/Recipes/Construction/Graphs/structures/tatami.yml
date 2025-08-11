@@ -1,0 +1,47 @@
+# SPDX-FileCopyrightText: 2023 Colin-Tel <113523727+Colin-Tel@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: MIT
+
+- type: constructionGraph
+  id: tatami
+  start: start
+  graph:
+    - node: start
+      actions:
+        - !type:DestroyEntity {}
+      edges:
+        - to: tatamiSquare
+          steps:
+            - material: Paper
+              amount: 1
+              doAfter: 1
+        - to: tatamiPart
+          steps:
+            - material: Paper
+              amount: 1
+              doAfter: 1
+
+    - node: tatamiSquare
+      entity: tatamisingle
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetPaper1
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+
+    - node: tatamiPart
+      entity: tatamimat
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetPaper1
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1

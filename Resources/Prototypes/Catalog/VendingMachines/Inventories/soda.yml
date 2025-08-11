@@ -1,0 +1,24 @@
+# SPDX-FileCopyrightText: 2023 Jackal298 <129199891+Jackal298@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2023 potato1234_x <79580518+potato1234x@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 Firewatch <54725557+musicmanvr@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 FoxxoTrystan <45297731+FoxxoTrystan@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 Pierson Arnold <greyalphawolf7@gmail.com>
+# SPDX-FileCopyrightText: 2025 Rosycup <178287475+Rosycup@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: vendingMachineInventory
+  id: SodaInventory
+  startingInventory:
+    DrinkColaCan: 3
+    DrinkGrapeCan: 3
+    DrinkRootBeerCan: 3
+    DrinkIcedTeaCan: 3
+    DrinkSolDryCan: 3
+    DrinkLemonLimeCan: 3
+    DrinkFourteenLokoCan: 3
+    #DrinkNNNCan: 3 #Floofstation
+  emaggedInventory:
+    DrinkNukieCan: 3
+    DrinkChangelingStingCan: 3

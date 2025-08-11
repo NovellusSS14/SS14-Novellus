@@ -1,0 +1,114 @@
+# SPDX-FileCopyrightText: 2020 AJCM-git <60196617+AJCM-git@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2020 Swept <sweptwastaken@protonmail.com>
+# SPDX-FileCopyrightText: 2021 Mith-randalf <84274729+Mith-randalf@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2021 SweptWasTaken <sweptwastaken@protonmail.com>
+# SPDX-FileCopyrightText: 2022 CommieFlowers <rasmus.cedergren@hotmail.com>
+# SPDX-FileCopyrightText: 2022 Myctai <108953437+Myctai@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2022 Rinkashikachi <15rinkashikachi15@gmail.com>
+# SPDX-FileCopyrightText: 2022 Visne <39844191+Visne@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2022 rolfero <45628623+rolfero@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2023 Flareguy <78941145+Flareguy@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2023 LankLTE <135308300+LankLTE@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2023 Maxtone <124747282+MagnusCrowe@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2023 Nairod <110078045+Nairodian@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2023 Tad "Taddy" Johnson <120885811+TadJohnson00@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2023 lapatison <100279397+lapatison@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2023 metalgearsloth <31366439+metalgearsloth@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 Blu <79374236+BlueHNT@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 DEATHB4DEFEAT <77995199+DEATHB4DEFEAT@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 SimpleStation14 <130339894+SimpleStation14@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 VMSolidus <evilexecutive@gmail.com>
+# SPDX-FileCopyrightText: 2025 Rosycup <178287475+Rosycup@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: cargoProduct
+  id: SecurityArmor
+  icon:
+    sprite: _DV/Clothing/OuterClothing/Armor/platecarrier.rsi # DeltaV - resprite
+    state: icon
+  product: CrateSecurityArmor
+  cost: 800
+  category: cargoproduct-category-name-security
+  group: market
+
+- type: cargoProduct
+  id: SecurityHelmet
+  icon:
+    sprite: _DV/Clothing/Head/Helmets/security.rsi # DeltaV - resprite
+    state: icon
+  product: CrateSecurityHelmet
+  cost: 550
+  category: cargoproduct-category-name-security
+  group: market
+
+- type: cargoProduct
+  id: SecurityNonLethal
+  icon:
+    sprite: Objects/Weapons/Guns/Battery/disabler.rsi
+    state: base
+  product: CrateSecurityNonlethal
+  cost: 4000
+  category: cargoproduct-category-name-security
+  group: market
+
+- type: cargoProduct
+  id: SecurityRiot
+  icon:
+    sprite: _DV/Clothing/OuterClothing/Armor/riot.rsi # DeltaV - resprite
+    state: icon
+  product: CrateSecurityRiot
+  cost: 7500
+  category: cargoproduct-category-name-security
+  group: market
+
+- type: cargoProduct
+  id: SecuritySwat
+  icon:
+    sprite: _DV/Clothing/OuterClothing/Armor/riot.rsi # DeltaV - resprite
+    state: icon
+  product: CrateSecuritySwat
+  cost: 12500
+  category: cargoproduct-category-name-security
+  group: market
+
+- type: cargoProduct
+  id: SecuritySupplies
+  icon:
+    sprite: Objects/Storage/boxes.rsi
+    state: box_security
+  product: CrateSecuritySupplies
+  cost: 1000
+  category: cargoproduct-category-name-security
+  group: market
+
+- type: cargoProduct
+  id: SecurityRestraints
+  icon:
+    sprite: Objects/Misc/handcuffs.rsi
+    state: handcuff
+  product: CrateRestraints
+  cost: 1000
+  category: cargoproduct-category-name-security
+  group: market
+
+- type: cargoProduct
+  id: SecurityBiosuit
+  icon:
+    sprite: Clothing/Head/Hoods/Bio/security.rsi
+    state: icon
+  product: CrateSecurityBiosuit
+  cost: 800
+  category: cargoproduct-category-name-security
+  group: market
+
+- type: cargoProduct
+  id: SecurityBarrier
+  icon:
+    sprite: Objects/Specific/Security/barrier.rsi
+    state: idle
+  product: DeployableBarrier
+  cost: 1000
+  category: cargoproduct-category-name-security
+  group: market

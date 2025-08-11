@@ -1,0 +1,22 @@
+# SPDX-FileCopyrightText: 2025 Eris <eris@erisws.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: entity
+  parent: BaseSubdermalImplant
+  id: ChangelingInfectionImplant
+  name: changeling infection implant
+  description: This implant injects a changeling parasite into the user's arm, eventually giving them the Changeling infection as a result.
+  categories: [ HideSpawnMenu ]
+  components:
+    - type: SubdermalImplant
+      permanent: true
+      whitelist:
+        components:
+        - Absorbable
+    - type: ChangelingInfectionImplant
+    - type: Tag
+      tags:
+      - ChangelingInfectionImplant
+      - HideContextMenu

@@ -1,0 +1,37 @@
+# SPDX-FileCopyrightText: 2024 VMSolidus <evilexecutive@gmail.com>
+# SPDX-FileCopyrightText: 2025 MajorMoth <61519600+MajorMoth@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: loadout
+  id: LoadoutBackpack
+  category: Backpacks
+  cost: 0
+  exclusive: true
+  customColorTint: true
+  items:
+    - ClothingBackpack
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutBackpacks
+
+- type: loadout
+  id: LoadoutBackpackMerc
+  category: Backpacks
+  cost: 0
+  exclusive: true
+  items:
+    - ClothingBackpackMerc
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutBackpacks
+    - !type:CharacterLogicOrRequirement
+      requirements:
+        - !type:CharacterDepartmentRequirement
+          departments:
+            - Security
+            - Civilian
+        - !type:CharacterJobRequirement
+          jobs:
+            - SalvageSpecialist

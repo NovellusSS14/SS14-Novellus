@@ -1,0 +1,22 @@
+# SPDX-FileCopyrightText: 2023 Fluffiest Floofers <thebluewulf@gmail.com>
+# SPDX-FileCopyrightText: 2024 VMSolidus <evilexecutive@gmail.com>
+# SPDX-FileCopyrightText: 2024 metalgearsloth <31366439+metalgearsloth@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 Rosycup <178287475+Rosycup@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: messagePack
+  id: CourierDrobeAds
+  messages:
+    - advertisement-courierdrobe-1
+    - advertisement-courierdrobe-2
+    - advertisement-courierdrobe-3
+    - advertisement-courierdrobe-4
+    - advertisement-courierdrobe-5
+
+- type: messagePack
+  id: CourierDrobeGoodbyes
+  messages:
+    - thankyou-courierdrobe-1
+    - thankyou-courierdrobe-2

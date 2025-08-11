@@ -1,0 +1,16 @@
+# SPDX-FileCopyrightText: 2024 DEATHB4DEFEAT <77995199+DEATHB4DEFEAT@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 Cami <147159915+Camdot@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: shader
+  id: DisplacedStencilDraw
+  kind: source
+  path: "/Textures/Shaders/displacement.swsl"
+  stencil:
+    ref: 2
+    op: Keep
+    func: NotEqual
+  params:
+    displacementSize: 127

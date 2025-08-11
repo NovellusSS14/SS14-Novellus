@@ -1,0 +1,38 @@
+# SPDX-FileCopyrightText: 2024 BonkTrauma <123421227+Shadowwailker@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 VMSolidus <evilexecutive@gmail.com>
+# SPDX-FileCopyrightText: 2025 Rosycup <178287475+Rosycup@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: entity
+  parent: EncryptionKey
+  id: EncryptionKeyJustice
+  name: justice encryption key
+  description: An encryption key used by the justice department.
+  components:
+  - type: EncryptionKey
+    channels:
+    - Justice
+    defaultChannel: Justice
+  - type: Sprite
+    layers:
+    - state: crypt_gray
+    - sprite: _DV/Objects/Devices/encryption_keys.rsi
+      state: justice_label
+
+- type: entity
+  parent: EncryptionKey
+  id: EncryptionKeyPrison
+  name: Prison encryption key
+  description: An encryption key used by anybody who needs to speak with the prisoners
+  components:
+  - type: EncryptionKey
+    channels:
+    - Prison
+    defaultChannel: Prison
+  - type: Sprite
+    sprite: _DV/Objects/Devices/encryption_keys.rsi
+    layers:
+    - state: crypt_orange
+    - state: prisoner_label

@@ -1,0 +1,29 @@
+# SPDX-FileCopyrightText: 2025 Fansana
+# SPDX-FileCopyrightText: 2025 Mnemotechnican
+# SPDX-FileCopyrightText: 2025 sleepyyapril
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: consentToggle
+  id: Hypno
+
+- type: consentToggle
+  id: NoClone
+
+- type: consentToggle
+  id: MindSwap
+
+- type: consentToggle
+  id: MassMindSwap
+
+- type: consentToggle
+  id: ChangelingTarget
+
+- type: consentToggle
+  id: NoDragonDevour
+
+- type: consentToggle
+  id: NSFWDescriptions
+
+- type: consentToggle
+  id: LastMessage

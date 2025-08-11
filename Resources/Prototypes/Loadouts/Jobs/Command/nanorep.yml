@@ -1,0 +1,97 @@
+# SPDX-FileCopyrightText: 2025 BlitzTheSquishy
+# SPDX-FileCopyrightText: 2025 Timfa
+# SPDX-FileCopyrightText: 2025 sleepyyapril
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+# Uncategorized
+# Backpacks
+- type: loadout
+  id: LoadoutClothingBackpackSatchelNanorep
+  category: JobsCommandNanorep
+  cost: 0
+  exclusive: true
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutNanorepBackpacks
+    - !type:CharacterJobRequirement
+      jobs:
+        - NanotrasenRepresentative
+  items:
+    - ClothingBackpackSatchelNanorep
+
+# Belt
+
+# Ears
+
+# Equipment
+- type: loadout
+  id: LoadoutNanotrasenRepresentativeDisabler
+  category: JobsCommandNanorep
+  cost: 0
+  canBeHeirloom: true
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutNanorepWeapon
+    - !type:CharacterJobRequirement
+      jobs:
+        - NanotrasenRepresentative
+  items:
+    - WeaponCCDisabler
+# Eyes
+
+# Gloves
+
+# Head
+
+# Id
+
+# Neck
+
+# Mask
+
+# Outer
+- type: loadout
+  id: LoadoutNanotrasenRepresentativeOuterLongCoat
+  category: JobsCommandNanorep
+  cost: 0
+  exclusive: true
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutNanorepOuter
+    - !type:CharacterJobRequirement
+      jobs:
+        - NanotrasenRepresentative
+  items:
+    - ClothingLongcoatCC
+
+# Shoes
+
+# Uniforms
+- type: loadout
+  id: LoadoutClothingUniformJumpskirtNanotrasenRepresentative
+  category: JobsCommandNanorep
+  cost: 0
+  exclusive: true
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutNanorepUniforms
+    - !type:CharacterJobRequirement
+      jobs:
+        - NanotrasenRepresentative
+  items:
+    - ClothingUniformJumpskirtNanotrasenRepresentative
+
+- type: loadout
+  id: LoadoutClothingUniformJumpsuitNanotrasenRepresentative
+  category: JobsCommandNanorep
+  cost: 0
+  exclusive: true
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutNanorepUniforms
+    - !type:CharacterJobRequirement
+      jobs:
+        - NanotrasenRepresentative
+  items:
+    - ClothingUniformJumpsuitNanotrasenRepresentative

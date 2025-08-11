@@ -1,0 +1,45 @@
+# SPDX-FileCopyrightText: 2024 flyingkarii <flyingkarii@gmail.com>
+# SPDX-FileCopyrightText: 2025 Rosycup <178287475+Rosycup@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 Skubman <ba.fallaria@gmail.com>
+# SPDX-FileCopyrightText: 2025 VMSolidus <evilexecutive@gmail.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: job
+  id: Prosecutor
+  name: job-name-prosecutor
+  description: job-description-prosecutor
+  playTimeTracker: JobProsecutor
+  requirements:
+    - !type:DepartmentTimeRequirement
+      department: Security
+      min: 7200 # 2 hours
+  startingGear: ProsecutorGear
+  icon: "JobIconProsecutor"
+  supervisors: job-supervisors-cj
+  access:
+  - Prosecutor
+  - Justice
+  - Security
+  - Maintenance
+
+- type: startingGear
+  id: ProsecutorGear
+  subGear:
+  - PassengerPlasmamanGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitProsecutor
+    neck: ClothingNeckProsecutorbadge
+    back: ClothingBackpackLawyerFilled
+    shoes: ClothingShoesBootsLaceup
+    id: ProsecutorPDA
+    ears: ClothingHeadsetSecurity
+    # TODO add copy of space law
+  inhand:
+    - BriefcaseBrownFilled
+  innerClothingSkirt: ClothingUniformJumpskirtProsecutor
+  satchel: ClothingBackpackSatchelFilled
+  duffelbag: ClothingBackpackDuffelFilled
+
+

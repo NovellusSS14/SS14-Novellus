@@ -1,0 +1,120 @@
+# SPDX-FileCopyrightText: 2021 Galactic Chimp <GalacticChimpanzee@gmail.com>
+# SPDX-FileCopyrightText: 2021 Swept <sweptwastaken@protonmail.com>
+# SPDX-FileCopyrightText: 2022 Emisse <99158783+Emisse@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2022 Leon Friedrich <60421075+ElectroJr@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2022 Veritius <veritiusgaming@gmail.com>
+# SPDX-FileCopyrightText: 2022 metalgearsloth <31366439+metalgearsloth@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2022 mirrorcult <lunarautomaton6@gmail.com>
+# SPDX-FileCopyrightText: 2023 Nemanja <98561806+EmoGarbage404@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2023 Puro <103608145+PuroSlavKing@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2023 Whisper <121047731+QuietlyWhisper@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2023 lzk <124214523+lzk228@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 Kara <lunarautomaton6@gmail.com>
+# SPDX-FileCopyrightText: 2024 SimpleStation14 <130339894+SimpleStation14@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: entity
+  id: FireAxeCabinet
+  name: fire axe cabinet
+  description: There is a small label that reads "For Emergency use only" along with details for safe use of the axe. As if.
+  components:
+  - type: Damageable
+    damageContainer: Inorganic
+    damageModifierSet: Glass
+  - type: Destructible
+    thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 300
+        behaviors:
+        - !type:DoActsBehavior
+          acts: [ "Destruction" ]
+      - trigger:
+          !type:DamageTrigger
+          damage: 200 #20ish crowbar hits
+        behaviors:
+        - !type:EmptyAllContainersBehaviour
+        - !type:DoActsBehavior
+          acts: [ "Destruction" ]
+        - !type:PlaySoundBehavior
+          sound:
+            collection: MetalGlassBreak
+  - type: MeleeSound
+    soundGroups:
+      Brute:
+        collection: GlassSmash
+  - type: WallMount
+  - type: Clickable
+  - type: InteractionOutline
+  - type: Sprite
+    sprite: Structures/Wallmounts/fireaxe_cabinet.rsi
+    layers:
+    - state: cabinet
+    - state: fireaxe
+      map: ["enum.ItemCabinetVisualLayers.ContainsItem"]
+      visible: true
+    - state: glass
+      map: ["enum.ItemCabinetVisualLayers.Door"]
+  - type: ItemCabinet
+    cabinetSlot:
+      ejectOnInteract: true
+      whitelist:
+        tags:
+        - FireAxe
+    doorSound:
+      path: /Audio/Machines/machine_switch.ogg
+    openState: glass-up
+    closedState: glass
+  - type: Appearance
+  - type: Lock
+  - type: AccessReader
+    access: [["Atmospherics"], ["Command"]]
+  - type: ItemSlots
+  - type: ContainerContainer
+    containers:
+      ItemCabinet: !type:ContainerSlot
+  placement:
+    mode: SnapgridCenter
+
+- type: entity
+  id: FireAxeCabinetOpen
+  parent: FireAxeCabinet
+  suffix: Open
+  components:
+  - type: ItemCabinet
+    opened: true
+    doorSound:
+      path: /Audio/Machines/machine_switch.ogg
+    openState: glass-up
+    closedState: glass
+
+- type: entity
+  id: FireAxeCabinetFilled
+  parent: FireAxeCabinet
+  suffix: Filled
+  components:
+  - type: ItemCabinet
+    cabinetSlot:
+      startingItem: FireAxe
+      ejectOnInteract: true
+      whitelist:
+        tags:
+        - FireAxe
+    doorSound:
+      path: /Audio/Machines/machine_switch.ogg
+    openState: glass-up
+    closedState: glass
+
+- type: entity
+  id: FireAxeCabinetFilledOpen
+  parent: FireAxeCabinetFilled
+  suffix: Filled, Open
+  components:
+  - type: ItemCabinet
+    opened: true
+    doorSound:
+      path: /Audio/Machines/machine_switch.ogg
+    openState: glass-up
+    closedState: glass

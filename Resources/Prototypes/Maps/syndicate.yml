@@ -1,0 +1,16 @@
+# SPDX-FileCopyrightText: 2024 Rainfey <rainfey0+github@gmail.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: MIT
+
+- type: gameMap
+  id: NukieOutpost
+  mapName: Nukie Outpost
+  mapPath: /Maps/Nonstations/nukieplanet.yml
+  minPlayers: 0
+  stations:
+    SyndicateOutpost:
+      stationProto: StandardNukieOutpost
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: "Nukie Outpost"

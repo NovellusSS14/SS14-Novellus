@@ -1,0 +1,194 @@
+# SPDX-FileCopyrightText: 2021 cheesePizza2 <34486300+cheesePizza2@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2022 Leon Friedrich <60421075+ElectroJr@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2022 Peptide90 <78795277+Peptide90@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2022 corentt <36075110+corentt@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2023 0x6273 <0x40@keemail.me>
+# SPDX-FileCopyrightText: 2023 Chief-Engineer <119664036+Chief-Engineer@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2023 IProduceWidgets <107586145+IProduceWidgets@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2023 Moony <moony@hellomouse.net>
+# SPDX-FileCopyrightText: 2023 Nemanja <98561806+EmoGarbage404@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2023 deltanedas <39013340+deltanedas@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 DEATHB4DEFEAT <77995199+DEATHB4DEFEAT@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 Lawdog <159507482+Lawdog4817@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 VMSolidus <evilexecutive@gmail.com>
+# SPDX-FileCopyrightText: 2024 Verm <32827189+Vermidia@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2025 sleepyyapril <123355664+sleepyyapril@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: entity
+  parent: BaseItem
+  id: DrinkShaker
+  name: shaker
+  description: The trusty mixing buddy of the bartender.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 100
+  - type: MixableSolution
+    solution: drink
+  - type: Drink
+  - type: Shakeable
+  - type: FitsInDispenser
+    solution: drink
+  - type: DrawableSolution
+    solution: drink
+  - type: RefillableSolution
+    solution: drink
+  - type: DrainableSolution
+    solution: drink
+  - type: SolutionTransfer
+    canChangeTransferAmount: true
+  - type: Spillable
+    solution: drink
+  - type: Sprite
+    sprite: Objects/Consumable/Drinks/shaker.rsi
+    state: icon
+  - type: UserInterface
+    interfaces:
+      enum.TransferAmountUiKey.Key:
+        type: TransferAmountBoundUserInterface
+  - type: PhysicalComposition
+    materialComposition:
+      Steel: 50
+  - type: EmitSoundOnPickup
+    sound: /Audio/SimpleStation14/Items/Handling/drinkglass_pickup.ogg
+  - type: EmitSoundOnDrop
+    sound: /Audio/SimpleStation14/Items/Handling/drinkglass_drop.ogg
+  - type: EmitSoundOnLand
+    sound: /Audio/SimpleStation14/Items/Handling/drinkglass_drop.ogg
+  - type: ReactionMixer
+    mixOnInteract: false
+    reactionTypes:
+    - Shake
+
+- type: entity
+  parent: DrinkGlassBase
+  id: DrinkShotGlass
+  name: shot glass
+  description: Perfect for slamming down onto the table angrily.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 5
+  - type: SolutionTransfer
+    transferAmount: 10
+    minTransferAmount: 10
+  - type: Drink
+  - type: Sprite
+    sprite: Objects/Consumable/Drinks/shotglass.rsi
+    layers:
+      - state: icon
+        map: [ "enum.SolutionContainerLayers.Base" ]
+      - state: fill1
+        map: [ "enum.SolutionContainerLayers.Fill" ]
+        visible: false
+      - state: icon-front
+        map: [ "enum.SolutionContainerLayers.Overlay" ]
+  - type: Appearance
+  - type: SolutionContainerVisuals
+    maxFillLevels: 2
+    fillBaseName: fill
+
+- type: entity
+  parent: DrinkGlassBase
+  id: DrinkJar
+  name: jar
+  description: The hipster's cup
+  components:
+  - type: Drink
+  - type: Sprite
+    sprite: Objects/Consumable/Drinks/jar.rsi
+    layers:
+      - state: icon
+        map: [ "enum.SolutionContainerLayers.Base" ]
+      - state: fill1
+        map: [ "enum.SolutionContainerLayers.Fill" ]
+        visible: false
+      - state: icon-front
+        map: [ "enum.SolutionContainerLayers.Overlay" ]
+  - type: Appearance
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 50
+  - type: SolutionContainerVisuals
+    maxFillLevels: 9
+    fillBaseName: fill
+    metamorphic: true
+    metamorphicDefaultSprite:
+      sprite: Objects/Consumable/Drinks/jar.rsi
+      state: icon
+  - type: TransformableContainer
+
+- type: entity
+  parent: DrinkGlassBase
+  id: DrinkJarWhat
+  name: jar of something
+  description: You can't really tell what this is.
+  components:
+  - type: Drink
+  - type: Sprite
+    sprite: Objects/Consumable/Drinks/jar_what.rsi
+
+- type: entity
+  id: BartenderMixer
+  abstract: true
+  components:
+  - type: DrainableSolution
+    solution: drink
+  - type: Drink
+  - type: DrawableSolution
+    solution: drink
+  - type: RefillableSolution
+    solution: drink
+  - type: SolutionTransfer
+    canChangeTransferAmount: true
+  - type: Spillable
+    solution: drink
+  - type: UserInterface
+    interfaces:
+      enum.TransferAmountUiKey.Key:
+        type: TransferAmountBoundUserInterface
+
+- type: entity
+  parent: [BaseItem, BartenderMixer]
+  id: DrinkJigger
+  name: jigger
+  description: Like a shaker, but smaller. Used to control the amount of ingredients.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 20
+  - type: MixableSolution
+    solution: drink
+  - type: FitsInDispenser
+    solution: drink
+  - type: Sprite
+    sprite: Objects/Consumable/Drinks/jigger.rsi
+    state: icon
+  - type: PhysicalComposition
+    materialComposition:
+      Steel: 20
+
+- type: entity
+  parent: [BaseItem, BartenderMixer]
+  id: DrinkIceBucket
+  name: ice bucket
+  description: A special bucket of refreshy ice. Prohibited use for challenge with the same name!
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        reagents:
+        - ReagentId: Ice
+          Quantity: 200
+  - type: Sprite
+    sprite: Objects/Consumable/Drinks/icebucket.rsi
+    state: icon
+  - type: PhysicalComposition
+    materialComposition:
+      Steel: 75
