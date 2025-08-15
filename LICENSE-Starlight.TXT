@@ -1,4 +1,5 @@
-Modified MIT License, henceforth referred to as the Starlight License
+Modified MIT License
+Henceforth referred to as the Starlight License
 
 Copyright (c) 2024 Starlight
 
