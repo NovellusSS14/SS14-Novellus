@@ -28,9 +28,6 @@
       - !type:SatiateThirst
         factor: 1
       - !type:AdjustReagent
-        reagent: Pomelustine
-        amount: 0.5
-      - !type:AdjustReagent
         reagent: Ethanol
         amount: 0.09
   noRandom: true # The Den
@@ -54,9 +51,6 @@
       effects:
       - !type:SatiateThirst
         factor: 3
-      - !type:AdjustReagent
-        reagent: Pomelustine
-        amount: 0.25
   noRandom: true # The Den
 
 - type: reagent
@@ -95,55 +89,6 @@
       effects:
       - !type:SatiateThirst
         factor: 3
-
-#- type: reagent
-#   id: BethanysCumLust
-#   name: reagent-name-bethanyscumlust
-#   parent: BaseAlcohol
-#   desc: reagent-desc-bethanyscumlust
-#   physicalDesc: reagent-physical-desc-gloopy
-#   flavor: bethanyscumlust
-#   color: "#c977b5"
-#   metamorphicSprite:
-#     sprite: _Floof/Objects/Consumable/Drinks/bethanyscumlust.rsi
-#     state: icon_empty
-#   metamorphicMaxFillLevels: 4
-#   metamorphicFillBaseName: fill-
-#   metamorphicChangeColor: false
-#   metabolisms:
-#     Drink:
-#       effects:
-#       - !type:SatiateThirst
-#         factor: 3
-#       - !type:AdjustReagent
-#         reagent: Pomelustine
-#         amount: 0.5
-
-# - type: reagent
-#   id: BethanysSluttyCumLust
-#   name: reagent-name-bethanyssluttycumlust
-#   parent: BaseAlcohol
-#   desc: reagent-desc-bethanyssluttycumlust
-#   physicalDesc: reagent-physical-desc-gloopy
-#   flavor: bethanyssluttycumlust
-#   color: "#c977b5"
-#   metamorphicSprite:
-#     sprite: _Floof/Objects/Consumable/Drinks/bethanyssluttycumlust.rsi
-#     state: icon_empty
-#   metamorphicMaxFillLevels: 4
-#   metamorphicFillBaseName: fill-
-#   metamorphicChangeColor: false
-#   metabolisms:
-#     Drink:
-#       effects:
-#       - !type:SatiateThirst
-#         factor: 3
-#       - !type:AdjustReagent
-#         reagent: Pomelustine
-#         amount: 0.5
-#       - !type:AdjustReagent
-#         reagent: Philterex
-#         amount: 0.5
 
 - type: reagent
   id: BandE
@@ -190,9 +135,6 @@
       - !type:AdjustReagent
         reagent: Ethanol
         amount: 0.0415
-      - !type:AdjustReagent
-        reagent: Pomelustine
-        amount: 0.5
   noRandom: true # The Den
 
 - type: reagent
@@ -308,33 +250,6 @@
         amount: 0.055
 
 - type: reagent
-  id: DemonSeed
-  name: reagent-name-demonseed
-  parent: BaseAlcohol
-  desc: reagent-desc-demonseed
-  physicalDesc: reagent-physical-desc-gloopy
-  flavor: demonseed
-  color: "#301637"
-  metamorphicSprite:
-    sprite: _Floof/Objects/Consumable/Drinks/demonseed.rsi
-    state: icon_empty
-  metamorphicMaxFillLevels: 5
-  metamorphicFillBaseName: fill-
-  metamorphicChangeColor: false
-  metabolisms:
-    Drink:
-      effects:
-      - !type:SatiateThirst
-        factor: 2
-      - !type:AdjustReagent
-        reagent: Ethanol
-        amount: 0.0415
-      - !type:AdjustReagent
-        reagent: Pomelustine
-        amount: 1
-  noRandom: true # The Den
-
-- type: reagent
   id: DirtyWastelander
   name: reagent-name-dirtywastelander
   parent: BaseAlcohol
@@ -423,27 +338,6 @@
       - !type:AdjustReagent
         reagent: Ethanol
         amount: 0.0915
-
-- type: reagent
-  id: DragonsSeed
-  name: reagent-name-dragonsseed
-  parent: BaseAlcohol
-  desc: reagent-desc-dragonsseed
-  physicalDesc: reagent-physical-desc-shiny
-  flavor: dragonsseed
-  color: "#ed5a5a"
-  metamorphicSprite:
-    sprite: _Floof/Objects/Consumable/Drinks/dragonsseed.rsi
-    state: icon_empty
-  metamorphicMaxFillLevels: 5
-  metamorphicFillBaseName: fill-
-  metamorphicChangeColor: false
-  metabolisms:
-    Drink:
-      effects:
-      - !type:SatiateThirst
-        factor: 2
-  noRandom: true # The Den
 
 - type: reagent
   id: EmeraldSwinger
@@ -556,9 +450,6 @@
       effects:
       - !type:SatiateThirst
         factor: 3
-      - !type:AdjustReagent
-        reagent: Pomelustine
-        amount: 0.25
   noRandom: true # The Den
 
 - type: reagent
@@ -583,30 +474,6 @@
       - !type:AdjustReagent
         reagent: Ethanol
         amount: 0.075
-
-- type: reagent
-  id: HornyStallion
-  name: reagent-name-hornystallion
-  parent: BaseAlcohol
-  desc: reagent-desc-hornystallion
-  physicalDesc: reagent-physical-desc-strong-smelling
-  flavor: hornystallion
-  color: "#6b4247"
-  metamorphicSprite:
-    sprite: _Floof/Objects/Consumable/Drinks/hornystallion.rsi
-    state: icon_empty
-  metamorphicMaxFillLevels: 5
-  metamorphicFillBaseName: fill-
-  metamorphicChangeColor: false
-  metabolisms:
-    Drink:
-      effects:
-      - !type:SatiateThirst
-        factor: 2
-      - !type:AdjustReagent
-        reagent: Libidozenithizine
-        amount: 0.25
-  noRandom: true # The Den
 
 - type: reagent
   id: KoboldKooler
@@ -669,24 +536,6 @@
       effects:
       - !type:SatiateThirst
         factor: 3
-      - !type:AdjustReagent
-        conditions:
-        - !type:ReagentThreshold
-          min: 1
-        - !type:OrganType
-          type: Moth # non-moths get standard effect
-          shouldHave: false
-        reagent: Pomelustine
-        amount: 0.25
-      - !type:AdjustReagent
-        conditions:
-        - !type:ReagentThreshold
-          min: 1
-        - !type:OrganType
-          type: Moth # Get them moffy fucks horny
-          shouldHave: true
-        reagent: Philterex
-        amount: 0.25
   noRandom: true # The Den
 
 - type: reagent
@@ -731,9 +580,6 @@
       - !type:AdjustReagent
         reagent: Ethanol
         amount: 0.0365
-      - !type:AdjustReagent
-        reagent: Pomelustine
-        amount: 0.5
   noRandom: true # The Den
 
 - type: reagent
@@ -862,30 +708,6 @@
         amount: 0.1738
 
 - type: reagent
-  id: OrgasmOnTheBeach
-  name: reagent-name-orgasmonthebeach
-  parent: BaseAlcohol
-  desc: reagent-desc-orgasmonthebeach
-  physicalDesc: reagent-physical-desc-tart
-  flavor: orgasmonthebeach
-  color: "#b5693a"
-  metamorphicSprite:
-    sprite: _Floof/Objects/Consumable/Drinks/orgasmonthebeach.rsi
-    state: icon_empty
-  metamorphicMaxFillLevels: 5
-  metamorphicFillBaseName: fill-
-  metamorphicChangeColor: false
-  metabolisms:
-    Drink:
-      effects:
-      - !type:SatiateThirst
-        factor: 2
-      - !type:AdjustReagent
-        reagent: Ethanol
-        amount: 0.05
-  noRandom: true # The Den
-
-- type: reagent
   id: Pomonade
   name: reagent-name-pomonade
   parent: BaseAlcohol
@@ -949,9 +771,6 @@
       effects:
       - !type:SatiateThirst
         factor: 3
-      - !type:AdjustReagent
-        reagent: Pomelustine
-        amount: 0.25
   noRandom: true # The Den
 
 - type: reagent
@@ -1040,33 +859,6 @@
       - !type:AdjustReagent
         reagent: Ethanol
         amount: 0.03
-      - !type:AdjustReagent
-        reagent: Pomelustine
-        amount: 0.25
-  noRandom: true # The Den
-
-- type: reagent
-  id: RedRocket
-  name: reagent-name-redrocket
-  parent: BaseAlcohol
-  desc: reagent-desc-redrocket
-  physicalDesc: reagent-physical-desc-saucey
-  flavor: redrocket
-  color: "#ba3b3d"
-  metamorphicSprite:
-    sprite: _Floof/Objects/Consumable/Drinks/redrocket.rsi
-    state: icon_empty
-  metamorphicMaxFillLevels: 5
-  metamorphicFillBaseName: fill-
-  metamorphicChangeColor: false
-  metabolisms:
-    Drink:
-      effects:
-      - !type:SatiateThirst
-        factor: 2
-      - !type:AdjustReagent
-        reagent: Ethanol
-        amount: 0.0415
   noRandom: true # The Den
 
 - type: reagent
@@ -1091,52 +883,6 @@
       - !type:AdjustReagent
         reagent: Ethanol
         amount: 0.014
-
-- type: reagent
-  id: SemenBomb
-  name: reagent-name-semenbomb
-  parent: BaseAlcohol
-  desc: reagent-desc-semenbomb
-  physicalDesc: reagent-physical-desc-foamy
-  flavor: semenbomb
-  color: "#fbb117"
-  metamorphicSprite:
-    sprite: _Floof/Objects/Consumable/Drinks/semenbomb.rsi
-    state: icon_empty
-  metamorphicMaxFillLevels: 5
-  metamorphicFillBaseName: fill-
-  metamorphicChangeColor: false
-  metabolisms:
-    Drink:
-      effects:
-      - !type:SatiateThirst
-        factor: 2
-      - !type:AdjustReagent
-        reagent: Ethanol
-        amount: 0.023
-  noRandom: true # The Den
-
-# horrifyingly, this is a real drink from a real cocktail book online
-- type: reagent
-  id: SemenHemorrhage
-  name: reagent-name-semenhemorrhage
-  parent: BaseAlcohol
-  desc: reagent-desc-semenhemorrhage
-  physicalDesc: reagent-physical-desc-heterogeneous
-  flavor: semenhemorrhage
-  color: "#c83341"
-  metamorphicSprite:
-    sprite: _Floof/Objects/Consumable/Drinks/semenhemorrhage.rsi
-    state: icon_empty
-  metamorphicMaxFillLevels: 5
-  metamorphicFillBaseName: fill-
-  metamorphicChangeColor: false
-  metabolisms:
-    Drink:
-      effects:
-      - !type:SatiateThirst
-        factor: 3
-  noRandom: true # The Den
 
 - type: reagent
   id: SilverStallion
@@ -1235,9 +981,6 @@
       effects:
       - !type:SatiateThirst
         factor: 3
-      - !type:AdjustReagent
-        reagent: Pomelustine
-        amount: 0.025
   noRandom: true # The Den
 
 - type: reagent
@@ -1327,30 +1070,6 @@
         factor: 3
 
 - type: reagent
-  id: WatermelonGinJizz
-  name: reagent-name-watermelonginjizz
-  parent: BaseAlcohol
-  desc: reagent-desc-watermelonginjizz
-  physicalDesc: reagent-physical-desc-fizzy
-  flavor: watermelonginjizz
-  color: "#c79081"
-  metamorphicSprite:
-    sprite: _Floof/Objects/Consumable/Drinks/watermelonginjizz.rsi
-    state: icon_empty
-  metamorphicMaxFillLevels: 3
-  metamorphicFillBaseName: fill-
-  metamorphicChangeColor: false
-  metabolisms:
-    Drink:
-      effects:
-      - !type:SatiateThirst
-        factor: 2
-      - !type:AdjustReagent
-        reagent: Ethanol
-        amount: 0.05
-  noRandom: true # The Den
-
-- type: reagent
   id: TheWaterslide
   name: reagent-name-thewaterslide
   parent: BaseAlcohol
@@ -1438,9 +1157,6 @@
       effects:
       - !type:SatiateThirst
         factor: 3
-      - !type:AdjustReagent
-        reagent: Pomelustine
-        amount: 0.25
   noRandom: true # The Den
 
 - type: reagent
@@ -1462,9 +1178,6 @@
       effects:
       - !type:SatiateThirst
         factor: 2
-      - !type:AdjustReagent
-        reagent: Pomelustine
-        amount: 0.25
       - !type:AdjustReagent
         reagent: Ethanol
         amount: 0.095
@@ -1535,9 +1248,6 @@
       effects:
       - !type:SatiateThirst
         factor: 1
-      - !type:AdjustReagent
-        reagent: Pomelustine
-        amount: 0.05
   noRandom: true # The Den
 
 - type: reagent

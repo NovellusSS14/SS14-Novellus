@@ -61,31 +61,8 @@
       amount: 1
     BlueCuracao:
       amount: 1
-    Cum:
-      amount: 1
   products:
     BandE: 3
-
-#  id: BethanysCumLust
-#  reactants:
-#    Cum:
-#      amount: 4
-#    Pomelustine:
-#      amount: 3
-#    NikkosNaughtyNectar:
-#      amount: 4
-#  products:
-#    BethanysCumLust: 11
-
-#- type: reaction
-#  id: BethanysSluttyCumLust
-#  reactants:
-#    BethanysCumLust:
-#      amount: 11
-#    Philterex:
-#      amount: 3
-#  products:
-#    BethanysSluttyCumLust: 14
 
 - type: reaction
   id: BlueBaller
@@ -184,20 +161,6 @@
     DeadMansDraught: 4
 
 - type: reaction
-  id: DemonSeed
-  reactants:
-    Blood:
-      amount: 2
-    Cum:
-      amount: 1
-    Pomelustine:
-      amount: 2
-    Vodka:
-      amount: 1
-  products:
-    DemonSeed: 6
-
-- type: reaction
   id: DirtyWastelander
   reactants:
     JuiceBerry:
@@ -213,9 +176,7 @@
   id: DoubleCreamBlaster
   reactants:
     Cream:
-      amount: 1
-    Cum:
-      amount: 1
+      amount: 2
     RootBeer:
       amount: 1
   products:
@@ -244,20 +205,6 @@
       amount: 1
   products:
     DragonsBreath: 3
-
-- type: reaction
-  id: DragonsSeed
-  reactants:
-    CapsaicinOil:
-      amount: 1
-    Cum:
-      amount: 1
-    JuiceOrange:
-      amount: 1
-    JuiceTomato:
-      amount: 1
-  products:
-    DragonsSeed: 4
 
 - type: reaction
   id: EmeraldSwinger
@@ -334,18 +281,6 @@
     HolyVice: 3
 
 - type: reaction
-  id: HornyStallion
-  reactants:
-    Coffee:
-      amount: 1
-    Libidozenithizine:
-      amount: 1
-    SodaWater:
-      amount: 1
-  products:
-    HornyStallion: 3
-
-- type: reaction
   id: KoboldKooler
   reactants:
     Egg:
@@ -360,8 +295,6 @@
 - type: reaction
   id: KoboldKorkscrew
   reactants:
-    Cum:
-      amount: 1
     JuiceOrange:
       amount: 1
     SodaWater:
@@ -422,8 +355,6 @@
 - type: reaction
   id: MarsBar
   reactants:
-    Cum:
-      amount: 1
     HotCocoa:
       amount: 1
     Whiskey:
@@ -468,20 +399,6 @@
       amount: 1
   products:
     OpsShine: 3
-
-- type: reaction
-  id: OrgasmOnTheBeach
-  reactants:
-    Cum:
-      amount: 1
-    JuiceOrange:
-      amount: 2
-    JuiceWatermelon:
-      amount: 2
-    Vodka:
-      amount: 1
-  products:
-    OrgasmOnTheBeach: 5
 
 - type: reaction
   id: Pomonade
@@ -552,14 +469,12 @@
   reactants:
     Cream:
       amount: 1
-    Cum:
-      amount: 1
     IceCream:
       amount: 1
     Milk:
       amount: 1
   products:
-    QuadrupleCreamChalice: 4
+    QuadrupleCreamChalice: 3
 
 - type: reaction
   id: RandyStallion
@@ -572,20 +487,6 @@
       amount: 1
   products:
     RandyStallion: 3
-
-- type: reaction
-  id: RedRocket
-  reactants:
-    Grenadine:
-      amount: 2
-    JuicePomegranate:
-      amount: 1
-    Rum:
-      amount: 1
-    JuiceWatermelon:
-      amount: 2
-  products:
-    RedRocket: 6
 
 - type: reaction
   id: SalvagersDelight
@@ -602,38 +503,14 @@
     SalvagersDelight: 10
 
 - type: reaction
-  id: SemenBomb
-  reactants:
-    Ale:
-      amount: 2
-    Cum:
-      amount: 1
-  products:
-    SemenBomb: 3
-
-- type: reaction
-  id: SemenHemorrhage
-  reactants:
-    Cum:
-      amount: 1
-    Grenadine:
-      amount: 1
-    JuiceApple:
-      amount: 2
-  products:
-    SemenHemorrhage: 5
-
-- type: reaction
   id: SilverStallion
   reactants:
     Coffee:
       amount: 1
-    Cum:
-      amount: 1
     SodaWater:
       amount: 1
   products:
-    SilverStallion: 3
+    SilverStallion: 2
 
 - type: reaction
   id: SlimesDelight
@@ -651,26 +528,22 @@
 - type: reaction
   id: Snowball
   reactants:
-    Cum:
-      amount: 1
     Ice:
       amount: 2
     Sugar:
       amount: 1
   products:
-    Snowball: 4
+    Snowball: 3
 
 - type: reaction
   id: SpecialSundae
   reactants:
-    Cum:
-      amount: 1
     IceCream:
       amount: 1
     JuicePomegranate:
       amount: 1
   products:
-    SpecialSundae: 3
+    SpecialSundae: 2
 
 - type: reaction
   id: SyndicatesOverseer
@@ -682,7 +555,7 @@
     Ice:
       amount: 1
   products:
-    SyndicatesOverseer: 6
+    SyndicatesOverseer: 5
 
 - type: reaction
   id: TripleCitrus
@@ -723,30 +596,14 @@
     WakeUpJuice: 4
 
 - type: reaction
-  id: WatermelonGinJizz
-  reactants:
-    Cum:
-      amount: 1
-    JuiceWatermelon:
-      amount: 2
-    SodaWater:
-      amount: 1
-    Vodka:
-      amount: 1
-  products:
-    WatermelonGinJizz: 5
-
-- type: reaction
   id: TheWaterslide
   reactants:
     Beer:
       amount: 1
-    Cum:
-      amount: 1
     Water:
       amount: 1
   products:
-    TheWaterslide: 3
+    TheWaterslide: 2
 
 - type: reaction
   id: WhiskeySour

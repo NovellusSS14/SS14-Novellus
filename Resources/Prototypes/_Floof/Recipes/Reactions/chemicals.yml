@@ -7,22 +7,6 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
 
 - type: reaction
-  minTemp: 369
-  id: Libidozenithizine
-  impact: High
-  reactants:
-    Pomelustine:
-      amount: 2
-    Philterex:
-      amount: 1
-    Impedrezene:
-      amount: 1
-    Silicon:
-      amount: 1
-  products:
-    Libidozenithizine: 5
-
-- type: reaction
   id : Formaldehyde
   reactants:
     Vinegar:
