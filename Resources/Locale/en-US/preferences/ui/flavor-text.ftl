@@ -7,5 +7,5 @@
 flavor-text-title = Safe for Work
 flavor-text-nsfw-title = Not Safe for Work
 
-flavor-text-placeholder = A more detailed description of your character, not specifically appearance. Must not contain NSFW content.
-flavor-text-nsfw-placeholder = A more detailed description of your character, not specifically appearance. NSFW content is fine.
+flavor-text-placeholder = A more detailed description of your character, not specifically appearance. 
+flavor-text-nsfw-placeholder = This is your character's NSFW description. This only appears on the 18+ fork, but for the databases to work it needs to be here too.

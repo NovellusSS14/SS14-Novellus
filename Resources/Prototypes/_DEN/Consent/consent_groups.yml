@@ -2,7 +2,7 @@
   id: general
   priority: 0
   members:
-  - NSFWDescriptions
+#  - NSFWDescriptions
   - LastMessage
 
 - type: consentCategory
@@ -19,4 +19,4 @@
   priority: 2
   members:
   - ChangelingTarget
-  - DragonDevour
+#  - DragonDevour

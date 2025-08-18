@@ -13,11 +13,11 @@ consent-window-text = This information is shown to other players to help with RP
 consent-window-freetext-label = Freetext
 consent-window-toggles-label = Toggles
 consent-window-cards-label = I Am Uncomfortable
-consent-window-freetext-placeholder = Put your ERP info here, such as:
-    Sub/Dom/Switch
-    If you are okay with IC noncon
-    Which gender(s) you want your partners to be
-    Likes and dislikes
+consent-window-freetext-placeholder = Put your consent preferences here
+    If you're ok with gore, torture RP, etc
+    If you are ok with flirting, relationships, kissing/etc (KEEP IT SFW!!)
+    If you prefer not to see dark themes, such as self-harm, suicide, etc
+    Other Likes and dislikes
 
 consent-window-saved-changes = Your changes are saved.
 consent-window-unsaved-changes = You have unsaved changes!
@@ -26,7 +26,7 @@ consent-window-exceeded-char-limit = Exceeded character limit: {$length} / {$max
 
 # Verb
 consent-examine-verb = Consent Info
-consent-examine-not-set = This player has no consent preferences set. Ask for consent first before engaging in any erotic roleplay.
+consent-examine-not-set = This player has no consent preferences set. Ask for consent first before engaging in any questionable roleplay.
 
 # Consent toggles
 consent-example1 = Example Consent Toggle
@@ -52,7 +52,7 @@ consent-DragonDevour-name = Dragon Devour
 consent-DragonDevour-desc = Whether you should be able to be devoured by a space dragon. Your body will still not progress in rot until found.
 
 consent-NSFWDescriptions-name = Show NSFW Descriptions
-consent-NSFWDescriptions-desc = Toggle this on to see dynamic player descriptions that may contain NSFW/ERP content.
+consent-NSFWDescriptions-desc = This is not allowed on this server. This setting is for the 18+ fork only.
 
 consent-LastMessage-name = No Last Message Entries
 consent-LastMessage-desc = Toggle this on to never appear in the "last words" discord webhook. Local chat is the only one ever sent.
