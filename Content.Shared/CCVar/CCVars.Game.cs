@@ -38,7 +38,7 @@ public sealed partial class CCVars
     ///     Controls the default game preset.
     /// </summary>
     public static readonly CVarDef<string>
-        GameLobbyDefaultPreset = CVarDef.Create("game.defaultpreset", "secret", CVar.ARCHIVE);
+        GameLobbyDefaultPreset = CVarDef.Create("game.defaultpreset", "Extended", CVar.ARCHIVE);
 
     /// <summary>
     ///     Controls if the game can force a different preset if the current preset's criteria are not met.
@@ -98,7 +98,7 @@ public sealed partial class CCVars
     ///     Controls the maximum number of character slots a player is allowed to have.
     /// </summary>
     public static readonly CVarDef<int>
-        GameMaxCharacterSlots = CVarDef.Create("game.maxcharacterslots", 30, CVar.ARCHIVE | CVar.SERVERONLY);
+        GameMaxCharacterSlots = CVarDef.Create("game.maxcharacterslots", 5, CVar.ARCHIVE | CVar.SERVERONLY);
 
     /// <summary>
     ///     Controls the game map prototype to load. SS14 stores these prototypes in Prototypes/Maps.
@@ -110,7 +110,7 @@ public sealed partial class CCVars
     /// If roles should be restricted based on whether or not they are whitelisted.
     /// </summary>
     public static readonly CVarDef<bool>
-        GameRoleWhitelist = CVarDef.Create("game.role_whitelist", true, CVar.SERVER | CVar.REPLICATED);
+        GameRoleWhitelist = CVarDef.Create("game.role_whitelist", false, CVar.SERVER | CVar.REPLICATED);
 
 
     /// <summary>
@@ -149,7 +149,7 @@ public sealed partial class CCVars
     /// If roles should be restricted based on time.
     /// </summary>
     public static readonly CVarDef<bool>
-        GameRoleTimers = CVarDef.Create("game.role_timers", true, CVar.SERVER | CVar.REPLICATED);
+        GameRoleTimers = CVarDef.Create("game.role_timers", false, CVar.SERVER | CVar.REPLICATED);
 
     /// <summary>
     /// Whether or not disconnecting inside of a cryopod should remove the character or just store them until they reconnect.

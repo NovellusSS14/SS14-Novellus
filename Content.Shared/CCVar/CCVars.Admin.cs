@@ -26,7 +26,7 @@ public sealed partial class CCVars
     ///     Should users be able to see their own notes? Admins will be able to see and set notes regardless
     /// </summary>
     public static readonly CVarDef<bool> SeeOwnNotes =
-        CVarDef.Create("admin.see_own_notes", false, CVar.ARCHIVE | CVar.REPLICATED | CVar.SERVER);
+        CVarDef.Create("admin.see_own_notes", true, CVar.ARCHIVE | CVar.REPLICATED | CVar.SERVER);
 
     /// <summary>
     ///     Should the server play a quick sound to the active admins whenever a new player joins?
@@ -127,7 +127,7 @@ public sealed partial class CCVars
     ///     de-admin them.
     /// </summary>
     public static readonly CVarDef<bool> AdminDeadminOnJoin =
-        CVarDef.Create("admin.deadmin_on_join", false, CVar.SERVERONLY);
+        CVarDef.Create("admin.deadmin_on_join", true, CVar.SERVERONLY);
 
     /// <summary>
     ///     Overrides the name the client sees in ahelps. Set empty to disable.
@@ -140,7 +140,7 @@ public sealed partial class CCVars
     ///     If 0, appearing as a new player is disabled.
     /// </summary>
     public static readonly CVarDef<int> NewPlayerThreshold =
-        CVarDef.Create("admin.new_player_threshold", 0, CVar.ARCHIVE | CVar.REPLICATED | CVar.SERVER);
+        CVarDef.Create("admin.new_player_threshold", 600f, CVar.ARCHIVE | CVar.REPLICATED | CVar.SERVER);
 
     /// <summary>
     ///     How long an admin client can go without any input before being considered AFK.
