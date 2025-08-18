@@ -19,7 +19,7 @@
       amount: 1
     FourteenLoko:
       amount: 1
-    Pomelustine:
+    JuicePomegranate:
       amount: 1
     Sugar:
       amount: 1
@@ -37,7 +37,7 @@
       amount: 1
     JuiceBanana:
       amount: 1
-    Pomelustine:
+    JuicePomegranate:
       amount: 1
   products:
     A.B.Lustine: 3
@@ -71,7 +71,7 @@
       amount: 1
     JuiceWatermelon:
       amount: 1
-    Pomelustine:
+    JuicePomegranate:
       amount: 1
   products:
     BlueBaller: 3
@@ -261,7 +261,7 @@
   reactants:
     EnergyDrink:
       amount: 1
-    Pomelustine:
+    JuicePomegranate:
       amount: 1
     SpaceMountainWind:
       amount: 1
@@ -307,7 +307,7 @@
   reactants:
     EnergyDrink:
       amount: 1
-    Pomelustine:
+    JuicePomegranate:
       amount: 1
     Sugar:
       amount: 1
@@ -331,7 +331,7 @@
 - type: reaction
   id: LoversKiss
   reactants:
-    Pomelustine:
+    JuicePomegranate:
       amount: 1
     Wine:
       amount: 2
@@ -429,7 +429,7 @@
       amount: 1
     JuiceLime:
       amount: 1
-    Pomelustine:
+    JuicePomegranate:
       amount: 1
   products:
     PomTwist: 3
@@ -481,7 +481,7 @@
   reactants:
     Coffee:
       amount: 1
-    Pomelustine:
+    JuicePomegranate:
       amount: 1
     SodaWater:
       amount: 1
@@ -647,7 +647,7 @@
   reactants:
     Tea:
       amount: 2
-    Pomelustine:
+    JuicePomegranate:
       amount: 1
   products:
     TheCuteCaptain: 3
@@ -659,7 +659,7 @@
       amount: 1
     Rum:
       amount: 1
-    Pomelustine:
+    JuicePomegranate:
       amount: 1
   products:
     AxelsAle: 3

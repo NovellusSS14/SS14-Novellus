@@ -38,7 +38,7 @@ reagent-name-juice-pineapple = pineapple juice
 reagent-desc-juice-pineapple = The delicious juice of a pineapple.
 # Floofstation
 reagent-name-juice-pomegranate = pomegranate juice
-reagent-desc-juice-pomegranate = The sweet taste of pomegranate, minus the lust.
+reagent-desc-juice-pomegranate = The sweet taste of pomegranate.
 
 reagent-name-juice-potato = potato juice
 reagent-desc-juice-potato = Juice of the potato. Bleh.

@@ -35,16 +35,6 @@
   flavorType: Complex
   description: flavor-complex-bande
 
-# - type: flavor
-#   id: bethanyscumlust
-#   flavorType: Complex
-#   description: flavor-complex-bethanyscumlust
-
-# - type: flavor
-#   id: bethanyssluttycumlust
-#   flavorType: Complex
-#   description: flavor-complex-bethanyssluttycumlust
-
 - type: flavor
   id: blooddrop
   flavorType: Complex
@@ -86,11 +76,6 @@
   description: flavor-complex-deadmansdraught
 
 - type: flavor
-  id: demonseed
-  flavorType: Complex
-  description: flavor-complex-demonseed
-
-- type: flavor
   id: dirtywastelander
   flavorType: Complex
   description: flavor-complex-dirtywastelander
@@ -109,11 +94,6 @@
   id: dragonsbreath
   flavorType: Complex
   description: flavor-complex-dragonsbreath
-
-- type: flavor
-  id: dragonsseed
-  flavorType: Complex
-  description: flavor-complex-dragonsseed
 
 - type: flavor
   id: emeraldswinger
@@ -206,11 +186,6 @@
   description: flavor-complex-opsshine
 
 - type: flavor
-  id: orgasmonthebeach
-  flavorType: Complex
-  description: flavor-complex-orgasmonthebeach
-
-- type: flavor
   id: pomonade
   flavorType: Complex
   description: flavor-complex-pomonade
@@ -246,24 +221,9 @@
   description: flavor-complex-randystallion
 
 - type: flavor
-  id: redrocket
-  flavorType: Complex
-  description: flavor-complex-redrocket
-
-- type: flavor
   id: salvagersdelight
   flavorType: Complex
   description: flavor-complex-salvagersdelight
-
-- type: flavor
-  id: semenbomb
-  flavorType: Complex
-  description: flavor-complex-semenbomb
-
-- type: flavor
-  id: semenhemorrhage
-  flavorType: Complex
-  description: flavor-complex-semenhemorrhage
 
 - type: flavor
   id: silverstallion
@@ -309,11 +269,6 @@
   id: wakeupjuice
   flavorType: Complex
   description: flavor-complex-wakeupjuice
-
-- type: flavor
-  id: watermelonginjizz
-  flavorType: Complex
-  description: flavor-complex-watermelonginjizz
 
 - type: flavor
   id: thewaterslide

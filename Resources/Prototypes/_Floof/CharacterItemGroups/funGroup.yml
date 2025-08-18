@@ -12,19 +12,3 @@
       id: LoadoutItemLeashBasic
     - type: loadout
       id: LoadoutItemLeashShort
-
-- type: characterItemGroup
-  id: LoadoutVASH
-  items:
-  - type: loadout
-    id: LoadoutVASHHygiene
-  - type: loadout
-    id: LoadoutVASHSex
-  - type: loadout
-    id: LoadoutTampon
-#  - type: loadout Currently an RP item, so it's not really necessary to have be exclusive.
-#    id: LoadoutCondom
-  - type: loadout
-    id: LoadoutLiner
-  - type: loadout
-    id: LoadoutPad
