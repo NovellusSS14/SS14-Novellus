@@ -47,25 +47,25 @@ public sealed partial class CCVars
     /// Cooldown between arrivals departures. This should be longer than the FTL time or it will double cycle.
     /// </summary>
     public static readonly CVarDef<float> ArrivalsCooldown =
-        CVarDef.Create("shuttle.arrivals_cooldown", 50f, CVar.SERVERONLY);
+        CVarDef.Create("shuttle.arrivals_cooldown", 900f, CVar.SERVERONLY);
 
     /// <summary>
     /// Time it takes the shuttle to spin up it's hyper drive and jump
     /// </summary>
     public static readonly CVarDef<float> ArrivalsStartupTime=
-        CVarDef.Create("shuttle.arrivals_startup_time", 5.5f, CVar.SERVERONLY);
+        CVarDef.Create("shuttle.arrivals_startup_time", 10.5f, CVar.SERVERONLY);
 
     /// <summary>
     /// Time spent in hyperspace
     /// </summary>
     public static readonly CVarDef<float> ArrivalsHyperspaceTime =
-        CVarDef.Create("shuttle.arrivals_hyperspace_time", 20f, CVar.SERVERONLY);
+        CVarDef.Create("shuttle.arrivals_hyperspace_time", 30f, CVar.SERVERONLY);
 
     /// <summary>
     /// Are players allowed to return on the arrivals shuttle.
     /// </summary>
     public static readonly CVarDef<bool> ArrivalsReturns =
-        CVarDef.Create("shuttle.arrivals_returns", false, CVar.SERVERONLY);
+        CVarDef.Create("shuttle.arrivals_returns", true, CVar.SERVERONLY);
 
     /// <summary>
     /// Should all players who spawn at arrivals have godmode until they leave the map?
@@ -96,13 +96,13 @@ public sealed partial class CCVars
     /// How long the warmup time before FTL start should be.
     /// </summary>
     public static readonly CVarDef<float> FTLStartupTime =
-        CVarDef.Create("shuttle.startup_time", 5.5f, CVar.SERVERONLY);
+        CVarDef.Create("shuttle.startup_time", 10.5f, CVar.SERVERONLY);
 
     /// <summary>
     /// How long a shuttle spends in FTL.
     /// </summary>
     public static readonly CVarDef<float> FTLTravelTime =
-        CVarDef.Create("shuttle.travel_time", 20f, CVar.SERVERONLY);
+        CVarDef.Create("shuttle.travel_time", 30f, CVar.SERVERONLY);
 
     /// <summary>
     /// How long the final stage of FTL before arrival should be.
@@ -189,7 +189,7 @@ public sealed partial class CCVars
     ///     Time in minutes after round start to auto-call the shuttle. Set to zero to disable.
     /// </summary>
     public static readonly CVarDef<int> EmergencyShuttleAutoCallTime =
-        CVarDef.Create("shuttle.auto_call_time", 180, CVar.SERVERONLY);
+        CVarDef.Create("shuttle.auto_call_time", 0, CVar.SERVERONLY);
 
     /// <summary>
     ///     Time in minutes after the round was extended (by recalling the shuttle) to call
