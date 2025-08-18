@@ -1552,24 +1552,6 @@
           - Paper
           - VampireFood # Ok they can have a little food..
 
-# Commented out upon request for the time being
-#- type: trait
-#  id: EggLaying
-#  category: Lewd
-#  points: 0
-#  requirements:
-#  - !type:CharacterJobRequirement
-#    inverted: true
-#    jobs:
-#    - Borg
-#    - MedicalBorg
-#  functions:
-#    - !type:TraitAddComponent
-#      components:
-#        - type: EggLayer
-#          eggSpawn:
-#            - id: ItemEggTrait
-
 - type: trait # Based on Cosmatic Drift's Synth trait
   id: Synthetic
   category: TraitsPhysicalBiological

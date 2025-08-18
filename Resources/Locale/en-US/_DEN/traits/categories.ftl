@@ -4,4 +4,3 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
 
 trait-category-TraitsSpeechSounds = Voice
-trait-category-Lewd = Lewd

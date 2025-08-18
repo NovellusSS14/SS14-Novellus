@@ -23,14 +23,9 @@ namespace Content.Server.DetailExaminable
         [Dependency] private readonly ExamineSystemShared _examineSystem = default!;
         [Dependency] private readonly ConsentSystem _consentSystem = default!;
 
-        private ProtoId<ConsentTogglePrototype> _nsfwDescriptionsConsent = "NSFWDescriptions";
-
         // DEN - Icon
         private SpriteSpecifier _detailVerbIcon =
             new SpriteSpecifier.Texture(new("/Textures/Interface/VerbIcons/examine.svg.192dpi.png"));
-
-        private SpriteSpecifier _lewdVerbIcon =
-            new SpriteSpecifier.Texture(new("/Textures/_DEN/Interface/VerbIcons/lewd.svg.192dpi.png"));
 
 
         public override void Initialize()
@@ -48,11 +43,7 @@ namespace Content.Server.DetailExaminable
             // var detailsRange = _examineSystem.IsInDetailsRange(args.User, uid);
 
             var contentVerb = GetContentExamine(uid, component, args);
-            var nsfwContentVerb = GetNsfwContentExamine(uid, component, args);
             args.Verbs.Add(contentVerb);
-
-            if (nsfwContentVerb != null)
-                args.Verbs.Add(nsfwContentVerb);
         }
 
         private ExamineVerb GetContentExamine(
@@ -75,35 +66,6 @@ namespace Content.Server.DetailExaminable
                 Disabled = !detailsRange,
                 Message = detailsRange ? null : Loc.GetString("detail-examinable-verb-disabled"),
                 Icon = _detailVerbIcon
-            };
-
-            return verb;
-        }
-
-        private ExamineVerb? GetNsfwContentExamine(
-            EntityUid uid,
-            DetailExaminableComponent component,
-            GetVerbsEvent<ExamineVerb> args
-        )
-        {
-            if (!_consentSystem.HasConsent(args.User, _nsfwDescriptionsConsent)
-                || string.IsNullOrWhiteSpace(component.NsfwContent))
-                return null;
-
-            var detailsRange = true;
-            var verb = new ExamineVerb
-            {
-                Act = () =>
-                {
-                    var markup = new FormattedMessage();
-                    markup.AddMarkupPermissive(component.NsfwContent);
-                    _examineSystem.SendExamineTooltip(args.User, uid, markup, false, false);
-                },
-                Text = Loc.GetString("detail-nsfw-examinable-verb-text"),
-                Category = VerbCategory.Examine,
-                Disabled = !detailsRange,
-                Message = detailsRange ? null : Loc.GetString("detail-examinable-verb-disabled"),
-                Icon = _lewdVerbIcon
             };
 
             return verb;

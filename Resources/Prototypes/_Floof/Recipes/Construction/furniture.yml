@@ -71,20 +71,3 @@
   canBuildInImpassable: false
   conditions:
     - !type:TileNotBlocked
-
-- type: construction
-  name: Stripper Pole
-  id: FurnStripPole
-  graph: Lewd
-  startNode: start
-  targetNode: FurnStripPole
-  category: construction-category-furniture
-  description: A long pole on a pedestal used for showing off your great 'assets'.
-  icon:
-    sprite: _Floof/Structures/pole.rsi
-    state: pole
-  objectType: Structure
-  placementMode: SnapgridCenter
-  canBuildInImpassable: false
-  conditions:
-    - !type:TileNotBlocked
