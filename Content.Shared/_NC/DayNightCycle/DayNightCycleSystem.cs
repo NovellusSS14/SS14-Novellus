@@ -67,7 +67,7 @@ namespace Content.Shared._NC14.DayNightCycle
             var query = EntityQueryEnumerator<DayNightCycleComponent, MapLightComponent>();
             while (query.MoveNext(out var uid, out var dayNight, out var mapLight))
             {
-                dayNight.CurrentCycleTime += frameTime / (dayNight.CycleDurationMinutes * 60f);
+                dayNight.CurrentCycleTime += frameTime / (dayNight.CycleDurationMinutes * 360f);
                 dayNight.CurrentCycleTime %= 1f; // Keep it between 0 and 1
 
                 UpdateLightColor(dayNight, mapLight, uid);

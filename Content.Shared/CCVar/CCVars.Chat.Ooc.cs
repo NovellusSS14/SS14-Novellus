@@ -11,7 +11,7 @@ namespace Content.Shared.CCVar;
 public sealed partial class CCVars
 {
     public static readonly CVarDef<bool>
-        OocEnabled = CVarDef.Create("ooc.enabled", true, CVar.NOTIFY | CVar.REPLICATED);
+        OocEnabled = CVarDef.Create("ooc.enabled", false, CVar.NOTIFY | CVar.REPLICATED);
 
     public static readonly CVarDef<bool> AdminOocEnabled =
         CVarDef.Create("ooc.enabled_admin", true, CVar.NOTIFY);

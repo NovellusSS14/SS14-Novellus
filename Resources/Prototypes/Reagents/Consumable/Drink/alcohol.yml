@@ -2733,7 +2733,7 @@
           reagent: Ethanol
           amount: 0.16
         - !type:AdjustReagent
-          reagent: Pomelustine
+          reagent: JuicePomegranate
           amount: 0.5
   fizziness: 0.25
 

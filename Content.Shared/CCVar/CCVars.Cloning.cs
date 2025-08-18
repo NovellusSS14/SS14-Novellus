@@ -20,7 +20,7 @@ public sealed partial class CCVars
     ///     Whether or not the Biomass Reclaimer is allowed to roundremove bodies with a soul.
     /// </summary>
     public static readonly CVarDef<bool> CloningReclaimSouledBodies =
-        CVarDef.Create("cloning.reclaim_souled_bodies", true, CVar.SERVERONLY);
+        CVarDef.Create("cloning.reclaim_souled_bodies", false, CVar.SERVERONLY);
 
     /// <summary>
     ///     Controls whether or not Metempsychosis will potentially give people a sex change.

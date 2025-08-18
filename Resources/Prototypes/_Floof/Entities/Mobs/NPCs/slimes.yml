@@ -8,39 +8,7 @@
 
 # The Den start
 # These often end up breaking consent. Removed.
-# - type: entity
-#   id: ReagentSlimeCum
-#   parent: ReagentSlime
-#   suffix: Cum
-#   components:
-#   - type: Bloodstream
-#     bloodReagent: Cum
-#   - type: PointLight
-#     color: "#FFFDFB"
-#   - type: Sprite
-#     drawdepth: Mobs
-#     sprite: Mobs/Aliens/elemental.rsi
-#     layers:
-#       - map: [ "enum.DamageStateVisualLayers.Base" ]
-#         state: alive
-#         color: "#FFFDFB"
-
-# - type: entity
-#   id: ReagentSlimePomelustine
-#   parent: ReagentSlime
-#   suffix: Pomelustine
-#   components:
-#   - type: Bloodstream
-#     bloodReagent: Pomelustine
-#   - type: PointLight
-#     color: "#45072f"
-#   - type: Sprite
-#     drawdepth: Mobs
-#     sprite: Mobs/Aliens/elemental.rsi
-#     layers:
-#       - map: [ "enum.DamageStateVisualLayers.Base" ]
-#         state: alive
-#         color: "#45072f"
+# Novellus Note: Removed comment NSFW shit, don't want underage devs to see it
 
 # - type: entity
 #   id: ReagentSlimePhilterex
@@ -58,23 +26,6 @@
 #       - map: [ "enum.DamageStateVisualLayers.Base" ]
 #         state: alive
 #         color: "#ae0072"
-
-# - type: entity
-#   id: ReagentSlimeLibidozenithizine
-#   parent: ReagentSlime
-#   suffix: Libidozenithizine
-#   components:
-#   - type: Bloodstream
-#     bloodReagent: Libidozenithizine
-#   - type: PointLight
-#     color: "#c90084"
-#   - type: Sprite
-#     drawdepth: Mobs
-#     sprite: Mobs/Aliens/elemental.rsi
-#     layers:
-#       - map: [ "enum.DamageStateVisualLayers.Base" ]
-#         state: alive
-#         color: "#c90084"
 # The Den end
 
 - type: entity

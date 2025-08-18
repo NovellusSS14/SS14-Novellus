@@ -2497,7 +2497,7 @@
       food:
         maxVol: 40
         reagents:
-        - ReagentId: Pomelustine
+        - ReagentId: JuicePomegranate
           Quantity: 30
         - ReagentId: Nutriment
           Quantity: 10
@@ -2534,7 +2534,7 @@
       food:
         maxVol: 20
         reagents:
-        - ReagentId: Pomelustine
+        - ReagentId: JuicePomegranate
           Quantity: 15
         - ReagentId: Nutriment
           Quantity: 5

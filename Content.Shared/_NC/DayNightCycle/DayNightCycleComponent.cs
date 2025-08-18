@@ -13,7 +13,7 @@ namespace Content.Shared._NC14.DayNightCycle
     {
         [ViewVariables(VVAccess.ReadWrite)]
         [DataField("cycleDuration")]
-        public float CycleDurationMinutes { get; set; } = 60f; // Default cycle duration is 60 minutes
+        public float CycleDurationMinutes { get; set; } = 360f; // Default cycle duration is 60 minutes, edited to 360 minutes or 6 hours
 
         [DataField("timeEntries")]
         public List<TimeEntry> TimeEntries { get; set; } = new()
