@@ -20,8 +20,8 @@ RELEASE_DIR = "release"
 # CONFIGURATION PARAMETERS
 # Forks should change these to publish to their own infrastructure.
 #
-ROBUST_CDN_URL = "https://cdn.denstation.net/"
-FORK_ID = "theden"
+ROBUST_CDN_URL = "https://cdn.novellus.net/"
+FORK_ID = "novellus"
 
 def main():
     session = requests.Session()

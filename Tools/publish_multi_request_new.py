@@ -22,8 +22,8 @@ RELEASE_DIR = "release"
 # Forks should change these to publish to their own infrastructure.
 #
 
-ROBUST_CDN_URL = "https://denstation.net/cdn/"
-FORK_ID = "theden"
+ROBUST_CDN_URL = "https://novellus.net/cdn/"
+FORK_ID = "novellus"
 
 def main():
     parser = argparse.ArgumentParser()
